@@ -5,6 +5,7 @@
  * ข้อมูล: data/stocks/*.json (draft → reviewed → published)
  */
 import thailandStocks from "@/../data/stocks/thailand.json";
+import globalStocks from "@/../data/stocks/global.json";
 
 export type StockEntry = {
   type: string;
@@ -104,6 +105,21 @@ export function getThaiStocks(): StockEntry[] {
 /** เฉพาะหุ้นที่ผ่านตรวจแล้ว (ใช้ในเล่มที่ขาย) */
 export function getPublishedThaiStocks(): StockEntry[] {
   return getThaiStocks().filter((s) => s.status === "published");
+}
+
+/** หุ้นโลกทั้งหมด (8 ตลาด — จีน/เวียดนาม/ญี่ปุ่น/US/แคนาดา/ออส/เกาหลี/อินเดีย) */
+export function getGlobalStocks(): StockEntry[] {
+  return (globalStocks as { stocks: StockEntry[] }).stocks;
+}
+
+/** หุ้นทั้งหมด (ไทย + โลก) */
+export function getAllStocks(): StockEntry[] {
+  return [...getThaiStocks(), ...getGlobalStocks()];
+}
+
+/** ข้อมูลตลาด (ประเทศ→ทิศ→ธาตุ) — ใช้เฉพาะภาพรวมประเทศ (บท 8) ไม่ใช่ verdict รายหุ้น */
+export function getMarketMeta(): Record<string, { country: string; direction: string; marketElement: ThaiElement; note: string }> {
+  return (globalStocks as { meta: { markets: Record<string, { country: string; direction: string; marketElement: ThaiElement; note: string }> } }).meta.markets;
 }
 
 // ───────── ★ Review Workflow: export checklist ให้ซินแสตรวจ + import ผลกลับ ─────────
