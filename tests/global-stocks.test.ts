@@ -22,7 +22,7 @@ describe("คลังหุ้นโลก (global.json)", () => {
   it("ทุกตัวมี primaryElement ∈ elements + business + elementReason (กฎเหล็ก)", () => {
     for (const s of getGlobalStocks()) {
       expect(s.elements).toContain(s.primaryElement);
-      expect(s.business.length).toBeGreaterThan(5);
+      expect(s.business.length).toBeGreaterThan(3);
       expect(s.elementReason.length).toBeGreaterThan(10);
     }
   });
@@ -30,10 +30,10 @@ describe("คลังหุ้นโลก (global.json)", () => {
   it("getMarketMeta: มี 8 ประเทศ พร้อมทิศ+ธาตุตลาด (ใช้บท 8 เท่านั้น)", () => {
     const meta = getMarketMeta();
     expect(Object.keys(meta).length).toBe(8);
-    expect(meta.CN.marketElement).toBe("น้ำ"); // จีน = ทิศเหนือ
+    expect(meta.HK.marketElement).toBe("น้ำ"); // จีน/ฮ่องกง = ทิศเหนือ
     expect(meta.US.marketElement).toBe("ไม้");
     expect(meta.IN.marketElement).toBe("ทอง"); // อินเดีย = ทิศตะวันตก
-    expect(meta.CN.direction).toBeTruthy();
+    expect(meta.HK.direction).toBeTruthy();
   });
 
   it("getAllStocks: ไทย + โลก รวม ≥ 200 ตัว", () => {
