@@ -41,7 +41,7 @@ async function main() {
 
   // 3. verdict หุ้นตัวอย่าง
   console.log("\n── verdict หุ้นตัวอย่าง ──");
-  const samples = [
+  const samples: Array<{ ticker: string; name: string; business: string; elements: Array<"ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ">; primaryElement: "ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ" }> = [
     { ticker: "KBANK", name: "ธนาคารกสิกรไทย", business: "ธนาคาร สินเชื่อ การเงิน", elements: ["น้ำ", "ดิน"], primaryElement: "น้ำ" },
     { ticker: "ADVANC", name: "แอดวานซ์ อินโฟร์", business: "โทรคมนาคม อินเทอร์เน็ต", elements: ["ไม้"], primaryElement: "ไม้" },
     { ticker: "CPALL", name: "ซีพี ออลล์", business: "ค้าปลีก สะดวกซื้อ", elements: ["น้ำ", "ไม้"], primaryElement: "น้ำ" },
