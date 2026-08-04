@@ -3035,6 +3035,5286 @@
       "reviewedBy": null,
       "reviewedAt": null,
       "notes": "ธาตุตลาด อินเดีย = ทอง (ทิศตะวันตก) — ใช้เฉพาะบท 8 ภาพรวมประเทศ; verdict หุ้นใช้ธาตุธุรกิจนี้"
+    },
+    {
+      "type": "stock",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "nameEn": "Alphabet",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "เทค",
+      "business": "เสิร์ชเอ็นจิน โฆษณาดิจิทัล คลาวด์ AI",
+      "businessKeywords": [
+        "เสิร์ชเอ็นจิน",
+        "โฆษณาดิจิทัล",
+        "คลาวด์",
+        "AI"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "AI/Data Center",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เสิร์ชเอ็นจิน โฆษณาดิจิทัล คลาวด์ AI → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "nameEn": "Meta Platforms",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "โซเชียลมีเดีย",
+      "business": "โซเชียลมีเดีย โฆษณาดิจิทัล Metaverse",
+      "businessKeywords": [
+        "โซเชียลมีเดีย",
+        "โฆษณาดิจิทัล",
+        "Metaverse"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ดิจิทัล",
+        "โซเชียล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: โซเชียลมีเดีย โฆษณาดิจิทัล Metaverse → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "nameEn": "Tesla",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "EV",
+      "business": "รถยนต์ไฟฟ้า แบตเตอรี่ พลังงาน",
+      "businessKeywords": [
+        "รถยนต์ไฟฟ้า",
+        "แบตเตอรี่",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "EV",
+        "พลังงานสะอาด"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: รถยนต์ไฟฟ้า แบตเตอรี่ พลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "V",
+      "name": "Visa",
+      "nameEn": "Visa",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "การเงิน",
+      "business": "เครือข่ายชำระเงิน การเงินดิจิทัล",
+      "businessKeywords": [
+        "เครือข่ายชำระเงิน",
+        "การเงินดิจิทัล"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: เครือข่ายชำระเงิน การเงินดิจิทัล → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MA",
+      "name": "Mastercard",
+      "nameEn": "Mastercard",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "การเงิน",
+      "business": "เครือข่ายชำระเงิน การเงินดิจิทัล",
+      "businessKeywords": [
+        "เครือข่ายชำระเงิน",
+        "การเงินดิจิทัล"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: เครือข่ายชำระเงิน การเงินดิจิทัล → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "WMT",
+      "name": "Walmart",
+      "nameEn": "Walmart",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ค้าปลีก",
+      "business": "ค้าปลีกไฮเปอร์มาร์เก็ต อีคอมเมิร์ซ",
+      "businessKeywords": [
+        "ค้าปลีกไฮเปอร์มาร์เก็ต",
+        "อีคอมเมิร์ซ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ค้าปลีกไฮเปอร์มาร์เก็ต อีคอมเมิร์ซ → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "HD",
+      "name": "Home Depot",
+      "nameEn": "Home Depot",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ค้าปลีก",
+      "business": "ค้าปลีกวัสดุก่อสร้าง ของแต่งบ้าน",
+      "businessKeywords": [
+        "ค้าปลีกวัสดุก่อสร้าง",
+        "ของแต่งบ้าน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก",
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ค้าปลีกวัสดุก่อสร้าง ของแต่งบ้าน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "nameEn": "Netflix",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "บันเทิง",
+      "business": "สตรีมมิงภาพยนตร์ ซีรีส์ บันเทิง",
+      "businessKeywords": [
+        "สตรีมมิงภาพยนตร์",
+        "ซีรีส์",
+        "บันเทิง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "บันเทิง",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: สตรีมมิงภาพยนตร์ ซีรีส์ บันเทิง → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "AMD",
+      "name": "AMD",
+      "nameEn": "AMD",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "ชิป",
+      "business": "ชิป CPU GPU เซมิคอนดักเตอร์",
+      "businessKeywords": [
+        "ชิป",
+        "CPU",
+        "GPU",
+        "เซมิคอนดักเตอร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ชิป/เซมิคอนดักเตอร์",
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ชิป CPU GPU เซมิคอนดักเตอร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "INTC",
+      "name": "Intel",
+      "nameEn": "Intel",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "ชิป",
+      "business": "ชิป CPU เซมิคอนดักเตอร์",
+      "businessKeywords": [
+        "ชิป",
+        "CPU",
+        "เซมิคอนดักเตอร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ชิป/เซมิคอนดักเตอร์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ชิป CPU เซมิคอนดักเตอร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "nameEn": "Salesforce",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ซอฟต์แวร์",
+      "business": "ซอฟต์แวร์ CRM คลาวด์ AI",
+      "businessKeywords": [
+        "ซอฟต์แวร์",
+        "CRM",
+        "คลาวด์",
+        "AI"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "AI/Data Center",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ซอฟต์แวร์ CRM คลาวด์ AI → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "nameEn": "Oracle",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ซอฟต์แวร์",
+      "business": "ฐานข้อมูล คลาวด์ Enterprise",
+      "businessKeywords": [
+        "ฐานข้อมูล",
+        "คลาวด์",
+        "Enterprise"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ฐานข้อมูล คลาวด์ Enterprise → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "nameEn": "Broadcom",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "ชิป",
+      "business": "ชิป อินฟราสตรักเจอร์ซอฟต์แวร์ AI",
+      "businessKeywords": [
+        "ชิป",
+        "อินฟราสตรักเจอร์ซอฟต์แวร์",
+        "AI"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ชิป/เซมิคอนดักเตอร์",
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ชิป อินฟราสตรักเจอร์ซอฟต์แวร์ AI → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "nameEn": "Bank of America",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "WFC",
+      "name": "Wells Fargo",
+      "nameEn": "Wells Fargo",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ สินเชื่อ",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "สินเชื่อ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ สินเชื่อ → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "nameEn": "Goldman Sachs",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "การเงิน",
+      "business": "วาณิชธนกิจ การลงทุน การเงิน",
+      "businessKeywords": [
+        "วาณิชธนกิจ",
+        "การลงทุน",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: วาณิชธนกิจ การลงทุน การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "nameEn": "Morgan Stanley",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "การเงิน",
+      "business": "วาณิชธนกิจ การจัดการความมั่งคั่ง",
+      "businessKeywords": [
+        "วาณิชธนกิจ",
+        "การจัดการความมั่งคั่ง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: วาณิชธนกิจ การจัดการความมั่งคั่ง → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "nameEn": "Pfizer",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ยา",
+      "business": "ยา วัคซีน เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "วัคซีน",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา วัคซีน เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MRK",
+      "name": "Merck",
+      "nameEn": "Merck",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ยา",
+      "business": "ยา เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "nameEn": "Eli Lilly",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ยา",
+      "business": "ยา โรคเบาหวาน โรคอ้วน",
+      "businessKeywords": [
+        "ยา",
+        "โรคเบาหวาน",
+        "โรคอ้วน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา โรคเบาหวาน โรคอ้วน → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "nameEn": "AbbVie",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ยา",
+      "business": "ยา เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CVX",
+      "name": "Chevron",
+      "nameEn": "Chevron",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "พลังงาน",
+      "business": "น้ำมัน ก๊าซ พลังงาน",
+      "businessKeywords": [
+        "น้ำมัน",
+        "ก๊าซ",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: น้ำมัน ก๊าซ พลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "PEP",
+      "name": "PepsiCo",
+      "nameEn": "PepsiCo",
+      "country": "US",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "อาหาร/เครื่องดื่ม",
+      "business": "เครื่องดื่ม ขนมขบเคี้ยว อาหาร",
+      "businessKeywords": [
+        "เครื่องดื่ม",
+        "ขนมขบเคี้ยว",
+        "อาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร/เครื่องดื่ม"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: เครื่องดื่ม ขนมขบเคี้ยว อาหาร → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MCD",
+      "name": "McDonald's",
+      "nameEn": "McDonald's",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "อาหาร",
+      "business": "ร้านอาหารฟาสต์ฟู้ด",
+      "businessKeywords": [
+        "ร้านอาหารฟาสต์ฟู้ด"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ร้านอาหารฟาสต์ฟู้ด → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "DIS",
+      "name": "Walt Disney",
+      "nameEn": "Walt Disney",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "บันเทิง",
+      "business": "บันเทิง สตรีมมิง สวนสนุก สื่อ",
+      "businessKeywords": [
+        "บันเทิง",
+        "สตรีมมิง",
+        "สวนสนุก",
+        "สื่อ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "บันเทิง",
+        "ท่องเที่ยว"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไม้"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: บันเทิง สตรีมมิง สวนสนุก สื่อ → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BA",
+      "name": "Boeing",
+      "nameEn": "Boeing",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "อากาศยาน",
+      "business": "เครื่องบินพาณิชย์ อวกาศ กลาโหม",
+      "businessKeywords": [
+        "เครื่องบินพาณิชย์",
+        "อวกาศ",
+        "กลาโหม"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาวุธ/กลาโหม",
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องบินพาณิชย์ อวกาศ กลาโหม → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "GE",
+      "name": "GE Aerospace",
+      "nameEn": "GE Aerospace",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "อากาศยาน",
+      "business": "เครื่องยนต์อากาศยาน พลังงาน",
+      "businessKeywords": [
+        "เครื่องยนต์อากาศยาน",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ขนส่ง",
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องยนต์อากาศยาน พลังงาน → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "T",
+      "name": "AT&T",
+      "nameEn": "AT&T",
+      "country": "US",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "โทรคมนาคม",
+      "business": "โทรคมนาคม อินเทอร์เน็ต สตรีมมิง",
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต",
+        "สตรีมมิง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: โทรคมนาคม อินเทอร์เน็ต สตรีมมิง → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BIDU",
+      "name": "Baidu",
+      "nameEn": "Baidu",
+      "country": "CN",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "เทค",
+      "business": "เสิร์ชเอ็นจิน AI คลาวด์ รถยนต์อัตโนมัติ",
+      "businessKeywords": [
+        "เสิร์ชเอ็นจิน",
+        "AI",
+        "คลาวด์",
+        "รถยนต์อัตโนมัติ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "AI/Data Center",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เสิร์ชเอ็นจิน AI คลาวด์ รถยนต์อัตโนมัติ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NIO",
+      "name": "NIO",
+      "nameEn": "NIO",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "EV",
+      "business": "รถยนต์ไฟฟ้า EV",
+      "businessKeywords": [
+        "รถยนต์ไฟฟ้า",
+        "EV"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: รถยนต์ไฟฟ้า EV → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "XPEV",
+      "name": "XPeng",
+      "nameEn": "XPeng",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "EV",
+      "business": "รถยนต์ไฟฟ้า EV อัจฉริยะ",
+      "businessKeywords": [
+        "รถยนต์ไฟฟ้า",
+        "EV",
+        "อัจฉริยะ"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: รถยนต์ไฟฟ้า EV อัจฉริยะ → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "LI",
+      "name": "Li Auto",
+      "nameEn": "Li Auto",
+      "country": "CN",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "EV",
+      "business": "รถยนต์ไฟฟ้า EREV",
+      "businessKeywords": [
+        "รถยนต์ไฟฟ้า",
+        "EREV"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: รถยนต์ไฟฟ้า EREV → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "002594",
+      "name": "BYD",
+      "nameEn": "BYD",
+      "country": "CN",
+      "market": "SZSE",
+      "currency": "CNY",
+      "sector": "EV",
+      "business": "รถยนต์ไฟฟ้า แบตเตอรี่ รถเมล์",
+      "businessKeywords": [
+        "รถยนต์ไฟฟ้า",
+        "แบตเตอรี่",
+        "รถเมล์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "EV",
+        "แบตเตอรี่"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: รถยนต์ไฟฟ้า แบตเตอรี่ รถเมล์ → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "601939",
+      "name": "CCB",
+      "nameEn": "CCB",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ สินเชื่อ",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "สินเชื่อ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ สินเชื่อ → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "601988",
+      "name": "Bank of China",
+      "nameEn": "Bank of China",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "600036",
+      "name": "China Merchants Bank",
+      "nameEn": "China Merchants Bank",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "600887",
+      "name": "Yili",
+      "nameEn": "Yili",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "อาหาร",
+      "business": "นม ผลิตภัณฑ์นม อาหาร",
+      "businessKeywords": [
+        "นม",
+        "ผลิตภัณฑ์นม",
+        "อาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร",
+        "Food Security"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: นม ผลิตภัณฑ์นม อาหาร → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "000333",
+      "name": "Midea",
+      "nameEn": "Midea",
+      "country": "CN",
+      "market": "SZSE",
+      "currency": "CNY",
+      "sector": "เครื่องใช้ไฟฟ้า",
+      "business": "เครื่องใช้ไฟฟ้าในบ้าน เครื่องปรับอากาศ",
+      "businessKeywords": [
+        "เครื่องใช้ไฟฟ้าในบ้าน",
+        "เครื่องปรับอากาศ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี",
+        "เครื่องใช้ไฟฟ้า"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องใช้ไฟฟ้าในบ้าน เครื่องปรับอากาศ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "000651",
+      "name": "Gree Electric",
+      "nameEn": "Gree Electric",
+      "country": "CN",
+      "market": "SZSE",
+      "currency": "CNY",
+      "sector": "เครื่องใช้ไฟฟ้า",
+      "business": "เครื่องปรับอากาศ เครื่องใช้ไฟฟ้า",
+      "businessKeywords": [
+        "เครื่องปรับอากาศ",
+        "เครื่องใช้ไฟฟ้า"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องปรับอากาศ เครื่องใช้ไฟฟ้า → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "601899",
+      "name": "Zijin Mining",
+      "nameEn": "Zijin Mining",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "เหมือง",
+      "business": "เหมืองทองคำ ทองแดง โลหะ",
+      "businessKeywords": [
+        "เหมืองทองคำ",
+        "ทองแดง",
+        "โลหะ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โลหะ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เหมืองทองคำ ทองแดง โลหะ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "601668",
+      "name": "CSCEC",
+      "nameEn": "CSCEC",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "ก่อสร้าง",
+      "business": "รับเหมาก่อสร้างขนาดใหญ่ โครงสร้างพื้นฐาน",
+      "businessKeywords": [
+        "รับเหมาก่อสร้างขนาดใหญ่",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: รับเหมาก่อสร้างขนาดใหญ่ โครงสร้างพื้นฐาน → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "600048",
+      "name": "Poly Developments",
+      "nameEn": "Poly Developments",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "อสังหาริมทรัพย์",
+      "business": "พัฒนาอสังหาริมทรัพย์",
+      "businessKeywords": [
+        "พัฒนาอสังหาริมทรัพย์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อสังหาริมทรัพย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: พัฒนาอสังหาริมทรัพย์ → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "601888",
+      "name": "China Tourism Group",
+      "nameEn": "China Tourism Group",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "ท่องเที่ยว",
+      "business": "ดิวตี้ฟรี ท่องเที่ยว ค้าปลีก",
+      "businessKeywords": [
+        "ดิวตี้ฟรี",
+        "ท่องเที่ยว",
+        "ค้าปลีก"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ท่องเที่ยว",
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ดิวตี้ฟรี ท่องเที่ยว ค้าปลีก → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BILI",
+      "name": "Bilibili",
+      "nameEn": "Bilibili",
+      "country": "CN",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "บันเทิง",
+      "business": "แพลตฟอร์มวิดีโอ เกม บันเทิง",
+      "businessKeywords": [
+        "แพลตฟอร์มวิดีโอ",
+        "เกม",
+        "บันเทิง"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "บันเทิง",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: แพลตฟอร์มวิดีโอ เกม บันเทิง → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TME",
+      "name": "Tencent Music",
+      "nameEn": "Tencent Music",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "บันเทิง",
+      "business": "สตรีมมิงเพลง บันเทิง",
+      "businessKeywords": [
+        "สตรีมมิงเพลง",
+        "บันเทิง"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "บันเทิง",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: สตรีมมิงเพลง บันเทิง → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ZTO",
+      "name": "ZTO Express",
+      "nameEn": "ZTO Express",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "ขนส่ง",
+      "business": "โลจิสติกส์ พัสดุ ขนส่ง",
+      "businessKeywords": [
+        "โลจิสติกส์",
+        "พัสดุ",
+        "ขนส่ง"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ขนส่ง",
+        "โลจิสติกส์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: โลจิสติกส์ พัสดุ ขนส่ง → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BEKE",
+      "name": "KE Holdings",
+      "nameEn": "KE Holdings",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "อสังหาริมทรัพย์",
+      "business": "แพลตฟอร์มอสังหาริมทรัพย์ นายหน้า",
+      "businessKeywords": [
+        "แพลตฟอร์มอสังหาริมทรัพย์",
+        "นายหน้า"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "อสังหาริมทรัพย์",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "น้ำ"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: แพลตฟอร์มอสังหาริมทรัพย์ นายหน้า → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "YUMC",
+      "name": "Yum China",
+      "nameEn": "Yum China",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "อาหาร",
+      "business": "ร้านอาหาร KFC Pizza Hut",
+      "businessKeywords": [
+        "ร้านอาหาร",
+        "KFC",
+        "Pizza",
+        "Hut"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ร้านอาหาร KFC Pizza Hut → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "GDS",
+      "name": "GDS Holdings",
+      "nameEn": "GDS Holdings",
+      "country": "CN",
+      "market": "NASDAQ",
+      "currency": "USD",
+      "sector": "Data Center",
+      "business": "ศูนย์ข้อมูล Data Center คลาวด์",
+      "businessKeywords": [
+        "ศูนย์ข้อมูล",
+        "Data",
+        "Center",
+        "คลาวด์"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ศูนย์ข้อมูล Data Center คลาวด์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TAL",
+      "name": "TAL Education",
+      "nameEn": "TAL Education",
+      "country": "CN",
+      "market": "NYSE",
+      "currency": "USD",
+      "sector": "การศึกษา",
+      "business": "การศึกษา กวดวิชา EdTech",
+      "businessKeywords": [
+        "การศึกษา",
+        "กวดวิชา",
+        "EdTech"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การศึกษา"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ไม้"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: การศึกษา กวดวิชา EdTech → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "600276",
+      "name": "Hengrui Pharma",
+      "nameEn": "Hengrui Pharma",
+      "country": "CN",
+      "market": "SSE",
+      "currency": "CNY",
+      "sector": "ยา",
+      "business": "ยา เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "300760",
+      "name": "Mindray",
+      "nameEn": "Mindray",
+      "country": "CN",
+      "market": "SZSE",
+      "currency": "CNY",
+      "sector": "อุปกรณ์การแพทย์",
+      "business": "อุปกรณ์การแพทย์ เทคโนโลยีสุขภาพ",
+      "businessKeywords": [
+        "อุปกรณ์การแพทย์",
+        "เทคโนโลยีสุขภาพ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: อุปกรณ์การแพทย์ เทคโนโลยีสุขภาพ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "002415",
+      "name": "Hikvision",
+      "nameEn": "Hikvision",
+      "country": "CN",
+      "market": "SZSE",
+      "currency": "CNY",
+      "sector": "เทคโนโลยี",
+      "business": "กล้องวงจรปิด AI ความปลอดภัย",
+      "businessKeywords": [
+        "กล้องวงจรปิด",
+        "AI",
+        "ความปลอดภัย"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี",
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: กล้องวงจรปิด AI ความปลอดภัย → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "9984.T",
+      "name": "SoftBank Group",
+      "nameEn": "SoftBank Group",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "เทค/ลงทุน",
+      "business": "ลงทุนเทค กองทุน Vision Fund",
+      "businessKeywords": [
+        "ลงทุนเทค",
+        "กองทุน",
+        "Vision",
+        "Fund"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี",
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ลงทุนเทค กองทุน Vision Fund → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6501.T",
+      "name": "Hitachi",
+      "nameEn": "Hitachi",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "เทค/อุตสาหกรรม",
+      "business": "อุปกรณ์อุตสาหกรรม เทค โครงสร้างพื้นฐาน",
+      "businessKeywords": [
+        "อุปกรณ์อุตสาหกรรม",
+        "เทค",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: อุปกรณ์อุตสาหกรรม เทค โครงสร้างพื้นฐาน → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6752.T",
+      "name": "Panasonic",
+      "nameEn": "Panasonic",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "เครื่องใช้ไฟฟ้า",
+      "business": "เครื่องใช้ไฟฟ้า แบตเตอรี่ EV",
+      "businessKeywords": [
+        "เครื่องใช้ไฟฟ้า",
+        "แบตเตอรี่",
+        "EV"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องใช้ไฟฟ้า แบตเตอรี่ EV → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6902.T",
+      "name": "Denso",
+      "nameEn": "Denso",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ชิ้นส่วนยานยนต์",
+      "business": "ชิ้นส่วนยานยนต์ อิเล็กทรอนิกส์รถยนต์",
+      "businessKeywords": [
+        "ชิ้นส่วนยานยนต์",
+        "อิเล็กทรอนิกส์รถยนต์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ยานยนต์",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ชิ้นส่วนยานยนต์ อิเล็กทรอนิกส์รถยนต์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "7267.T",
+      "name": "Honda",
+      "nameEn": "Honda",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ยานยนต์",
+      "business": "รถยนต์ รถจักรยานยนต์ EV",
+      "businessKeywords": [
+        "รถยนต์",
+        "รถจักรยานยนต์",
+        "EV"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ยานยนต์",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: รถยนต์ รถจักรยานยนต์ EV → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "7201.T",
+      "name": "Nissan",
+      "nameEn": "Nissan",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ยานยนต์",
+      "business": "รถยนต์ EV",
+      "businessKeywords": [
+        "รถยนต์",
+        "EV"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ยานยนต์",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: รถยนต์ EV → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "8031.T",
+      "name": "Mitsui & Co",
+      "nameEn": "Mitsui & Co",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "การค้า",
+      "business": "บริษัทการค้า ลงทุนหลากหลาย",
+      "businessKeywords": [
+        "บริษัทการค้า",
+        "ลงทุนหลากหลาย"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การค้า"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: บริษัทการค้า ลงทุนหลากหลาย → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "8001.T",
+      "name": "Itochu",
+      "nameEn": "Itochu",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "การค้า",
+      "business": "บริษัทการค้า ลงทุนหลากหลาย",
+      "businessKeywords": [
+        "บริษัทการค้า",
+        "ลงทุนหลากหลาย"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การค้า"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: บริษัทการค้า ลงทุนหลากหลาย → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "8411.T",
+      "name": "Mizuho",
+      "nameEn": "Mizuho",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "8316.T",
+      "name": "Sumitomo Mitsui",
+      "nameEn": "Sumitomo Mitsui",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "2914.T",
+      "name": "Japan Tobacco",
+      "nameEn": "Japan Tobacco",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "สินค้าอุปโภค",
+      "business": "บุหรี่ อาหาร ยา",
+      "businessKeywords": [
+        "บุหรี่",
+        "อาหาร",
+        "ยา"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "สินค้าอุปโภค"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "น้ำ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: บุหรี่ อาหาร ยา → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "3382.T",
+      "name": "Seven & i",
+      "nameEn": "Seven & i",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ค้าปลีก",
+      "business": "ร้านสะดวกซื้อ 7-Eleven ค้าปลีก",
+      "businessKeywords": [
+        "ร้านสะดวกซื้อ",
+        "7-Eleven",
+        "ค้าปลีก"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ร้านสะดวกซื้อ 7-Eleven ค้าปลีก → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "8267.T",
+      "name": "Aeon",
+      "nameEn": "Aeon",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ค้าปลีก",
+      "business": "ห้างสรรพสินค้า ซูเปอร์มาร์เก็ต",
+      "businessKeywords": [
+        "ห้างสรรพสินค้า",
+        "ซูเปอร์มาร์เก็ต"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ห้างสรรพสินค้า ซูเปอร์มาร์เก็ต → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "4661.T",
+      "name": "Oriental Land",
+      "nameEn": "Oriental Land",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ท่องเที่ยว",
+      "business": "สวนสนุก Disney รีสอร์ต",
+      "businessKeywords": [
+        "สวนสนุก",
+        "Disney",
+        "รีสอร์ต"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ท่องเที่ยว",
+        "บันเทิง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: สวนสนุก Disney รีสอร์ต → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "9020.T",
+      "name": "JR East",
+      "nameEn": "JR East",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ขนส่ง",
+      "business": "รถไฟ ขนส่งมวลชน อสังหา",
+      "businessKeywords": [
+        "รถไฟ",
+        "ขนส่งมวลชน",
+        "อสังหา"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: รถไฟ ขนส่งมวลชน อสังหา → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "9433.T",
+      "name": "KDDI",
+      "nameEn": "KDDI",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "โทรคมนาคม",
+      "business": "โทรคมนาคม อินเทอร์เน็ต",
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: โทรคมนาคม อินเทอร์เน็ต → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "4503.T",
+      "name": "Astellas",
+      "nameEn": "Astellas",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "ยา",
+      "business": "ยา เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "4063.T",
+      "name": "Shin-Etsu Chemical",
+      "nameEn": "Shin-Etsu Chemical",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "เคมีภัณฑ์",
+      "business": "เคมีภัณฑ์ ซิลิโคน เวเฟอร์",
+      "businessKeywords": [
+        "เคมีภัณฑ์",
+        "ซิลิโคน",
+        "เวเฟอร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ปิโตรเคมี",
+        "ชิป/เซมิคอนดักเตอร์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เคมีภัณฑ์ ซิลิโคน เวเฟอร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6981.T",
+      "name": "Murata",
+      "nameEn": "Murata",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "อิเล็กทรอนิกส์",
+      "business": "ชิ้นส่วนอิเล็กทรอนิกส์ คาปาซิเตอร์",
+      "businessKeywords": [
+        "ชิ้นส่วนอิเล็กทรอนิกส์",
+        "คาปาซิเตอร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ชิ้นส่วนอิเล็กทรอนิกส์ คาปาซิเตอร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6971.T",
+      "name": "Kyocera",
+      "nameEn": "Kyocera",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "อิเล็กทรอนิกส์",
+      "business": "เซรามิกอิเล็กทรอนิกส์ ชิ้นส่วน",
+      "businessKeywords": [
+        "เซรามิกอิเล็กทรอนิกส์",
+        "ชิ้นส่วน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ดิน"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เซรามิกอิเล็กทรอนิกส์ ชิ้นส่วน → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "7751.T",
+      "name": "Canon",
+      "nameEn": "Canon",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "อิเล็กทรอนิกส์",
+      "business": "กล้อง เครื่องพิมพ์ อุปกรณ์การแพทย์",
+      "businessKeywords": [
+        "กล้อง",
+        "เครื่องพิมพ์",
+        "อุปกรณ์การแพทย์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: กล้อง เครื่องพิมพ์ อุปกรณ์การแพทย์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6857.T",
+      "name": "Advantest",
+      "nameEn": "Advantest",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "เซมิคอนดักเตอร์",
+      "business": "เครื่องทดสอบชิป เซมิคอนดักเตอร์",
+      "businessKeywords": [
+        "เครื่องทดสอบชิป",
+        "เซมิคอนดักเตอร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ชิป/เซมิคอนดักเตอร์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องทดสอบชิป เซมิคอนดักเตอร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "6702.T",
+      "name": "Fujitsu",
+      "nameEn": "Fujitsu",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "เทค",
+      "business": "บริการไอที ซูเปอร์คอมพิวเตอร์",
+      "businessKeywords": [
+        "บริการไอที",
+        "ซูเปอร์คอมพิวเตอร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "AI/Data Center",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: บริการไอที ซูเปอร์คอมพิวเตอร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "7731.T",
+      "name": "Nikon",
+      "nameEn": "Nikon",
+      "country": "JP",
+      "market": "TSE",
+      "currency": "JPY",
+      "sector": "อิเล็กทรอนิกส์",
+      "business": "กล้อง อุปกรณ์วัด ความแม่นยำ",
+      "businessKeywords": [
+        "กล้อง",
+        "อุปกรณ์วัด",
+        "ความแม่นยำ"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: กล้อง อุปกรณ์วัด ความแม่นยำ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "066570.KS",
+      "name": "LG Electronics",
+      "nameEn": "LG Electronics",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "เครื่องใช้ไฟฟ้า",
+      "business": "เครื่องใช้ไฟฟ้า ทีวี เครื่องปรับอากาศ",
+      "businessKeywords": [
+        "เครื่องใช้ไฟฟ้า",
+        "ทีวี",
+        "เครื่องปรับอากาศ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องใช้ไฟฟ้า ทีวี เครื่องปรับอากาศ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "005490.KS",
+      "name": "POSCO",
+      "nameEn": "POSCO",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "เหล็ก",
+      "business": "เหล็ก วัสดุ แบตเตอรี่",
+      "businessKeywords": [
+        "เหล็ก",
+        "วัสดุ",
+        "แบตเตอรี่"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โลหะ",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เหล็ก วัสดุ แบตเตอรี่ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "015760.KS",
+      "name": "KEPCO",
+      "nameEn": "KEPCO",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "พลังงาน",
+      "business": "ไฟฟ้า สาธารณูปโภค",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "สาธารณูปโภค"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ไฟฟ้า สาธารณูปโภค → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "034730.KS",
+      "name": "SK",
+      "nameEn": "SK",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "คองเกลอเมอเรต",
+      "business": "พลังงาน เคมี เทค ลงทุน",
+      "businessKeywords": [
+        "พลังงาน",
+        "เคมี",
+        "เทค",
+        "ลงทุน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: พลังงาน เคมี เทค ลงทุน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "018260.KS",
+      "name": "Samsung SDS",
+      "nameEn": "Samsung SDS",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "เทค",
+      "business": "บริการไอที คลาวด์ โลจิสติกส์ดิจิทัล",
+      "businessKeywords": [
+        "บริการไอที",
+        "คลาวด์",
+        "โลจิสติกส์ดิจิทัล"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "AI/Data Center",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: บริการไอที คลาวด์ โลจิสติกส์ดิจิทัล → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "011070.KS",
+      "name": "LG Innotek",
+      "nameEn": "LG Innotek",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "อิเล็กทรอนิกส์",
+      "business": "ชิ้นส่วนอิเล็กทรอนิกส์ กล้องโมดูล",
+      "businessKeywords": [
+        "ชิ้นส่วนอิเล็กทรอนิกส์",
+        "กล้องโมดูล"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ชิ้นส่วนอิเล็กทรอนิกส์ กล้องโมดูล → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "032640.KS",
+      "name": "LG Uplus",
+      "nameEn": "LG Uplus",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "โทรคมนาคม",
+      "business": "โทรคมนาคม อินเทอร์เน็ต",
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: โทรคมนาคม อินเทอร์เน็ต → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "030200.KS",
+      "name": "KT",
+      "nameEn": "KT",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "โทรคมนาคม",
+      "business": "โทรคมนาคม อินเทอร์เน็ต",
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: โทรคมนาคม อินเทอร์เน็ต → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "010950.KS",
+      "name": "S-Oil",
+      "nameEn": "S-Oil",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "พลังงาน",
+      "business": "กลั่นน้ำมัน ปิโตรเคมี",
+      "businessKeywords": [
+        "กลั่นน้ำมัน",
+        "ปิโตรเคมี"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: กลั่นน้ำมัน ปิโตรเคมี → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "096770.KS",
+      "name": "SK Innovation",
+      "nameEn": "SK Innovation",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "พลังงาน/แบตเตอรี่",
+      "business": "น้ำมัน แบตเตอรี่ EV",
+      "businessKeywords": [
+        "น้ำมัน",
+        "แบตเตอรี่",
+        "EV"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: น้ำมัน แบตเตอรี่ EV → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "000810.KS",
+      "name": "Samsung Fire & Marine",
+      "nameEn": "Samsung Fire & Marine",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "ประกัน",
+      "business": "ประกันวินาศภัย ประกันภัย",
+      "businessKeywords": [
+        "ประกันวินาศภัย",
+        "ประกันภัย"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ประกันวินาศภัย ประกันภัย → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "032830.KS",
+      "name": "Samsung Life",
+      "nameEn": "Samsung Life",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "ประกัน",
+      "business": "ประกันชีวิต การเงิน",
+      "businessKeywords": [
+        "ประกันชีวิต",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ประกันชีวิต การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "086790.KS",
+      "name": "Hana Financial",
+      "nameEn": "Hana Financial",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "003550.KS",
+      "name": "LG Corp",
+      "nameEn": "LG Corp",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "คองเกลอเมอเรต",
+      "business": "ถือหุ้น เคมี เทค อิเล็กทรอนิกส์",
+      "businessKeywords": [
+        "ถือหุ้น",
+        "เคมี",
+        "เทค",
+        "อิเล็กทรอนิกส์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ถือหุ้น เคมี เทค อิเล็กทรอนิกส์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "028050.KS",
+      "name": "Samsung E&A",
+      "nameEn": "Samsung E&A",
+      "country": "KR",
+      "market": "KRX",
+      "currency": "KRW",
+      "sector": "ก่อสร้าง",
+      "business": "วิศวกรรม ก่อสร้าง EPC",
+      "businessKeywords": [
+        "วิศวกรรม",
+        "ก่อสร้าง",
+        "EPC"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "ทอง"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: วิศวกรรม ก่อสร้าง EPC → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ICICIBANK.NS",
+      "name": "ICICI Bank",
+      "nameEn": "ICICI Bank",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "AXISBANK.NS",
+      "name": "Axis Bank",
+      "nameEn": "Axis Bank",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "KOTAKBANK.NS",
+      "name": "Kotak Mahindra Bank",
+      "nameEn": "Kotak Mahindra Bank",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BHARTIARTL.NS",
+      "name": "Bharti Airtel",
+      "nameEn": "Bharti Airtel",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "โทรคมนาคม",
+      "business": "โทรคมนาคม อินเทอร์เน็ต",
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: โทรคมนาคม อินเทอร์เน็ต → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "WIPRO.NS",
+      "name": "Wipro",
+      "nameEn": "Wipro",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "เทค",
+      "business": "บริการไอที ซอฟต์แวร์",
+      "businessKeywords": [
+        "บริการไอที",
+        "ซอฟต์แวร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: บริการไอที ซอฟต์แวร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "HCLTECH.NS",
+      "name": "HCL Technologies",
+      "nameEn": "HCL Technologies",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "เทค",
+      "business": "บริการไอที ซอฟต์แวร์",
+      "businessKeywords": [
+        "บริการไอที",
+        "ซอฟต์แวร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: บริการไอที ซอฟต์แวร์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TATACONSUM.NS",
+      "name": "Tata Consumer",
+      "nameEn": "Tata Consumer",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "อาหาร",
+      "business": "ชา กาแฟ อาหาร เครื่องดื่ม",
+      "businessKeywords": [
+        "ชา",
+        "กาแฟ",
+        "อาหาร",
+        "เครื่องดื่ม"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร/เครื่องดื่ม"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไม้"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ชา กาแฟ อาหาร เครื่องดื่ม → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NESTLEIND.NS",
+      "name": "Nestle India",
+      "nameEn": "Nestle India",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "อาหาร",
+      "business": "อาหาร เครื่องดื่ม โภชนาการ",
+      "businessKeywords": [
+        "อาหาร",
+        "เครื่องดื่ม",
+        "โภชนาการ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: อาหาร เครื่องดื่ม โภชนาการ → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MARUTI.NS",
+      "name": "Maruti Suzuki",
+      "nameEn": "Maruti Suzuki",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ยานยนต์",
+      "business": "รถยนต์นั่ง ยานยนต์",
+      "businessKeywords": [
+        "รถยนต์นั่ง",
+        "ยานยนต์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ยานยนต์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: รถยนต์นั่ง ยานยนต์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TITAN.NS",
+      "name": "Titan",
+      "nameEn": "Titan",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "เครื่องประดับ",
+      "business": "เครื่องประดับทอง นาฬิกา",
+      "businessKeywords": [
+        "เครื่องประดับทอง",
+        "นาฬิกา"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เครื่องประดับ",
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องประดับทอง นาฬิกา → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ASIANPAINT.NS",
+      "name": "Asian Paints",
+      "nameEn": "Asian Paints",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "เคมีภัณฑ์",
+      "business": "สี เคมีภัณฑ์ เคลือบผิว",
+      "businessKeywords": [
+        "สี",
+        "เคมีภัณฑ์",
+        "เคลือบผิว"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ดิน"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: สี เคมีภัณฑ์ เคลือบผิว → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "SUNPHARMA.NS",
+      "name": "Sun Pharma",
+      "nameEn": "Sun Pharma",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ยา",
+      "business": "ยา เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CIPLA.NS",
+      "name": "Cipla",
+      "nameEn": "Cipla",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ยา",
+      "business": "ยา เวชภัณฑ์",
+      "businessKeywords": [
+        "ยา",
+        "เวชภัณฑ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยา เวชภัณฑ์ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ADANIENT.NS",
+      "name": "Adani Enterprises",
+      "nameEn": "Adani Enterprises",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "คองเกลอเมอเรต",
+      "business": "พลังงาน ถ่านหิน ท่าเรือ โครงสร้างพื้นฐาน",
+      "businessKeywords": [
+        "พลังงาน",
+        "ถ่านหิน",
+        "ท่าเรือ",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: พลังงาน ถ่านหิน ท่าเรือ โครงสร้างพื้นฐาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ADANIPORTS.NS",
+      "name": "Adani Ports",
+      "nameEn": "Adani Ports",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ท่าเรือ",
+      "business": "ท่าเรือ โลจิสติกส์",
+      "businessKeywords": [
+        "ท่าเรือ",
+        "โลจิสติกส์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ขนส่ง",
+        "โลจิสติกส์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ท่าเรือ โลจิสติกส์ → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NTPC.NS",
+      "name": "NTPC",
+      "nameEn": "NTPC",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "พลังงาน",
+      "business": "ไฟฟ้า พลังงาน สาธารณูปโภค",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน",
+        "สาธารณูปโภค"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ไฟฟ้า พลังงาน สาธารณูปโภค → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ONGC.NS",
+      "name": "ONGC",
+      "nameEn": "ONGC",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "พลังงาน",
+      "business": "น้ำมัน ก๊าซธรรมชาติ",
+      "businessKeywords": [
+        "น้ำมัน",
+        "ก๊าซธรรมชาติ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: น้ำมัน ก๊าซธรรมชาติ → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "COALINDIA.NS",
+      "name": "Coal India",
+      "nameEn": "Coal India",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ถ่านหิน",
+      "business": "ถ่านหิน พลังงาน",
+      "businessKeywords": [
+        "ถ่านหิน",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ดิน"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ถ่านหิน พลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "POWERGRID.NS",
+      "name": "Power Grid",
+      "nameEn": "Power Grid",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "พลังงาน",
+      "business": "สายส่งไฟฟ้า สาธารณูปโภค",
+      "businessKeywords": [
+        "สายส่งไฟฟ้า",
+        "สาธารณูปโภค"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: สายส่งไฟฟ้า สาธารณูปโภค → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "M&M.NS",
+      "name": "Mahindra & Mahindra",
+      "nameEn": "Mahindra & Mahindra",
+      "country": "IN",
+      "market": "NSE",
+      "currency": "INR",
+      "sector": "ยานยนต์",
+      "business": "รถยนต์ รถแทรกเตอร์ EV",
+      "businessKeywords": [
+        "รถยนต์",
+        "รถแทรกเตอร์",
+        "EV"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ยานยนต์",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: รถยนต์ รถแทรกเตอร์ EV → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TCB",
+      "name": "Techcombank",
+      "nameEn": "Techcombank",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MBB",
+      "name": "MBBank",
+      "nameEn": "MBBank",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CTG",
+      "name": "VietinBank",
+      "nameEn": "VietinBank",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BID",
+      "name": "BIDV",
+      "nameEn": "BIDV",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "VPB",
+      "name": "VPBank",
+      "nameEn": "VPBank",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "SSI",
+      "name": "SSI Securities",
+      "nameEn": "SSI Securities",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "โบรกเกอร์",
+      "business": "โบรกเกอร์หลักทรัพย์ การเงิน",
+      "businessKeywords": [
+        "โบรกเกอร์หลักทรัพย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: โบรกเกอร์หลักทรัพย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "SAB",
+      "name": "Sabeco",
+      "nameEn": "Sabeco",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "เครื่องดื่ม",
+      "business": "เบียร์ เครื่องดื่ม",
+      "businessKeywords": [
+        "เบียร์",
+        "เครื่องดื่ม"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "อาหาร/เครื่องดื่ม"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: เบียร์ เครื่องดื่ม → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "PNJ",
+      "name": "Phu Nhuan Jewelry",
+      "nameEn": "Phu Nhuan Jewelry",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "เครื่องประดับ",
+      "business": "เครื่องประดับทอง ค้าปลีก",
+      "businessKeywords": [
+        "เครื่องประดับทอง",
+        "ค้าปลีก"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "เครื่องประดับ",
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เครื่องประดับทอง ค้าปลีก → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MSN",
+      "name": "Masan Group",
+      "nameEn": "Masan Group",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "คองเกลอเมอเรต",
+      "business": "อาหาร ค้าปลีก ทรัพยากร",
+      "businessKeywords": [
+        "อาหาร",
+        "ค้าปลีก",
+        "ทรัพยากร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร",
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: อาหาร ค้าปลีก ทรัพยากร → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "PLX",
+      "name": "Petrolimex",
+      "nameEn": "Petrolimex",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "พลังงาน",
+      "business": "น้ำมัน ค้าปลีกพลังงาน",
+      "businessKeywords": [
+        "น้ำมัน",
+        "ค้าปลีกพลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "น้ำ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: น้ำมัน ค้าปลีกพลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "PVD",
+      "name": "PV Drilling",
+      "nameEn": "PV Drilling",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "พลังงาน",
+      "business": "ขุดเจาะน้ำมัน บริการพลังงาน",
+      "businessKeywords": [
+        "ขุดเจาะน้ำมัน",
+        "บริการพลังงาน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ขุดเจาะน้ำมัน บริการพลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "DPM",
+      "name": "DAPM",
+      "nameEn": "DAPM",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ปุ๋ย",
+      "business": "ปุ๋ย เคมีภัณฑ์เกษตร",
+      "businessKeywords": [
+        "ปุ๋ย",
+        "เคมีภัณฑ์เกษตร"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "เกษตร",
+        "Food Security"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "ไม้"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: ปุ๋ย เคมีภัณฑ์เกษตร → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "GVR",
+      "name": "GVR",
+      "nameEn": "GVR",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "ยาง/ไม้",
+      "business": "ยางพารา ป่าไม้ อุตสาหกรรมไม้",
+      "businessKeywords": [
+        "ยางพารา",
+        "ป่าไม้",
+        "อุตสาหกรรมไม้"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "เกษตร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ธุรกิจ: ยางพารา ป่าไม้ อุตสาหกรรมไม้ → ธาตุ ไม้ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "VND",
+      "name": "VNDirect",
+      "nameEn": "VNDirect",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "โบรกเกอร์",
+      "business": "โบรกเกอร์หลักทรัพย์ การเงิน",
+      "businessKeywords": [
+        "โบรกเกอร์หลักทรัพย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: โบรกเกอร์หลักทรัพย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "DGC",
+      "name": "DGC",
+      "nameEn": "DGC",
+      "country": "VN",
+      "market": "HOSE",
+      "currency": "VND",
+      "sector": "เคมีภัณฑ์",
+      "business": "เคมีภัณฑ์อุตสาหกรรม",
+      "businessKeywords": [
+        "เคมีภัณฑ์อุตสาหกรรม"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ปิโตรเคมี"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เคมีภัณฑ์อุตสาหกรรม → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "WOW",
+      "name": "Woolworths",
+      "nameEn": "Woolworths",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ค้าปลีก",
+      "business": "ซูเปอร์มาร์เก็ต ค้าปลีกอาหาร",
+      "businessKeywords": [
+        "ซูเปอร์มาร์เก็ต",
+        "ค้าปลีกอาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก",
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ซูเปอร์มาร์เก็ต ค้าปลีกอาหาร → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "COL",
+      "name": "Coles",
+      "nameEn": "Coles",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ค้าปลีก",
+      "business": "ซูเปอร์มาร์เก็ต ค้าปลีก",
+      "businessKeywords": [
+        "ซูเปอร์มาร์เก็ต",
+        "ค้าปลีก"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก",
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ซูเปอร์มาร์เก็ต ค้าปลีก → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "QBE",
+      "name": "QBE Insurance",
+      "nameEn": "QBE Insurance",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ประกัน",
+      "business": "ประกันวินาศภัย",
+      "businessKeywords": [
+        "ประกันวินาศภัย"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ประกันวินาศภัย → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "SUN",
+      "name": "Suncorp",
+      "nameEn": "Suncorp",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ประกัน",
+      "business": "ประกัน ธนาคาร การเงิน",
+      "businessKeywords": [
+        "ประกัน",
+        "ธนาคาร",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ประกัน ธนาคาร การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ALL",
+      "name": "AGL Energy",
+      "nameEn": "AGL Energy",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "พลังงาน",
+      "business": "ไฟฟ้า ก๊าซ พลังงาน",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "ก๊าซ",
+        "พลังงาน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ไฟฟ้า ก๊าซ พลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ORG",
+      "name": "Origin Energy",
+      "nameEn": "Origin Energy",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "พลังงาน",
+      "business": "ไฟฟ้า ก๊าซ พลังงานทดแทน",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "ก๊าซ",
+        "พลังงานทดแทน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "พลังงาน",
+        "พลังงานสะอาด"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ไฟฟ้า ก๊าซ พลังงานทดแทน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "STO",
+      "name": "Santos",
+      "nameEn": "Santos",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "พลังงาน",
+      "business": "ก๊าซธรรมชาติ LNG",
+      "businessKeywords": [
+        "ก๊าซธรรมชาติ",
+        "LNG"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ก๊าซธรรมชาติ LNG → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NCM",
+      "name": "Newmont (Newcrest)",
+      "nameEn": "Newmont (Newcrest)",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "เหมืองทอง",
+      "business": "เหมืองทองคำ",
+      "businessKeywords": [
+        "เหมืองทองคำ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โลหะ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เหมืองทองคำ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "S32",
+      "name": "South32",
+      "nameEn": "South32",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "เหมือง",
+      "business": "เหมืองแร่ อะลูมินา โลหะ",
+      "businessKeywords": [
+        "เหมืองแร่",
+        "อะลูมินา",
+        "โลหะ"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "โลหะ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ดิน"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เหมืองแร่ อะลูมินา โลหะ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TCL",
+      "name": "Transurban",
+      "nameEn": "Transurban",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "โครงสร้างพื้นฐาน",
+      "business": "ทางด่วน โครงสร้างพื้นฐานคมนาคม",
+      "businessKeywords": [
+        "ทางด่วน",
+        "โครงสร้างพื้นฐานคมนาคม"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โครงสร้างพื้นฐาน",
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ทางด่วน โครงสร้างพื้นฐานคมนาคม → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "GMG",
+      "name": "Goodman Group",
+      "nameEn": "Goodman Group",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "อสังหาริมทรัพย์",
+      "business": "โลจิสติกส์อสังหา Data Center",
+      "businessKeywords": [
+        "โลจิสติกส์อสังหา",
+        "Data",
+        "Center"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อสังหาริมทรัพย์",
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "ทอง"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: โลจิสติกส์อสังหา Data Center → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "MQG",
+      "name": "Macquarie",
+      "nameEn": "Macquarie",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "การเงิน",
+      "business": "วาณิชธนกิจ การลงทุน การเงิน",
+      "businessKeywords": [
+        "วาณิชธนกิจ",
+        "การลงทุน",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: วาณิชธนกิจ การลงทุน การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ASX",
+      "name": "ASX",
+      "nameEn": "ASX",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ตลาดหลักทรัพย์",
+      "business": "ตลาดหลักทรัพย์ การเงิน",
+      "businessKeywords": [
+        "ตลาดหลักทรัพย์",
+        "การเงิน"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ตลาดหลักทรัพย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "XRO",
+      "name": "Xero",
+      "nameEn": "Xero",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ซอฟต์แวร์",
+      "business": "ซอฟต์แวร์บัญชีคลาวด์ SMB",
+      "businessKeywords": [
+        "ซอฟต์แวร์บัญชีคลาวด์",
+        "SMB"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ดิจิทัล",
+        "AI/Data Center"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ซอฟต์แวร์บัญชีคลาวด์ SMB → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "WTC",
+      "name": "Wisetech Global",
+      "nameEn": "Wisetech Global",
+      "country": "AU",
+      "market": "ASX",
+      "currency": "AUD",
+      "sector": "ซอฟต์แวร์",
+      "business": "ซอฟต์แวร์โลจิสติกส์",
+      "businessKeywords": [
+        "ซอฟต์แวร์โลจิสติกส์"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ดิจิทัล",
+        "โลจิสติกส์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ซอฟต์แวร์โลจิสติกส์ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BMO",
+      "name": "BMO",
+      "nameEn": "BMO",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CM",
+      "name": "CIBC",
+      "nameEn": "CIBC",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NA",
+      "name": "National Bank of Canada",
+      "nameEn": "National Bank of Canada",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ การเงิน",
+      "businessKeywords": [
+        "ธนาคารพาณิชย์",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ธนาคารพาณิชย์ การเงิน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TRP",
+      "name": "TC Energy",
+      "nameEn": "TC Energy",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "พลังงาน",
+      "business": "ท่อส่งก๊าซ พลังงาน",
+      "businessKeywords": [
+        "ท่อส่งก๊าซ",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ท่อส่งก๊าซ พลังงาน → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CP",
+      "name": "Canadian Pacific Kansas City",
+      "nameEn": "Canadian Pacific Kansas City",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ขนส่ง",
+      "business": "รถไฟขนส่งสินค้า",
+      "businessKeywords": [
+        "รถไฟขนส่งสินค้า"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ขนส่ง",
+        "โลจิสติกส์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: รถไฟขนส่งสินค้า → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BAM",
+      "name": "Brookfield Asset Management",
+      "nameEn": "Brookfield Asset Management",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "การเงิน",
+      "business": "จัดการสินทรัพย์ ลงทุนโครงสร้างพื้นฐาน",
+      "businessKeywords": [
+        "จัดการสินทรัพย์",
+        "ลงทุนโครงสร้างพื้นฐาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: จัดการสินทรัพย์ ลงทุนโครงสร้างพื้นฐาน → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "BN",
+      "name": "Brookfield Corp",
+      "nameEn": "Brookfield Corp",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "คองเกลอเมอเรต",
+      "business": "ลงทุนโครงสร้างพื้นฐาน พลังงาน อสังหา",
+      "businessKeywords": [
+        "ลงทุนโครงสร้างพื้นฐาน",
+        "พลังงาน",
+        "อสังหา"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "โครงสร้างพื้นฐาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ลงทุนโครงสร้างพื้นฐาน พลังงาน อสังหา → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "FTS",
+      "name": "Fortis",
+      "nameEn": "Fortis",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "พลังงาน",
+      "business": "ไฟฟ้า ก๊าซ สาธารณูปโภค",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "ก๊าซ",
+        "สาธารณูปโภค"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ธุรกิจ: ไฟฟ้า ก๊าซ สาธารณูปโภค → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "CSU",
+      "name": "Constellation Software",
+      "nameEn": "Constellation Software",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ซอฟต์แวร์",
+      "business": "ซอฟต์แวร์ Vertical Market",
+      "businessKeywords": [
+        "ซอฟต์แวร์",
+        "Vertical",
+        "Market"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: ซอฟต์แวร์ Vertical Market → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "ATD",
+      "name": "Alimentation Couche-Tard",
+      "nameEn": "Alimentation Couche-Tard",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ค้าปลีก",
+      "business": "ร้านสะดวกซื้อ Circle K",
+      "businessKeywords": [
+        "ร้านสะดวกซื้อ",
+        "Circle",
+        "K"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ธุรกิจ: ร้านสะดวกซื้อ Circle K → ธาตุ น้ำ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "NTR",
+      "name": "Nutrien",
+      "nameEn": "Nutrien",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "ปุ๋ย/เกษตร",
+      "business": "ปุ๋ย โพแทช เกษตร",
+      "businessKeywords": [
+        "ปุ๋ย",
+        "โพแทช",
+        "เกษตร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เกษตร",
+        "Food Security"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "ไม้"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ธุรกิจ: ปุ๋ย โพแทช เกษตร → ธาตุ ดิน (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "mega",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
+    },
+    {
+      "type": "stock",
+      "ticker": "TECK",
+      "name": "Teck Resources",
+      "nameEn": "Teck Resources",
+      "country": "CA",
+      "market": "TSX",
+      "currency": "CAD",
+      "sector": "เหมือง",
+      "business": "เหมืองทองแดง สังกะสี โลหะ",
+      "businessKeywords": [
+        "เหมืองทองแดง",
+        "สังกะสี",
+        "โลหะ"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "โลหะ",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ธุรกิจ: เหมืองทองแดง สังกะสี โลหะ → ธาตุ ทอง (map จาก career-business.txt — รอซินแสตรวจ)",
+      "elementSource": "career-business.txt (draft รอตรวจ)",
+      "tier": "large",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": "draft รอซินแสตรวจธาตุ"
     }
   ]
 }
