@@ -40,7 +40,27 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "ผู้ให้บริการโทรคมนาคมรายใหญ่ที่สุดของไทย (AIS) บริการโทรศัพท์เคลื่อนที่ อินเทอร์เน็ตความเร็วสูง ไฟเบอร์ และบริการดิจิทัล ครอบคลุมลูกค้าทั่วประเทศ",
+      "revenueMix": [
+        {
+          "segment": "บริการโทรศัพท์เคลื่อนที่/ดาต้า",
+          "approxShare": "~75%",
+          "element": "ไม้"
+        },
+        {
+          "segment": "อินเทอร์เน็ต/ไฟเบอร์/ดิจิทัล",
+          "approxShare": "~25%",
+          "element": "ไม้"
+        }
+      ],
+      "website": "https://www.ais.co.th",
+      "foundedYear": 1986,
+      "peers": [
+        "TRUE",
+        "INTUCH",
+        "JMART"
+      ]
     },
     {
       "type": "stock",
@@ -393,7 +413,28 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "ผู้นำธุรกิจศูนย์การค้าและอสังหาริมทรัพย์เชิงพาณิชย์ของไทย เจ้าของเซ็นทรัลเวิลด์ เซ็นทรัลพลาซ่า และเซ็นทรัลเฟสติวัลทั่วประเทศ รวมถึงอาคารสำนักงานให้เช่า",
+      "revenueMix": [
+        {
+          "segment": "ค่าเช่าศูนย์การค้า/พื้นที่ค้าปลีก",
+          "approxShare": "~75%",
+          "element": "ดิน"
+        },
+        {
+          "segment": "บริการและอื่น ๆ",
+          "approxShare": "~25%",
+          "element": "น้ำ"
+        }
+      ],
+      "website": "https://www.centralpattana.co.th",
+      "foundedYear": 1980,
+      "peers": [
+        "LH",
+        "SIRI",
+        "AP",
+        "CRC"
+      ]
     },
     {
       "type": "stock",
@@ -464,7 +505,32 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "ผู้ผลิตและจัดจำหน่ายอุปกรณ์อิเล็กทรอนิกส์กำลังไฟฟ้า (power electronics) แหล่งจ่ายไฟ สินค้า EV charging และระบบ data center power รายใหญ่ระดับโลก โรงงานหลักในไทย ส่งออกทั่วโลก",
+      "revenueMix": [
+        {
+          "segment": "Power supplies / อิเล็กทรอนิกส์กำลัง",
+          "approxShare": "~60%",
+          "element": "ทอง"
+        },
+        {
+          "segment": "EV / อัตโนมัติอุตสาหกรรม",
+          "approxShare": "~25%",
+          "element": "ไฟ"
+        },
+        {
+          "segment": "อื่น ๆ",
+          "approxShare": "~15%",
+          "element": "ทอง"
+        }
+      ],
+      "website": "https://www.deltathailand.com",
+      "foundedYear": 1988,
+      "peers": [
+        "HANA",
+        "KCE",
+        "SMT"
+      ]
     },
     {
       "type": "stock",
@@ -747,7 +813,33 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "ธนาคารพาณิชย์ขนาดใหญ่เป็นอันดับต้นของไทย ให้บริการสินเชื่อ เงินฝาก บัตรเครดิต และธุรกิจการเงินครบวงจรทั้งรายย่อยและองค์กร รวมถึงขยายสู่แพลตฟอร์มการเงินดิจิทัลและธุรกิจต่างประเทศในภูมิภาคอาเซียน",
+      "revenueMix": [
+        {
+          "segment": "รายได้ดอกเบี้ยสุทธิ (สินเชื่อ)",
+          "approxShare": "~70%",
+          "element": "น้ำ"
+        },
+        {
+          "segment": "ค่าธรรมเนียมและบริการ (บัตร/กองทุน/ประกัน)",
+          "approxShare": "~20%",
+          "element": "น้ำ"
+        },
+        {
+          "segment": "อื่น ๆ",
+          "approxShare": "~10%",
+          "element": "น้ำ"
+        }
+      ],
+      "website": "https://www.kasikornbank.com",
+      "foundedYear": 1945,
+      "peers": [
+        "BBL",
+        "SCB",
+        "KTB",
+        "TTB"
+      ]
     },
     {
       "type": "stock",
@@ -1026,7 +1118,34 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "บริษัทพลังงานแห่งชาติของไทย ดูแลธุรกิจสำรวจและผลิตปิโตรเลียม โรงกลั่น ปิโตรเคมี การตลาดค้าปลีกพลังงาน และก๊าซธรรมชาติ ครบวงจรตั้งแต่ต้นน้ำถึงปลายน้ำ รวมถึงขยายสู่พลังงานสะอาด",
+      "revenueMix": [
+        {
+          "segment": "การตลาด/ค้าปลีกพลังงาน (น้ำมัน)",
+          "approxShare": "~50%",
+          "element": "ไฟ"
+        },
+        {
+          "segment": "ก๊าซธรรมชาติ/ปิโตรเคมี",
+          "approxShare": "~35%",
+          "element": "ไฟ"
+        },
+        {
+          "segment": "อื่น ๆ",
+          "approxShare": "~15%",
+          "element": "ทอง"
+        }
+      ],
+      "website": "https://www.pttplc.com",
+      "foundedYear": 1978,
+      "peers": [
+        "PTTEP",
+        "PTTGC",
+        "TOP",
+        "IRPC",
+        "OR"
+      ]
     },
     {
       "type": "stock",

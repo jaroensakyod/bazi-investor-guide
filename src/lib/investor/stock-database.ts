@@ -31,6 +31,37 @@ export type StockEntry = {
   reviewedBy: string | null;
   reviewedAt: string | null;
   notes?: string;
+
+  // ═══ ชั้น A: ข้อมูลนิ่งเพิ่มเติม (กรอกมือ — ใช้ในเล่ม/คอนเทนต์) ═══
+  /** รายละเอียดธุรกิจแบบยาว (2-3 ประโยค จาก 56-1/10-K) — ใช้ในหน้าหุ้น/คอนเทนต์ */
+  description?: string;
+  /** ธุรกิจที่สร้างรายได้หลัก (เรียงตามสัดส่วน) — ทำให้ธาตุหลักแม่นขึ้น */
+  revenueMix?: Array<{ segment: string; approxShare?: string; element?: ThaiElement }>;
+  /** เว็บไซต์บริษัท / หน้า IR (อ้างอิง) */
+  website?: string;
+  /** ปีก่อตั้งบริษัท */
+  foundedYear?: number;
+  /** วันที่เข้าตลาดจริง (IPO) — YYYY-MM-DD */
+  ipoDate?: string | null;
+  /** หุ้นในกลุ่มเดียวกัน (peer) — ticker */
+  peers?: string[];
+  /** หมายเหตุซินแส (กรณีธาตุซับซ้อน/หลายธาตุ) */
+  sinsiNote?: string;
+
+  // ═══ ชั้น B: ข้อมูลตลาด (dynamic — ผ่าน API ราคา ไม่กรอกมือ) ═══
+  /** ข้อมูลราคา/valuation — null จนกว่าจะต่อ API (web admin ระยะ 2) */
+  marketData?: {
+    price?: number;
+    changePct?: number;
+    pe?: number;
+    pbv?: number;
+    dividendYield?: number;
+    marketCap?: number; // บาท
+    avgVolume?: number;
+    high52w?: number;
+    low52w?: number;
+    updatedAt?: string; // ISO timestamp
+  } | null;
 };
 
 export type ThaiElement = "ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ";
@@ -69,6 +100,21 @@ export function validateStocks(stocks: StockEntry[]): string[] {
     }
     if (s.status === "published" && (!s.reviewedBy || !s.reviewedAt)) {
       problems.push(`${s.ticker}: published แต่ไม่มี reviewedBy/reviewedAt`);
+    }
+
+    // ชั้น A: ถ้ามี description ต้องยาวพอ (ไม่ใช่ 1 บรรทัด)
+    if (s.description && s.description.length < 40) {
+      problems.push(`${s.ticker}: description สั้นเกินไป (ควร 2-3 ประโยค)`);
+    }
+    // revenueMix: ถ้ามี element ใน segment ต้องเป็นธาตุไทย
+    for (const mix of s.revenueMix ?? []) {
+      if (mix.element && !THAI_ELEMENTS.includes(mix.element)) {
+        problems.push(`${s.ticker}: revenueMix.element ผิด (${mix.element})`);
+      }
+    }
+    // marketData: ถ้ามี updatedAt ต้องมี price อย่างน้อย
+    if (s.marketData && s.marketData.updatedAt && s.marketData.price == null) {
+      problems.push(`${s.ticker}: marketData มี updatedAt แต่ไม่มี price`);
     }
   }
 
