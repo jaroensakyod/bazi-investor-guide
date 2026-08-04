@@ -1,0 +1,29 @@
+{
+  "name": "bazi-investor-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "build": "tsc --noEmit",
+    "smoke": "tsx scripts/smoke-engine.ts"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.7",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "vitest": "^4.1.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3"
+  }
+}
