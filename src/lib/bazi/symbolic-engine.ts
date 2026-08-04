@@ -14,7 +14,9 @@ import {
   isForwardDaYunDirection,
   normalizeBirthContext,
   normalizeGenderForYun,
+  resolveSinsaeHourGanzhi,
   resolveTwelveQiStage,
+  splitGanZhi,
 } from "@/lib/bazi/symbolic-engine.birth";
 export { HONG_KONG_TIMEZONE } from "@/lib/bazi/symbolic-engine.constants";
 import {
@@ -171,11 +173,16 @@ export function calculateBaziStructuralState(payload: RawInputValue): BaziStruct
   const rawInput = RawInputSchema.parse(payload);
   const birthContext = normalizeBirthContext(rawInput);
   const eightChar = birthContext.solar.getLunar().getEightChar();
+  const dayGanzhi = eightChar.getDay();
   const pillars = {
     year: buildPillarValue(eightChar.getYear(), eightChar.getYearHideGan()),
     month: buildPillarValue(eightChar.getMonth(), eightChar.getMonthHideGan()),
-    day: buildPillarValue(eightChar.getDay(), eightChar.getDayHideGan()),
-    hour: buildPillarValue(eightChar.getTime(), eightChar.getTimeHideGan()),
+    day: buildPillarValue(dayGanzhi, eightChar.getDayHideGan()),
+    // ★ ยามตามตารางซินแส (Fix): hour stem จาก day stem วันปัจจุบัน (ไม่เปลี่ยนวันตอน 23:00)
+    hour: buildPillarValue(
+      resolveSinsaeHourGanzhi(splitGanZhi(dayGanzhi).stem, eightChar.getTime()),
+      eightChar.getTimeHideGan(),
+    ),
   };
 
   return {
@@ -282,7 +289,8 @@ export async function calculateBaziChart(
     }),
     hour: enrichPillar(pillars.hour, {
       dayMasterStem,
-      stemTenGod: eightChar.getTimeShiShenGan(),
+      // ★ ยามตามตารางซินแส: ten god จาก hour stem ที่ fix แล้ว (ไม่ใช่ eightChar.getTimeShiShenGan ดิบ)
+      stemTenGod: resolveTenGodForStem(dayMasterStem, pillars.hour.stem),
       lookingStage: canonicalTwelveQiState.hourBranch,
     }),
   };
@@ -379,7 +387,7 @@ export async function calculateBaziChart(
       monthBranch: String(eightChar.getMonthShiShenZhi()),
       dayStem: eightChar.getDayShiShenGan(),
       dayBranch: String(eightChar.getDayShiShenZhi()),
-      hourStem: eightChar.getTimeShiShenGan(),
+      hourStem: resolveTenGodForStem(dayMasterStem, pillars.hour.stem), // ★ ตามตารางซินแส
       hourBranch: String(eightChar.getTimeShiShenZhi()),
       mingGongStem: enrichedMingGong.tenGod ?? "",
     },

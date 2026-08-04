@@ -128,6 +128,44 @@ export function splitGanZhi(value: string) {
   return { stem, branch };
 }
 
+// ───────── ยาม (hour pillar) ตามตารางซินแส (ตารางตั้งคงใหม่ — ใช้ระบบ Fix) ─────────
+// ซินแสกำหนด: hour stem คำนวณจาก day stem ของ "วันปัจจุบัน" เสมอ (กฎ 五鼠遁)
+// ไม่เปลี่ยนวันตอน 23:00 เหมือน lunar-javascript default (晚子時 ใช้ stem วันถัดไป)
+// ตรวจสอบกับตารางซินแส: วัน 甲 → 23:00-23:59 = 甲子 (ไม่ใช่ 丙子 ของวันถัดไป)
+//
+// 五鼠遁 (hour stem เริ่มต้นตาม day stem):
+//   甲/己 → 子時 = 甲子 · 乙/庚 → 子時 = 丙子 · 丙/辛 → 子時 = 戊子
+//   丁/壬 → 子時 = 庚子 · 戊/癸 → 子時 = 壬子
+// hour stem = STEM[(startIndex + branchIndex) % 10]
+//   startIndex: 甲=0, 乙=2, 丙=4, 丁=6, 戊=8, 己=0, 庚=2, 辛=4, 壬=6, 癸=8
+const STEM_CYCLE = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
+const BRANCH_CYCLE = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
+
+/** startIndex ของ hour stem ตาม day stem (五鼠遁) */
+function fiveRatEscapeStartIndex(dayStem: string): number | null {
+  const dayIndex = STEM_CYCLE.indexOf(dayStem);
+  if (dayIndex < 0) return null;
+  return (dayIndex % 5) * 2; // 甲/己→0, 乙/庚→2, 丙/辛→4, 丁/壬→6, 戊/癸→8
+}
+
+/**
+ * คำนวณ hour ganzhi ตามตารางซินแส (Fix): ใช้ day stem ของวันปัจจุบัน + hour branch
+ * @param dayStem ก้านของวันปัจจุบัน (เช่น 甲)
+ * @param rawHourGanzhi hour ganzhi ดิบจาก lunar-javascript (เช่น 丙子) — ใช้แค่ branch
+ */
+export function resolveSinsaeHourGanzhi(dayStem: string, rawHourGanzhi: string): string {
+  const { branch } = splitGanZhi(rawHourGanzhi);
+  const branchIndex = BRANCH_CYCLE.indexOf(branch);
+  const startIndex = fiveRatEscapeStartIndex(dayStem);
+
+  if (branchIndex < 0 || startIndex === null) {
+    return rawHourGanzhi; // fallback: ไม่รู้จัก ใช้ค่าดิบ
+  }
+
+  const stem = STEM_CYCLE[(startIndex + branchIndex) % 10];
+  return `${stem}${branch}`;
+}
+
 function normalizeHiddenStems(value: string[] | string) {
   return String(value)
     .split(",")
