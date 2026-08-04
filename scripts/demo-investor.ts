@@ -68,3 +68,33 @@ async function main() {
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });
+
+// ─── ส่วนที่ 2: verdict จากคลังหุ้นจริง ───
+async function main2() {
+  const { getThaiStocks } = await import("@/lib/investor/stock-database");
+  const { scoreStock } = await import("@/lib/investor/investor-guide");
+  const { calculateBaziChart } = await import("@/lib/bazi/symbolic-engine");
+  const { createInMemoryKnowledgeRepository } = await import("@/lib/bazi/in-memory-repository");
+
+  const state = await calculateBaziChart(
+    { birthDate: "1988-06-08", birthTime: "12:08", gender: "female", province: "Bangkok", timezone: "Asia/Bangkok" },
+    createInMemoryKnowledgeRepository(),
+  );
+
+  const stocks = getThaiStocks();
+  const scored = stocks
+    .map((s) => scoreStock(state, { ticker: s.ticker, name: s.name, business: s.business, elements: s.elements, primaryElement: s.primaryElement }))
+    .sort((a, b) => b.score - a.score);
+
+  console.log("\n════════ verdict คลังหุ้นไทยทั้งหมด (" + scored.length + " ตัว) ════════");
+  console.log("\n-- เหมาะมาก (score ≥ 4) --");
+  for (const r of scored.filter((r) => r.verdict === "very-good")) console.log(`  ✅✅ ${r.ticker} (${r.primaryElement}) score=${r.score}`);
+  console.log("\n-- เหมาะ (score 2-3) --");
+  for (const r of scored.filter((r) => r.verdict === "good")) console.log(`  ✅ ${r.ticker} (${r.primaryElement}) score=${r.score}`);
+  console.log("\n-- กลาง (score 1) --");
+  for (const r of scored.filter((r) => r.verdict === "neutral")) console.log(`  🟡 ${r.ticker} (${r.primaryElement}) score=${r.score}`);
+  console.log("\n-- ควรเลี่ยง (score ≤ 0) --");
+  for (const r of scored.filter((r) => r.verdict === "avoid")) console.log(`  ⛔ ${r.ticker} (${r.primaryElement}) score=${r.score}`);
+}
+
+main2().catch((err) => { console.error(err); process.exit(1); });
