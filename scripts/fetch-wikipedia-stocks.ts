@@ -83,19 +83,46 @@ const MARKET_META: Record<string, { country: string; direction: string; marketEl
 };
 
 /** map: ชื่อตลาด (Wikipedia page — ใช้ raw title, ไม่ pre-encode) → ข้อมูล */
-const SOURCES: Array<{ page: string; market: string; country: string; cur: string; exchange: string; section?: number }> = [
+const SOURCES: Array<{ page: string; market: string; country: string; cur: string; exchange: string; section?: number; nikkeiSections?: boolean }> = [
   { page: "List of S&P 500 companies", market: "US", country: "US", cur: "USD", exchange: "NYSE/NASDAQ", section: 1 },
   { page: "NIFTY 50", market: "IN", country: "IN", cur: "INR", exchange: "NSE", section: 2 },
   { page: "Hang Seng Index", market: "HK", country: "HK", cur: "HKD", exchange: "HKEX", section: 7 },
-  { page: "S&P/ASX 200", market: "AU", country: "AU", cur: "AUD", exchange: "ASX", section: 1 },
+  { page: "S&P/ASX 200", market: "AU", country: "AU", cur: "AUD", exchange: "ASX", section: 4 },
   { page: "S&P/TSX 60", market: "CA", country: "CA", cur: "CAD", exchange: "TSX", section: 1 },
-  { page: "KOSPI 200", market: "KR", country: "KR", cur: "KRW", exchange: "KRX", section: 1 },
+  { page: "KOSPI 200", market: "KR", country: "KR", cur: "KRW", exchange: "KRX", section: 4 },
   { page: "List of NIKKEI 225 companies", market: "JP", country: "JP", cur: "JPY", exchange: "TSE", section: 1 },
-  { page: "Nikkei 225", market: "JP", country: "JP", cur: "JPY", exchange: "TSE", section: 0 },
+  { page: "Nikkei 225", market: "JP", country: "JP", cur: "JPY", exchange: "TSE", section: 0, nikkeiSections: true },
   { page: "VN30 Index", market: "VN", country: "VN", cur: "VND", exchange: "HOSE", section: 0 },
+  { page: "VN 30", market: "VN", country: "VN", cur: "VND", exchange: "HOSE", section: 0 },
   { page: "List of companies of South Korea", market: "KR", country: "KR", cur: "KRW", exchange: "KRX", section: 0 },
   { page: "KOSPI Composite Index", market: "KR", country: "KR", cur: "KRW", exchange: "KRX", section: 0 },
 ];
+
+/** ดึง Nikkei ทุก section → ต่อกันโดยเติม ===Title=== นำหน้าแต่ละ section (sector = ชื่อ section) */
+async function fetchNikkeiAllSections(): Promise<string> {
+  const parts: string[] = [];
+  // section 6-42 = กลุ่มอุตสาหกรรม (Air transport...Wholesale) — หาชื่อจาก sections API
+  const secRes = await fetch(
+    `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent("Nikkei 225")}&format=json&prop=sections&redirects=1`,
+    { headers: { "User-Agent": "bazi-investor-guide/0.1 (data pipeline; contact: dev)" } },
+  );
+  const secJson = (await secRes.json()) as { parse?: { sections?: Array<{ index: string; line: string }> } };
+  const byIndex = new Map((secJson.parse?.sections ?? []).map((s) => [s.index, s.line]));
+
+  for (let sec = 6; sec <= 42; sec++) {
+    try {
+      const text = await fetchWikitext("Nikkei 225", sec);
+      if (text.includes("{{tyo2|")) {
+        const title = byIndex.get(String(sec))?.replace(/&amp;/g, "&") ?? `Section ${sec}`;
+        parts.push(`===${title}===\n${text}`);
+      }
+    } catch {
+      // section ว่าง/ไม่มี — ข้าม
+    }
+    await new Promise((r) => setTimeout(r, 1500));
+  }
+  return parts.join("\n");
+}
 
 /** หา section ที่มีตารางหุ้น (Constituents/Components/Companies) อัตโนมัติ */
 async function findStockSection(page: string): Promise<number> {
@@ -132,6 +159,52 @@ async function fetchWikitext(page: string, section: number): Promise<string> {
   throw new Error(`${page} → rate-limited เกิน`);
 }
 
+/** map ชื่อ section ของ Nikkei (Air transport/Automotive/...) → GICS sector */
+const NIKKEI_SECTION_SECTOR: Record<string, string> = {
+  "Air transport": "Transportation",
+  "Automotive": "Automobiles & Components",
+  "Banking": "Banks",
+  "Chemicals": "Chemicals",
+  "Communications": "Communication Services",
+  "Construction": "Construction",
+  "Electric machinery": "Technology",
+  "Electric power": "Utilities",
+  "Fishery": "Food & Beverage",
+  "Foods": "Food & Beverage",
+  "Gas": "Utilities",
+  "Glass & ceramics": "Materials",
+  "Insurance": "Insurance",
+  "Land transport": "Transportation",
+  "Machinery": "Machinery",
+  "Marine transport": "Transportation",
+  "Mining": "Metals & Mining",
+  "Nonferrous metals": "Metals & Mining",
+  "Other financial services": "Financial Services",
+  "Other manufacturing": "Industrials",
+  "Petroleum": "Energy",
+  "Pharmaceuticals": "Pharmaceuticals",
+  "Precision instruments": "Technology",
+  "Pulp & paper": "Paper & Forest Products",
+  "Railway/bus": "Transportation",
+  "Real estate": "Real Estate",
+  "Retail": "Retailing",
+  "Securities": "Financial Services",
+  "Services": "Consumer Discretionary",
+  "Shipbuilding": "Capital Goods",
+  "Steel": "Metals & Mining",
+  "Textiles & apparels": "Consumer Products",
+  "Trading companies": "Conglomerates",
+  "Warehousing": "Transportation",
+  "Wholesale": "Retailing",
+};
+
+/** หา sector จากชื่อ section (===Automotive===) ใน wikitext ของ Nikkei */
+function guessNikkeiSector(wikitext: string): string {
+  const m = wikitext.match(/^===\s*(.+?)\s*===/m);
+  const title = m?.[1]?.trim() ?? "";
+  return NIKKEI_SECTION_SECTOR[title] ?? (title || "Unknown");
+}
+
 /** แยกแถวตาราง wikitext: symbol อยู่บรรทัด |{{X|SYM}} ตามด้วย |ชื่อ||sector||... */
 function parseTableRows(wikitext: string, page: string): Array<{ symbol: string; name: string; sector: string }> {
   const rows: Array<{ symbol: string; name: string; sector: string }> = [];
@@ -146,6 +219,65 @@ function parseTableRows(wikitext: string, page: string): Array<{ symbol: string;
       const name = (lines[i + 1] ?? "").match(/^\|\s*\[?\[?([^\]|]+?)\]?\]?\s*$/)?.slice(1)?.[0]?.trim() ?? "";
       const sector = (lines[i + 2] ?? "").match(/^\|\s*([^|]+)/)?.slice(1)?.[0]?.trim() ?? "";
       if (name && sector) rows.push({ symbol, name, sector });
+    }
+    return rows;
+  }
+
+  if (page.includes("ASX 200")) {
+    // format: |360 / |[[Life360]] / |Information Technology  (symbol→ชื่อ→sector คนละบรรทัด)
+    for (let i = 0; i < lines.length; i++) {
+      const symMatch = lines[i].match(/^\|\s*([A-Z0-9.\-]{1,8})\s*\|?$/);
+      if (!symMatch) continue;
+      const symbol = symMatch[1].trim();
+      if (symbol === "-" || /^[a-z]/.test(symbol)) continue;
+      const name = (lines[i + 1] ?? "").match(/^\|\s*\[?\[?([^\]|]+?)\]?\]?\s*\|?$/)?.slice(1)?.[0]?.trim().replace(/\(.*\)/, "").trim() ?? "";
+      const sector = (lines[i + 2] ?? "").match(/^\|\s*([^|]+)/)?.slice(1)?.[0]?.trim() ?? "";
+      if (name && sector && /^[A-Z0-9.\-]+$/.test(symbol)) rows.push({ symbol: `${symbol}.AX`, name, sector });
+    }
+    return rows;
+  }
+
+  if (page.includes("TSX 60")) {
+    // format: | {{TSX link|AEM}} || [[Agnico Eagle|...]] || Basic Materials  (บรรทัดเดียว)
+    for (const line of lines) {
+      const m = line.match(/^\|\s*\{\{[^|}]*\|([A-Z0-9.\-]{1,6})\}\}\s*\|\|\s*\[?\[?([^\]|]+?)\]?\]?\s*\|\|\s*([^|]+)/);
+      if (!m) continue;
+      const symbol = m[1].trim();
+      const name = m[2].trim().replace(/\(.*\)/, "").trim();
+      const sector = m[3].trim().replace(/\[\[|\]\]/g, "").trim();
+      if (symbol && name && sector) rows.push({ symbol: `${symbol}.TO`, name, sector });
+    }
+    return rows;
+  }
+
+  if (page.includes("KOSPI")) {
+    // format: | [[Amorepacific Corporation|Amorepacific]] || 090430 || Consumer Staples  หรือ | APR || 278470 || ...
+    for (const line of lines) {
+      const m = line.match(/^\|\s*\[?\[?([^\]|]+?)\]?\]?\s*\|\|\s*(\d{6})\s*\|\|\s*([^|]+)/);
+      if (!m) continue;
+      const name = m[1].trim().replace(/\(.*\)/, "").trim();
+      const symbol = `${m[2]}.KS`;
+      const sector = m[3].trim().replace(/\[\[|\]\]/g, "").trim();
+      if (name && sector) rows.push({ symbol, name, sector });
+    }
+    return rows;
+  }
+
+  if (page.includes("Nikkei")) {
+    // format: ===Automotive=== / *[[Honda|Honda Motor]] Co., Ltd. ({{tyo2|7267}})
+    // wikitext = หลาย section ต่อกัน → ไล่ title (===X===) แล้ว parse bullet ใต้ title นั้น
+    let currentSector = "Unknown";
+    for (const line of lines) {
+      const titleMatch = line.match(/^===\s*(.+?)\s*===/);
+      if (titleMatch) {
+        currentSector = NIKKEI_SECTION_SECTOR[titleMatch[1].trim()] ?? "Unknown";
+        continue;
+      }
+      const m = line.match(/^\*\s*\[?\[?(?:[^\]|]+\|)?([^\]|]+?)\]?\]?\s*[\s\S]*?\{\{[^|}]*\|(\d{4}[A-Z]?)\}\}/);
+      if (!m) continue;
+      const name = m[1].trim().replace(/\(.*\)/, "").trim();
+      const symbol = `${m[2]}.T`;
+      if (name && symbol && currentSector !== "Unknown") rows.push({ symbol, name, sector: currentSector });
     }
     return rows;
   }
@@ -202,8 +334,13 @@ async function main() {
   for (const src of SOURCES) {
     console.log(`\n📡 ${src.page} (${src.market})...`);
     try {
-      const section = src.section ?? (await findStockSection(src.page));
-      const text = await fetchWikitext(src.page, section);
+      let text: string;
+      if ((src as { nikkeiSections?: boolean }).nikkeiSections) {
+        text = await fetchNikkeiAllSections();
+      } else {
+        const section = src.section ?? (await findStockSection(src.page));
+        text = await fetchWikitext(src.page, section);
+      }
       const rows = parseTableRows(text, src.page);
       totalRows += rows.length;
       console.log(`  พบ ${rows.length} แถว`);
