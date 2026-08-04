@@ -48,6 +48,34 @@ export type StockEntry = {
   /** หมายเหตุซินแส (กรณีธาตุซับซ้อน/หลายธาตุ) */
   sinsiNote?: string;
 
+  // ═══ ★ หลักฐานธุรกิจ (ให้ซินแสตรวจได้ว่า "ประกอบกิจการนี้จริงไหม") ═══
+  /** แหล่งที่มาของข้อมูลธุรกิจ — ต้องระบุให้ตรวจย้อนกลับได้ */
+  businessEvidence?: {
+    /** แหล่ง: เช่น "56-1 ปี 2567", "10-K 2024", "เว็บ IR", "รายงานประจำปี" */
+    source: string;
+    /** ลิงก์อ้างอิง (ถ้ามี) */
+    url?: string;
+    /** คำพูด/ข้อความจากแหล่ง (evidence ตรง ๆ ที่ซินแสเทียบได้) */
+    quote?: string;
+  };
+
+  // ═══ ★ ประวัติการตรวจของซินแส (review trail — กันแก้ย้อนหลัง/ดูว่าใครยืนยัน) ═══
+  /** แต่ละรายการ = 1 รอบการตรวจ (draft → reviewed ครั้งแรก หรือแก้หลัง reviewed) */
+  reviewHistory?: Array<{
+    reviewedBy: string;
+    reviewedAt: string; // ISO
+    /** verdict ของรอบนี้ */
+    action: "approved" | "changed";
+    /** ธาตุก่อนตรวจ (ถ้าแก้) */
+    beforeElements?: ThaiElement[];
+    beforePrimary?: ThaiElement;
+    /** ธาตุหลังตรวจ */
+    afterElements: ThaiElement[];
+    afterPrimary: ThaiElement;
+    /** ความเห็นซินแส (เช่น "ธุรกิจหลักคือ X ไม่ใช่ Y → แก้ธาตุ") */
+    note?: string;
+  }>;
+
   // ═══ ชั้น B: ข้อมูลตลาด (dynamic — ผ่าน API ราคา ไม่กรอกมือ) ═══
   /** ข้อมูลราคา/valuation — null จนกว่าจะต่อ API (web admin ระยะ 2) */
   marketData?: {
@@ -76,6 +104,144 @@ export function getThaiStocks(): StockEntry[] {
 /** เฉพาะหุ้นที่ผ่านตรวจแล้ว (ใช้ในเล่มที่ขาย) */
 export function getPublishedThaiStocks(): StockEntry[] {
   return getThaiStocks().filter((s) => s.status === "published");
+}
+
+// ───────── ★ Review Workflow: export checklist ให้ซินแสตรวจ + import ผลกลับ ─────────
+
+/**
+ * สร้างแถว checklist สำหรับซินแสตรวจ (1 แถว/หุ้น)
+ * คอลัมน์: ticker | ชื่อ | ธุรกิจ (สั้น) | description (ยาว) | revenueMix | ธาตุปัจจุบัน | ถูกต้อง? | ธาตุที่แก้ | หมายเหตุ
+ * — ซินแสกรอกเฉพาะ 3 คอลัมน์สุดท้าย
+ */
+export function buildReviewChecklist(stocks: StockEntry[]): Array<{
+  ticker: string;
+  name: string;
+  business: string;
+  description: string;
+  revenueMix: string;
+  currentElements: string;
+  currentPrimary: string;
+  elementSource: string;
+  businessEvidenceSource: string;
+  isCorrect: ""; // ซินแสกรอก: "Y" / "N"
+  correctedElements: ""; // ถ้า N: ธาตุใหม่ (เช่น "น้ำ,ดิน")
+  note: ""; // หมายเหตุ/ความเห็นซินแส
+}> {
+  return stocks.map((s) => ({
+    ticker: s.ticker,
+    name: s.name,
+    business: s.business,
+    description: s.description ?? "",
+    revenueMix: (s.revenueMix ?? []).map((m) => `${m.segment}${m.approxShare ? ` (${m.approxShare})` : ""}`).join(" | "),
+    currentElements: s.elements.join(","),
+    currentPrimary: s.primaryElement,
+    elementSource: s.elementSource,
+    businessEvidenceSource: s.businessEvidence?.source ?? "",
+    isCorrect: "",
+    correctedElements: "",
+    note: "",
+  }));
+}
+
+/** แปลง checklist → CSV (เปิดใน Excel ให้ซินแสกรอกได้) */
+export function reviewChecklistToCsv(rows: ReturnType<typeof buildReviewChecklist>): string {
+  const header = ["ticker", "name", "business", "description", "revenueMix", "currentElements", "currentPrimary", "elementSource", "businessEvidenceSource", "isCorrect", "correctedElements", "note"];
+  const escape = (v: string) => `"${String(v).replace(/"/g, '""')}"`;
+  const lines = [header.join(",")];
+  for (const r of rows) {
+    lines.push([r.ticker, r.name, r.business, r.description, r.revenueMix, r.currentElements, r.currentPrimary, r.elementSource, r.businessEvidenceSource, r.isCorrect, r.correctedElements, r.note].map(escape).join(","));
+  }
+  return lines.join("\n");
+}
+
+export type ReviewResult = {
+  ticker: string;
+  /** Y = ธาตุถูกต้องแล้ว, N = ต้องแก้ */
+  isCorrect: "Y" | "N";
+  /** ถ้า N: ธาตุใหม่ (เช่น "น้ำ,ดิน") */
+  correctedElements?: string;
+  correctedPrimary?: string;
+  note?: string;
+};
+
+/**
+ * ใช้ผลตรวจของซินแส → อัปเดตหุ้น (elements/primaryElement/status/reviewHistory)
+ * @returns รายการที่อัปเดต + ปัญหา
+ */
+export function applyReviewResults(
+  stocks: StockEntry[],
+  results: ReviewResult[],
+  reviewerName: string,
+): { updated: string[]; problems: string[] } {
+  const updated: string[] = [];
+  const problems: string[] = [];
+  const now = new Date().toISOString();
+
+  for (const r of results) {
+    const stock = stocks.find((s) => s.ticker === r.ticker);
+    if (!stock) {
+      problems.push(`ไม่พบ ticker: ${r.ticker}`);
+      continue;
+    }
+
+    const beforeElements = [...stock.elements];
+    const beforePrimary = stock.primaryElement;
+
+    if (r.isCorrect === "Y") {
+      // ยืนยันธาตุเดิม
+      stock.reviewHistory = [
+        ...(stock.reviewHistory ?? []),
+        {
+          reviewedBy: reviewerName,
+          reviewedAt: now,
+          action: "approved",
+          afterElements: beforeElements,
+          afterPrimary: beforePrimary,
+          note: r.note,
+        },
+      ];
+      updated.push(`${r.ticker} (approved)`);
+    } else {
+      // แก้ธาตุตามซินแส
+      const corrected = (r.correctedElements ?? "")
+        .split(",")
+        .map((e) => e.trim() as ThaiElement)
+        .filter((e) => THAI_ELEMENTS.includes(e));
+      const primary = (r.correctedPrimary ?? corrected[0]) as ThaiElement;
+
+      if (corrected.length === 0) {
+        problems.push(`${r.ticker}: isCorrect=N แต่ correctedElements ว่าง/ไม่ใช่ธาตุไทย`);
+        continue;
+      }
+
+      stock.elements = corrected;
+      stock.primaryElement = THAI_ELEMENTS.includes(primary) ? primary : corrected[0];
+      stock.sinsiNote = r.note ?? stock.sinsiNote;
+      stock.reviewHistory = [
+        ...(stock.reviewHistory ?? []),
+        {
+          reviewedBy: reviewerName,
+          reviewedAt: now,
+          action: "changed",
+          beforeElements,
+          beforePrimary,
+          afterElements: corrected,
+          afterPrimary: stock.primaryElement,
+          note: r.note,
+        },
+      ];
+      updated.push(`${r.ticker} (changed: ${beforePrimary} → ${stock.primaryElement})`);
+    }
+
+    // ตั้งค่า review meta + status (เฉพาะถ้ายังไม่ published — published ต้องผ่าน gate อื่น)
+    stock.reviewedBy = reviewerName;
+    stock.reviewedAt = now;
+    if (stock.status === "draft" || stock.status === "in_review") {
+      stock.status = "reviewed";
+    }
+  }
+
+  return { updated, problems };
 }
 
 /** validate คลังหุ้น — คืนรายการปัญหา ([] = ผ่าน) */
