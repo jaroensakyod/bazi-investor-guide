@@ -17,12 +17,21 @@
       "currency": "THB",
       "sector": "โทรคมนาคม",
       "business": "ให้บริการโทรศัพท์เคลื่อนที่ อินเทอร์เน็ต โทรคมนาคม",
-      "businessKeywords": ["โทรคมนาคม", "อินเทอร์เน็ต", "สื่อสาร"],
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต",
+        "สื่อสาร"
+      ],
       "growthStage": "large",
-      "theme": ["โทรคมนาคม", "ดิจิทัล"],
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไม้"],
+      "elements": [
+        "ไม้"
+      ],
       "primaryElement": "ไม้",
       "elementReason": "อินเทอร์เน็ต/การสื่อสาร/โทรคมนาคม = ไม้ (career-business.txt §ธาตุไม้)",
       "elementSource": "career-business.txt",
@@ -43,12 +52,22 @@
       "currency": "THB",
       "sector": "ขนส่ง",
       "business": "บริหารท่าอากาศยาน สนามบิน บริการการบิน",
-      "businessKeywords": ["ท่าอากาศยาน", "ขนส่ง", "ท่องเที่ยว", "บริการ"],
+      "businessKeywords": [
+        "ท่าอากาศยาน",
+        "ขนส่ง",
+        "ท่องเที่ยว",
+        "บริการ"
+      ],
       "growthStage": "large",
-      "theme": ["ท่องเที่ยว", "ขนส่ง"],
+      "theme": [
+        "ท่องเที่ยว",
+        "ขนส่ง"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ขนส่ง/ท่องเที่ยว/บริการ = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -69,12 +88,20 @@
       "currency": "THB",
       "sector": "ธนาคาร",
       "business": "ธนาคารพาณิชย์ สินเชื่อ การเงิน",
-      "businessKeywords": ["ธนาคาร", "สินเชื่อ", "การเงิน"],
+      "businessKeywords": [
+        "ธนาคาร",
+        "สินเชื่อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "การเงิน/ธนาคาร/สินเชื่อ = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -95,12 +122,21 @@
       "currency": "THB",
       "sector": "โรงพยาบาล",
       "business": "โรงพยาบาล บริการทางการแพทย์ เครือข่ายคลินิก",
-      "businessKeywords": ["โรงพยาบาล", "การแพทย์", "สุขภาพ"],
+      "businessKeywords": [
+        "โรงพยาบาล",
+        "การแพทย์",
+        "สุขภาพ"
+      ],
       "growthStage": "large",
-      "theme": ["การแพทย์", "Aging"],
+      "theme": [
+        "การแพทย์",
+        "Aging"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "โรงพยาบาล = ไฟ (career-business.txt §ธาตุไฟ: โรงพยาบาล คลินิก)",
       "elementSource": "career-business.txt",
@@ -121,12 +157,22 @@
       "currency": "THB",
       "sector": "ขนส่ง",
       "business": "ทางด่วน รถไฟฟ้าใต้ดิน โครงสร้างพื้นฐานคมนาคม",
-      "businessKeywords": ["ทางด่วน", "รถไฟฟ้า", "ขนส่ง"],
+      "businessKeywords": [
+        "ทางด่วน",
+        "รถไฟฟ้า",
+        "ขนส่ง"
+      ],
       "growthStage": "large",
-      "theme": ["ขนส่ง", "โครงสร้างพื้นฐาน"],
+      "theme": [
+        "ขนส่ง",
+        "โครงสร้างพื้นฐาน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ดิน"],
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ขนส่ง = น้ำ (career-business.txt); โครงสร้างพื้นฐาน/ก่อสร้าง = ดิน (รอง)",
       "elementSource": "career-business.txt",
@@ -147,12 +193,23 @@
       "currency": "THB",
       "sector": "โรงพยาบาล",
       "business": "โรงพยาบาลเอกชน บริการทางการแพทย์ การท่องเที่ยวเชิงสุขภาพ",
-      "businessKeywords": ["โรงพยาบาล", "การแพทย์", "ท่องเที่ยวสุขภาพ"],
+      "businessKeywords": [
+        "โรงพยาบาล",
+        "การแพทย์",
+        "ท่องเที่ยวสุขภาพ"
+      ],
       "growthStage": "large",
-      "theme": ["การแพทย์", "Aging", "ท่องเที่ยว"],
+      "theme": [
+        "การแพทย์",
+        "Aging",
+        "ท่องเที่ยว"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "น้ำ"],
+      "elements": [
+        "ไฟ",
+        "น้ำ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "โรงพยาบาล = ไฟ (career-business.txt); การท่องเที่ยว/บริการ = น้ำ (รอง)",
       "elementSource": "career-business.txt",
@@ -173,12 +230,20 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ค้าปลีกค้าส่ง สินค้าอุปโภคบริโภค บรรจุภัณฑ์",
-      "businessKeywords": ["ค้าปลีก", "ค้าส่ง", "ห้าง"],
+      "businessKeywords": [
+        "ค้าปลีก",
+        "ค้าส่ง",
+        "ห้าง"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก"],
+      "theme": [
+        "ค้าปลีก"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ค้าปลีก/ห้าง = น้ำ (career-business.txt §ธาตุน้ำ: ห้าง ร้านสะดวกซื้อ)",
       "elementSource": "career-business.txt",
@@ -199,12 +264,21 @@
       "currency": "THB",
       "sector": "ขนส่ง",
       "business": "รถไฟฟ้าบีทีเอส ขนส่งมวลชน สื่อโฆษณา",
-      "businessKeywords": ["รถไฟฟ้า", "ขนส่ง", "สื่อ"],
+      "businessKeywords": [
+        "รถไฟฟ้า",
+        "ขนส่ง",
+        "สื่อ"
+      ],
       "growthStage": "large",
-      "theme": ["ขนส่ง"],
+      "theme": [
+        "ขนส่ง"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ไม้"],
+      "elements": [
+        "น้ำ",
+        "ไม้"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ขนส่ง = น้ำ (career-business.txt); สื่อ/ประชาสัมพันธ์ = ไม้ (รอง)",
       "elementSource": "career-business.txt",
@@ -225,12 +299,20 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ร้านสะดวกซื้อ 7-Eleven ค้าปลีก โลจิสติกส์",
-      "businessKeywords": ["ค้าปลีก", "สะดวกซื้อ", "ห้าง"],
+      "businessKeywords": [
+        "ค้าปลีก",
+        "สะดวกซื้อ",
+        "ห้าง"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก"],
+      "theme": [
+        "ค้าปลีก"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ร้านสะดวกซื้อ/ค้าปลีก = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -251,12 +333,22 @@
       "currency": "THB",
       "sector": "อาหาร",
       "business": "อาหารสัตว์ ปศุสัตว์ เนื้อสัตว์ อาหารแปรรูป",
-      "businessKeywords": ["อาหาร", "ปศุสัตว์", "อาหารสัตว์"],
+      "businessKeywords": [
+        "อาหาร",
+        "ปศุสัตว์",
+        "อาหารสัตว์"
+      ],
       "growthStage": "large",
-      "theme": ["อาหาร", "Food Security"],
+      "theme": [
+        "อาหาร",
+        "Food Security"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ดิน"],
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "อาหาร = น้ำ (career-business.txt); ปศุสัตว์/อาหารสัตว์ = ดิน (รอง)",
       "elementSource": "career-business.txt",
@@ -277,12 +369,22 @@
       "currency": "THB",
       "sector": "อสังหาริมทรัพย์",
       "business": "ศูนย์การค้า ห้างสรรพสินค้า อสังหาริมทรัพย์เชิงพาณิชย์",
-      "businessKeywords": ["ศูนย์การค้า", "อสังหาริมทรัพย์", "ห้าง"],
+      "businessKeywords": [
+        "ศูนย์การค้า",
+        "อสังหาริมทรัพย์",
+        "ห้าง"
+      ],
       "growthStage": "large",
-      "theme": ["อสังหาริมทรัพย์", "ค้าปลีก"],
+      "theme": [
+        "อสังหาริมทรัพย์",
+        "ค้าปลีก"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ดิน", "น้ำ"],
+      "elements": [
+        "ดิน",
+        "น้ำ"
+      ],
       "primaryElement": "ดิน",
       "elementReason": "อสังหาริมทรัพย์/ศูนย์การค้า = ดิน (Source4 §5: อสังหา); ค้าปลีก = น้ำ (รอง)",
       "elementSource": "Source4 §5 + career-business.txt",
@@ -303,12 +405,20 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ค้าปลีกค้าส่ง ห้างสรรพสินค้า ซูเปอร์มาร์เก็ต",
-      "businessKeywords": ["ค้าปลีก", "ห้าง", "ซูเปอร์มาร์เก็ต"],
+      "businessKeywords": [
+        "ค้าปลีก",
+        "ห้าง",
+        "ซูเปอร์มาร์เก็ต"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก"],
+      "theme": [
+        "ค้าปลีก"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ค้าปลีก/ห้าง/ซูเปอร์มาร์เก็ต = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -329,12 +439,23 @@
       "currency": "THB",
       "sector": "อิเล็กทรอนิกส์",
       "business": "อุปกรณ์อิเล็กทรอนิกส์ แหล่งจ่ายไฟ พาวเวอร์ซัพพลาย EV ชาร์จเจอร์",
-      "businessKeywords": ["อิเล็กทรอนิกส์", "เทคโนโลยี", "EV"],
+      "businessKeywords": [
+        "อิเล็กทรอนิกส์",
+        "เทคโนโลยี",
+        "EV"
+      ],
       "growthStage": "large",
-      "theme": ["เทคโนโลยี", "EV", "AI/Data Center"],
+      "theme": [
+        "เทคโนโลยี",
+        "EV",
+        "AI/Data Center"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ทอง", "ไฟ"],
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
       "primaryElement": "ทอง",
       "elementReason": "สินค้าเทคโนโลยี/อิเล็กทรอนิกส์ = ทอง (career-business.txt §ธาตุทอง); พลังงาน/EV = ไฟ (รอง)",
       "elementSource": "career-business.txt",
@@ -355,12 +476,23 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "พลังงานทดแทน โซลาร์ฟาร์ม แบตเตอรี่ EV",
-      "businessKeywords": ["พลังงาน", "โซลาร์", "แบตเตอรี่", "EV"],
+      "businessKeywords": [
+        "พลังงาน",
+        "โซลาร์",
+        "แบตเตอรี่",
+        "EV"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงานสะอาด", "EV"],
+      "theme": [
+        "พลังงานสะอาด",
+        "EV"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "ทอง"],
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงาน/โซลาร์/แบตเตอรี่ = ไฟ (career-business.txt §ธาตุไฟ); EV/เทค = ทอง (รอง)",
       "elementSource": "career-business.txt",
@@ -381,12 +513,21 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ค้าปลีกวัสดุก่อสร้าง ของตกแต่งบ้าน เครื่องมือช่าง",
-      "businessKeywords": ["ค้าปลีก", "วัสดุก่อสร้าง"],
+      "businessKeywords": [
+        "ค้าปลีก",
+        "วัสดุก่อสร้าง"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก", "ก่อสร้าง"],
+      "theme": [
+        "ค้าปลีก",
+        "ก่อสร้าง"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ดิน"],
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ค้าปลีก = น้ำ (career-business.txt); วัสดุก่อสร้าง = ดิน (รอง)",
       "elementSource": "career-business.txt",
@@ -407,12 +548,19 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "ผลิตและจำหน่ายไฟฟ้า สาธารณูปโภคพลังงาน",
-      "businessKeywords": ["ไฟฟ้า", "พลังงาน"],
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน"],
+      "theme": [
+        "พลังงาน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ: พลังงานไฟฟ้า)",
       "elementSource": "career-business.txt",
@@ -433,12 +581,22 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "ผลิตไฟฟ้า ก๊าซธรรมชาติ โครงสร้างพื้นฐานพลังงาน เทคโนโลยี",
-      "businessKeywords": ["ไฟฟ้า", "พลังงาน", "ก๊าซ"],
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน",
+        "ก๊าซ"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน", "AI/Data Center"],
+      "theme": [
+        "พลังงาน",
+        "AI/Data Center"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "ทอง"],
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงาน/ไฟฟ้า = ไฟ (decision log: ก๊าซ/พลังงาน = ไฟ); เทค/Data Center = ทอง (รอง)",
       "elementSource": "decision-log.md + career-business.txt",
@@ -459,12 +617,21 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ค้าปลีกวัสดุก่อสร้าง ของแต่งบ้าน เครื่องใช้ไฟฟ้า",
-      "businessKeywords": ["ค้าปลีก", "วัสดุก่อสร้าง"],
+      "businessKeywords": [
+        "ค้าปลีก",
+        "วัสดุก่อสร้าง"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก", "ก่อสร้าง"],
+      "theme": [
+        "ค้าปลีก",
+        "ก่อสร้าง"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ดิน"],
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ค้าปลีก = น้ำ (career-business.txt); วัสดุก่อสร้าง/ของแต่งบ้าน = ดิน (รอง)",
       "elementSource": "career-business.txt",
@@ -485,12 +652,21 @@
       "currency": "THB",
       "sector": "โทรคมนาคม",
       "business": "ถือหุ้นในธุรกิจโทรคมนาคม ดิจิทัล (บริษัทลูก: AIS, ITD)",
-      "businessKeywords": ["โทรคมนาคม", "สื่อสาร", "ดิจิทัล"],
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "สื่อสาร",
+        "ดิจิทัล"
+      ],
       "growthStage": "large",
-      "theme": ["โทรคมนาคม", "ดิจิทัล"],
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไม้"],
+      "elements": [
+        "ไม้"
+      ],
       "primaryElement": "ไม้",
       "elementReason": "โทรคมนาคม/อินเทอร์เน็ต = ไม้ (career-business.txt §ธาตุไม้)",
       "elementSource": "career-business.txt",
@@ -511,12 +687,22 @@
       "currency": "THB",
       "sector": "ปิโตรเคมี",
       "business": "ปิโตรเคมี เส้นใย เคมีภัณฑ์ PET รีไซเคิล",
-      "businessKeywords": ["ปิโตรเคมี", "เคมีภัณฑ์", "เส้นใย"],
+      "businessKeywords": [
+        "ปิโตรเคมี",
+        "เคมีภัณฑ์",
+        "เส้นใย"
+      ],
       "growthStage": "large",
-      "theme": ["ปิโตรเคมี", "รีไซเคิล/BCG"],
+      "theme": [
+        "ปิโตรเคมี",
+        "รีไซเคิล/BCG"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ทอง", "ไฟ"],
+      "elements": [
+        "ทอง",
+        "ไฟ"
+      ],
       "primaryElement": "ทอง",
       "elementReason": "เคมีภัณฑ์/อุตสาหกรรมหนัก = ทอง (career-business.txt §ธาตุทอง); ต้นน้ำจากพลังงาน = ไฟ (รอง)",
       "elementSource": "career-business.txt",
@@ -537,12 +723,22 @@
       "currency": "THB",
       "sector": "ธนาคาร",
       "business": "ธนาคารพาณิชย์ สินเชื่อ การเงิน บัตรเครดิต",
-      "businessKeywords": ["ธนาคาร", "สินเชื่อ", "การเงิน", "บัตรเครดิต"],
+      "businessKeywords": [
+        "ธนาคาร",
+        "สินเชื่อ",
+        "การเงิน",
+        "บัตรเครดิต"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ดิน"],
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "การเงิน/ธนาคาร/สินเชื่อ = น้ำ (career-business.txt §ธาตุน้ำ); สินเชื่อบ้าน/อสังหา = ดิน (รอง)",
       "elementSource": "career-business.txt",
@@ -563,12 +759,20 @@
       "currency": "THB",
       "sector": "ธนาคาร",
       "business": "ธนาคารพาณิชย์ สินเชื่อ การเงิน ภาครัฐ",
-      "businessKeywords": ["ธนาคาร", "สินเชื่อ", "การเงิน"],
+      "businessKeywords": [
+        "ธนาคาร",
+        "สินเชื่อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "การเงิน/ธนาคาร = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -589,12 +793,20 @@
       "currency": "THB",
       "sector": "การเงิน",
       "business": "บัตรเครดิต บัตรกดเงินสด สินเชื่อบุคคล",
-      "businessKeywords": ["บัตรเครดิต", "สินเชื่อ", "การเงิน"],
+      "businessKeywords": [
+        "บัตรเครดิต",
+        "สินเชื่อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "การเงิน/สินเชื่อ/บัตรเครดิต = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -615,12 +827,20 @@
       "currency": "THB",
       "sector": "อสังหาริมทรัพย์",
       "business": "พัฒนาอสังหาริมทรัพย์ บ้านจัดสรร คอนโดมิเนียม",
-      "businessKeywords": ["อสังหาริมทรัพย์", "บ้าน", "คอนโด"],
+      "businessKeywords": [
+        "อสังหาริมทรัพย์",
+        "บ้าน",
+        "คอนโด"
+      ],
       "growthStage": "large",
-      "theme": ["อสังหาริมทรัพย์"],
+      "theme": [
+        "อสังหาริมทรัพย์"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ดิน"],
+      "elements": [
+        "ดิน"
+      ],
       "primaryElement": "ดิน",
       "elementReason": "อสังหาริมทรัพย์/บ้าน/คอนโด = ดิน (career-business.txt §ธาตุดิน + Source4 §5)",
       "elementSource": "career-business.txt + Source4 §5",
@@ -641,12 +861,22 @@
       "currency": "THB",
       "sector": "ท่องเที่ยว",
       "business": "โรงแรม รีสอร์ท ร้านอาหาร เครือข่าย hospitality",
-      "businessKeywords": ["โรงแรม", "ท่องเที่ยว", "อาหาร", "บริการ"],
+      "businessKeywords": [
+        "โรงแรม",
+        "ท่องเที่ยว",
+        "อาหาร",
+        "บริการ"
+      ],
       "growthStage": "large",
-      "theme": ["ท่องเที่ยว", "อาหาร"],
+      "theme": [
+        "ท่องเที่ยว",
+        "อาหาร"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "โรงแรม/ท่องเที่ยว/อาหาร/บริการ = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -667,12 +897,20 @@
       "currency": "THB",
       "sector": "การเงิน",
       "business": "สินเชื่อรายย่อย จำนำทะเบียน สินเชื่อนาโนไฟแนนซ์",
-      "businessKeywords": ["สินเชื่อ", "ไฟแนนซ์", "การเงิน"],
+      "businessKeywords": [
+        "สินเชื่อ",
+        "ไฟแนนซ์",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "สินเชื่อ/ไฟแนนซ์/การเงิน = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -693,12 +931,22 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "สถานีบริการน้ำมัน ค้าปลีก Cafe Amazon ธุรกิจน้ำมัน",
-      "businessKeywords": ["น้ำมัน", "พลังงาน", "ค้าปลีก"],
+      "businessKeywords": [
+        "น้ำมัน",
+        "พลังงาน",
+        "ค้าปลีก"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน", "ค้าปลีก"],
+      "theme": [
+        "พลังงาน",
+        "ค้าปลีก"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "น้ำ"],
+      "elements": [
+        "ไฟ",
+        "น้ำ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "น้ำมัน/พลังงาน = ไฟ (decision log: พลังงาน=ไฟ); ค้าปลีก = น้ำ (รอง)",
       "elementSource": "decision-log.md + career-business.txt",
@@ -719,12 +967,20 @@
       "currency": "THB",
       "sector": "อาหาร/เครื่องดื่ม",
       "business": "เครื่องดื่มชูกำลัง น้ำดื่ม สินค้าอุปโภคบริโภค",
-      "businessKeywords": ["เครื่องดื่ม", "อาหาร", "สินค้าอุปโภค"],
+      "businessKeywords": [
+        "เครื่องดื่ม",
+        "อาหาร",
+        "สินค้าอุปโภค"
+      ],
       "growthStage": "large",
-      "theme": ["อาหาร/เครื่องดื่ม"],
+      "theme": [
+        "อาหาร/เครื่องดื่ม"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "เครื่องดื่ม/อาหาร = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -745,12 +1001,23 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "ปิโตรเลียม ก๊าซธรรมชาติ โรงกลั่น ปิโตรเคมี ค้าปลีกพลังงาน",
-      "businessKeywords": ["พลังงาน", "ปิโตรเลียม", "ก๊าซ", "ปิโตรเคมี"],
+      "businessKeywords": [
+        "พลังงาน",
+        "ปิโตรเลียม",
+        "ก๊าซ",
+        "ปิโตรเคมี"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน", "ปิโตรเคมี"],
+      "theme": [
+        "พลังงาน",
+        "ปิโตรเคมี"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "ทอง"],
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงาน/ปิโตรเลียม/ก๊าซ = ไฟ (decision log); ปิโตรเคมี/อุตสาหกรรม = ทอง (รอง)",
       "elementSource": "decision-log.md + career-business.txt",
@@ -771,12 +1038,20 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "สำรวจและผลิตปิโตรเลียม ก๊าซธรรมชาติ น้ำมันดิบ",
-      "businessKeywords": ["ปิโตรเลียม", "ก๊าซ", "พลังงาน"],
+      "businessKeywords": [
+        "ปิโตรเลียม",
+        "ก๊าซ",
+        "พลังงาน"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน"],
+      "theme": [
+        "พลังงาน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงาน/ปิโตรเลียม = ไฟ (decision log: พลังงาน=ไฟ)",
       "elementSource": "decision-log.md",
@@ -797,12 +1072,20 @@
       "currency": "THB",
       "sector": "ปิโตรเคมี",
       "business": "ปิโตรเคมีขั้นต้นและขั้นปลาย เคมีภัณฑ์",
-      "businessKeywords": ["ปิโตรเคมี", "เคมีภัณฑ์"],
+      "businessKeywords": [
+        "ปิโตรเคมี",
+        "เคมีภัณฑ์"
+      ],
       "growthStage": "large",
-      "theme": ["ปิโตรเคมี"],
+      "theme": [
+        "ปิโตรเคมี"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "ทอง"],
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "ต้นน้ำปิโตรเคมีจากพลังงาน = ไฟ; เคมีภัณฑ์/อุตสาหกรรม = ทอง (รอง)",
       "elementSource": "decision-log.md + career-business.txt",
@@ -823,12 +1106,19 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "ผลิตไฟฟ้า สาธารณูปโภค พลังงานทดแทน",
-      "businessKeywords": ["ไฟฟ้า", "พลังงาน"],
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน"],
+      "theme": [
+        "พลังงาน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ)",
       "elementSource": "career-business.txt",
@@ -849,12 +1139,20 @@
       "currency": "THB",
       "sector": "ธนาคาร",
       "business": "ธนาคารพาณิชย์ สินเชื่อ การเงิน ประกัน",
-      "businessKeywords": ["ธนาคาร", "สินเชื่อ", "การเงิน"],
+      "businessKeywords": [
+        "ธนาคาร",
+        "สินเชื่อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "การเงิน/ธนาคาร = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -875,12 +1173,22 @@
       "currency": "THB",
       "sector": "วัสดุก่อสร้าง",
       "business": "ปูนซีเมนต์ วัสดุก่อสร้าง เคมีภัณฑ์ บรรจุภัณฑ์",
-      "businessKeywords": ["ปูนซีเมนต์", "วัสดุก่อสร้าง", "เคมีภัณฑ์"],
+      "businessKeywords": [
+        "ปูนซีเมนต์",
+        "วัสดุก่อสร้าง",
+        "เคมีภัณฑ์"
+      ],
       "growthStage": "large",
-      "theme": ["ก่อสร้าง", "ปิโตรเคมี"],
+      "theme": [
+        "ก่อสร้าง",
+        "ปิโตรเคมี"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ดิน", "ทอง"],
+      "elements": [
+        "ดิน",
+        "ทอง"
+      ],
       "primaryElement": "ดิน",
       "elementReason": "ปูนซีเมนต์/วัสดุก่อสร้าง = ดิน (career-business.txt §ธาตุดิน); เคมีภัณฑ์ = ทอง (รอง)",
       "elementSource": "career-business.txt",
@@ -901,12 +1209,20 @@
       "currency": "THB",
       "sector": "การเงิน",
       "business": "สินเชื่อทะเบียนรถ สินเชื่อนาโนไฟแนนซ์",
-      "businessKeywords": ["สินเชื่อ", "ไฟแนนซ์", "การเงิน"],
+      "businessKeywords": [
+        "สินเชื่อ",
+        "ไฟแนนซ์",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "สินเชื่อ/การเงิน = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -927,12 +1243,20 @@
       "currency": "THB",
       "sector": "การเงิน",
       "business": "สินเชื่อเช่าซื้อ การเงิน ธนาคารพาณิชย์",
-      "businessKeywords": ["สินเชื่อ", "เช่าซื้อ", "การเงิน"],
+      "businessKeywords": [
+        "สินเชื่อ",
+        "เช่าซื้อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "สินเชื่อ/การเงิน = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -953,12 +1277,20 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "โรงกลั่นน้ำมัน ปิโตรเคมี น้ำมันหล่อลื่น",
-      "businessKeywords": ["น้ำมัน", "กลั่น", "พลังงาน"],
+      "businessKeywords": [
+        "น้ำมัน",
+        "กลั่น",
+        "พลังงาน"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน"],
+      "theme": [
+        "พลังงาน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "น้ำมัน/พลังงาน = ไฟ (decision log: พลังงาน=ไฟ)",
       "elementSource": "decision-log.md",
@@ -979,12 +1311,21 @@
       "currency": "THB",
       "sector": "โทรคมนาคม",
       "business": "โทรคมนาคม โทรศัพท์เคลื่อนที่ อินเทอร์เน็ต สื่อ",
-      "businessKeywords": ["โทรคมนาคม", "อินเทอร์เน็ต", "สื่อสาร"],
+      "businessKeywords": [
+        "โทรคมนาคม",
+        "อินเทอร์เน็ต",
+        "สื่อสาร"
+      ],
       "growthStage": "large",
-      "theme": ["โทรคมนาคม", "ดิจิทัล"],
+      "theme": [
+        "โทรคมนาคม",
+        "ดิจิทัล"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไม้"],
+      "elements": [
+        "ไม้"
+      ],
       "primaryElement": "ไม้",
       "elementReason": "โทรคมนาคม/อินเทอร์เน็ต = ไม้ (career-business.txt §ธาตุไม้)",
       "elementSource": "career-business.txt",
@@ -1005,12 +1346,20 @@
       "currency": "THB",
       "sector": "ธนาคาร",
       "business": "ธนาคารพาณิชย์ สินเชื่อ การเงิน",
-      "businessKeywords": ["ธนาคาร", "สินเชื่อ", "การเงิน"],
+      "businessKeywords": [
+        "ธนาคาร",
+        "สินเชื่อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "การเงิน/ธนาคาร = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -1031,12 +1380,21 @@
       "currency": "THB",
       "sector": "อาหาร",
       "business": "อาหารทะเลแปรรูป ปลาทูน่ากระป๋อง อาหารสัตว์เลี้ยง",
-      "businessKeywords": ["อาหาร", "อาหารทะเล", "สัตว์น้ำ"],
+      "businessKeywords": [
+        "อาหาร",
+        "อาหารทะเล",
+        "สัตว์น้ำ"
+      ],
       "growthStage": "large",
-      "theme": ["อาหาร", "Food Security"],
+      "theme": [
+        "อาหาร",
+        "Food Security"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "อาหาร/สัตว์น้ำ = น้ำ (career-business.txt §ธาตุน้ำ: สัตว์น้ำ อาหาร)",
       "elementSource": "career-business.txt",
@@ -1057,12 +1415,22 @@
       "currency": "THB",
       "sector": "อสังหาริมทรัพย์/นิคมอุตสาหกรรม",
       "business": "นิคมอุตสาหกรรม โลจิสติกส์ สาธารณูปโภค พลังงาน",
-      "businessKeywords": ["นิคมอุตสาหกรรม", "อสังหาริมทรัพย์", "โลจิสติกส์"],
+      "businessKeywords": [
+        "นิคมอุตสาหกรรม",
+        "อสังหาริมทรัพย์",
+        "โลจิสติกส์"
+      ],
       "growthStage": "large",
-      "theme": ["อสังหาริมทรัพย์", "โลจิสติกส์"],
+      "theme": [
+        "อสังหาริมทรัพย์",
+        "โลจิสติกส์"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ดิน", "น้ำ"],
+      "elements": [
+        "ดิน",
+        "น้ำ"
+      ],
       "primaryElement": "ดิน",
       "elementReason": "อสังหาริมทรัพย์/นิคม = ดิน (career-business.txt); โลจิสติกส์ = น้ำ (รอง)",
       "elementSource": "career-business.txt",
@@ -1083,12 +1451,21 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "ถ่านหิน เหมือง พลังงาน ก๊าซธรรมชาติ",
-      "businessKeywords": ["ถ่านหิน", "เหมือง", "พลังงาน"],
+      "businessKeywords": [
+        "ถ่านหิน",
+        "เหมือง",
+        "พลังงาน"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน"],
+      "theme": [
+        "พลังงาน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "ดิน"],
+      "elements": [
+        "ไฟ",
+        "ดิน"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "ถ่านหิน/พลังงาน = ไฟ (career-business.txt §ธาตุไฟ: ถ่านไฟ); เหมือง/แร่ธาตุ = ดิน (รอง)",
       "elementSource": "career-business.txt",
@@ -1109,12 +1486,20 @@
       "currency": "THB",
       "sector": "ก่อสร้าง",
       "business": "รับเหมาก่อสร้าง โครงสร้างพื้นฐาน รถไฟฟ้า",
-      "businessKeywords": ["ก่อสร้าง", "รับเหมา", "โครงสร้างพื้นฐาน"],
+      "businessKeywords": [
+        "ก่อสร้าง",
+        "รับเหมา",
+        "โครงสร้างพื้นฐาน"
+      ],
       "growthStage": "large",
-      "theme": ["ก่อสร้าง"],
+      "theme": [
+        "ก่อสร้าง"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ดิน"],
+      "elements": [
+        "ดิน"
+      ],
       "primaryElement": "ดิน",
       "elementReason": "รับเหมาก่อสร้าง = ดิน (career-business.txt §ธาตุดิน)",
       "elementSource": "career-business.txt",
@@ -1135,12 +1520,22 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ค้าปลีกสินค้าเทคโนโลยี โทรศัพท์มือถือ ไอที",
-      "businessKeywords": ["ค้าปลีก", "เทคโนโลยี", "มือถือ"],
+      "businessKeywords": [
+        "ค้าปลีก",
+        "เทคโนโลยี",
+        "มือถือ"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก", "เทคโนโลยี"],
+      "theme": [
+        "ค้าปลีก",
+        "เทคโนโลยี"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ", "ทอง"],
+      "elements": [
+        "น้ำ",
+        "ทอง"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ค้าปลีก = น้ำ (career-business.txt); สินค้าเทคโนโลยี = ทอง (รอง)",
       "elementSource": "career-business.txt",
@@ -1161,12 +1556,21 @@
       "currency": "THB",
       "sector": "อิเล็กทรอนิกส์",
       "business": "ผลิตชิ้นส่วนอิเล็กทรอนิกส์ เซมิคอนดักเตอร์",
-      "businessKeywords": ["อิเล็กทรอนิกส์", "เซมิคอนดักเตอร์", "เทคโนโลยี"],
+      "businessKeywords": [
+        "อิเล็กทรอนิกส์",
+        "เซมิคอนดักเตอร์",
+        "เทคโนโลยี"
+      ],
       "growthStage": "large",
-      "theme": ["เทคโนโลยี", "ชิป/เซมิคอนดักเตอร์"],
+      "theme": [
+        "เทคโนโลยี",
+        "ชิป/เซมิคอนดักเตอร์"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ทอง"],
+      "elements": [
+        "ทอง"
+      ],
       "primaryElement": "ทอง",
       "elementReason": "สินค้าเทคโนโลยี/อิเล็กทรอนิกส์ = ทอง (career-business.txt §ธาตุทอง)",
       "elementSource": "career-business.txt",
@@ -1187,12 +1591,20 @@
       "currency": "THB",
       "sector": "อิเล็กทรอนิกส์",
       "business": "ผลิตแผงวงจรพิมพ์ PCB อิเล็กทรอนิกส์",
-      "businessKeywords": ["อิเล็กทรอนิกส์", "PCB", "เทคโนโลยี"],
+      "businessKeywords": [
+        "อิเล็กทรอนิกส์",
+        "PCB",
+        "เทคโนโลยี"
+      ],
       "growthStage": "large",
-      "theme": ["เทคโนโลยี"],
+      "theme": [
+        "เทคโนโลยี"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ทอง"],
+      "elements": [
+        "ทอง"
+      ],
       "primaryElement": "ทอง",
       "elementReason": "สินค้าเทคโนโลยี/อิเล็กทรอนิกส์ = ทอง (career-business.txt §ธาตุทอง)",
       "elementSource": "career-business.txt",
@@ -1213,12 +1625,20 @@
       "currency": "THB",
       "sector": "พาณิชย์",
       "business": "ค้าส่งสินค้าอุปโภคบริโภค แม็คโคร",
-      "businessKeywords": ["ค้าส่ง", "ค้าปลีก", "ห้าง"],
+      "businessKeywords": [
+        "ค้าส่ง",
+        "ค้าปลีก",
+        "ห้าง"
+      ],
       "growthStage": "large",
-      "theme": ["ค้าปลีก"],
+      "theme": [
+        "ค้าปลีก"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "ค้าส่ง/ค้าปลีก = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -1239,12 +1659,20 @@
       "currency": "THB",
       "sector": "การเงิน",
       "business": "สินเชื่อรายย่อย เช่าซื้อรถยนต์ ไฟแนนซ์",
-      "businessKeywords": ["สินเชื่อ", "เช่าซื้อ", "การเงิน"],
+      "businessKeywords": [
+        "สินเชื่อ",
+        "เช่าซื้อ",
+        "การเงิน"
+      ],
       "growthStage": "large",
-      "theme": ["การเงิน"],
+      "theme": [
+        "การเงิน"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["น้ำ"],
+      "elements": [
+        "น้ำ"
+      ],
       "primaryElement": "น้ำ",
       "elementReason": "สินเชื่อ/การเงิน = น้ำ (career-business.txt §ธาตุน้ำ)",
       "elementSource": "career-business.txt",
@@ -1265,12 +1693,19 @@
       "currency": "THB",
       "sector": "นิคมอุตสาหกรรม",
       "business": "นิคมอุตสาหกรรม อสังหาริมทรัพย์ สาธารณูปโภค",
-      "businessKeywords": ["นิคมอุตสาหกรรม", "อสังหาริมทรัพย์"],
+      "businessKeywords": [
+        "นิคมอุตสาหกรรม",
+        "อสังหาริมทรัพย์"
+      ],
       "growthStage": "large",
-      "theme": ["อสังหาริมทรัพย์"],
+      "theme": [
+        "อสังหาริมทรัพย์"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ดิน"],
+      "elements": [
+        "ดิน"
+      ],
       "primaryElement": "ดิน",
       "elementReason": "นิคม/อสังหาริมทรัพย์ = ดิน (career-business.txt §ธาตุดิน)",
       "elementSource": "career-business.txt",
@@ -1291,12 +1726,20 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "ผลิตไฟฟ้า พลังงานทดแทน สาธารณูปโภค",
-      "businessKeywords": ["ไฟฟ้า", "พลังงาน"],
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน", "พลังงานสะอาด"],
+      "theme": [
+        "พลังงาน",
+        "พลังงานสะอาด"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ)",
       "elementSource": "career-business.txt",
@@ -1317,12 +1760,21 @@
       "currency": "THB",
       "sector": "ปิโตรเคมี",
       "business": "โรงกลั่นน้ำมัน ปิโตรเคมี พลาสติก",
-      "businessKeywords": ["กลั่นน้ำมัน", "ปิโตรเคมี"],
+      "businessKeywords": [
+        "กลั่นน้ำมัน",
+        "ปิโตรเคมี"
+      ],
       "growthStage": "large",
-      "theme": ["พลังงาน", "ปิโตรเคมี"],
+      "theme": [
+        "พลังงาน",
+        "ปิโตรเคมี"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ", "ทอง"],
+      "elements": [
+        "ไฟ",
+        "ทอง"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "น้ำมัน/พลังงาน = ไฟ (decision log); ปิโตรเคมี = ทอง (รอง)",
       "elementSource": "decision-log.md + career-business.txt",
@@ -1343,16 +1795,1702 @@
       "currency": "THB",
       "sector": "พลังงาน",
       "business": "พลังงานทดแทน โซลาร์ฟาร์ม",
-      "businessKeywords": ["พลังงาน", "โซลาร์"],
+      "businessKeywords": [
+        "พลังงาน",
+        "โซลาร์"
+      ],
       "growthStage": "mid",
-      "theme": ["พลังงานสะอาด"],
+      "theme": [
+        "พลังงานสะอาด"
+      ],
       "risingStar": false,
       "listedDate": null,
-      "elements": ["ไฟ"],
+      "elements": [
+        "ไฟ"
+      ],
       "primaryElement": "ไฟ",
       "elementReason": "พลังงาน/โซลาร์ = ไฟ (career-business.txt §ธาตุไฟ)",
       "elementSource": "career-business.txt",
       "tier": "SET100",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "AAV",
+      "name": "เอเชีย เอวิเอชั่น",
+      "nameEn": "Asia Aviation",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ขนส่ง",
+      "business": "สายการบินไทยแอร์เอเชีย บริการการบิน",
+      "businessKeywords": [
+        "สายการบิน",
+        "ขนส่ง",
+        "ท่องเที่ยว"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ท่องเที่ยว",
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ขนส่ง/ท่องเที่ยว = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "BCH",
+      "name": "โรงพยาบาลบำรุงราษฎร์? (กรุงเทพเชียงใหม่)",
+      "nameEn": "Bangkok Chain Hospital",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "โรงพยาบาล",
+      "business": "เครือโรงพยาบาล บริการทางการแพทย์",
+      "businessKeywords": [
+        "โรงพยาบาล",
+        "การแพทย์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์",
+        "Aging"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "โรงพยาบาล = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "BEC",
+      "name": "บีอีซี เวิลด์",
+      "nameEn": "BEC World",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "สื่อ",
+      "business": "สถานีโทรทัศน์ ช่อง 3 สื่อโฆษณา",
+      "businessKeywords": [
+        "สื่อ",
+        "โทรทัศน์",
+        "บันเทิง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "สื่อ",
+        "บันเทิง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "สื่อ/ประชาสัมพันธ์ = ไม้ (career-business.txt); บันเทิง = น้ำ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "BLA",
+      "name": "กรุงเทพประกันชีวิต",
+      "nameEn": "Bangkok Life Assurance",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ประกัน",
+      "business": "ประกันชีวิต ประกันสุขภาพ",
+      "businessKeywords": [
+        "ประกัน",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ประกัน = น้ำ (career-business.txt §ธาตุน้ำ); การออมระยะยาว = ดิน (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "BPP",
+      "name": "บ้านปู เพาเวอร์",
+      "nameEn": "Banpu Power",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "ผลิตไฟฟ้า พลังงานทดแทน",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "CBG",
+      "name": "คาราบาวกรุ๊ป",
+      "nameEn": "Carabao Group",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อาหาร/เครื่องดื่ม",
+      "business": "เครื่องดื่มชูกำลัง เครื่องดื่ม",
+      "businessKeywords": [
+        "เครื่องดื่ม",
+        "อาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร/เครื่องดื่ม"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "เครื่องดื่ม = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "CENTEL",
+      "name": "เซ็นทรัล พลาซา",
+      "nameEn": "Central Plaza Hotel",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ท่องเที่ยว",
+      "business": "โรงแรม รีสอร์ท ร้านอาหาร",
+      "businessKeywords": [
+        "โรงแรม",
+        "ท่องเที่ยว",
+        "อาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ท่องเที่ยว",
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "โรงแรม/ท่องเที่ยว/อาหาร = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "CHG",
+      "name": "โรงพยาบาลจุฬารัตน์",
+      "nameEn": "Chularat Hospital",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "โรงพยาบาล",
+      "business": "เครือโรงพยาบาล บริการทางการแพทย์",
+      "businessKeywords": [
+        "โรงพยาบาล",
+        "การแพทย์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์",
+        "Aging"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "โรงพยาบาล = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "CKP",
+      "name": "ซีเค พาวเวอร์",
+      "nameEn": "CK Power",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "ผลิตไฟฟ้า พลังงานน้ำ พลังงานทดแทน",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "DOHOME",
+      "name": "ดูโฮม",
+      "nameEn": "Dohome",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "พาณิชย์",
+      "business": "ค้าปลีกวัสดุก่อสร้าง ของแต่งบ้าน",
+      "businessKeywords": [
+        "ค้าปลีก",
+        "วัสดุก่อสร้าง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ค้าปลีก",
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ค้าปลีก = น้ำ (career-business.txt); วัสดุก่อสร้าง = ดิน (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "EGCO",
+      "name": "ผลิตไฟฟ้า",
+      "nameEn": "Electricity Generating",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "ผลิตไฟฟ้า พลังงานทดแทน สาธารณูปโภค",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "ESSO",
+      "name": "เอสโซ่ (ไทย)",
+      "nameEn": "Esso Thailand",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "โรงกลั่นน้ำมัน ปิโตรเลียม",
+      "businessKeywords": [
+        "น้ำมัน",
+        "กลั่น",
+        "พลังงาน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "น้ำมัน/พลังงาน = ไฟ (decision log: พลังงาน=ไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "GUNKUL",
+      "name": "กันกุลเอ็นจิเนียริ่ง",
+      "nameEn": "Gunkul Engineering",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "พลังงานทดแทน โซลาร์ รับเหมาก่อสร้างไฟฟ้า",
+      "businessKeywords": [
+        "พลังงาน",
+        "โซลาร์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "พลังงานสะอาด"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ดิน"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงาน/โซลาร์ = ไฟ (career-business.txt); รับเหมาก่อสร้าง = ดิน (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "ITC",
+      "name": "อิชิตัน กรุ๊ป",
+      "nameEn": "Ichitan Group",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อาหาร/เครื่องดื่ม",
+      "business": "เครื่องดื่มชาเขียว เครื่องดื่ม",
+      "businessKeywords": [
+        "เครื่องดื่ม",
+        "อาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร/เครื่องดื่ม"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "เครื่องดื่ม = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "JMART",
+      "name": "เจ มาร์ท",
+      "nameEn": "Jasmine Mart",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "เทคโนโลยี",
+      "business": "ค้าปลีกมือถือ บริการดิจิทัล เทคโนโลยี",
+      "businessKeywords": [
+        "เทคโนโลยี",
+        "มือถือ",
+        "ดิจิทัล"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เทคโนโลยี",
+        "ดิจิทัล"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง",
+        "น้ำ"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "สินค้าเทคโนโลยี = ทอง (career-business.txt §ธาตุทอง); ค้าปลีก = น้ำ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "JMT",
+      "name": "เจเอ็มที เน็ทเวอร์ค เซอร์วิสเซ็ส",
+      "nameEn": "JMT Network Services",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "การเงิน",
+      "business": "บริหารหนี้ ตามทวงหนี้ ซื้อหนี้",
+      "businessKeywords": [
+        "การเงิน",
+        "บริหารหนี้",
+        "สินเชื่อ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "การเงิน/สินเชื่อ = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "KKP",
+      "name": "เกียรตินาคินภัทร",
+      "nameEn": "Kiatnakin Phatra",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ธนาคาร",
+      "business": "ธนาคารพาณิชย์ สินเชื่อ การเงิน",
+      "businessKeywords": [
+        "ธนาคาร",
+        "สินเชื่อ",
+        "การเงิน"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "การเงิน/ธนาคาร = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "LPN",
+      "name": "แอล.พี.เอ็น.ดีเวลลอปเมนท์",
+      "nameEn": "LPN Development",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อสังหาริมทรัพย์",
+      "business": "พัฒนาอสังหาริมทรัพย์ คอนโดมิเนียม",
+      "businessKeywords": [
+        "อสังหาริมทรัพย์",
+        "คอนโด"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อสังหาริมทรัพย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ดิน (career-business.txt §ธาตุดิน + Source4 §5)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "M",
+      "name": "เอ็มเค เรสโตรองต์ กรุ๊ป",
+      "nameEn": "MK Restaurant Group",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อาหาร",
+      "business": "ร้านอาหาร สุกี้ ร้านอาหารญี่ปุ่น",
+      "businessKeywords": [
+        "ร้านอาหาร",
+        "อาหาร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "อาหาร = น้ำ (career-business.txt); ร้านอาหาร/อาหารปรุงสุก = ไฟ (รอง, decision log)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "MEGA",
+      "name": "เมก้า ไลฟ์ไซแอ็นซ์",
+      "nameEn": "Mega Lifesciences",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ยา/สุขภาพ",
+      "business": "ยา อาหารเสริม เวชภัณฑ์ สุขภาพ",
+      "businessKeywords": [
+        "ยา",
+        "สุขภาพ",
+        "สมุนไพร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์",
+        "สุขภาพ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ยาสมุนไพร/วัตถุดิบยา = ไม้ (career-business.txt §ธาตุไม้); ร้านขายยา = ไฟ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "PSL",
+      "name": "พรีเชียส ชิปปิ้ง",
+      "nameEn": "Precious Shipping",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ขนส่ง",
+      "business": "ขนส่งสินค้าทางเรือ โลจิสติกส์",
+      "businessKeywords": [
+        "ขนส่ง",
+        "เรือ",
+        "โลจิสติกส์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ขนส่ง/โลจิสติกส์ = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "QH",
+      "name": "ควอลิตี้เฮ้าส์",
+      "nameEn": "Quality Houses",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อสังหาริมทรัพย์",
+      "business": "พัฒนาอสังหาริมทรัพย์ บ้าน คอนโด โรงแรม",
+      "businessKeywords": [
+        "อสังหาริมทรัพย์",
+        "บ้าน",
+        "โรงแรม"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อสังหาริมทรัพย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "น้ำ"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ดิน (career-business.txt); โรงแรม = น้ำ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "S",
+      "name": "สิงห์ เอสเตท",
+      "nameEn": "S Hotels and Resorts",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อสังหาริมทรัพย์/ท่องเที่ยว",
+      "business": "โรงแรม รีสอร์ท อสังหาริมทรัพย์",
+      "businessKeywords": [
+        "โรงแรม",
+        "ท่องเที่ยว",
+        "อสังหาริมทรัพย์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ท่องเที่ยว",
+        "อสังหาริมทรัพย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ดิน"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "โรงแรม/ท่องเที่ยว = น้ำ (career-business.txt); อสังหา = ดิน (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "SIRI",
+      "name": "แสนสิริ",
+      "nameEn": "Sansiri",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อสังหาริมทรัพย์",
+      "business": "พัฒนาอสังหาริมทรัพย์ บ้าน คอนโด ต่างประเทศ",
+      "businessKeywords": [
+        "อสังหาริมทรัพย์",
+        "บ้าน",
+        "คอนโด"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อสังหาริมทรัพย์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ดิน (career-business.txt §ธาตุดิน + Source4 §5)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "STA",
+      "name": "ศรีตรังแอโกรอินดัสทรี",
+      "nameEn": "Sri Trang Agro-Industry",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "เกษตร/ยาง",
+      "business": "ยางพารา ถุงมือยาง น้ำยาง",
+      "businessKeywords": [
+        "ยางพารา",
+        "เกษตร",
+        "พืชผล"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "เกษตร",
+        "Food Security"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "การเกษตร/พืชผล/ยาง = ไม้ (decision log: เกษตร=ไม้)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "STEC",
+      "name": "ซิโน-ไทย เอ็นจีเนียริ่ง",
+      "nameEn": "Sino-Thai Engineering",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ก่อสร้าง",
+      "business": "รับเหมาก่อสร้าง โครงสร้างพื้นฐาน",
+      "businessKeywords": [
+        "ก่อสร้าง",
+        "รับเหมา"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "รับเหมาก่อสร้าง = ดิน (career-business.txt §ธาตุดิน)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "STGT",
+      "name": "ศรีตรังโกลฟส์",
+      "nameEn": "Sri Trang Gloves",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "การแพทย์/ยาง",
+      "business": "ถุงมือยาง ถุงมือแพทย์",
+      "businessKeywords": [
+        "ถุงมือยาง",
+        "การแพทย์",
+        "ยาง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์",
+        "เกษตร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ยาง/เกษตร = ไม้ (decision log); อุปกรณ์การแพทย์ = ไฟ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TASCO",
+      "name": "ทิปโก้แอสฟัลท์",
+      "nameEn": "Tipco Asphalt",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ก่อสร้าง/วัสดุ",
+      "business": "ยางมะตอย วัสดุก่อสร้างถนน",
+      "businessKeywords": [
+        "ยางมะตอย",
+        "วัสดุก่อสร้าง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "วัสดุก่อสร้าง = ดิน (career-business.txt §ธาตุดิน)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TCAP",
+      "name": "ทุนธนชาต",
+      "nameEn": "Thanachart Capital",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "การเงิน",
+      "business": "ถือหุ้นการเงิน ธนาคาร ลีสซิ่ง ประกัน",
+      "businessKeywords": [
+        "การเงิน",
+        "ธนาคาร",
+        "สินเชื่อ"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "การเงิน/ธนาคาร = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "THAI",
+      "name": "การบินไทย",
+      "nameEn": "Thai Airways",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ขนส่ง",
+      "business": "สายการบิน บริการการบิน ขนส่ง",
+      "businessKeywords": [
+        "สายการบิน",
+        "ขนส่ง",
+        "ท่องเที่ยว"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ท่องเที่ยว",
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ขนส่ง/ท่องเที่ยว = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "THG",
+      "name": "โรงพยาบาลทักษิณ",
+      "nameEn": "Thonburi Healthcare",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "โรงพยาบาล",
+      "business": "เครือโรงพยาบาล บริการทางการแพทย์",
+      "businessKeywords": [
+        "โรงพยาบาล",
+        "การแพทย์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การแพทย์",
+        "Aging"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "โรงพยาบาล = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TKN",
+      "name": "เถ้าแก่น้อย ฟู๊ดแอนด์มาร์เก็ตติ้ง",
+      "nameEn": "Taokaenoi Food and Marketing",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อาหาร",
+      "business": "อาหารว่าง สาหร่ายแปรรูป อาหาร",
+      "businessKeywords": [
+        "อาหาร",
+        "อาหารว่าง"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "อาหาร = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TQM",
+      "name": "ทีคิวเอ็ม",
+      "nameEn": "TQM Corporation",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ประกัน",
+      "business": "นายหน้าประกันภัย ประกันวินาศภัย",
+      "businessKeywords": [
+        "ประกัน",
+        "นายหน้า"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "การเงิน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ประกัน/นายหน้า = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TTA",
+      "name": "โทรีเซนไทย เอเยนต์ซีส์",
+      "nameEn": "Thoresen Thai Agencies",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "ขนส่ง",
+      "business": "ขนส่งทางเรือ โลจิสติกส์ พลังงาน",
+      "businessKeywords": [
+        "ขนส่ง",
+        "เรือ",
+        "โลจิสติกส์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ขนส่ง/เรือ = น้ำ (career-business.txt); พลังงาน = ไฟ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TVO",
+      "name": "น้ำมันพืชไทย",
+      "nameEn": "Thai Vegetable Oil",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "อาหาร",
+      "business": "น้ำมันพืช กากถั่วเหลือง อาหาร",
+      "businessKeywords": [
+        "น้ำมันพืช",
+        "อาหาร",
+        "เกษตร"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "อาหาร",
+        "Food Security"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "น้ำ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "พืช/เกษตร = ไม้ (decision log); อาหาร = น้ำ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "VGI",
+      "name": "วีจีไอ",
+      "nameEn": "VGI",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "สื่อ",
+      "business": "สื่อโฆษณา สื่อเคลื่อนที่ บริการด้านสื่อ",
+      "businessKeywords": [
+        "สื่อ",
+        "โฆษณา",
+        "ประชาสัมพันธ์"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "สื่อ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "สื่อ/ประชาสัมพันธ์ = ไม้ (career-business.txt); โฆษณา/การตลาด = ไฟ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "WHAUP",
+      "name": "ดับบลิวเอชเอ ยูทิลิตี้ส์",
+      "nameEn": "WHA Utilities and Power",
+      "country": "TH",
+      "market": "SET",
+      "currency": "THB",
+      "sector": "สาธารณูปโภค",
+      "business": "น้ำประปา ไฟฟ้า สาธารณูปโภคนิคม",
+      "businessKeywords": [
+        "น้ำประปา",
+        "ไฟฟ้า",
+        "สาธารณูปโภค"
+      ],
+      "growthStage": "large",
+      "theme": [
+        "สาธารณูปโภค",
+        "พลังงาน"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "น้ำประปา/สาธารณูปโภค = น้ำ (career-business.txt §ธาตุน้ำ); ไฟฟ้า = ไฟ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "SET100",
+      "isHighLiquidity": true,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "AH",
+      "name": "อาปิโก ไฮเทค",
+      "nameEn": "Aapico Hitech",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "ยานยนต์",
+      "business": "ชิ้นส่วนยานยนต์ แม่พิมพ์ อะไหล่",
+      "businessKeywords": [
+        "ชิ้นส่วนยานยนต์",
+        "อะไหล่",
+        "เทคโนโลยี"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ยานยนต์",
+        "EV"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ยานยนต์/ชิ้นส่วน/อะไหล่ = ทอง (career-business.txt §ธาตุทอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "SISB",
+      "name": "โรงเรียนนานาชาติสิงคโปร์",
+      "nameEn": "SISB",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "การศึกษา",
+      "business": "โรงเรียนนานาชาติ การศึกษา",
+      "businessKeywords": [
+        "โรงเรียน",
+        "การศึกษา"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การศึกษา"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ",
+        "ไม้"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "โรงเรียน/การสอน = ไฟ (career-business.txt §ธาตุไฟ); การศึกษา = ไม้ (รอง, decision log)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "BEAUTY",
+      "name": "บิวตี้ คอมมูนิตี้",
+      "nameEn": "Beauty Community",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "ความงาม",
+      "business": "ร้านค้าความงาม เครื่องสำอาง",
+      "businessKeywords": [
+        "ความงาม",
+        "เครื่องสำอาง"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ความงาม"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ความงาม/เครื่องสำอาง = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "LEO",
+      "name": "ลีโอ โกลบอล โลจิสติกส์",
+      "nameEn": "Leo Global Logistics",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "ขนส่ง",
+      "business": "โลจิสติกส์ ขนส่งระหว่างประเทศ",
+      "businessKeywords": [
+        "โลจิสติกส์",
+        "ขนส่ง"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ขนส่ง",
+        "โลจิสติกส์"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ขนส่ง/โลจิสติกส์ = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "PRINC",
+      "name": "พริ้นซิเพิล แคปิตอล",
+      "nameEn": "Principal Capital",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "โรงพยาบาล",
+      "business": "โรงพยาบาล บริการทางการแพทย์",
+      "businessKeywords": [
+        "โรงพยาบาล",
+        "การแพทย์"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "การแพทย์",
+        "Aging"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "โรงพยาบาล = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TPIPP",
+      "name": "ทีพีไอ เพาเวอร์",
+      "nameEn": "TPI Polene Power",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "ผลิตไฟฟ้าจากขยะ พลังงานทดแทน",
+      "businessKeywords": [
+        "ไฟฟ้า",
+        "พลังงาน",
+        "ขยะ"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "พลังงาน",
+        "BCG"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงานไฟฟ้า = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "TOA",
+      "name": "โตอา เพ้นท์ (ประเทศไทย)",
+      "nameEn": "TOA Paint",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "เคมีภัณฑ์",
+      "business": "สีทาอาคาร เคมีภัณฑ์ เคลือบผิว",
+      "businessKeywords": [
+        "สี",
+        "เคมีภัณฑ์"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "ก่อสร้าง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "เคมีภัณฑ์/อุตสาหกรรม = ทอง (career-business.txt §ธาตุทอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "ACE",
+      "name": "แอ๊บโซลูท คลีน เอ็นเนอร์จี้",
+      "nameEn": "Absolute Clean Energy",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "พลังงานทดแทน โซลาร์ ลม",
+      "businessKeywords": [
+        "พลังงาน",
+        "โซลาร์"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "พลังงานสะอาด"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงาน/โซลาร์ = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "AMR",
+      "name": "เอเอ็มอาร์ เอเซีย",
+      "nameEn": "AMR Asia",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "ก่อสร้าง",
+      "business": "งานระบบรางรถไฟ โครงสร้างพื้นฐานคมนาคม",
+      "businessKeywords": [
+        "ก่อสร้าง",
+        "รถไฟ",
+        "โครงสร้างพื้นฐาน"
+      ],
+      "growthStage": "small",
+      "theme": [
+        "ก่อสร้าง",
+        "ขนส่ง"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ดิน",
+        "ทอง"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ก่อสร้าง = ดิน (career-business.txt); งานระบบ/เทค = ทอง (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "XPG",
+      "name": "เอ็กซ์พีจี",
+      "nameEn": "XPG",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "พลังงาน",
+      "business": "พลังงานทดแทน พลังงานแสงอาทิตย์",
+      "businessKeywords": [
+        "พลังงาน",
+        "โซลาร์"
+      ],
+      "growthStage": "small",
+      "theme": [
+        "พลังงานสะอาด"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงาน/โซลาร์ = ไฟ (career-business.txt §ธาตุไฟ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "PLANB",
+      "name": "แพลน บี มีเดีย",
+      "nameEn": "Plan B Media",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "สื่อ",
+      "business": "สื่อโฆษณากลางแจ้ง บิลบอร์ด",
+      "businessKeywords": [
+        "สื่อ",
+        "โฆษณา"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "สื่อ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "ไม้",
+        "ไฟ"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "สื่อ/ประชาสัมพันธ์ = ไม้ (career-business.txt); โฆษณา = ไฟ (รอง)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
+      "isHighLiquidity": false,
+      "status": "draft",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "notes": ""
+    },
+    {
+      "type": "stock",
+      "ticker": "SAPPE",
+      "name": "แซปเป้",
+      "nameEn": "Sappe",
+      "country": "TH",
+      "market": "mai",
+      "currency": "THB",
+      "sector": "อาหาร/เครื่องดื่ม",
+      "business": "เครื่องดื่มเพื่อสุขภาพ น้ำผลไม้",
+      "businessKeywords": [
+        "เครื่องดื่ม",
+        "อาหาร",
+        "สุขภาพ"
+      ],
+      "growthStage": "mid",
+      "theme": [
+        "อาหาร/เครื่องดื่ม",
+        "สุขภาพ"
+      ],
+      "risingStar": false,
+      "listedDate": null,
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "เครื่องดื่ม = น้ำ (career-business.txt §ธาตุน้ำ)",
+      "elementSource": "career-business.txt + decision-log.md",
+      "tier": "mai",
       "isHighLiquidity": false,
       "status": "draft",
       "reviewedBy": null,
