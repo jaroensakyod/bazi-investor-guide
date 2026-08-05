@@ -1,0 +1,405 @@
+==Components==
+{| class="wikitable sortable" id="constituents"
+|-
+! Company !! Symbol !! [[GICS]] Sector
+|-
+| [[Amorepacific Corporation|Amorepacific]] || 090430 || Consumer Staples
+|-
+| Amorepacific Holdings|| 002790 || Consumer Staples
+|-
+| APR || 278470 || Consumer Staples
+|-
+| Asia Holdings || 002030 || Steels & Materials
+|-
+| BGF Retail || 282330 || Consumer Staples
+|-
+| [[BNK Financial Group|BNK Financial]] || 138930 || Financials
+|-
+| [[Celltrion]] || 068270 || Health Care
+|-
+| [[Cheil Worldwide]] || 030000 || Communication Services
+|-
+| [[Chong Kun Dang]] || 185750 || Health Care
+|-
+| [[CJ Group|CJ]] || 001040 || Consumer Staples
+|-
+| [[CJ CheilJedang]] || 097950 || Consumer Staples
+|-
+| [[CJ Logistics]] || 000120 || Industrials
+|-
+| Cosmax || 192820 || Consumer Staples
+|-
+| Cosmo Chemical || 005420 || Energy & Chemicals
+|-
+| [[Coway]] || 021240 || Consumer Discretionary
+|-
+| [[CS Wind]] || 112610 || Heavy Industries
+|-
+| d'Alba Global|| 483650|| Consumer Staples
+|-
+| Daesang || 001680 || Consumer Staples
+|-
+| [[Daewoo E&C]] || 047040 || Constructions
+|-
+| Daewoong || 003090 || Health Care
+|-
+| [[Daewoong Pharmaceutical]] || 069620 || Health Care
+|-
+| [[DB HiTek]] || 000990 || IT
+|-
+| [[DB Insurance]] || 005830 || Financials
+|-
+| [[DL Group|DL]] || 000210 || Constructions
+|-
+| [[DL E&C]] || 375500 || Constructions
+|-
+| [[DN Automotive]] || 007340|| Consumer Discretionary
+|-
+| Dongsuh || 026960 || Consumer Staples
+|-
+| [[Dongwon Industries]] || 006040 || Consumer Staples
+|-
+| Dongwon Systems || 014820 || Steels & Materials
+|-
+| [[Doosan Group|Doosan]] || 000150 || Heavy Industries
+|-
+| [[Doosan Bobcat]] || 241560 || Heavy Industries
+|-
+| [[Doosan Enerbility]] || 034020 || Heavy Industries
+|-
+| [[Doosan Robotics]] || 454910 || Heavy Industries
+|-
+| DoubleU Games || 192080 || Consumer Discretionary
+|-
+| Ecopro Materials || 450080 || Industrials
+|-
+| [[Emart]] || 139480 || Consumer Staples
+|-
+| F&F || 383220 || Consumer Discretionary
+|-
+| Foosung || 093370 || Energy & Chemicals
+|-
+| [[Green Cross (South Korean company)|Green Cross]] || 006280 || Health Care
+|-
+| [[GS Group|GS]] || 078930 || Energy & Chemicals
+|-
+| GS Retail || 007070 || Consumer Staples
+|-
+| [[Hana Financial Group|Hana Financial]] || 086790 || Financials
+|-
+| Hanall Biopharma || 009420 || Health Care
+|-
+| [[Hanil Cement]] || 300720 || Constructions
+|-
+| [[Hanjin|Hanjin KAL]] || 180640 || Consumer Discretionary
+|-
+| [[Hankook]] || 161390 || Consumer Discretionary
+|-
+| Hankook & Company || 000240 || Consumer Discretionary
+|-
+| [[Hanmi Pharm]] || 128940 || Health Care
+|-
+| Hanmi Science || 008930 || Health Care
+|-
+| Hanmi Semiconductor || 042700 || IT
+|-
+| [[Hanon Systems]] || 018880 || Consumer Discretionary
+|-
+| Hansol Chemical || 014680 || Energy & Chemicals
+|-
+| [[Hanssem]] || 009240 || Consumer Discretionary
+|-
+| [[Hanwha Group|Hanwha]] || 000880 || Energy & Chemicals
+|-
+| [[Hanwha Aerospace]] || 012450 || Industrials
+|-
+| Hanwha Engine || 082740 || Heavy Industries
+|-
+| [[Hanwha Life Insurance|Hanwha Life]] || 088350 || Financials
+|-
+| [[Hanwha Ocean]] || 042660 || Heavy Industries
+|-
+| [[Hanwha Solutions]] || 009830 || Energy & Chemicals
+|-
+| [[Hanwha Systems]] || 272210 || Industrials
+|-
+| [[HD Construction Equipment]] || 267270 || Heavy Industries
+|-
+| [[HD Hyundai]] || 267250 || Energy & Chemicals
+|-
+| [[HD Hyundai Electric]] || 267260 || Heavy Industries
+|-
+| [[HD Hyundai Heavy Industries]] || 329180 || Heavy Industries
+|-
+| HD Hyundai Marine Engine || 071970|| Heavy Industries
+|-
+| HD Hyundai Marine Solution || 443060|| Industrials
+|-
+| HD KSOE || 009540 || Heavy Industries
+|-
+| Hankuk Carbon || 017960 || Energy & Chemicals
+|-
+| [[HiteJinro]] || 000080 || Consumer Staples
+|-
+| [[HL Mando]] || 204320 || Consumer Discretionary
+|-
+| [[HMM (company)|HMM]] || 011200 || Industrials
+|-
+| [[Hotel Shilla]] || 008770 || Consumer Discretionary
+|-
+| HS Hyosung Advanced Materials || 298050 || Energy & Chemicals
+|-
+| [[Hybe Corporation|Hybe]] || 352820 || Communication Services
+|-
+| [[Hyosung Heavy Industries]] || 298040 || Heavy Industries
+|-
+| [[Hyosung TNC]] || 298020 || Energy & Chemicals
+|-
+| [[Hyundai AutoEver]] || 307950 || IT
+|-
+| [[Hyundai Department Store]] || 069960 || Consumer Discretionary
+|-
+| [[Hyundai Engineering & Construction|Hyundai E&C]] || 000720 || Constructions
+|-
+| [[Hyundai Elevator]] || 017800 || Heavy Industries
+|-
+| [[Hyundai Glovis]] || 086280 || Industrials
+|-
+| [[Hyundai Marine & Fire Insurance|Hyundai Marine & Fire]] || 001450 || Financials
+|-
+| [[Hyundai Mobis]] || 012330 || Consumer Discretionary
+|-
+| [[Hyundai Motor Company|Hyundai Motor]] || 005380 || Consumer Discretionary
+|-
+| [[Hyundai Rotem]] || 064350 || Heavy Industries
+|-
+| [[Hyundai Steel]] || 004020 || Steels & Materials
+|-
+| [[Hyundai WIA]] || 011210 || Consumer Discretionary
+|-
+| [[IM Financial Group|IM Financial]] || 139130 || Financials
+|-
+| [[Industrial Bank of Korea]] || 024110 || Financials
+|-
+| Isu Petasys || 007660 || IT
+|-
+| Isu Specialty Chemical || 457190 || Energy & Chemicals
+|-
+| JB Financial || 175330 || Financials
+|-
+| [[Kakao]] || 035720 || Communication Services
+|-
+| [[KakaoBank]] || 323410 || Financials
+|-
+| [[KakaoPay]] || 377300 || Financials
+|-
+| [[Kangwon Land]] || 035250 || Consumer Discretionary
+|-
+| [[KB Financial Group|KB Financial]] || 105560 || Financials
+|-
+| [[KCC Corporation|KCC]] || 002380 || Constructions
+|-
+| [[Korea Electric Power Corporation|KEPCO]] || 015760 || Consumer Staples
+|-
+| [[KEPCO E&C]] || 052690 || Constructions
+|-
+| [[KEPCO Plant Service & Engineering|KEPCO KPS]] || 051600 || Constructions
+|-
+| [[Kia]] || 000270 || Consumer Discretionary
+|-
+| [[Kiwoom Securities]] || 039490 || Financials
+|-
+| Kolmar Korea || 161890 || Consumer Staples
+|-
+| [[Kolon Industries]] || 120110 || Energy & Chemicals
+|-
+| [[Korea Aerospace Industries|Korea Aerospace]] || 047810 || Industrials
+|-
+| [[Korea District Heating Corporation|Korea District Heating]] || 071320|| Consumer Staples
+|-
+| [[Korea Gas Corporation|Korea Gas]] || 036460 || Consumer Staples
+|-
+| Korea Investment || 071050 || Financials
+|-
+| Korea Petrochemical || 006650 || Energy & Chemicals
+|-
+| [[Korea Zinc]] || 010130 || Steels & Materials
+|-
+| [[Korean Air]] || 003490 || Industrials
+|-
+| [[Krafton]] || 259960 || Communication Services
+|-
+| [[KT Corporation|KT]] || 030200 || Communication Services
+|-
+| [[Korea Tobacco & Ginseng Corporation|KT&G]] || 033780 || Consumer Staples
+|-
+| [[Kumho Petrochemical]] || 011780 || Energy & Chemicals
+|-
+| [[Kumho Tire]] || 073240 || Consumer Discretionary
+|-
+| L&F || 066970 || Industrials
+|-
+| [[LG]] || 003550 || IT
+|-
+| [[LG Chem]] || 051910 || Energy & Chemicals
+|-
+| [[LG CNS]] || 064400 || IT
+|-
+| [[LG Display]] || 034220 || IT
+|-
+| [[LG Electronics]] || 066570 || IT
+|-
+| [[LG Energy Solution]] || 373220 || Industrials
+|-
+| [[LG Household & Health Care|LG H&H]] || 051900 || Consumer Staples
+|-
+| [[LG Innotek]] || 011070 || IT
+|-
+| [[LG Uplus]] || 032640 || Communication Services
+|-
+| [[LIG Nex1]] || 079550 || Industrials
+|-
+| [[Lotte Corporation|Lotte]] || 004990 || Consumer Staples
+|-
+| [[Lotte Chemical]] || 011170 || Energy & Chemicals
+|-
+| [[Lotte Chilsung]] || 005300 || Consumer Staples
+|-
+| Lotte Fine Chemical || 004000 || Energy & Chemicals
+|-
+| [[Lotte Shopping]] || 023530 || Consumer Discretionary
+|-
+| [[Lotte Wellfood]] || 280360 || Consumer Staples
+|-
+| [[LS Group|LS]] || 006260 || Industrials
+|-
+| LS Electric || 010120 || Industrials
+|-
+| [[Meritz Financial Group|Meritz Financial]] || 138040 || Financials
+|-
+| [[Mirae Asset Securities]] || 006800 || Financials
+|-
+| [[Misto Holdings|Misto]] || 081660 || Consumer Discretionary
+|-
+| Miwon Commercial || 002840 || Energy & Chemicals
+|-
+| Miwon Specialty Chemical|| 268280 || Energy & Chemicals
+|-
+| [[Naver Corporation|Naver]] || 035420 || Communication Services
+|-
+| [[NC (company)|NC]] || 036570 || Communication Services
+|-
+| [[Netmarble]] || 251270 || Communication Services
+|-
+| [[NH Investment & Securities]] || 005940 || Financials
+|-
+| [[Nongshim]] || 004370 || Consumer Staples
+|-
+| [[OCI (company)|OCI]] || 456040 || Energy & Chemicals
+|-
+| OCI Holdings || 010060 || Energy & Chemicals
+|-
+| [[Orion Corporation (South Korean company)|Orion]] || 271560 || Consumer Staples
+|-
+| Orion Holdings || 001800 || Consumer Staples
+|-
+| [[Ottogi]] || 007310 || Consumer Staples
+|-
+| [[Pan Ocean]] || 028670 || Industrials
+|-
+| Paradise || 034230 || Consumer Discretionary
+|-
+| [[Poongsan Corporation|Poongsan]] || 103140 || Steels & Materials
+|-
+| [[POSCO]] || 005490 || Steels & Materials
+|-
+| POSCO DX || 022100 || IT
+|-
+| [[POSCO Future M]] || 003670 || Industrials
+|-
+| [[POSCO International]] || 047050 || Industrials
+|-
+| S-1 || 012750 || Industrials
+|-
+| Sanil Electric || 062040 || Heavy Industries
+|-
+| [[Samsung Biologics]] || 207940 || Health Care
+|-
+| [[Samsung C&T Corporation|Samsung C&T]] || 028260 || Constructions
+|-
+| [[Samsung Card]] || 029780 || Financials
+|-
+| [[Samsung E&A]] || 028050 || Constructions
+|-
+| [[Samsung Electro-Mechanics]] || 009150 || IT
+|-
+| [[Samsung Electronics]] || 005930 || IT
+|-
+| Samsung Epis || 0126Z0 || Health Care
+|-
+| [[Samsung Fire & Marine Insurance|Samsung Fire & Marine]] || 000810 || Financials
+|-
+| [[Samsung Heavy Industries]] || 010140 || Heavy Industries
+|-
+| [[Samsung Life Insurance|Samsung Life]] || 032830 || Financials
+|-
+| [[Samsung SDI]] || 006400 || IT
+|-
+| [[Samsung SDS]] || 018260 || IT
+|-
+| [[Samsung Securities]] || 016360 || Financials
+|-
+| [[Samyang Foods]] || 003230 || Consumer Staples
+|-
+| SD Biosensor || 137310 || Health Care
+|-
+| Seah Besteel || 001430 || Steels & Materials
+|-
+| [[Seah Steel Holdings]] || 003030 || Steels & Materials
+|-
+| [[Shinhan Financial Group|Shinhan Financial]] || 055550 || Financials
+|-
+| [[Shinsegae]] || 004170 || Consumer Discretionary
+|-
+| [[SK Inc.|SK]] || 034730 || Energy & Chemicals
+|-
+| SK Biopharm || 326030 || Health Care
+|-
+| [[SK Bioscience]] || 302440 || Health Care
+|-
+| [[SK Chemicals]] || 285130 || Energy & Chemicals
+|-
+| [[SK Hynix]] || 000660 || IT
+|-
+| SK IE Technology || 361610 || Industrials
+|-
+| [[SK Innovation]] || 096770 || Energy & Chemicals
+|-
+| SK Square || 402340 || IT
+|-
+| [[SK Telecom]] || 017670 || Communication Services
+|-
+| [[SKC (company)|SKC]] || 011790 || Energy & Chemicals
+|-
+| [[SL Corporation|SL]] || 005850 || Consumer Discretionary
+|-
+| [[S-Oil]] || 010950 || Energy & Chemicals
+|-
+| [[Taekwang Industrial]] || 003240 || Energy & Chemicals
+|-
+| [[Taihan Cable & Solution]] || 001440 || Industrials
+|-
+| TKG Huchems || 069260 || Energy & Chemicals
+|-
+| [[Woori Financial Group|Woori Financial]] || 316140 || Financials
+|-
+| Youlchon Chemical || 008730 || Steels & Materials
+|-
+| [[Young Poong Group|Young Poong]] || 000670|| Steels & Materials
+|-
+| Youngone || 111770 || Consumer Discretionary
+|-
+| Youngone Holdings || 009970 || Consumer Discretionary
+|-
+| [[Yuhan]] || 000100 || Health Care
+|}

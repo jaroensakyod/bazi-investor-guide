@@ -1,0 +1,126 @@
+== Constituents ==
+{{As of|2026|01|31|df=US}} the constituents were:<ref name=tmx />
+{| class="wikitable sortable"
+! Symbol !! Company !! Sector
+|-
+| {{TSX link|AEM}} || [[Agnico Eagle|Agnico Eagle Mines Limited]] || Basic Materials
+|-
+| {{TSX link|ATD}} || [[Alimentation Couche-Tard|Alimentation Couche-Tard Inc.]] || Consumer Cyclical
+|-
+| {{TSX link|BMO}} || [[Bank of Montreal]] || Financial Services
+|-
+| {{TSX link|BNS}} || [[Scotiabank|Bank of Nova Scotia]] || Financial Services
+|-
+| {{TSX link|ABX}} || [[Barrick Mining Corporation]] || Basic Materials
+|-
+| {{TSX link|BCE}} || [[BCE Inc.]] || Communication Services
+|-
+| {{TSX link|BAM}} || [[Brookfield Asset Management|Brookfield Asset Management Ltd.]] || Financial Services
+|-
+| {{TSX link|BN}} || [[Brookfield Corporation]] || Financial Services
+|-
+| {{TSX link|BIP.UN}} || [[Brookfield Infrastructure Partners|Brookfield Infrastructure Partners L.P.]] || Utilities
+|-
+| {{TSX link|CAE}} || [[CAE Inc.]] || Industrials
+|-
+| {{TSX link|CCO}} || [[Cameco|Cameco Corporation]] || Energy
+|-
+| {{TSX link|CM}} || [[Canadian Imperial Bank of Commerce]] || Financial Services
+|-
+| {{TSX link|CNR}} || [[Canadian National Railway|Canadian National Railway Company]] || Industrials
+|-
+| {{TSX link|CNQ}} || [[Canadian Natural Resources|Canadian Natural Resources Limited]] || Energy
+|-
+| {{TSX link|CP}} || [[Canadian Pacific Kansas City|Canadian Pacific Kansas City Limited]] || Industrials
+|-
+| {{TSX link|CTC.A}} || [[Canadian Tire|Canadian Tire Corporation Limited]] || Consumer Cyclical
+|-
+| {{TSX link|CCL.B}} || [[CCL Industries|CCL Industries Inc.]] || Consumer Cyclical
+|-
+| {{TSX link|CLS}} || [[Celestica Inc.]] || Information Technology
+|-
+| {{TSX link|CVE}} || [[Cenovus Energy|Cenovus Energy Inc.]] || Energy
+|-
+| {{TSX link|GIB.A}} || [[CGI Inc.]] || Information Technology
+|-
+| {{TSX link|CSU}} || [[Constellation Software|Constellation Software Inc.]] || Information Technology
+|-
+| {{TSX link|DOL}} || [[Dollarama|Dollarama Inc.]] || Consumer Staples
+|-
+| {{TSX link|EMA}} || [[Emera|Emera Incorporated]] || Utilities
+|-
+| {{TSX link|ENB}} || [[Enbridge|Enbridge Inc.]] || Energy
+|-
+| {{TSX link|FFH}} || [[Fairfax Financial Holdings Limited]] || Financial Services
+|-
+| {{TSX link|FM}} || [[First Quantum Minerals|First Quantum Minerals Ltd.]] || Basic Materials
+|-
+| {{TSX link|FSV}} || [[FirstService|FirstService Corporation]] || Real Estate
+|-
+| {{TSX link|FTS}} || [[Fortis Inc.]] || Utilities
+|-
+| {{TSX link|FNV}} || [[Franco-Nevada|Franco-Nevada Corporation]] || Basic Materials
+|-
+| {{TSX link|WN}} || [[George Weston Limited]] || Consumer Staples
+|-
+| {{TSX link|GIL}} || [[Gildan|Gildan Activewear Inc.]] || Consumer Cyclical
+|-
+| {{TSX link|H}} || [[Hydro One|Hydro One Limited]] || Utilities
+|-
+| {{TSX link|IMO}} || [[Imperial Oil|Imperial Oil Limited]] || Energy
+|-
+| {{TSX link|IFC}} || [[Intact Financial|Intact Financial Corporation]] || Financial Services
+|-
+| {{TSX link|K}} || [[Kinross Gold|Kinross Gold Corporation]] || Basic Materials
+|-
+| {{TSX link|L}} || [[Loblaw Companies|Loblaw Companies Limited]] || Consumer Staples
+|-
+| {{TSX link|MG}} || [[Magna International|Magna International Inc.]] || Consumer Cyclical
+|-
+| {{TSX link|MFC}} || [[Manulife|Manulife Financial Corporation]] || Financial Services
+|-
+| {{TSX link|MRU}} || [[Metro Inc.]] || Consumer Staples
+|-
+| {{TSX link|NA}} || [[National Bank of Canada]] || Financial Services
+|-
+| {{TSX link|NTR}} || [[Nutrien|Nutrien Ltd.]] || Basic Materials
+|-
+| {{TSX link|OTEX}} || [[OpenText|Open Text Corporation]] || Information Technology
+|-
+| {{TSX link|PPL}} || [[Pembina Pipeline|Pembina Pipeline Corporation]] || Energy
+|-
+| {{TSX link|POW}} || [[Power Corporation of Canada]] || Financial Services
+|-
+| {{TSX link|QSR}} || [[Restaurant Brands International|Restaurant Brands International Inc.]] || Consumer Cyclical
+|-
+| {{TSX link|RCI.B}} || [[Rogers Communications|Rogers Communications Inc.]] || Communication Services
+|-
+| {{TSX link|RY}} || [[Royal Bank of Canada]] || Financial Services
+|-
+| {{TSX link|SAP}} || [[Saputo Inc.]] || Consumer Staples
+|-
+| {{TSX link|SHOP}} || [[Shopify|Shopify Inc.]] || Information Technology
+|-
+| {{TSX link|SLF}} || [[Sun Life Financial|Sun Life Financial Inc.]] || Financial Services
+|-
+| {{TSX link|SU}} || [[Suncor Energy|Suncor Energy Inc.]] || Energy
+|-
+| {{TSX link|TRP}} || [[TC Energy|TC Energy Corporation]] || Energy
+|-
+| {{TSX link|TECK.B}} || [[Teck Resources|Teck Resources Limited]] || Basic Materials
+|-
+| {{TSX link|T}} || [[Telus Corporation]] || Communication Services
+|-
+| {{TSX link|TRI}} || [[Thomson Reuters|Thomson Reuters Corporation]] || Industrials
+|-
+| {{TSX link|TD}} || [[Toronto-Dominion Bank]] || Financial Services
+|-
+| {{TSX link|TOU}} || [[Tourmaline Oil|Tourmaline Oil Corp.]] || Energy
+|-
+| {{TSX link|WCN}} || [[Waste Connections|Waste Connections Inc.]] || Industrials
+|-
+| {{TSX link|WPM}} || [[Wheaton Precious Metals|Wheaton Precious Metals Corp.]] || Basic Materials
+|-
+| {{TSX link|WSP}} || [[WSP Global|WSP Global Inc.]] || Industrials
+|-
+|}

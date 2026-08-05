@@ -8,12 +8,18 @@
  *   CA: S&P/TSX 60 · KR: KOSPI 200 · VN: VN30 Index
  *
  * รัน: npx tsx scripts/fetch-wikipedia-stocks.ts
+ *   - ดึงแต่ละหน้าแค่ครั้งเดียว → cache ไว้ data/cache/wikipedia/ (รันซ้ำ = 0 request)
+ *   - อยากดึงจาก Wikipedia ใหม่ (อัปเดตชื่อ/สมาชิกดัชนี): เพิ่ม --refresh
+ *   - ใช้ maxlag=5 + ฟัง Retry-After → ไม่โดน rate-limit 429 ค้าง
  */
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../data/stocks/global.json");
+const CACHE_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../data/cache/wikipedia");
+const REFRESH = process.argv.includes("--refresh");
+let usedNetwork = false; // ใช้ใน main: ข้าม delay ระหว่างแหล่งเมื่อรันจาก cache ล้วน
 
 type El = "ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ";
 
@@ -98,30 +104,46 @@ const SOURCES: Array<{ page: string; market: string; country: string; cur: strin
   { page: "KOSPI Composite Index", market: "KR", country: "KR", cur: "KRW", exchange: "KRX", section: 0 },
 ];
 
-/** ดึง Nikkei ทุก section → ต่อกันโดยเติม ===Title=== นำหน้าแต่ละ section (sector = ชื่อ section) */
-async function fetchNikkeiAllSections(): Promise<string> {
-  const parts: string[] = [];
-  // section 6-42 = กลุ่มอุตสาหกรรม (Air transport...Wholesale) — หาชื่อจาก sections API
-  const secRes = await fetch(
-    `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent("Nikkei 225")}&format=json&prop=sections&redirects=1`,
-    { headers: { "User-Agent": "bazi-investor-guide/0.1 (data pipeline; contact: dev)" } },
+/** ดึง wikitext ของหน้า (section = -1 → ทั้งหน้าใน request เดียว) พร้อม cache + maxlag + Retry-After */
+async function fetchWikitext(page: string, section = -1): Promise<string> {
+  const cacheFile = path.join(
+    CACHE_DIR,
+    `${page.replace(/[^A-Za-z0-9]+/g, "_")}${section >= 0 ? `.s${section}` : ""}.txt`,
   );
-  const secJson = (await secRes.json()) as { parse?: { sections?: Array<{ index: string; line: string }> } };
-  const byIndex = new Map((secJson.parse?.sections ?? []).map((s) => [s.index, s.line]));
-
-  for (let sec = 6; sec <= 42; sec++) {
-    try {
-      const text = await fetchWikitext("Nikkei 225", sec);
-      if (text.includes("{{tyo2|")) {
-        const title = byIndex.get(String(sec))?.replace(/&amp;/g, "&") ?? `Section ${sec}`;
-        parts.push(`===${title}===\n${text}`);
-      }
-    } catch {
-      // section ว่าง/ไม่มี — ข้าม
-    }
-    await new Promise((r) => setTimeout(r, 1500));
+  const missFile = `${cacheFile}.missing`; // หน้าหาย — cache คำตอบว่าไม่มี เพื่อไม่ยิงซ้ำทุกรอบ
+  if (!REFRESH && existsSync(missFile)) throw new Error(`${page} → หน้าหาย (cache marker)`);
+  if (!REFRESH && existsSync(cacheFile)) {
+    return readFileSync(cacheFile, "utf8"); // cache hit — ไม่แตะ network
   }
-  return parts.join("\n");
+  usedNetwork = true;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const url =
+      `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(page)}` +
+      `&format=json&prop=wikitext&redirects=1&maxlag=5` +
+      (section >= 0 ? `&section=${section}` : "");
+    const res = await fetch(url, { headers: { "User-Agent": "bazi-investor-guide/0.1 (data pipeline; contact: dev)" } });
+    if (res.status === 429 || res.status === 503) {
+      // ฟัง Retry-After ที่ Wikipedia ส่งมา (ไม่นอนรอแบบตายตัว)
+      const ra = res.headers.get("retry-after");
+      const wait = ra ? Number(ra) * 1000 : 5000 * (attempt + 1);
+      console.log(`  ⏳ rate-limited (${page}) รอ ${Math.round(wait / 1000)}s...`);
+      await new Promise((r) => setTimeout(r, wait));
+      continue;
+    }
+    if (!res.ok) throw new Error(`${page} → HTTP ${res.status}`);
+    const json = (await res.json()) as { parse?: { wikitext?: { "*"?: string } }; error?: { info?: string } };
+    if (json.error) {
+      mkdirSync(CACHE_DIR, { recursive: true });
+      writeFileSync(missFile, json.error.info ?? "missing", "utf8");
+      throw new Error(`${page} → ${json.error.info}`);
+    }
+    const text = json.parse?.wikitext?.["*"];
+    if (!text) throw new Error(`${page} → ไม่มี wikitext`);
+    mkdirSync(CACHE_DIR, { recursive: true });
+    writeFileSync(cacheFile, text, "utf8");
+    return text;
+  }
+  throw new Error(`${page} → rate-limited เกิน`);
 }
 
 /** หา section ที่มีตารางหุ้น (Constituents/Components/Companies) อัตโนมัติ */
@@ -137,26 +159,6 @@ async function findStockSection(page: string): Promise<number> {
     return keywords.some((k) => line.includes(k)) && s.toclevel <= 3;
   });
   return hit ? Number(hit.index) : 0;
-}
-
-async function fetchWikitext(page: string, section: number): Promise<string> {
-  for (let attempt = 0; attempt < 4; attempt++) {
-    const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(page)}&format=json&prop=wikitext&section=${section}&redirects=1`;
-    const res = await fetch(url, { headers: { "User-Agent": "bazi-investor-guide/0.1 (data pipeline; contact: dev)" } });
-    if (res.status === 429) {
-      const wait = 8000 * (attempt + 1);
-      console.log(`  ⏳ rate-limited (${page}) รอ ${wait / 1000}s...`);
-      await new Promise((r) => setTimeout(r, wait));
-      continue;
-    }
-    if (!res.ok) throw new Error(`${page} → HTTP ${res.status}`);
-    const json = (await res.json()) as { parse?: { wikitext?: { "*"?: string } }; error?: { info?: string } };
-    if (json.error) throw new Error(`${page} → ${json.error.info}`);
-    const text = json.parse?.wikitext?.["*"];
-    if (!text) throw new Error(`${page} → ไม่มี wikitext`);
-    return text;
-  }
-  throw new Error(`${page} → rate-limited เกิน`);
 }
 
 /** map ชื่อ section ของ Nikkei (Air transport/Automotive/...) → GICS sector */
@@ -328,7 +330,7 @@ async function main() {
     try {
       let text: string;
       if ((src as { nikkeiSections?: boolean }).nikkeiSections) {
-        text = await fetchNikkeiAllSections();
+        text = await fetchWikitext(src.page, -1); // ทั้งหน้า 1 request — parseTableRows ไล่ ===sector=== เอง
       } else {
         const section = src.section ?? (await findStockSection(src.page));
         text = await fetchWikitext(src.page, section);
@@ -385,7 +387,7 @@ async function main() {
     } catch (err) {
       console.log(`  ⚠️ ข้าม (${(err as Error).message})`);
     }
-    await new Promise((r) => setTimeout(r, 4000)); // กัน rate-limit
+    if (usedNetwork) await new Promise((r) => setTimeout(r, 4000)); // กัน rate-limit (เฉพาะรอบที่ fetch จริง)
   }
 
   const db = {

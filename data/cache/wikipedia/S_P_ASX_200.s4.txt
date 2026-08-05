@@ -1,0 +1,1208 @@
+==Constituent companies==
+The number of companies in the index is dynamic and does not always amount to exactly 200. On average, the index is rebalanced every quarter by Standard & Poor's.<ref>{{Cite web |title=ASX 200 Today: Chart & Share Price News {{!}} Live Updates {{!}} Motley Fool |url=https://www.fool.com.au/latest-asx-200-chart-price-news/ |access-date=2022-05-01 |website=The Motley Fool Australia |language=en-AU}}</ref>
+
+{{as of|2026|04|05|df=y}}, the constituent stocks of the ASX 200 in [[alphabetical order]] by symbol are<ref>{{Cite web|url=http://www.marketindex.com.au/asx200|title=S&P/ASX 200 (LIVE DATA): Share Prices & Charts - Market Index}}</ref>
+
+<!-- when this table is updated, please also update [[Template:S&P/ASX 200]] -->
+{| class="wikitable sortable"
+!Code!!Company !!Sector
+!Market Capitalisation (A$)!!Headquarters
+|-
+|360
+|[[Life360]]
+|Information Technology
+|3,420,074,734
+|[[San Mateo, California|San Mateo]], United States
+|-
+|4DX
+|[[4DMedical]]
+|Healthcare
+|3,318,719,295
+|[[Melbourne]]
+|-
+|A2M
+|[[a2 Milk Company]]
+|Consumer Staples
+|6,811,751,962
+|[[Auckland]], New Zealand
+|-
+|AAI
+|[[Alcoa]]
+|Materials
+|3,915,655,069
+|[[Pittsburgh]], United States
+|-
+|AFI
+|Australian Foundation Investment Company
+|Financials
+|8,219,797,877
+|[[Melbourne]]
+|-
+|AGL
+|[[AGL Energy]]
+|Utilities
+|6,673,652,551
+|[[Sydney]]
+|-
+|AIA
+|[[Auckland International Airport Limited]]
+|Industrials
+|11,372,720,565
+|[[Auckland]], New Zealand
+|-
+|ALD
+|[[Ampol]]
+|Energy
+|7,928,310,834
+|[[Sydney]]
+|-
+|ALK
+|Alkane Resources
+|Materials
+|2,035,645,183
+|[[Perth]]
+|-
+|ALL
+|[[Aristocrat Leisure]]
+|Consumer Discretionary
+|27,997,036,412
+|[[Sydney]] 
+|-
+|ALQ
+|[[ALS Limited|ALS]]
+|Industrials
+|10,633,016,485
+|[[Brisbane]]
+|-
+|ALX
+|[[Atlas Arteria]]
+|Industrials
+|6,152,364,419
+|[[Bermuda]], United Kingdom 
+|-
+|AMC
+|[[Amcor]]
+|Materials
+|8,401,093,541
+|[[Warmley]], United Kingdom
+|-
+|AMP
+|[[AMP Limited|AMP]]
+|Financials
+|3,253,285,693
+|[[Sydney]]
+|-
+|ANN
+|[[Ansell]]
+|Healthcare
+|4,074,959,389
+|[[Melbourne]]
+|-
+|ANZ
+|[[Australia & New Zealand Banking Group]]
+|Financials
+|110,410,102,996
+|[[Melbourne]]
+|-
+|APA
+|[[APA Group (Australia)|APA Group]]
+||Utilities
+|13,052,188,932
+|[[Sydney]]
+|-
+|APE
+|[[Eagers Automotive]]
+|Consumer Discretionary
+|6,689,211,167
+|[[Brisbane]]
+|-
+|ARB
+|[[ARB Corporation]]
+|Consumer Discretionary 
+|1,675,785,496
+|[[Melbourne]]
+|-
+|ARG
+|Argo Investments
+|Financials
+|6,457,586,317
+|[[Adelaide]]
+|-
+|ASB
+|[[Austal]]
+|Industrials
+|1,907,666,999
+|[[Perth]]
+|-
+|ASK
+|Abacus Storage King
+|Real Estate
+|1,754,327,454
+|[[Sydney]]
+|-
+|ASX
+|[[Australian Securities Exchange|ASX]]
+|Financials
+|10,311,777,732
+|[[Sydney]]
+|-
+|AUB
+|[[AUB Group]]
+|Financials
+|3,124,921,167
+|[[Sydney]]
+|-
+|AZJ||[[Aurizon]] ||Industrials
+|6,834,227,569
+|[[Brisbane]]
+|-
+|BEN
+|[[Bendigo & Adelaide Bank]]
+|Financials
+|5,860,403,299
+|[[Bendigo]]
+|-
+|BFL
+|[[Bank South Pacific|BSP Financial Group]]
+|Financials
+|3,714,398,833
+|[[Port Moresby]], Papua New Guinea
+|-
+|BGA
+|[[Bega Cheese]]
+|Consumer Staples
+|1,838,371,924
+|[[Bega, New South Wales|Bega]]
+|-
+|BGL
+|Bellevue Gold
+|Materials
+|2,280,703,096
+|[[Perth]]
+|-
+|BHP||[[BHP]]||Materials
+|260,319,697,098
+|[[Melbourne]]
+|-
+|BOQ
+|[[Bank of Queensland]]
+|Financials
+|4,497,992,294
+|[[Brisbane]]
+|-
+|BPT
+|[[Beach Energy]]
+|Energy
+|2,977,140,421
+|[[Adelaide]]
+|-
+|BRG
+|[[Breville Group]]
+|Consumer Discretionary
+|3,893,260,520
+|[[Sydney]]
+|-
+|BSL
+|[[BlueScope]]
+|Materials
+|11,420,678,626
+|[[Melbourne]]
+|-
+|BWP
+|BWP Trust
+|Real Estate
+|2,630,779,541
+|[[Perth]]
+|-
+|BXB
+|[[Brambles Limited|Brambles]]
+|Industrials
+|30,843,257,058
+|[[Sydney]]
+|-
+|CAR
+|[[CAR Group]]
+|Communication Services
+|8,530,972,785
+|[[Melbourne]]
+|-
+|CBA
+|[[Commonwealth Bank]]
+|Financials
+|289,174,295,462
+|[[Sydney]]
+|-
+|CDA
+|[[Codan]]
+|Information Technology
+|5,823,647,746
+|[[Adelaide]]
+|-
+|CEN
+|[[Contact Energy]]
+|Utilities
+|4,101,812,576
+|[[wellington|Wellington]], New Zealand
+|-
+|CGF
+|Challenger
+|Financials
+|5,713,123,833
+|[[Sydney]]
+|-
+|CHC
+|[[Charter Hall]]
+|Real Estate
+|8,774,098,041
+|[[Sydney]]
+|-
+|CIA
+|Champion Iron 
+|Materials
+|2,836,895,325
+|[[Sydney]]
+|-
+|CIP
+|Centuria Industrial REIT
+|Real Estate
+|1,791,993,764
+|[[Sydney]]
+|-
+|CLW
+|Charter Hall Long WALE REIT
+|Real Estate
+|2,397,585,687
+|[[Sydney]]
+|-
+|CMM
+|Capricorn Metals
+|Materials
+|4,997,040,137
+|[[Perth]]
+|-
+|CNU
+|[[Chorus Limited|Chorus]]
+|Communication Services 
+|3,392,998,639
+|[[Wellington]], New Zealand
+|-
+|COH
+|[[Cochlear Limited|Cochlear]]
+|Healthcare
+|11,272,116,657
+|[[Sydney]]
+|-
+|COL
+|[[Coles Group]]
+|Consumer Staples
+|30,381,905,088
+|[[Melbourne]]
+|-
+|CPU
+|[[Computershare]]
+|Information Technology
+|16,385,705,693
+|[[Melbourne]]
+|-
+|CQR
+|Charter Hall Retail REIT
+|Real Estate 
+|2,138,924,961
+|[[Sydney]]
+|-
+|CSC
+|[[Capstone Copper]]
+|Materials
+|1,918,441,217
+|[[Vancouver]], Canada
+|-
+|CSL
+|[[CSL Limited|CSL]]
+|Healthcare
+|67,425,362,418
+|[[Melbourne]]
+|-
+|CTD
+|[[Corporate Travel Management (company)|Corporate Travel Management]]
+|Consumer Discretionary
+|2,351,454,738
+|[[Brisbane]]
+|-
+|CWY
+|[[Cleanaway]]
+|Industrials
+|5,174,674,975
+|[[Melbourne]]
+|-
+|CYL
+|Catalyst Metals
+|Materials
+|1,596,983,449
+|[[Perth]]
+|-
+|DBI
+|Dalrymple Bay Infrastructure
+|Industrials
+|2,488,723,568
+|[[Brisbane]]
+|-
+|DNL
+|Dyno Nobel
+|Materials
+|5,638,642,963
+|[[Brisbane]]
+|-
+|DOW
+|[[Downer Group]]
+|Industrials
+|5,142,022,791
+|[[Sydney]]
+|-
+|DRO
+|[[DroneShield|Droneshield]]
+|Industrials
+|3,627,203,981
+|[[Sydney]]
+|-
+|DRR
+|Deterra Royalties
+|Materials
+|2,133,709,719
+|[[Perth]]
+|-
+|DXS
+|[[Dexus]]
+|Real Estate
+|6,263,925,390
+|[[Sydney]]
+|-
+|DYL
+|Deep Yellow
+|Energy
+|1,746,201,181
+|[[Perth]]
+|-
+|EBO
+|[[EBOS Group]]
+|Healthcare
+|3,975,010,981
+|[[Christchurch]], New Zealand
+|-
+|EDV
+|[[Endeavour Group]]
+|Consumer Staples
+|5,746,322,154
+|[[Sydney]]
+|-
+|EMR
+|Emerald Resources
+|Materials
+|3,739,255,477
+|[[Perth]]
+|-
+|EOS
+|Electro Optic Systems Holdings
+|Industrials
+|1,736,568,891
+|[[Canberra]]
+|-
+|EVN
+|[[Evolution Mining]]
+|Materials
+|26,438,690,172
+|[[Sydney]]
+|-
+|EVT
+|EVT
+|Communication Services
+|2,143,670,746
+|[[Sydney]]
+|-
+|FBU
+|[[Fletcher Building]]
+|Industrials
+|2,536,757,798
+|[[Auckland]], New Zealand
+|-
+|FLT
+|[[Flight Centre|Flight Centre Travel Group]]
+|Consumer Discretionary
+|2,240,454,452
+|[[Brisbane]]
+|-
+|FMG
+|[[Fortescue (company)|Fortescue]]
+|Materials
+|62,349,039,590
+|[[Perth]]
+|-
+|FPH|FPH
+|[[Fisher & Paykel Healthcare]]
+|Healthcare
+|17,793,111,193
+|[[Auckland]], New Zealand
+|-
+|FRW
+|Freightways Group
+|Industrials
+|1,809,638,065
+|[[Auckland]], New Zealand
+|-
+|GDG
+|Generation Development Group
+|Financials
+|1,559,678,301
+|[[Melbourne]]
+|-
+|GGP
+|Greatland Resources
+|Materials
+|8,646,848,589
+|[[Perth]]
+|-
+|GMD
+|Genesis Minerals
+|Materials
+|6,705,466,493
+|[[Perth]]
+|-
+|GMG
+|[[Goodman Group]]
+|Real Estate
+|53,328,202,379
+|[[Sydney]]
+|-
+|GNE
+|[[Genesis Energy Limited|Genesis Energy]]
+|Utilities
+|2,349,418,103
+|[[Auckland]], New Zealand
+|-
+|GPT|GPT
+|[[GPT Group]]
+|Real Estate 
+|8,524,319,564
+|[[Sydney]]
+|-
+|GQG
+|[[GQG Partners]]
+|Financials
+|5,280,031,942
+|[[Fort Lauderdale, Florida|Fort Lauderdale]], United States
+|-
+|HDN
+|[[HomeCo Daily Needs REIT]]
+|Real Estate
+|2,517,605,493
+|[[Sydney]]
+|-
+|HUB
+|HUB24
+|Financials
+|6,487,931,467
+|[[Sydney]]
+|-
+|HVN
+|[[Harvey Norman]]
+|Consumer Discretionary
+|5,893,611,473
+|[[Sydney]]
+|-
+|IAG
+|[[Insurance Australia Group]]
+|Financials
+|17,219,266,180
+|[[Sydney]]
+|-
+|IFL
+|[[Insignia Financial]]
+|Financials
+|3,185,949,179
+|[[Melbourne]]
+|-
+|IFT
+|[[Infratil]]
+|Financials
+|9,423,516,592
+|[[Wellington]], New Zealand
+|-
+|IGO
+|IGO
+|Materials
+|6,020,279,113
+|[[Perth]]
+|-
+|ILU
+|[[Iluka Resources]]
+|Materials
+|2,910,566,243
+|[[Perth]]
+|-
+|IMD
+|IMDEX
+|Materials
+|1,898,933,156
+|[[Perth]]
+|-
+|JBH
+|[[JB Hi-Fi]]
+|Consumer Discretionary
+|7,877,513,331
+|[[Melbourne]]
+|-
+|JHX
+|[[James Hardie]]
+|Materials
+|11,802,629,977
+|[[Dublin]], Ireland
+|-
+|L1G
+|L1 Group
+|Financials
+|2,656,380,786
+|[[Melbourne]]
+|-
+|LLC
+|[[Lendlease]]
+|Real Estate
+|2,224,669,616
+|[[Sydney]]
+|-
+|LNW
+|[[Light & Wonder]]
+|Consumer Discretionary
+|9,742,092,960
+|[[Las Vegas]], United States
+|-
+|LOV
+|[[Lovisa (company)|Lovisa]]
+|Consumer Discretionary
+|2,325,508,374
+|[[Melbourne]]
+|-
+|LSF
+|L1 Long Short Fund
+|Financials
+|2,509,968,780
+|[[Melbourne]]
+|-
+|LTR
+|[[Liontown Resources]]
+|Materials
+|5,388,593,053
+|[[Perth]]
+|-
+|LYC
+|[[Lynas|Lynas Rare Earths]]
+|Materials
+|19,536,215,039
+|[[Perth]]
+|-
+|MCY
+|[[Mercury Energy|Mercury NZ]]
+|Utilities
+|7,353,211,297
+|[[Auckland]], New Zealand
+|-
+|MEZ
+|[[Meridian Energy]]
+|Utilities
+|5,888,081,498
+|[[Sydney]]
+|-
+|MFF
+|MFF Capital Investments
+|Financials
+|2,698,471,967
+|[[Wellington]], New Zealand
+|-
+|MFG
+|[[Magellan Financial Group]]
+|Financials
+|1,770,382,163
+|[[Sydney]]
+|-
+|MGR
+|[[Mirvac]]
+|Real Estate
+|6,727,691,670
+|[[Sydney]]
+|-
+|MIN
+|[[Mineral Resources]]
+|Materials
+|10,411,244,067
+|[[Perth]]
+|-
+|MND
+|Monadelphous Group
+|Industrials
+|2,807,607,752
+|[[Brisbane]]
+|-
+|MPL
+|[[Medibank]]
+|Financials
+|12,227,774,386
+|[[Melbourne]]
+|-
+|MQG
+|[[Macquarie Group]]
+|Financials
+|78,358,246,740
+|[[Sydney]]
+|-
+|MSB
+|[[Mesoblast]]
+|Healthcare
+|2,748,343,658
+|[[Melbourne]]
+|-
+|MTS
+|[[Metcash]]
+|Consumer Staples
+|3,266,186,686
+|[[Sydney]]
+|-
+|MXT
+|Metrics Master Income Trust
+|Financials
+|2,345,186,381
+|[[Sydney]]
+|-
+|NAB
+|[[National Australia Bank]]
+|Financials
+|69,797,300,000
+|[[Melbourne]]
+|-
+|NEM
+|[[Newmont]]
+|Materials
+|13,530,603,778
+|[[Denver]], United States
+|-
+|NHC
+|[[New Hope Group|New Hope]]
+|Energy
+|4,925,291,067
+|[[Brisbane]]
+|-
+|NHF
+|[[Nib Health Funds|Nib]]
+|Financials
+|3,122,902,470
+|[[Newcastle, New South Wales|Newcastle]]
+|-
+|NIC
+|Nickel Industries
+|Materials 
+|3,951,161,646
+|[[Sydney]]
+|-
+|NSR
+|[[National Storage]]
+|Real Estate
+|3,889,245,765
+|[[Brisbane]]
+|-
+|NST
+|[[Northern Star Resources]]
+|Materials
+|31,355,916,981
+|[[Perth]]
+|-
+|NWH
+|[[NRW Holdings]]
+|Industrials
+|2,467,337,511
+|[[Perth]]
+|-
+|NWL
+|Netwealth Group
+|Financials 
+|5,207,233,158
+|[[Melbourne]]
+|-
+|NWS
+|[[News Corp|News Corp Class B]]
+|Communication Services
+|1,706,704,352
+|[[New York City]], United States
+|-
+|NXG
+|Nexgen Energy
+|Energy
+|2,357,033,627
+|[[Vancouver]], Canada
+|-
+|NXT
+|[[NextDC]]
+|Information Technology 
+|7,215,977,531
+|[[Sydney]]
+|-
+|OBM
+|Ora Banda Mining
+|Materials
+|2,158,490,678
+|[[Perth]]
+|-
+|ORA
+|Orora
+|Materials
+|2,291,391,034
+|[[Melbourne]]
+|-
+|ORG
+|[[Origin Energy]]
+|Utilities
+|21,689,393,178
+|[[Sydney]]
+|-
+|ORI
+|[[Orica]]
+|Materials
+|9,410,846,170
+|[[Melbourne]]
+|-
+|PDI
+|Predictive Discovery
+|Materials
+|2,201,094,238
+|[[Perth]]
+|-
+|PDN
+|[[Paladin Energy]]
+|Energy
+|5,113,698,831
+|[[Perth]]
+|-
+|PLS
+|[[PLS (company)|PLS Group]]
+|Materials
+|16,394,887,582
+|[[Perth]]
+|-
+|PME
+|Pro Medicus
+|Healthcare
+|12,415,210,403
+|[[Melbourne]]
+|-
+|PMV
+|[[Premier Investments]]
+|Consumer Discretionary
+|1,984,110,775
+|[[Melbourne]]
+|-
+|PNI
+|[[Pinnacle Investment Management]]
+|Financials
+|3,153,287,253
+|[[Sydney]]
+|-
+|PPT
+|[[Perpetual Limited|Perpetual]]
+|Financials
+|1,825,367,174
+|[[Sydney]]
+|-
+|PRN
+|Perenti
+|Materials
+|1,806,615,024
+|[[Perth]]
+|-
+|PRU
+|[[Perseus Mining]]
+|Materials 
+|7,118,819,020
+|[[Perth]]
+|-
+|PXA
+|Pexa Group
+|Real Estate
+|2,127,068,682
+|[[Melbourne]]
+|-
+|QAN
+|[[Qantas]]
+|Industrials
+|12,937,853,835
+|[[Sydney]]
+|-
+|QBE
+|[[QBE Insurance]]
+|Financials
+|32,363,610,639
+|[[Sydney]]
+|-
+|QUB
+|[[Qube Holdings]]
+|Industrials
+|8,763,539,459
+|[[Sydney]]
+|-
+|RDX
+|Redox
+|Industrials
+|1,764,273,598
+|[[Sydney]]
+|-
+|REA
+|[[REA Group]]
+|Communication Services
+|20,366,695,985
+|[[Melbourne]]
+|-
+|REG
+|[[Regis Healthcare]]
+|Healthcare
+|1,844,405,181
+|[[Melbourne]]
+|-
+|REH
+|[[Reece Group]]
+|Industrials 
+|8,088,459,235
+|[[Melbourne]]
+|-
+|RGN
+|Region Group
+|Real Estate
+|2,585,750,166
+|[[Sydney]]
+|-
+|RHC
+|[[Ramsay Health Care]]
+|Healthcare
+|8,983,896,244
+|[[Sydney]]
+|-
+|RIO
+|[[Rio Tinto (corporation)|Rio Tinto]]
+|Materials
+|60,093,744,607
+|[[Melbourne]]/[[London]], United Kingdom
+|-
+|RMD
+|[[ResMed]]
+|Healthcare
+|18,493,619,517
+|[[San Diego]], United States
+|-
+|RMS
+|Ramelius Resources
+|Materials
+|7,033,564,139
+|[[Perth]]
+|-
+|RRL
+|Regis Resources
+|Materials
+|5,088,734,777
+|[[Perth]]
+|-
+|RSG
+|Resolute Mining
+|Materials
+|2,981,697,570
+|[[Perth]]
+|-
+|RWC
+|[[Reliance Worldwide Corporation]]
+|Industrials
+|2,196,000,147
+|[[Melbourne]]
+|-
+|RYM
+|[[Ryman Healthcare]]
+|Healthcare
+|1,889,256,091
+|[[Christchurch]], New Zealand
+|-
+|S32
+|[[South32]]
+|Materials
+|19,830,266,962
+|[[Perth]]
+|-
+|SCG
+|[[Scentre Group]]
+|Real Estate
+|17,601,432,797
+|[[Sydney]]
+|-
+|SDF
+|Steadfast Group
+|Financials
+|4,659,244,921
+|[[Sydney]]
+|-
+|SEK
+|[[Seek Limited|Seek]]
+|Communication Services
+|4,943,927,430
+|[[Melbourne]]
+|-
+|SFR
+|[[Sandfire Resources]]
+|Materials
+|7,637,991,719
+|[[Perth]]
+|-
+|SGH
+|SGH
+|Industrials
+|16,552,615,452
+|[[Sydney]]
+|-
+|SGM
+|[[Sims Metal]]
+|Materials
+|3,555,487,034
+|[[Sydney]]
+|-
+|SGP
+|[[Stockland]]
+||Real Estate
+|10,018,373,783
+|[[Sydney]]
+|-
+|SHL
+|[[Sonic Healthcare]]
+|Healthcare
+|9,874,874,301
+|[[Sydney]]
+|-
+|SIG
+|[[Sigma Healthcare]]
+|Healthcare
+|30,706,249,544
+|[[Melbourne]]
+|-
+|SMR
+|Stanmore Resources
+|Materials
+|2,334,604,332
+|[[Brisbane]]
+|-
+|SNZ
+|[[Summerset Holdings|Summerset Group Holdings]]
+|Healthcare
+|1,808,722,454
+|[[Wellington]], New Zealand
+|-
+|SOL
+|[[Soul Patts]]
+|Financials
+|15,705,879,654
+|[[Sydney]]
+|-
+|SPK
+|[[Spark New Zealand]]
+|Communication Services
+|3,269,925,087
+|[[Auckland]], New Zealand
+|-
+|STO
+|[[Santos Limited|Santos]]
+|Energy
+|26,242,005,525
+|[[Adelaide]]
+|-
+|SUL
+|[[Super Retail Group]]
+|Consumer Discretionary
+|2,877,029,610
+|[[Strathpine, Queensland|Strathpine]]
+|-
+|SUN
+|[[Suncorp]]
+|Financials
+|17,110,887,369
+|[[Brisbane]]
+|-
+|TAH
+|[[Tabcorp]]
+|Consumer Discretionary
+|2,132,159,134
+|[[Melbourne]]
+|-
+|TCL
+|[[Transurban]]
+|Industrials
+|43,245,747,038
+|[[Melbourne]]
+|-
+|TLC
+|[[The Lottery Corporation]]
+|Consumer Discretionary
+|12,019,167,196
+|[[Brisbane]]
+|-
+|TLS
+|[[Telstra]]
+|Communication Services 
+|60,905,654,189
+|[[Melbourne]]
+|-
+|TLX
+|[[Telix Pharmaceuticals]]
+|Healthcare
+|4,388,639,072
+|[[Melbourne]]
+|-
+|TNE
+|[[TechnologyOne]]
+|Information Technology
+|8,809,487,438
+|[[Brisbane]]
+|-
+|TPG
+|[[TPG Telecom]]
+|Communication Services 
+|8,009,159,952
+|[[Sydney]]
+|-
+|TUA
+|Tuas
+|Communication Services
+|3,175,213,830
+|[[Sydney]]
+|-
+|TWE
+|[[Treasury Wine Estates]]
+|Consumer Staples
+|3,011,740,980
+|[[Melbourne]]
+|-
+|VAU
+|Vault Minerals
+|Materials
+|4,289,644,572
+|[[Perth]]
+|-
+|VCX
+|[[Vicinity Centres]]
+|Real Estate
+|11,044,000,315
+|[[Melbourne]]
+|-
+|VEA
+|[[Viva Energy]]
+|Energy
+|4,221,278,806
+|[[Melbourne]]
+|-
+|VGN
+|[[Virgin Australia|Virgin Australia Holdings]]
+|Industrials
+|1,803,733,243
+|[[Brisbane]]
+|-
+|VNT
+|[[Ventia|Ventia Services Group]]
+|Industrials
+|4,300,326,134
+|[[Sydney]]
+|-
+|WAF
+|West African Resources
+|Materials
+|3,701,668,429
+|[[Perth]]
+|-
+|WAM
+|WAM Capital
+|Financials
+|1,913,056,911
+|[[Sydney]]
+|-
+|WBC
+|[[Westpac]]
+|Financials
+|136,299,086,704
+|[[Sydney]]
+|-
+|WDS
+|[[Woodside Energy|Woodside Energy Group]]
+|Energy
+|66,405,427,995
+|[[Perth]]
+|-
+|WES
+|[[Wesfarmers]]
+|Consumer Discretionary
+|83,209,566,732
+|[[Perth]]
+|-
+|WGX
+|Westgold Resources
+|Materials
+|5,678,437,700
+|[[Perth]]
+|-
+|WHC
+|[[Whitehaven Coal]]
+|Energy
+|7,500,938,233
+|[[Sydney]]
+|-
+|WLE
+|WAM Leaders
+|Financials
+|1,886,266,717
+|[[Sydney]]
+|-
+|WOR
+|[[Worley (company)|Worley]]
+|Energy
+|5,539,089,692
+|[[Sydney]]
+|-
+|WOW
+|[[Woolworths Group]]
+|Consumer Staples
+|45,211,386,096
+|[[Sydney]]
+|-
+|WTC
+|[[WiseTech|Wisetech Global]]
+|Information Technology
+|12,731,179,354
+|[[Sydney]]
+|-
+|XRO
+|[[Xero (company)|Xero]]
+|Information Technology 
+|12,633,999,232
+|[[Wellington]], New Zealand
+|-
+|XYX
+|[[Block, Inc.]]
+|Financials
+|3,139,539,773
+|[[Oakland]], United States
+|-
+|YAL
+|[[Yancoal|Yancoal Australia]]
+|Materials
+|10,920,034,144
+|[[Sydney]]
+|-
+|ZIM
+|Zimplats Holdings
+|Materials
+|1,878,276,975
+|[[Guernsey]], United Kingdom
+|-
+|ZIP
+|[[Zip Co|Zip]]
+|Financials 
+|2,001,326,648
+|[[Sydney]]
+|}
+
+<!-- Please only delete this line once the appropriate category has been created within Category:Companies by stock market index -->
