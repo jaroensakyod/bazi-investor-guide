@@ -45,11 +45,7 @@ export type DailyContentEntry = {
 
 // ───────── ตัวช่วย ─────────
 
-const THAI_ELEMENTS = ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"] as const;
-type ThaiElement = (typeof THAI_ELEMENTS)[number];
-
-const STEM_CYCLE = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
-const BRANCH_CYCLE = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
+type ThaiElement = "ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ";
 
 /** seed ตัวเลขจากวันที่ (deterministic — ใช้วันที่เลือกหุ้น) */
 function dateSeed(dateStr: string): number {

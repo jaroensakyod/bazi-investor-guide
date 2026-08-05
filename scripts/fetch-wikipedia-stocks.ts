@@ -198,13 +198,6 @@ const NIKKEI_SECTION_SECTOR: Record<string, string> = {
   "Wholesale": "Retailing",
 };
 
-/** หา sector จากชื่อ section (===Automotive===) ใน wikitext ของ Nikkei */
-function guessNikkeiSector(wikitext: string): string {
-  const m = wikitext.match(/^===\s*(.+?)\s*===/m);
-  const title = m?.[1]?.trim() ?? "";
-  return NIKKEI_SECTION_SECTOR[title] ?? (title || "Unknown");
-}
-
 /** แยกแถวตาราง wikitext: symbol อยู่บรรทัด |{{X|SYM}} ตามด้วย |ชื่อ||sector||... */
 function parseTableRows(wikitext: string, page: string): Array<{ symbol: string; name: string; sector: string }> {
   const rows: Array<{ symbol: string; name: string; sector: string }> = [];
@@ -226,13 +219,13 @@ function parseTableRows(wikitext: string, page: string): Array<{ symbol: string;
   if (page.includes("ASX 200")) {
     // format: |360 / |[[Life360]] / |Information Technology  (symbol→ชื่อ→sector คนละบรรทัด)
     for (let i = 0; i < lines.length; i++) {
-      const symMatch = lines[i].match(/^\|\s*([A-Z0-9.\-]{1,8})\s*\|?$/);
+      const symMatch = lines[i].match(/^\|\s*([A-Z0-9.-]{1,8})\s*\|?$/);
       if (!symMatch) continue;
       const symbol = symMatch[1].trim();
       if (symbol === "-" || /^[a-z]/.test(symbol)) continue;
       const name = (lines[i + 1] ?? "").match(/^\|\s*\[?\[?([^\]|]+?)\]?\]?\s*\|?$/)?.slice(1)?.[0]?.trim().replace(/\(.*\)/, "").trim() ?? "";
       const sector = (lines[i + 2] ?? "").match(/^\|\s*([^|]+)/)?.slice(1)?.[0]?.trim() ?? "";
-      if (name && sector && /^[A-Z0-9.\-]+$/.test(symbol)) rows.push({ symbol: `${symbol}.AX`, name, sector });
+      if (name && sector && /^[A-Z0-9.-]+$/.test(symbol)) rows.push({ symbol: `${symbol}.AX`, name, sector });
     }
     return rows;
   }
@@ -240,7 +233,7 @@ function parseTableRows(wikitext: string, page: string): Array<{ symbol: string;
   if (page.includes("TSX 60")) {
     // format: | {{TSX link|AEM}} || [[Agnico Eagle|...]] || Basic Materials  (บรรทัดเดียว)
     for (const line of lines) {
-      const m = line.match(/^\|\s*\{\{[^|}]*\|([A-Z0-9.\-]{1,6})\}\}\s*\|\|\s*\[?\[?([^\]|]+?)\]?\]?\s*\|\|\s*([^|]+)/);
+      const m = line.match(/^\|\s*\{\{[^|}]*\|([A-Z0-9.-]{1,6})\}\}\s*\|\|\s*\[?\[?([^\]|]+?)\]?\]?\s*\|\|\s*([^|]+)/);
       if (!m) continue;
       const symbol = m[1].trim();
       const name = m[2].trim().replace(/\(.*\)/, "").trim();
@@ -289,7 +282,7 @@ function parseTableRows(wikitext: string, page: string): Array<{ symbol: string;
       if (!nameMatch) continue;
       const name = nameMatch[1].trim().replace(/\(.*\)/, "").trim();
       if (!name || name === "-" || /^\d{4}-\d{2}-\d{2}$/.test(name)) continue;
-      const symbol = (lines[i + 1] ?? "").match(/^\|\s*([A-Z0-9.\-]{1,12})\s*$/)?.[1]?.trim() ?? "";
+      const symbol = (lines[i + 1] ?? "").match(/^\|\s*([A-Z0-9.-]{1,12})\s*$/)?.[1]?.trim() ?? "";
       const sector = (lines[i + 2] ?? "").match(/^\|\s*([^|]+)/)?.[1]?.trim() ?? "";
       if (name && symbol && symbol !== "-" && sector) rows.push({ symbol, name, sector });
     }
@@ -298,10 +291,10 @@ function parseTableRows(wikitext: string, page: string): Array<{ symbol: string;
 
   for (let i = 0; i < lines.length; i++) {
     // บรรทัด symbol: |{{NyseSymbol|MMM}} หรือ |{{TickerSymbol|...}} หรือ |MMM (แต่ข้าม "-" ที่เป็นเครื่องหมาย)
-    const symMatch = lines[i].match(/^\|\s*\{\{[^|}]*\|([A-Z0-9.\-]{1,10})\}\}/) || lines[i].match(/^\|\s*([A-Z0-9.\-]{1,10})\s*$/);
+    const symMatch = lines[i].match(/^\|\s*\{\{[^|}]*\|([A-Z0-9.-]{1,10})\}\}/) || lines[i].match(/^\|\s*([A-Z0-9.-]{1,10})\s*$/);
     if (!symMatch) continue;
     const symbol = symMatch[1].trim();
-    if (!/^[A-Z0-9.\-]+$/.test(symbol) || symbol === "-" || symbol.length < 1 || symbol.length > 10) continue;
+    if (!/^[A-Z0-9.-]+$/.test(symbol) || symbol === "-" || symbol.length < 1 || symbol.length > 10) continue;
 
     // บรรทัดถัดไป (หรือถัดๆ ไป) ที่มีชื่อ + sector: |ชื่อ||Sector||...
     let name = "";
@@ -327,7 +320,6 @@ async function main() {
   const existing = JSON.parse(fs.readFileSync(OUT, "utf8")) as { stocks: Array<{ ticker: string }> };
   const existingTickers = new Set(existing.stocks.map((s) => s.ticker));
   const allStocks: unknown[] = [...existing.stocks];
-  let totalRows = 0;
   let merged = 0;
   let skippedTotal = 0;
 
@@ -342,7 +334,6 @@ async function main() {
         text = await fetchWikitext(src.page, section);
       }
       const rows = parseTableRows(text, src.page);
-      totalRows += rows.length;
       console.log(`  พบ ${rows.length} แถว`);
 
       let added = 0;

@@ -20,8 +20,6 @@ import {
   getEngineUsefulElements,
   getEngineStrengthBand,
   resolveDaYunReaction,
-  elementLabel,
-  dayMasterElement,
   type ThaiElement,
   type StrengthBand,
 } from "@/lib/bazi/topic-knowledge-adapted";
@@ -30,7 +28,6 @@ import { doElementsTh, avoidElementsTh, careerBandFromScore, type ElementTh } fr
 import {
   QI_INVEST_STYLE_TH,
   WEALTH_QI_GOOD_FOR_INVEST,
-  TIMING_NEED_BY_STRENGTH,
   ELEMENT_BUSINESS_TH,
 } from "@/lib/investor/investor-tables";
 
@@ -99,7 +96,6 @@ export function outputElementTh(state: CalculatedStateValue): ThaiElement {
 /** ธาตุที่ควรลงทุน เรียงลำดับความเหมาะ (ใช้ในบท "ลงทุนอะไร") */
 export function resolveInvestElements(state: CalculatedStateValue): { invest: ThaiElement[]; avoid: ThaiElement[] } {
   const useful = getEngineUsefulElements(state); // ธาตุที่ดวงต้องการ
-  const band = getEngineStrengthBand(state);
   const dmTh = dayMasterElementTh(state);
   const monthStem = state.fourPillars.month.stem;
   const monthElement = (STEM_TO_ELEMENT[monthStem as keyof typeof STEM_TO_ELEMENT] ?? "wood") as keyof typeof GENERATES;

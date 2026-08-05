@@ -8,7 +8,7 @@
  * deterministic + client-safe (ไม่แตะ DB/FS)
  */
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
-import { CONTROLS, GENERATES, STEM_TO_ELEMENT, ELEMENT_LABELS_TH } from "@/lib/bazi/symbolic-engine.constants";
+import { CONTROLS, GENERATES, STEM_TO_ELEMENT } from "@/lib/bazi/symbolic-engine.constants";
 import { classifyOperatorStrengthScore } from "@/lib/bazi/constants/operator-strength";
 import type { SupportedElementValue } from "@/lib/bazi/schema-types";
 
@@ -109,7 +109,7 @@ export function resolveUsefulElements(calculatedState: CalculatedStateValue): Th
 }
 
 /** 调候 (seasonal adjustment) — อย่างง่ายจากต้นทาง: คงลำดับ เดิมไม่สลับ (pure) */
-function applyTiaohou(elements: ThaiElement[], state: CalculatedStateValue, band: StrengthBand): ThaiElement[] {
+function applyTiaohou(elements: ThaiElement[], _state: CalculatedStateValue, _band: StrengthBand): ThaiElement[] {
   // ต้นทางมีการปรับตามฤดู; โปรเจคนี้คงลำดับ useful ตรง ๆ (deterministic)
   return elements;
 }

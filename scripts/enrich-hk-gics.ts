@@ -195,14 +195,6 @@ async function fetchStockAnalysisSectors(symbols: string[]): Promise<Map<string,
   return out;
 }
 
-/** map ชื่อหุ้นใน HSI → ชื่อหน้า Wikipedia (จัดการ suffix/รูปแบบ) */
-function wikiTitle(name: string): string {
-  return name
-    .replace(/^(The|A|An)\s+/i, "")
-    .replace(/\s+(?:Limited|Ltd|Holdings?|Group|Corporation|Corp|Company|Co|Inc|plc|PLC)[.,]?\s*$/i, "")
-    .trim();
-}
-
 async function main() {
   console.log("📡 ดึง wikitext Hang Seng Index...");
   const wikitext = await fetchHangSengWikitext();

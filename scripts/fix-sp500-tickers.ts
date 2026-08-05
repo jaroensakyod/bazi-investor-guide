@@ -45,7 +45,7 @@ function parseTickers(wikitext: string): Map<string, string> {
   const map = new Map<string, string>();
   const lines = wikitext.split("\n");
   for (let i = 0; i < lines.length; i++) {
-    const tpl = lines[i].match(/^\|\s*\{\{(?:NyseSymbol|NasdaqSymbol)\|([A-Z0-9.\-]{1,10})\}\}/);
+    const tpl = lines[i].match(/^\|\s*\{\{(?:NyseSymbol|NasdaqSymbol)\|([A-Z0-9.-]{1,10})\}\}/);
     if (!tpl) continue;
     // บรรทัดถัดไป: |[[Company Name]]|| Sector ||...
     const nameMatch = (lines[i + 1] ?? "").match(/^\|\s*\[\[([^\]|]+?)(?:\|([^\]|]+?))?\]\]/);
@@ -68,7 +68,7 @@ async function main() {
   };
 
   let fixed = 0;
-  let stillBad: string[] = [];
+  const stillBad: string[] = [];
   const examples: string[] = [];
 
   for (const s of db.stocks) {
