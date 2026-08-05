@@ -23,10 +23,10 @@
 | 0.5 | Fundamentals + buffett-checks | ✅ **Yahoo financialData จริง 61 ตัว** (ROE/margin/growth — แก้ {raw} format) + Buffett checklist 5 ข้อ + score · 7 เทสต์ |
 | 0.6 | ขยายคลังไทย 129 → ~250 | ✅ **129 → 272 ตัว** (TradingView SET top-250) — tier SET50 52/SET100 93/mai 16/mid 111 · desc 263 · ธาตุ ไม้12/น้ำ147/ไฟ47/ดิน26/ทอง40 |
 | 0.7–0.8 | Hidden Gems screener + risk gating ตามกำลังดวง | ✅ **ได้จริง 5 ตัว** (BILI/PLANB/SAPPE/FDS/NCLH ตามดวงตัวอย่าง) — underwater 100/80 + tier 🟢🟡🔴 + ดวงอ่อนเห็นแค่ 🟢 · 10 เทสต์ |
-| 0.9–0.10 | Asset universe (commodities) + price fetchers | ⬜ |
-| 0.11–0.12 | Asset verdict + จัดพอร์ตตามธาตุ | ⬜ |
-| 0.13–0.14 | Real assets (สลาก/ที่ดิน/สวนยาง/พระเครื่อง...) + สิ่งที่ห้าม | ⬜ |
-| 0.15 | Universe เอเชีย +5 ตลาด (TW/SG/ID/MY/PH) | ⬜ |
+| 0.9–0.10 | Asset universe (commodities) + price fetchers | ✅ **27 รายการ** (ทอง/เงิน/น้ำมัน/ก๊าซ/คริปโต/ETF/REIT/บอนด์/ฝาก/forex/กองทุน/อนุพันธ์) + ราคาจริง 26 ตัว merge snapshot (ทอง $4,221/BTC $64K/SPY $771) |
+| 0.11–0.12 | Asset verdict + จัดพอร์ตตามธาตุ | ✅ verdict ธาตุ fit+ momentum + tier gate (🔴 ไม่มี verdict) · จัดพอร์ตบท 13: กันชนตามกำลัง + ธาตุหลัก 1.5× + เก็งกำไรเฉพาะดวงแข็ง · demo จริง (ไม้36/น้ำ24/กันชน30/เก็ง10) |
+| 0.13–0.14 | Real assets (สลาก/ที่ดิน/สวนยาง/พระเครื่อง...) + สิ่งที่ห้าม | ✅ **19 รายการ** (บ้านเช่า/ที่ดิน/สวนยาง/ป่า/ฟาร์ม/สลาก/ทองก้อน/พระเครื่อง/ประกันสะสมทรัพย์) + forbidden 5 (ห้องแชร์/พนัน/ของปลอม → verdict avoid เสมอ) · ธาตุเสนอ→รอซินแส |
+| 0.15 | Universe เอเชีย +5 ตลาด (TW/SG/ID/MY/PH) | ✅ **+337 ตัว** (TW 100/SG 59/ID 60/MY 60/PH 58) → คลังรวม 2,231 + ไทย 272 = **2,503 รายการ** · ทิศ→ธาตุตลาด รอซินแส · MY/PH description เติมผ่าน Wikipedia (background) |
 
 ### 🔀 การตัดสินใจระหว่างทำ (deviation log)
 - **Movers**: แผนเดิม = TradingView scanner → เปลี่ยนเป็นอ่านจาก market snapshot (ข้อมูลตรงคลัง มีธาตุครบ ไม่เปลือง request) — `src/lib/market/movers.ts`
@@ -61,6 +61,9 @@ npm run typecheck && npm test             # 108+ เทสต์
 | 10 | **patch tool ใช้ relative path พลาดเมื่อ terminal cwd เปลี่ยน** (เช่น cd /tmp) | ใช้ absolute path `C:\Users\ASUS\Desktop\biz\bazi-investor-guide\...` เสมอ | — |
 | 11 | **node -e / sed pipeline โดน approval/blocklist** | เขียน `.tmp-xxx.ts` แล้วลบหลังใช้ (ตาม convention โปรเจค) — อย่าใช้ one-liner ซับซ้อน | scripts/.tmp-* |
 | 12 | **ทิศ→ธาตุตลาด 5 ตลาดใหม่ + ธาตุ ปศุสัตว์/พระเครื่อง/สลาก/คาร์บอน** | ยังไม่ตัดสิน — **รอซินแส** (decision-log) | — |
+| 13 | **Yahoo v10 ไม่บริการ .KL/.PS/.SI (assetProfile null)** — แต่ 2330.TW ได้ | ใช้ Wikipedia enrich (`enrich-descriptions.ts`) เป็น fallback สำหรับตลาดที่ Yahoo ตาย + เพิ่ม `lang=en-US&region=US` | `scripts/enrich-descriptions.ts` |
+| 14 | **มาเลเซีย exchange code บน TradingView = `MYX`** (ไม่ใช่ KLSE/BURSA) | ใช้ `MYX` — debug ด้วย .tmp script | `scripts/expand-asia-universe.ts` |
+| 15 | **Description ผิดคนละบริษัท** (suffix map เก่า → Yahoo ดึง US ticker แทน เช่น SDG=กองทุนUS/TM=Toyota) | cleanup: เทียบ `businessEvidence.url` กับ `yahooTicker()` ที่ควรเป็น — ไม่ตรง = ลบ · และ refactor ให้ enrich import yahooTicker จาก canonical module (ห้าม copy map) | `market/yahoo.ts` |
 
 **เปลี่ยนเครื่องใหม่**: `npm install` (node 20+) · ข้อมูลทั้งหมด commit ใน repo แล้ว (cache/ราคา/ข่าว/IPO) — ไม่ต้องพึ่ง network · ไม่มี secret ใน repo (LLM key ใส่ `.env` ตอน Phase 1+) · อ่าน `UPDATE.md` + `.hermes/plans/2026-08-05_ai-investor-chat.md` + `KNOWN-ISSUES.md` ก่อน
 
