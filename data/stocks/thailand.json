@@ -2041,8 +2041,12 @@
       "reviewedBy": null,
       "reviewedAt": null,
       "notes": "",
-      "description": "",
-      "businessEvidence": null
+      "description": "Makro is a Dutch international brand of warehouse clubs, also called cash and carry stores. Makro was founded by SHV Holdings, a Dutch conglomerate based in Utrecht in partnership with German company Metro AG, with the first warehouse club opened in Amsterdam in 1968.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Siam_Makro",
+        "quote": "Makro is a Dutch international brand of warehouse clubs, also called cash and carry stores. Makro was founded by SHV Holdings, a Dutch conglomerate based in Utrecht in partnership with German company "
+      }
     },
     {
       "type": "stock",
@@ -2322,13 +2326,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "This is a comprehensive list of hospitals in Thailand. The list is sorted with Bangkok at the top, and then in the alphabetical order of the provinces.",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/Bangkok_Chain_Hospital",
-        "quote": "This is a comprehensive list of hospitals in Thailand. The list is sorted with Bangkok at the top, and then in the alphabetical order of the provinces."
-      }
+      "notes": ""
     },
     {
       "type": "stock",
@@ -2484,13 +2482,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "Carabaos (Filipino: kalabáw) are a genetically distinct population of swamp-type water buffaloes (Bubalus bubalis kerabau) from the Philippines. They were also further introduced to Sulawesi and Borneo of eastern Indonesia and Malaysia.",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/Carabao",
-        "quote": "Carabaos (Filipino: kalabáw) are a genetically distinct population of swamp-type water buffaloes (Bubalus bubalis kerabau) from the Philippines. They were also further introduced to Sulawesi and Borne"
-      }
+      "notes": ""
     },
     {
       "type": "stock",
@@ -2525,13 +2517,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "The Plaza Hotel (also known as The Plaza) is a luxury hotel and condominium apartment building in Midtown Manhattan in New York City. It is located on the western side of Grand Army Plaza, after which it is named, just west of Fifth Avenue, and is between 58th Street and Central Park South (a.k.a.",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/Central_Plaza_Hotel",
-        "quote": "The Plaza Hotel (also known as The Plaza) is a luxury hotel and condominium apartment building in Midtown Manhattan in New York City. It is located on the western side of Grand Army Plaza, after which"
-      }
+      "notes": ""
     },
     {
       "type": "stock",
@@ -2690,13 +2676,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "Kenya Electricity Generating Company PLC abbreviated to KenGen, is a government enterprise in the Republic of Kenya charged with the production of electricity for the country. KenGen is the largest electric power producer in Kenya, generating over 60% of the electricity consumed in the country.",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/Electricity_Generating",
-        "quote": "Kenya Electricity Generating Company PLC abbreviated to KenGen, is a government enterprise in the Republic of Kenya charged with the production of electricity for the country. KenGen is the largest el"
-      }
+      "notes": ""
     },
     {
       "type": "stock",
@@ -3098,13 +3078,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "MV Mayuree Naree is a Thailand-flagged bulk carrier built in India as Good Princess in 2008. Since 2012 the vessel has been owned and operated by the Thai shipping company Precious Shipping. On 11 March 2026, the vessel was struck by Iranian projectiles near the Strait of Hormuz, causing a fire and forcing most of the crew to abandon ship.",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/Precious_Shipping",
-        "quote": "MV Mayuree Naree is a Thailand-flagged bulk carrier built in India as Good Princess in 2008. Since 2012 the vessel has been owned and operated by the Thai shipping company Precious Shipping. On 11 Mar"
-      }
+      "notes": ""
     },
     {
       "type": "stock",
@@ -4933,13 +4907,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "เพชร (อังกฤษ: Diamond) เป็นรูปแบบหนึ่งของธาตุคาร์บอนในสถานะของแข็ง ซึ่งมีอะตอมของคาร์บอนจัดเรียงตัวในโครงสร้างผลึกแบบลูกบาศก์เพชร (diamond cubic) เพชรในฐานะที่เป็นรูปแบบหนึ่งของคาร์บอนมีลักษณะไร้รส ไร้กลิ่น แข็งเปราะ ไร้สีในรูปบริสุทธิ์ นำไฟฟ้าได้ไม่ดี และไม่ละลายในน้ำ รูปแบบของคาร์บอนในสถานะของแข็งอีกชนิดหนึ่งที่เรียกว่าแกรไฟต์ (graphite) เป็นรูปแ…",
-      "businessEvidence": {
-        "source": "Wikipedia th intro (auto) — draft รอตรวจ",
-        "url": "https://th.wikipedia.org/wiki/Diamond_Roofing_Tiles",
-        "quote": "เพชร (อังกฤษ: Diamond) เป็นรูปแบบหนึ่งของธาตุคาร์บอนในสถานะของแข็ง ซึ่งมีอะตอมของคาร์บอนจัดเรียงตัวในโครงสร้างผลึกแบบลูกบาศก์เพชร (diamond cubic) เพชรในฐานะที่เป็นรูปแบบหนึ่งของคาร์บอนมีลักษณะไร้รส ไร"
-      }
+      "notes": ""
     },
     {
       "type": "stock",
@@ -5138,13 +5106,7 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
-      "description": "โรงแรมเอราวัณ (อังกฤษ: The Erawan Hotel) เป็นอดีตโรงแรมหรูในกรุงเทพมหานคร เป็นโรงแรมสมัยใหม่แห่งแรกที่สร้างขึ้นเพื่อรองรับการขยายตัวของธุรกิจการบินระหว่างประเทศ ดำเนินการโดยบริษัท สหโรงแรมไทยและการท่องเที่ยว จำกัด เปิดให้บริการในปี พ.ศ.",
-      "businessEvidence": {
-        "source": "Wikipedia th intro (auto) — draft รอตรวจ",
-        "url": "https://th.wikipedia.org/wiki/The_Erawan",
-        "quote": "โรงแรมเอราวัณ (อังกฤษ: The Erawan Hotel) เป็นอดีตโรงแรมหรูในกรุงเทพมหานคร เป็นโรงแรมสมัยใหม่แห่งแรกที่สร้างขึ้นเพื่อรองรับการขยายตัวของธุรกิจการบินระหว่างประเทศ ดำเนินการโดยบริษัท สหโรงแรมไทยและการท่อ"
-      }
+      "notes": ""
     },
     {
       "type": "stock",

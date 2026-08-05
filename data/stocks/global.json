@@ -92,13 +92,7 @@
       "reviewedBy": null,
       "reviewedAt": null,
       "notes": "ธาตุตลาด จีน = น้ำ (ทิศเหนือ) — ใช้เฉพาะบท 8 ภาพรวมประเทศ; verdict หุ้นใช้ธาตุธุรกิจนี้",
-      "marketCapUsd": 301028608962,
-      "description": "Ali Baba is a character from the folk tale \"Ali Baba and the Forty Thieves\". Alibaba Group is a Chinese multinational internet technology company. Ali Baba or Alibaba may also refer to:",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/Alibaba",
-        "quote": "Ali Baba is a character from the folk tale \"Ali Baba and the Forty Thieves\". Alibaba Group is a Chinese multinational internet technology company. Ali Baba or Alibaba may also refer to:"
-      }
+      "marketCapUsd": 301028608962
     },
     {
       "type": "stock",
@@ -23283,13 +23277,7 @@
       "reviewedBy": null,
       "reviewedAt": null,
       "notes": "ธาตุตลาด สหรัฐฯ = ไม้ (ทิศตะวันออก (ข้ามมหาสมุทร)) — ใช้บท 8; verdict หุ้นใช้ธาตุธุรกิจนี้",
-      "marketCapUsd": 99629156526,
-      "description": "The United States of America (USA), also known as the United States (U.S.) or America, is a country primarily located in North America. It is a federal republic consisting of 50 states and a federal capital district, Washington, D.C.",
-      "businessEvidence": {
-        "source": "Wikipedia intro (auto) — draft รอตรวจ",
-        "url": "https://en.wikipedia.org/wiki/U.S.",
-        "quote": "The United States of America (USA), also known as the United States (U.S.) or America, is a country primarily located in North America. It is a federal republic consisting of 50 states and a federal c"
-      }
+      "marketCapUsd": 99629156526
     },
     {
       "type": "stock",
@@ -75429,7 +75417,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.manulife.com",
-      "industry": "Insurance - Life"
+      "industry": "Insurance - Life",
+      "description": "Manulife Financial Corporation (French: Financière Manuvie) is a Canadian multinational insurance company and financial services provider headquartered in Toronto, Ontario. The company operates in Canada and Asia as \"Manulife\" and in the United States primarily through its John Hancock Financial division.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Manulife_Financial",
+        "quote": "Manulife Financial Corporation (French: Financière Manuvie) is a Canadian multinational insurance company and financial services provider headquartered in Toronto, Ontario. The company operates in Can"
+      }
     },
     {
       "type": "stock",
@@ -75459,7 +75453,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.sunlife.com",
-      "industry": "Insurance - Diversified"
+      "industry": "Insurance - Diversified",
+      "description": "Sun Life Financial Inc. is a financial services company headquartered in Toronto, Canada. Founded in 1865, it operates internationally in life insurance, wealth management, and asset management. As of 2024, the company manages over CAD$1.3 trillion in assets and serves clients in Canada, the United States, Asia, and other markets.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Sun_Life_Financial",
+        "quote": "Sun Life Financial Inc. is a financial services company headquartered in Toronto, Canada. Founded in 1865, it operates internationally in life insurance, wealth management, and asset management. As of"
+      }
     },
     {
       "type": "stock",
@@ -75487,7 +75487,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "International Container Terminal Services, Inc. (ICTSI) (PSE: ICT) is a global port management company headquartered in Manila, Philippines. Established in December 1987, ICTSI is the Philippines' largest multinational and transnational company, having established operations in both developed and emerging market economies in Asia Pacific, the Ameri…",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/International_Container_Terminal_Services%2C",
+        "quote": "International Container Terminal Services, Inc. (ICTSI) (PSE: ICT) is a global port management company headquartered in Manila, Philippines. Established in December 1987, ICTSI is the Philippines' lar"
+      }
     },
     {
       "type": "stock",
@@ -75517,7 +75523,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.sm-energy.com",
-      "industry": "Oil & Gas E&P"
+      "industry": "Oil & Gas E&P",
+      "description": "SM Investments Corporation (SMIC), also known as SM Group, is a Filipino conglomerate with interests in various sectors, mostly in shopping mall development and management, retail, real estate development, banking, and tourism.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/SM_Investments",
+        "quote": "SM Investments Corporation (SMIC), also known as SM Group, is a Filipino conglomerate with interests in various sectors, mostly in shopping mall development and management, retail, real estate develop"
+      }
     },
     {
       "type": "stock",
@@ -75545,7 +75557,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "BDO Unibank, Inc., commonly known as Banco de Oro (BDO), is a Philippine banking company based in Makati City, Philippines. BDO Unibank is a member of the SM Group and can be found at SM Malls throughout the country.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/BDO_Unibank%2C",
+        "quote": "BDO Unibank, Inc., commonly known as Banco de Oro (BDO), is a Philippine banking company based in Makati City, Philippines. BDO Unibank is a member of the SM Group and can be found at SM Malls through"
+      }
     },
     {
       "type": "stock",
@@ -75573,7 +75591,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "The Bank of the Philippine Islands (BPI) is a Philippine universal bank headquartered in Makati. It is the oldest bank in the Philippines and in Southeast Asia. It is the fourth largest bank in terms of assets, the second largest bank in terms of market capitalization, and one of the most profitable banks in the Philippines.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Bank_of_the_Philippine_Islands",
+        "quote": "The Bank of the Philippine Islands (BPI) is a Philippine universal bank headquartered in Makati. It is the oldest bank in the Philippines and in Southeast Asia. It is the fourth largest bank in terms "
+      }
     },
     {
       "type": "stock",
@@ -75601,7 +75625,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "The Manila Electric Company, commonly referred to as Meralco (, Tagalog: [mɛˈɾalkɔ], stylized in all caps), is the largest electric power distribution company in the Philippines.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Manila_Electric",
+        "quote": "The Manila Electric Company, commonly referred to as Meralco (, Tagalog: [mɛˈɾalkɔ], stylized in all caps), is the largest electric power distribution company in the Philippines."
+      }
     },
     {
       "type": "stock",
@@ -75629,7 +75659,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "SM Prime Holdings, Inc. (SMPH) is a Filipino integrated property developer and a public subsidiary of SM Investments Corporation. It was incorporated on January 6, 1994, to develop, conduct, operate, and maintain the SM commercial shopping centers and all businesses related thereto, such as the lease of commercial spaces within the compound of shop…",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/SM_Prime_Holdings%2C",
+        "quote": "SM Prime Holdings, Inc. (SMPH) is a Filipino integrated property developer and a public subsidiary of SM Investments Corporation. It was incorporated on January 6, 1994, to develop, conduct, operate, "
+      }
     },
     {
       "type": "stock",
@@ -75659,7 +75695,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://ampcopgh.com",
-      "industry": "Metal Fabrication"
+      "industry": "Metal Fabrication",
+      "description": "Aboitiz Power Corporation also known as AboitizPower (AP), a subsidiary of Aboitiz Equity Ventures (AEV), is a holding company engaged in power distribution, generation and retail electricity services.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Aboitiz_Power",
+        "quote": "Aboitiz Power Corporation also known as AboitizPower (AP), a subsidiary of Aboitiz Equity Ventures (AEV), is a holding company engaged in power distribution, generation and retail electricity services"
+      }
     },
     {
       "type": "stock",
@@ -75687,7 +75729,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Ayala Corporation (Spanish: Corporación Ayala, formerly Ayala y Compañía; lit. 'Ayala & Company') is a Philippine diversified conglomerate. Founded in 1834 by Domingo Ureta Roxas and Antonio de Ayala during Spanish colonial rule, it is the Philippines' oldest and largest conglomerate.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Ayala",
+        "quote": "Ayala Corporation (Spanish: Corporación Ayala, formerly Ayala y Compañía; lit. 'Ayala & Company') is a Philippine diversified conglomerate. Founded in 1834 by Domingo Ureta Roxas and Antonio de Ayala "
+      }
     },
     {
       "type": "stock",
@@ -75743,7 +75791,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "The Metropolitan Bank & Trust Company, trading as Metrobank, is a Filipino bank that as of 2022, was the third largest bank in the Philippines in terms of total assets. It offers various financial services, from regular banking to insurance. It is the commercial and retail banking arm of GT Capital Holdings Inc.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Metropolitan_Bank_%26_Trust",
+        "quote": "The Metropolitan Bank & Trust Company, trading as Metrobank, is a Filipino bank that as of 2022, was the third largest bank in the Philippines in terms of total assets. It offers various financial ser"
+      }
     },
     {
       "type": "stock",
@@ -75801,7 +75855,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.cloughglobal.com/closed-end-funds/overview/glo",
-      "industry": "Asset Management"
+      "industry": "Asset Management",
+      "description": "Globe Telecom, Inc., commonly known as Globe, is a Philippine telecommunications company headquartered in Bonifacio Global City, Taguig. It operates one of the largest mobile, fixed-line and broadband networks in the Philippines.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Globe_Telecom",
+        "quote": "Globe Telecom, Inc., commonly known as Globe, is a Philippine telecommunications company headquartered in Bonifacio Global City, Taguig. It operates one of the largest mobile, fixed-line and broadband"
+      }
     },
     {
       "type": "stock",
@@ -75829,7 +75889,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Ayala Land, Inc. (ALI) is a Philippine real estate company that is a publicly-traded subsidiary of Ayala Corporation. Its core businesses are in strategic landbank management, residential development, retail shopping centers, corporate businesses, and hotels & resorts. Support businesses are in construction and property management.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Ayala_Land",
+        "quote": "Ayala Land, Inc. (ALI) is a Philippine real estate company that is a publicly-traded subsidiary of Ayala Corporation. Its core businesses are in strategic landbank management, residential development,"
+      }
     },
     {
       "type": "stock",
@@ -75857,7 +75923,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Aboitiz Equity Ventures Inc. (AEV) is a Philippine holding company based in Metro Manila, with roots from Cebu City. The conglomerate operates in six major industries: Power, Banking and Financial Services, Food, Infrastructure, and Data Science and Artificial Intelligence. In 2017, the company was ranked 1793rd on the Forbes Global 2000.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Aboitiz_Equity_Ventures",
+        "quote": "Aboitiz Equity Ventures Inc. (AEV) is a Philippine holding company based in Metro Manila, with roots from Cebu City. The conglomerate operates in six major industries: Power, Banking and Financial Ser"
+      }
     },
     {
       "type": "stock",
@@ -75885,7 +75957,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Jollibee Foods Corporation (JFC), doing business as Jollibee Group, is a Philippine multinational company headquartered in Pasig, Metro Manila, Philippines. JFC is the owner of the fast food brand Jollibee.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Jollibee_Foods",
+        "quote": "Jollibee Foods Corporation (JFC), doing business as Jollibee Group, is a Philippine multinational company headquartered in Pasig, Metro Manila, Philippines. JFC is the owner of the fast food brand Jol"
+      }
     },
     {
       "type": "stock",
@@ -75913,7 +75991,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "JG Summit Holdings, Inc. (JGSHI) is one of the largest conglomerates in the Philippines with business interests in air transportation, banking, food manufacturing, hotels, petrochemicals, power generation, publishing, real estate and property development, and telecommunications. Key subsidiaries include Universal Robina and Cebu Pacific.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/JG_Summit_Holdings",
+        "quote": "JG Summit Holdings, Inc. (JGSHI) is one of the largest conglomerates in the Philippines with business interests in air transportation, banking, food manufacturing, hotels, petrochemicals, power genera"
+      }
     },
     {
       "type": "stock",
@@ -75941,7 +76025,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "LT Group, Inc. (LTG) is a Philippine publicly listed holding company headquartered in Bonifacio Global City, Taguig. LT Group, Inc. is majority-owned by Tangent Holdings Corporation, its ultimate parent company (also controlled by Tan).",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/LT_Group%2C",
+        "quote": "LT Group, Inc. (LTG) is a Philippine publicly listed holding company headquartered in Bonifacio Global City, Taguig. LT Group, Inc. is majority-owned by Tangent Holdings Corporation, its ultimate pare"
+      }
     },
     {
       "type": "stock",
@@ -75969,7 +76059,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "AREIT may be referred to: Australian real estate investment trust (A-REIT) AREIT, Inc. A Philippine REIT company",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/AREIT",
+        "quote": "AREIT may be referred to: Australian real estate investment trust (A-REIT) AREIT, Inc. A Philippine REIT company"
+      }
     },
     {
       "type": "stock",
@@ -76027,7 +76123,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.summitmidstream.com",
-      "industry": "Oil & Gas Midstream"
+      "industry": "Oil & Gas Midstream",
+      "description": "San Miguel Corporation (Tagalog pronunciation: [sɐn mɪˈɡɛl]), abbreviated as SMC, is a Philippine multinational conglomerate with headquarters in Mandaluyong, Metro Manila. The company is one of the largest and most diversified conglomerates in the Philippines.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/San_Miguel",
+        "quote": "San Miguel Corporation (Tagalog pronunciation: [sɐn mɪˈɡɛl]), abbreviated as SMC, is a Philippine multinational conglomerate with headquarters in Mandaluyong, Metro Manila. The company is one of the l"
+      }
     },
     {
       "type": "stock",
@@ -76367,7 +76469,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Maynilad Water Services, Inc., better known as Maynilad, is the water and wastewater services provider of cities and municipalities that form the West Zone of the Greater Manila Area in the Philippines. It is an agent and contractor of the Metropolitan Waterworks and Sewerage System (MWSS).",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Maynilad_Water_Services%2C",
+        "quote": "Maynilad Water Services, Inc., better known as Maynilad, is the water and wastewater services provider of cities and municipalities that form the West Zone of the Greater Manila Area in the Philippine"
+      }
     },
     {
       "type": "stock",
@@ -76395,7 +76503,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Monde Nissin Corporation, commonly known as Monde Nissin or abbreviated as MNC, is a Philippine multinational food and beverage company with a portfolio of brands across instant noodles, biscuits, baked goods, culinary aids and alternative meat products categories, including Lucky Me!, SkyFlakes, Fita, M.Y. San Grahams and Nissin.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Monde_Nissin",
+        "quote": "Monde Nissin Corporation, commonly known as Monde Nissin or abbreviated as MNC, is a Philippine multinational food and beverage company with a portfolio of brands across instant noodles, biscuits, bak"
+      }
     },
     {
       "type": "stock",
@@ -76423,7 +76537,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Universal Robina Corporation, abbreviated as URC and also known as Universal Robina, is a Philippine company headquartered in Quezon City. It is one of the largest food and beverage companies in the Philippines, along with San Miguel Corporation, Monde Nissin, Mondelez Philippines and Nestlé Philippines.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Universal_Robina",
+        "quote": "Universal Robina Corporation, abbreviated as URC and also known as Universal Robina, is a Philippine company headquartered in Quezon City. It is one of the largest food and beverage companies in the P"
+      }
     },
     {
       "type": "stock",
@@ -76451,7 +76571,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "ACEN Corporation, formerly AC Energy, is the energy firm under the Ayala Group. The company has around 7,000 MW of attributable renewables capacity across the Philippines, Australia, Vietnam, India, Indonesia, Laos, and the U.S.A.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/ACEN",
+        "quote": "ACEN Corporation, formerly AC Energy, is the energy firm under the Ayala Group. The company has around 7,000 MW of attributable renewables capacity across the Philippines, Australia, Vietnam, India, I"
+      }
     },
     {
       "type": "stock",
@@ -76479,7 +76605,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Puregold Price Club, Inc. or simply Puregold (stylized in all caps) is a chain of supermarkets in the Philippines trading goods such as consumer products on a wholesale and retail basis. It currently has approximately more than 400 operating stores and over 20 food service stalls.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Puregold_Price_Club",
+        "quote": "Puregold Price Club, Inc. or simply Puregold (stylized in all caps) is a chain of supermarkets in the Philippines trading goods such as consumer products on a wholesale and retail basis. It currently "
+      }
     },
     {
       "type": "stock",
@@ -76507,7 +76639,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Century Pacific Food, Inc. (CNPF) is a Philippine multinational food processing company headquartered in Ortigas Center, Pasig. It is a wholly owned subsidiary of Century Pacific Group, Inc.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Century_Pacific_Food%2C",
+        "quote": "Century Pacific Food, Inc. (CNPF) is a Philippine multinational food processing company headquartered in Ortigas Center, Pasig. It is a wholly owned subsidiary of Century Pacific Group, Inc."
+      }
     },
     {
       "type": "stock",
@@ -76535,7 +76673,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "GT Capital Holdings Inc. (GTCAP) is a Philippine holding company founded by George Ty and now owned by his family.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/GT_Capital_Holdings%2C",
+        "quote": "GT Capital Holdings Inc. (GTCAP) is a Philippine holding company founded by George Ty and now owned by his family."
+      }
     },
     {
       "type": "stock",
@@ -76565,7 +76709,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.freshdelmonte.com",
-      "industry": "Farm Products"
+      "industry": "Farm Products",
+      "description": "DMCI Homes, Inc. is the real estate arm of DMCI Holdings (PSE: DMC) through its wholly owned subsidiary DMCI Project Developers, Inc. (PDI). It was incorporated and registered with the Securities and Exchange Commission (SEC) on April 27, 1995.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/DMCI_Holdings",
+        "quote": "DMCI Homes, Inc. is the real estate arm of DMCI Holdings (PSE: DMC) through its wholly owned subsidiary DMCI Project Developers, Inc. (PDI). It was incorporated and registered with the Securities and "
+      }
     },
     {
       "type": "stock",
@@ -76593,7 +76743,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "The Philippine National Bank (PNB, Filipino: Bangko Nasyonal ng Pilipinas; Spanish: Banco Nacional Filipino) is a major Filipino bank based in Pasay in the Philippines. It was established by the Philippine government on July 22, 1916, during the American Era.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Philippine_National_Bank",
+        "quote": "The Philippine National Bank (PNB, Filipino: Bangko Nasyonal ng Pilipinas; Spanish: Banco Nacional Filipino) is a major Filipino bank based in Pasay in the Philippines. It was established by the Phili"
+      }
     },
     {
       "type": "stock",
@@ -76709,7 +76865,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Union Bank of the Philippines, Inc., more commonly known as UnionBank, is one of the universal banks in the Philippines and the ninth largest bank in the country by assets. UnionBank is a joint consortium among the Aboitiz Group, Insular Life, and the Social Security System.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Union_Bank_of_the_Philippines",
+        "quote": "Union Bank of the Philippines, Inc., more commonly known as UnionBank, is one of the universal banks in the Philippines and the ninth largest bank in the country by assets. UnionBank is a joint consor"
+      }
     },
     {
       "type": "stock",
@@ -76793,7 +76955,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Spanish Filipino or Hispanic Filipino (Spanish: Español Filipino, Hispano Filipino, Tagalog: Kastílang Pilipino, Cebuano: Katsílà) are people of Spanish and Filipino heritage. The term includes all individuals of Spanish descent in the Philippines, including criollos and mestizos who identify with Spanish culture, history and language.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Apex_Mining_Co.",
+        "quote": "Spanish Filipino or Hispanic Filipino (Spanish: Español Filipino, Hispano Filipino, Tagalog: Kastílang Pilipino, Cebuano: Katsílà) are people of Spanish and Filipino heritage. The term includes all in"
+      }
     },
     {
       "type": "stock",
@@ -76851,7 +77019,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.alamosgold.com",
-      "industry": "Gold"
+      "industry": "Gold",
+      "description": "Alliance Global, Inc. (AGI), styled on its logo as AllianceGlobal and also known as Alliance Global Group, is a Philippine conglomerate founded in 1993, it is a large holding company with business activities spanning the food and beverage industry (including both production and restaurant operations), gambling, and real estate development.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Alliance_Global_Group",
+        "quote": "Alliance Global, Inc. (AGI), styled on its logo as AllianceGlobal and also known as Alliance Global Group, is a Philippine conglomerate founded in 1993, it is a large holding company with business act"
+      }
     },
     {
       "type": "stock",
@@ -76879,7 +77053,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Ginebra San Miguel, Inc. (Tagalog: [hɪˈnɛbɾa sɐn mɪˈɡɛl] hin-EH-brah; GSMI), formerly La Tondeña Distillers, Inc., is a Philippines-based diversified beverage company majority-owned by San Miguel Food and Beverage, Inc.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Ginebra_San_Miguel%2C",
+        "quote": "Ginebra San Miguel, Inc. (Tagalog: [hɪˈnɛbɾa sɐn mɪˈɡɛl] hin-EH-brah; GSMI), formerly La Tondeña Distillers, Inc., is a Philippines-based diversified beverage company majority-owned by San Miguel Food"
+      }
     },
     {
       "type": "stock",
@@ -76909,7 +77089,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.atlanticunionbank.com",
-      "industry": "Banks - Regional"
+      "industry": "Banks - Regional",
+      "description": "Asia United Bank Corporation (PSE: AUB, also known in Hokkien Chinese: 亞洲聯合銀行; Pe̍h-ōe-jī: A-chiu Liân-ha̍p Gûn-hâng; & Mandarin simplified Chinese: 亚洲联合银行; traditional Chinese: 亞洲聯合銀行; pinyin: Yàzhōu Liánhé Yínháng), commonly known as Asia United Bank or AUB, is a universal bank in the Philippines and licensed by the Bangko Sentral ng Pilipinas (B…",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Asia_United_Bank",
+        "quote": "Asia United Bank Corporation (PSE: AUB, also known in Hokkien Chinese: 亞洲聯合銀行; Pe̍h-ōe-jī: A-chiu Liân-ha̍p Gûn-hâng; & Mandarin simplified Chinese: 亚洲联合银行; traditional Chinese: 亞洲聯合銀行; pinyin: Yàzhōu"
+      }
     },
     {
       "type": "stock",
@@ -76937,7 +77123,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Megaworld Corporation (PSE: MEG) is a real-estate company in the Philippines. It is listed on the Philippine Stock Exchange Composite Index. The company develops large-scale, mixed-use, planned communities incorporating residential, commercial, educational, and leisure components.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Megaworld",
+        "quote": "Megaworld Corporation (PSE: MEG) is a real-estate company in the Philippines. It is listed on the Philippine Stock Exchange Composite Index. The company develops large-scale, mixed-use, planned commun"
+      }
     },
     {
       "type": "stock",
@@ -76993,7 +77185,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "First Philippine Holdings Corporation (FPH) is a management and investment company whose major business is power generation and distribution, including strategic initiatives in manufacturing and property development. FPH is a member of the Lopez Group of Companies.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/First_Gen",
+        "quote": "First Philippine Holdings Corporation (FPH) is a management and investment company whose major business is power generation and distribution, including strategic initiatives in manufacturing and prope"
+      }
     },
     {
       "type": "stock",
@@ -77021,7 +77219,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "A real estate investment trust (REIT, pronounced \"reet\") is a company that owns, and in most cases operates, income-producing real estate. REITs own many types of real estate, including office and apartment buildings, studios, warehouses, hospitals, shopping centers, hotels and commercial forests. Some REITs engage in financing real estate.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/MREIT%2C",
+        "quote": "A real estate investment trust (REIT, pronounced \"reet\") is a company that owns, and in most cases operates, income-producing real estate. REITs own many types of real estate, including office and apa"
+      }
     },
     {
       "type": "stock",
@@ -77051,7 +77255,13 @@
       "reviewedAt": null,
       "notes": "ธาตุตลาด ฟิลิปปินส์ (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
       "website": "https://www.proficientautologistics.com",
-      "industry": "Integrated Freight & Logistics"
+      "industry": "Integrated Freight & Logistics",
+      "description": "PayPal Holdings, Inc. is an American multinational financial technology company operating an online payments system in the majority of countries that support online money transfers; it serves as an electronic alternative to traditional paper methods such as checks and money orders.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/PAL_Holdings%2C",
+        "quote": "PayPal Holdings, Inc. is an American multinational financial technology company operating an online payments system in the majority of countries that support online money transfers; it serves as an el"
+      }
     },
     {
       "type": "stock",
@@ -77079,7 +77289,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Malayan Banking Berhad (doing business as Maybank) is a Malaysian universal bank, with key operating \"home markets\" of Malaysia, Singapore, and Indonesia.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Malayan_Banking_Bhd.",
+        "quote": "Malayan Banking Berhad (doing business as Maybank) is a Malaysian universal bank, with key operating \"home markets\" of Malaysia, Singapore, and Indonesia."
+      }
     },
     {
       "type": "stock",
@@ -77163,7 +77379,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Tenaga Nasional Berhad (lit. 'National Energy Limited', abbreviated as TNB; TENA, MYX: 5347), also known as Tenaga Nasional or simply Tenaga, is the Malaysian multinational electricity company and is the primary electric utility company in Peninsular Malaysia and also the largest publicly listed power company in Southeast Asia with MYR 198.35 billi…",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Tenaga_Nasional_Bhd",
+        "quote": "Tenaga Nasional Berhad (lit. 'National Energy Limited', abbreviated as TNB; TENA, MYX: 5347), also known as Tenaga Nasional or simply Tenaga, is the Malaysian multinational electricity company and is "
+      }
     },
     {
       "type": "stock",
@@ -77359,7 +77581,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "MISC Berhad (MYX: 3816) was incorporated in 1968 as Malaysia International Shipping Corporation Berhad and is the leading international shipping line of Malaysia. In September 2005, Malaysia International Shipping Corporation Berhad adopted its present corporate identity and changed its name to MISC Berhad.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/MISC_Bhd",
+        "quote": "MISC Berhad (MYX: 3816) was incorporated in 1968 as Malaysia International Shipping Corporation Berhad and is the leading international shipping line of Malaysia. In September 2005, Malaysia Internati"
+      }
     },
     {
       "type": "stock",
@@ -77415,7 +77643,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Sunway Group (Malay: Sunway Berhad, Chinese: 双威集团) is a Malaysian conglomerate. It is headquartered at Sunway City, Subang Jaya, Selangor, Malaysia.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Sunway_Bhd.",
+        "quote": "Sunway Group (Malay: Sunway Berhad, Chinese: 双威集团) is a Malaysian conglomerate. It is headquartered at Sunway City, Subang Jaya, Selangor, Malaysia."
+      }
     },
     {
       "type": "stock",
@@ -77471,7 +77705,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "CelcomDigi Berhad (stylized all-lowercase as celcomdıgı) is a communications conglomerate and mobile service provider in Malaysia. Its largest shareholders are Axiata and Norwegian-based Telenor, who hold equal ownership in CelcomDigi at 33.1% each.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/CelcomDigi_Berhad",
+        "quote": "CelcomDigi Berhad (stylized all-lowercase as celcomdıgı) is a communications conglomerate and mobile service provider in Malaysia. Its largest shareholders are Axiata and Norwegian-based Telenor, who "
+      }
     },
     {
       "type": "stock",
@@ -77557,7 +77797,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Maxis Berhad (business as Maxis, and stylized in lowercase title), is a communications service provider in Malaysia. It is one of the oldest and largest telecommunications companies in the country.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Maxis_Bhd.",
+        "quote": "Maxis Berhad (business as Maxis, and stylized in lowercase title), is a communications service provider in Malaysia. It is one of the oldest and largest telecommunications companies in the country."
+      }
     },
     {
       "type": "stock",
@@ -77585,7 +77831,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "IOI Corporation Berhad, commonly referred to as IOI, was incorporated on 31 October 1969 as Industrial Oxygen Incorporated Sdn Bhd. IOI is one of Malaysia's biggest conglomerates. It ventured into oil palm plantations in 1983, followed by property development in 1984 and refineries in 1997.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/IOI_Corporation_Berhad",
+        "quote": "IOI Corporation Berhad, commonly referred to as IOI, was incorporated on 31 October 1969 as Industrial Oxygen Incorporated Sdn Bhd. IOI is one of Malaysia's biggest conglomerates. It ventured into oil"
+      }
     },
     {
       "type": "stock",
@@ -77613,7 +77865,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Gamuda Berhad (MYX: 5398) is a Malaysian company involved in engineering, infrastructure, and property development. The company is listed on the Main Market of Bursa Malaysia, Beyond Malaysia, Gamuda has operations in Australia, Taiwan, Vietnam, Singapore, India, and Qatar.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Gamuda_Bhd.",
+        "quote": "Gamuda Berhad (MYX: 5398) is a Malaysian company involved in engineering, infrastructure, and property development. The company is listed on the Main Market of Bursa Malaysia, Beyond Malaysia, Gamuda "
+      }
     },
     {
       "type": "stock",
@@ -77725,7 +77983,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "AmBank Group comprises AMMB Holdings Berhad (AMBANK 1015) is one of the largest banking groups in Malaysia whose core businesses are retail banking, wholesale banking, Islamic banking, and life and general insurance.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/AMMB_Holdings_Bhd.",
+        "quote": "AmBank Group comprises AMMB Holdings Berhad (AMBANK 1015) is one of the largest banking groups in Malaysia whose core businesses are retail banking, wholesale banking, Islamic banking, and life and ge"
+      }
     },
     {
       "type": "stock",
@@ -77949,7 +78213,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "ViTrox Corporation Berhad (MYX: 0097) is a Malaysian technology company based in Penang, Malaysia, specializing in design and development of machine vision and electronics.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Vitrox_Corp._Bhd.",
+        "quote": "ViTrox Corporation Berhad (MYX: 0097) is a Malaysian technology company based in Penang, Malaysia, specializing in design and development of machine vision and electronics."
+      }
     },
     {
       "type": "stock",
@@ -77977,7 +78247,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "KLCC Property Holdings Berhad (KLCCP) is a Malaysian property investment company which owns and manages office, retail and hotel properties in Kuala Lumpur, mainly in the Kuala Lumpur City Centre (KLCC) area.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/KLCC_Property_Holdings_Bhd.",
+        "quote": "KLCC Property Holdings Berhad (KLCCP) is a Malaysian property investment company which owns and manages office, retail and hotel properties in Kuala Lumpur, mainly in the Kuala Lumpur City Centre (KLC"
+      }
     },
     {
       "type": "stock",
@@ -78005,7 +78281,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "Sime Darby Berhad, referred to as Sime, is a Malaysian trading conglomerate. Its core businesses operate and serve in the industrial equipment and automotive sectors.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Sime_Darby_Bhd.",
+        "quote": "Sime Darby Berhad, referred to as Sime, is a Malaysian trading conglomerate. Its core businesses operate and serve in the industrial equipment and automotive sectors."
+      }
     },
     {
       "type": "stock",
@@ -78425,7 +78707,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "IJM Corporation Berhad (MYX: 3336) is one of Malaysia's leading conglomerates and is listed on the Main Market of Bursa Malaysia Securities Berhad (\"Bursa Securities\"). Its core business activities encompass construction, property development, manufacturing and quarrying and Infrastructure concessions.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/IJM_Corporation_Berhad",
+        "quote": "IJM Corporation Berhad (MYX: 3336) is one of Malaysia's leading conglomerates and is listed on the Main Market of Bursa Malaysia Securities Berhad (\"Bursa Securities\"). Its core business activities en"
+      }
     },
     {
       "type": "stock",
@@ -78565,7 +78853,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้"
+      "notes": "ธาตุตลาด มาเลเซีย (ทิศ→ธาตุ) รอซินแส — verdict รายตัวใช้ธาตุธุรกิจนี้",
+      "description": "The Genting Group is headquartered in Wisma Genting in Kuala Lumpur, Malaysia. The Group comprises the holding company Genting Berhad (MYX: 3182), its listed subsidiaries Genting Malaysia Berhad (MYX: 4715), Genting Plantations Berhad (MYX: 2291), Genting Singapore PLC (SGX: G13 ), as well as its wholly-owned subsidiary Genting Energy Limited.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Genting_Bhd.",
+        "quote": "The Genting Group is headquartered in Wisma Genting in Kuala Lumpur, Malaysia. The Group comprises the holding company Genting Berhad (MYX: 3182), its listed subsidiaries Genting Malaysia Berhad (MYX:"
+      }
     },
     {
       "type": "stock",
