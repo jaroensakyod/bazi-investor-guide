@@ -19,8 +19,8 @@
 | 0.1 | marketData fetcher (Yahoo quoteSummary) | ✅ **ราคาจริง 1,937/1,955 ตัว** — snapshot `data/cache/market/<date>.json` + merge runtime · 11 เทสต์ |
 | 0.2 | Today movers (TradingView scanner) | ✅ **ใช้ snapshot แทน scanner** (ดีกว่าแผน: ตรงคลัง + ไม่เปลือง request) — `topMovers()` เรียง gainers/losers + กรองตลาด + ตรงธาตุ |
 | 0.3 | IPO pipeline | ✅ **StockAnalysis calendar** (curl ได้) — 8 IPO จริง (US) · **หมายเหตุ: TradingView `ipo_date` = dead ใน free tier** (null เสมอ) · Asia IPO = Investing.com browser (TODO) |
-| 0.4 | News RSS + data/events.json | ⬜ |
-| 0.5 | Fundamentals + buffett-checks | ⬜ |
+| 0.4 | News RSS + data/events.json | ✅ **3 feed จริง** (Yahoo/Investing/MarketWatch) — 61 ข่าว/วัน + classify keyword→เซกเตอร์→ธาตุ + FOMC 2026 seed · 9 เทสต์ |
+| 0.5 | Fundamentals + buffett-checks | ✅ **Yahoo financialData จริง 61 ตัว** (ROE/margin/growth — แก้ {raw} format) + Buffett checklist 5 ข้อ + score · 7 เทสต์ |
 | 0.6 | ขยายคลังไทย 129 → ~250 | ⬜ |
 | 0.7–0.8 | Hidden Gems screener + risk gating ตามกำลังดวง | ⬜ |
 | 0.9–0.10 | Asset universe (commodities) + price fetchers | ⬜ |
