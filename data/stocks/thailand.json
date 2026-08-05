@@ -2326,7 +2326,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Bangkok Chain Hospital Public Company Limited, together with its subsidiaries, operates private hospitals in Bangkok vicinity, Chiang Rai, Saraburi, Nonthaburi, Pathumthani, Ayudhaya, Chachoengsao, Prachinburi, Sa Kaeo Province, and Lao People's Democratic Republic.",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/BCH.BK",
+        "quote": "Bangkok Chain Hospital Public Company Limited, together with its subsidiaries, operates private hospitals in Bangkok vicinity, Chiang Rai, Saraburi, Nonthaburi, Pathumthani, Ayudhaya, Chachoengsao, Pr"
+      },
+      "website": "https://www.bangkokchainhospital.com/th/home",
+      "industry": "Medical Care Facilities"
     },
     {
       "type": "stock",
@@ -2482,7 +2490,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Carabao Group Public Company Limited, through its subsidiaries, manufactures, markets, distributes, and sells beverages in Thailand and internationally.",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/CBG.BK",
+        "quote": "Carabao Group Public Company Limited, through its subsidiaries, manufactures, markets, distributes, and sells beverages in Thailand and internationally."
+      },
+      "website": "https://www.carabaogroup.com",
+      "industry": "Beverages - Non-Alcoholic"
     },
     {
       "type": "stock",
@@ -2517,7 +2533,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Central Plaza Hotel Public Company Limited, together with its subsidiaries, engages in the hotel business in Thailand, the Republic of Maldives, and Japan. It operates in two segments, Hotel and Related Services Operation; and Food and Ice-Cream.",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/CENTEL.BK",
+        "quote": "Central Plaza Hotel Public Company Limited, together with its subsidiaries, engages in the hotel business in Thailand, the Republic of Maldives, and Japan. It operates in two segments, Hotel and Relat"
+      },
+      "website": "https://www.centarahotelsresorts.com",
+      "industry": "Resorts & Casinos"
     },
     {
       "type": "stock",
@@ -2676,7 +2700,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Electricity Generating Public Company Limited, together with its subsidiaries, generates and sells electricity to government sector and industrial users primarily in Thailand, Laos, the Philippines, Indonesia, Australia, South Korea, Taiwan, and the United States. It operates through Electricity Generation and Other Businesses segments.",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/EGCO.BK",
+        "quote": "Electricity Generating Public Company Limited, together with its subsidiaries, generates and sells electricity to government sector and industrial users primarily in Thailand, Laos, the Philippines, I"
+      },
+      "website": "https://www.egco.com/th/home",
+      "industry": "Utilities - Independent Power Producers"
     },
     {
       "type": "stock",
@@ -3078,7 +3110,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Precious Shipping Public Company Limited, a holding company, owns and operates dry bulk ships on a tramp shipping basis in Thailand and internationally. The company is involved in chartering and owning ships, as well as investing in marine transportation and technical management of ships.",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/PSL.BK",
+        "quote": "Precious Shipping Public Company Limited, a holding company, owns and operates dry bulk ships on a tramp shipping basis in Thailand and internationally. The company is involved in chartering and ownin"
+      },
+      "website": "https://www.preciousshipping.com",
+      "industry": "Marine Shipping"
     },
     {
       "type": "stock",
@@ -4907,7 +4947,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Diamond Building Products Public Company Limited manufactures roof tiles, artificial woods, and autoclaved aerated concrete products in Thailand and internationally. The company offers roofing, interior decoration, and exterior finishing materials, as well as steel and aluminum roof structures, and wood substitute and lightweight products.",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/DRT.BK",
+        "quote": "Diamond Building Products Public Company Limited manufactures roof tiles, artificial woods, and autoclaved aerated concrete products in Thailand and internationally. The company offers roofing, interi"
+      },
+      "website": "https://www.dbp.co.th",
+      "industry": "Building Products & Equipment"
     },
     {
       "type": "stock",
@@ -5106,7 +5154,15 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "The Erawan Group Public Company Limited engages in hotel, and building rental and management businesses primarily in Thailand, Japan, and Philippines. The company operates hotels and resorts under the Grand Hyatt Erawan Bangkok, IBIS, JW Marriott Bangkok, The Naka Island, Courtyard by Marriott Bangkok, Holiday Inn Pattaya, IBIS Styles, Novotel Bang…",
+      "businessEvidence": {
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "url": "https://finance.yahoo.com/quote/ERW.BK",
+        "quote": "The Erawan Group Public Company Limited engages in hotel, and building rental and management businesses primarily in Thailand, Japan, and Philippines. The company operates hotels and resorts under the"
+      },
+      "website": "https://www.theerawan.com",
+      "industry": "Lodging"
     },
     {
       "type": "stock",
