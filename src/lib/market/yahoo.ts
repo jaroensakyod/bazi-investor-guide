@@ -29,6 +29,11 @@ const YAHOO_SUFFIX: Record<string, string> = {
   IDX: ".JK",
   BURSA: ".KL",
   PSE: ".PS",
+  // ยุโรป (Task 0.14) — LSE ticker ลงท้ายจุด (RR.) ตัดทิ้งก่อน
+  LSE: ".L",
+  XETR: ".DE",
+  EPA: ".PA",
+  SWX: ".SW",
 };
 
 /** แปลง ticker ในคลังเรา → รูปแบบ Yahoo (zero-pad HK, class-share ใช้ขีด, ฯลฯ) */
