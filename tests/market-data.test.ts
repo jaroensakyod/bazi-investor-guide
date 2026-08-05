@@ -1,4 +1,6 @@
 import { describe, it, expect } from "vitest";
+import os from "node:os";
+import path from "node:path";
 import { yahooTicker } from "../src/lib/market/yahoo";
 import { buildSnapshot, normalizeQuote, loadSnapshot, withMarketData, saveSnapshot } from "../src/lib/market/market-data";
 import type { StockEntry } from "../src/lib/investor/stock-database";
@@ -79,11 +81,13 @@ describe("snapshot + merge", () => {
     expect(snap.quotes["AAPL"].changePct).toBe(-0.5);
   });
 
-  it("save/load roundtrip", () => {
-    const file = saveSnapshot(snap, "2026-08-05");
+  it("save/load roundtrip (temp dir — กันเขียนทับของจริง)", () => {
+    const tmp = path.join(os.tmpdir(), `bazi-test-${Date.now()}`);
+    const file = saveSnapshot(snap, "2026-08-05", tmp);
     expect(file).toContain("2026-08-05");
-    const loaded = loadSnapshot("2026-08-05");
+    const loaded = loadSnapshot("2026-08-05", tmp);
     expect(loaded?.quotes["KBANK.BK"].price).toBe(150.5);
+    expect(loadSnapshot(undefined, tmp)?.quotes["AAPL"].price).toBe(210.1); // latest.json
   });
 
   it("withMarketData: เติม marketData ให้หุ้นที่ตรง (ไทย ticker เปล่า → KBANK.BK)", () => {

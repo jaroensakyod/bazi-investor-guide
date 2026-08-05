@@ -56,16 +56,16 @@ export function buildSnapshot(quotes: Iterable<YahooQuote>, updatedAt = new Date
   return { updatedAt, quotes: map };
 }
 
-export function saveSnapshot(snapshot: MarketSnapshot, date = new Date().toISOString().slice(0, 10)): string {
-  mkdirSync(MARKET_CACHE_DIR, { recursive: true });
-  const file = path.join(MARKET_CACHE_DIR, `${date}.json`);
+export function saveSnapshot(snapshot: MarketSnapshot, date = new Date().toISOString().slice(0, 10), dir = MARKET_CACHE_DIR): string {
+  mkdirSync(dir, { recursive: true });
+  const file = path.join(dir, `${date}.json`);
   writeFileSync(file, JSON.stringify(snapshot, null, 1) + "\n", "utf8");
-  writeFileSync(LATEST_SNAPSHOT, JSON.stringify(snapshot, null, 1) + "\n", "utf8");
+  writeFileSync(path.join(dir, "latest.json"), JSON.stringify(snapshot, null, 1) + "\n", "utf8");
   return file;
 }
 
-export function loadSnapshot(date?: string): MarketSnapshot | null {
-  const file = date ? path.join(MARKET_CACHE_DIR, `${date}.json`) : LATEST_SNAPSHOT;
+export function loadSnapshot(date?: string, dir = MARKET_CACHE_DIR): MarketSnapshot | null {
+  const file = date ? path.join(dir, `${date}.json`) : path.join(dir, "latest.json");
   if (!existsSync(file)) return null;
   try {
     return JSON.parse(readFileSync(file, "utf8")) as MarketSnapshot;
