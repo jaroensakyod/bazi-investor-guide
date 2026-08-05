@@ -8,6 +8,7 @@
  */
 import { getAllStocks, type StockEntry, type ThaiElement } from "../investor/stock-database";
 import { loadSnapshot, type MarketSnapshot } from "./market-data";
+import { yahooTicker } from "./yahoo";
 
 export type MoverRow = {
   ticker: string;
@@ -61,11 +62,10 @@ function matchMarket(stock: StockEntry, market: string): boolean {
 }
 
 function findQuote(snap: MarketSnapshot, stock: StockEntry) {
+  // ใช้ yahooTicker เป็น key ตรง (กันชน "7203"@TADAWUL กับ "7203.T"@TSE — startsWith เดิมหลวมเกิน)
   const candidates = [String(stock.ticker ?? "")];
-  if (!candidates[0].includes(".")) {
-    const hit = Object.keys(snap.quotes).find((k) => k.startsWith(candidates[0] + "."));
-    if (hit) candidates.push(hit);
-  }
+  const yt = yahooTicker(stock.ticker, stock.market);
+  if (yt && !candidates.includes(yt)) candidates.push(yt);
   for (const c of candidates) {
     if (c in snap.quotes) return snap.quotes[c];
   }
