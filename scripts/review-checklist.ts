@@ -11,10 +11,11 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { getThaiStocks, buildReviewChecklist, reviewChecklistToCsv, applyReviewResults, type ReviewResult } from "@/lib/investor/stock-database";
+import { getThaiStocks, getGlobalStocks, buildReviewChecklist, reviewChecklistToCsv, applyReviewResults, type ReviewResult } from "@/lib/investor/stock-database";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const STOCKS_FILE = path.join(ROOT, "data/stocks/thailand.json");
+const GLOBAL_FILE = path.join(ROOT, "data/stocks/global.json");
 const REVIEW_DIR = path.join(ROOT, "data/review");
 
 function parseCsvSimple(csv: string): string[][] {
@@ -53,10 +54,12 @@ function main() {
   const reviewer = reviewerFlag ? reviewerFlag.split("=")[1] : "ซินแส";
 
   if (cmd === "export") {
-    const stocks = getThaiStocks();
+    // เลือกไฟล์: --global → global.json, default → thailand.json
+    const useGlobal = rest.includes("--global");
+    const stocks = useGlobal ? getGlobalStocks() : getThaiStocks();
     const csv = reviewChecklistToCsv(buildReviewChecklist(stocks));
     mkdirSync(REVIEW_DIR, { recursive: true });
-    const out = path.join(REVIEW_DIR, "thailand-review.csv");
+    const out = path.join(REVIEW_DIR, useGlobal ? "global-review.csv" : "thailand-review.csv");
     writeFileSync(out, "\uFEFF" + csv, "utf8"); // BOM ให้ Excel อ่านไทยไม่เพี้ยน
     console.log(`✅ export ${stocks.length} แถว → ${out}`);
     console.log("   ให้ซินแสกรอก isCorrect (Y/N) + correctedElements + note แล้วบันทึกเป็น *_done.csv");
@@ -84,14 +87,16 @@ function main() {
       });
     }
 
-    const db = JSON.parse(readFileSync(STOCKS_FILE, "utf8"));
+    const useGlobal = rest.includes("--global");
+    const targetFile = useGlobal ? GLOBAL_FILE : STOCKS_FILE;
+    const db = JSON.parse(readFileSync(targetFile, "utf8"));
     const { updated, problems } = applyReviewResults(db.stocks, results, reviewer);
-    writeFileSync(STOCKS_FILE, JSON.stringify(db, null, 2) + "\n", "utf8");
+    writeFileSync(targetFile, JSON.stringify(db, null, 2) + "\n", "utf8");
 
     console.log(`✅ import ${results.length} รายการ (reviewer: ${reviewer})`);
     for (const u of updated) console.log(`  ✓ ${u}`);
     for (const p of problems) console.log(`  ⚠️ ${p}`);
-    console.log(`อัปเดต → ${STOCKS_FILE}`);
+    console.log(`อัปเดต → ${targetFile}`);
     return;
   }
 

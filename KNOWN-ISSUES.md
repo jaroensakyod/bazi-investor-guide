@@ -86,6 +86,20 @@
 - `npm run lint` exit 2 — **ต้องสร้าง eslint.config.js** หรือ downgrade eslint v8
 - งานข้อมูลไม่กระทบ: typecheck/test/smoke ผ่านทั้งหมด
 
+## 📝 สถานะ description (คำอธิบายธุรกิจ — ชั้น A)
+
+> **เป้า:** ทุกตัวต้องมี description ก่อนให้ซินแสตรวจธาตุ (ตรวจไม่ได้ถ้าไม่รู้ว่าบริษัททำอะไร)
+
+- **ได้แล้ว: 1,096/2,023 ตัว (54%)** — จาก Wikipedia intro (prop=extracts&exintro, batch 20/request)
+- ทุกตัวที่ได้มี businessEvidence (source + url + quote) ให้ซินแสตรวจย้อนกลับได้
+- **เหลือ ~927 ตัว** ยังไม่มี — สาเหตุ:
+  1. Wikipedia rate-limit หนัก (ร้องขอเกินวันนี้ — ต้องพัก/รันใหม่ทีหลัง)
+  2. หุ้นเล็ก (จีน/เวียดนาม/ไทย) ไม่มีหน้า en.wikipedia เฉพาะ — ต้องใช้ th/zh/vi.wikipedia หรือ stockanalysis
+  3. search fallback ดึง disambiguation page ผิด (127 ตัวถูกลบแล้ว — กันข้อมูลผิด)
+- **วิธีรันต่อ:** npx tsx scripts/enrich-descriptions.ts (รันซ้ำได้ — ข้ามตัวที่มีแล้ว)
+- ⚠️ ระวัง: อย่า kill กลางคัน — สคริปต์เขียนไฟล์ตอนจบ; ถ้าโดน 429 เยอะ (batch ข้าม) ผลจะน้อยลง
+  และ fallback search อาจได้ disambiguation — ต้องกรอง "may refer to" ออก
+
 ## 🚀 วิธีรัน
 
 ```bash

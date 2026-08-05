@@ -2,7 +2,7 @@
   "meta": {
     "market": "TH",
     "label": "หุ้นไทย SET50 (ชุดแรก)",
-    "updatedAt": "2026-08-04",
+    "updatedAt": "2026-08-05",
     "reviewStatus": "draft",
     "note": "DRAFT — ยังไม่ผ่านซินแสตรวจ ใช้เพื่อพัฒนา/เทสต์เท่านั้น ห้ามเผยแพร่"
   },
@@ -96,7 +96,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "The Airports of Thailand Public Company Limited (AOT) (Thai: บริษัท ท่าอากาศยานไทย จำกัด (มหาชน)) is a public company that manages ten international airports in Thailand. AOT was established on September 20, 2002, as a result of the privatisation of the state-owned Airports Authority of Thailand (AOT).",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Airports_of_Thailand",
+        "quote": "The Airports of Thailand Public Company Limited (AOT) (Thai: บริษัท ท่าอากาศยานไทย จำกัด (มหาชน)) is a public company that manages ten international airports in Thailand. AOT was established on Septem"
+      }
     },
     {
       "type": "stock",
@@ -130,7 +136,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Bangkok Bank Public Company Limited (Thai: ธนาคารกรุงเทพ, RTGS: Thanakhan Krung Thep) is one of the largest commercial banks in Thailand. Its branch network includes over 800 branches as of May 2024, within Thailand, with 32 international branches in 15 economies, including wholly owned subsidiaries in Indonesia, Malaysia, Singapore and China.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Bangkok_Bank",
+        "quote": "Bangkok Bank Public Company Limited (Thai: ธนาคารกรุงเทพ, RTGS: Thanakhan Krung Thep) is one of the largest commercial banks in Thailand. Its branch network includes over 800 branches as of May 2024, "
+      }
     },
     {
       "type": "stock",
@@ -165,7 +177,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Bangkok Dusit Medical Services (Thai: บริษัท กรุงเทพดุสิตเวชการ จำกัด (มหาชน), stock symbol: SET: BDMS) is Thailand's largest private healthcare group. It was founded by the Thai billionaire Prasert Prasarttong-Osoth.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Bangkok_Dusit_Medical_Services",
+        "quote": "Bangkok Dusit Medical Services (Thai: บริษัท กรุงเทพดุสิตเวชการ จำกัด (มหาชน), stock symbol: SET: BDMS) is Thailand's largest private healthcare group. It was founded by the Thai billionaire Prasert P"
+      }
     },
     {
       "type": "stock",
@@ -201,7 +219,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Bangkok Expressway and Metro Public Company Limited or BEM (Thai: บริษัท ทางด่วนและรถไฟฟ้ากรุงเทพ จำกัด (มหาชน)) is a public transportation company in Thailand. It operates two metro lines in Bangkok and expressways.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Bangkok_Expressway_and_Metro",
+        "quote": "Bangkok Expressway and Metro Public Company Limited or BEM (Thai: บริษัท ทางด่วนและรถไฟฟ้ากรุงเทพ จำกัด (มหาชน)) is a public transportation company in Thailand. It operates two metro lines in Bangkok "
+      }
     },
     {
       "type": "stock",
@@ -238,7 +262,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Bumrungrad International Hospital (Thai: โรงพยาบาลบำรุงราษฎร์, RTGS: Rongphayaban Bamrung Rat, pronounced [rōːŋ.pʰā.jāː.bāːn bām.rūŋ râːt]; SET: BH) is a private hospital founded in 1980 in Bangkok, Thailand.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Bumrungrad_Hospital",
+        "quote": "Bumrungrad International Hospital (Thai: โรงพยาบาลบำรุงราษฎร์, RTGS: Rongphayaban Bamrung Rat, pronounced [rōːŋ.pʰā.jāː.bāːn bām.rūŋ râːt]; SET: BH) is a private hospital founded in 1980 in Bangkok, T"
+      }
     },
     {
       "type": "stock",
@@ -307,7 +337,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "BTS Group AB (BTS) is a strategic consulting firm founded in 1986. The company serves banking, biotech and pharmaceutical, consumer products, insurance, manufacturing, oil and gas, professional services, retail, technology, and telecommunications sectors. Headquartered in Stockholm, Sweden, the firm has over 600 employees across 34 global offices.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/BTS_Group",
+        "quote": "BTS Group AB (BTS) is a strategic consulting firm founded in 1986. The company serves banking, biotech and pharmaceutical, consumer products, insurance, manufacturing, oil and gas, professional servic"
+      }
     },
     {
       "type": "stock",
@@ -341,7 +377,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "CP All Public Company Limited was established in 1988 by the Charoen Pokphand Group to operate convenience store businesses in Thailand under the 7-Eleven trademark. The company was granted a license to use the trademark by 7-Eleven, Inc., USA. In 1989, the first 7-Eleven outlet in Thailand was opened on Patpong Road.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/CP_All",
+        "quote": "CP All Public Company Limited was established in 1988 by the Charoen Pokphand Group to operate convenience store businesses in Thailand under the 7-Eleven trademark. The company was granted a license "
+      }
     },
     {
       "type": "stock",
@@ -377,7 +419,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Charoen Pokphand Foods Public Company Limited, (Thai: บริษัท เจริญโภคภัณฑ์อาหาร จำกัด (มหาชน)) a company of the Charoen Pokphand Group, is an agro-industrial and food conglomerate headquartered in Thailand. It is one of the world's largest producers of feed and shrimp, and is also a global top three producer of poultry and pork.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Charoen_Pokphand_Foods",
+        "quote": "Charoen Pokphand Foods Public Company Limited, (Thai: บริษัท เจริญโภคภัณฑ์อาหาร จำกัด (มหาชน)) a company of the Charoen Pokphand Group, is an agro-industrial and food conglomerate headquartered in Tha"
+      }
     },
     {
       "type": "stock",
@@ -777,7 +825,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Indorama Ventures (IVL) is a producer of intermediate petrochemicals industry, the world's largest producer of PET resins.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Indorama_Ventures",
+        "quote": "Indorama Ventures (IVL) is a producer of intermediate petrochemicals industry, the world's largest producer of PET resins."
+      }
     },
     {
       "type": "stock",
@@ -941,7 +995,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Land and Houses Public Company Limited (also known as Land and Houses) is a large real-estate based company in Thailand. It was established in 1983 by Ms Piangjai Harnpanij and her son, Mr Anant Asavabhokhin. The company became listed on the Stock Exchange of Thailand in 1991.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Land_and_Houses",
+        "quote": "Land and Houses Public Company Limited (also known as Land and Houses) is a large real-estate based company in Thailand. It was established in 1983 by Ms Piangjai Harnpanij and her son, Mr Anant Asava"
+      }
     },
     {
       "type": "stock",
@@ -2548,7 +2608,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "PACE Development Corporation PLC is a listed Thai residential property development and retail company specializing in high-end residential real estate and gourmet retail.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/LPN_Development",
+        "quote": "PACE Development Corporation PLC is a listed Thai residential property development and retail company specializing in high-end residential real estate and gourmet retail."
+      }
     },
     {
       "type": "stock",
@@ -2582,7 +2648,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Thai suki, known simply as suki (Thai: สุกี้, pronounced [sū.kîː]) in Thailand, is a Thai variant of hot pot, a communal dish where diners dip meat, seafood, noodles, dumplings and vegetables into a pot of broth cooking at the table and dip them into a spicy \"sukiyaki sauce\" before eating.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/MK_Restaurant",
+        "quote": "Thai suki, known simply as suki (Thai: สุกี้, pronounced [sū.kîː]) in Thailand, is a Thai variant of hot pot, a communal dish where diners dip meat, seafood, noodles, dumplings and vegetables into a p"
+      }
     },
     {
       "type": "stock",
@@ -2652,7 +2724,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "MV Mayuree Naree is a Thailand-flagged bulk carrier built in India as Good Princess in 2008. Since 2012 the vessel has been owned and operated by the Thai shipping company Precious Shipping. On 11 March 2026, the vessel was struck by Iranian projectiles near the Strait of Hormuz, causing a fire and forcing most of the crew to abandon ship.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Precious_Shipping",
+        "quote": "MV Mayuree Naree is a Thailand-flagged bulk carrier built in India as Good Princess in 2008. Since 2012 the vessel has been owned and operated by the Thai shipping company Precious Shipping. On 11 Mar"
+      }
     },
     {
       "type": "stock",
@@ -2687,7 +2765,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Quality function deployment (QFD) is a method developed in Japan beginning in 1966 to help transform the voice of the customer into engineering characteristics for a product.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Quality_Houses",
+        "quote": "Quality function deployment (QFD) is a method developed in Japan beginning in 1966 to help transform the voice of the customer into engineering characteristics for a product."
+      }
     },
     {
       "type": "stock",
@@ -3274,7 +3358,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "SISB Public Company Limited is an operator of international schools in Thailand. The only school listed on the Stock Exchange of Thailand, its schools teach the Singaporean curriculum. As of 2023, SISB has six campuses in Thailand for children between the ages of 2 and 18, with more than 4,000 students from over 30 countries.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/SISB",
+        "quote": "SISB Public Company Limited is an operator of international schools in Thailand. The only school listed on the Stock Exchange of Thailand, its schools teach the Singaporean curriculum. As of 2023, SIS"
+      }
     },
     {
       "type": "stock",
@@ -4087,7 +4177,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Italian-Thai Development Public Company Limited (ITD) is a construction company based in Bangkok, Thailand. Founded in 1958, it is one of the largest construction firms in the country, and is one of the two main contractors commonly hired for large-scale government projects, along with CH. Karnchang.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Italian-Thai_Development",
+        "quote": "Italian-Thai Development Public Company Limited (ITD) is a construction company based in Bangkok, Thailand. Founded in 1958, it is one of the largest construction firms in the country, and is one of t"
+      }
     },
     {
       "type": "stock",
@@ -4156,7 +4252,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "TPI Polene Public Company Limited is Thailand's third largest cement manufacturer. It also manufactures petrochemicals, including low-density polyethylene (LDPE) and ethylene-vinyl acetate copolymer (EVA). The company was founded in 1987. Its subsidiary TV Topnotch Production Co., Ltd. owns Thai TV channel Suwannabhumi TV.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/TPI_Polene",
+        "quote": "TPI Polene Public Company Limited is Thailand's third largest cement manufacturer. It also manufactures petrochemicals, including low-density polyethylene (LDPE) and ethylene-vinyl acetate copolymer ("
+      }
     },
     {
       "type": "stock",
@@ -4396,7 +4498,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Dusit Thani (Thai: ดุสิตธานี) was a miniature city and micronation project created by King Vajiravudh (Rama VI) of Siam (Thailand) in Dusit Palace (later moved to Phaya Thai) in the 1910s–1920s. The project explored aspects of democracy, as members of the court were to be \"citizens\" owning property in the model city.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Dusit_Thani",
+        "quote": "Dusit Thani (Thai: ดุสิตธานี) was a miniature city and micronation project created by King Vajiravudh (Rama VI) of Siam (Thailand) in Dusit Palace (later moved to Phaya Thai) in the 1910s–1920s. The p"
+      }
     },
     {
       "type": "stock",
@@ -4465,7 +4573,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Workpoint Entertainment Public Company Limited is a Thai media company. The company and its subsidiaries do business in television production, film making, event management, animation, publishing, event marketing and recording.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Workpoint_Entertainment",
+        "quote": "Workpoint Entertainment Public Company Limited is a Thai media company. The company and its subsidiaries do business in television production, film making, event management, animation, publishing, eve"
+      }
     },
     {
       "type": "stock",
@@ -4498,7 +4612,13 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": ""
+      "notes": "",
+      "description": "Major Cineplex Group Public Co. Ltd. is the largest operator of movie theaters in Thailand, and Laos. Combined with its subsidiary, EGV Entertainment, the company has 838 screens in 180 locations around Thailand and Laos.",
+      "businessEvidence": {
+        "source": "Wikipedia intro (auto) — draft รอตรวจ",
+        "url": "https://en.wikipedia.org/wiki/Major_Cineplex",
+        "quote": "Major Cineplex Group Public Co. Ltd. is the largest operator of movie theaters in Thailand, and Laos. Combined with its subsidiary, EGV Entertainment, the company has 838 screens in 180 locations arou"
+      }
     },
     {
       "type": "stock",
