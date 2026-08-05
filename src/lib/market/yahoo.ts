@@ -38,6 +38,10 @@ const YAHOO_SUFFIX: Record<string, string> = {
   KSE: ".PK", // ปากีสถาน (ต่างจาก KRX .KS)
   TADAWUL: ".SR",
   BOVESPA: ".SA",
+  // LatAm/Africa (MX/TR/ZA)
+  BMV: ".MX", // class share: GMEXICO/B → GMEXICO.B (จัดการด้านล่าง)
+  BIST: ".IS",
+  JSE: ".JO",
 };
 
 /** แปลง ticker ในคลังเรา → รูปแบบ Yahoo (zero-pad HK, class-share ใช้ขีด, ฯลฯ) */
@@ -49,6 +53,8 @@ export function yahooTicker(ticker: string, market = ""): string {
   if (mkt === "HKEX" && /^\d+\.HK$/.test(raw)) {
     raw = raw.split(".")[0].padStart(4, "0") + ".HK";
   }
+  // เม็กซิโก class share: GMEXICO.B → GMEXICO.B.MX (มีจุดแล้วแต่ต้องเติม suffix ต่อ)
+  if (mkt === "BMV" && !raw.endsWith(".MX")) return raw + ".MX";
   // หุ้น class (BF.B / BRK.B / GIB.A.TO): Yahoo ใช้ขีด (BF-B / GIB-A.TO)
   if (/^\w+\.\w+\.(TO|AX|VN|BK|NS|T|KS|SS|SZ|HK|TW|TWO|SI|JK|KL|PS)$/.test(raw)) {
     raw = raw.replace(".", "-");
