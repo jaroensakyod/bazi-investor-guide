@@ -34,6 +34,10 @@ const YAHOO_SUFFIX: Record<string, string> = {
   XETR: ".DE",
   EPA: ".PA",
   SWX: ".SW",
+  // ชุด 3 (PK/SA/BR)
+  KSE: ".PK", // ปากีสถาน (ต่างจาก KRX .KS)
+  TADAWUL: ".SR",
+  BOVESPA: ".SA",
 };
 
 /** แปลง ticker ในคลังเรา → รูปแบบ Yahoo (zero-pad HK, class-share ใช้ขีด, ฯลฯ) */
