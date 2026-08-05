@@ -23,7 +23,8 @@ export type AssetType =
   | "fund"
   | "derivative"
   | "real_asset"
-  | "lottery";
+  | "lottery"
+  | "insurance";
 
 export type AssetTier = "safe" | "medium" | "risky";
 
@@ -44,7 +45,15 @@ export type AssetEntry = {
   riskTier: AssetTier;
   subtype?: string;
   note?: string;
+  /** สิ่งที่ห้ามเด็ดขาด (ห้องแชร์/พนัน/ของปลอม) — verdict = avoid เสมอ */
+  forbidden?: boolean;
   status: "draft" | "reviewed";
+};
+
+export type ForbiddenItem = {
+  name: string;
+  note: string;
+  why: string;
 };
 
 let cache: AssetEntry[] | null = null;
@@ -75,6 +84,18 @@ export function getAssetsByType(type: AssetType): AssetEntry[] {
 
 export function getAssetsByElement(element: ThaiElement): AssetEntry[] {
   return getAssets().filter((a) => a.primaryElement === element);
+}
+
+/** สิ่งที่ห้ามเด็ดขาด (ห้องแชร์/แชร์ลูกโซ่/พนัน/ของปลอม) — เนื้อหาบท 9/22 */
+export function getForbiddenAssets(): ForbiddenItem[] {
+  try {
+    const db = JSON.parse(readFileSync(path.join(ROOT, "data/stocks/real-assets.json"), "utf8")) as {
+      forbidden?: ForbiddenItem[];
+    };
+    return db.forbidden ?? [];
+  } catch {
+    return [];
+  }
 }
 
 /** reset cache (เทสต์ใช้) */

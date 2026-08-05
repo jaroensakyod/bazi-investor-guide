@@ -139,7 +139,7 @@ export async function fetchQuoteSummaryModule(
 ): Promise<Record<string, unknown> | null> {
   const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
     ticker,
-  )}?modules=${module}&crumb=${encodeURIComponent(session.crumb)}`;
+  )}?modules=${module}&crumb=${encodeURIComponent(session.crumb)}&lang=en-US&region=US`;
   const json = (await fetchJson(url, session.cookie, ticker, 3)) as
     | { quoteSummary?: { result?: Array<Record<string, unknown>> } }
     | null;

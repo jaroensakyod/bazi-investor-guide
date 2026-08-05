@@ -55,6 +55,28 @@ describe("assetVerdict — สินทรัพย์ vs ดวง", () => {
     expect(v.verdict).toBe("neutral"); // 3 (ตรงดวง) - 0 → neutral (ไม่แนะนำเต็มที่)
   });
 
+  it("สิ่งที่ห้าม (forbidden) → avoid เสมอ ไม่ต้องคิดธาตุ", () => {
+    const fakeForbidden: AssetEntry = {
+      type: "real_asset",
+      ticker: "FAKESCAM",
+      name: "ห้องแชร์",
+      country: "TH",
+      market: "REAL",
+      currency: "THB",
+      sector: "ต้องห้าม",
+      elements: ["น้ำ"],
+      primaryElement: "น้ำ",
+      elementReason: "เทสต์",
+      elementSource: "test",
+      riskTier: "safe",
+      forbidden: true,
+      status: "draft",
+    };
+    const v = assetVerdict(fakeForbidden, ctx({ usefulElements: ["น้ำ"] }));
+    expect(v.verdict).toBe("avoid");
+    expect(v.score).toBe(-10);
+  });
+
   it("ไม่มีข้อมูล momentum → ไม่พัง", () => {
     const v = assetVerdict(getAsset("BND")!, ctx({ changePct: undefined }));
     expect(v.verdict).toBeTruthy();

@@ -37,6 +37,16 @@ export function assetVerdict(asset: AssetEntry, ctx: AssetVerdictCtx): AssetVerd
   const reasons: string[] = [];
   let score = 0;
 
+  // 0. สิ่งที่ห้ามเด็ดขาด (ห้องแชร์/พนัน/ของปลอม) — ไม่ต้องคิดอะไรอีก
+  if (asset.forbidden) {
+    return {
+      score: -10,
+      verdict: "avoid",
+      reasons: ["⛔ สิ่งนี้ห้ามลงทุนเด็ดขาด (ฉ้อโกง/ผิดกฎหมาย/ไม่ใช่การลงทุน) — ดูบท 9/22"],
+      cappedByStrength: false,
+    };
+  }
+
   // 1. ธาตุ fit (หัวใจ — deterministic เหมือน scoreStock)
   if (usefulElements.includes(asset.primaryElement)) {
     score += 3;

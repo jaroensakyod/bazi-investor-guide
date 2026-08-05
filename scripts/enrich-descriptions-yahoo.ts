@@ -18,6 +18,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { yahooTicker } from "../src/lib/market/yahoo";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FILES = [path.join(ROOT, "data/stocks/thailand.json"), path.join(ROOT, "data/stocks/global.json")];
@@ -26,42 +27,6 @@ const YAHOO_CACHE_FILE = path.join(ROOT, "data/stocks/.yahoo-cache.json");
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
-
-/** suffix Yahoo ตามตลาด — ถ้า ticker มี suffix อยู่แล้ว (เช่น 0700.HK) ใช้ตามเดิม */
-const YAHOO_SUFFIX: Record<string, string> = {
-  SET: ".BK",
-  mai: ".BK",
-  HKEX: ".HK",
-  SSE: ".SS",
-  SZSE: ".SZ",
-  TSE: ".T", // ญี่ปุ่น (Nikkei) — TSX = แคนาดา ด้านล่าง
-  KRX: ".KS",
-  HOSE: ".VN",
-  ASX: ".AX",
-  TSX: ".TO",
-  NSE: ".NS",
-};
-
-function yahooTicker(s: Record<string, unknown>): string | null {
-  let raw = String(s.ticker ?? "").trim();
-  if (!raw) return null;
-  const mkt = String(s.market ?? "");
-  // ฮ่องกง: Yahoo ต้อง zero-pad 4 หลัก (2.HK → 0002.HK)
-  if (mkt === "HKEX" && /^\d+\.HK$/.test(raw)) {
-    const num = raw.split(".")[0];
-    raw = num.padStart(4, "0") + ".HK";
-  }
-  // หุ้น class (BF.B / BRK.B / GIB.A.TO / AP.UN.TO): Yahoo ใช้ขีด (BF-B / GIB-A.TO / AP-UN.TO)
-  if (/^\w+\.\w+\.(TO|AX|VN|BK|NS|T|KS|SS|SZ|HK)$/.test(raw)) {
-    raw = raw.replace(".", "-");
-  } else if ((mkt.includes("NYSE") || mkt.includes("NASDAQ")) && /^\w+\.\w+$/.test(raw)) {
-    raw = raw.replace(".", "-");
-  }
-  if (raw.includes(".")) return raw; // มี suffix อยู่แล้ว
-  if (mkt.includes("NYSE") || mkt.includes("NASDAQ") || mkt === "SP500" || mkt === "US") return raw;
-  const suffix = YAHOO_SUFFIX[mkt];
-  return suffix ? raw + suffix : raw;
-}
 
 /** ตัด summary ให้เหลือ ~350 ตัวอักษร ลงท้ายประโยค */
 function truncateSummary(text: string): string {
@@ -206,7 +171,7 @@ async function main() {
     dbs.push({ file: f, db });
     for (const s of db.stocks) {
       if (s.description) continue;
-      const yt = yahooTicker(s);
+      const yt = yahooTicker(String(s.ticker ?? ""), String(s.market ?? ""));
       if (!yt) continue;
       // เช็ค wiki cache ก่อน (lang-aware) — แต่ต้องผ่านตรวจชื่อบริษัท กันหน้าเพี้ยน
       const title = guessTitle(s);
