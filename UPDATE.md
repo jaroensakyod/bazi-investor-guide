@@ -67,6 +67,7 @@ npm run typecheck && npm test             # 108+ เทสต์
 | 13 | **Yahoo v10 ไม่บริการ .KL/.PS/.SI (assetProfile null)** — แต่ 2330.TW ได้ | ใช้ Wikipedia enrich (`enrich-descriptions.ts`) เป็น fallback สำหรับตลาดที่ Yahoo ตาย + เพิ่ม `lang=en-US&region=US` | `scripts/enrich-descriptions.ts` |
 | 14 | **มาเลเซีย exchange code บน TradingView = `MYX`** (ไม่ใช่ KLSE/BURSA) | ใช้ `MYX` — debug ด้วย .tmp script | `scripts/expand-asia-universe.ts` |
 | 15 | **Description ผิดคนละบริษัท** (suffix map เก่า → Yahoo ดึง US ticker แทน เช่น SDG=กองทุนUS/TM=Toyota) | cleanup: เทียบ `businessEvidence.url` กับ `yahooTicker()` ที่ควรเป็น — ไม่ตรง = ลบ · และ refactor ให้ enrich import yahooTicker จาก canonical module (ห้าม copy map) | `market/yahoo.ts` |
+| 16 | **Enrich 2 ตัวคู่ขนาน = stale write ทับข้อมูลใหม่** (background Wikipedia enrich โหลด state เก่า → เขียนทับ MX/TR/ZA + dedupe ที่เพิ่งทำ) | **ห้ามรัน enrich 2 ตัวพร้อมกัน** — รอตัวแรกจบก่อน · กู้ด้วย `git checkout -- data/stocks/*.json` แล้วรัน expand/enrich ใหม่ (cache .yahoo-cache.json ช่วยให้เร็ว) | `enrich-descriptions*.ts` |
 
 **เปลี่ยนเครื่องใหม่**: `npm install` (node 20+) · ข้อมูลทั้งหมด commit ใน repo แล้ว (cache/ราคา/ข่าว/IPO) — ไม่ต้องพึ่ง network · ไม่มี secret ใน repo (LLM key ใส่ `.env` ตอน Phase 1+) · อ่าน `UPDATE.md` + `.hermes/plans/2026-08-05_ai-investor-chat.md` + `KNOWN-ISSUES.md` ก่อน
 
