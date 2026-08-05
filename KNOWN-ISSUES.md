@@ -27,19 +27,19 @@
 
 ## 📊 ข้อมูลปัจจุบัน
 
-### คลังหุ้นรวม: **ไทย 129 + โลก 1,208 = ~1,337 ตัว** (ผ่าน test 57/57, typecheck ✅)
+### คลังหุ้นรวม: **ไทย 129 + โลก 1,894 = ~2,023 ตัว** — ทุกประเทศ ≥ 100 (ผ่าน test 57/57, typecheck/lint ✅)
 
 | ตลาด | จำนวน | แหล่ง |
 |---|---|---|
-| 🇺🇸 สหรัฐฯ (S&P 500) | 503 | Wikipedia auto + NASDAQ API tier |
+| 🇺🇸 สหรัฐฯ (S&P 500) | 460 | Wikipedia auto + NASDAQ API tier |
+| 🇨🇳 จีน (CSI 300) | 335 | **Wikipedia CSI 300** + มือ |
+| 🇨🇦 แคนาดา (TSX Composite) | 241 | **Wikipedia TSX Composite 237 ตัว** |
 | 🇯🇵 ญี่ปุ่น (Nikkei 225) | 219 | Wikipedia auto (ชื่อ fix แล้ว) + มือ |
 | 🇦🇺 ออสเตรเลีย (ASX 200) | 175 | Wikipedia auto + มือ |
+| 🇭🇰 ฮ่องกง (Hang Seng + top-120) | 141 | Wikipedia infobox + **TradingView top-120** |
+| 🇻🇳 เวียดนาม (VN30 + top-120) | 115 | investing.com + **TradingView top-120** |
 | 🇰🇷 เกาหลีใต้ (KOSPI 200) | 106 | Wikipedia auto + มือ |
-| 🇭🇰 ฮ่องกง (Hang Seng) | 86 | **Wikipedia infobox industry + stockanalysis fallback** |
-| 🇮🇳 อินเดีย (NIFTY 50) | 53 | Wikipedia auto + มือ |
-| 🇨🇦 แคนาดา (TSX 60) | 40 | Wikipedia auto + มือ |
-| 🇻🇳 เวียดนาม (VN30) | 35 | **investing.com components + stockanalysis sector** |
-| 🇨🇳 จีน | 20 | มือ (ADR + A-share ใหญ่) |
+| 🇮🇳 อินเดีย (NIFTY 50 + Next 50) | 103 | Wikipedia auto + **NIFTY Next 50** |
 | 🇹🇭 ไทย | 129 | มือ (SET50/SET100/mai) |
 
 ## ⚠️ ปัญหาที่ค้าง (TODO)
