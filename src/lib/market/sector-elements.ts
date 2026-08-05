@@ -4,6 +4,7 @@
  * รวม SECTOR_TO_ELEMENT (fetch-wikipedia-stocks.ts) + TV_SECTOR_TO_ELEMENT (expand-to-100.ts)
  * ไว้ที่เดียว — ใช้กับ IPO / hidden gems / assets / movers
  * (สคริปต์เดิมยังใช้ map ของตัวเอง — ค่อย refactor ทีหลัง)
+ * เพิ่ม sector ใหม่ 2026-08-05: มี precedent ใน GICS เดิมเท่านั้น (ไม่เดา)
  */
 import type { ThaiElement } from "../investor/stock-database";
 
@@ -71,11 +72,11 @@ const TV_TO_ELEMENT: Record<string, ThaiElement> = {
   "Non-Energy Minerals": "ทอง",
   "Health Technology": "ไฟ",
   "Health Services": "ไฟ",
-  "Finance": "น้ำ",
+  Finance: "น้ำ",
   "Major Banks": "น้ำ",
   "Regional Banks": "น้ำ",
   "Savings Banks": "น้ำ",
-  "Insurance": "น้ำ",
+  Insurance: "น้ำ",
   "Investment Banks/Brokers": "น้ำ",
   "Finance/Rental/Leasing": "น้ำ",
   "Consumer Non-Durables": "น้ำ",
@@ -88,28 +89,28 @@ const TV_TO_ELEMENT: Record<string, ThaiElement> = {
   "Food Retail": "น้ำ",
   "Drugstore Chains": "น้ำ",
   "Apparel/Footwear": "น้ำ",
-  "Textiles": "น้ำ",
-  "Utilities": "ไฟ",
+  Textiles: "น้ำ",
+  Utilities: "ไฟ",
   "Electric Utilities": "ไฟ",
   "Gas Distributors": "ไฟ",
   "Water Utilities": "น้ำ",
-  "Transportation": "น้ำ",
+  Transportation: "น้ำ",
   "Air Freight/Trucking": "น้ำ",
-  "Railroads": "น้ำ",
+  Railroads: "น้ำ",
   "Marine Shipping": "น้ำ",
-  "Airlines": "น้ำ",
+  Airlines: "น้ำ",
   "Industrial Services": "ทอง",
   "Commercial Services": "น้ำ",
   "Distribution Services": "น้ำ",
   "Real Estate": "ดิน",
   "Real Estate Investment Trusts": "ดิน",
   "Real Estate Development": "ดิน",
-  "Homebuilding": "ดิน",
+  Homebuilding: "ดิน",
   "Construction Materials": "ดิน",
   "Engineering & Construction": "ดิน",
-  "Miscellaneous": "น้ำ",
+  Miscellaneous: "น้ำ",
   "Packaged Software": "ทอง",
-  "Semiconductors": "ทอง",
+  Semiconductors: "ทอง",
   "Computer Processing Hardware": "ทอง",
   "Electronic Equipment/Instruments": "ทอง",
   "Electrical Products": "ทอง",
@@ -120,9 +121,9 @@ const TV_TO_ELEMENT: Record<string, ThaiElement> = {
   "Industrial Machinery": "ทอง",
   "Metal Fabrication": "ทอง",
   "Precious Metals": "ทอง",
-  "Aluminum": "ทอง",
-  "Steel": "ทอง",
-  "Coal": "ไฟ",
+  Aluminum: "ทอง",
+  Steel: "ทอง",
+  Coal: "ไฟ",
   "Oil & Gas Production": "ไฟ",
   "Oil & Gas Transportation": "ไฟ",
   "Oil Refining/Marketing": "ไฟ",
@@ -134,9 +135,32 @@ const TV_TO_ELEMENT: Record<string, ThaiElement> = {
   "Pharmaceuticals: Other": "ไฟ",
   "Medical Specialties": "ไฟ",
   "Medical Instruments": "ไฟ",
-  "Biotechnology": "ไฟ",
-  "Healthcare": "ไฟ",
-  "Realty": "ดิน",
+  Biotechnology: "ไฟ",
+  Healthcare: "ไฟ",
+  Realty: "ดิน",
+  // ── เพิ่ม 2026-08-05 (precedent ใน GICS เดิม — ไม่เดา) ──
+  "Major Telecommunications": "ไม้", // = Telecommunication Services
+  "Wireless Telecommunications": "ไม้",
+  "Specialty Telecommunications": "ไม้",
+  "Internet Software/Services": "ทอง", // = Technology
+  "Data Processing Services": "ทอง",
+  "Wholesale Distributors": "น้ำ", // = Distribution Services
+  "Other Transportation": "น้ำ",
+  "Other Consumer Services": "น้ำ",
+  Tobacco: "น้ำ", // = Consumer Staples
+  "Food: Meat/Fish/Dairy": "น้ำ", // = Food & Beverage (ปศุสัตว์/ประมง รอ ruling — decision-log)
+  "Property/Casualty Insurance": "น้ำ",
+  "Life/Health Insurance": "น้ำ",
+  "Multi-Line Insurance": "น้ำ",
+  "Miscellaneous Financial Services": "น้ำ",
+  "Financial Publishing/Services": "น้ำ",
+  "Containers/Packaging": "ทอง", // = Materials
+  "Building Products": "ดิน", // = Construction Materials
+  "Chemicals: Agricultural": "ไม้", // = Agricultural Commodities
+  "Medical/Nursing Services": "ไฟ",
+  // ── 2026-08-05 รอบ 2 (ชื่อจริงจาก TV Thailand scan) ──
+  Communications: "ไม้", // = Telecommunication Services (ADVANC/TRUE)
+  "Consumer Services": "น้ำ", // = Hotels, Restaurants & Leisure (MINT/CENTEL)
 };
 
 /** ค้น sector → ธาตุ (GICS ก่อน แล้ว TradingView) — ไม่รู้จัก → null (ไม่เดา) */
