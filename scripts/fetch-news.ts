@@ -37,9 +37,12 @@ async function main() {
 
   writeFileSync(FILE, JSON.stringify({ updatedAt: new Date().toISOString(), count: all.length, items: all }, null, 1) + "\n", "utf8");
   console.log(`\n✅ ข่าวรวม ${all.length} รายการ (ใหม่ ${fresh.length}) → ${FILE}`);
+  const byMarket: Record<string, number> = {};
+  for (const i of all) byMarket[i.market ?? "?"] = (byMarket[i.market ?? "?"] ?? 0) + 1;
+  console.log("ต่อตลาด:", JSON.stringify(byMarket));
   console.log("ตัวอย่าง:");
-  for (const i of all.slice(0, 5)) {
-    console.log(`   • [${i.source}] ${i.title.slice(0, 80)}${i.elements?.length ? ` (ธาตุ: ${i.elements.join("/")})` : ""}`);
+  for (const i of all.slice(0, 6)) {
+    console.log(`   • [${i.source}] ${i.title.slice(0, 70)}${i.elements?.length ? ` (ธาตุ: ${i.elements.join("/")})` : ""}`);
   }
 }
 

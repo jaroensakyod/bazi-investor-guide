@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseRss, classifyNews, filterNewsByKeywords } from "../src/lib/market/news";
+import { parseRss, classifyNews, filterNewsByKeywords, filterNewsByMarket } from "../src/lib/market/news";
 import { eventsBetween, EVENTS_SEED } from "../src/lib/market/events";
 
 const RSS_FIXTURE = `<?xml version="1.0"?>
@@ -55,6 +55,21 @@ describe("classifyNews + filter", () => {
     const hits = filterNewsByKeywords(items, ["chip"], 5);
     expect(hits.length).toBe(1);
     expect(hits[0].title).toContain("TSMC");
+  });
+});
+
+describe("ข่าวต่อตลาด (Google News RSS)", () => {
+  it("parseRss เก็บ market ลง item", () => {
+    const items = parseRss(RSS_FIXTURE, "Google News TH", "TH");
+    expect(items[0].market).toBe("TH");
+    expect(items[0].source).toBe("Google News TH");
+  });
+  it("filterNewsByMarket — กรองเฉพาะตลาด", () => {
+    const th = parseRss(RSS_FIXTURE, "Google News TH", "TH");
+    const cn = parseRss(RSS_FIXTURE, "Google News CN", "CN");
+    const all = [...th, ...cn];
+    expect(filterNewsByMarket(all, "TH", 5).every((i) => i.market === "TH")).toBe(true);
+    expect(filterNewsByMarket(all, "CN", 5).every((i) => i.market === "CN")).toBe(true);
   });
 });
 
