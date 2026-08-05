@@ -6,3 +6,5 @@ out/
 .env.local
 .DS_Store
 *.tsbuildinfo
+data/stocks/.intro-cache.json
+data/stocks/.yahoo-cache.json
