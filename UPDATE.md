@@ -28,6 +28,7 @@
 | 0.13–0.14 | Real assets (สลาก/ที่ดิน/สวนยาง/พระเครื่อง...) + สิ่งที่ห้าม | ✅ **19 รายการ** (บ้านเช่า/ที่ดิน/สวนยาง/ป่า/ฟาร์ม/สลาก/ทองก้อน/พระเครื่อง/ประกันสะสมทรัพย์) + forbidden 5 (ห้องแชร์/พนัน/ของปลอม → verdict avoid เสมอ) · ธาตุเสนอ→รอซินแส |
 | 0.15 | Universe เอเชีย +5 ตลาด (TW/SG/ID/MY/PH) | ✅ **+337 ตัว** (TW 100/SG 59/ID 60/MY 60/PH 58) → คลังรวม 2,231 + ไทย 272 = **2,503 รายการ** · ทิศ→ธาตุตลาด รอซินแส · MY/PH description เติมผ่าน Wikipedia (background) |
 | +0.16 | Universe ยุโรป 4 (GB/DE/FR/CH) — ต่อยอด Asia-First (ฉบับ EN ต้องมีตลาดพัฒนาแล้ว) | ✅ **+300 ตัว** (GB 93/DE 76/FR 73/CH 58) → **รวม 2,531 + ไทย 272 = 2,803 รายการ** · is_primary filter (ตัด NVDA บน Xetra) · suffix .L/.DE/.PA/.SW · ทิศ→ธาตุตลาด รอซินแส |
+| +0.17 | Universe ชุด 3 (PK/SA/BR) + dedupe 68 ตัวซ้ำ | ✅ **+194 ตัว** (PK 57/SA 57/BR 80 — Aramco/Al Rajhi/Petrobras/Vale) → **รวม 2,657 + ไทย 272 = 2,929 รายการ (21 ตลาด)** · market code ซาอุฯ = `ksa` (ไม่ใช่ saudi-arabia) · suffix .PK/.SR/.SA · PK desc รอ Wikipedia (background) · dedupe: 700.HK vs 0700.HK/601398 vs .SS/RY vs .TO (เก็บ canonical) + fix findQuote (7203@TADAWUL ชน 7203.T) |
 
 ### 🔀 การตัดสินใจระหว่างทำ (deviation log)
 - **Movers**: แผนเดิม = TradingView scanner → เปลี่ยนเป็นอ่านจาก market snapshot (ข้อมูลตรงคลัง มีธาตุครบ ไม่เปลือง request) — `src/lib/market/movers.ts`
