@@ -3,7 +3,7 @@
  *
  * รัน: npx tsx scripts/fetch-news.ts
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchAllNews, type NewsItem } from "../src/lib/market/news";

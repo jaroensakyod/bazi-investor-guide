@@ -66,7 +66,7 @@ export async function fetchIposFromStockAnalysis(): Promise<IpoEntry[]> {
     if (cells.length < 7 || rowMatch[1].includes("<th")) continue;
     const [dateStr, symbol, company, exchange, priceRange] = cells;
     const ipoDate = parseSaDate(dateStr);
-    if (!ipoDate || !symbol || !/^[A-Z0-9.\-]{1,6}$/.test(symbol)) continue;
+    if (!ipoDate || !symbol || !/^[A-Z0-9.-]{1,6}$/.test(symbol)) continue;
     const mkt = exchange === "NASDAQ" || exchange === "NYSE" ? "NYSE/NASDAQ" : exchange;
     out.push({
       ticker: symbol,

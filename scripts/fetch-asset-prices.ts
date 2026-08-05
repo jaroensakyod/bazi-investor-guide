@@ -6,13 +6,9 @@
  *
  * รัน: npx tsx scripts/fetch-asset-prices.ts
  */
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { getAssets } from "../src/lib/assets/asset-universe";
 import { fetchQuotes, openYahooSession, type YahooQuote } from "../src/lib/market/yahoo";
 import { loadSnapshot, saveSnapshot, type MarketSnapshot } from "../src/lib/market/market-data";
-
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 async function main() {
   // เฉพาะตัวที่มี Yahoo ticker (มี "." หรือเป็นสัญลักษณ์ฟิวเจอร์/คริปโต) — ข้ามข้อมูลนิ่ง

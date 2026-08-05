@@ -10,7 +10,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const FILE = new URL("../data/stocks/global.json", import.meta.url);
-const DELAY_MS = 4000;
 
 const NIKKEI_SECTION_SECTOR: Record<string, string> = {
   "Air transport": "Transportation", "Automotive": "Automobiles & Components", "Banking": "Banks",

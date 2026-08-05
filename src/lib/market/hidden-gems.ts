@@ -37,7 +37,7 @@ const TOP_TIERS = new Set(["SET50", "SET100", "mega", "large"]);
 const LIQUID_VOLUME = 2_000_000;
 
 /** คะแนน "ใต้ผืนน้ำ" (0-100) — ยิ่งสูง ยิ่งไม่มีใครมอง */
-export function underwaterScoreOf(stock: StockEntry, md: MarketData | null, fund?: Fundamentals | null): { score: number; parts: HiddenGem["underwaterParts"] } {
+export function underwaterScoreOf(stock: StockEntry, md: MarketData | null): { score: number; parts: HiddenGem["underwaterParts"] } {
   const parts = { notTopIndex: 0, midSmallCap: 0, lowLiquidity: 0, unloved: 0 };
   // 1. ไม่ติดดัชนีหลัก
   if (!TOP_TIERS.has(stock.tier)) parts.notTopIndex = 30;
@@ -92,7 +92,7 @@ export function rankHiddenGems(opts: {
     const yt = yahooTicker(s.ticker, s.market);
     const md = quotes[yt] ?? null;
     const fund = fundamentals.get(yt);
-    const { score, parts } = underwaterScoreOf(s, md, fund);
+    const { score, parts } = underwaterScoreOf(s, md);
     if (score < 40) continue; // ยังไม่ "ใต้ผืนน้ำ" พอ
     const tier = riskTierOf(s, md, fund);
     if (tier === "risky" || !allowed.has(tier)) continue; // 🔴/เกินกำลังดวง → ไม่โชว์ verdict

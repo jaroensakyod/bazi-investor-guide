@@ -4,14 +4,10 @@
  * รัน: npx tsx scripts/fetch-fundamentals.ts --limit 60
  *   (default: top 30 ไทย + top 30 โลก โดย market cap จาก snapshot ล่าสุด — resumable)
  */
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { openYahooSession, yahooTicker } from "../src/lib/market/yahoo";
 import { fetchFundamentals, loadFundamentalsCache, saveFundamentalsCache } from "../src/lib/market/fundamentals";
 import { loadSnapshot } from "../src/lib/market/market-data";
 import { getAllStocks } from "../src/lib/investor/stock-database";
-
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 async function main() {
   const snap = loadSnapshot();

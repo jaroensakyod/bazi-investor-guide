@@ -70,13 +70,12 @@ export async function openYahooSession(): Promise<{ cookie: string; crumb: strin
   return { cookie, crumb };
 }
 
-async function fetchJson(url: string, cookie: string, label: string, retries = 4): Promise<unknown | null> {
+async function fetchJson(url: string, cookie: string, retries = 4): Promise<unknown | null> {
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(url, { headers: { "User-Agent": YAHOO_UA, Cookie: cookie } });
       if (res.status === 429 || res.status === 999) {
         const wait = 5000 * (attempt + 1);
-        console.log(`  ⏳ Yahoo 429/999 (${label}) — รอ ${wait / 1000}s (${attempt + 1}/${retries})`);
         await new Promise((r) => setTimeout(r, wait));
         continue;
       }
@@ -119,7 +118,7 @@ export async function fetchQuotes(
   for (let i = 0; i < symbols.length; i += chunkSize) {
     const chunk = symbols.slice(i, i + chunkSize);
     const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(chunk.join(","))}&crumb=${encodeURIComponent(session.crumb)}`;
-    const json = (await fetchJson(url, session.cookie, chunk[0], 4)) as
+    const json = (await fetchJson(url, session.cookie, 4)) as
       | { quoteResponse?: { result?: YahooQuote[] } }
       | null;
     const results = json?.quoteResponse?.result ?? [];
@@ -140,7 +139,7 @@ export async function fetchQuoteSummaryModule(
   const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
     ticker,
   )}?modules=${module}&crumb=${encodeURIComponent(session.crumb)}&lang=en-US&region=US`;
-  const json = (await fetchJson(url, session.cookie, ticker, 3)) as
+  const json = (await fetchJson(url, session.cookie, 3)) as
     | { quoteSummary?: { result?: Array<Record<string, unknown>> } }
     | null;
   return (json?.quoteSummary?.result?.[0]?.[module] as Record<string, unknown> | undefined) ?? null;

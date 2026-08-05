@@ -106,9 +106,8 @@ export async function fetchAllNews(feeds = NEWS_FEEDS): Promise<NewsItem[]> {
         seen.add(item.link);
         out.push(item);
       }
-      console.log(`  ${f.source}: +${out.length} items (สะสม)`);
-    } catch (e) {
-      console.log(`  ⚠️ ${f.source}: ${(e as Error).message}`);
+    } catch {
+      /* feed เสีย — ข้าม */
     }
   }
   return out;

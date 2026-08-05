@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { underwaterScoreOf, riskTierOf, rankHiddenGems, type StrengthBand } from "../src/lib/market/hidden-gems";
-import type { StockEntry, ThaiElement } from "../src/lib/investor/stock-database";
+import type { StockEntry } from "../src/lib/investor/stock-database";
 import type { MarketData } from "../src/lib/market/market-data";
 import type { Fundamentals } from "../src/lib/market/fundamentals";
 
@@ -41,12 +41,12 @@ const mdThin: MarketData = { price: 5, avgVolume: 200_000, marketCap: 8e9, pe: 4
 describe("underwaterScoreOf — ใต้ผืนน้ำแค่ไหน", () => {
   it("ตัวท็อป+ใหญ่+คล่อง+PE ปกติ → คะแนนต่ำ (คนเห็นหมด)", () => {
     const mdBig: MarketData = { price: 100, avgVolume: 20_000_000, marketCap: 500e9, pe: 15, updatedAt: "t" };
-    const { score, parts } = underwaterScoreOf(mkStock({ tier: "SET50" }), mdBig, goodFund);
+    const { score, parts } = underwaterScoreOf(mkStock({ tier: "SET50" }), mdBig);
     expect(score).toBe(0);
     expect(parts).toEqual({ notTopIndex: 0, midSmallCap: 0, lowLiquidity: 0, unloved: 0 });
   });
   it("mid cap + สภาพคล่องเบาบาง + PE สูง → ใต้ผืนน้ำมาก", () => {
-    const { score, parts } = underwaterScoreOf(mkStock({ tier: "mid" }), mdThin, goodFund);
+    const { score, parts } = underwaterScoreOf(mkStock({ tier: "mid" }), mdThin);
     expect(score).toBe(100);
     expect(parts.notTopIndex).toBe(30);
     expect(parts.midSmallCap).toBe(30);

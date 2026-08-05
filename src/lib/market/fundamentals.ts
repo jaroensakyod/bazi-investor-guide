@@ -4,7 +4,7 @@
  * ใช้กับ: วิเคราะห์พื้นฐานในแชท + Buffett checklist + hidden gems (ตัวกรองคุณภาพ)
  * เก็บ cache ไว้ data/cache/fundamentals.json (key = yahoo ticker) — resumable
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchQuoteSummaryModule } from "./yahoo";
