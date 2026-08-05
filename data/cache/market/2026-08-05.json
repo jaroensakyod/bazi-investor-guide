@@ -1,0 +1,16 @@
+{
+ "updatedAt": "2026-08-05T00:00:00Z",
+ "quotes": {
+  "KBANK.BK": {
+   "updatedAt": "2026-08-05T00:00:00Z",
+   "currency": "THB",
+   "price": 150.5
+  },
+  "AAPL": {
+   "updatedAt": "2026-08-05T00:00:00Z",
+   "currency": "USD",
+   "price": 210.1,
+   "changePct": -0.5
+  }
+ }
+}
