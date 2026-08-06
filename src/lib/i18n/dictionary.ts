@@ -92,6 +92,8 @@ const TH = {
   "admin.llmon": "LLM ON",
   "admin.llmoff": "LLM OFF",
   "admin.datarefresh": "🔄 อัปเดตข้อมูล (รันสคริปต์หลังบ้าน)",
+  "admin.export": "📤 Export ให้ซินแสตรวจ",
+  "admin.exportdesc": "CSV เปิดใน Excel ได้ — กรอก isCorrect(Y/N)/correctedElement แล้วส่งกลับมา import",
 
   // elements (ป้ายธาตุ)
   "el.wood": "ไม้",
@@ -154,7 +156,7 @@ const TH = {
   "stocks.search": "ค้นหุ้น/ชื่อ/ธาตุ...",
   "stocks.ticker": "รหัส",
   "assets.title": "💰 สินทรัพย์ทั้งหมด × ดวงของคุณ",
-  "assets.sub": "89 รายการ 12 ประเภท — ทอง/คริปโต/ETF/REIT/พันธบัตร/ที่ดิน/ฟาร์ม/สลาก/ประกัน — เรียงตามคะแนนตรงดวง",
+  "assets.sub": "113 รายการ 12 ประเภท — ทอง/คริปโต/ETF/REIT/พันธบัตร/ที่ดิน/ฟาร์ม/สลาก/ประกัน — เรียงตามคะแนนตรงดวง",
   "assets.all": "ทั้งหมด",
   "assets.portfolio": "📊 พอร์ตจัดสรรตามดวง",
   "assets.verdict": "ดวง",
@@ -254,6 +256,8 @@ const ZH: Record<LocaleKey, string> = {
   "admin.llmon": "LLM 已启用",
   "admin.llmoff": "LLM 已关闭",
   "admin.datarefresh": "🔄 更新数据（运行后台脚本）",
+  "admin.export": "📤 导出给大师审核",
+  "admin.exportdesc": "CSV 可用 Excel 打开 — 填写 isCorrect(Y/N)/correctedElement 后返回导入",
 
   "el.wood": "木",
   "el.fire": "火",
@@ -311,7 +315,7 @@ const ZH: Record<LocaleKey, string> = {
   "stocks.search": "搜索股票/名称...",
   "stocks.ticker": "代码",
   "assets.title": "💰 全部资产 × 你的命盘",
-  "assets.sub": "89 项 12 类 — 黄金/加密/ETF/REIT/债券/土地/农场/彩票/保险 — 按命理契合度排序",
+  "assets.sub": "113 项 12 类 — 黄金/加密/ETF/REIT/债券/土地/农场/彩票/保险 — 按命理契合度排序",
   "assets.all": "全部",
   "assets.portfolio": "📊 命理资产配置",
   "assets.verdict": "命理",
@@ -411,6 +415,8 @@ const EN: Record<LocaleKey, string> = {
   "admin.llmon": "LLM ON",
   "admin.llmoff": "LLM OFF",
   "admin.datarefresh": "🔄 Update data (runs backend scripts)",
+  "admin.export": "📤 Export for master review",
+  "admin.exportdesc": "CSV opens in Excel — fill isCorrect(Y/N)/correctedElement and send back to import",
 
   "el.wood": "Wood",
   "el.fire": "Fire",
@@ -468,7 +474,7 @@ const EN: Record<LocaleKey, string> = {
   "stocks.search": "Search stock/name...",
   "stocks.ticker": "Ticker",
   "assets.title": "💰 All assets × your chart",
-  "assets.sub": "89 items, 12 types — gold/crypto/ETF/REIT/bonds/land/farms/lottery/insurance — ranked by chart fit",
+  "assets.sub": "113 items, 12 types — gold/crypto/ETF/REIT/bonds/land/farms/lottery/insurance — ranked by chart fit",
   "assets.all": "All",
   "assets.portfolio": "📊 Chart-based allocation",
   "assets.verdict": "Chart",

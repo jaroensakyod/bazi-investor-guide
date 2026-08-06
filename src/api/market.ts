@@ -246,6 +246,24 @@ export async function handleWatchlist(q: Query): Promise<ApiResponse<unknown>> {
   return ok({ entries, rows, updatedAt: snap?.updatedAt ?? null });
 }
 
+/** Export CSV ให้ซินแสตรวจธาตุ — kind=assets (สินทรัพย์ 113) / kind=thai-stocks */
+export function handleExport(q: Query): { ok: true; data: string; filename: string } | { ok: false; error: string } {
+  const kind = String(q.kind ?? "assets");
+  if (kind === "assets") {
+    const rows = getAssets().map((a) => [a.type, a.ticker, `"${a.name}"`, `"${a.business ?? ""}"`, a.primaryElement, `"${a.elementReason}"`, a.riskTier, ""]);
+    const csv = ["type,ticker,name,business,element,elementReason,riskTier,isCorrect(Y/N),correctedElement,note"].join(",") + "\n" + rows.map((r) => r.join(",")).join("\n");
+    return { ok: true, data: csv, filename: "assets-review.csv" };
+  }
+  if (kind === "thai-stocks") {
+    const rows = getAllStocks()
+      .filter((s) => s.market === "SET" || s.market === "mai")
+      .map((s) => [s.ticker, `"${s.name}"`, `"${s.business}"`, s.primaryElement, `"${s.elementReason}"`, s.tier, ""]);
+    const csv = ["ticker,name,business,element,elementReason,tier,isCorrect(Y/N),correctedElement,note"].join(",") + "\n" + rows.map((r) => r.join(",")).join("\n");
+    return { ok: true, data: csv, filename: "thai-stocks-review.csv" };
+  }
+  return { ok: false, error: `export ไม่รู้จัก: ${kind} (มี: assets, thai-stocks)` };
+}
+
 /** PDF รายงานสไตล์สถาบัน — คืน Buffer (ดาวน์โหลด .pdf) */
 export async function handleReportPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
   const ticker = String(q.ticker ?? "").toUpperCase();

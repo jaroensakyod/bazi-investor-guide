@@ -38,6 +38,8 @@ export type AssetEntry = {
   market: string;
   currency: string;
   sector: string;
+  /** คำอธิบายสินค้า (ธุรกิจ/ลักษณะ) */
+  business?: string;
   elements: ThaiElement[];
   primaryElement: ThaiElement;
   elementReason: string;

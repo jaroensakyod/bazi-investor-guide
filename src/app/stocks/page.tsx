@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Fragment } from "react";
 import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
@@ -98,45 +98,8 @@ export default function StocksPage() {
       {error && <p style={{ color: "#d48f8f" }}>{error}</p>}
 
       {detail && (
-        <div className="card" style={{ borderColor: "#d4af37" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h2>
-              {detail.name} ({detail.ticker}){" "}
-              <span style={{ color: ELEMENT_COLOR[elKey(detail.primaryElement)] ?? "#d4af37" }}>{t(`el.${elKey(detail.primaryElement)}` as never)}</span>{" "}
-              <span className="tag">{detail.market}</span> <span className="tag">{detail.tier}</span>
-              {detail.risingStar ? <span className="tag good">⭐ rising star</span> : ""}
-            </h2>
-            <button className="btn secondary" style={{ fontSize: 12 }} onClick={() => setDetail(null)}>
-              ✕
-            </button>
-          </div>
-          <p style={{ fontSize: 13.5, marginTop: 6 }}>
-            🏭 <b>{detail.sector}</b> — {detail.business}
-          </p>
-          <p style={{ fontSize: 13, color: "#9a937f" }}>
-            🌍 {detail.country} · 💱 {detail.currency} · 📅 จดทะเบียน {detail.listedDate ?? "-"} · 🎯 {detail.growthStage}
-            {detail.isHighLiquidity ? " · 💧 สภาพคล่องสูง" : ""}
-          </p>
-          <p style={{ fontSize: 13, color: "#9a937f" }}>🔮 {detail.elementReason}</p>
-          {detail.theme.length ? (
-            <p style={{ fontSize: 12.5 }}>
-              {detail.theme.map((th) => (
-                <span key={th} className="tag">
-                  {th}
-                </span>
-              ))}
-            </p>
-          ) : null}
-          <p style={{ marginTop: 8 }}>
-            💰 ราคา: <b>{detail.price != null ? `${detail.price.toLocaleString()} ${detail.currency}` : "-"}</b>{" "}
-            <span style={{ color: (detail.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(detail.changePct)}</span>
-            {detail.updatedAt ? <span style={{ color: "#9a937f", fontSize: 12 }}> · อัปเดต {detail.updatedAt.slice(0, 16)}</span> : ""}
-          </p>
-          {detail.fundamentals && (
-            <p style={{ fontSize: 13, color: "#9a937f" }}>
-              📊 ROE {detail.fundamentals.roe != null ? `${detail.fundamentals.roe}%` : "-"} · Buffett {detail.fundamentals.buffettScore}/10
-            </p>
-          )}
+        <div className="card" style={{ borderColor: "#d4af37", display: "none" }}>
+          {/* คลิก → info แสดงใต้แถว (ด้านล่าง) — การ์ดนี้ถูกย้ายไป inline แล้ว */}
         </div>
       )}
       {loadingDetail && <p style={{ color: "#9a937f" }}>⏳ กำลังโหลด...</p>}
@@ -159,34 +122,72 @@ export default function StocksPage() {
             </thead>
             <tbody>
               {(data?.stocks ?? []).map((s) => (
-                <tr key={`${s.market}:${s.ticker}`} onClick={() => showDetail(s.ticker, s.market)} style={{ cursor: "pointer" }}>
-                  <td>
-                    <b>{s.ticker}</b>{" "}
-                    <button
-                      className="btn secondary"
-                      style={{ fontSize: 11, padding: "1px 6px", marginLeft: 4 }}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleWatch(s.ticker, s.market);
-                      }}
-                    >
-                      {watching[`s:${s.market}:${s.ticker}`] ? "⭐" : "☆"}
-                    </button>
-                  </td>
-                  <td style={{ fontSize: 13 }}>
-                    {s.name}
-                    <div style={{ fontSize: 11.5, color: "#9a937f" }}>{s.sector}</div>
-                  </td>
-                  <td>
-                    {s.market} <span style={{ fontSize: 11, color: "#9a937f" }}>{s.country}</span>
-                  </td>
-                  <td>
-                    <span style={{ color: ELEMENT_COLOR[elKey(s.element)] ?? "#d4af37", fontWeight: 700 }}>{t(`el.${elKey(s.element)}` as never)}</span>
-                  </td>
-                  <td>{s.tier}</td>
-                  <td>{s.price != null ? s.price.toLocaleString() : "-"}</td>
-                  <td style={{ color: (s.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(s.changePct)}</td>
-                </tr>
+                <Fragment key={`${s.market}:${s.ticker}`}>
+                  <tr onClick={() => showDetail(s.ticker, s.market)} style={{ cursor: "pointer" }}>
+                    <td>
+                      <b>{s.ticker}</b>{" "}
+                      <button
+                        className="btn secondary"
+                        style={{ fontSize: 11, padding: "1px 6px", marginLeft: 4 }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleWatch(s.ticker, s.market);
+                        }}
+                      >
+                        {watching[`s:${s.market}:${s.ticker}`] ? "⭐" : "☆"}
+                      </button>
+                    </td>
+                    <td style={{ fontSize: 13 }}>
+                      {s.name}
+                      <div style={{ fontSize: 11.5, color: "#9a937f" }}>{s.sector}</div>
+                    </td>
+                    <td>
+                      {s.market} <span style={{ fontSize: 11, color: "#9a937f" }}>{s.country}</span>
+                    </td>
+                    <td>
+                      <span style={{ color: ELEMENT_COLOR[elKey(s.element)] ?? "#d4af37", fontWeight: 700 }}>{t(`el.${elKey(s.element)}` as never)}</span>
+                    </td>
+                    <td>{s.tier}</td>
+                    <td>{s.price != null ? s.price.toLocaleString() : "-"}</td>
+                    <td style={{ color: (s.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(s.changePct)}</td>
+                  </tr>
+                  {detail && detail.ticker === s.ticker && detail.market === s.market && (
+                    <tr key={`${s.market}:${s.ticker}-info`} style={{ background: "#12151c" }}>
+                      <td colSpan={7} style={{ padding: "10px 14px", fontSize: 13 }}>
+                        <p>
+                          🏭 <b>{detail.sector}</b> — {detail.business}
+                        </p>
+                        <p style={{ color: "#9a937f" }}>
+                          🌍 {detail.country} · 💱 {detail.currency} · 📅 จดทะเบียน {detail.listedDate ?? "-"} · 🎯 {detail.growthStage}
+                          {detail.isHighLiquidity ? " · 💧 สภาพคล่องสูง" : ""}
+                        </p>
+                        <p style={{ color: "#9a937f" }}>🔮 {detail.elementReason}</p>
+                        {detail.theme.length ? (
+                          <p>
+                            {detail.theme.map((th) => (
+                              <span key={th} className="tag">
+                                {th}
+                              </span>
+                            ))}
+                          </p>
+                        ) : null}
+                        <p>
+                          💰 ราคา: <b>{detail.price != null ? `${detail.price.toLocaleString()} ${detail.currency}` : "-"}</b>{" "}
+                          <span style={{ color: (detail.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(detail.changePct)}</span>
+                          {detail.updatedAt ? <span style={{ color: "#9a937f", fontSize: 12 }}> · อัปเดต {detail.updatedAt.slice(0, 16)}</span> : ""}
+                        </p>
+                        {detail.fundamentals && (
+                          <p style={{ color: "#9a937f" }}>
+                            📊 ROE {detail.fundamentals.roe != null ? `${detail.fundamentals.roe}%` : "-"} · Buffett {detail.fundamentals.buffettScore}/10
+                          </p>
+                        )}
+                        <button className="btn secondary" style={{ fontSize: 11.5, marginTop: 4 }} onClick={() => setDetail(null)}>
+                          ✕ ปิด
+                        </button>
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
               ))}
             </tbody>
           </table>

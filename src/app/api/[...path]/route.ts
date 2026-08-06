@@ -25,11 +25,11 @@ async function proxy(req: NextRequest, ctx: Ctx, method: "GET" | "POST") {
       cache: "no-store",
     });
     const contentType = res.headers.get("content-type") ?? "";
-    if (contentType.includes("application/pdf")) {
+    if (contentType.includes("application/pdf") || contentType.includes("text/csv")) {
       const buf = await res.arrayBuffer();
       return new NextResponse(buf, {
         status: res.status,
-        headers: { "Content-Type": "application/pdf", "Content-Disposition": `attachment; filename="report.pdf"` },
+        headers: { "Content-Type": contentType, "Content-Disposition": res.headers.get("content-disposition") ?? 'attachment; filename="download"' },
       });
     }
     const text = await res.text();

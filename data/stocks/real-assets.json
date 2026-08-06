@@ -24,7 +24,8 @@
       "riskTier": "medium",
       "subtype": "house_rental",
       "note": "ข้อมูลนิ่ง — กระแสเงินสดจากค่าเช่า สภาพคล่องต่ำ",
-      "status": "draft"
+      "status": "draft",
+      "business": "บ้านเช่า/คอนโดปล่อยเช่า — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -43,7 +44,8 @@
       "riskTier": "medium",
       "subtype": "land",
       "note": "ข้อมูลนิ่ง — ถือยาว สภาพคล่องต่ำ ต้องศึกษาทำเล/โฉนด",
-      "status": "draft"
+      "status": "draft",
+      "business": "ที่ดิน — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -62,7 +64,8 @@
       "riskTier": "medium",
       "subtype": "forest",
       "note": "ข้อมูลนิ่ง — รายได้ตามราคายาง ใช้เวลาหลายปีกว่าคุ้ม",
-      "status": "draft"
+      "status": "draft",
+      "business": "สวนยางพารา — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -81,7 +84,8 @@
       "riskTier": "medium",
       "subtype": "forest",
       "note": "ข้อมูลนิ่ง",
-      "status": "draft"
+      "status": "draft",
+      "business": "สวนปาล์มน้ำมัน — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -100,7 +104,8 @@
       "riskTier": "medium",
       "subtype": "farm",
       "note": "ข้อมูลนิ่ง",
-      "status": "draft"
+      "status": "draft",
+      "business": "สวนผลไม้ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -119,7 +124,8 @@
       "riskTier": "risky",
       "subtype": "forest",
       "note": "ข้อมูลนิ่ง — ไม้ธาตุหายากสุดในตลาด = ใต้ผืนน้ำฉบับไทย แต่สภาพคล่องต่ำมาก",
-      "status": "draft"
+      "status": "draft",
+      "business": "ป่าไม้/ไม้เศรษฐกิจ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -133,12 +139,13 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "คาร์บอนจากป่า/เกษตร = ธาตุไม้ (เสนอ — รอซินแส ruling)",
+      "elementReason": "คาร์บอนเครดิต = ป่าไม้/สิ่งแวดล้อม = ธาตุไม้ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "risky",
       "subtype": "carbon",
       "note": "ข้อมูลนิ่ง — ตลาดใหม่ มาตรฐานยังไม่นิ่ง",
-      "status": "draft"
+      "status": "draft",
+      "business": "คาร์บอนเครดิต — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -152,12 +159,13 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ปศุสัตว์ = เกษตร = ธาตุไม้ (เสนอ — รอซินแส ruling)",
+      "elementReason": "ปศุสัตว์ (หมู/ไก่/โค) = ธาตุไม้ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "medium",
       "subtype": "livestock",
       "note": "ข้อมูลนิ่ง — ราคาหมู/ไก่ผันผวนตามวัฏจักร",
-      "status": "draft"
+      "status": "draft",
+      "business": "ฟาร์มหมู/ไก่/โค — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -171,12 +179,13 @@
         "น้ำ"
       ],
       "primaryElement": "น้ำ",
-      "elementReason": "สัตว์น้ำ/ประมง = ธาตุน้ำ (เสนอ — รอซินแส ruling)",
+      "elementReason": "กุ้ง/ปลา = สัตว์น้ำ = ธาตุน้ำ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "medium",
       "subtype": "aquaculture",
       "note": "ข้อมูลนิ่ง — เสี่ยงโรคระบาด",
-      "status": "draft"
+      "status": "draft",
+      "business": "ฟาร์มกุ้ง/ปลา — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -195,7 +204,8 @@
       "riskTier": "safe",
       "subtype": "bullion",
       "note": "ราคาอ้างอิง GC=F (ทองโลก) + ค่ากำเหน็จ — ขายคืนได้ง่ายสุดในกลุ่มสินทรัพย์จริง",
-      "status": "draft"
+      "status": "draft",
+      "business": "ทองคำแท่ง/ทองก้อน — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -214,7 +224,8 @@
       "riskTier": "safe",
       "subtype": "bullion",
       "note": "ราคาอ้างอิง SI=F — \"ทองของคนทั่วไป\" ใต้ผืนน้ำของโลหะมีค่า",
-      "status": "draft"
+      "status": "draft",
+      "business": "เงินแท่ง/เงินก้อน — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -233,7 +244,8 @@
       "riskTier": "risky",
       "subtype": "collectible",
       "note": "ข้อมูลนิ่ง — สภาพคล่องต่ำ ต้องมีใบรับรอง",
-      "status": "draft"
+      "status": "draft",
+      "business": "เพชร/พลอย — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -244,16 +256,16 @@
       "currency": "THB",
       "sector": "ของสะสม",
       "elements": [
-        "ดิน",
         "ทอง"
       ],
-      "primaryElement": "ดิน",
-      "elementReason": "เนื้อพระ = ดิน/ปูน (ดิน) + คุณค่าโลหะ (ทอง) — เสนอ รอซินแส ruling",
+      "primaryElement": "ทอง",
+      "elementReason": "พระเครื่อง/วัตถุมงคล = ของมีค่า/โลหะ = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "risky",
       "subtype": "collectible",
       "note": "ข้อมูลนิ่ง — ต้องดูองค์/เนื้อ/แหล่งที่มา ปลอมเยอะ",
-      "status": "draft"
+      "status": "draft",
+      "business": "พระเครื่อง — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -267,12 +279,13 @@
         "ทอง"
       ],
       "primaryElement": "ทอง",
-      "elementReason": "ของสะสมโลหะมีค่า = ธาตุทอง (เสนอ — รอซินแส)",
+      "elementReason": "นาฬิกาสะสม = ของมีค่า = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "risky",
       "subtype": "collectible",
       "note": "ข้อมูลนิ่ง — ตลาดเฉพาะกลุ่ม",
-      "status": "draft"
+      "status": "draft",
+      "business": "นาฬิกา/ของสะสมมีค่า — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -283,15 +296,16 @@
       "currency": "USD",
       "sector": "ของสะสม",
       "elements": [
-        "ไม้"
+        "ทอง"
       ],
-      "primaryElement": "ไม้",
-      "elementReason": "งานศิลปะ/สร้างสรรค์ = ธาตุไม้ (Source4: ไม้ = ความคิดสร้างสรรค์ — เสนอ รอซินแส)",
+      "primaryElement": "ทอง",
+      "elementReason": "งานศิลปะ = ของมีค่า/สะสม = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "risky",
       "subtype": "collectible",
       "note": "ข้อมูลนิ่ง — สภาพคล่องต่ำมาก",
-      "status": "draft"
+      "status": "draft",
+      "business": "งานศิลปะ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "lottery",
@@ -302,16 +316,16 @@
       "currency": "THB",
       "sector": "สลาก/ออมทรัพย์",
       "elements": [
-        "น้ำ",
-        "ไฟ"
+        "น้ำ"
       ],
       "primaryElement": "น้ำ",
-      "elementReason": "สลาก = ฝาก(น้ำ) + ลุ้นรางวัล(ไฟ) — Concept 偏財 (ทรัพย์ลมๆ แล้งๆ) รอซินแส ruling",
+      "elementReason": "สลากออมสิน = การเงิน/ออมปลอดภัย = ธาตุน้ำ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log — 偏財)",
       "riskTier": "safe",
       "subtype": "lottery",
       "note": "ถูกกฎหมาย (รัฐวิสาหกิจ) — เงินต้นคง ต่างจากลอตเตอรี่ใต้ดิน",
-      "status": "draft"
+      "status": "draft",
+      "business": "สลากออมสิน — สลากของรัฐ เงินต้นคง รางวัลเป็นผลตอบแทน โอกาสถูกรางวัลต่ำ"
     },
     {
       "type": "lottery",
@@ -322,16 +336,16 @@
       "currency": "THB",
       "sector": "สลาก/ออมทรัพย์",
       "elements": [
-        "น้ำ",
-        "ไฟ"
+        "น้ำ"
       ],
       "primaryElement": "น้ำ",
-      "elementReason": "สลาก = ฝาก(น้ำ) + ลุ้นรางวัล(ไฟ) — 偏財 รอซินแส ruling",
+      "elementReason": "สลาก ธกส. = การเงิน/ออมปลอดภัย = ธาตุน้ำ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "safe",
       "subtype": "lottery",
       "note": "ถูกกฎหมาย — เงินต้นคง",
-      "status": "draft"
+      "status": "draft",
+      "business": "สลาก ธกส. — สลากของรัฐ เงินต้นคง รางวัลเป็นผลตอบแทน โอกาสถูกรางวัลต่ำ"
     },
     {
       "type": "insurance",
@@ -350,7 +364,8 @@
       "riskTier": "medium",
       "subtype": "insurance",
       "note": "ข้อมูลนิ่ง — เหมาะเป็นเครื่องมือ 'เปิดคลัง' ระยะยาว",
-      "status": "draft"
+      "status": "draft",
+      "business": "ประกันสะสมทรัพย์ — ประกันสะสมทรัพย์/ควบการลงทุน คุ้มครอง + ผลตอบแทนระยะยาว"
     },
     {
       "type": "insurance",
@@ -369,7 +384,8 @@
       "riskTier": "medium",
       "subtype": "insurance",
       "note": "ข้อมูลนิ่ง — กันเงินหลังเกษียณ",
-      "status": "draft"
+      "status": "draft",
+      "business": "ประกันบำนาญ — ประกันสะสมทรัพย์/ควบการลงทุน คุ้มครอง + ผลตอบแทนระยะยาว"
     },
     {
       "type": "real_asset",
@@ -386,7 +402,8 @@
       "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "ทาวน์เฮาส์/บ้านแถวปล่อยเช่า — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -403,7 +420,8 @@
       "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "คอนโดต่างประเทศ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -420,7 +438,8 @@
       "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "โกดัง/โรงงานปล่อยเช่า — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -437,7 +456,8 @@
       "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "โรงแรม/รีสอร์ท — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -454,7 +474,8 @@
       "elementReason": "น้ำมัน/พลังงาน = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "ปั๊มน้ำมัน/สถานีชาร์จ EV — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -471,7 +492,8 @@
       "elementReason": "พลังงานแสงอาทิตย์/ไฟฟ้า = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "ฟาร์มโซลาร์เซลล์ขายไฟ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -485,10 +507,11 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ไก่/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน — คิวซินแส)",
+      "elementReason": "ไก่ไข่/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "ฟาร์มไก่ไข่ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -505,7 +528,8 @@
       "elementReason": "มะพร้าว = พืชผล = ธาตุไม้",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "สวนมะพร้าวน้ำหอม — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -522,7 +546,8 @@
       "elementReason": "ข้าว = พืชผล = ธาตุไม้",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "นาข้าว — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -539,7 +564,8 @@
       "elementReason": "กล้วยไม้ = พืช = ธาตุไม้",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "ฟาร์มกล้วยไม้ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -556,7 +582,8 @@
       "elementReason": "รถคลาสสิก = ของสะสมมีค่า = ธาตุทอง",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "รถคลาสสิก/ซุปเปอร์คาร์ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -573,7 +600,8 @@
       "elementReason": "ไวน์/วิสกี้สะสม = ของมีค่า = ธาตุทอง",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "ไวน์/วิสกี้หายาก — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -590,7 +618,8 @@
       "elementReason": "แสตมป์สะสม = ของมีค่า = ธาตุทอง",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "แสตมป์หายาก — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -607,7 +636,8 @@
       "elementReason": "เหรียญกษาปณ์ = โลหะมีค่า = ธาตุทอง",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "เหรียญกษาปณ์/เงินโบราณ — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -624,7 +654,8 @@
       "elementReason": "หยก/หินมีค่า = ของมีค่า = ธาตุทอง",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "หยก/หินมีค่า — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     },
     {
       "type": "real_asset",
@@ -638,10 +669,11 @@
         "น้ำ"
       ],
       "primaryElement": "น้ำ",
-      "elementReason": "ไข่มุก/สัตว์น้ำ = ธาตุน้ำ (รอซินแสยืนยัน — คิวซินแส)",
+      "elementReason": "ไข่มุก/สัตว์น้ำ = ธาตุน้ำ (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
-      "status": "draft"
+      "status": "draft",
+      "business": "ฟาร์มไข่มุก — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว"
     }
   ],
   "forbidden": [

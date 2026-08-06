@@ -23,7 +23,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "precious_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าทองคำ — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด COMEX (USD)"
     },
     {
       "type": "commodity",
@@ -41,7 +42,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "precious_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าเงิน — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด COMEX (USD)"
     },
     {
       "type": "commodity",
@@ -59,7 +61,8 @@
       "elementSource": "career-business.txt",
       "riskTier": "medium",
       "subtype": "precious_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าแพลตตินัม — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด COMEX (USD)"
     },
     {
       "type": "commodity",
@@ -78,7 +81,8 @@
       "riskTier": "risky",
       "subtype": "precious_metal",
       "note": "ตลาดบาง สภาพคล่องต่ำ",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าแพลเลเดียม — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด COMEX (USD)"
     },
     {
       "type": "commodity",
@@ -96,7 +100,8 @@
       "elementSource": "Source4 §5 / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "energy",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าน้ำมันดิบ WTI — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด NYMEX (USD)"
     },
     {
       "type": "commodity",
@@ -114,7 +119,8 @@
       "elementSource": "Source4 §5",
       "riskTier": "medium",
       "subtype": "energy",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าน้ำมันดิบ Brent — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด ICE (USD)"
     },
     {
       "type": "commodity",
@@ -133,7 +139,8 @@
       "riskTier": "risky",
       "subtype": "energy",
       "note": "ผันผวนสูงตามฤดูกาล",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าก๊าซธรรมชาติ — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด NYMEX (USD)"
     },
     {
       "type": "crypto",
@@ -152,7 +159,8 @@
       "elementSource": "data-spec §2.3 (รอซินแส)",
       "riskTier": "risky",
       "subtype": "crypto",
-      "status": "draft"
+      "status": "draft",
+      "business": "Bitcoin — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -171,7 +179,8 @@
       "elementSource": "data-spec §2.3 (รอซินแส)",
       "riskTier": "risky",
       "subtype": "crypto",
-      "status": "draft"
+      "status": "draft",
+      "business": "Ethereum — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "etf",
@@ -189,7 +198,8 @@
       "elementSource": "data-spec §2.2 (sector weight)",
       "riskTier": "safe",
       "subtype": "precious_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "SPDR Gold ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -207,7 +217,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "precious_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "iShares Silver ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -218,15 +229,15 @@
       "currency": "USD",
       "sector": "ETF ตราสารทุน",
       "elements": [
-        "ทอง",
-        "น้ำ"
+        "ทอง"
       ],
       "primaryElement": "ทอง",
-      "elementReason": "ตามพอร์ต S&P500: เทค(ทอง) ~30% + การเงิน(น้ำ) ~13% → ทองหลัก (รอซินแสยืนยัน)",
+      "elementReason": "ETF ดัชนี S&P500 — พอร์ตหลักเทค/ชิป = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "คำนวณจาก sector weight (data-spec §2.2)",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "SPDR S&P 500 ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -244,7 +255,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Invesco QQQ — กองทุน ETF ซื้อขายเหมือนหุ้น (NASDAQ, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -262,7 +274,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Technology Select Sector SPDR — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -280,7 +293,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Financial Select Sector SPDR — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -298,7 +312,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Energy Select Sector SPDR — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -316,7 +331,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Health Care Select Sector SPDR — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -334,7 +350,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "medium",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Consumer Staples Select Sector SPDR — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -352,7 +369,8 @@
       "elementSource": "data-spec §2.2",
       "riskTier": "safe",
       "subtype": "equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Utilities Select Sector SPDR — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSE, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "reit",
@@ -370,7 +388,8 @@
       "elementSource": "Source4 §5 / data-spec",
       "riskTier": "medium",
       "subtype": "reit",
-      "status": "draft"
+      "status": "draft",
+      "business": "Vanguard Real Estate ETF — REIT ลงทุนอสังหาริมทรัพย์ ปันผลสม่ำเสมอ ซื้อขายในตลาดหลักทรัพย์"
     },
     {
       "type": "reit",
@@ -388,7 +407,8 @@
       "elementSource": "Source4 §5",
       "riskTier": "medium",
       "subtype": "reit",
-      "status": "draft"
+      "status": "draft",
+      "business": "CPN Retail Growth REIT — REIT ลงทุนอสังหาริมทรัพย์ ปันผลสม่ำเสมอ ซื้อขายในตลาดหลักทรัพย์"
     },
     {
       "type": "reit",
@@ -406,7 +426,8 @@
       "elementSource": "Source4 §5",
       "riskTier": "medium",
       "subtype": "reit",
-      "status": "draft"
+      "status": "draft",
+      "business": "WHA Premium Growth REIT — REIT ลงทุนอสังหาริมทรัพย์ ปันผลสม่ำเสมอ ซื้อขายในตลาดหลักทรัพย์"
     },
     {
       "type": "bond",
@@ -424,7 +445,8 @@
       "elementSource": "data-spec (สินทรัพย์ปลอดภัย)",
       "riskTier": "safe",
       "subtype": "bond",
-      "status": "draft"
+      "status": "draft",
+      "business": "Vanguard Total Bond Market ETF — ตราสารหนี้/พันธบัตร ผลตอบแทนค่อนข้างแน่นอน ความเสี่ยงต่ำ เหมาะเป็นฐานพอร์ต"
     },
     {
       "type": "bond",
@@ -442,7 +464,8 @@
       "elementSource": "data-spec",
       "riskTier": "safe",
       "subtype": "bond",
-      "status": "draft"
+      "status": "draft",
+      "business": "iShares 10-20Y Treasury Bond ETF — ตราสารหนี้/พันธบัตร ผลตอบแทนค่อนข้างแน่นอน ความเสี่ยงต่ำ เหมาะเป็นฐานพอร์ต"
     },
     {
       "type": "forex",
@@ -460,7 +483,8 @@
       "elementSource": "data-spec §2.3 / บท 15",
       "riskTier": "medium",
       "subtype": "forex",
-      "status": "draft"
+      "status": "draft",
+      "business": "USD/THB — คู่สกุลเงิน เก็งกำไรอัตราแลกเปลี่ยน ใช้ leverage ได้"
     },
     {
       "type": "forex",
@@ -478,7 +502,8 @@
       "elementSource": "data-spec §2.3",
       "riskTier": "medium",
       "subtype": "forex",
-      "status": "draft"
+      "status": "draft",
+      "business": "EUR/USD — คู่สกุลเงิน เก็งกำไรอัตราแลกเปลี่ยน ใช้ leverage ได้"
     },
     {
       "type": "deposit",
@@ -497,7 +522,8 @@
       "riskTier": "safe",
       "subtype": "deposit",
       "note": "ข้อมูลนิ่ง — อัตราดอกเบี้ยจาก ธปท./events.json",
-      "status": "draft"
+      "status": "draft",
+      "business": "เงินฝากออมทรัพย์ — เงินฝาก ความเสี่ยงต่ำสุด ผลตอบแทนต่ำ สภาพคล่องสูง"
     },
     {
       "type": "fund",
@@ -516,7 +542,8 @@
       "riskTier": "safe",
       "subtype": "fund",
       "note": "ข้อมูลนิ่ง",
-      "status": "draft"
+      "status": "draft",
+      "business": "กองทุนตลาดเงิน — กองทุนรวม บริหารโดยบริษัทจัดการ ซื้อขายผ่านตัวแทนจำหน่าย"
     },
     {
       "type": "fund",
@@ -535,7 +562,8 @@
       "riskTier": "safe",
       "subtype": "bond",
       "note": "ข้อมูลนิ่ง — yield จาก THAIBMA",
-      "status": "draft"
+      "status": "draft",
+      "business": "พันธบัตรรัฐบาลไทย — กองทุนรวม บริหารโดยบริษัทจัดการ ซื้อขายผ่านตัวแทนจำหน่าย"
     },
     {
       "type": "fund",
@@ -546,17 +574,16 @@
       "currency": "THB",
       "sector": "กองทุนหุ้นไทย",
       "elements": [
-        "ทอง",
-        "น้ำ",
-        "ไฟ"
+        "ทอง"
       ],
       "primaryElement": "ทอง",
-      "elementReason": "ตามพอร์ต SET50: เทค(ทอง)+การเงิน(น้ำ)+พลังงาน(ไฟ) — ธาตุหลัก ทอง (รอซินแส)",
+      "elementReason": "กองทุนดัชนี SET50 = ตลาดทุน = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
       "elementSource": "คำนวณจาก sector weight (data-spec §2.2)",
       "riskTier": "medium",
       "subtype": "fund",
       "note": "ข้อมูลนิ่ง",
-      "status": "draft"
+      "status": "draft",
+      "business": "กองทุนรวมดัชนี SET50 — กองทุนรวม บริหารโดยบริษัทจัดการ ซื้อขายผ่านตัวแทนจำหน่าย"
     },
     {
       "type": "fund",
@@ -575,7 +602,8 @@
       "riskTier": "safe",
       "subtype": "fund",
       "note": "ข้อมูลนิ่ง",
-      "status": "draft"
+      "status": "draft",
+      "business": "กองทุนรวมทองคำ — กองทุนรวม บริหารโดยบริษัทจัดการ ซื้อขายผ่านตัวแทนจำหน่าย"
     },
     {
       "type": "derivative",
@@ -595,7 +623,8 @@
       "riskTier": "risky",
       "subtype": "derivative",
       "note": "เลเวอเรจ — เฉพาะดวงแข็ง + วงเงินจำกัด",
-      "status": "draft"
+      "status": "draft",
+      "business": "SET50 Index Futures — ตราสารอนุพันธ์ leverage สูง เสี่ยงมาก เหมาะผู้เชี่ยวชาญ"
     },
     {
       "type": "commodity",
@@ -613,7 +642,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สข้าวโพด — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด ZC futures (USD)"
     },
     {
       "type": "commodity",
@@ -631,7 +661,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สข้าวสาลี — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด ZW futures (USD)"
     },
     {
       "type": "commodity",
@@ -649,7 +680,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สถั่วเหลือง — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด ZS futures (USD)"
     },
     {
       "type": "commodity",
@@ -667,7 +699,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สกาแฟ — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด KC futures (USD)"
     },
     {
       "type": "commodity",
@@ -685,7 +718,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สโกโก้ — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด CC futures (USD)"
     },
     {
       "type": "commodity",
@@ -703,7 +737,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สน้ำตาล — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด SB futures (USD)"
     },
     {
       "type": "commodity",
@@ -721,7 +756,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สฝ้าย — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด CT futures (USD)"
     },
     {
       "type": "commodity",
@@ -739,7 +775,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "industrial_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สทองแดง — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด HG futures (USD)"
     },
     {
       "type": "commodity",
@@ -757,7 +794,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "industrial_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สอะลูมิเนียม — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด ALI futures (USD)"
     },
     {
       "type": "commodity",
@@ -775,7 +813,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "industrial_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สนิกเกิล — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด NI futures (USD)"
     },
     {
       "type": "commodity",
@@ -793,7 +832,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "industrial_metal",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สสังกะสี — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด ZN futures (USD)"
     },
     {
       "type": "crypto",
@@ -810,7 +850,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล/พลังงาน = ธาตุไฟ (เหมือน BTC/ETH)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Solana — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -827,7 +868,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "XRP — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -844,7 +886,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "BNB — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -861,7 +904,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Dogecoin — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -878,7 +922,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Cardano — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "etf",
@@ -896,7 +941,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "us_equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Vanguard Total Stock Market ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -914,7 +960,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "global_equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Vanguard Total International Stock ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -932,7 +979,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "us_equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "iShares Russell 2000 ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -950,7 +998,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "emerging_equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "iShares MSCI Emerging Markets ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -968,7 +1017,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "inflation_bond",
-      "status": "draft"
+      "status": "draft",
+      "business": "iShares TIPS Bond ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -986,7 +1036,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "dividend_equity",
-      "status": "draft"
+      "status": "draft",
+      "business": "Schwab US Dividend Equity ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "commodity",
@@ -1000,11 +1051,12 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน)",
+      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้นตามตาราง — รอตรวจ)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "livestock",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สเนื้อโค — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1018,11 +1070,12 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "หมู/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน)",
+      "elementReason": "หมู/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้นตามตาราง — รอตรวจ)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "livestock",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สหมู — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1036,11 +1089,12 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน)",
+      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้นตามตาราง — รอตรวจ)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "livestock",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สเนื้อโคขุน — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1058,7 +1112,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สน้ำมันถั่วเหลือง — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1076,7 +1131,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สกากถั่วเหลือง — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1094,7 +1150,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สน้ำส้ม — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1112,7 +1169,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สข้าวโอ๊ต — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1130,7 +1188,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สข้าวเปลือก — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1148,7 +1207,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "energy",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สแก๊สโซลีน — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "commodity",
@@ -1166,7 +1226,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "energy",
-      "status": "draft"
+      "status": "draft",
+      "business": "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สฮีตติ้งออยล์ — เก็งกำไร/กันความเสี่ยงราคาสินค้าโภคภัณฑ์ อ้างอิงตลาด FUTURES (USD)"
     },
     {
       "type": "crypto",
@@ -1183,7 +1244,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Litecoin — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1200,7 +1262,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Ethereum Classic — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1217,7 +1280,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Shiba Inu — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1234,7 +1298,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "TRON — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1251,7 +1316,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Stellar — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1268,7 +1334,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Chainlink — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1285,7 +1352,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Polkadot — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "crypto",
@@ -1302,7 +1370,8 @@
       "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
-      "status": "draft"
+      "status": "draft",
+      "business": "Avalanche — สกุลเงินดิจิทัล ซื้อขาย 24/7 ความผันผวนสูง ใช้เทคโนโลยีบล็อกเชน"
     },
     {
       "type": "etf",
@@ -1320,7 +1389,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "innovation",
-      "status": "draft"
+      "status": "draft",
+      "business": "ARK Innovation ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "etf",
@@ -1338,7 +1408,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "innovation",
-      "status": "draft"
+      "status": "draft",
+      "business": "ARK Fintech Innovation ETF — กองทุน ETF ซื้อขายเหมือนหุ้น (NYSEARCA, USD) กระจายความเสี่ยงตามดัชนี/ธีม"
     },
     {
       "type": "bond",
@@ -1356,7 +1427,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "treasury",
-      "status": "draft"
+      "status": "draft",
+      "business": "พันธบัตรสหรัฐ 10 ปี — ตราสารหนี้/พันธบัตร ผลตอบแทนค่อนข้างแน่นอน ความเสี่ยงต่ำ เหมาะเป็นฐานพอร์ต"
     },
     {
       "type": "bond",
@@ -1374,7 +1446,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "treasury",
-      "status": "draft"
+      "status": "draft",
+      "business": "พันธบัตรสหรัฐ 5 ปี — ตราสารหนี้/พันธบัตร ผลตอบแทนค่อนข้างแน่นอน ความเสี่ยงต่ำ เหมาะเป็นฐานพอร์ต"
     },
     {
       "type": "bond",
@@ -1392,7 +1465,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "treasury",
-      "status": "draft"
+      "status": "draft",
+      "business": "พันธบัตรสหรัฐ 30 ปี — ตราสารหนี้/พันธบัตร ผลตอบแทนค่อนข้างแน่นอน ความเสี่ยงต่ำ เหมาะเป็นฐานพอร์ต"
     },
     {
       "type": "bond",
@@ -1410,7 +1484,8 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "treasury",
-      "status": "draft"
+      "status": "draft",
+      "business": "ตั๋วเงินคลังสหรัฐ 13 สัปดาห์ — ตราสารหนี้/พันธบัตร ผลตอบแทนค่อนข้างแน่นอน ความเสี่ยงต่ำ เหมาะเป็นฐานพอร์ต"
     }
   ]
 }

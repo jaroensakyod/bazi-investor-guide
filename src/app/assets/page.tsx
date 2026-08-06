@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Fragment } from "react";
 import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
@@ -122,38 +122,8 @@ export default function AssetsPage() {
       )}
 
       {detail && (
-        <div className="card" style={{ borderColor: "#d4af37" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h2>
-              💰 {detail.asset.name} ({detail.asset.ticker}){" "}
-              <span style={{ color: ELEMENT_COLOR[elKey(detail.asset.element)] ?? "#d4af37" }}>{elLabel(detail.asset.element)}</span>{" "}
-              <span className="tag">{typeLabel(detail.asset.type)}</span>{" "}
-              <span className="tag">{tierLabel(detail.asset.riskTier)}</span>
-            </h2>
-            <button className="btn secondary" style={{ fontSize: 12 }} onClick={() => setDetail(null)}>
-              ✕
-            </button>
-          </div>
-          {detail.verdict ? (
-            <>
-              <p>
-                {t("assets.verdict")}: <b>{VD_EMOJI[detail.verdict.verdict] ?? ""} {vdLabel(detail.verdict.verdict)}</b> ({detail.verdict.score}){" "}
-                {detail.verdict.capped ? <span className="tag avoid">⚠️ เกินกำลังดวง</span> : ""}
-              </p>
-              {detail.verdict.reasons.map((r, i) => (
-                <p key={i} style={{ fontSize: 13, color: "#9a937f" }}>
-                  • {r}
-                </p>
-              ))}
-            </>
-          ) : (
-            <p style={{ color: "#9a937f", fontSize: 13 }}>{t("assets.needprofile")}</p>
-          )}
-          <p style={{ fontSize: 13, color: "#9a937f" }}>🔮 {detail.asset.elementReason}</p>
-          <p style={{ marginTop: 8 }}>
-            💰 ราคา: <b>{detail.price != null ? `$${detail.price.toLocaleString()}` : "-"}</b>{" "}
-            <span style={{ color: (detail.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{detail.changePct != null ? `${detail.changePct >= 0 ? "+" : ""}${detail.changePct}%` : "-"}</span>
-          </p>
+        <div className="card" style={{ borderColor: "#d4af37", display: "none" }}>
+          {/* คลิก → info แสดงใต้แถว (ด้านล่าง) — การ์ดนี้ถูกย้ายไป inline แล้ว */}
         </div>
       )}
 
@@ -174,38 +144,77 @@ export default function AssetsPage() {
             </thead>
             <tbody>
               {shown.map((a, i) => (
-                <tr key={a.ticker} onClick={() => showDetail(a.ticker)} style={{ cursor: "pointer" }}>
-                  <td>
-                    {i + 1}{" "}
-                    <button
-                      className="btn secondary"
-                      style={{ fontSize: 11, padding: "1px 6px", marginLeft: 4 }}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        post(`/api/watchlist?userId=${myUserId()}&action=add&entry=${encodeURIComponent(`a:${a.ticker}`)}`, {});
-                      }}
-                    >
-                      ☆
-                    </button>
-                  </td>
-                  <td>
-                    <b>{a.name}</b>{" "}
-                    <span className="tag">{typeLabel(a.type)}</span>
-                    <div style={{ fontSize: 11.5, color: "#9a937f" }}>
-                      {a.ticker} {a.capped ? "· ⚠️เกินกำลังดวง" : ""}
-                    </div>
-                  </td>
-                  <td>
-                    {VD_EMOJI[a.verdict] ?? ""} {vdLabel(a.verdict)} <span style={{ color: "#9a937f", fontSize: 12 }}>({a.score})</span>
-                  </td>
-                  <td>
-                    <span style={{ color: ELEMENT_COLOR[elKey(a.element)] ?? "#d4af37", fontWeight: 700 }}>{elLabel(a.element)}</span>
-                  </td>
-                  <td>{tierLabel(a.riskTier)}</td>
-                  <td style={{ color: (a.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>
-                    {a.changePct != null ? `${a.changePct >= 0 ? "+" : ""}${a.changePct}%` : "-"}
-                  </td>
-                </tr>
+                <Fragment key={a.ticker}>
+                  <tr onClick={() => showDetail(a.ticker)} style={{ cursor: "pointer" }}>
+                    <td>
+                      {i + 1}{" "}
+                      <button
+                        className="btn secondary"
+                        style={{ fontSize: 11, padding: "1px 6px", marginLeft: 4 }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          post(`/api/watchlist?userId=${myUserId()}&action=add&entry=${encodeURIComponent(`a:${a.ticker}`)}`, {});
+                        }}
+                      >
+                        ☆
+                      </button>
+                    </td>
+                    <td>
+                      <b>{a.name}</b>{" "}
+                      <span className="tag">{typeLabel(a.type)}</span>
+                      <div style={{ fontSize: 11.5, color: "#9a937f" }}>
+                        {a.ticker} {a.capped ? "· ⚠️เกินกำลังดวง" : ""}
+                      </div>
+                    </td>
+                    <td>
+                      {a.verdict ? (
+                        <>
+                          {VD_EMOJI[a.verdict] ?? ""} {vdLabel(a.verdict)} <span style={{ color: "#9a937f", fontSize: 12 }}>({a.score})</span>
+                        </>
+                      ) : (
+                        <span style={{ color: "#9a937f" }}>-</span>
+                      )}
+                    </td>
+                    <td>
+                      <span style={{ color: ELEMENT_COLOR[elKey(a.element)] ?? "#d4af37", fontWeight: 700 }}>{elLabel(a.element)}</span>
+                    </td>
+                    <td>{tierLabel(a.riskTier)}</td>
+                    <td style={{ color: (a.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>
+                      {a.changePct != null ? `${a.changePct >= 0 ? "+" : ""}${a.changePct}%` : "-"}
+                    </td>
+                  </tr>
+                  {detail && detail.asset.ticker === a.ticker && (
+                    <tr key={`${a.ticker}-info`} style={{ background: "#12151c" }}>
+                      <td colSpan={6} style={{ padding: "10px 14px", fontSize: 13 }}>
+                        <p>
+                          <b>🏭 {detail.asset.sector ?? detail.asset.type}</b> — {detail.asset.elementReason}
+                        </p>
+                        {detail.verdict ? (
+                          <>
+                            <p>
+                              {t("assets.verdict")}: <b>{VD_EMOJI[detail.verdict.verdict] ?? ""} {vdLabel(detail.verdict.verdict)}</b> ({detail.verdict.score}){" "}
+                              {detail.verdict.capped ? <span className="tag avoid">⚠️ เกินกำลังดวง</span> : ""}
+                            </p>
+                            {detail.verdict.reasons.map((r, j) => (
+                              <p key={j} style={{ color: "#9a937f" }}>
+                                • {r}
+                              </p>
+                            ))}
+                          </>
+                        ) : (
+                          <p style={{ color: "#9a937f" }}>{t("assets.needprofile")}</p>
+                        )}
+                        <p>
+                          💰 ราคา: <b>{detail.price != null ? `$${detail.price.toLocaleString()}` : "-"}</b>{" "}
+                          <span style={{ color: (detail.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{detail.changePct != null ? `${detail.changePct >= 0 ? "+" : ""}${detail.changePct}%` : "-"}</span>{" "}
+                          <button className="btn secondary" style={{ fontSize: 11.5, marginLeft: 8 }} onClick={() => setDetail(null)}>
+                            ✕ ปิด
+                          </button>
+                        </p>
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
               ))}
             </tbody>
           </table>

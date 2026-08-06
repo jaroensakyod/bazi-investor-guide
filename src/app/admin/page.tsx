@@ -38,6 +38,21 @@ export default function AdminPage() {
     } else setRefreshOut(`❌ ${r.error}`);
   }
 
+  async function exportCsv(kind: "assets" | "thai-stocks") {
+    const res = await fetch(`/api/export?kind=${kind}`);
+    if (!res.ok) {
+      setError(`export ล้มเหลว (${res.status})`);
+      return;
+    }
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = kind === "assets" ? "assets-review.csv" : "thai-stocks-review.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   const intents = data ? Object.entries(data.usage.byIntent).sort((a, b) => b[1] - a[1]).slice(0, 8) : [];
 
   return (
@@ -62,6 +77,16 @@ export default function AdminPage() {
         {refreshOut && (
           <pre style={{ background: "#10131a", padding: 10, borderRadius: 8, fontSize: 12, marginTop: 10, whiteSpace: "pre-wrap" }}>{refreshOut}</pre>
         )}
+      </div>
+      <div className="card">
+        <h2>📤 {t("admin.export")}</h2>
+        <p style={{ fontSize: 12.5, color: "#9a937f", marginBottom: 8 }}>{t("admin.exportdesc")}</p>
+        <button className="btn" onClick={() => exportCsv("assets")} style={{ marginRight: 8 }}>
+          📦 export สินทรัพย์ (113)
+        </button>
+        <button className="btn secondary" onClick={() => exportCsv("thai-stocks")}>
+          🇹🇭 export หุ้นไทย (272)
+        </button>
       </div>
       {data && (
         <>
