@@ -95,6 +95,11 @@ const TH = {
   "admin.export": "📤 Export ให้ซินแสตรวจ",
   "admin.exportdesc": "CSV เปิดใน Excel ได้ — กรอก isCorrect(Y/N)/correctedElement แล้วส่งกลับมา import",
 
+  "legal.disclaimer": "ข้อจำกัดความรับผิดชอบ",
+  "legal.risk": "การเตือนความเสี่ยง",
+  "legal.terms": "ข้อกำหนดและเงื่อนไข",
+  "legal.privacy": "นโยบายความเป็นส่วนตัว",
+
   // elements (ป้ายธาตุ)
   "el.wood": "ไม้",
   "el.fire": "ไฟ",
@@ -263,6 +268,11 @@ const ZH: Record<LocaleKey, string> = {
   "admin.export": "📤 导出给大师审核",
   "admin.exportdesc": "CSV 可用 Excel 打开 — 填写 isCorrect(Y/N)/correctedElement 后返回导入",
 
+  "legal.disclaimer": "免责声明",
+  "legal.risk": "风险提示",
+  "legal.terms": "条款与条件",
+  "legal.privacy": "隐私政策",
+
   "el.wood": "木",
   "el.fire": "火",
   "el.earth": "土",
@@ -425,6 +435,11 @@ const EN: Record<LocaleKey, string> = {
   "admin.datarefresh": "🔄 Update data (runs backend scripts)",
   "admin.export": "📤 Export for master review",
   "admin.exportdesc": "CSV opens in Excel — fill isCorrect(Y/N)/correctedElement and send back to import",
+
+  "legal.disclaimer": "Disclaimer",
+  "legal.risk": "Risk Warning",
+  "legal.terms": "Terms & Conditions",
+  "legal.privacy": "Privacy Policy",
 
   "el.wood": "Wood",
   "el.fire": "Fire",
