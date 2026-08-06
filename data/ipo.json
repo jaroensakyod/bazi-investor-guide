@@ -42,7 +42,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     },
     {
       "ticker": "OCLT",
@@ -56,7 +56,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     },
     {
       "ticker": "VOGX",
@@ -70,7 +70,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     },
     {
       "ticker": "BLSM",
@@ -84,7 +84,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     },
     {
       "ticker": "LTGO",
@@ -98,7 +98,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     },
     {
       "ticker": "FOIL",
@@ -112,7 +112,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     },
     {
       "ticker": "PHAX",
@@ -126,7 +126,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T11:59:57.116Z"
+      "fetchedAt": "2026-08-06T12:02:34.252Z"
     }
   ]
 }
