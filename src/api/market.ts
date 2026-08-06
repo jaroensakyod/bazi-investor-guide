@@ -246,6 +246,16 @@ export async function handleWatchlist(q: Query): Promise<ApiResponse<unknown>> {
   return ok({ entries, rows, updatedAt: snap?.updatedAt ?? null });
 }
 
+/** พอร์ตเด่นรายเดือน (สไตล์ ProPicks AI) — ต้องมี profile (ดวง) */
+export async function handlePicks(q: Query): Promise<ApiResponse<unknown>> {
+  const profile = loadUser(q.userId ?? "");
+  if (!profile) return err("ยังไม่มีโปรไฟล์ — กรอกวันเกิดก่อน (หน้าโปรไฟล์)");
+  const state = await stateOfProfile(profile);
+  const { buildMonthlyPicks } = await import("../lib/picks/monthly-picks");
+  const market = (q.market ?? "TH") as "TH" | "US" | "MID";
+  return ok(buildMonthlyPicks(state, market, Number(q.limit ?? 10)));
+}
+
 /** Export CSV ให้ซินแสตรวจธาตุ — kind=assets (สินทรัพย์ 113) / kind=thai-stocks */
 export function handleExport(q: Query): { ok: true; data: string; filename: string } | { ok: false; error: string } {
   const kind = String(q.kind ?? "assets");

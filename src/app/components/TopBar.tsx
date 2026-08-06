@@ -12,6 +12,7 @@ export default function TopBar() {
       </Link>
       <nav>
         <Link href="/chat">{t("nav.chat")}</Link>
+        <Link href="/picks">{t("nav.picks")}</Link>
         <Link href="/markets">{t("nav.markets")}</Link>
         <Link href="/stocks">{t("nav.stocks")}</Link>
         <Link href="/assets">{t("nav.assets")}</Link>
