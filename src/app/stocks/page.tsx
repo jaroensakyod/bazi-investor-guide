@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { get } from "../lib/api";
+import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
 type StockRow = { ticker: string; name: string; market: string; country: string; sector: string; element: string; tier: string; price: number | null; changePct: number | null };
@@ -41,6 +41,13 @@ export default function StocksPage() {
   const [detail, setDetail] = useState<StockDetail | null>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [error, setError] = useState("");
+  const [watching, setWatching] = useState<Record<string, boolean>>({});
+
+  async function toggleWatch(ticker: string, market: string) {
+    const entry = `s:${market}:${ticker}`;
+    const r = await post<{ entries: string[] }>(`/api/watchlist?userId=${myUserId()}&action=add&entry=${encodeURIComponent(entry)}`, {});
+    setWatching((w) => ({ ...w, [entry]: r.ok && r.data.entries.includes(entry) }));
+  }
 
   const load = useCallback(async () => {
     const params = new URLSearchParams({ limit: "300" });
@@ -154,7 +161,17 @@ export default function StocksPage() {
               {(data?.stocks ?? []).map((s) => (
                 <tr key={`${s.market}:${s.ticker}`} onClick={() => showDetail(s.ticker, s.market)} style={{ cursor: "pointer" }}>
                   <td>
-                    <b>{s.ticker}</b>
+                    <b>{s.ticker}</b>{" "}
+                    <button
+                      className="btn secondary"
+                      style={{ fontSize: 11, padding: "1px 6px", marginLeft: 4 }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleWatch(s.ticker, s.market);
+                      }}
+                    >
+                      {watching[`s:${s.market}:${s.ticker}`] ? "⭐" : "☆"}
+                    </button>
                   </td>
                   <td style={{ fontSize: 13 }}>
                     {s.name}

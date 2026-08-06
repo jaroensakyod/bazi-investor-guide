@@ -14,6 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchQuotes, openYahooSession, yahooTicker } from "../src/lib/market/yahoo";
 import { buildSnapshot, saveSnapshot } from "../src/lib/market/market-data";
+import { INDICES, FX } from "../src/lib/market/indices";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const LATEST = path.join(ROOT, "data/cache/market/latest.json");
@@ -53,8 +54,8 @@ async function main() {
       if (yt && !byTicker.has(yt)) byTicker.set(yt, { ...s, src: file });
     }
   }
-  const symbols = [...byTicker.keys()];
-  console.log(`📡 ดึงราคา ${symbols.length} ตัว (ไทย ${symbols.filter((s) => s.endsWith(".BK")).length} + โลก) จาก Yahoo...`);
+  const symbols = [...byTicker.keys(), ...INDICES.map((i) => i.symbol), ...FX.map((f) => f.symbol)];
+  console.log(`📡 ดึงราคา ${symbols.length} ตัว (หุ้น ${byTicker.size} + ดัชนี ${INDICES.length} + FX ${FX.length}) จาก Yahoo...`);
 
   const session = await openYahooSession();
   const quotes = await fetchQuotes(symbols, session, 25, 800, {

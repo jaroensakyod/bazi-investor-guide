@@ -7,7 +7,7 @@ import { getUpcomingIPOs } from "../lib/chat/tools";
 import { getNewsImpact } from "../lib/chat/tools";
 import { getTodayAlmanac } from "../lib/chat/tools";
 import { getFortuneInvest } from "../lib/chat/tools";
-import { loadUser, type UserProfile } from "../lib/chat/user-store";
+import { loadUser, toggleWatchlist, type UserProfile } from "../lib/chat/user-store";
 import { ok, err, type ApiResponse, type Query } from "./types";
 import { stateOfProfile } from "./chat";
 import { execFile } from "node:child_process";
@@ -19,6 +19,7 @@ import { loadFundamentalsCache } from "../lib/market/fundamentals";
 import { yahooTicker } from "../lib/market/yahoo";
 import { buffettChecks, buffettScore } from "../lib/report/buffett-checks";
 import { getAssets } from "../lib/assets/asset-universe";
+import { INDICES, FX, FEATURED_ASSET_SYMBOLS } from "../lib/market/indices";
 
 /** อัปเดตข้อมูล (IPO/ราคา/ข่าว) — รันสคริปต์ backend แล้วคืน output ท้ายสุด */
 export function handleRefresh(kind: string): Promise<ApiResponse<unknown>> {
@@ -190,6 +191,59 @@ export function handleStockDetail(q: Query): ApiResponse<unknown> {
     updatedAt: snap?.updatedAt ?? null,
     fundamentals: fund ? { roe: fund.roe, profitMargin: fund.profitMargin, revenueGrowth: fund.revenueGrowth, debtToEquity: fund.debtToEquity, buffettScore: buffettScore(buffettChecks(fund)) } : null,
   });
+}
+
+/** ภาพรวมตลาดสไตล์ investing.com — ดัชนี/FX/สินทรัพย์เด่น (จาก snapshot) */
+export function handleIndices(q: Query): ApiResponse<unknown> {
+  const snap = loadSnapshot();
+  const qq = snap?.quotes ?? {};
+  const pick = (sym: string) => {
+    const md = qq[sym];
+    return md ? { symbol: sym, price: md.price, changePct: md.changePct } : null;
+  };
+  const indices = INDICES.map((i) => ({ name: i.name, region: i.region, ...(pick(i.symbol) ?? { price: null, changePct: null }) })).filter((i) => i.price != null);
+  const forex = FX.map((f) => ({ name: f.name, ...(pick(f.symbol) ?? { price: null, changePct: null }) })).filter((f) => f.price != null);
+  const assets = FEATURED_ASSET_SYMBOLS.map((sym) => {
+    const a = getAssets().find((x) => x.ticker === sym);
+    const md = pick(sym);
+    return { ticker: sym, name: a?.name ?? sym, type: a?.type ?? "asset", element: a?.primaryElement ?? null, price: md?.price ?? null, changePct: md?.changePct ?? null };
+  }).filter((a) => a.price != null);
+  return ok({ updatedAt: snap?.updatedAt ?? null, indices, forex, assets });
+}
+
+/** Watchlist — GET: รายการพร้อมราคา/verdict · POST {action:add|remove, entry} */
+export async function handleWatchlist(q: Query): Promise<ApiResponse<unknown>> {
+  const userId = String(q.userId ?? "");
+  const profile = loadUser(userId);
+  if (!profile) return err("ยังไม่มีโปรไฟล์ — กรอกวันเกิดก่อน (หน้าโปรไฟล์)");
+  const entries = profile.watchlist ?? [];
+
+  if (q.action) {
+    const entry = String(q.entry ?? "");
+    if (!entry) return err("ต้องระบุ entry (เช่น s:SET:KBANK / a:GC=F)");
+    const list = toggleWatchlist(userId, entry);
+    return ok({ entries: list, entry });
+  }
+
+  const state = await stateOfProfile(profile);
+  const snap = loadSnapshot();
+  const rows = [];
+  for (const e of entries) {
+    if (e.startsWith("s:")) {
+      const [, market, ticker] = e.split(":");
+      const stock = getAllStocks().find((s) => s.ticker === ticker && s.market === market);
+      if (!stock) continue;
+      const md = snap?.quotes[yahooTicker(stock.ticker, stock.market) ?? ""];
+      rows.push({ entry: e, kind: "stock", ticker: stock.ticker, name: stock.name, market: stock.market, element: stock.primaryElement, price: md?.price ?? null, changePct: md?.changePct ?? null });
+    } else if (e.startsWith("a:")) {
+      const ticker = e.slice(2);
+      const asset = getAssets().find((a) => a.ticker === ticker);
+      if (!asset) continue;
+      const md = snap?.quotes[asset.ticker];
+      rows.push({ entry: e, kind: "asset", ticker: asset.ticker, name: asset.name, market: asset.type, element: asset.primaryElement, price: md?.price ?? null, changePct: md?.changePct ?? null });
+    }
+  }
+  return ok({ entries, rows, updatedAt: snap?.updatedAt ?? null });
 }
 
 /** PDF รายงานสไตล์สถาบัน — คืน Buffer (ดาวน์โหลด .pdf) */

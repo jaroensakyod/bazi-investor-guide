@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { get, myUserId } from "../lib/api";
+import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
 type AssetRow = {
@@ -175,7 +175,19 @@ export default function AssetsPage() {
             <tbody>
               {shown.map((a, i) => (
                 <tr key={a.ticker} onClick={() => showDetail(a.ticker)} style={{ cursor: "pointer" }}>
-                  <td>{i + 1}</td>
+                  <td>
+                    {i + 1}{" "}
+                    <button
+                      className="btn secondary"
+                      style={{ fontSize: 11, padding: "1px 6px", marginLeft: 4 }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        post(`/api/watchlist?userId=${myUserId()}&action=add&entry=${encodeURIComponent(`a:${a.ticker}`)}`, {});
+                      }}
+                    >
+                      ☆
+                    </button>
+                  </td>
                   <td>
                     <b>{a.name}</b>{" "}
                     <span className="tag">{typeLabel(a.type)}</span>

@@ -21,6 +21,8 @@ export type UserProfile = {
   /** sha256 ของ birth payload — เปลี่ยนเมื่อข้อมูลเกิดเปลี่ยน → ต้องคำนวณดวงใหม่ */
   chartHash: string;
   locale: "th" | "zh" | "en";
+  /** ติดตาม (watchlist) — รูปแบบ "s:<market>:<ticker>" (หุ้น) / "a:<ticker>" (สินทรัพย์) */
+  watchlist?: string[];
   createdAt: string;
   updatedAt: string;
 };
@@ -75,11 +77,26 @@ export function upsertUser(p: BirthPayload & { userId: string; locale?: UserProf
     province: p.province,
     chartHash: hash,
     locale: p.locale ?? existing?.locale ?? "th",
+    watchlist: existing?.watchlist ?? [],
     createdAt: existing?.createdAt ?? now,
     updatedAt: now,
   };
   saveUser(profile);
   return profile;
+}
+
+/** เพิ่ม/ลบรายการติดตาม (watchlist) — รูปแบบ "s:<market>:<ticker>" / "a:<ticker>" — คืนรายการใหม่ กันซ้ำ */
+export function toggleWatchlist(userId: string, entry: string): string[] {
+  const u = loadUser(userId);
+  if (!u) return [];
+  const list = u.watchlist ?? [];
+  const i = list.indexOf(entry);
+  if (i >= 0) list.splice(i, 1);
+  else list.push(entry);
+  u.watchlist = list;
+  u.updatedAt = new Date().toISOString();
+  saveUser(u);
+  return list;
 }
 
 /** ข้อมูลเกิดเปลี่ยนไปหรือยัง (ใช้เช็คว่าต้องคำนวณดวงใหม่ไหม) */

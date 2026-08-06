@@ -16,7 +16,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { ok, err, type Query } from "../src/api/types";
 import { handleProfile, handleChat } from "../src/api/chat";
-import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf, handleStocks, handleStockDetail, handleRefresh, handleSearch } from "../src/api/market";
+import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf, handleStocks, handleStockDetail, handleRefresh, handleSearch, handleIndices, handleWatchlist } from "../src/api/market";
 import { handleDashboard } from "../src/api/dashboard";
 
 const PORT = Number(process.argv[process.argv.indexOf("--port") + 1] ?? 8787);
@@ -103,6 +103,15 @@ const server = createServer(async (req, res) => {
     if (req.method === "GET" && path === "/api/stocks") return send(res, 200, handleStocks(q));
     if (req.method === "GET" && path === "/api/stock") return send(res, 200, handleStockDetail(q));
     if (req.method === "GET" && path === "/api/search") return send(res, 200, handleSearch(q));
+    if (req.method === "GET" && path === "/api/indices") return send(res, 200, handleIndices(q));
+    if (req.method === "GET" && path === "/api/watchlist") {
+      const r = await handleWatchlist(q);
+      return send(res, r.ok ? 200 : 400, r);
+    }
+    if (req.method === "POST" && path === "/api/watchlist") {
+      const r = await handleWatchlist(q);
+      return send(res, r.ok ? 200 : 400, r);
+    }
     if (req.method === "POST" && path === "/api/refresh") {
       const r = await handleRefresh(String(q.kind ?? ""));
       return send(res, r.ok ? 200 : 400, r);
