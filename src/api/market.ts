@@ -60,7 +60,7 @@ export function handleMovers(q: Query): ApiResponse<unknown> {
 
 export async function handleIpo(q: Query): Promise<ApiResponse<unknown>> {
   const { getUpcomingIPOs } = await import("../lib/chat/tools");
-  const r = getUpcomingIPOs({ market: q.market, limit: num(q, "limit", 20) });
+  const r = getUpcomingIPOs({ market: q.market, limit: num(q, "limit", 50) });
   if (!r.ok) return err(r.error ?? "ยังไม่มีข้อมูล IPO");
   const { classifyIpoElement, elementFitForUser } = await import("../lib/market/ipo-elements");
   let state: Awaited<ReturnType<typeof stateOfProfile>> | null = null;
