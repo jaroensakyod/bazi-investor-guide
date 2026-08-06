@@ -82,4 +82,18 @@ export async function handlePortfolio(q: Query): Promise<ApiResponse<unknown>> {
   return res.ok ? ok(res.data) : err(res.error ?? "portfolio error");
 }
 
+/** PDF รายงานสไตล์สถาบัน — คืน Buffer (ดาวน์โหลด .pdf) */
+export async function handleReportPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  const ticker = String(q.ticker ?? "").toUpperCase();
+  if (!ticker) return { ok: false, error: "ต้องระบุ ticker" };
+  const profile = loadUser(q.userId ?? "guest");
+  const state = profile ? await stateOfProfile(profile) : undefined;
+  const { buildReportPdf } = await import("./report-pdf");
+  try {
+    return { ok: true, data: await buildReportPdf(ticker, state) };
+  } catch (e) {
+    return { ok: false, error: `PDF error: ${(e as Error).message}` };
+  }
+}
+
 export type { UserProfile };

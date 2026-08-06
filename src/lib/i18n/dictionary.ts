@@ -70,6 +70,7 @@ const TH = {
   "report.avoid": "เลี่ยง (avoid)",
   "report.buffett": "🧠 Buffett score",
   "report.pdfnote": "💾 PDF รายงานฉบับเต็ม — กำลังพัฒนา (Phase 3)",
+  "report.pdf": "ดาวน์โหลด PDF รายงาน",
   "report.notfound": "ไม่พบหุ้น",
 
   // admin
@@ -212,6 +213,7 @@ const ZH: Record<LocaleKey, string> = {
   "report.avoid": "忌（avoid）",
   "report.buffett": "🧠 巴菲特评分",
   "report.pdfnote": "💾 完整 PDF 报告 — 开发中（Phase 3）",
+  "report.pdf": "下载 PDF 报告",
   "report.notfound": "未找到该股票",
 
   "admin.title": "📊 用户数据看板",
@@ -348,6 +350,7 @@ const EN: Record<LocaleKey, string> = {
   "report.avoid": "Avoid",
   "report.buffett": "🧠 Buffett score",
   "report.pdfnote": "💾 Full PDF report — in development (Phase 3)",
+  "report.pdf": "Download PDF report",
   "report.notfound": "Stock not found",
 
   "admin.title": "📊 User Dashboard",

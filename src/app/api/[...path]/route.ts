@@ -24,6 +24,14 @@ async function proxy(req: NextRequest, ctx: Ctx, method: "GET" | "POST") {
       body: method === "POST" ? JSON.stringify(await req.json()) : undefined,
       cache: "no-store",
     });
+    const contentType = res.headers.get("content-type") ?? "";
+    if (contentType.includes("application/pdf")) {
+      const buf = await res.arrayBuffer();
+      return new NextResponse(buf, {
+        status: res.status,
+        headers: { "Content-Type": "application/pdf", "Content-Disposition": `attachment; filename="report.pdf"` },
+      });
+    }
     const text = await res.text();
     let body: unknown;
     try {

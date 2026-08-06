@@ -13,7 +13,7 @@ type ReportData = {
     persona: { emoji: string; name: string };
     timeline: Array<{ ageRange: string; verdict: string; advice: string }>;
   } | null;
-  buffett: { score: number; checks: Array<{ label: string; pass: boolean }> } | null;
+  buffett: { score: number; checks: Array<{ label: string; status: "pass" | "warn" | "fail" }> } | null;
 };
 
 export default function ReportPage() {
@@ -31,6 +31,29 @@ export default function ReportPage() {
     setBusy(false);
     if (r.ok) setData(r.data);
     else setError(r.error);
+  }
+
+  async function downloadPdf() {
+    setBusy(true);
+    try {
+      const res = await fetch(`/api/report/pdf?ticker=${encodeURIComponent(ticker)}&userId=${myUserId()}`);
+      if (!res.ok) {
+        const j = (await res.json()) as { error?: string };
+        setError(j.error ?? "PDF error");
+        return;
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${ticker}-report.pdf`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      setError(`PDF error: ${(e as Error).message}`);
+    } finally {
+      setBusy(false);
+    }
   }
 
   const elMap: Record<string, string> = { ไม้: "wood", ไฟ: "fire", ดิน: "earth", ทอง: "metal", น้ำ: "water" };
@@ -86,12 +109,16 @@ export default function ReportPage() {
               </h2>
               {data.buffett.checks.map((c, i) => (
                 <p key={i} style={{ fontSize: 13.5, marginBottom: 2 }}>
-                  {c.pass ? "✅" : "❌"} {c.label}
+                  {c.status === "pass" ? "✅" : c.status === "warn" ? "🟡" : "❌"} {c.label}
                 </p>
               ))}
             </div>
           )}
           <div className="card" style={{ fontSize: 12.5, color: "#9a937f" }}>
+            <button className="btn" onClick={downloadPdf} disabled={busy} style={{ marginBottom: 8 }}>
+              📄 {t("report.pdf")}
+            </button>
+            <br />
             {t("report.pdfnote")} · {t("disclaimer")}
           </div>
         </>

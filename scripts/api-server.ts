@@ -16,7 +16,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { ok, err, type Query } from "../src/api/types";
 import { handleProfile, handleChat } from "../src/api/chat";
-import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio } from "../src/api/market";
+import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf } from "../src/api/market";
 import { handleDashboard } from "../src/api/dashboard";
 
 const PORT = Number(process.argv[process.argv.indexOf("--port") + 1] ?? 8787);
@@ -44,6 +44,15 @@ function send(res: ServerResponse, status: number, body: unknown) {
     "Access-Control-Allow-Headers": "Content-Type",
   });
   res.end(JSON.stringify(body));
+}
+
+function sendRaw(res: ServerResponse, status: number, body: Buffer, contentType: string) {
+  res.writeHead(status, {
+    "Content-Type": contentType,
+    "Content-Length": body.length,
+    "Access-Control-Allow-Origin": "*",
+  });
+  res.end(body);
 }
 
 function parseQuery(url: string | undefined): Query {
@@ -82,6 +91,11 @@ const server = createServer(async (req, res) => {
     if (req.method === "GET" && path === "/api/report") {
       const r = await handleReport(q);
       return send(res, r.ok ? 200 : 400, r);
+    }
+    if (req.method === "GET" && path === "/api/report/pdf") {
+      const r = await handleReportPdf(q);
+      if (!r.ok) return send(res, 400, err(r.error));
+      return sendRaw(res, 200, r.data, "application/pdf");
     }
     if (req.method === "GET" && path === "/api/assets") {
       const r = await handleAssets(q);
