@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-08-06T09:26:35.118Z",
+ "updatedAt": "2026-08-06T09:58:38.530Z",
  "quotes": {
   "ADVANC.BK": {
    "updatedAt": "2026-08-06T09:15:07.022Z",
@@ -1576,11 +1576,11 @@
    "low52w": 4.24
   },
   "CPNREIT.BK": {
-   "price": 13.4,
-   "changePct": -1.47,
-   "marketCap": 48522387456,
+   "price": 13.5,
+   "changePct": -0.74,
+   "marketCap": 48884498432,
    "currency": "THB",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "SPRC.BK": {
    "updatedAt": "2026-08-06T09:15:07.022Z",
@@ -1659,7 +1659,7 @@
    "changePct": -0.87,
    "marketCap": 39544631296,
    "currency": "THB",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "BKIH.BK": {
    "updatedAt": "2026-08-06T09:15:07.022Z",
@@ -33808,13 +33808,13 @@
    "price": 33.03,
    "changePct": -0.09,
    "currency": "THB",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "EURUSD=X": {
    "price": 1.15,
-   "changePct": -0.09,
+   "changePct": -0.1,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "USDJPY=X": {
    "updatedAt": "2026-08-06T09:15:07.022Z",
@@ -33865,434 +33865,587 @@
    "low52w": 1322.42
   },
   "GC=F": {
-   "price": 4342,
-   "changePct": 0.85,
+   "price": 4333.9,
+   "changePct": 0.67,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.529Z"
   },
   "SI=F": {
-   "price": 62.24,
-   "changePct": -0.09,
+   "price": 62.13,
+   "changePct": -0.26,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "PL=F": {
-   "price": 1767,
-   "changePct": 1.15,
+   "price": 1765.9,
+   "changePct": 1.09,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "PA=F": {
-   "price": 1385.5,
-   "changePct": 1.12,
+   "price": 1385,
+   "changePct": 1.09,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "CL=F": {
-   "price": 75.41,
-   "changePct": 0.25,
+   "price": 75.44,
+   "changePct": 0.29,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "BZ=F": {
-   "price": 79.7,
-   "changePct": 0.31,
+   "price": 79.76,
+   "changePct": 0.39,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "NG=F": {
    "price": 2.68,
-   "changePct": -0.15,
+   "changePct": -0.3,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "BTC-USD": {
-   "price": 64732.95,
-   "changePct": 0.99,
-   "marketCap": 1298699255808,
+   "price": 64618.99,
+   "changePct": 0.81,
+   "marketCap": 1296731734016,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ETH-USD": {
-   "price": 1908.27,
-   "changePct": 2.03,
-   "marketCap": 230247464960,
+   "price": 1906.06,
+   "changePct": 1.91,
+   "marketCap": 229973327872,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "GLD": {
    "price": 389.64,
    "changePct": 4.14,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "SLV": {
    "price": 56.07,
    "changePct": 4.14,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "SPY": {
    "price": 769.79,
    "changePct": -0.2,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "QQQ": {
    "price": 717.3,
    "changePct": -0.9,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLK": {
    "price": 185.91,
    "changePct": -0.53,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLF": {
    "price": 58,
    "changePct": 0.21,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLE": {
    "price": 57.31,
    "changePct": -2.07,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLV": {
    "price": 164.16,
    "changePct": 1.27,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLP": {
    "price": 85.33,
    "changePct": -0.05,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLU": {
    "price": 43.66,
    "changePct": -1.02,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "VNQ": {
    "price": 98.92,
    "changePct": 0,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "BND": {
    "price": 72.46,
    "changePct": 0.03,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.117Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "TLH": {
    "price": 97.36,
    "changePct": 0.12,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZC=F": {
-   "price": 461.25,
-   "changePct": 0.27,
+   "price": 460.25,
+   "changePct": 0.05,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZW=F": {
-   "price": 646.75,
-   "changePct": 0.7,
+   "price": 644.75,
+   "changePct": 0.39,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZS=F": {
-   "price": 1175.5,
-   "changePct": 0.06,
-   "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
-  },
-  "KC=F": {
-   "price": 312.3,
-   "changePct": 0.27,
-   "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
-  },
-  "CC=F": {
-   "price": 5728,
-   "changePct": -4.55,
-   "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
-  },
-  "SB=F": {
-   "price": 15.15,
+   "price": 1174.75,
    "changePct": 0,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "KC=F": {
+   "price": 325.65,
+   "changePct": -0.38,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "CC=F": {
+   "price": 5636,
+   "changePct": -4.18,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "SB=F": {
+   "price": 15.18,
+   "changePct": 0.2,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "CT=F": {
-   "price": 82.92,
-   "changePct": -0.12,
+   "price": 83.08,
+   "changePct": 0.07,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "HG=F": {
-   "price": 6.79,
-   "changePct": 0.96,
+   "price": 6.82,
+   "changePct": 1.43,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ALI=F": {
-   "price": 3437.75,
-   "changePct": 0.53,
+   "price": 3451.75,
+   "changePct": 0.94,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZN=F": {
-   "price": 108.84,
-   "changePct": -0.04,
+   "price": 108.8,
+   "changePct": -0.09,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "SOL-USD": {
-   "price": 73.51,
-   "changePct": -0.57,
-   "marketCap": 42727661568,
+   "price": 73.23,
+   "changePct": -0.95,
+   "marketCap": 42568183808,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XRP-USD": {
-   "price": 1.05,
-   "changePct": -1.54,
-   "marketCap": 65508204544,
+   "price": 1.04,
+   "changePct": -1.82,
+   "marketCap": 65280749568,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "BNB-USD": {
-   "price": 594.52,
-   "changePct": -0.08,
-   "marketCap": 79129329664,
+   "price": 593.8,
+   "changePct": -0.2,
+   "marketCap": 79065997312,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "DOGE-USD": {
    "price": 0.07,
-   "changePct": -0.5,
-   "marketCap": 11873731584,
+   "changePct": -1.1,
+   "marketCap": 10723633152,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ADA-USD": {
    "price": 0.19,
-   "changePct": -4.09,
-   "marketCap": 6884837376,
+   "changePct": -3.9,
+   "marketCap": 6897416192,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "VTI": {
    "price": 379.65,
    "changePct": -0.31,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "VXUS": {
    "price": 86.51,
    "changePct": 0.07,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "IWM": {
    "price": 299.77,
    "changePct": -0.64,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "EEM": {
    "price": 65.72,
    "changePct": -0.42,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "TIP": {
    "price": 107,
    "changePct": -0.05,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "SCHD": {
    "price": 33.64,
    "changePct": -0.62,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "LAND": {
    "price": 8.2,
    "changePct": 0.49,
    "marketCap": 353719872,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "JADE": {
    "price": 78.19,
    "changePct": -0.13,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "LE=F": {
    "price": 229.43,
    "changePct": 0.67,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "HE=F": {
    "price": 83.08,
    "changePct": -1.51,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "GF=F": {
    "price": 348.78,
    "changePct": 0.76,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZL=F": {
-   "price": 67.07,
-   "changePct": -0.15,
+   "price": 67.1,
+   "changePct": -0.1,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZM=F": {
-   "price": 317,
-   "changePct": 0.44,
+   "price": 316.4,
+   "changePct": 0.25,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "OJ=F": {
    "price": 156.25,
    "changePct": -0.92,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZO=F": {
    "price": 333.5,
    "changePct": -0.07,
    "currency": "USX",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ZR=F": {
    "price": 14.09,
    "changePct": 0.25,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "RB=F": {
-   "price": 2.61,
-   "changePct": 0.55,
+   "price": 2.62,
+   "changePct": 0.7,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "HO=F": {
-   "price": 3.76,
-   "changePct": -0.98,
+   "price": 3.77,
+   "changePct": -0.78,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "LTC-USD": {
-   "price": 44.98,
-   "changePct": 0.25,
-   "marketCap": 3483588864,
+   "price": 44.93,
+   "changePct": 0.13,
+   "marketCap": 3480760320,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ETC-USD": {
-   "price": 6.43,
-   "changePct": -0.92,
-   "marketCap": 1013124864,
+   "price": 6.42,
+   "changePct": -1.08,
+   "marketCap": 1012126848,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "SHIB-USD": {
    "price": 0,
    "changePct": -3.27,
-   "marketCap": 2794224128,
+   "marketCap": 2783188480,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "TRX-USD": {
    "price": 0.33,
-   "changePct": -0.22,
-   "marketCap": 31041640448,
+   "changePct": -0.28,
+   "marketCap": 31034908672,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "XLM-USD": {
    "price": 0.16,
-   "changePct": -3.86,
-   "marketCap": 5486627840,
+   "changePct": -3.68,
+   "marketCap": 5493150208,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "LINK-USD": {
-   "price": 8.11,
-   "changePct": -0.89,
-   "marketCap": 6058885632,
+   "price": 8.09,
+   "changePct": -1.05,
+   "marketCap": 6045408768,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "DOT-USD": {
    "price": 0.83,
-   "changePct": -2.27,
-   "marketCap": 1408135680,
+   "changePct": -2.58,
+   "marketCap": 1403941504,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "AVAX-USD": {
-   "price": 6.62,
-   "changePct": -0.62,
-   "marketCap": 2855716864,
+   "price": 6.52,
+   "changePct": -2.06,
+   "marketCap": 2825814272,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ARKK": {
    "price": 76.18,
    "changePct": -0.76,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "ARKF": {
    "price": 42.44,
    "changePct": 1.05,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "^TNX": {
    "price": 4.62,
    "changePct": -0.22,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "^FVX": {
    "price": 4.32,
    "changePct": -0.21,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "^TYX": {
    "price": 5.17,
    "changePct": -0.31,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   },
   "^IRX": {
    "price": 3.73,
    "changePct": -0.13,
    "currency": "USD",
-   "updatedAt": "2026-08-06T09:26:35.118Z"
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "IBIT": {
+   "price": 36.74,
+   "changePct": 0.96,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "FBTC": {
+   "price": 56.42,
+   "changePct": 0.95,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "ETHA": {
+   "price": 14.48,
+   "changePct": 2.33,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "VOO": {
+   "price": 707.6,
+   "changePct": -0.19,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "IVV": {
+   "price": 773.36,
+   "changePct": -0.18,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "SMH": {
+   "price": 569.7,
+   "changePct": -1.04,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "USO": {
+   "price": 114.88,
+   "changePct": -0.78,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "UNG": {
+   "price": 9.74,
+   "changePct": -0.31,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "IAU": {
+   "price": 79.85,
+   "changePct": 4.12,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "VWO": {
+   "price": 60.01,
+   "changePct": -0.07,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "LQD": {
+   "price": 106.74,
+   "changePct": -0.02,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "HYG": {
+   "price": 79.52,
+   "changePct": -0.04,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "2YY=F": {
+   "price": 3.96,
+   "changePct": -4.09,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "LBS=F": {
+   "price": 380.6,
+   "changePct": -1.12,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "FET-USD": {
+   "price": 0.14,
+   "changePct": -8.65,
+   "marketCap": 311202848,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "TAO-USD": {
+   "price": 0,
+   "changePct": 0,
+   "marketCap": 0,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "WLD-USD": {
+   "price": 0.3,
+   "changePct": -4.63,
+   "marketCap": 1097361664,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "EURTHB=X": {
+   "price": 38.09,
+   "changePct": -0.21,
+   "currency": "THB",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "JPYTHB=X": {
+   "price": 0.21,
+   "changePct": -0.19,
+   "currency": "THB",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "SGDTHB=X": {
+   "price": 25.78,
+   "changePct": -0.16,
+   "currency": "THB",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "CNYTHB=X": {
+   "price": 4.89,
+   "changePct": -0.06,
+   "currency": "THB",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "USDCHF=X": {
+   "price": 0.81,
+   "changePct": 0.35,
+   "currency": "CHF",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "NZDUSD=X": {
+   "price": 0.59,
+   "changePct": -0.11,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "EURGBP=X": {
+   "price": 0.86,
+   "changePct": -0.02,
+   "currency": "GBP",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
+  },
+  "USDINR=X": {
+   "price": 95.21,
+   "changePct": 0.11,
+   "currency": "INR",
+   "updatedAt": "2026-08-06T09:58:38.530Z"
   }
  }
 }

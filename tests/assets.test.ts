@@ -14,12 +14,12 @@ beforeAll(async () => {
 });
 
 describe("สินทรัพย์นอกหุ้น × ดวง (ทอง/BTC/ที่ดิน...)", () => {
-  it("getAssetVerdicts — 113 ตัว + verdict deterministic", () => {
+  it("getAssetVerdicts — 143 ตัว + verdict deterministic", () => {
     const r = getAssetVerdicts(state, {});
     expect(r.ok).toBe(true);
     if (r.ok) {
       const d = r.data as { count: number; assets: Array<{ verdict: string; score: number; ticker: string }> };
-      expect(d.count).toBe(113);
+      expect(d.count).toBe(143);
       expect(["very-good", "good", "neutral", "avoid"]).toContain(d.assets[0].verdict);
       // เรียงคะแนนจากมากไปน้อย
       expect(d.assets[0].score).toBeGreaterThanOrEqual(d.assets[1].score);

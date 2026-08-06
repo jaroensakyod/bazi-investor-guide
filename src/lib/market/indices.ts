@@ -36,6 +36,8 @@ export const INDICES: IndexEntry[] = [
   { symbol: "^MXX", name: "IPC Mexico", region: "MX" },
   { symbol: "^TASI", name: "TASI (ซาอุฯ)", region: "SA" },
   { symbol: "^KSE100", name: "KSE-100 (ปากีสถาน)", region: "PK" },
+  // ความผันผวน
+  { symbol: "^VIX", name: "VIX (ความผันผวน)", region: "US" },
 ];
 
 export const FX: IndexEntry[] = [
