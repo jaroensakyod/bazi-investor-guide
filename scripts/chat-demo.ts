@@ -9,7 +9,7 @@ import { createInterface } from "node:readline";
 import { calculateBaziChart } from "../src/lib/bazi/symbolic-engine";
 import { createInMemoryKnowledgeRepository } from "../src/lib/bazi/in-memory-repository";
 import { detectIntent } from "../src/lib/chat/intents";
-import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, generateReport, getTodayAlmanac } from "../src/lib/chat/tools";
+import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, generateReport, getTodayAlmanac, getFortuneInvest } from "../src/lib/chat/tools";
 import { upsertUser, loadUser, isChartStale } from "../src/lib/chat/user-store";
 
 function arg(name: string): string | undefined {
@@ -76,6 +76,26 @@ function answer(intent: ReturnType<typeof detectIntent>, state: Awaited<ReturnTy
       const specials = d.specialDays.length ? `\n📌 วันสำคัญ: ${d.specialDays.join(", ")}` : "";
       return `🗓️ วัน${d.weekday}${d.jianchu ? ` (${d.jianchu.name} — ${d.jianchu.meaning})` : ""} · ${d.thaiLunar.phase}\n🎨 สีมงคล: ${colors}\n🧭 ทิศมงคล: ${d.luckyDirection}\n⏰ ยามดี: ${hours}${specials}\n${DISCLAIMER}`;
     }
+    case "fortune_invest": {
+      const lower = intent.matched.join(" ");
+      const scope = lower.includes("เดือน") ? "month" : lower.includes("สัปดาห์") ? "week" : "day";
+      const asset = lower.includes("ที่ดิน") ? "land" : scope === "week" ? "ipo" : undefined;
+      const r = getFortuneInvest({ scope, asset }, state);
+      if (!r.ok || !r.data) return r.error ?? "ยังไม่มีข้อมูล";
+      const d = r.data as { scope: string; dayElement?: string; favorElements?: string[]; stocks?: Array<{ ticker: string; changePct: number | null }>; monthElement?: string; caishenDir?: string; goodDays?: Array<{ date: string; weekday: string }>; luckyLandDays?: Array<{ date: string; weekday: string }>; ipo?: { entries: Array<{ ticker: string; name: string; fit: string }> } };
+      if (d.scope === "month") {
+        const days = (d.luckyLandDays ?? d.goodDays ?? []).slice(0, 4).map((x) => `${x.date} (${x.weekday})`).join(", ");
+        return `🗓️ เดือนนี้ ธาตุเดือน: ${d.monthElement} · ทิศเงินเข้า: ${d.caishenDir}\n📅 วันดี: ${days || "ไม่มีข้อมูล"}\n${DISCLAIMER}`;
+      }
+      if (d.scope === "week") {
+        const list = (d.ipo?.entries ?? []).slice(0, 4).map((e) => `${e.ticker} ${e.name} — ${e.fit}`).join("\n");
+        return `🚀 IPO สัปดาห์นี้ (เทียบดวง):\n${list || "ไม่มี IPO ในช่วงนี้"}\n${DISCLAIMER}`;
+      }
+      const stocks = (d.stocks ?? []).slice(0, 4).map((s) => `${s.ticker} (${s.changePct ?? 0}%)`).join(", ");
+      return `🔮 วันนี้ธาตุ: ${d.dayElement} · ธาตุควรทำ: ${(d.favorElements ?? []).join(", ")}\n📈 หุ้นที่ตรงธาตุวันนี้: ${stocks || "ไม่มีข้อมูล"}\n${DISCLAIMER}`;
+    }
+    case "advice_request":
+      return `⚠️ นี่คือบทวิเคราะห์อ้างอิงจากดวง ตลาด ข่าว แนวโน้ม — ไม่ใช่คำแนะนำการลงทุน\nเราให้บทวิเคราะห์เชิงข้อมูลเท่านั้น ลองถามเป็นข้อมูลได้ เช่น "วันนี้ดวงกับหุ้นอะไร" "วิเคราะห์ KBANK" หรือ "สัปดาห์นี้ IPO ตัวไหนเหมาะกับดวง"`;
     default: {
       return `🙏 สวัสดีครับ/ค่ะ ฉันเป็นผู้ช่วยการลงทุนคู่ดวง ลองถามได้เลย เช่น\n  • "หุ้นวันนี้ตัวไหนเด่น"\n  • "วิเคราะห์ KBANK ให้หน่อย"\n  • "KBANK กับดวงเราเป็นยังไง"\n  • "ทรัมป์ประกาศภาษีมีผลยังไง"\n  • "มี IPO ใหม่ไหม"\n${DISCLAIMER}`;
     }

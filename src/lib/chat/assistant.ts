@@ -13,7 +13,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
 import { detectIntent } from "./intents";
-import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac } from "./tools";
+import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac, getFortuneInvest } from "./tools";
+import { COMPLIANCE_NOTE } from "../fortune/investment-days";
 
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
@@ -52,6 +53,7 @@ export const TOOL_DEFS = [
   { type: "function", function: { name: "searchStocks", description: "ค้นหุ้นตามธาตุ/เซกเตอร์/คำ (เช่น 'หุ้นธาตุทองมีตัวไหนบ้าง')", parameters: { type: "object", properties: { element: { type: "string", enum: ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"] }, keyword: { type: "string" }, market: { type: "string" }, limit: { type: "number" } } } } },
   { type: "function", function: { name: "generateReport", description: "รายงานย่อหุ้น (ดวง + พื้นฐาน + Buffett)", parameters: { type: "object", properties: { ticker: { type: "string" } }, required: ["ticker"] } } },
   { type: "function", function: { name: "getTodayAlmanac", description: "ปฏิทิน/ดวงวันนี้ (สีมงคล ยามมงคล ทิศมงคล ขึ้นแรม ดาวประจำวัน) — ใช้ตอบ 'วันนี้ดวงเป็นยังไง/ฤกษ์/สีมงคล'", parameters: { type: "object", properties: { date: { type: "string", description: "YYYY-MM-DD (ไม่ส่ง = วันนี้)" } } } } },
+  { type: "function", function: { name: "getFortuneInvest", description: "ดวง×การลงทุน: scope=day (ธาตุวันนี้+หุ้นที่ตรงธาตุ) / week (IPO ช่วงนี้ เหมาะกับดวงไหม — ธาตุธุรกิจ+ธาตุวันเกิด) / month (ธาตุเดือน+ทิศเงิน+วันดีทั้งเดือน + asset=land วันเหมาะซื้อที่ดิน)", parameters: { type: "object", properties: { scope: { type: "string", enum: ["day", "week", "month"] }, asset: { type: "string", enum: ["stocks", "land", "ipo"] }, date: { type: "string" }, year: { type: "number" }, month: { type: "number" } } } } },
 ] as const;
 
 export const TOOL_NAMES = TOOL_DEFS.map((t) => t.function.name);
@@ -67,6 +69,7 @@ export function runTool(name: string, args: Record<string, unknown>, state: Calc
     case "searchStocks": return searchStocks({ element: args.element as "ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ" | undefined, keyword: args.keyword as string | undefined, market: args.market as string | undefined, limit: args.limit as number | undefined });
     case "generateReport": return generateReport(String(args.ticker ?? ""), state);
     case "getTodayAlmanac": return getTodayAlmanac({ date: args.date as string | undefined });
+    case "getFortuneInvest": return getFortuneInvest({ scope: args.scope as "day" | "week" | "month" | undefined, asset: args.asset as "stocks" | "land" | "ipo" | undefined, date: args.date as string | undefined, year: args.year as number | undefined, month: args.month as number | undefined }, state);
     default: return { ok: false, data: null, error: `tool ไม่รู้จัก: ${name}`, disclaimer: DISCLAIMER };
   }
 }
@@ -75,8 +78,8 @@ export const SYSTEM_PROMPT = `คุณคือ "ผู้ช่วยการ
 กฎเหล็ก:
 1. ตอบเป็นภาษาไทย อ่านง่าย กระชับ (3-6 บรรทัด) ใช้ emoji พอประมาณ
 2. ต้องเรียก tools เพื่อเอาข้อมูลจริงเสมอ — ห้ามเดา/มโนตัวเลข ราคา verdict
-3. ข้อมูลจาก tool ทุกครั้งต้องลงท้ายด้วย: ${DISCLAIMER}
-4. ถามเรื่องซื้อ/ขาย → ตอบว่าให้แนวโน้มตามดวง+ข้อมูล ไม่ใช่คำแนะนำ
+3. ทุกคำตอบลงท้ายด้วย: ${COMPLIANCE_NOTE}
+4. ถ้าผู้ใช้ขอ "คำแนะนำ" (ควรซื้อ/ซื้อเลย/แนะนำหน่อย/ช่วยตัดสินใจ) → ตอบเฉพาะ: "${COMPLIANCE_NOTE} — เราให้บทวิเคราะห์อ้างอิงจากดวง/ตลาด/ข่าว/แนวโน้ม ไม่แนะนำให้ลงทุนตาม" แล้วเสนอวิเคราะห์เชิงข้อมูลแทน (เช่น verdict/พื้นฐาน/ดวงรายวัน) โดยไม่บอกซื้อ/ขาย
 5. ถ้า tool คืน ok:false ให้บอกว่า "ยังไม่มีข้อมูล" ตรงๆ อย่าเติมเอง`;
 
 function parseToolCalls(msg: { tool_calls?: Array<{ id?: string; function?: { name?: string; arguments?: string } }> }): ToolCall[] {
@@ -216,12 +219,32 @@ export function fallbackAnswer(userText: string, state: CalculatedStateValue): {
     }
     case "daily_fortune": {
       const r = getTodayAlmanac();
-      if (!r.ok || !r.data) return { text: `ยังไม่มีข้อมูลปฏิทินวันนี้ ${DISCLAIMER}`, intent: intent.intent };
+      if (!r.ok || !r.data) return { text: `ยังไม่มีข้อมูลปฏิทินวันนี้ ${COMPLIANCE_NOTE}`, intent: intent.intent };
       const d = r.data as { weekday: string; colors: Array<{ element: string; colors: string }>; luckyHours: Array<{ code: string; range: string }>; luckyDirection: string; jianchu: { name: string; meaning: string } | null };
       const colors = d.colors.map((c) => `${c.element}→${c.colors}`).join(" · ");
       const hours = d.luckyHours.slice(0, 3).map((h) => `${h.range}`).join(", ");
-      return { text: `🗓️ วัน${d.weekday}${d.jianchu ? ` (${d.jianchu.name} — ${d.jianchu.meaning})` : ""}\n🎨 สีมงคล: ${colors}\n🧭 ทิศมงคล: ${d.luckyDirection}\n⏰ ยามดี: ${hours}\n${DISCLAIMER}`, intent: intent.intent };
+      return { text: `🗓️ วัน${d.weekday}${d.jianchu ? ` (${d.jianchu.name} — ${d.jianchu.meaning})` : ""}\n🎨 สีมงคล: ${colors}\n🧭 ทิศมงคล: ${d.luckyDirection}\n⏰ ยามดี: ${hours}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
     }
+    case "fortune_invest": {
+      const lower = intent.matched.join(" ");
+      const scope = lower.includes("เดือน") ? "month" : lower.includes("สัปดาห์") ? "week" : "day";
+      const asset = lower.includes("ที่ดิน") ? "land" : scope === "week" ? "ipo" : undefined;
+      const r = getFortuneInvest({ scope, asset }, state);
+      if (!r.ok || !r.data) return { text: `ยังไม่มีข้อมูล ${COMPLIANCE_NOTE}`, intent: intent.intent };
+      const d = r.data as { scope: string; dayElement?: string; favorElements?: string[]; stocks?: Array<{ ticker: string; changePct: number | null }>; monthElement?: string; caishenDir?: string; goodDays?: Array<{ date: string; weekday: string }>; luckyLandDays?: Array<{ date: string; weekday: string }>; ipo?: { entries: Array<{ ticker: string; name: string; fit: string }> } };
+      if (d.scope === "month") {
+        const days = (d.luckyLandDays ?? d.goodDays ?? []).slice(0, 4).map((x) => `${x.date} (${x.weekday})`).join(", ");
+        return { text: `🗓️ เดือนนี้ ธาตุเดือน: ${d.monthElement} · ทิศเงินเข้า: ${d.caishenDir}\n📅 วันดี: ${days || "ไม่มีข้อมูล"}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+      }
+      if (d.scope === "week") {
+        const list = (d.ipo?.entries ?? []).slice(0, 4).map((e) => `${e.ticker} ${e.name} — ${e.fit}`).join("\n");
+        return { text: `🚀 IPO สัปดาห์นี้ (เทียบดวง):\n${list || "ไม่มี IPO ในช่วงนี้"}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+      }
+      const stocks = (d.stocks ?? []).slice(0, 4).map((s) => `${s.ticker} (${s.changePct ?? 0}%)`).join(", ");
+      return { text: `🔮 วันนี้ธาตุ: ${d.dayElement} · ธาตุควรทำ: ${(d.favorElements ?? []).join(", ")}\n📈 หุ้นที่ตรงธาตุวันนี้: ${stocks || "ไม่มีข้อมูล"}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+    }
+    case "advice_request":
+      return { text: `${COMPLIANCE_NOTE} — เราให้บทวิเคราะห์อ้างอิงจากดวง/ตลาด/ข่าว/แนวโน้ม ไม่แนะนำให้ลงทุนตาม ลองถามเป็นข้อมูลได้ เช่น "วันนี้ดวงกับหุ้นอะไร" หรือ "วิเคราะห์ KBANK"`, intent: intent.intent };
     default:
       return { text: `🙏 ลองถามได้เลย: "หุ้นวันนี้ตัวไหนเด่น" / "วิเคราะห์ KBANK" / "KBANK กับดวงเรา" / "ข่าวทรัมป์" / "มี IPO ไหม"\n${DISCLAIMER}`, intent: intent.intent };
   }

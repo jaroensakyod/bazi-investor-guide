@@ -18,6 +18,8 @@ export type Intent =
   | "news_impact"
   | "report"
   | "daily_fortune"
+  | "fortune_invest"
+  | "advice_request"
   | "smalltalk";
 
 export type IntentResult = {
@@ -39,6 +41,8 @@ const KW: Record<Exclude<Intent, "smalltalk">, string[]> = {
   news_impact: ["ข่าว", "ทรัมป์", "ภาษี", "เฟด", "fomc", "ขึ้นดอกเบี้ย", "ลดดอกเบี้ย", "ผลกระทบ", "กระทบ", "เหตุการณ์", "น้ำมันขึ้น", "ทองขึ้น", "สงคราม", "เลือกตั้ง", "เงินเฟ้อ"],
   report: ["รายงาน", "สรุปให้", "สรุปหุ้น", "วอร์เรน", "รายงานสถาบัน", "pdf", "เล่ม"],
   daily_fortune: ["วันนี้ดวง", "ดวงวันนี้", "ฤกษ์", "ยาม", "สีมงคล", "สีถูกโฉลก", "วันนี้เหมาะ", "วันนี้ควร", "วันนี้เลี่ยง", "ทิศมงคล", "ทิศอสูร", "ขึ้นแรม", "วันพระ", "วันธงชัย"],
+  fortune_invest: ["ดวงกับหุ้น", "หุ้นกับดวง", "เดือนนี้ลงทุน", "เดือนนี้ซื้อ", "สัปดาห์นี้ลงทุน", "สัปดาห์นี้ซื้อ", "เดือนนี้", "สัปดาห์นี้", "ipo ตัวไหน", "ipo ที่เหมาะ", "ซื้อที่ดิน", "ซื้อหุ้นวันไหน", "ซื้อวันไหน", "วันไหนดี", "ฤกษ์ซื้อ", "ธาตุวันนี้", "วันนี้ธาตุ"],
+  advice_request: ["แนะนำ", "แนะนำหน่อย", "ควรซื้อ", "ซื้อเลย", "ซื้อตัวไหน", "ซื้อหุ้นตัวไหน", "ควรลงทุน", "ซื้อไหม", "ขายไหม", "ซื้อดีไหม", "ซื้อหรือไม่", "ช่วยตัดสินใจ"],
 };
 
 const GREETING = ["สวัสดี", "hello", "hi", "ทักทาย", "มีไร", "มีอะไร", "ขอบคุณ", "bye", "ลาก่อน", "ช่วยหน่อย"];
@@ -129,9 +133,15 @@ export function detectIntent(text: string): IntentResult {
     return found.length;
   };
 
-  // ลำดับ: verdict (เจาะจงสุด) → analysis (มี ticker) → daily_fortune → news → ipo → movers → report
+  // ลำดับ: advice_request (compliance ก่อนสุด!) → verdict → fortune_invest (เจาะจงกว่า daily) → daily_fortune → analysis → news → ipo → movers → report
+  if (hit(KW.advice_request) > 0) {
+    return { intent: "advice_request", ticker, market, confidence: 0.9, matched };
+  }
   if (hit(KW.stock_verdict) > 0 && ticker) {
     return { intent: "stock_verdict", ticker, market, confidence: 0.95, matched };
+  }
+  if (hit(KW.fortune_invest) > 0) {
+    return { intent: "fortune_invest", ticker, market, confidence: 0.85, matched };
   }
   if (hit(KW.daily_fortune) > 0) {
     return { intent: "daily_fortune", market, confidence: 0.9, matched };

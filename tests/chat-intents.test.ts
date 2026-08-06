@@ -74,4 +74,17 @@ describe("detectIntent — เข้าใจคำถามไทย (Phase 1.1
     expect(detectIntent("สีมงคลวันนี้คืออะไร").intent).toBe("daily_fortune");
     expect(detectIntent("ฤกษ์ยามวันนี้เหมาะทำอะไร").intent).toBe("daily_fortune");
   });
+
+  it("ดวง×การลงทุน → fortune_invest", () => {
+    expect(detectIntent("วันนี้ดวงกับหุ้นอะไรดี").intent).toBe("fortune_invest");
+    expect(detectIntent("เดือนนี้ลงทุนกับอะไรดี").intent).toBe("fortune_invest");
+    expect(detectIntent("สัปดาห์นี้ IPO ตัวไหนเหมาะกับดวง").intent).toBe("fortune_invest");
+    expect(detectIntent("เดือนนี้จะซื้อที่ดินวันไหนดี").intent).toBe("fortune_invest");
+  });
+
+  it("ขอคำแนะนำ → advice_request (compliance ก่อนสุด)", () => {
+    expect(detectIntent("แนะนำหุ้นให้หน่อย ควรซื้อตัวไหนดี").intent).toBe("advice_request");
+    expect(detectIntent("KBANK ควรซื้อไหม").intent).toBe("advice_request");
+    expect(detectIntent("ช่วยตัดสินใจหน่อย ซื้อเลยดีไหม").intent).toBe("advice_request");
+  });
 });

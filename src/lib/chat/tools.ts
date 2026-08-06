@@ -18,6 +18,10 @@ import { filterNewsByKeywords, filterNewsByMarket, type NewsItem } from "../mark
 import { yahooTicker } from "../market/yahoo";
 import { upcomingIpos, type IpoEntry } from "../investor/ipo";
 import { buildAlmanacDay, checkHour } from "../bazi/almanac/almanac-engine";
+import {
+  dayElementOf, dayFitForUser, favorElementsToday, stocksForDay, monthInvestFit,
+  luckyDaysForAsset, ipoFitForWeek, todayHours, COMPLIANCE_NOTE,
+} from "../fortune/investment-days";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";
@@ -166,6 +170,40 @@ export function getTodayAlmanac(opts: { date?: string } = {}): ToolResult<object
     specialDays: day.specialDays.map((s) => s.name),
     solarTerm: day.solarTerm?.name ?? null,
     monthInfo: { deity: day.monthInfo.deity, caishenDir: day.monthInfo.caishenDir, lapDir: day.monthInfo.lapDir, asuraDir: day.monthInfo.asuraDir },
+  });
+}
+
+// ── 9. ดวง×การลงทุน (fortune-invest — deterministic ตาราง B + almanac) ──
+export function getFortuneInvest(
+  opts: { scope?: "day" | "week" | "month"; asset?: "stocks" | "land" | "ipo"; date?: string; year?: number; month?: number },
+  state?: CalculatedStateValue,
+): ToolResult<object> {
+  if (!state) return fail("ต้องมีดวงผู้ใช้ (state)");
+  const now = new Date();
+  const date = opts.date ?? now.toISOString().slice(0, 10);
+  const year = opts.year ?? now.getFullYear();
+  const month = opts.month ?? now.getMonth() + 1;
+
+  if (opts.scope === "month") {
+    const m = monthInvestFit(state, year, month);
+    const land = opts.asset === "land" ? luckyDaysForAsset(state, year, month, "ดิน") : undefined;
+    return ok({ scope: "month", compliance: COMPLIANCE_NOTE, ...m, luckyLandDays: land });
+  }
+  if (opts.scope === "week") {
+    const to = new Date(now.getTime() + 7 * 86400000).toISOString().slice(0, 10);
+    const ipo = ipoFitForWeek(state, date, to);
+    return ok({ scope: "week", compliance: COMPLIANCE_NOTE, ipo });
+  }
+  // day (default)
+  return ok({
+    scope: "day",
+    date,
+    dayElement: dayElementOf(date),
+    dayFit: dayFitForUser(state, date),
+    favorElements: favorElementsToday(state, date),
+    stocks: stocksForDay(state, date, 5),
+    hours: todayHours(date),
+    compliance: COMPLIANCE_NOTE,
   });
 }
 
