@@ -85,11 +85,12 @@ export async function openYahooSession(): Promise<{ cookie: string; crumb: strin
   return { cookie, crumb };
 }
 
-async function fetchJson(url: string, cookie: string, retries = 4): Promise<unknown | null> {
+async function fetchJson(url: string, cookie: string, retries = 4, onRateLimited?: () => void): Promise<unknown | null> {
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(url, { headers: { "User-Agent": YAHOO_UA, Cookie: cookie } });
       if (res.status === 429 || res.status === 999) {
+        onRateLimited?.();
         const wait = 5000 * (attempt + 1);
         await new Promise((r) => setTimeout(r, wait));
         continue;
@@ -122,24 +123,36 @@ export type YahooQuote = {
 /**
  * fetch ราคาแบบ batch (v7/finance/quote) — ทีละ 25 ตัว/request
  * คืน Map<yahooTicker, YahooQuote> เฉพาะตัวที่มีราคา
+ *
+ * ปลอดภัยกับ rate limit:
+ *  - batch 25 ตัว/request → 2,900 หุ้น = ~116 requests เท่านั้น
+ *  - หน่วง delayMs ระหว่าง chunk (ค่าเริ่มต้น 800ms ≈ 1.2 req/s)
+ *  - retry 429/999 แบบ backoff (5s→10s→15s→20s)
+ *  - circuit breaker: 429 ติดกัน 3 ครั้ง → หยุดทันที (save ของที่ได้ ค่อยรันต่อ)
  */
 export async function fetchQuotes(
   symbols: string[],
   session: { cookie: string; crumb: string },
   chunkSize = 25,
   delayMs = 800,
+  opts: { onProgress?: (done: number, total: number) => void } = {},
 ): Promise<Map<string, YahooQuote>> {
   const out = new Map<string, YahooQuote>();
+  let consecutive429 = 0;
   for (let i = 0; i < symbols.length; i += chunkSize) {
     const chunk = symbols.slice(i, i + chunkSize);
     const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(chunk.join(","))}&crumb=${encodeURIComponent(session.crumb)}`;
-    const json = (await fetchJson(url, session.cookie, 4)) as
-      | { quoteResponse?: { result?: YahooQuote[] } }
-      | null;
+    const json = (await fetchJson(url, session.cookie, 4, () => {
+      consecutive429 += 1;
+      if (consecutive429 === 3) console.warn("⚠️ โดน 429 ติดกัน 3 ครั้ง — หยุดก่อน (circuit breaker) บันทึกของที่ได้แล้ว รันซ้ำทีหลัง");
+    })) as { quoteResponse?: { result?: YahooQuote[] } } | null;
     const results = json?.quoteResponse?.result ?? [];
+    if (results.length > 0) consecutive429 = 0;
     for (const q of results) {
       if (q.symbol && typeof q.regularMarketPrice === "number") out.set(q.symbol, q);
     }
+    opts.onProgress?.(Math.min(i + chunkSize, symbols.length), symbols.length);
+    if (consecutive429 >= 3) break;
     if (i + chunkSize < symbols.length) await new Promise((r) => setTimeout(r, delayMs));
   }
   return out;
