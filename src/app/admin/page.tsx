@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { get } from "../lib/api";
+import { get, post } from "../lib/api";
 import { useT } from "../lib/i18n";
 
 type DashboardData = {
@@ -14,6 +14,8 @@ export default function AdminPage() {
   const t = useT();
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState("");
+  const [refreshing, setRefreshing] = useState<string | null>(null);
+  const [refreshOut, setRefreshOut] = useState("");
 
   const load = useCallback(async () => {
     const r = await get<DashboardData>("/api/dashboard");
@@ -24,6 +26,17 @@ export default function AdminPage() {
   useEffect(() => {
     load();
   }, [load]);
+
+  async function refresh(kind: "ipo" | "prices") {
+    setRefreshing(kind);
+    setRefreshOut("");
+    const r = await post<{ kind: string; output: string; timedOut?: boolean }>(`/api/refresh?kind=${kind}`, {});
+    setRefreshing(null);
+    if (r.ok) {
+      setRefreshOut(`✅ ${r.data.kind}: ${r.data.timedOut ? "(timeout)" : "เสร็จ"}\n${r.data.output}`);
+      load();
+    } else setRefreshOut(`❌ ${r.error}`);
+  }
 
   const intents = data ? Object.entries(data.usage.byIntent).sort((a, b) => b[1] - a[1]).slice(0, 8) : [];
 
@@ -37,6 +50,18 @@ export default function AdminPage() {
         <button className="btn secondary" onClick={load} style={{ fontSize: 13 }}>
           {t("admin.refresh")}
         </button>
+      </div>
+      <div className="card">
+        <h2>{t("admin.datarefresh")}</h2>
+        <button className="btn" onClick={() => refresh("ipo")} disabled={refreshing !== null} style={{ marginRight: 8 }}>
+          {refreshing === "ipo" ? "⏳..." : "🚀 อัปเดต IPO"}
+        </button>
+        <button className="btn secondary" onClick={() => refresh("prices")} disabled={refreshing !== null} style={{ marginRight: 8 }}>
+          {refreshing === "prices" ? "⏳..." : "💰 อัปเดตราคา"}
+        </button>
+        {refreshOut && (
+          <pre style={{ background: "#10131a", padding: 10, borderRadius: 8, fontSize: 12, marginTop: 10, whiteSpace: "pre-wrap" }}>{refreshOut}</pre>
+        )}
       </div>
       {data && (
         <>

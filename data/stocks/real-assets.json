@@ -2,36 +2,673 @@
   "meta": {
     "market": "REAL_ASSETS",
     "label": "สินทรัพย์จริง/ของไทย (บ้านเช่า/ที่ดิน/สวน/ป่า/ฟาร์ม/สลาก/ทองกายภาพ/ของสะสม/ประกันสะสมทรัพย์)",
-    "updatedAt": "2026-08-05",
+    "updatedAt": "2026-08-06",
     "reviewStatus": "draft",
     "note": "DRAFT — ธาตุส่วนใหญ่เสนอตามตาราง data-spec/decision-log เดิม บางรายการ (ปศุสัตว์/พระเครื่อง/สลาก/คาร์บอน/งานศิลปะ) รอซินแส ruling · ข้อมูลนิ่ง (ไม่มีราคา API ยกเว้นทอง/เงินก้อนที่อ้างราคา GC=F/SI=F)"
   },
   "assets": [
-    { "type": "real_asset", "ticker": "HOUSE_RENTAL", "name": "บ้านเช่า/คอนโดปล่อยเช่า", "country": "TH", "market": "REAL", "currency": "THB", "sector": "อสังหาริมทรัพย์", "elements": ["ดิน"], "primaryElement": "ดิน", "elementReason": "อสังหาฯ ให้เช่า = ธาตุดิน (Source4 §5)", "elementSource": "Source4 §5", "riskTier": "medium", "subtype": "house_rental", "note": "ข้อมูลนิ่ง — กระแสเงินสดจากค่าเช่า สภาพคล่องต่ำ", "status": "draft" },
-    { "type": "real_asset", "ticker": "LAND", "name": "ที่ดิน (เปล่า/ทำเล)", "country": "TH", "market": "REAL", "currency": "THB", "sector": "อสังหาริมทรัพย์", "elements": ["ดิน"], "primaryElement": "ดิน", "elementReason": "ที่ดิน = ธาตุดิน (Source4 §5)", "elementSource": "Source4 §5", "riskTier": "medium", "subtype": "land", "note": "ข้อมูลนิ่ง — ถือยาว สภาพคล่องต่ำ ต้องศึกษาทำเล/โฉนด", "status": "draft" },
-    { "type": "real_asset", "ticker": "RUBBER_FARM", "name": "สวนยางพารา", "country": "TH", "market": "AGRO", "currency": "THB", "sector": "เกษตร/ป่าไม้", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "การเกษตร/พืช = ธาตุไม้ (decision-log: การเกษตร=ไม้ ผ่านแล้ว)", "elementSource": "decision-log.md", "riskTier": "medium", "subtype": "forest", "note": "ข้อมูลนิ่ง — รายได้ตามราคายาง ใช้เวลาหลายปีกว่าคุ้ม", "status": "draft" },
-    { "type": "real_asset", "ticker": "PALM_FARM", "name": "สวนปาล์มน้ำมัน", "country": "TH", "market": "AGRO", "currency": "THB", "sector": "เกษตร/ป่าไม้", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "การเกษตร/พืช = ธาตุไม้ (decision-log)", "elementSource": "decision-log.md", "riskTier": "medium", "subtype": "forest", "note": "ข้อมูลนิ่ง", "status": "draft" },
-    { "type": "real_asset", "ticker": "FRUIT_FARM", "name": "สวนผลไม้ (ทุเรียน/มังคุด...)", "country": "TH", "market": "AGRO", "currency": "THB", "sector": "เกษตร/ป่าไม้", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "การเกษตร/พืช = ธาตุไม้ (decision-log)", "elementSource": "decision-log.md", "riskTier": "medium", "subtype": "farm", "note": "ข้อมูลนิ่ง", "status": "draft" },
-    { "type": "real_asset", "ticker": "FOREST", "name": "ป่าไม้/ไม้เศรษฐกิจ (สัก/ยูคา)", "country": "TH", "market": "AGRO", "currency": "THB", "sector": "เกษตร/ป่าไม้", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "ป่าไม้/ไม้ = ธาตุไม้ (decision-log: การเกษตร=ไม้)", "elementSource": "decision-log.md (รอซินแส)", "riskTier": "risky", "subtype": "forest", "note": "ข้อมูลนิ่ง — ไม้ธาตุหายากสุดในตลาด = ใต้ผืนน้ำฉบับไทย แต่สภาพคล่องต่ำมาก", "status": "draft" },
-    { "type": "real_asset", "ticker": "CARBON_CREDIT", "name": "คาร์บอนเครดิต (ป่า/พลังงาน)", "country": "TH", "market": "CARBON", "currency": "THB", "sector": "สิ่งแวดล้อม", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "คาร์บอนจากป่า/เกษตร = ธาตุไม้ (เสนอ — รอซินแส ruling)", "elementSource": "รอซินแส (decision-log)", "riskTier": "risky", "subtype": "carbon", "note": "ข้อมูลนิ่ง — ตลาดใหม่ มาตรฐานยังไม่นิ่ง", "status": "draft" },
-    { "type": "real_asset", "ticker": "LIVESTOCK_FARM", "name": "ฟาร์มหมู/ไก่/โค", "country": "TH", "market": "AGRO", "currency": "THB", "sector": "ปศุสัตว์", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "ปศุสัตว์ = เกษตร = ธาตุไม้ (เสนอ — รอซินแส ruling)", "elementSource": "รอซินแส (decision-log)", "riskTier": "medium", "subtype": "livestock", "note": "ข้อมูลนิ่ง — ราคาหมู/ไก่ผันผวนตามวัฏจักร", "status": "draft" },
-    { "type": "real_asset", "ticker": "AQUA_FARM", "name": "ฟาร์มกุ้ง/ปลา", "country": "TH", "market": "AGRO", "currency": "THB", "sector": "ประมง", "elements": ["น้ำ"], "primaryElement": "น้ำ", "elementReason": "สัตว์น้ำ/ประมง = ธาตุน้ำ (เสนอ — รอซินแส ruling)", "elementSource": "รอซินแส (decision-log)", "riskTier": "medium", "subtype": "aquaculture", "note": "ข้อมูลนิ่ง — เสี่ยงโรคระบาด", "status": "draft" },
-    { "type": "real_asset", "ticker": "GOLD_BAR", "name": "ทองคำแท่ง/ทองก้อน", "country": "TH", "market": "BULLION", "currency": "THB", "sector": "โลหะมีค่า", "elements": ["ทอง"], "primaryElement": "ทอง", "elementReason": "ทองคำ = โลหะมีค่า = ธาตุทอง (career-business)", "elementSource": "career-business.txt", "riskTier": "safe", "subtype": "bullion", "note": "ราคาอ้างอิง GC=F (ทองโลก) + ค่ากำเหน็จ — ขายคืนได้ง่ายสุดในกลุ่มสินทรัพย์จริง", "status": "draft" },
-    { "type": "real_asset", "ticker": "SILVER_BAR", "name": "เงินแท่ง/เงินก้อน", "country": "TH", "market": "BULLION", "currency": "THB", "sector": "โลหะมีค่า", "elements": ["ทอง"], "primaryElement": "ทอง", "elementReason": "เงิน = โลหะมีค่า = ธาตุทอง (career-business)", "elementSource": "career-business.txt", "riskTier": "safe", "subtype": "bullion", "note": "ราคาอ้างอิง SI=F — \"ทองของคนทั่วไป\" ใต้ผืนน้ำของโลหะมีค่า", "status": "draft" },
-    { "type": "real_asset", "ticker": "GEMS", "name": "เพชร/พลอย", "country": "TH", "market": "REAL", "currency": "THB", "sector": "ของมีค่า", "elements": ["ทอง"], "primaryElement": "ทอง", "elementReason": "เพชร/พลอย = ของมีค่า = ธาตุทอง (career-business: เงิน เพชร ทองคำ)", "elementSource": "career-business.txt", "riskTier": "risky", "subtype": "collectible", "note": "ข้อมูลนิ่ง — สภาพคล่องต่ำ ต้องมีใบรับรอง", "status": "draft" },
-    { "type": "real_asset", "ticker": "AMULET", "name": "พระเครื่อง", "country": "TH", "market": "REAL", "currency": "THB", "sector": "ของสะสม", "elements": ["ดิน", "ทอง"], "primaryElement": "ดิน", "elementReason": "เนื้อพระ = ดิน/ปูน (ดิน) + คุณค่าโลหะ (ทอง) — เสนอ รอซินแส ruling", "elementSource": "รอซินแส (decision-log)", "riskTier": "risky", "subtype": "collectible", "note": "ข้อมูลนิ่ง — ต้องดูองค์/เนื้อ/แหล่งที่มา ปลอมเยอะ", "status": "draft" },
-    { "type": "real_asset", "ticker": "WATCH_COLLECT", "name": "นาฬิกา/ของสะสมมีค่า", "country": "GLOBAL", "market": "REAL", "currency": "USD", "sector": "ของสะสม", "elements": ["ทอง"], "primaryElement": "ทอง", "elementReason": "ของสะสมโลหะมีค่า = ธาตุทอง (เสนอ — รอซินแส)", "elementSource": "รอซินแส (decision-log)", "riskTier": "risky", "subtype": "collectible", "note": "ข้อมูลนิ่ง — ตลาดเฉพาะกลุ่ม", "status": "draft" },
-    { "type": "real_asset", "ticker": "ARTWORK", "name": "งานศิลปะ", "country": "GLOBAL", "market": "REAL", "currency": "USD", "sector": "ของสะสม", "elements": ["ไม้"], "primaryElement": "ไม้", "elementReason": "งานศิลปะ/สร้างสรรค์ = ธาตุไม้ (Source4: ไม้ = ความคิดสร้างสรรค์ — เสนอ รอซินแส)", "elementSource": "รอซินแส (decision-log)", "riskTier": "risky", "subtype": "collectible", "note": "ข้อมูลนิ่ง — สภาพคล่องต่ำมาก", "status": "draft" },
-    { "type": "lottery", "ticker": "GOV_LOTTERY_SAVINGS", "name": "สลากออมสิน (รัฐ)", "country": "TH", "market": "GSB", "currency": "THB", "sector": "สลาก/ออมทรัพย์", "elements": ["น้ำ", "ไฟ"], "primaryElement": "น้ำ", "elementReason": "สลาก = ฝาก(น้ำ) + ลุ้นรางวัล(ไฟ) — Concept 偏財 (ทรัพย์ลมๆ แล้งๆ) รอซินแส ruling", "elementSource": "รอซินแส (decision-log — 偏財)", "riskTier": "safe", "subtype": "lottery", "note": "ถูกกฎหมาย (รัฐวิสาหกิจ) — เงินต้นคง ต่างจากลอตเตอรี่ใต้ดิน", "status": "draft" },
-    { "type": "lottery", "ticker": "BAAC_LOTTERY_SAVINGS", "name": "สลาก ธกส. (รัฐ)", "country": "TH", "market": "BAAC", "currency": "THB", "sector": "สลาก/ออมทรัพย์", "elements": ["น้ำ", "ไฟ"], "primaryElement": "น้ำ", "elementReason": "สลาก = ฝาก(น้ำ) + ลุ้นรางวัล(ไฟ) — 偏財 รอซินแส ruling", "elementSource": "รอซินแส (decision-log)", "riskTier": "safe", "subtype": "lottery", "note": "ถูกกฎหมาย — เงินต้นคง", "status": "draft" },
-    { "type": "insurance", "ticker": "ENDOWMENT_INS", "name": "ประกันสะสมทรัพย์", "country": "TH", "market": "INSURANCE", "currency": "THB", "sector": "ประกัน", "elements": ["น้ำ"], "primaryElement": "น้ำ", "elementReason": "ประกัน/การออม = ธาตุน้ำ — Concept คลังทรัพย์ (财库) เปิด/ปิดคลัง (บท 4)", "elementSource": "Source4 (财库) — รอซินแส", "riskTier": "medium", "subtype": "insurance", "note": "ข้อมูลนิ่ง — เหมาะเป็นเครื่องมือ 'เปิดคลัง' ระยะยาว", "status": "draft" },
-    { "type": "insurance", "ticker": "PENSION_INS", "name": "ประกันบำนาญ", "country": "TH", "market": "INSURANCE", "currency": "THB", "sector": "ประกัน", "elements": ["น้ำ"], "primaryElement": "น้ำ", "elementReason": "ประกัน/การออม = ธาตุน้ำ — คลังทรัพย์ (财库)", "elementSource": "Source4 (财库) — รอซินแส", "riskTier": "medium", "subtype": "insurance", "note": "ข้อมูลนิ่ง — กันเงินหลังเกษียณ", "status": "draft" }
+    {
+      "type": "real_asset",
+      "ticker": "HOUSE_RENTAL",
+      "name": "บ้านเช่า/คอนโดปล่อยเช่า",
+      "country": "TH",
+      "market": "REAL",
+      "currency": "THB",
+      "sector": "อสังหาริมทรัพย์",
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาฯ ให้เช่า = ธาตุดิน (Source4 §5)",
+      "elementSource": "Source4 §5",
+      "riskTier": "medium",
+      "subtype": "house_rental",
+      "note": "ข้อมูลนิ่ง — กระแสเงินสดจากค่าเช่า สภาพคล่องต่ำ",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "LAND",
+      "name": "ที่ดิน (เปล่า/ทำเล)",
+      "country": "TH",
+      "market": "REAL",
+      "currency": "THB",
+      "sector": "อสังหาริมทรัพย์",
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "ที่ดิน = ธาตุดิน (Source4 §5)",
+      "elementSource": "Source4 §5",
+      "riskTier": "medium",
+      "subtype": "land",
+      "note": "ข้อมูลนิ่ง — ถือยาว สภาพคล่องต่ำ ต้องศึกษาทำเล/โฉนด",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "RUBBER_FARM",
+      "name": "สวนยางพารา",
+      "country": "TH",
+      "market": "AGRO",
+      "currency": "THB",
+      "sector": "เกษตร/ป่าไม้",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "การเกษตร/พืช = ธาตุไม้ (decision-log: การเกษตร=ไม้ ผ่านแล้ว)",
+      "elementSource": "decision-log.md",
+      "riskTier": "medium",
+      "subtype": "forest",
+      "note": "ข้อมูลนิ่ง — รายได้ตามราคายาง ใช้เวลาหลายปีกว่าคุ้ม",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "PALM_FARM",
+      "name": "สวนปาล์มน้ำมัน",
+      "country": "TH",
+      "market": "AGRO",
+      "currency": "THB",
+      "sector": "เกษตร/ป่าไม้",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "การเกษตร/พืช = ธาตุไม้ (decision-log)",
+      "elementSource": "decision-log.md",
+      "riskTier": "medium",
+      "subtype": "forest",
+      "note": "ข้อมูลนิ่ง",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "FRUIT_FARM",
+      "name": "สวนผลไม้ (ทุเรียน/มังคุด...)",
+      "country": "TH",
+      "market": "AGRO",
+      "currency": "THB",
+      "sector": "เกษตร/ป่าไม้",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "การเกษตร/พืช = ธาตุไม้ (decision-log)",
+      "elementSource": "decision-log.md",
+      "riskTier": "medium",
+      "subtype": "farm",
+      "note": "ข้อมูลนิ่ง",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "FOREST",
+      "name": "ป่าไม้/ไม้เศรษฐกิจ (สัก/ยูคา)",
+      "country": "TH",
+      "market": "AGRO",
+      "currency": "THB",
+      "sector": "เกษตร/ป่าไม้",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ป่าไม้/ไม้ = ธาตุไม้ (decision-log: การเกษตร=ไม้)",
+      "elementSource": "decision-log.md (รอซินแส)",
+      "riskTier": "risky",
+      "subtype": "forest",
+      "note": "ข้อมูลนิ่ง — ไม้ธาตุหายากสุดในตลาด = ใต้ผืนน้ำฉบับไทย แต่สภาพคล่องต่ำมาก",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "CARBON_CREDIT",
+      "name": "คาร์บอนเครดิต (ป่า/พลังงาน)",
+      "country": "TH",
+      "market": "CARBON",
+      "currency": "THB",
+      "sector": "สิ่งแวดล้อม",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "คาร์บอนจากป่า/เกษตร = ธาตุไม้ (เสนอ — รอซินแส ruling)",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "risky",
+      "subtype": "carbon",
+      "note": "ข้อมูลนิ่ง — ตลาดใหม่ มาตรฐานยังไม่นิ่ง",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "LIVESTOCK_FARM",
+      "name": "ฟาร์มหมู/ไก่/โค",
+      "country": "TH",
+      "market": "AGRO",
+      "currency": "THB",
+      "sector": "ปศุสัตว์",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ปศุสัตว์ = เกษตร = ธาตุไม้ (เสนอ — รอซินแส ruling)",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "medium",
+      "subtype": "livestock",
+      "note": "ข้อมูลนิ่ง — ราคาหมู/ไก่ผันผวนตามวัฏจักร",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "AQUA_FARM",
+      "name": "ฟาร์มกุ้ง/ปลา",
+      "country": "TH",
+      "market": "AGRO",
+      "currency": "THB",
+      "sector": "ประมง",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "สัตว์น้ำ/ประมง = ธาตุน้ำ (เสนอ — รอซินแส ruling)",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "medium",
+      "subtype": "aquaculture",
+      "note": "ข้อมูลนิ่ง — เสี่ยงโรคระบาด",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "GOLD_BAR",
+      "name": "ทองคำแท่ง/ทองก้อน",
+      "country": "TH",
+      "market": "BULLION",
+      "currency": "THB",
+      "sector": "โลหะมีค่า",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ทองคำ = โลหะมีค่า = ธาตุทอง (career-business)",
+      "elementSource": "career-business.txt",
+      "riskTier": "safe",
+      "subtype": "bullion",
+      "note": "ราคาอ้างอิง GC=F (ทองโลก) + ค่ากำเหน็จ — ขายคืนได้ง่ายสุดในกลุ่มสินทรัพย์จริง",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "SILVER_BAR",
+      "name": "เงินแท่ง/เงินก้อน",
+      "country": "TH",
+      "market": "BULLION",
+      "currency": "THB",
+      "sector": "โลหะมีค่า",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "เงิน = โลหะมีค่า = ธาตุทอง (career-business)",
+      "elementSource": "career-business.txt",
+      "riskTier": "safe",
+      "subtype": "bullion",
+      "note": "ราคาอ้างอิง SI=F — \"ทองของคนทั่วไป\" ใต้ผืนน้ำของโลหะมีค่า",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "GEMS",
+      "name": "เพชร/พลอย",
+      "country": "TH",
+      "market": "REAL",
+      "currency": "THB",
+      "sector": "ของมีค่า",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "เพชร/พลอย = ของมีค่า = ธาตุทอง (career-business: เงิน เพชร ทองคำ)",
+      "elementSource": "career-business.txt",
+      "riskTier": "risky",
+      "subtype": "collectible",
+      "note": "ข้อมูลนิ่ง — สภาพคล่องต่ำ ต้องมีใบรับรอง",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "AMULET",
+      "name": "พระเครื่อง",
+      "country": "TH",
+      "market": "REAL",
+      "currency": "THB",
+      "sector": "ของสะสม",
+      "elements": [
+        "ดิน",
+        "ทอง"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "เนื้อพระ = ดิน/ปูน (ดิน) + คุณค่าโลหะ (ทอง) — เสนอ รอซินแส ruling",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "risky",
+      "subtype": "collectible",
+      "note": "ข้อมูลนิ่ง — ต้องดูองค์/เนื้อ/แหล่งที่มา ปลอมเยอะ",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "WATCH_COLLECT",
+      "name": "นาฬิกา/ของสะสมมีค่า",
+      "country": "GLOBAL",
+      "market": "REAL",
+      "currency": "USD",
+      "sector": "ของสะสม",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ของสะสมโลหะมีค่า = ธาตุทอง (เสนอ — รอซินแส)",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "risky",
+      "subtype": "collectible",
+      "note": "ข้อมูลนิ่ง — ตลาดเฉพาะกลุ่ม",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "ARTWORK",
+      "name": "งานศิลปะ",
+      "country": "GLOBAL",
+      "market": "REAL",
+      "currency": "USD",
+      "sector": "ของสะสม",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "งานศิลปะ/สร้างสรรค์ = ธาตุไม้ (Source4: ไม้ = ความคิดสร้างสรรค์ — เสนอ รอซินแส)",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "risky",
+      "subtype": "collectible",
+      "note": "ข้อมูลนิ่ง — สภาพคล่องต่ำมาก",
+      "status": "draft"
+    },
+    {
+      "type": "lottery",
+      "ticker": "GOV_LOTTERY_SAVINGS",
+      "name": "สลากออมสิน (รัฐ)",
+      "country": "TH",
+      "market": "GSB",
+      "currency": "THB",
+      "sector": "สลาก/ออมทรัพย์",
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "สลาก = ฝาก(น้ำ) + ลุ้นรางวัล(ไฟ) — Concept 偏財 (ทรัพย์ลมๆ แล้งๆ) รอซินแส ruling",
+      "elementSource": "รอซินแส (decision-log — 偏財)",
+      "riskTier": "safe",
+      "subtype": "lottery",
+      "note": "ถูกกฎหมาย (รัฐวิสาหกิจ) — เงินต้นคง ต่างจากลอตเตอรี่ใต้ดิน",
+      "status": "draft"
+    },
+    {
+      "type": "lottery",
+      "ticker": "BAAC_LOTTERY_SAVINGS",
+      "name": "สลาก ธกส. (รัฐ)",
+      "country": "TH",
+      "market": "BAAC",
+      "currency": "THB",
+      "sector": "สลาก/ออมทรัพย์",
+      "elements": [
+        "น้ำ",
+        "ไฟ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "สลาก = ฝาก(น้ำ) + ลุ้นรางวัล(ไฟ) — 偏財 รอซินแส ruling",
+      "elementSource": "รอซินแส (decision-log)",
+      "riskTier": "safe",
+      "subtype": "lottery",
+      "note": "ถูกกฎหมาย — เงินต้นคง",
+      "status": "draft"
+    },
+    {
+      "type": "insurance",
+      "ticker": "ENDOWMENT_INS",
+      "name": "ประกันสะสมทรัพย์",
+      "country": "TH",
+      "market": "INSURANCE",
+      "currency": "THB",
+      "sector": "ประกัน",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ประกัน/การออม = ธาตุน้ำ — Concept คลังทรัพย์ (财库) เปิด/ปิดคลัง (บท 4)",
+      "elementSource": "Source4 (财库) — รอซินแส",
+      "riskTier": "medium",
+      "subtype": "insurance",
+      "note": "ข้อมูลนิ่ง — เหมาะเป็นเครื่องมือ 'เปิดคลัง' ระยะยาว",
+      "status": "draft"
+    },
+    {
+      "type": "insurance",
+      "ticker": "PENSION_INS",
+      "name": "ประกันบำนาญ",
+      "country": "TH",
+      "market": "INSURANCE",
+      "currency": "THB",
+      "sector": "ประกัน",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ประกัน/การออม = ธาตุน้ำ — คลังทรัพย์ (财库)",
+      "elementSource": "Source4 (财库) — รอซินแส",
+      "riskTier": "medium",
+      "subtype": "insurance",
+      "note": "ข้อมูลนิ่ง — กันเงินหลังเกษียณ",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "TOWNHOUSE_RENT",
+      "name": "ทาวน์เฮาส์/บ้านแถวปล่อยเช่า",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "อสังหาปล่อยเช่า",
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "CONDO_FOREIGN",
+      "name": "คอนโดต่างประเทศ (ญี่ปุ่น/อังกฤษ)",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "อสังหาต่างประเทศ",
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "WAREHOUSE_RENT",
+      "name": "โกดัง/โรงงานปล่อยเช่า",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "อสังหาเชิงพาณิชย์",
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "HOTEL_RESORT",
+      "name": "โรงแรม/รีสอร์ท",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "อสังหาเชิงพาณิชย์",
+      "elements": [
+        "ดิน"
+      ],
+      "primaryElement": "ดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "GAS_STATION",
+      "name": "ปั๊มน้ำมัน/สถานีชาร์จ EV",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "พลังงานค้าปลีก",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "น้ำมัน/พลังงาน = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "SOLAR_FARM",
+      "name": "ฟาร์มโซลาร์เซลล์ขายไฟ",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "พลังงานทดแทน",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "พลังงานแสงอาทิตย์/ไฟฟ้า = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "EGG_FARM",
+      "name": "ฟาร์มไก่ไข่",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "ปศุสัตว์",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ไก่/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน — คิวซินแส)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "COCONUT_FARM",
+      "name": "สวนมะพร้าวน้ำหอม",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "เกษตร",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "มะพร้าว = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "RICE_FARM",
+      "name": "นาข้าว",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "เกษตร",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ข้าว = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "ORCHID_FARM",
+      "name": "ฟาร์มกล้วยไม้",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "เกษตร",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "กล้วยไม้ = พืช = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "CLASSIC_CAR",
+      "name": "รถคลาสสิก/ซุปเปอร์คาร์",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "ของสะสม",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "รถคลาสสิก = ของสะสมมีค่า = ธาตุทอง",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "WINE_COLLECT",
+      "name": "ไวน์/วิสกี้หายาก",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "ของสะสม",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "ไวน์/วิสกี้สะสม = ของมีค่า = ธาตุทอง",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "STAMP_COLLECT",
+      "name": "แสตมป์หายาก",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "ของสะสม",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "แสตมป์สะสม = ของมีค่า = ธาตุทอง",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "COIN_COLLECT",
+      "name": "เหรียญกษาปณ์/เงินโบราณ",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "ของสะสม",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "เหรียญกษาปณ์ = โลหะมีค่า = ธาตุทอง",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "JADE",
+      "name": "หยก/หินมีค่า",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "อัญมณี",
+      "elements": [
+        "ทอง"
+      ],
+      "primaryElement": "ทอง",
+      "elementReason": "หยก/หินมีค่า = ของมีค่า = ธาตุทอง",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "real_asset",
+      "ticker": "PEARL_FARM",
+      "name": "ฟาร์มไข่มุก",
+      "country": "TH",
+      "market": "REAL_ASSET",
+      "currency": "THB",
+      "sector": "เกษตรน้ำ",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "ไข่มุก/สัตว์น้ำ = ธาตุน้ำ (รอซินแสยืนยัน — คิวซินแส)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "medium",
+      "status": "draft"
+    }
   ],
   "forbidden": [
-    { "name": "ห้องแชร์/แชร์ (ไม่ผ่านระบบ)", "note": "เสี่ยงฉ้อโกง/เงินหาย ไม่มีการคุ้มครอง — ผิดกฎหมายบางรูปแบบ", "why": "ธาตุพิฆาตดวง + ความเสี่ยงไม่ใช่การลงทุน" },
-    { "name": "แชร์ลูกโซ่/MLM เก็บเงินสมาชิก", "note": "ผิดกฎหมาย — โครงสร้างพีระมิด", "why": "ฉ้อโกง ไม่ใช่การลงทุน" },
-    { "name": "ลอตเตอรี่ใต้ดิน/การพนัน", "note": "ผิดกฎหมาย — ต่างจากสลากออมสินของรัฐ (เงินต้นคง)", "why": "เสียเงิน确定性 — ตรงข้ามคลังทรัพย์" },
-    { "name": "ทองปลอม/พระเก๊/ของปลอม", "note": "ฉ้อโกง — ต้องซื้อจากแหล่ง可信", "why": "ขาดทุนจากของปลอม ไม่ใช่จังหวะ" },
-    { "name": "สัญญาณเทรด/บอทการันตีกำไร", "note": "มิจฉาชีพการลงทุนยอดนิยม", "why": "การันตีกำไร = ฉ้อโกงเสมอ" }
+    {
+      "name": "ห้องแชร์/แชร์ (ไม่ผ่านระบบ)",
+      "note": "เสี่ยงฉ้อโกง/เงินหาย ไม่มีการคุ้มครอง — ผิดกฎหมายบางรูปแบบ",
+      "why": "ธาตุพิฆาตดวง + ความเสี่ยงไม่ใช่การลงทุน"
+    },
+    {
+      "name": "แชร์ลูกโซ่/MLM เก็บเงินสมาชิก",
+      "note": "ผิดกฎหมาย — โครงสร้างพีระมิด",
+      "why": "ฉ้อโกง ไม่ใช่การลงทุน"
+    },
+    {
+      "name": "ลอตเตอรี่ใต้ดิน/การพนัน",
+      "note": "ผิดกฎหมาย — ต่างจากสลากออมสินของรัฐ (เงินต้นคง)",
+      "why": "เสียเงิน确定性 — ตรงข้ามคลังทรัพย์"
+    },
+    {
+      "name": "ทองปลอม/พระเก๊/ของปลอม",
+      "note": "ฉ้อโกง — ต้องซื้อจากแหล่ง可信",
+      "why": "ขาดทุนจากของปลอม ไม่ใช่จังหวะ"
+    },
+    {
+      "name": "สัญญาณเทรด/บอทการันตีกำไร",
+      "note": "มิจฉาชีพการลงทุนยอดนิยม",
+      "why": "การันตีกำไร = ฉ้อโกงเสมอ"
+    }
   ]
 }
