@@ -3,6 +3,7 @@ import "./globals.css";
 import { LocaleProvider } from "./lib/i18n";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "ดวงนักลงทุน — AI ผู้ช่วยลงทุนคู่ดวง",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <TopBar />
           <main className="container">{children}</main>
           <Footer />
+          <CookieBanner />
         </LocaleProvider>
       </body>
     </html>

@@ -100,6 +100,9 @@ const TH = {
   "legal.terms": "ข้อกำหนดและเงื่อนไข",
   "legal.privacy": "นโยบายความเป็นส่วนตัว",
 
+  "cookie.text": "เว็บไซต์ใช้ localStorage เพื่อจดจำผู้ใช้และภาษา (จำเป็นต่อการทำงาน) — เราไม่ใช้คุกกี้ติดตามโฆษณาบุคคลที่สาม",
+  "cookie.accept": "ยอมรับ",
+
   // elements (ป้ายธาตุ)
   "el.wood": "ไม้",
   "el.fire": "ไฟ",
@@ -273,6 +276,9 @@ const ZH: Record<LocaleKey, string> = {
   "legal.terms": "条款与条件",
   "legal.privacy": "隐私政策",
 
+  "cookie.text": "网站使用 localStorage 记住用户和语言（服务必需）— 我们不使用第三方广告跟踪 Cookie",
+  "cookie.accept": "接受",
+
   "el.wood": "木",
   "el.fire": "火",
   "el.earth": "土",
@@ -440,6 +446,9 @@ const EN: Record<LocaleKey, string> = {
   "legal.risk": "Risk Warning",
   "legal.terms": "Terms & Conditions",
   "legal.privacy": "Privacy Policy",
+
+  "cookie.text": "We use localStorage to remember your user and language (required for the service) — we do not use third-party advertising tracking cookies",
+  "cookie.accept": "Accept",
 
   "el.wood": "Wood",
   "el.fire": "Fire",

@@ -34,4 +34,21 @@ describe("เอกสารทางกฎหมาย (policy)", () => {
     expect(en.toLowerCase()).toContain("recommendation");
     expect(LEGAL.disclaimer.th[0].p.join(" ")).toContain("คำแนะนำ");
   });
+
+  it("ครบประเด็นกฎหมายไทย — IC/ก.ล.ต., PDPA, ผู้เยาว์ 20 ปี, ETDA/DPS, คอมพิวเตอร์ 2550", () => {
+    const th = {
+      disclaimer: LEGAL.disclaimer.th[0].p.join(" "),
+      terms: LEGAL.terms.th[0].p.join(" "),
+      privacy: LEGAL.privacy.th[0].p.join(" "),
+    };
+    expect(th.disclaimer).toContain("ผู้แนะนำการลงทุน (IC)");
+    expect(th.disclaimer).toContain("ก.ล.ต.");
+    expect(th.terms).toContain("20 ปีบริบูรณ์");
+    expect(th.terms).toContain("คอมพิวเตอร์");
+    expect(th.terms).toContain("ETDA");
+    expect(th.privacy).toContain("PDPA");
+    expect(th.privacy).toContain("มาตรา 30-37");
+    expect(th.privacy).toContain("มาตรา 37");
+    expect(th.privacy).toContain("ผู้เยาว์");
+  });
 });
