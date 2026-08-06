@@ -246,6 +246,15 @@ export async function handleWatchlist(q: Query): Promise<ApiResponse<unknown>> {
   return ok({ entries, rows, updatedAt: snap?.updatedAt ?? null });
 }
 
+/** แดชบอร์ดแนะนำส่วนตัว (ดิถี/ธาตุ/เงินเร็ว-เงินเย็น) — ต้องมี profile */
+export async function handlePersonal(q: Query): Promise<ApiResponse<unknown>> {
+  const profile = loadUser(q.userId ?? "");
+  if (!profile) return err("ยังไม่มีโปรไฟล์ — กรอกวันเกิดก่อน (หน้าโปรไฟล์)");
+  const state = await stateOfProfile(profile);
+  const { buildPersonalDashboard } = await import("../lib/portfolio/personal-dashboard");
+  return ok(buildPersonalDashboard(state));
+}
+
 /** พอร์ตเด่นรายเดือน (สไตล์ ProPicks AI) — ต้องมี profile (ดวง) */
 export async function handlePicks(q: Query): Promise<ApiResponse<unknown>> {
   const profile = loadUser(q.userId ?? "");
