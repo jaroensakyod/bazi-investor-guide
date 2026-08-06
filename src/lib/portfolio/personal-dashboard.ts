@@ -146,7 +146,7 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     supplementElement: strengthenEl,
   };
   const timeline = buildInvestorTimeline(state)
-    .slice(0, 4)
+    .filter((p) => p.endAge >= 15 && p.startAge <= 80) // วัย 15–80
     .map((p) => ({ ageRange: p.ageRange, verdict: p.verdict, reaction: p.reaction, advice: p.advice }));
   const monthEl = month.monthElement;
   const monthFit = monthEl ? ((avoid as string[]).includes(monthEl) ? "avoid" : (invest as string[]).includes(monthEl) ? "good" : "neutral") : "neutral";

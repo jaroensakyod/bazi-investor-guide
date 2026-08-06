@@ -65,8 +65,10 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(d.principle.supplementElement).toBe("ไฟ");
     expect(d.principle.outputElement).toBeTruthy();
     expect(d.principle.desc).toContain("เสริม");
-    // ไทม์ไลน์: 4 ช่วง มีคำแนะนำ
-    expect(d.timeline.length).toBe(4);
+    // ไทม์ไลน์: วัย 15–80 (7 ช่วง) มีคำแนะนำ
+    expect(d.timeline.length).toBeGreaterThanOrEqual(5);
+    expect(d.timeline[0].ageRange).toContain("15");
+    expect(d.timeline[d.timeline.length - 1].ageRange).toContain("75");
     for (const ph of d.timeline) {
       expect(ph.ageRange).toBeTruthy();
       expect(["invest", "accumulate", "avoid", "no-risk"]).toContain(ph.verdict);
