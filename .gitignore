@@ -9,3 +9,4 @@ out/
 data/stocks/.intro-cache.json
 data/stocks/.yahoo-cache.json
 .hermes-tmp.*/
+data/users/
