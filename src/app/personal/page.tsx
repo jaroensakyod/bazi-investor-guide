@@ -15,6 +15,12 @@ type PersonalData = {
   instruments: { emergency: string[]; cold: string[]; fast: string[] };
   topStocks: Array<{ ticker: string; name: string; market: string; price: number | null; changePct: number | null; score: number }>;
   topAssets: Array<{ ticker: string; name: string; type: string; riskTier: string; price: number | null; changePct: number | null }>;
+  categories: Array<{
+    id: string;
+    label: string;
+    unlock: "free" | "pro" | "premium";
+    items: Array<{ ticker: string; name: string; market?: string; element: string; fit: "good" | "neutral" | "avoid"; riskTier: string; price: number | null; changePct: number | null; score?: number }>;
+  }>;
   auspiciousDays: {
     next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }>;
     month: { monthElement: string | null; caishenDir: string; goodDays: Array<{ date: string; weekday: string }>; avoidDays: Array<{ date: string; weekday: string }>; goodDayCount: number; avoidDayCount: number };
@@ -197,27 +203,38 @@ export default function PersonalPage() {
             </p>
           </div>
 
-          {/* ── หุ้นเสริมธาตุ + สินทรัพย์เด่น ── */}
+          {/* ── สินค้าแนะนำครบทุกหมวด ── */}
           <div className="card">
-            <h2>✨ {t("personal.stockPicks")} ({t(`el.${elKey(data.strengthen.element)}` as never)})</h2>
-            {data.topStocks.map((s, i) => (
-              <div key={s.ticker} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid #262a34", fontSize: 13 }}>
-                <span>
-                  <b>{i + 1}. {s.ticker}</b> <span style={{ color: "#9a937f" }}>{s.name}</span>
-                </span>
-                <span>
-                  {s.price != null ? s.price.toLocaleString() : "-"}{" "}
-                  <span style={{ color: (s.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(s.changePct)}</span>
-                </span>
-              </div>
-            ))}
-            <h2 style={{ marginTop: 14 }}>💰 {t("personal.assetPicks")}</h2>
-            {data.topAssets.map((a, i) => (
-              <div key={a.ticker} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid #262a34", fontSize: 13 }}>
-                <span>
-                  <b>{i + 1}. {a.name}</b> <span style={{ color: "#9a937f" }}>· {a.ticker}</span>
-                </span>
-                <span>{a.price != null ? `$${a.price.toLocaleString()}` : "-"}</span>
+            <h2>🛒 {t("personal.allProducts")}</h2>
+            <p style={{ fontSize: 12, color: "#9a937f", marginBottom: 8 }}>
+              {t("personal.allProductsSub")}{" "}
+              <span className="tag">🆓 {t("personal.free")}</span> <span className="tag">⭐ Pro</span> <span className="tag">👑 Premium</span>
+            </p>
+            {data.categories.map((cat) => (
+              <div key={cat.id} style={{ marginBottom: 14 }}>
+                <p style={{ fontSize: 13.5, fontWeight: 700, marginBottom: 4, color: "#d4af37" }}>
+                  {cat.unlock === "free" ? "🆓" : cat.unlock === "pro" ? "⭐" : "👑"} {cat.label}
+                </p>
+                {cat.items.length === 0 ? (
+                  <p style={{ fontSize: 12, color: "#9a937f" }}>— ยังไม่มีข้อมูล</p>
+                ) : (
+                  cat.items.map((p) => (
+                    <div key={p.ticker} style={{ display: "flex", justifyContent: "space-between", gap: 8, padding: "4px 0", borderBottom: "1px solid #1d2029", fontSize: 13 }}>
+                      <span>
+                        <b>{p.ticker}</b>{" "}
+                        <span style={{ color: ELEMENT_COLOR[elKey(p.element)] ?? "#d4af37" }}>{t(`el.${elKey(p.element)}` as never)}</span>{" "}
+                        <span style={{ fontSize: 11.5 }}>
+                          {p.fit === "good" ? <b style={{ color: "#8fd4a0" }}>✅ ตรงดวง</b> : p.fit === "avoid" ? <b style={{ color: "#d48f8f" }}>⛔ ขัดดวง</b> : <span style={{ color: "#9a937f" }}>🟡 กลาง</span>}
+                        </span>
+                        <span style={{ color: "#9a937f", fontSize: 11.5 }}> · {p.name}</span>
+                      </span>
+                      <span style={{ whiteSpace: "nowrap" }}>
+                        {p.price != null ? (p.ticker.includes("=") || p.ticker.startsWith("^") ? `$${p.price.toLocaleString()}` : p.price.toLocaleString()) : "-"}{" "}
+                        {p.changePct != null ? <span style={{ color: (p.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(p.changePct)}</span> : ""}
+                      </span>
+                    </div>
+                  ))
+                )}
               </div>
             ))}
           </div>

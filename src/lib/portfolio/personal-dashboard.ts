@@ -69,29 +69,55 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     fast: ["หุ้นรายตัวเก็งกำไร", "คริปโต (ไฟ)", "ฟิวเจอร์ส/อนุพันธ์ (เลเวอเรจ)", "เทรดทองออนไลน์"],
   };
 
-  // ── 4. หุ้นเสริมธาตุ (top 5 ของธาตุที่ควรทำ) ──
-  const topStocks = getAllStocks()
-    .filter((s) => s.primaryElement === strengthenEl)
-    .map((s) => {
-      const yt = yahooTicker(s.ticker, s.market) ?? "";
-      const md = snap?.quotes[yt];
-      const f = fundCache.get(yt);
-      let score = 0;
-      if (f) score += buffettScore(buffettChecks(f)) / 2; // 0..5
-      if (md?.changePct != null) score += Math.max(-1, Math.min(1, md.changePct / 5));
-      return { ticker: s.ticker, name: s.name, market: s.market, price: md?.price ?? null, changePct: md?.changePct ?? null, score: Math.round(score * 10) / 10 };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 5);
+  // ── 4. สินค้าแนะนำครบทุกหมวด (พร้อมโครง paywall อนาคต — unlock: free/pro/premium) ──
+  const fitOf = (el: string): "good" | "neutral" | "avoid" => ((avoid as string[]).includes(el) ? "avoid" : (invest as string[]).includes(el) ? "good" : "neutral");
+  const assetsOf = getAssets();
+  const mdOf = (ticker: string) => snap?.quotes[ticker];
+  const assetRow = (a: (typeof assetsOf)[number], unlock: string) => {
+    const md = mdOf(a.ticker);
+    return { ticker: a.ticker, name: a.name, element: a.primaryElement, fit: fitOf(a.primaryElement), riskTier: a.riskTier, price: md?.price ?? null, changePct: md?.changePct ?? null, unlock };
+  };
+  const scoreOf = (md: { changePct?: number | null } | undefined, f?: unknown): number => {
+    let s = 0;
+    if (f) s += buffettScore(buffettChecks(f as never)) / 4; // 0..2.5
+    if (md?.changePct != null) s += Math.max(-1, Math.min(1, md.changePct / 5));
+    return Math.round(s * 10) / 10;
+  };
+  const stockRow = (s: { ticker: string; name: string; market: string; primaryElement: string; tier: string }, unlock: string) => {
+    const yt = yahooTicker(s.ticker, s.market) ?? "";
+    const md = snap?.quotes[yt];
+    const f = fundCache.get(yt);
+    return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, fit: fitOf(s.primaryElement), riskTier: s.tier, price: md?.price ?? null, changePct: md?.changePct ?? null, score: scoreOf(md, f), unlock };
+  };
+  const allStocks = getAllStocks();
+  const byEl = (el: string) => allStocks.filter((s) => s.primaryElement === el);
+  const inMarkets = (list: typeof allStocks, mk: string[]) => list.filter((s) => mk.includes(s.market));
+  const top = <T,>(list: T[], n: number): T[] => list.slice(0, n);
+  const sortByScore = <T,>(list: Array<T & { score?: number }>) => [...list].sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
 
-  // ── 5. สินทรัพย์เด่น (ธาตุที่ควรทำ + tier ปลอดภัย/กลาง ก่อน) ──
-  const topAssets = getAssets()
-    .filter((a) => a.primaryElement === strengthenEl && a.riskTier !== "risky")
-    .map((a) => {
-      const md = snap?.quotes[a.ticker];
-      return { ticker: a.ticker, name: a.name, type: a.type, riskTier: a.riskTier, price: md?.price ?? null, changePct: md?.changePct ?? null };
-    })
-    .slice(0, 5);
+  const sTh = top(sortByScore(inMarkets(byEl(strengthenEl), ["SET", "mai"]).map((s) => stockRow(s, "pro"))), 3);
+  const sGlobal = top(sortByScore(inMarkets(byEl(strengthenEl), ["NYSE", "NASDAQ", "NYSE/NASDAQ", "HOSE", "TSE", "KRX", "TWSE", "SSE", "SZSE"]).map((s) => stockRow(s, "pro"))), 3);
+  const etfFund = top(assetsOf.filter((a) => (a.type === "etf" || a.type === "fund") && a.primaryElement === strengthenEl).map((a) => assetRow(a, "pro")), 3);
+  const goldMetal = top(assetsOf.filter((a) => a.type === "commodity" && ["โลหะมีค่า", "โลหะอุตสาหกรรม"].includes(a.sector ?? "")).map((a) => assetRow(a, "free")), 3);
+  const energy = top(assetsOf.filter((a) => a.type === "commodity" && (a.sector ?? "").includes("พลังงาน")).map((a) => assetRow(a, "pro")), 3);
+  const crypto = top(assetsOf.filter((a) => a.type === "crypto").map((a) => assetRow(a, "premium")), 3);
+  const bond = top(assetsOf.filter((a) => a.type === "bond").map((a) => assetRow(a, "free")), 3);
+  const reitProp = top(assetsOf.filter((a) => (a.type === "reit" || (a.type === "real_asset" && (a.sector ?? "").includes("อสังหา")))).map((a) => assetRow(a, "free")), 3);
+  const emergency = top(assetsOf.filter((a) => a.type === "deposit" || a.type === "lottery" || a.ticker === "CASH_THB").map((a) => assetRow(a, "free")), 2);
+  const realEstate = top(assetsOf.filter((a) => a.type === "real_asset" && a.primaryElement === "ดิน" && (a.sector ?? "").includes("อสังหา")).map((a) => assetRow(a, "pro")), 3);
+
+  const categories = [
+    { id: "stocks_th", label: "หุ้นไทยเสริมธาตุ", unlock: "pro", items: sTh },
+    { id: "stocks_global", label: "หุ้นต่างประเทศเสริมธาตุ", unlock: "pro", items: sGlobal },
+    { id: "etf_fund", label: "กองทุน/ETF เสริมธาตุ", unlock: "pro", items: etfFund },
+    { id: "gold_metal", label: "ทอง/โลหะมีค่า", unlock: "free", items: goldMetal },
+    { id: "energy", label: "พลังงาน (น้ำมัน/ก๊าซ)", unlock: "pro", items: energy },
+    { id: "bond", label: "พันธบัตร/ตราสารหนี้", unlock: "free", items: bond },
+    { id: "reit_property", label: "REIT/อสังหาปล่อยเช่า", unlock: "free", items: reitProp },
+    { id: "emergency", label: "เงินฝาก/สลาก (ฉุกเฉิน)", unlock: "free", items: emergency },
+    { id: "real_estate", label: "ที่ดิน/อสังหาจริง", unlock: "pro", items: realEstate },
+    { id: "crypto", label: "คริปโต (เก็งกำไร — ดิถีอ่อนระวัง)", unlock: "premium", items: crypto },
+  ];
 
   // ── 6. วันมงคล/วันระวัง (ของใครของมัน — เทียบธาตุวันกับดวง) ──
   const next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }> = [];
@@ -123,8 +149,7 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     avoid,
     trading,
     instruments,
-    topStocks,
-    topAssets,
+    categories,
     auspiciousDays: {
       next14,
       month: {

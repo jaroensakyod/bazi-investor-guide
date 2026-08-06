@@ -27,11 +27,14 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(water!.count).toBeGreaterThanOrEqual(d.elementBalance[1].count);
     // ต้องเสริมไฟ
     expect(d.strengthen.element).toBe("ไฟ");
-    // หุ้นเสริมธาตุ = ธาตุไฟ มีราคา/ชื่อ
-    expect(d.topStocks.length).toBe(5);
-    expect(d.topStocks[0].ticker).toBeTruthy();
-    // สินทรัพย์เด่นไม่เอา tier เสี่ยง
-    for (const a of d.topAssets) expect(a.riskTier).not.toBe("risky");
+    // สินค้าแนะนำครบทุกหมวด: 10 หมวด + มี unlock tier + หุ้นไทย/ต่างประเทศ/คริปโต
+    const cats = d.categories;
+    expect(cats.length).toBe(10);
+    expect(cats.some((c) => c.id === "stocks_th" && c.items.length > 0)).toBe(true);
+    expect(cats.some((c) => c.id === "stocks_global" && c.items.length > 0)).toBe(true);
+    expect(cats.some((c) => c.id === "crypto" && c.unlock === "premium")).toBe(true);
+    expect(cats.some((c) => c.id === "bond" && c.unlock === "free")).toBe(true);
+    for (const c of cats) for (const p of c.items) expect(["good", "neutral", "avoid"]).toContain(p.fit);
     expect(d.disclaimer).toContain("ไม่ใช่คำแนะนำการลงทุน");
   });
 
