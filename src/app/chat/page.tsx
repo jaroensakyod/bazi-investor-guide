@@ -2,19 +2,13 @@
 
 import { useState, useRef, useEffect } from "react";
 import { post, myUserId } from "../lib/api";
+import { useT, useLocale } from "../lib/i18n";
 
 type Msg = { role: "user" | "bot"; text: string; intent?: string; llm?: boolean };
 
-const SUGGESTIONS = [
-  "หุ้นวันนี้ตัวไหนเด่น",
-  "วันนี้ดวงเราเป็นยังไง",
-  "วันนี้ดวงกับหุ้นอะไรดี",
-  "สัปดาห์นี้ IPO ตัวไหนเหมาะกับดวง",
-  "เดือนนี้ลงทุนกับอะไรดี",
-  "วิเคราะห์ KBANK ให้หน่อย",
-];
-
 export default function ChatPage() {
+  const t = useT();
+  const { locale } = useLocale();
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -26,15 +20,16 @@ export default function ChatPage() {
   }, [msgs]);
 
   async function send(text: string) {
-    const t = text.trim();
-    if (!t || busy) return;
-    setMsgs((m) => [...m, { role: "user", text: t }]);
+    const t2 = text.trim();
+    if (!t2 || busy) return;
+    setMsgs((m) => [...m, { role: "user", text: t2 }]);
     setInput("");
     setBusy(true);
     const r = await post<{ reply: string; intent: string; llm: boolean; disclaimer: string }>("/api/chat", {
       userId: myUserId(),
-      message: t,
+      message: t2,
       useLlm: true,
+      locale,
     });
     setBusy(false);
     if (r.ok) {
@@ -45,10 +40,12 @@ export default function ChatPage() {
     }
   }
 
+  const suggestions = ["หุ้นวันนี้ตัวไหนเด่น", "วันนี้ดวงเราเป็นยังไง", "สัปดาห์นี้ IPO ตัวไหนเหมาะกับดวง", "เดือนนี้ลงทุนกับอะไรดี", "วิเคราะห์ KBANK ให้หน่อย"];
+
   return (
     <div>
       <div className="chips">
-        {SUGGESTIONS.map((s) => (
+        {suggestions.map((s) => (
           <button key={s} className="chip" onClick={() => send(s)} disabled={busy}>
             {s}
           </button>
@@ -56,22 +53,22 @@ export default function ChatPage() {
       </div>
       {needProfile && (
         <div className="card" style={{ borderColor: "#d4af37" }}>
-          ยังไม่มีดวงของคุณ — <a href="/profile">กรอกวันเกิดก่อน</a> แล้วกลับมาแชทได้เลย
+          {t("chat.needprofile")} <a href="/profile">→</a>
         </div>
       )}
       <div className="chatbox">
         {msgs.length === 0 && (
           <div className="msg bot">
-            <span className="badge">ผู้ช่วยลงทุนคู่ดวง</span>
-            สวัสดีครับ 🙏 ถามได้เลย เช่น "วันนี้ดวงกับหุ้นอะไรดี" "สัปดาห์นี้ IPO ตัวไหนเหมาะกับดวง" หรือ "เดือนนี้ลงทุนกับอะไรดี"
-            — ทุกคำตอบเป็นบทวิเคราะห์อ้างอิงจากดวง ตลาด ข่าว แนวโน้ม ไม่ใช่คำแนะนำการลงทุน
+            <span className="badge">{t("chat.botname")}</span>
+            {t("chat.welcome")}
           </div>
         )}
         {msgs.map((m, i) => (
           <div key={i} className={`msg ${m.role}`}>
             {m.role === "bot" && (
               <span className="badge">
-                ผู้ช่วยลงทุนคู่ดวง{m.llm ? " · AI" : ""}
+                {t("chat.botname")}
+                {m.llm ? " · AI" : ""}
                 {m.intent ? ` · ${m.intent}` : ""}
               </span>
             )}
@@ -80,8 +77,7 @@ export default function ChatPage() {
         ))}
         {busy && (
           <div className="msg bot">
-            <span className="badge">กำลังวิเคราะห์...</span>
-            ⏳
+            <span className="badge">{t("chat.analyzing")}</span>⏳
           </div>
         )}
         <div ref={bottomRef} />
@@ -91,10 +87,10 @@ export default function ChatPage() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && send(input)}
-          placeholder="พิมพ์คำถาม เช่น 'เดือนนี้ลงทุนกับอะไรดี'"
+          placeholder={t("chat.placeholder")}
         />
         <button className="btn" onClick={() => send(input)} disabled={busy}>
-          ส่ง
+          {t("chat.send")}
         </button>
       </div>
     </div>

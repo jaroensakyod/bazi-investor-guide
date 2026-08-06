@@ -259,3 +259,26 @@ th {
   background: #4a1e1e;
   color: #d48f8f;
 }
+
+/* language switcher */
+.langswitch {
+  display: inline-flex;
+  gap: 2px;
+  margin-left: 10px;
+  border: 1px solid #2a2e39;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.langbtn {
+  background: #14161d;
+  color: #9a937f;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.langbtn.active {
+  background: #d4af37;
+  color: #14161d;
+  font-weight: 700;
+}

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { get, myUserId } from "../lib/api";
+import { useT, useLocale } from "../lib/i18n";
 
 type ReportData = {
   stock: { ticker: string; name: string; element: string; tier: string };
@@ -16,6 +17,8 @@ type ReportData = {
 };
 
 export default function ReportPage() {
+  const t = useT();
+  const { locale } = useLocale();
   const [ticker, setTicker] = useState("KBANK");
   const [data, setData] = useState<ReportData | null>(null);
   const [error, setError] = useState("");
@@ -30,14 +33,19 @@ export default function ReportPage() {
     else setError(r.error);
   }
 
+  const elMap: Record<string, string> = { ไม้: "wood", ไฟ: "fire", ดิน: "earth", ทอง: "metal", น้ำ: "water" };
+  const elKey = (e: string) => elMap[e] ?? e;
+  const el = (e: string) => t(`el.${elKey(e)}` as never);
+  const vd = (v: string) => (["very-good", "good", "neutral", "avoid"].includes(v) ? t(`vd.${v}` as never) : v);
+
   return (
     <div>
       <div className="card">
-        <h2>📑 รายงานหุ้น: ดวง + พื้นฐาน + Buffett</h2>
+        <h2>{t("report.title")}</h2>
         <div style={{ display: "flex", gap: 8 }}>
-          <input value={ticker} onChange={(e) => setTicker(e.target.value.toUpperCase())} placeholder="KBANK" style={{ margin: 0, flex: 1 }} />
+          <input value={ticker} onChange={(e) => setTicker(e.target.value.toUpperCase())} placeholder={t("report.ticker")} style={{ margin: 0, flex: 1 }} />
           <button className="btn" onClick={load} disabled={busy}>
-            {busy ? "..." : "วิเคราะห์"}
+            {busy ? "..." : t("report.analyze")}
           </button>
         </div>
         {error && <p style={{ color: "#d48f8f", marginTop: 10 }}>{error}</p>}
@@ -47,25 +55,25 @@ export default function ReportPage() {
         <>
           <div className="card">
             <h2>
-              {data.stock.name} ({data.stock.ticker}) <span className="tag">ธาตุ{data.stock.element}</span>
+              {data.stock.name} ({data.stock.ticker}) <span className="tag">{el(data.stock.element)}</span>
               <span className="tag">{data.stock.tier}</span>
             </h2>
             {data.verdict && (
               <>
                 <p>
-                  🎯 ดวง: <b>{data.verdict.score.verdict}</b> (คะแนน {data.verdict.score.score}) — {data.verdict.persona.emoji} {data.verdict.persona.name}
+                  {t("report.verdict")}: <b>{vd(data.verdict.score.verdict)}</b> ({data.verdict.score.score}) — {data.verdict.persona.emoji} {data.verdict.persona.name}
                 </p>
                 <p style={{ fontSize: 13.5 }}>
-                  ควร (invest): {data.verdict.invest.join("/")} · เลี่ยง (avoid): {data.verdict.avoid.join("/")}
+                  {t("report.invest")}: {data.verdict.invest.map(el).join("/")} · {t("report.avoid")}: {data.verdict.avoid.map(el).join("/")}
                 </p>
                 {data.verdict.score.reasons.slice(0, 2).map((r, i) => (
                   <p key={i} style={{ fontSize: 13, color: "#9a937f" }}>
                     • {r}
                   </p>
                 ))}
-                {data.verdict.timeline.map((t, i) => (
+                {data.verdict.timeline.map((ph, i) => (
                   <p key={i} style={{ fontSize: 13, color: "#9a937f" }}>
-                    📅 {t.ageRange} ({t.verdict}): {t.advice}
+                    📅 {ph.ageRange} ({ph.verdict}): {ph.advice}
                   </p>
                 ))}
               </>
@@ -73,7 +81,9 @@ export default function ReportPage() {
           </div>
           {data.buffett && (
             <div className="card">
-              <h2>🧠 Buffett score: {data.buffett.score}/10</h2>
+              <h2>
+                {t("report.buffett")}: {data.buffett.score}/10
+              </h2>
               {data.buffett.checks.map((c, i) => (
                 <p key={i} style={{ fontSize: 13.5, marginBottom: 2 }}>
                   {c.pass ? "✅" : "❌"} {c.label}
@@ -82,7 +92,7 @@ export default function ReportPage() {
             </div>
           )}
           <div className="card" style={{ fontSize: 12.5, color: "#9a937f" }}>
-            💾 PDF รายงานฉบับเต็ม — กำลังพัฒนา (Phase 3) · ⚠️ บทวิเคราะห์อ้างอิง ไม่ใช่คำแนะนำการลงทุน
+            {t("report.pdfnote")} · {t("disclaimer")}
           </div>
         </>
       )}

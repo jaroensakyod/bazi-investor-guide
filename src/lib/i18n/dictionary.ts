@@ -1,0 +1,374 @@
+/**
+ * i18n dictionary — th/zh/en (Task 1.7)
+ *
+ * หลักการ (ตามแผน): engine deterministic = ภาษากลาง (ธาตุ zh: 木火土金水)
+ * verdict/ป้าย/ตัวเลข แปลผ่าน dictionary (ไม่ใช่ LLM — กันเพี้ยน + เทสต์ได้)
+ * เนื้อเรื่อง/แชท = LLM ต่อภาษา (system prompt per locale)
+ *
+ * เพิ่มภาษาถัดไป (vi/ja/ko/id): เติม key ใน DICT — UI ใช้ได้ทันที
+ */
+export const LOCALES = ["th", "zh", "en"] as const;
+export type Locale = (typeof LOCALES)[number];
+export type LocaleKey = keyof typeof TH;
+
+const TH = {
+  "brand": "☯ ดวงนักลงทุน",
+  "nav.chat": "แชท",
+  "nav.report": "รายงาน",
+  "nav.profile": "โปรไฟล์",
+  "nav.admin": "Dashboard",
+  "disclaimer": "⚠️ นี่คือบทวิเคราะห์อ้างอิงจากดวง ตลาด ข่าว แนวโน้ม — ไม่ใช่คำแนะนำการลงทุน",
+
+  // landing
+  "hero.title": "☯ ดวงนักลงทุน",
+  "hero.sub": "AI ผู้ช่วยลงทุนคู่ดวง — วิเคราะห์หุ้น×ธาตุ ฤกษ์ยาม IPO เทียบดวง ตามกำลังดวงของคุณ",
+  "hero.cta1": "เริ่มต้น: กรอกวันเกิด →",
+  "hero.cta2": "ทดลองแชท",
+  "feat.movers.title": "หุ้น × ดวงรายวัน",
+  "feat.movers.desc": "วันนี้ธาตุอะไรเด่น หุ้นตัวไหนตรงธาตุ ควรทำ/เลี่ยงอะไร",
+  "feat.ipo.title": "IPO เทียบดวง",
+  "feat.ipo.desc": "สัปดาห์นี้มี IPO ตัวไหน ธาตุวันเกิดบริษัทตรงกับดวงคุณไหม",
+  "feat.almanac.title": "ฤกษ์รายสัปดาห์",
+  "feat.almanac.desc": "ยามมงคล สีมงคล ทิศเงิน วันดี/วันเลี่ยงทุกสัปดาห์",
+  "feat.report.title": "รายงานสไตล์สถาบัน",
+  "feat.report.desc": "Verdict × พื้นฐาน × Buffett score — ฉบับ PDF เร็วๆ นี้",
+  "feat.land.title": "ซื้อที่ดิน/อสังหา",
+  "feat.land.desc": "เดือนนี้วันธาตุดินวันไหน เหมาะเซ็นสัญญา/โอน",
+  "feat.gems.title": "หุ้นใต้ผืนน้ำ",
+  "feat.gems.desc": "หุ้นที่คนมองไม่เห็นแต่ไม่เสี่ยงเกินไป — risk tier ตามกำลังดวง",
+
+  // profile
+  "profile.title": "☯ ข้อมูลเกิดของคุณ (คำนวณดวง 1 ครั้ง)",
+  "profile.desc": "ใช้คำนวณธาตุที่ควร/เลี่ยง + เปรียบเทียบกับหุ้น/IPO/ฤกษ์ — เก็บเป็นรหัสแฮช ไม่ส่งข้อมูลส่วนตัว",
+  "profile.birth": "วันเกิด (ค.ศ.)",
+  "profile.time": "เวลาเกิด",
+  "profile.gender": "เพศ",
+  "profile.gender.male": "ชาย",
+  "profile.gender.female": "หญิง",
+  "profile.province": "จังหวัดเกิด",
+  "profile.save": "บันทึกดวงของฉัน",
+  "profile.saving": "กำลังคำนวณ...",
+  "profile.saved": "✅ บันทึกแล้ว",
+  "profile.charthash": "รหัสดวง",
+  "profile.user": "ผู้ใช้",
+  "profile.gochat": "ไปลองแชท →",
+
+  // chat
+  "chat.welcome": "สวัสดีครับ 🙏 ถามได้เลย เช่น \"วันนี้ดวงกับหุ้นอะไรดี\" \"สัปดาห์นี้ IPO ตัวไหนเหมาะกับดวง\" หรือ \"เดือนนี้ลงทุนกับอะไรดี\" — ทุกคำตอบเป็นบทวิเคราะห์อ้างอิงจากดวง ตลาด ข่าว แนวโน้ม ไม่ใช่คำแนะนำการลงทุน",
+  "chat.placeholder": "พิมพ์คำถาม เช่น 'เดือนนี้ลงทุนกับอะไรดี'",
+  "chat.send": "ส่ง",
+  "chat.analyzing": "กำลังวิเคราะห์...",
+  "chat.needprofile": "ยังไม่มีดวงของคุณ — กรอกวันเกิดก่อน แล้วกลับมาแชทได้เลย",
+  "chat.botname": "ผู้ช่วยลงทุนคู่ดวง",
+
+  // report
+  "report.title": "📑 รายงานหุ้น: ดวง + พื้นฐาน + Buffett",
+  "report.ticker": "รหัสหุ้น (เช่น KBANK)",
+  "report.analyze": "วิเคราะห์",
+  "report.verdict": "🎯 ดวง",
+  "report.invest": "ควร (invest)",
+  "report.avoid": "เลี่ยง (avoid)",
+  "report.buffett": "🧠 Buffett score",
+  "report.pdfnote": "💾 PDF รายงานฉบับเต็ม — กำลังพัฒนา (Phase 3)",
+  "report.notfound": "ไม่พบหุ้น",
+
+  // admin
+  "admin.title": "📊 Dashboard ผู้เข้าใช้",
+  "admin.refresh": "รีเฟรช",
+  "admin.users": "ผู้ใช้ทั้งหมด",
+  "admin.events": "เหตุการณ์",
+  "admin.last24h": "ใช้ 24 ชม.",
+  "admin.llm": "เรียก AI",
+  "admin.intents": "คำถามยอดนิยม (intent)",
+  "admin.userlist": "ผู้ใช้",
+  "admin.uid": "userId",
+  "admin.birth": "วันเกิด",
+  "admin.gender": "เพศ",
+  "admin.lang": "ภาษา",
+  "admin.created": "ลงทะเบียน",
+  "admin.nodata": "ยังไม่มีข้อมูล",
+  "admin.llmon": "LLM ON",
+  "admin.llmoff": "LLM OFF",
+
+  // elements (ป้ายธาตุ)
+  "el.wood": "ไม้",
+  "el.fire": "ไฟ",
+  "el.earth": "ดิน",
+  "el.metal": "ทอง",
+  "el.water": "น้ำ",
+
+  // verdict codes
+  "vd.very-good": "ดีมาก",
+  "vd.good": "ดี",
+  "vd.neutral": "กลางๆ",
+  "vd.avoid": "เลี่ยง",
+
+  // weekdays (0=อาทิตย์)
+  "wd.0": "อาทิตย์",
+  "wd.1": "จันทร์",
+  "wd.2": "อังคาร",
+  "wd.3": "พุธ",
+  "wd.4": "พฤหัสบดี",
+  "wd.5": "ศุกร์",
+  "wd.6": "เสาร์",
+
+  // chat templates (fallback — dictionary ตามแผน)
+  "tpl.movers.header": "📈 หุ้นเด่นวันนี้:",
+  "tpl.movers.none": "ยังไม่มีข้อมูล movers",
+  "tpl.ipo.header": "🚀 IPO เร็วๆ นี้:",
+  "tpl.ipo.none": "ยังไม่มี IPO ในช่วงนี้",
+  "tpl.news.header": "📰 ข่าวที่เกี่ยวข้อง:",
+  "tpl.news.none": "ยังไม่มีข่าวที่เกี่ยวข้อง",
+  "tpl.advice": "เราไม่ได้แนะนำการลงทุน — นี่คือบทวิเคราะห์อ้างอิงจากดวง ตลาด ข่าว แนวโน้ม ไม่ใช่คำแนะนำให้ลงทุนตาม ลองถามเป็นข้อมูลได้ เช่น \"วันนี้ดวงกับหุ้นอะไร\" หรือ \"วิเคราะห์ KBANK\"",
+  "tpl.greet": "🙏 ลองถามได้เลย: \"หุ้นวันนี้ตัวไหนเด่น\" / \"วิเคราะห์ KBANK\" / \"KBANK กับดวงเรา\" / \"ข่าวทรัมป์\" / \"มี IPO ไหม\"",
+  "tpl.nodata": "ยังไม่มีข้อมูล",
+  "tpl.verdict": "{name} (ธาตุ{el}) กับดวงคุณ: {verdict} (คะแนน {score}) — ต้องการ {invest} · เลี่ยง {avoid}",
+  "tpl.analysis": "📊 {ticker}: ROE {roe}% · กำไรสุทธิ {profit}% · โต {growth}% · Buffett {score}/10",
+  "tpl.daily": "🗓️ วัน{weekday} {jianchu}\n🎨 สีมงคล: {colors}\n🧭 ทิศมงคล: {dir}\n⏰ ยามดี: {hours}",
+  "tpl.fortune.day": "🔮 วันนี้ธาตุ: {dayEl} · ธาตุควรทำ: {favor}\n📈 หุ้นที่ตรงธาตุวันนี้: {stocks}",
+  "tpl.fortune.week": "🚀 IPO สัปดาห์นี้ (เทียบดวง):\n{list}",
+  "tpl.fortune.month": "🗓️ เดือนนี้ ธาตุเดือน: {monthEl} · ทิศเงินเข้า: {dir}\n📅 วันดี: {days}",
+} as const;
+
+const ZH: Record<LocaleKey, string> = {
+  "brand": "☯ 命理投资",
+  "nav.chat": "聊天",
+  "nav.report": "报告",
+  "nav.profile": "个人资料",
+  "nav.admin": "数据看板",
+  "disclaimer": "⚠️ 本分析参考命理、市场、新闻与趋势——不构成投资建议",
+
+  "hero.title": "☯ 命理投资",
+  "hero.sub": "AI 命理投资助手 — 分析股票×五行、吉时、IPO 对比命理，按你的运势匹配",
+  "hero.cta1": "开始：填写出生日期 →",
+  "hero.cta2": "试用聊天",
+  "feat.movers.title": "股票 × 每日运势",
+  "feat.movers.desc": "今日五行什么旺，哪些股票匹配，宜做/忌做什么",
+  "feat.ipo.title": "IPO 对比命理",
+  "feat.ipo.desc": "本周哪些 IPO 上市，公司出生日五行是否合你的命",
+  "feat.almanac.title": "每周吉时",
+  "feat.almanac.desc": "吉时、幸运色、财神方位、吉日/忌日每周更新",
+  "feat.report.title": "机构风格报告",
+  "feat.report.desc": "命理 × 基本面 × 巴菲特评分 — PDF 即将推出",
+  "feat.land.title": "买房/置业",
+  "feat.land.desc": "本月哪天属土宜签约/过户",
+  "feat.gems.title": "水下明珠股",
+  "feat.gems.desc": "被忽视但风险可控的股票 — 按运势分级",
+
+  "profile.title": "☯ 你的出生信息（只算一次命盘）",
+  "profile.desc": "用于计算宜/忌五行，并对比股票/IPO/吉时 — 仅存哈希码，不传隐私",
+  "profile.birth": "出生日期（公历）",
+  "profile.time": "出生时间",
+  "profile.gender": "性别",
+  "profile.gender.male": "男",
+  "profile.gender.female": "女",
+  "profile.province": "出生省份",
+  "profile.save": "保存我的命盘",
+  "profile.saving": "计算中...",
+  "profile.saved": "✅ 已保存",
+  "profile.charthash": "命盘码",
+  "profile.user": "用户",
+  "profile.gochat": "去聊天 →",
+
+  "chat.welcome": "你好 🙏 可以问：\"今天运势配什么股票\" \"本周哪只 IPO 合命\" 或 \"这个月投什么好\" — 所有回答均为参考分析，不构成投资建议",
+  "chat.placeholder": "输入问题，如 '这个月投什么好'",
+  "chat.send": "发送",
+  "chat.analyzing": "分析中...",
+  "chat.needprofile": "还没有你的命盘 — 先填写出生日期，再回来聊天",
+  "chat.botname": "命理投资助手",
+
+  "report.title": "📑 个股报告：命理 + 基本面 + 巴菲特",
+  "report.ticker": "股票代码（如 KBANK）",
+  "report.analyze": "分析",
+  "report.verdict": "🎯 命理",
+  "report.invest": "宜（invest）",
+  "report.avoid": "忌（avoid）",
+  "report.buffett": "🧠 巴菲特评分",
+  "report.pdfnote": "💾 完整 PDF 报告 — 开发中（Phase 3）",
+  "report.notfound": "未找到该股票",
+
+  "admin.title": "📊 用户数据看板",
+  "admin.refresh": "刷新",
+  "admin.users": "总用户",
+  "admin.events": "事件数",
+  "admin.last24h": "24 小时内",
+  "admin.llm": "AI 调用",
+  "admin.intents": "热门问题（intent）",
+  "admin.userlist": "用户",
+  "admin.uid": "userId",
+  "admin.birth": "出生日期",
+  "admin.gender": "性别",
+  "admin.lang": "语言",
+  "admin.created": "注册时间",
+  "admin.nodata": "暂无数据",
+  "admin.llmon": "LLM 已启用",
+  "admin.llmoff": "LLM 已关闭",
+
+  "el.wood": "木",
+  "el.fire": "火",
+  "el.earth": "土",
+  "el.metal": "金",
+  "el.water": "水",
+
+  "vd.very-good": "极佳",
+  "vd.good": "良好",
+  "vd.neutral": "中性",
+  "vd.avoid": "回避",
+
+  "wd.0": "星期日",
+  "wd.1": "星期一",
+  "wd.2": "星期二",
+  "wd.3": "星期三",
+  "wd.4": "星期四",
+  "wd.5": "星期五",
+  "wd.6": "星期六",
+
+  "tpl.movers.header": "📈 今日热门股票：",
+  "tpl.movers.none": "暂无涨跌数据",
+  "tpl.ipo.header": "🚀 即将上市 IPO：",
+  "tpl.ipo.none": "近期暂无 IPO",
+  "tpl.news.header": "📰 相关新闻：",
+  "tpl.news.none": "暂无相关新闻",
+  "tpl.advice": "我们不提供投资建议 — 本分析参考命理、市场、新闻与趋势，不构成投资建议。可以问：\"今天运势配什么股票\" 或 \"分析 KBANK\"",
+  "tpl.greet": "🙏 可以问：\"今天哪些股票热门\" / \"分析 KBANK\" / \"KBANK 合我的命吗\" / \"特朗普加税影响\" / \"最近有 IPO 吗\"",
+  "tpl.nodata": "暂无数据",
+  "tpl.verdict": "{name}（五行{el}）与你的命盘：{verdict}（{score}分）— 宜 {invest} · 忌 {avoid}",
+  "tpl.analysis": "📊 {ticker}: ROE {roe}% · 净利润 {profit}% · 增长 {growth}% · 巴菲特 {score}/10",
+  "tpl.daily": "🗓️ {weekday} {jianchu}\n🎨 幸运色：{colors}\n🧭 吉位：{dir}\n⏰ 吉时：{hours}",
+  "tpl.fortune.day": "🔮 今日五行：{dayEl} · 宜做：{favor}\n📈 匹配股票：{stocks}",
+  "tpl.fortune.week": "🚀 本周 IPO（对比命理）：\n{list}",
+  "tpl.fortune.month": "🗓️ 本月五行：{monthEl} · 财神方位：{dir}\n📅 吉日：{days}",
+};
+
+const EN: Record<LocaleKey, string> = {
+  "brand": "☯ Fortune Investor",
+  "nav.chat": "Chat",
+  "nav.report": "Reports",
+  "nav.profile": "Profile",
+  "nav.admin": "Dashboard",
+  "disclaimer": "⚠️ This analysis references astrology, markets, news & trends — not investment advice",
+
+  "hero.title": "☯ Fortune Investor",
+  "hero.sub": "AI co-pilot for fortune-matched investing — stocks × elements, auspicious timing, IPO vs your chart",
+  "hero.cta1": "Start: enter birth date →",
+  "hero.cta2": "Try the chat",
+  "feat.movers.title": "Stocks × Daily Fortune",
+  "feat.movers.desc": "Which element leads today, matching stocks, what to do/avoid",
+  "feat.ipo.title": "IPO vs Your Chart",
+  "feat.ipo.desc": "This week's IPOs — does the company's birth-day element match yours?",
+  "feat.almanac.title": "Weekly Auspicious Days",
+  "feat.almanac.desc": "Lucky hours, colors, money direction, good/avoid days every week",
+  "feat.report.title": "Institution-Style Reports",
+  "feat.report.desc": "Verdict × fundamentals × Buffett score — PDF coming soon",
+  "feat.land.title": "Buying Land/Property",
+  "feat.land.desc": "Which earth-element days this month suit signing/transfer",
+  "feat.gems.title": "Underwater Gems",
+  "feat.gems.desc": "Overlooked stocks with manageable risk — tiered by your chart strength",
+
+  "profile.title": "☯ Your birth info (chart computed once)",
+  "profile.desc": "Used for favorable/avoid elements + stock/IPO/timing matches — stored as a hash only",
+  "profile.birth": "Birth date (CE)",
+  "profile.time": "Birth time",
+  "profile.gender": "Gender",
+  "profile.gender.male": "Male",
+  "profile.gender.female": "Female",
+  "profile.province": "Birth province",
+  "profile.save": "Save my chart",
+  "profile.saving": "Computing...",
+  "profile.saved": "✅ Saved",
+  "profile.charthash": "Chart hash",
+  "profile.user": "User",
+  "profile.gochat": "Try the chat →",
+
+  "chat.welcome": "Hi 🙏 Ask me: \"which stocks match today's fortune\" \"which IPO fits my chart this week\" or \"what to invest in this month\" — all answers are reference analysis, not investment advice",
+  "chat.placeholder": "Type a question, e.g. 'what to invest this month'",
+  "chat.send": "Send",
+  "chat.analyzing": "Analyzing...",
+  "chat.needprofile": "No chart yet — enter your birth date first, then come back",
+  "chat.botname": "Fortune Investor Assistant",
+
+  "report.title": "📑 Stock report: chart + fundamentals + Buffett",
+  "report.ticker": "Ticker (e.g. KBANK)",
+  "report.analyze": "Analyze",
+  "report.verdict": "🎯 Chart",
+  "report.invest": "Favor (invest)",
+  "report.avoid": "Avoid",
+  "report.buffett": "🧠 Buffett score",
+  "report.pdfnote": "💾 Full PDF report — in development (Phase 3)",
+  "report.notfound": "Stock not found",
+
+  "admin.title": "📊 User Dashboard",
+  "admin.refresh": "Refresh",
+  "admin.users": "Total users",
+  "admin.events": "Events",
+  "admin.last24h": "Last 24h",
+  "admin.llm": "AI calls",
+  "admin.intents": "Top intents",
+  "admin.userlist": "Users",
+  "admin.uid": "userId",
+  "admin.birth": "Birth date",
+  "admin.gender": "Gender",
+  "admin.lang": "Lang",
+  "admin.created": "Registered",
+  "admin.nodata": "No data yet",
+  "admin.llmon": "LLM ON",
+  "admin.llmoff": "LLM OFF",
+
+  "el.wood": "Wood",
+  "el.fire": "Fire",
+  "el.earth": "Earth",
+  "el.metal": "Metal",
+  "el.water": "Water",
+
+  "vd.very-good": "Excellent",
+  "vd.good": "Good",
+  "vd.neutral": "Neutral",
+  "vd.avoid": "Avoid",
+
+  "wd.0": "Sunday",
+  "wd.1": "Monday",
+  "wd.2": "Tuesday",
+  "wd.3": "Wednesday",
+  "wd.4": "Thursday",
+  "wd.5": "Friday",
+  "wd.6": "Saturday",
+
+  "tpl.movers.header": "📈 Today's movers:",
+  "tpl.movers.none": "No movers data",
+  "tpl.ipo.header": "🚀 Upcoming IPOs:",
+  "tpl.ipo.none": "No IPOs in this period",
+  "tpl.news.header": "📰 Related news:",
+  "tpl.news.none": "No related news",
+  "tpl.advice": "We don't give investment advice — this is reference analysis from astrology/markets/news/trends, not a recommendation to invest. Ask for analysis instead, e.g. \"which stocks match today\" or \"analyze KBANK\"",
+  "tpl.greet": "🙏 Try asking: \"which stocks are hot today\" / \"analyze KBANK\" / \"is KBANK good for my chart\" / \"Trump tariff impact\" / \"any upcoming IPOs\"",
+  "tpl.nodata": "No data available",
+  "tpl.verdict": "{name} (element {el}) vs your chart: {verdict} (score {score}) — favor {invest} · avoid {avoid}",
+  "tpl.analysis": "📊 {ticker}: ROE {roe}% · net margin {profit}% · growth {growth}% · Buffett {score}/10",
+  "tpl.daily": "🗓️ {weekday} {jianchu}\n🎨 Lucky colors: {colors}\n🧭 Lucky direction: {dir}\n⏰ Lucky hours: {hours}",
+  "tpl.fortune.day": "🔮 Today's element: {dayEl} · favor: {favor}\n📈 Matching stocks: {stocks}",
+  "tpl.fortune.week": "🚀 This week's IPOs (vs your chart):\n{list}",
+  "tpl.fortune.month": "🗓️ Month element: {monthEl} · money direction: {dir}\n📅 Good days: {days}",
+};
+
+const DICT: Record<Locale, Record<LocaleKey, string>> = { th: TH, zh: ZH, en: EN };
+
+/** แปล key → ภาษา locale (fallback: th → key) — vars แทนที่ {var} */
+export function t(locale: Locale, key: LocaleKey, vars?: Record<string, string | number>): string {
+  let s = DICT[locale][key] ?? TH[key] ?? key;
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) s = s.replaceAll(`{${k}}`, String(v));
+  }
+  return s;
+}
+
+/** ตรวจ dictionary ครบทุก key ทุกภาษา (ใช้ในเทสต์) */
+export function dictionaryCompleteness(): Record<Locale, { missing: string[] }> {
+  const keys = Object.keys(TH) as LocaleKey[];
+  const out = {} as Record<Locale, { missing: string[] }>;
+  for (const loc of LOCALES) {
+    out[loc] = { missing: keys.filter((k) => !(k in DICT[loc])) };
+  }
+  return out;
+}
+
+export { DICT };

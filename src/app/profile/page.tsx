@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { post, myUserId } from "../lib/api";
+import { useT } from "../lib/i18n";
 
 export default function ProfilePage() {
+  const t = useT();
   const [birthDate, setBirthDate] = useState("1993-11-24");
   const [birthTime, setBirthTime] = useState("15:12");
   const [gender, setGender] = useState("male");
@@ -24,34 +26,32 @@ export default function ProfilePage() {
   return (
     <div>
       <div className="card">
-        <h2>☯ ข้อมูลเกิดของคุณ (คำนวณดวง 1 ครั้ง)</h2>
-        <p style={{ fontSize: 13, color: "#9a937f", marginBottom: 14 }}>
-          ใช้คำนวณธาตุที่ควร/เลี่ยง + เปรียบเทียบกับหุ้น/IPO/ฤกษ์ — เก็บเป็นรหัสแฮช ไม่ส่งข้อมูลส่วนตัว
-        </p>
-        <label>วันเกิด (ค.ศ.)</label>
+        <h2>{t("profile.title")}</h2>
+        <p style={{ fontSize: 13, color: "#9a937f", marginBottom: 14 }}>{t("profile.desc")}</p>
+        <label>{t("profile.birth")}</label>
         <input type="date" value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
-        <label>เวลาเกิด</label>
+        <label>{t("profile.time")}</label>
         <input type="time" value={birthTime} onChange={(e) => setBirthTime(e.target.value)} />
-        <label>เพศ</label>
+        <label>{t("profile.gender")}</label>
         <select value={gender} onChange={(e) => setGender(e.target.value)}>
-          <option value="male">ชาย</option>
-          <option value="female">หญิง</option>
+          <option value="male">{t("profile.gender.male")}</option>
+          <option value="female">{t("profile.gender.female")}</option>
         </select>
-        <label>จังหวัดเกิด</label>
+        <label>{t("profile.province")}</label>
         <input value={province} onChange={(e) => setProvince(e.target.value)} placeholder="Bangkok" />
         <button className="btn" onClick={save} disabled={saving}>
-          {saving ? "กำลังคำนวณ..." : "บันทึกดวงของฉัน"}
+          {saving ? t("profile.saving") : t("profile.save")}
         </button>
         {error && <p style={{ color: "#d48f8f", marginTop: 10 }}>{error}</p>}
       </div>
       {result && (
         <div className="card">
-          <h2>✅ บันทึกแล้ว</h2>
+          <h2>{t("profile.saved")}</h2>
           <p>
-            รหัสดวง: <b>{result.chartHash}</b> · ผู้ใช้: {result.userId}
+            {t("profile.charthash")}: <b>{result.chartHash}</b> · {t("profile.user")}: {result.userId}
           </p>
           <a className="btn" href="/chat" style={{ marginTop: 12 }}>
-            ไปลองแชท →
+            {t("profile.gochat")}
           </a>
         </div>
       )}

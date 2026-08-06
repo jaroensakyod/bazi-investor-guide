@@ -15,6 +15,7 @@ import type { CalculatedStateValue } from "../bazi/schema-types";
 import { detectIntent } from "./intents";
 import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac, getFortuneInvest } from "./tools";
 import { COMPLIANCE_NOTE } from "../fortune/investment-days";
+import { t, type Locale } from "../i18n/dictionary";
 
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
@@ -74,13 +75,37 @@ export function runTool(name: string, args: Record<string, unknown>, state: Calc
   }
 }
 
-export const SYSTEM_PROMPT = `คุณคือ "ผู้ช่วยการลงทุนคู่ดวง" — นักวิเคราะห์การเงิน + โหราศาสตร์จีน (八字) สำหรับคนไทย
+/** system prompt ต่อภาษา — th/zh/en (LLM = เนื้อเรื่อง/แชท ตามแผน i18n) */
+export function buildSystemPrompt(locale: Locale = "th"): string {
+  const DIS = t(locale, "disclaimer");
+  if (locale === "zh") {
+    return `你是"命理投资助手"——结合金融分析与八字命理的顾问，服务中文用户。
+铁律：
+1. 用简体中文回答，简洁易懂（3-6行），适当用 emoji
+2. 必须调用 tools 获取真实数据——严禁编造价格/评分/命理结论
+3. 每条回答结尾加上：${DIS}
+4. 若用户索要"投资建议"（该不该买/推荐/帮我决定）→ 只回答："${DIS}——我们只提供参考分析，不构成投资建议"，然后转为提供数据分析（命理评分/基本面/每日运势），绝不说买/卖
+5. tool 返回 ok:false 时，直说"暂无数据"，不要编造`;
+  }
+  if (locale === "en") {
+    return `You are the "Fortune Investor Assistant" — a financial analyst combined with Chinese BaZi astrology for international users.
+Iron rules:
+1. Answer in clear English, concise (3-6 lines), emojis ok
+2. ALWAYS call tools for real data — never fabricate prices/scores/verdicts
+3. End EVERY answer with: ${DIS}
+4. If the user asks for investment "advice" (should I buy/sell/recommend/decide for me) → reply only: "${DIS} — we provide reference analysis only, not investment advice", then pivot to data analysis (chart verdict/fundamentals/daily fortune), never say buy/sell
+5. When a tool returns ok:false, say "no data available" plainly, don't invent`;
+  }
+  return `คุณคือ "ผู้ช่วยการลงทุนคู่ดวง" — นักวิเคราะห์การเงิน + โหราศาสตร์จีน (八字) สำหรับคนไทย
 กฎเหล็ก:
 1. ตอบเป็นภาษาไทย อ่านง่าย กระชับ (3-6 บรรทัด) ใช้ emoji พอประมาณ
 2. ต้องเรียก tools เพื่อเอาข้อมูลจริงเสมอ — ห้ามเดา/มโนตัวเลข ราคา verdict
-3. ทุกคำตอบลงท้ายด้วย: ${COMPLIANCE_NOTE}
-4. ถ้าผู้ใช้ขอ "คำแนะนำ" (ควรซื้อ/ซื้อเลย/แนะนำหน่อย/ช่วยตัดสินใจ) → ตอบเฉพาะ: "${COMPLIANCE_NOTE} — เราให้บทวิเคราะห์อ้างอิงจากดวง/ตลาด/ข่าว/แนวโน้ม ไม่แนะนำให้ลงทุนตาม" แล้วเสนอวิเคราะห์เชิงข้อมูลแทน (เช่น verdict/พื้นฐาน/ดวงรายวัน) โดยไม่บอกซื้อ/ขาย
+3. ทุกคำตอบลงท้ายด้วย: ${DIS}
+4. ถ้าผู้ใช้ขอ "คำแนะนำ" (ควรซื้อ/ซื้อเลย/แนะนำหน่อย/ช่วยตัดสินใจ) → ตอบเฉพาะ: "${DIS} — เราให้บทวิเคราะห์อ้างอิงจากดวง/ตลาด/ข่าว/แนวโน้ม ไม่แนะนำให้ลงทุนตาม" แล้วเสนอวิเคราะห์เชิงข้อมูลแทน (เช่น verdict/พื้นฐาน/ดวงรายวัน) โดยไม่บอกซื้อ/ขาย
 5. ถ้า tool คืน ok:false ให้บอกว่า "ยังไม่มีข้อมูล" ตรงๆ อย่าเติมเอง`;
+}
+
+export const SYSTEM_PROMPT = buildSystemPrompt("th");
 
 function parseToolCalls(msg: { tool_calls?: Array<{ id?: string; function?: { name?: string; arguments?: string } }> }): ToolCall[] {
   return (msg.tool_calls ?? []).map((tc) => ({
@@ -131,6 +156,8 @@ export type AssistantOptions = {
   baseUrl?: string;
   model?: string;
   maxToolRounds?: number;
+  /** ภาษาแชท — กำหนด system prompt + fallback template */
+  locale?: Locale;
 };
 
 /**
@@ -146,9 +173,10 @@ export async function chatWithAssistant(
   if (opts.apiKey) ENV.LLM_API_KEY = opts.apiKey;
   if (opts.baseUrl) ENV.LLM_BASE_URL = opts.baseUrl;
   if (opts.model) ENV.LLM_MODEL = opts.model;
+  const locale = opts.locale ?? "th";
 
   const messages: ChatMessage[] = [
-    { role: "system", content: SYSTEM_PROMPT },
+    { role: "system", content: buildSystemPrompt(locale) },
     ...history,
     { role: "user", content: userText },
   ];
@@ -181,71 +209,78 @@ export async function chatWithAssistant(
     }
   } catch (e) {
     // graceful degradation → template จาก tools (ไม่ตาย)
-    const fallback = fallbackAnswer(userText, state);
+    const fallback = fallbackAnswer(userText, state, locale);
     return { text: fallback.text, usedLlm: false, rounds: 0, error: (e as Error).message };
   }
 }
 
-/** ตอบ template จาก tools (LLM ล่ม/ไม่มี key) */
-export function fallbackAnswer(userText: string, state: CalculatedStateValue): { text: string; intent: string } {
+const TH2EL: Record<string, string> = { ไม้: "wood", ไฟ: "fire", ดิน: "earth", ทอง: "metal", น้ำ: "water" };
+const TH2WD: Record<string, number> = { อาทิตย์: 0, จันทร์: 1, อังคาร: 2, พุธ: 3, พฤหัสบดี: 4, ศุกร์: 5, เสาร์: 6 };
+
+/** ตอบ template จาก tools (LLM ล่ม/ไม่มี key) — แปลผ่าน dictionary ตาม locale */
+export function fallbackAnswer(userText: string, state: CalculatedStateValue, locale: Locale = "th"): { text: string; intent: string } {
   const intent = detectIntent(userText);
+  const DIS = t(locale, "disclaimer");
+  const el = (e: string) => t(locale, `el.${TH2EL[e] ?? e}` as never);
+  const wd = (w: string) => t(locale, `wd.${TH2WD[w] ?? 0}` as never);
   const fmt = (n: number | undefined, d = 2) => (typeof n === "number" ? n.toFixed(d) : "-");
   switch (intent.intent) {
     case "today_movers": {
       const r = getTodayMovers({ market: intent.market, limit: 5 });
-      return { text: r.ok && r.data?.length ? `📈 หุ้นเด่นวันนี้:\n${r.data.map((m, i) => `${i + 1}. ${m.ticker} (${m.name}) ${(m.changePct ?? 0) >= 0 ? "+" : ""}${m.changePct ?? 0}% · ธาตุ${m.element}`).join("\n")}\n${DISCLAIMER}` : `ยังไม่มีข้อมูลราคาวันนี้ ${DISCLAIMER}`, intent: intent.intent };
+      return { text: r.ok && r.data?.length ? `${t(locale, "tpl.movers.header")}\n${r.data.map((m, i) => `${i + 1}. ${m.ticker} (${m.name}) ${(m.changePct ?? 0) >= 0 ? "+" : ""}${m.changePct ?? 0}% · ${el(m.element)}`).join("\n")}\n${DIS}` : `${t(locale, "tpl.movers.none")} ${DIS}`, intent: intent.intent };
     }
     case "upcoming_ipo": {
       const r = getUpcomingIPOs({ market: intent.market, limit: 5 });
-      return { text: r.ok && r.data?.length ? `🚀 IPO กำลังจะเข้าเทรด:\n${r.data!.map((e, i) => `${i + 1}. ${e.ticker} ${e.name} — ${e.ipoDate} (${e.exchange})`).join("\n")}\n${DISCLAIMER}` : `ยังไม่มี IPO ใหม่ ${DISCLAIMER}`, intent: intent.intent };
+      return { text: r.ok && r.data?.length ? `${t(locale, "tpl.ipo.header")}\n${r.data!.map((e, i) => `${i + 1}. ${e.ticker} ${e.name} — ${e.ipoDate} (${e.exchange})`).join("\n")}\n${DIS}` : `${t(locale, "tpl.ipo.none")} ${DIS}`, intent: intent.intent };
     }
     case "stock_verdict": {
-      if (!intent.ticker) return { text: `อยากรู้หุ้นตัวไหนคะ? ${DISCLAIMER}`, intent: intent.intent };
+      if (!intent.ticker) return { text: `${t(locale, "tpl.nodata")} ${DIS}`, intent: intent.intent };
       const r = getBaziVerdict(intent.ticker, state);
-      if (!r.ok || !r.data) return { text: r.error ?? "ไม่พบข้อมูล", intent: intent.intent };
+      if (!r.ok || !r.data) return { text: r.error ?? t(locale, "tpl.nodata"), intent: intent.intent };
       const d = r.data as { stock: { name: string; element: string }; score: { verdict: string; score: number }; invest: string[]; avoid: string[] };
-      return { text: `${d.stock.name} (ธาตุ${d.stock.element}) กับดวงคุณ: ${d.score.verdict} (คะแนน ${d.score.score}) — ต้องการ ${d.invest.join(", ")} · เลี่ยง ${d.avoid.join(", ")}\n${DISCLAIMER}`, intent: intent.intent };
+      return { text: `${t(locale, "tpl.verdict", { name: d.stock.name, el: el(d.stock.element), verdict: d.score.verdict, score: d.score.score, invest: d.invest.map(el).join(", "), avoid: d.avoid.map(el).join(", ") })}\n${DIS}`, intent: intent.intent };
     }
     case "stock_analysis": {
-      if (!intent.ticker) return { text: `อยากให้วิเคราะห์หุ้นตัวไหนคะ? ${DISCLAIMER}`, intent: intent.intent };
+      if (!intent.ticker) return { text: `${t(locale, "tpl.nodata")} ${DIS}`, intent: intent.intent };
       const r = getFundamentals(intent.ticker);
-      if (!r.ok || !r.data || !r.data.hasData) return { text: `ยังไม่มีข้อมูลพื้นฐานของ ${intent.ticker} ${DISCLAIMER}`, intent: intent.intent };
+      if (!r.ok || !r.data || !r.data.hasData) return { text: `${t(locale, "tpl.nodata")} (${intent.ticker}) ${DIS}`, intent: intent.intent };
       const f = r.data.fundamentals!;
-      return { text: `📊 ${intent.ticker}: ROE ${fmt(f.roe)}% · กำไรสุทธิ ${fmt(f.profitMargin)}% · โต ${fmt(f.revenueGrowth)}% · Buffett ${r.data.buffettScore}/10\n${DISCLAIMER}`, intent: intent.intent };
+      return { text: `${t(locale, "tpl.analysis", { ticker: intent.ticker, roe: fmt(f.roe), profit: fmt(f.profitMargin), growth: fmt(f.revenueGrowth), score: r.data.buffettScore })}\n${DIS}`, intent: intent.intent };
     }
     case "news_impact": {
       const r = getNewsImpact({ query: intent.matched[0], market: intent.market, limit: 3 });
-      return { text: r.ok && r.data?.length ? `📰 ข่าวที่เกี่ยวข้อง:\n${r.data.map((n, i) => `${i + 1}. [${n.source}] ${n.title}`).join("\n")}\n${DISCLAIMER}` : `ยังไม่มีข่าวที่เกี่ยวข้อง ${DISCLAIMER}`, intent: intent.intent };
+      return { text: r.ok && r.data?.length ? `${t(locale, "tpl.news.header")}\n${r.data.map((n, i) => `${i + 1}. [${n.source}] ${n.title}`).join("\n")}\n${DIS}` : `${t(locale, "tpl.news.none")} ${DIS}`, intent: intent.intent };
     }
     case "daily_fortune": {
       const r = getTodayAlmanac();
-      if (!r.ok || !r.data) return { text: `ยังไม่มีข้อมูลปฏิทินวันนี้ ${COMPLIANCE_NOTE}`, intent: intent.intent };
+      if (!r.ok || !r.data) return { text: `${t(locale, "tpl.nodata")} ${DIS}`, intent: intent.intent };
       const d = r.data as { weekday: string; colors: Array<{ element: string; colors: string }>; luckyHours: Array<{ code: string; range: string }>; luckyDirection: string; jianchu: { name: string; meaning: string } | null };
-      const colors = d.colors.map((c) => `${c.element}→${c.colors}`).join(" · ");
+      const colors = d.colors.map((c) => `${el(c.element)}→${c.colors}`).join(" · ");
       const hours = d.luckyHours.slice(0, 3).map((h) => `${h.range}`).join(", ");
-      return { text: `🗓️ วัน${d.weekday}${d.jianchu ? ` (${d.jianchu.name} — ${d.jianchu.meaning})` : ""}\n🎨 สีมงคล: ${colors}\n🧭 ทิศมงคล: ${d.luckyDirection}\n⏰ ยามดี: ${hours}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+      const jc = d.jianchu ? `${d.jianchu.name} (${d.jianchu.meaning})` : "";
+      return { text: `${t(locale, "tpl.daily", { weekday: wd(d.weekday), jianchu: jc, colors, dir: d.luckyDirection ?? "-", hours })}\n${DIS}`, intent: intent.intent };
     }
     case "fortune_invest": {
       const lower = intent.matched.join(" ");
       const scope = lower.includes("เดือน") ? "month" : lower.includes("สัปดาห์") ? "week" : "day";
       const asset = lower.includes("ที่ดิน") ? "land" : scope === "week" ? "ipo" : undefined;
       const r = getFortuneInvest({ scope, asset }, state);
-      if (!r.ok || !r.data) return { text: `ยังไม่มีข้อมูล ${COMPLIANCE_NOTE}`, intent: intent.intent };
+      if (!r.ok || !r.data) return { text: `${t(locale, "tpl.nodata")} ${DIS}`, intent: intent.intent };
       const d = r.data as { scope: string; dayElement?: string; favorElements?: string[]; stocks?: Array<{ ticker: string; changePct: number | null }>; monthElement?: string; caishenDir?: string; goodDays?: Array<{ date: string; weekday: string }>; luckyLandDays?: Array<{ date: string; weekday: string }>; ipo?: { entries: Array<{ ticker: string; name: string; fit: string }> } };
       if (d.scope === "month") {
-        const days = (d.luckyLandDays ?? d.goodDays ?? []).slice(0, 4).map((x) => `${x.date} (${x.weekday})`).join(", ");
-        return { text: `🗓️ เดือนนี้ ธาตุเดือน: ${d.monthElement} · ทิศเงินเข้า: ${d.caishenDir}\n📅 วันดี: ${days || "ไม่มีข้อมูล"}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+        const days = (d.luckyLandDays ?? d.goodDays ?? []).slice(0, 4).map((x) => `${x.date} (${wd(x.weekday)})`).join(", ");
+        return { text: `${t(locale, "tpl.fortune.month", { monthEl: el(d.monthElement ?? ""), dir: d.caishenDir ?? "-", days: days || t(locale, "tpl.nodata") })}\n${DIS}`, intent: intent.intent };
       }
       if (d.scope === "week") {
         const list = (d.ipo?.entries ?? []).slice(0, 4).map((e) => `${e.ticker} ${e.name} — ${e.fit}`).join("\n");
-        return { text: `🚀 IPO สัปดาห์นี้ (เทียบดวง):\n${list || "ไม่มี IPO ในช่วงนี้"}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+        return { text: `${t(locale, "tpl.fortune.week", { list: list || t(locale, "tpl.ipo.none") })}\n${DIS}`, intent: intent.intent };
       }
       const stocks = (d.stocks ?? []).slice(0, 4).map((s) => `${s.ticker} (${s.changePct ?? 0}%)`).join(", ");
-      return { text: `🔮 วันนี้ธาตุ: ${d.dayElement} · ธาตุควรทำ: ${(d.favorElements ?? []).join(", ")}\n📈 หุ้นที่ตรงธาตุวันนี้: ${stocks || "ไม่มีข้อมูล"}\n${COMPLIANCE_NOTE}`, intent: intent.intent };
+      return { text: `${t(locale, "tpl.fortune.day", { dayEl: el(d.dayElement ?? ""), favor: (d.favorElements ?? []).map(el).join(", "), stocks: stocks || t(locale, "tpl.nodata") })}\n${DIS}`, intent: intent.intent };
     }
     case "advice_request":
-      return { text: `${COMPLIANCE_NOTE} — เราให้บทวิเคราะห์อ้างอิงจากดวง/ตลาด/ข่าว/แนวโน้ม ไม่แนะนำให้ลงทุนตาม ลองถามเป็นข้อมูลได้ เช่น "วันนี้ดวงกับหุ้นอะไร" หรือ "วิเคราะห์ KBANK"`, intent: intent.intent };
+      return { text: t(locale, "tpl.advice"), intent: intent.intent };
     default:
-      return { text: `🙏 ลองถามได้เลย: "หุ้นวันนี้ตัวไหนเด่น" / "วิเคราะห์ KBANK" / "KBANK กับดวงเรา" / "ข่าวทรัมป์" / "มี IPO ไหม"\n${DISCLAIMER}`, intent: intent.intent };
+      return { text: `${t(locale, "tpl.greet")}\n${DIS}`, intent: intent.intent };
   }
 }

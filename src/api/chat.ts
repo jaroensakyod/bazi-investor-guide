@@ -15,6 +15,7 @@ import { upsertUser, loadUser, type UserProfile, type BirthPayload } from "../li
 import { ok, err, type ApiResponse } from "./types";
 import { getLlmConfig } from "./config";
 import { logUsage } from "./usage";
+import type { Locale } from "../lib/i18n/dictionary";
 
 export type ChatReply = {
   reply: string;
@@ -62,19 +63,25 @@ export async function handleChat(body: Record<string, unknown>): Promise<ApiResp
   // 2. ดวง
   const state = await stateOfProfile(profile);
 
+  // 2.5 จำภาษาที่ใช้ล่าสุด (dashboard ดูได้)
+  const locale = (body.locale as Locale | undefined) ?? profile.locale ?? "th";
+  if (locale !== profile.locale) {
+    upsertUser({ ...profile, locale });
+  }
+
   // 3. intent + compliance (advice_request → ตอบ compliance อย่างเดียว)
   const intent = detectIntent(message);
   let reply: string;
   let usedLlm = false;
   const cfg = getLlmConfig();
   if (intent.intent === "advice_request") {
-    reply = fallbackAnswer(message, state).text;
+    reply = fallbackAnswer(message, state, locale).text;
   } else if (body.useLlm !== false && cfg.enabled) {
-    const r = await chatWithAssistant(message, state);
+    const r = await chatWithAssistant(message, state, { locale });
     usedLlm = r.usedLlm;
     reply = r.usedLlm ? r.text : `[โหมด fallback — LLM ไม่ว่าง]\n${r.text}`;
   } else {
-    reply = fallbackAnswer(message, state).text;
+    reply = fallbackAnswer(message, state, locale).text;
   }
 
   // 4. log

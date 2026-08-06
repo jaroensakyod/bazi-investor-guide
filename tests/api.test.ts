@@ -45,7 +45,7 @@ describe("API layer — backend ที่ทดสอบได้ (web/LINE เ�
   it("POST /api/chat — ขอคำแนะนำ → compliance", async () => {
     const r = await handleChat({ userId: UID, message: "ควรซื้อ KBANK ไหม", useLlm: false });
     expect(r.ok).toBe(true);
-    if (r.ok) expect(r.data.reply).toContain("ไม่ใช่คำแนะนำการลงทุน");
+    if (r.ok) expect(r.data.reply).toContain("ไม่ใช่คำแนะนำ");
   });
 
   it("GET /api/movers — ข้อมูลจริง", () => {

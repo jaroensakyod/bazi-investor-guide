@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { get } from "../lib/api";
+import { useT } from "../lib/i18n";
 
 type DashboardData = {
   users: Array<{ userId: string; birthDate: string; gender: string; createdAt: string; locale: string }>;
@@ -10,6 +11,7 @@ type DashboardData = {
 };
 
 export default function AdminPage() {
+  const t = useT();
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState("");
 
@@ -28,35 +30,38 @@ export default function AdminPage() {
   return (
     <div>
       <div className="card">
-        <h2>📊 Dashboard ผู้เข้าใช้ {data ? <span className="tag">{data.llmEnabled ? "LLM ON" : "LLM OFF"}</span> : ""}</h2>
+        <h2>
+          {t("admin.title")}{" "}
+          {data ? <span className="tag">{data.llmEnabled ? t("admin.llmon") : t("admin.llmoff")}</span> : ""}
+        </h2>
         <button className="btn secondary" onClick={load} style={{ fontSize: 13 }}>
-          รีเฟรช
+          {t("admin.refresh")}
         </button>
       </div>
       {data && (
         <>
           <div className="card">
             <span className="stat">
-              ผู้ใช้ทั้งหมด <b>{data.users.length}</b>
+              {t("admin.users")} <b>{data.users.length}</b>
             </span>
             <span className="stat">
-              เหตุการณ์ <b>{data.usage.totalEvents}</b>
+              {t("admin.events")} <b>{data.usage.totalEvents}</b>
             </span>
             <span className="stat">
-              ใช้ 24 ชม. <b>{data.usage.last24h}</b>
+              {t("admin.last24h")} <b>{data.usage.last24h}</b>
             </span>
             <span className="stat">
-              เรียก AI <b>{data.usage.llmCalls}</b>
+              {t("admin.llm")} <b>{data.usage.llmCalls}</b>
             </span>
           </div>
           <div className="card">
-            <h2>คำถามยอดนิยม (intent)</h2>
+            <h2>{t("admin.intents")}</h2>
             {intents.length ? (
               <table>
                 <thead>
                   <tr>
                     <th>intent</th>
-                    <th>ครั้ง</th>
+                    <th>#</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -69,19 +74,21 @@ export default function AdminPage() {
                 </tbody>
               </table>
             ) : (
-              <p style={{ color: "#9a937f", fontSize: 13 }}>ยังไม่มีข้อมูล</p>
+              <p style={{ color: "#9a937f", fontSize: 13 }}>{t("admin.nodata")}</p>
             )}
           </div>
           <div className="card">
-            <h2>ผู้ใช้ ({data.users.length})</h2>
+            <h2>
+              {t("admin.userlist")} ({data.users.length})
+            </h2>
             <table>
               <thead>
                 <tr>
-                  <th>userId</th>
-                  <th>วันเกิด</th>
-                  <th>เพศ</th>
-                  <th>ภาษา</th>
-                  <th>ลงทะเบียน</th>
+                  <th>{t("admin.uid")}</th>
+                  <th>{t("admin.birth")}</th>
+                  <th>{t("admin.gender")}</th>
+                  <th>{t("admin.lang")}</th>
+                  <th>{t("admin.created")}</th>
                 </tr>
               </thead>
               <tbody>
