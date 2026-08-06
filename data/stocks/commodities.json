@@ -4,7 +4,7 @@
     "label": "สินทรัพย์ทุกประเภท (commodity/crypto/etf/reit/bond/deposit/forex/fund/derivative)",
     "updatedAt": "2026-08-06",
     "reviewStatus": "draft",
-    "note": "DRAFT — ธาตุจาก data-spec §2.3/ตารางสินทรัพย์ ต้องให้ซินแสตรวจก่อนเผยแพร่ · tier = ระดับความเสี่ยง (safe/medium/risky) · ขยาย +34 ตัว (ฟิวเจอร์สพืช/โลหะ, คริปโต 5, ETF 6, อสังหา/ของสะสม 16) — ยัง DRAFT รอซินแส"
+    "note": "DRAFT — ธาตุจาก data-spec §2.3/ตารางสินทรัพย์ ต้องให้ซินแสตรวจก่อนเผยแพร่ · tier = ระดับความเสี่ยง (safe/medium/risky) · ขยาย +34 ตัว (ฟิวเจอร์สพืช/โลหะ, คริปโต 5, ETF 6, อสังหา/ของสะสม 16) — ยัง DRAFT รอซินแส · ขยาย +33 (ปศุสัตว์/ธัญพืช/ETF/คริปโต/พันธบัตรสหรัฐ) — ยัง DRAFT รอซินแส"
   },
   "assets": [
     {
@@ -986,6 +986,430 @@
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "safe",
       "subtype": "dividend_equity",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "LE=F",
+      "name": "ฟิวเจอร์สเนื้อโค (Live Cattle)",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "ปศุสัตว์",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "livestock",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "HE=F",
+      "name": "ฟิวเจอร์สหมู (Lean Hogs)",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "ปศุสัตว์",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "หมู/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "livestock",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "GF=F",
+      "name": "ฟิวเจอร์สเนื้อโคขุน (Feeder Cattle)",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "ปศุสัตว์",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (รอซินแสยืนยัน)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "livestock",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "ZL=F",
+      "name": "ฟิวเจอร์สน้ำมันถั่วเหลือง",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "พืชน้ำมัน",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ถั่วเหลือง = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "agriculture",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "ZM=F",
+      "name": "ฟิวเจอร์สกากถั่วเหลือง",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "พืชน้ำมัน",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ถั่วเหลือง = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "agriculture",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "OJ=F",
+      "name": "ฟิวเจอร์สน้ำส้ม",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "พืชเศรษฐกิจ",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ส้ม = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "agriculture",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "ZO=F",
+      "name": "ฟิวเจอร์สข้าวโอ๊ต",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "ธัญพืช",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ข้าวโอ๊ต = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "agriculture",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "ZR=F",
+      "name": "ฟิวเจอร์สข้าวเปลือก",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "ธัญพืช",
+      "elements": [
+        "ไม้"
+      ],
+      "primaryElement": "ไม้",
+      "elementReason": "ข้าว = พืชผล = ธาตุไม้",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "agriculture",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "RB=F",
+      "name": "ฟิวเจอร์สแก๊สโซลีน",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "พลังงาน",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "น้ำมัน/พลังงาน = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "energy",
+      "status": "draft"
+    },
+    {
+      "type": "commodity",
+      "ticker": "HO=F",
+      "name": "ฟิวเจอร์สฮีตติ้งออยล์",
+      "country": "GLOBAL",
+      "market": "FUTURES",
+      "currency": "USD",
+      "sector": "พลังงาน",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "น้ำมัน/พลังงาน = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "energy",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "LTC-USD",
+      "name": "Litecoin",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "ETC-USD",
+      "name": "Ethereum Classic",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "SHIB-USD",
+      "name": "Shiba Inu",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "TRX-USD",
+      "name": "TRON",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "XLM-USD",
+      "name": "Stellar",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "LINK-USD",
+      "name": "Chainlink",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "DOT-USD",
+      "name": "Polkadot",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "crypto",
+      "ticker": "AVAX-USD",
+      "name": "Avalanche",
+      "country": "GLOBAL",
+      "market": "CRYPTO",
+      "currency": "USD",
+      "sector": "คริปโต",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "คริปโต = เทคโนโลยีดิจิทัล = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "status": "draft"
+    },
+    {
+      "type": "etf",
+      "ticker": "ARKK",
+      "name": "ARK Innovation ETF",
+      "country": "US",
+      "market": "NYSEARCA",
+      "currency": "USD",
+      "sector": "เทคโนโลยี disruptive",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ARK = เทคโนโลยี/นวัตกรรม = ธาตุไฟ (เหมือน XLK)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "innovation",
+      "status": "draft"
+    },
+    {
+      "type": "etf",
+      "ticker": "ARKF",
+      "name": "ARK Fintech Innovation ETF",
+      "country": "US",
+      "market": "NYSEARCA",
+      "currency": "USD",
+      "sector": "เทคโนโลยีการเงิน",
+      "elements": [
+        "ไฟ"
+      ],
+      "primaryElement": "ไฟ",
+      "elementReason": "ARK = เทคโนโลยี/นวัตกรรม = ธาตุไฟ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "risky",
+      "subtype": "innovation",
+      "status": "draft"
+    },
+    {
+      "type": "bond",
+      "ticker": "^TNX",
+      "name": "พันธบัตรสหรัฐ 10 ปี (yield)",
+      "country": "US",
+      "market": "TREASURY",
+      "currency": "USD",
+      "sector": "พันธบัตร",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "พันธบัตร = ธาตุน้ำ (เหมือน BND)",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "safe",
+      "subtype": "treasury",
+      "status": "draft"
+    },
+    {
+      "type": "bond",
+      "ticker": "^FVX",
+      "name": "พันธบัตรสหรัฐ 5 ปี (yield)",
+      "country": "US",
+      "market": "TREASURY",
+      "currency": "USD",
+      "sector": "พันธบัตร",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "พันธบัตร = ธาตุน้ำ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "safe",
+      "subtype": "treasury",
+      "status": "draft"
+    },
+    {
+      "type": "bond",
+      "ticker": "^TYX",
+      "name": "พันธบัตรสหรัฐ 30 ปี (yield)",
+      "country": "US",
+      "market": "TREASURY",
+      "currency": "USD",
+      "sector": "พันธบัตร",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "พันธบัตร = ธาตุน้ำ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "safe",
+      "subtype": "treasury",
+      "status": "draft"
+    },
+    {
+      "type": "bond",
+      "ticker": "^IRX",
+      "name": "ตั๋วเงินคลังสหรัฐ 13 สัปดาห์ (yield)",
+      "country": "US",
+      "market": "TREASURY",
+      "currency": "USD",
+      "sector": "พันธบัตร",
+      "elements": [
+        "น้ำ"
+      ],
+      "primaryElement": "น้ำ",
+      "elementReason": "พันธบัตร = ธาตุน้ำ",
+      "elementSource": "career-business.txt / data-spec §2.3",
+      "riskTier": "safe",
+      "subtype": "treasury",
       "status": "draft"
     }
   ]

@@ -213,22 +213,24 @@ export function getFortuneInvest(
 
 // ── 10. สินทรัพย์นอกหุ้น (ทอง/BTC/ที่ดิน/REIT/กองทุน...) + จัดสรรพอร์ต ──
 export function getAssetVerdicts(
-  state: CalculatedStateValue,
+  state: CalculatedStateValue | undefined,
   opts: { type?: string; limit?: number } = {},
 ): ToolResult<object> {
-  const { invest, avoid } = resolveInvestElements(state);
-  const persona = resolveInvestorPersona(state);
   const snap = loadSnapshot();
+  const inv = state ? resolveInvestElements(state) : null;
+  const persona = state ? resolveInvestorPersona(state) : null;
   const all = getAssets().filter((a) => !opts.type || a.type === opts.type);
   const assets = all
-    .filter((a) => !opts.type || a.type === opts.type)
     .map((a) => {
-      const v = assetVerdict(a, {
-        usefulElements: invest,
-        avoidElements: avoid,
-        strengthBand: persona.band as "weak" | "balanced" | "strong",
-        changePct: snap?.quotes[a.ticker]?.changePct,
-      });
+      const md = snap?.quotes[a.ticker];
+      const v = state && inv && persona
+        ? assetVerdict(a, {
+            usefulElements: inv.invest,
+            avoidElements: inv.avoid,
+            strengthBand: persona.band as "weak" | "balanced" | "strong",
+            changePct: md?.changePct,
+          })
+        : null;
       return {
         ticker: a.ticker,
         name: a.name,
@@ -236,11 +238,12 @@ export function getAssetVerdicts(
         sector: a.sector ?? null,
         element: a.primaryElement,
         riskTier: a.riskTier,
-        verdict: v.verdict,
-        score: v.score,
-        reasons: v.reasons.slice(0, 2),
-        capped: v.cappedByStrength ?? false,
-        changePct: snap?.quotes[a.ticker]?.changePct ?? null,
+        verdict: v?.verdict ?? null,
+        score: v?.score ?? 0,
+        reasons: v?.reasons.slice(0, 2) ?? [],
+        capped: v?.cappedByStrength ?? false,
+        price: md?.price ?? null,
+        changePct: md?.changePct ?? null,
       };
     })
     .sort((a, b) => b.score - a.score)

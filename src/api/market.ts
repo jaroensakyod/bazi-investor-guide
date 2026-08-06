@@ -118,12 +118,12 @@ export function handleSearch(q: Query): ApiResponse<unknown> {
 
 /** สินทรัพย์นอกหุ้น × ดวง (ต้องมี profile) */
 export async function handleAssets(q: Query): Promise<ApiResponse<unknown>> {
-  const profile = loadUser(q.userId ?? "guest");
-  if (!profile) return err("ยังไม่มีโปรไฟล์ — ลงทะเบียนก่อน (POST /api/profile)");
-  const state = await stateOfProfile(profile);
+  const profile = loadUser(q.userId ?? "");
+  const state = profile ? await stateOfProfile(profile) : undefined;
   const { getAssetVerdicts } = await import("../lib/chat/tools");
-  const res = getAssetVerdicts(state, { type: q.type, limit: Number(q.limit ?? 51) });
-  return res.ok ? ok(res.data) : err(res.error ?? "assets error");
+  const res = getAssetVerdicts(state, { type: q.type ? String(q.type) : undefined, limit: Number(q.limit ?? 200) });
+  if (res.ok) return ok(res.data);
+  return err(res.error ?? "assets error");
 }
 
 /** จัดสรรพอร์ตตามดวง (ต้องมี profile) */
