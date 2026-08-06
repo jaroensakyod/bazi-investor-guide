@@ -29,11 +29,12 @@ export function handleRefresh(kind: string): Promise<ApiResponse<unknown>> {
   };
   const cfg = scripts[kind];
   if (!cfg) return Promise.resolve(err(`refresh ไม่รู้จัก: ${kind} (มี: ${Object.keys(scripts).join(", ")})`));
+  const npxBin = process.platform === "win32" ? "npx.cmd" : "npx"; // Windows: npx = npx.cmd (execFile ไม่ resolve .cmd)
   return new Promise((resolve) => {
     execFile(
-      cfg[0],
+      npxBin,
       cfg[1],
-      { cwd: ROOT_DIR, timeout: 120000, maxBuffer: 2 * 1024 * 1024, windowsHide: true },
+      { cwd: ROOT_DIR, timeout: 120000, maxBuffer: 2 * 1024 * 1024, windowsHide: true, shell: process.platform === "win32" }, // Windows: .cmd ต้องผ่าน shell
       (error: Error | null, stdout: string, stderr: string) => {
         const tail = `${stdout}\n${stderr}`.trim().split("\n").slice(-6).join("\n");
         if (error && (error as NodeJS.ErrnoException).code !== "ETIMEDOUT") {
