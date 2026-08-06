@@ -42,7 +42,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "OCLT",
@@ -56,7 +56,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "VOGX",
@@ -70,7 +70,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "BLSM",
@@ -84,7 +84,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "LTGO",
@@ -98,7 +98,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "FOIL",
@@ -112,7 +112,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "PHAX",
@@ -126,7 +126,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:02:34.252Z"
+      "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
       "ticker": "PHAT",
@@ -386,7 +386,7 @@
       "ipoDate": "2026-07-31",
       "priceRange": "A$1.05",
       "business": "Mineral exploration company",
-      "status": "upcoming",
+      "status": "listed",
       "market": "ASX",
       "country": "AU",
       "exchange": "ASX",
@@ -456,7 +456,7 @@
       "ipoDate": "2026-07-31",
       "priceRange": "A$0.20",
       "business": "Mineral exploration and mining",
-      "status": "upcoming",
+      "status": "listed",
       "market": "ASX",
       "country": "AU",
       "exchange": "ASX",
