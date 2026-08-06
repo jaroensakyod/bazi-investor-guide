@@ -16,7 +16,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { ok, err, type Query } from "../src/api/types";
 import { handleProfile, handleChat } from "../src/api/chat";
-import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf, handleStocks, handleStockDetail, handleRefresh } from "../src/api/market";
+import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf, handleStocks, handleStockDetail, handleRefresh, handleSearch } from "../src/api/market";
 import { handleDashboard } from "../src/api/dashboard";
 
 const PORT = Number(process.argv[process.argv.indexOf("--port") + 1] ?? 8787);
@@ -61,7 +61,10 @@ function parseQuery(url: string | undefined): Query {
   const i = url.indexOf("?");
   if (i < 0) return q;
   for (const pair of url.slice(i + 1).split("&")) {
-    const [k, v] = pair.split("=");
+    if (!pair) continue;
+    const eq = pair.indexOf("=");
+    const k = eq >= 0 ? pair.slice(0, eq) : pair;
+    const v = eq >= 0 ? pair.slice(eq + 1) : "";
     if (k) q[decodeURIComponent(k)] = v ? decodeURIComponent(v) : "";
   }
   return q;
@@ -99,6 +102,7 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === "GET" && path === "/api/stocks") return send(res, 200, handleStocks(q));
     if (req.method === "GET" && path === "/api/stock") return send(res, 200, handleStockDetail(q));
+    if (req.method === "GET" && path === "/api/search") return send(res, 200, handleSearch(q));
     if (req.method === "POST" && path === "/api/refresh") {
       const r = await handleRefresh(String(q.kind ?? ""));
       return send(res, r.ok ? 200 : 400, r);

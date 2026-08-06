@@ -18,6 +18,7 @@ import { loadSnapshot } from "../lib/market/market-data";
 import { loadFundamentalsCache } from "../lib/market/fundamentals";
 import { yahooTicker } from "../lib/market/yahoo";
 import { buffettChecks, buffettScore } from "../lib/report/buffett-checks";
+import { getAssets } from "../lib/assets/asset-universe";
 
 /** อัปเดตข้อมูล (IPO/ราคา/ข่าว) — รันสคริปต์ backend แล้วคืน output ท้ายสุด */
 export function handleRefresh(kind: string): Promise<ApiResponse<unknown>> {
@@ -90,9 +91,28 @@ export async function handleReport(q: Query): Promise<ApiResponse<unknown>> {
   if (!ticker) return err("ต้องระบุ ticker");
   const profile = loadUser(q.userId ?? "guest");
   const state = profile ? await stateOfProfile(profile) : undefined;
-  const { generateReport } = await import("../lib/chat/tools");
+  const { generateReport, getAssetReport } = await import("../lib/chat/tools");
   const res = generateReport(ticker, state);
-  return res.ok ? ok(res.data) : err(res.error ?? "report error");
+  if (res.ok) return ok(res.data);
+  // ไม่ใช่หุ้น → ลองสินทรัพย์ (ทอง/เงิน/คริปโต/ที่ดิน...)
+  const asset = getAssetReport(ticker, state);
+  if (asset.ok) return ok(asset.data);
+  return err(res.error ?? asset.error ?? "ไม่พบรายการนี้ในคลัง");
+}
+
+/** ค้นหุ้น + สินทรัพย์ (สำหรับช่องเลือกในหน้า report) */
+export function handleSearch(q: Query): ApiResponse<unknown> {
+  const query = (q.q ?? "").toLowerCase().trim();
+  if (!query) return ok({ stocks: [], assets: [] });
+  const stocks = getAllStocks()
+    .filter((s) => s.ticker.toLowerCase().includes(query) || s.name.toLowerCase().includes(query) || (s.nameEn ?? "").toLowerCase().includes(query))
+    .slice(0, 10)
+    .map((s) => ({ kind: "stock" as const, ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement }));
+  const assets = getAssets()
+    .filter((a) => a.ticker.toLowerCase().includes(query) || a.name.toLowerCase().includes(query))
+    .slice(0, 10)
+    .map((a) => ({ kind: "asset" as const, ticker: a.ticker, name: a.name, market: a.type, element: a.primaryElement }));
+  return ok({ stocks, assets });
 }
 
 /** สินทรัพย์นอกหุ้น × ดวง (ต้องมี profile) */

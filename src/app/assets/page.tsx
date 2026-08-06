@@ -18,6 +18,13 @@ type AssetRow = {
 };
 type AssetsData = { count: number; assets: AssetRow[] };
 type PortfolioData = { rows: Array<{ element: string; pct: number; assets: string[]; note: string }>; total: number };
+type AssetDetail = {
+  kind: "asset";
+  asset: { ticker: string; name: string; type: string; sector: string | null; element: string; riskTier: string; elementReason: string };
+  price: number | null;
+  changePct: number | null;
+  verdict: { verdict: string; score: number; reasons: string[]; capped: boolean } | null;
+};
 
 const TYPES = ["commodity", "crypto", "etf", "reit", "bond", "deposit", "forex", "fund", "derivative", "real_asset", "lottery", "insurance"] as const;
 const ELMAP: Record<string, string> = { ไม้: "wood", ไฟ: "fire", ดิน: "earth", ทอง: "metal", น้ำ: "water" };
@@ -31,6 +38,7 @@ export default function AssetsPage() {
   const [type, setType] = useState<string>("all");
   const [error, setError] = useState("");
   const [needProfile, setNeedProfile] = useState(false);
+  const [detail, setDetail] = useState<AssetDetail | null>(null);
 
   const load = useCallback(async () => {
     const uid = myUserId();
@@ -46,6 +54,17 @@ export default function AssetsPage() {
   useEffect(() => {
     load();
   }, [load]);
+
+  async function showDetail(ticker: string) {
+    setError("");
+    const r = await get<AssetDetail>(`/api/report?ticker=${encodeURIComponent(ticker)}&userId=${myUserId()}`);
+    if (!r.ok) {
+      setError(r.error);
+      return;
+    }
+    if (r.data.kind === "asset") setDetail(r.data);
+    else setError("ไม่พบสินทรัพย์นี้");
+  }
 
   const elKey = (e: string) => ELMAP[e] ?? e;
   const shown = type === "all" ? assets : assets.filter((a) => a.type === type);
@@ -102,6 +121,42 @@ export default function AssetsPage() {
         </div>
       )}
 
+      {detail && (
+        <div className="card" style={{ borderColor: "#d4af37" }}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <h2>
+              💰 {detail.asset.name} ({detail.asset.ticker}){" "}
+              <span style={{ color: ELEMENT_COLOR[elKey(detail.asset.element)] ?? "#d4af37" }}>{elLabel(detail.asset.element)}</span>{" "}
+              <span className="tag">{typeLabel(detail.asset.type)}</span>{" "}
+              <span className="tag">{tierLabel(detail.asset.riskTier)}</span>
+            </h2>
+            <button className="btn secondary" style={{ fontSize: 12 }} onClick={() => setDetail(null)}>
+              ✕
+            </button>
+          </div>
+          {detail.verdict ? (
+            <>
+              <p>
+                {t("assets.verdict")}: <b>{VD_EMOJI[detail.verdict.verdict] ?? ""} {vdLabel(detail.verdict.verdict)}</b> ({detail.verdict.score}){" "}
+                {detail.verdict.capped ? <span className="tag avoid">⚠️ เกินกำลังดวง</span> : ""}
+              </p>
+              {detail.verdict.reasons.map((r, i) => (
+                <p key={i} style={{ fontSize: 13, color: "#9a937f" }}>
+                  • {r}
+                </p>
+              ))}
+            </>
+          ) : (
+            <p style={{ color: "#9a937f", fontSize: 13 }}>{t("assets.needprofile")}</p>
+          )}
+          <p style={{ fontSize: 13, color: "#9a937f" }}>🔮 {detail.asset.elementReason}</p>
+          <p style={{ marginTop: 8 }}>
+            💰 ราคา: <b>{detail.price != null ? `$${detail.price.toLocaleString()}` : "-"}</b>{" "}
+            <span style={{ color: (detail.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{detail.changePct != null ? `${detail.changePct >= 0 ? "+" : ""}${detail.changePct}%` : "-"}</span>
+          </p>
+        </div>
+      )}
+
       <div className="card">
         {shown.length === 0 ? (
           <p style={{ color: "#9a937f" }}>{error || t("admin.nodata")}</p>
@@ -119,7 +174,7 @@ export default function AssetsPage() {
             </thead>
             <tbody>
               {shown.map((a, i) => (
-                <tr key={a.ticker}>
+                <tr key={a.ticker} onClick={() => showDetail(a.ticker)} style={{ cursor: "pointer" }}>
                   <td>{i + 1}</td>
                   <td>
                     <b>{a.name}</b>{" "}

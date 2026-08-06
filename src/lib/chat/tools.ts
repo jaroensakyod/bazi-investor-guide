@@ -256,6 +256,28 @@ export function getPortfolioAllocation(state: CalculatedStateValue): ToolResult<
   return ok({ rows, total, compliance: COMPLIANCE_NOTE });
 }
 
+/** รายงานสินทรัพย์เดี่ยว (ทอง/เงิน/คริปโต/ที่ดิน...) — ใช้กับหน้า report + แชท */
+export function getAssetReport(ticker: string, state?: CalculatedStateValue): ToolResult<object> {
+  const asset = getAssets().find((a) => a.ticker.toUpperCase() === ticker.toUpperCase());
+  if (!asset) return fail(`ไม่พบสินทรัพย์ "${ticker}" ในคลัง`);
+  const snap = loadSnapshot();
+  const md = snap?.quotes[asset.ticker];
+  if (!state) {
+    return ok({ kind: "asset", asset: { ticker: asset.ticker, name: asset.name, type: asset.type, sector: asset.sector ?? null, element: asset.primaryElement, riskTier: asset.riskTier, elementReason: asset.elementReason }, price: md?.price ?? null, changePct: md?.changePct ?? null, verdict: null, compliance: COMPLIANCE_NOTE });
+  }
+  const { invest, avoid } = resolveInvestElements(state);
+  const persona = resolveInvestorPersona(state);
+  const v = assetVerdict(asset, { usefulElements: invest, avoidElements: avoid, strengthBand: persona.band as "weak" | "balanced" | "strong", changePct: md?.changePct });
+  return ok({
+    kind: "asset",
+    asset: { ticker: asset.ticker, name: asset.name, type: asset.type, sector: asset.sector ?? null, element: asset.primaryElement, riskTier: asset.riskTier, elementReason: asset.elementReason },
+    price: md?.price ?? null,
+    changePct: md?.changePct ?? null,
+    verdict: { verdict: v.verdict, score: v.score, reasons: v.reasons, capped: v.cappedByStrength ?? false },
+    compliance: COMPLIANCE_NOTE,
+  });
+}
+
 // ── 7. รายงาน (ฉบับย่อตอนนี้ — ฉบับเต็ม Phase 3) ──
 export function generateReport(ticker: string, state?: CalculatedStateValue): ToolResult<object> {
   const stock = findStock(ticker);

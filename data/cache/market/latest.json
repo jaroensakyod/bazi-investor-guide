@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-08-05T09:59:57.511Z",
+ "updatedAt": "2026-08-06T08:48:10.915Z",
  "quotes": {
   "ADVANC.BK": {
    "updatedAt": "2026-08-05T09:59:57.511Z",
@@ -1575,16 +1575,11 @@
    "low52w": 4.24
   },
   "CPNREIT.BK": {
-   "updatedAt": "2026-08-05T09:59:57.511Z",
-   "currency": "THB",
    "price": 13.6,
-   "changePct": -0.73,
-   "pe": 14.78,
-   "pbv": 1.17,
-   "dividendYield": 800,
+   "changePct": 0,
    "marketCap": 49246605312,
-   "high52w": 13.8,
-   "low52w": 10.6
+   "currency": "THB",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
   },
   "SPRC.BK": {
    "updatedAt": "2026-08-05T09:59:57.511Z",
@@ -1659,16 +1654,11 @@
    "low52w": 12
   },
   "WHART.BK": {
-   "updatedAt": "2026-08-05T09:59:57.511Z",
-   "currency": "THB",
    "price": 11.4,
    "changePct": -0.87,
-   "pe": 16.76,
-   "pbv": 1.08,
-   "dividendYield": 666,
    "marketCap": 39544631296,
-   "high52w": 11.6,
-   "low52w": 8.85
+   "currency": "THB",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
   },
   "BKIH.BK": {
    "updatedAt": "2026-08-05T09:59:57.511Z",
@@ -26940,6 +26930,296 @@
    "pbv": 566449150,
    "high52w": 7.1,
    "low52w": 6
+  },
+  "GC=F": {
+   "price": 4332.2,
+   "changePct": 0.63,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "SI=F": {
+   "price": 62.19,
+   "changePct": -0.16,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "PL=F": {
+   "price": 1768.4,
+   "changePct": 1.23,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "PA=F": {
+   "price": 1379,
+   "changePct": 0.65,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "CL=F": {
+   "price": 75.17,
+   "changePct": -0.07,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "BZ=F": {
+   "price": 79.51,
+   "changePct": 0.08,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "NG=F": {
+   "price": 2.68,
+   "changePct": -0.19,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "BTC-USD": {
+   "price": 64824.21,
+   "changePct": 1.19,
+   "marketCap": 1300455620608,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "ETH-USD": {
+   "price": 1911.41,
+   "changePct": 2.32,
+   "marketCap": 230689685504,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "GLD": {
+   "price": 389.64,
+   "changePct": 4.14,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "SLV": {
+   "price": 56.07,
+   "changePct": 4.14,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "SPY": {
+   "price": 769.79,
+   "changePct": -0.2,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "QQQ": {
+   "price": 717.3,
+   "changePct": -0.9,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "XLK": {
+   "price": 185.91,
+   "changePct": -0.53,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "XLF": {
+   "price": 58,
+   "changePct": 0.21,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "XLE": {
+   "price": 57.31,
+   "changePct": -2.07,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "XLV": {
+   "price": 164.16,
+   "changePct": 1.27,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "XLP": {
+   "price": 85.33,
+   "changePct": -0.05,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "XLU": {
+   "price": 43.66,
+   "changePct": -1.02,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "VNQ": {
+   "price": 98.92,
+   "changePct": 0,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "BND": {
+   "price": 72.46,
+   "changePct": 0.03,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "TLH": {
+   "price": 97.36,
+   "changePct": 0.12,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "USDTHB=X": {
+   "price": 33.05,
+   "changePct": -0.03,
+   "currency": "THB",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "EURUSD=X": {
+   "price": 1.15,
+   "changePct": -0.09,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "ZC=F": {
+   "price": 461.75,
+   "changePct": 0.38,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "ZW=F": {
+   "price": 647.25,
+   "changePct": 0.78,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "ZS=F": {
+   "price": 1176.25,
+   "changePct": 0.13,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "KC=F": {
+   "price": 311.5,
+   "changePct": 0.02,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "CC=F": {
+   "price": 5969,
+   "changePct": -0.53,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "SB=F": {
+   "price": 15.23,
+   "changePct": 0.53,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "CT=F": {
+   "price": 82.92,
+   "changePct": -0.12,
+   "currency": "USX",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "HG=F": {
+   "price": 6.73,
+   "changePct": 0.06,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "ALI=F": {
+   "price": 3410.25,
+   "changePct": -0.28,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "ZN=F": {
+   "price": 108.84,
+   "changePct": -0.04,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.914Z"
+  },
+  "SOL-USD": {
+   "price": 73.86,
+   "changePct": -0.22,
+   "marketCap": 42904375296,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "XRP-USD": {
+   "price": 1.05,
+   "changePct": -1.05,
+   "marketCap": 65943347200,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "BNB-USD": {
+   "price": 594.63,
+   "changePct": -0.68,
+   "marketCap": 79175081984,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "DOGE-USD": {
+   "price": 0.07,
+   "changePct": 0.03,
+   "marketCap": 10848178176,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "ADA-USD": {
+   "price": 0.19,
+   "changePct": -2.68,
+   "marketCap": 6893832192,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "VTI": {
+   "price": 379.65,
+   "changePct": -0.31,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "VXUS": {
+   "price": 86.51,
+   "changePct": 0.07,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "IWM": {
+   "price": 299.77,
+   "changePct": -0.64,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "EEM": {
+   "price": 65.72,
+   "changePct": -0.42,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "TIP": {
+   "price": 107,
+   "changePct": -0.05,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "SCHD": {
+   "price": 33.64,
+   "changePct": -0.62,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "LAND": {
+   "price": 8.2,
+   "changePct": 0.49,
+   "marketCap": 353719872,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
+  },
+  "JADE": {
+   "price": 78.19,
+   "changePct": -0.13,
+   "currency": "USD",
+   "updatedAt": "2026-08-06T08:48:10.915Z"
   }
  }
 }
