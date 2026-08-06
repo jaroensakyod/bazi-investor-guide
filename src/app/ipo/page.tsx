@@ -14,6 +14,7 @@ type IpoRow = {
   priceRange?: string;
   currency?: string;
   status?: string;
+  business?: string;
   element: string;
   elementReason: string;
   fit: "good" | "neutral" | "avoid" | "drain" | null;
@@ -63,6 +64,11 @@ export default function IpoPage() {
           </div>
           {open === e.ticker && (
             <div style={{ fontSize: 12.5, color: "#cfcabe", marginTop: 8, borderTop: "1px solid #262a34", paddingTop: 8 }}>
+              {(e as unknown as { business?: string }).business && (
+                <p style={{ marginBottom: 4 }}>
+                  🏭 {t("ipo.business")}: {(e as unknown as { business?: string }).business}
+                </p>
+              )}
               <p>
                 📅 {t("ipo.date")}: <b>{e.ipoDate ?? "-"}</b> · 🏛️ {t("ipo.exchange")}: <b>{e.exchange ?? e.market ?? "-"}</b> ({e.country ?? "-"}) · 💰 {t("ipo.price")}: <b>{e.priceRange ?? "-"}</b> {e.currency ?? ""} · {t("ipo.status")}: <b>{e.status ?? "-"}</b>
               </p>

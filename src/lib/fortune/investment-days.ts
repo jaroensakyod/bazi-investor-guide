@@ -136,11 +136,11 @@ export function ipoFitForWeek(state: CalculatedStateValue, fromDate: string, toD
   })();
   const { invest, avoid } = resolveInvestElements(state);
   const inRange = upcomingIpos(db.entries as Parameters<typeof upcomingIpos>[0]).filter(
-    (e) => e.ipoDate >= fromDate && e.ipoDate <= toDate,
+    (e) => e.ipoDate && e.ipoDate >= fromDate && e.ipoDate <= toDate,
   );
   const rows = inRange.map((e) => {
     const bizEl = e.primaryElement ?? null; // ธาตุจาก sector (ถ้ามี)
-    const birthEl = dayElementOf(e.ipoDate); // ธาตุวันเกิดบริษัท (วันเข้าเทรด)
+    const birthEl = e.ipoDate ? dayElementOf(e.ipoDate) : null; // ธาตุวันเกิดบริษัท (วันเข้าเทรด)
     let fit: "good" | "neutral" | "avoid" = "neutral";
     if (bizEl && avoid.includes(bizEl)) fit = "avoid";
     else if (bizEl && invest.includes(bizEl)) fit = "good";

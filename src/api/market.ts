@@ -66,7 +66,7 @@ export async function handleIpo(q: Query): Promise<ApiResponse<unknown>> {
   let state: Awaited<ReturnType<typeof stateOfProfile>> | null = null;
   const profile = loadUser(q.userId ?? "");
   if (profile) state = await stateOfProfile(profile);
-  const rows = (r.data ?? []).map((e: { ticker?: string; name?: string; market?: string; country?: string; exchange?: string; ipoDate?: string; priceRange?: string; currency?: string; status?: string }) => {
+  const rows = (r.data ?? []).map((e: { ticker?: string; name?: string; nameEn?: string; market?: string; country?: string; exchange?: string; ipoDate?: string | null; priceRange?: string; currency?: string; status?: string; business?: string; industry?: string }) => {
     const { element, reason } = classifyIpoElement(e as never);
     return { ...e, element, elementReason: reason, fit: state ? elementFitForUser(state, element) : null };
   });

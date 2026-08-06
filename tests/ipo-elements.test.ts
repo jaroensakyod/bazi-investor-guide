@@ -27,4 +27,16 @@ describe("จำแนกธาตุ IPO (deterministic จากชื่อ)"
       expect(reason.length).toBeGreaterThan(5);
     }
   });
+
+  it("IPO ไทย (SET API) — จำแนกจากชื่อไทย/ธุรกิจ", () => {
+    // ปาล์ม/สวน = ไม้ · REIT = ดิน · เครื่องดื่ม = น้ำ · bio power = ไฟ · อาหารสัตว์ = ดิน
+    expect(classifyIpoElement({ ticker: "PHAT", name: "บริษัท กลุ่มภัทร จำกัด (มหาชน)", business: "ธุรกิจสกัดน้ำมันปาล์มดิบ" }).element).toBe("ไม้");
+    expect(classifyIpoElement({ ticker: "ONYXRT", name: "ทรัสต์เพื่อการลงทุนในสิทธิการเช่าอสังหาริมทรัพย์ออนิกซ์", business: "ลงทุนในสิทธิการเช่าที่ดิน อาคาร โรงแรม" }).element).toBe("ดิน");
+    expect(classifyIpoElement({ ticker: "TNCC", name: "บริษัท ไทยน้ำทิพย์ คอร์ปอเรชั่น จำกัด (มหาชน)", business: "จัดจำหน่ายเครื่องดื่ม Coca-Cola" }).element).toBe("น้ำ");
+    expect(classifyIpoElement({ ticker: "TEBP", name: "บริษัท ไทยอีสเทิร์น ไบโอ พาวเวอร์ จำกัด (มหาชน)", business: "ผลิตไฟฟ้าจากก๊าซชีวภาพ" }).element).toBe("ไฟ");
+    expect(classifyIpoElement({ ticker: "PETPAL", name: "บริษัท เพ็ทพัล โปรดักส์ จำกัด (มหาชน)", business: "ผลิตอาหารสัตว์เลี้ยง" }).element).toBe("ดิน");
+    // ระวังคำซ้อน: พัทยา ≠ ยา (โรงแรมอมารี พัทยา ต้องไม่เป็นไฟ) · Thai ≠ ai
+    expect(classifyIpoElement({ ticker: "X", name: "บริษัท โรงแรมอมารี พัทยา จำกัด (มหาชน)", business: "ให้บริการโรงแรม" }).element).toBe("น้ำ");
+    expect(classifyIpoElement({ ticker: "TIPAK", name: "Thai Packaging Industry", business: "บรรจุภัณฑ์กระดาษลูกฟูก" }).element).toBe("ไม้");
+  });
 });

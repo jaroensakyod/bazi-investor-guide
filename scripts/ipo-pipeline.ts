@@ -37,7 +37,7 @@ async function main() {
 
   const upcoming = upcomingIpos(entries);
   console.log(`\n🗓 IPO กำลังจะเข้า ${upcoming.length} ตัว (2 สัปดาห์ข้างหน้า):`);
-  const twoWeeks = upcoming.filter((e) => e.ipoDate <= new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10));
+  const twoWeeks = upcoming.filter((e) => e.ipoDate && e.ipoDate <= new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10));
   for (const e of twoWeeks.slice(0, 15)) {
     console.log(`   • ${e.ipoDate} ${e.name} (${e.exchange}) ${e.priceRange ?? ""}`);
   }

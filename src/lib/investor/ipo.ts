@@ -20,14 +20,15 @@ export type IpoEntry = {
   market: string;
   country: string;
   exchange: string;
-  ipoDate: string; // YYYY-MM-DD
+  ipoDate: string | null; // YYYY-MM-DD (null = ยังไม่มีกำหนด — ไทย: อยู่ระหว่าง ก.ล.ต.)
   sector?: string;
+  industry?: string;
   business?: string;
   primaryElement?: ThaiElement | null;
   priceRange?: string;
   currency?: string;
   source: string;
-  status: "upcoming" | "listed";
+  status: string; // upcoming | listed | ไทย: อนุมัติ/ยื่น ก.ล.ต./มีผลบังคับ
   fetchedAt: string; // ISO
 };
 
@@ -104,8 +105,9 @@ export function mergeIpos(existing: IpoEntry[], incoming: IpoEntry[]): { entries
 /** ตัวที่ยังไม่เข้าเทรด (จากวันที่กำหนด) — เรียงวันใกล้สุดก่อน */
 export function upcomingIpos(entries: IpoEntry[], fromDate = new Date().toISOString().slice(0, 10)): IpoEntry[] {
   return entries
-    .filter((e) => e.status === "upcoming" && e.ipoDate && e.ipoDate >= fromDate)
-    .sort((a, b) => a.ipoDate.localeCompare(b.ipoDate));
+    // ยังไม่เข้าเทรด (ไม่ใช่ listed) + มีวันขึ้นในอนาคต หรือ ยังไม่มีกำหนด (ไทย: อนุมัติ/ยื่น ก.ล.ต.)
+    .filter((e) => e.status !== "listed" && (!e.ipoDate || e.ipoDate >= fromDate))
+    .sort((a, b) => (a.ipoDate ?? "9999").localeCompare(b.ipoDate ?? "9999"));
 }
 
 /** ตัวที่เข้าเทรดไปแล้ว (วันที่ผ่าน) → status listed (กันรก) */
