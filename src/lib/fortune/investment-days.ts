@@ -14,6 +14,7 @@ import { elementThOfStem, doElementsTh, type ElementTh } from "@/lib/bazi/consta
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
 import { resolveInvestElements, resolveInvestorPersona } from "@/lib/investor/investor-guide";
 import { getAllStocks } from "@/lib/investor/stock-database";
+import { allocatePortfolio } from "@/lib/assets/portfolio";
 import { loadSnapshot } from "@/lib/market/market-data";
 import { yahooTicker } from "@/lib/market/yahoo";
 import { upcomingIpos } from "@/lib/investor/ipo";
@@ -165,5 +166,86 @@ export function todayHours(date: string) {
   return {
     luckyHours: day.luckyHours.slice(0, 4).map((h) => ({ range: h.range, god: h.god, meaning: h.meaning })),
     currentHour: checkHour(y, m, d, now.getHours()),
+  };
+}
+
+/**
+ * ไอเดีย 1: ผูก "วันธาตุตรง" กับพอร์ตจัดสรร (บท 13)
+ * สำหรับแต่ละธาตุในพอร์ต: นับวันธาตุตรง (dayEl == el) + วันตรงดวง (dayEl ∈ invest) ทั้งเดือน
+ * → hint: โฟกัส (ตรงธาตุ ≥6 วัน) / ปกติ (2-5) / ชะลอ (≤1 หรือ el ∈ avoid)
+ */
+export function monthPortfolioGuide(state: CalculatedStateValue, year: number, month: number) {
+  const { invest, avoid } = resolveInvestElements(state);
+  const persona = resolveInvestorPersona(state);
+  const allocation = allocatePortfolio({ usefulElements: invest, strengthBand: persona.band as "weak" | "balanced" | "strong" });
+  const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+
+  const counts = new Map<string, { direct: number; good: number }>();
+  for (const row of allocation) counts.set(row.element, { direct: 0, good: 0 });
+  for (let dd = 1; dd <= daysInMonth; dd += 1) {
+    const el = elementThOfStem(buildAlmanacDay(year, month, dd).dayPillar.stem);
+    if (!el) continue;
+    for (const row of allocation) {
+      const c = counts.get(row.element)!;
+      if (el === row.element) c.direct += 1;
+      if (invest.includes(el)) c.good += 1;
+    }
+  }
+
+  const rows = allocation.map((row) => {
+    const c = counts.get(row.element)!;
+    let hint: "โฟกัส" | "ปกติ" | "ชะลอ" = "ปกติ";
+    if (avoid.includes(row.element)) hint = "ชะลอ";
+    else if (c.direct >= 6) hint = "โฟกัส";
+    else if (c.direct <= 1) hint = "ชะลอ";
+    return { element: row.element, pct: row.pct, directDays: c.direct, goodDays: c.good, hint, assets: row.assets };
+  });
+
+  const focus = rows.filter((r) => r.hint === "โฟกัส").map((r) => r.element);
+  const slow = rows.filter((r) => r.hint === "ชะลอ").map((r) => r.element);
+  return {
+    year, month, yearBE: year + 543,
+    rows,
+    focusElements: focus, slowElements: slow,
+    summary: focus.length
+      ? `เดือนนี้เอื้อธาตุ ${focus.join("+")} มากสุด (วันตรงธาตุเยอะ)${slow.length ? ` · แนะนำชะลอ ${slow.join("+")}` : ""}`
+      : `เดือนนี้ไม่มีธาตุไหนโดดเด่นเป็นพิเศษ${slow.length ? ` · ควรชะลอ ${slow.join("+")}` : ""}`,
+    compliance: COMPLIANCE_NOTE,
+  };
+}
+
+/**
+ * ไอเดีย 2: รายงาน "ฤกษ์รายสัปดาห์" (7 วัน) — ไม่ต้องใช้ดวงผู้ใช้ (ใช้กับ cron/digest ได้)
+ * แต่ละวัน: ธาตุวัน · 建除 · สีมงคล · ยามดี 2 ช่วง · วันสำคัญ · ดาวเด่น
+ */
+export function weeklyAlmanacReport(fromDate: string, days = 7) {
+  const start = new Date(`${fromDate}T00:00:00Z`);
+  const rows = [];
+  for (let i = 0; i < days; i += 1) {
+    const dt = new Date(start.getTime() + i * 86400000);
+    const y = dt.getUTCFullYear();
+    const m = dt.getUTCMonth() + 1;
+    const d = dt.getUTCDate();
+    const day = buildAlmanacDay(y, m, d);
+    const el = elementThOfStem(day.dayPillar.stem);
+    const goodStars = day.dayStars.filter((s) => s.polarity === "good").length;
+    rows.push({
+      date: day.date,
+      weekday: day.weekday,
+      dayElement: el,
+      jianchu: day.jianchu,
+      colors: day.colors.map((c) => `${c.element}→${c.colors}`).join(" · "),
+      luckyHours: day.luckyHours.slice(0, 2).map((h) => `${h.range} (${h.god})`),
+      specialDays: day.specialDays.map((s) => s.name),
+      goodStars,
+    });
+  }
+  // วันเด่น = ยามมงคล ≥4 ช่วง หรือ ดาวดี ≥2
+  const highlight = rows.filter((r) => r.luckyHours.length >= 2 && (r.goodStars >= 2 || (r.jianchu?.name ?? "").includes("建")));
+  return {
+    fromDate,
+    days: rows,
+    highlightDays: highlight.map((r) => ({ date: r.date, weekday: r.weekday, dayElement: r.dayElement, why: "ยามดี+ดาวเด่น" })),
+    compliance: COMPLIANCE_NOTE,
   };
 }

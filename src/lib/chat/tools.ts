@@ -20,7 +20,7 @@ import { upcomingIpos, type IpoEntry } from "../investor/ipo";
 import { buildAlmanacDay, checkHour } from "../bazi/almanac/almanac-engine";
 import {
   dayElementOf, dayFitForUser, favorElementsToday, stocksForDay, monthInvestFit,
-  luckyDaysForAsset, ipoFitForWeek, todayHours, COMPLIANCE_NOTE,
+  luckyDaysForAsset, ipoFitForWeek, todayHours, monthPortfolioGuide, COMPLIANCE_NOTE,
 } from "../fortune/investment-days";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
@@ -187,7 +187,8 @@ export function getFortuneInvest(
   if (opts.scope === "month") {
     const m = monthInvestFit(state, year, month);
     const land = opts.asset === "land" ? luckyDaysForAsset(state, year, month, "ดิน") : undefined;
-    return ok({ scope: "month", compliance: COMPLIANCE_NOTE, ...m, luckyLandDays: land });
+    const portfolio = monthPortfolioGuide(state, year, month);
+    return ok({ scope: "month", compliance: COMPLIANCE_NOTE, ...m, luckyLandDays: land, portfolio });
   }
   if (opts.scope === "week") {
     const to = new Date(now.getTime() + 7 * 86400000).toISOString().slice(0, 10);

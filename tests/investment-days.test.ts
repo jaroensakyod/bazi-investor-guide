@@ -4,7 +4,7 @@ import { createInMemoryKnowledgeRepository } from "../src/lib/bazi/in-memory-rep
 import type { CalculatedStateValue } from "../src/lib/bazi/schema-types";
 import {
   dayElementOf, dayFitForUser, favorElementsToday, stocksForDay, monthInvestFit,
-  luckyDaysForAsset, ipoFitForWeek, COMPLIANCE_NOTE,
+  luckyDaysForAsset, ipoFitForWeek, monthPortfolioGuide, weeklyAlmanacReport, COMPLIANCE_NOTE,
 } from "../src/lib/fortune/investment-days";
 
 let state: CalculatedStateValue;
@@ -42,6 +42,27 @@ describe("fortune × investment — ดวงจับคู่การลง�
     expect(m.caishenDir).toBeTruthy();
     expect(m.goodDays.length).toBeGreaterThan(0);
     expect(m.avoidDays.length).toBeGreaterThanOrEqual(0);
+  });
+
+  it("monthPortfolioGuide — พอร์ต×วันธาตุตรง (ไอเดีย 1)", () => {
+    const g = monthPortfolioGuide(state, 2026, 8);
+    expect(g.rows.length).toBeGreaterThan(0);
+    expect(g.rows[0]).toHaveProperty("directDays");
+    expect(g.rows[0]).toHaveProperty("hint");
+    expect(["โฟกัส", "ปกติ", "ชะลอ"]).toContain(g.rows[0].hint);
+    expect(g.summary).toMatch(/เอื้อ|ชะลอ/);
+    // ผลรวม % ยัง = 100 (พอร์ตเดิมไม่ถูกแตะ)
+    expect(g.rows.reduce((a, r) => a + (r.pct ?? 0), 0)).toBe(100);
+  });
+
+  it("weeklyAlmanacReport — ฤกษ์รายสัปดาห์ 7 วัน (ไอเดีย 2)", () => {
+    const r = weeklyAlmanacReport("2026-08-10", 7);
+    expect(r.days.length).toBe(7);
+    expect(r.days[0].date).toBe("2026-08-10");
+    expect(r.days[0]).toHaveProperty("dayElement");
+    expect(r.days[0]).toHaveProperty("luckyHours");
+    expect(r.days[0]).toHaveProperty("colors");
+    expect(Array.isArray(r.highlightDays)).toBe(true);
   });
 
   it("luckyDaysForAsset — วันธาตุดิน (ซื้อที่ดิน) ในเดือน", () => {
