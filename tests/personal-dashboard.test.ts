@@ -34,7 +34,7 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(cats.some((c) => c.id === "stocks_global" && c.items.length > 0)).toBe(true);
     expect(cats.some((c) => c.id === "crypto" && c.unlock === "premium")).toBe(true);
     expect(cats.some((c) => c.id === "bond" && c.unlock === "free")).toBe(true);
-    for (const c of cats) for (const p of c.items) expect(["good", "neutral", "avoid"]).toContain(p.fit);
+    for (const c of cats) for (const p of c.items) expect(["good", "neutral", "avoid", "drain"]).toContain(p.fit);
     expect(d.disclaimer).toContain("ไม่ใช่คำแนะนำการลงทุน");
   });
 
@@ -83,5 +83,24 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     // ธาตุเดือน: fit + ข้อความ
     expect(["good", "avoid", "neutral"]).toContain(d.monthAdvice.fit);
     expect(d.monthAdvice.text.length).toBeGreaterThan(10);
+  });
+
+  it("สมดุลธาตุ: ดิถีอ่อน + น้ำเกิน (身弱财旺) → อย่าเพิ่มน้ำ เน้นเสริมไฟ", () => {
+    const d = buildPersonalDashboard(state);
+    // ธาตุเกิน = น้ำ (5 ตัว)
+    expect(d.principle.excessElement).toBe("น้ำ");
+    expect(d.principle.excessCount).toBe(5);
+    // คำเตือน: อย่าไล่ลาภน้ำ เน้นเสริมไฟ
+    expect(d.principle.excessNote).toContain("อย่าไล่ลาภ");
+    expect(d.principle.excessNote).toContain("ไฟ");
+    // สินค้าธาตุน้ำ (บอนด์) = fit drain (ดูดพลัง) ไม่ใช่ neutral
+    const bondCat = d.categories.find((c) => c.id === "bond")!;
+    expect(bondCat.items.length).toBeGreaterThan(0);
+    for (const p of bondCat.items) expect(p.fit).toBe("drain");
+    // สินค้าธาตุไฟ = good
+    const thCat = d.categories.find((c) => c.id === "stocks_th")!;
+    for (const p of thCat.items) expect(p.fit).toBe("good");
+    // เงินเย็น: เลี่ยงน้ำเพิ่ม (ไม่มี 'บอนด์/พันธบัตร (น้ำ)' ตรงๆ แต่มีคำเตือน)
+    expect(d.instruments.cold.some((i) => i.includes("เลี่ยงน้ำเพิ่ม"))).toBe(true);
   });
 });

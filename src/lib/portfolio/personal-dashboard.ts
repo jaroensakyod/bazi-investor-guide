@@ -56,21 +56,36 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     },
   }[band];
 
-  // ── 3. เครื่องมือรายหมวด (fix ตามหลักซินแส) ──
+  // ── 2.5 ธาตุเกิน (มากสุดในดวง) — ใช้ปรับคำแนะนำเครื่องมือ/สินค้า ──
+  const excessElement = [...elementBalance].sort((a, b) => b.count - a.count)[0].element;
+  const excessCount = [...elementBalance].sort((a, b) => b.count - a.count)[0].count;
+  const excessNote =
+    excessElement === wealth
+      ? `ธาตุลาภ=${wealth} มีเกิน(${excessCount} ตัว) + ดิถีอ่อน (身弱财旺) → อย่าไล่ลาภ${wealth}เพิ่ม เน้นเสริม${strengthenEl}ก่อน ลาภจะตามมาเอง`
+      : `ธาตุ${excessElement} มีเกิน(${excessCount} ตัว) → ไม่ควรเพิ่ม${excessElement} เน้นสมดุลด้วย${strengthenEl}`;
+
+  // ── 3. เครื่องมือรายหมวด (fix ตามหลักซินแส — ปรับตามธาตุเกินของแต่ละดวง) ──
+  const coldList = [`กองทุนรวม/ETF หุ้นปันผล (ธาตุ${strengthenEl})`, `หุ้นเสริมธาตุ${strengthenEl}รายตัว`];
+  coldList.push(
+    excessElement === "น้ำ" ? "เงินฝาก/บอนด์อายุสั้น (เลี่ยงน้ำเพิ่ม — ดวงน้ำเกิน)" : "บอนด์/พันธบัตร (น้ำ)",
+    "ทองคำแท่ง (ทอง)",
+    "REIT/อสังหาฯ (ดิน)",
+  );
   const instruments = {
     emergency: ["เงินฝากออมทรัพย์", "กองทุนตลาดเงิน (K-CASH)", "สลากออมสิน"],
-    cold: [
-      `กองทุนรวม/ETF หุ้นปันผล (ธาตุ${strengthenEl})`,
-      `หุ้นเสริมธาตุ${strengthenEl}รายตัว`,
-      "บอนด์/พันธบัตร (น้ำ)",
-      "ทองคำแท่ง (ทอง)",
-      `REIT/อสังหาฯ (ดิน)`,
-    ],
+    cold: coldList,
     fast: ["หุ้นรายตัวเก็งกำไร", "คริปโต (ไฟ)", "ฟิวเจอร์ส/อนุพันธ์ (เลเวอเรจ)", "เทรดทองออนไลน์"],
   };
 
   // ── 4. สินค้าแนะนำครบทุกหมวด (พร้อมโครง paywall อนาคต — unlock: free/pro/premium) ──
-  const fitOf = (el: string): "good" | "neutral" | "avoid" => ((avoid as string[]).includes(el) ? "avoid" : (invest as string[]).includes(el) ? "good" : "neutral");
+  // fit ตามกำลังดิถี: good=ธาตุเสริม · avoid=ธาตุพิฆาต · drain=ดูดพลัง (ดวงอ่อน: 食伤/财
+  // ระบายกำลังของดิถีอ่อน — อย่าเพิ่ม) · neutral=กลาง
+  const fitOf = (el: string): "good" | "neutral" | "avoid" | "drain" => {
+    if ((avoid as string[]).includes(el)) return "avoid";
+    if ((invest as string[]).includes(el)) return "good";
+    if (band === "weak") return "drain"; // ดิถีอ่อน: ธาตุที่ไม่ใช่คู่ธาตุ/ส่งเสริม = ดูดพลัง
+    return "neutral";
+  };
   const assetsOf = getAssets();
   const mdOf = (ticker: string) => snap?.quotes[ticker];
   const assetRow = (a: (typeof assetsOf)[number], unlock: string) => {
@@ -144,6 +159,9 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
           : `ดิถีสมดุล → ใช้ทั้ง "ถ่ายเท" (ธาตุ ${outputEl}) และ "ธาตุลาภ" (${wealth})`,
     outputElement: outputEl,
     supplementElement: strengthenEl,
+    excessElement,
+    excessCount,
+    excessNote,
   };
   const timeline = buildInvestorTimeline(state, { split5: true }) // ทุก 5 ปี (ต้น/กิ่ง)
     .filter((p) => p.endAge >= 15 && p.startAge <= 80) // วัย 15–80

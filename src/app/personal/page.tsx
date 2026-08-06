@@ -19,13 +19,13 @@ type PersonalData = {
     id: string;
     label: string;
     unlock: "free" | "pro" | "premium";
-    items: Array<{ ticker: string; name: string; market?: string; element: string; fit: "good" | "neutral" | "avoid"; riskTier: string; price: number | null; changePct: number | null; score?: number }>;
+    items: Array<{ ticker: string; name: string; market?: string; element: string; fit: "good" | "neutral" | "avoid" | "drain"; riskTier: string; price: number | null; changePct: number | null; score?: number }>;
   }>;
   auspiciousDays: {
     next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }>;
     month: { monthElement: string | null; caishenDir: string; goodDays: Array<{ date: string; weekday: string }>; avoidDays: Array<{ date: string; weekday: string }>; goodDayCount: number; avoidDayCount: number };
   };
-  principle: { band: string; mode: string; desc: string; outputElement: string; supplementElement: string };
+  principle: { band: string; mode: string; desc: string; outputElement: string; supplementElement: string; excessElement: string; excessCount: number; excessNote: string };
   timeline: Array<{ ageRange: string; verdict: "invest" | "accumulate" | "avoid" | "no-risk"; reaction: string; advice: string }>;
   monthAdvice: { element: string | null; fit: "good" | "avoid" | "neutral"; text: string };
   disclaimer: string;
@@ -155,6 +155,9 @@ export default function PersonalPage() {
             <p style={{ fontSize: 12.5, color: "#9a937f", marginTop: 6 }}>
               {t("personal.output")}: <b style={{ color: ELEMENT_COLOR[elKey(data.principle.outputElement)] ?? "#d4af37" }}>{t(`el.${elKey(data.principle.outputElement)}` as never)}</b> ({t("personal.outputDesc")}) · {t("personal.supplementEl")}: <b style={{ color: "#8fd4a0" }}>{t(`el.${elKey(data.principle.supplementElement)}` as never)}</b>
             </p>
+            <p style={{ fontSize: 12.5, marginTop: 8, padding: 8, borderRadius: 8, background: "#241517", color: "#e0b8b8" }}>
+              ⚠️ <b>{t(`el.${elKey(data.principle.excessElement)}` as never)} {data.principle.excessCount} ตัว = {t("personal.excess")}</b> — {data.principle.excessNote}
+            </p>
           </div>
 
           {/* ── ธาตุในดวง ── */}
@@ -283,7 +286,7 @@ export default function PersonalPage() {
                         <b>{p.ticker}</b>{" "}
                         <span style={{ color: ELEMENT_COLOR[elKey(p.element)] ?? "#d4af37" }}>{t(`el.${elKey(p.element)}` as never)}</span>{" "}
                         <span style={{ fontSize: 11.5 }}>
-                          {p.fit === "good" ? <b style={{ color: "#8fd4a0" }}>✅ ตรงดวง</b> : p.fit === "avoid" ? <b style={{ color: "#d48f8f" }}>⛔ ขัดดวง</b> : <span style={{ color: "#9a937f" }}>🟡 กลาง</span>}
+                          {p.fit === "good" ? <b style={{ color: "#8fd4a0" }}>✅ ตรงดวง</b> : p.fit === "avoid" ? <b style={{ color: "#d48f8f" }}>⛔ ขัดดวง</b> : p.fit === "drain" ? <b style={{ color: "#d4a06a" }}>⚠️ ดูดพลัง</b> : <span style={{ color: "#9a937f" }}>🟡 กลาง</span>}
                         </span>
                         <span style={{ color: "#9a937f", fontSize: 11.5 }}> · {p.name}</span>
                       </span>
