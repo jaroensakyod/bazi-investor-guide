@@ -9,7 +9,7 @@ import { createInterface } from "node:readline";
 import { calculateBaziChart } from "../src/lib/bazi/symbolic-engine";
 import { createInMemoryKnowledgeRepository } from "../src/lib/bazi/in-memory-repository";
 import { detectIntent } from "../src/lib/chat/intents";
-import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, generateReport } from "../src/lib/chat/tools";
+import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, generateReport, getTodayAlmanac } from "../src/lib/chat/tools";
 import { upsertUser, loadUser, isChartStale } from "../src/lib/chat/user-store";
 
 function arg(name: string): string | undefined {
@@ -66,6 +66,15 @@ function answer(intent: ReturnType<typeof detectIntent>, state: Awaited<ReturnTy
       if (!r.ok) return r.error ?? "ไม่พบข้อมูล";
       const d = r.data as { stock: { name: string }; verdict: { score: { verdict: string } } | null; buffett: { score: number } | null };
       return `📑 รายงานย่อ ${d.stock.name}: ${d.verdict ? `ดวง: ${d.verdict.score.verdict} · ` : ""}Buffett ${d.buffett ? `${d.buffett.score}/10` : "ยังไม่มีข้อมูล"}\n(ฉบับเต็ม Phase 3) ${DISCLAIMER}`;
+    }
+    case "daily_fortune": {
+      const r = getTodayAlmanac();
+      if (!r.ok || !r.data) return `ยังไม่มีข้อมูลปฏิทินวันนี้ ${DISCLAIMER}`;
+      const d = r.data as { weekday: string; jianchu: { name: string; meaning: string } | null; colors: Array<{ element: string; colors: string }>; luckyDirection: string; luckyHours: Array<{ code: string; range: string }>; thaiLunar: { phase: string }; specialDays: string[] };
+      const colors = d.colors.map((c) => `${c.element}→${c.colors}`).join(" · ");
+      const hours = d.luckyHours.slice(0, 3).map((h) => h.range).join(", ");
+      const specials = d.specialDays.length ? `\n📌 วันสำคัญ: ${d.specialDays.join(", ")}` : "";
+      return `🗓️ วัน${d.weekday}${d.jianchu ? ` (${d.jianchu.name} — ${d.jianchu.meaning})` : ""} · ${d.thaiLunar.phase}\n🎨 สีมงคล: ${colors}\n🧭 ทิศมงคล: ${d.luckyDirection}\n⏰ ยามดี: ${hours}${specials}\n${DISCLAIMER}`;
     }
     default: {
       return `🙏 สวัสดีครับ/ค่ะ ฉันเป็นผู้ช่วยการลงทุนคู่ดวง ลองถามได้เลย เช่น\n  • "หุ้นวันนี้ตัวไหนเด่น"\n  • "วิเคราะห์ KBANK ให้หน่อย"\n  • "KBANK กับดวงเราเป็นยังไง"\n  • "ทรัมป์ประกาศภาษีมีผลยังไง"\n  • "มี IPO ใหม่ไหม"\n${DISCLAIMER}`;

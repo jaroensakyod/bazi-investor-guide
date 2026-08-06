@@ -13,7 +13,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
 import { detectIntent } from "./intents";
-import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport } from "./tools";
+import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac } from "./tools";
 
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
@@ -51,6 +51,7 @@ export const TOOL_DEFS = [
   { type: "function", function: { name: "getNewsImpact", description: "ข่าว/เหตุการณ์ที่เกี่ยวข้อง (กรองคำถาม เช่น ทรัมป์/ภาษี/ทอง)", parameters: { type: "object", properties: { query: { type: "string" }, market: { type: "string" }, limit: { type: "number" } } } } },
   { type: "function", function: { name: "searchStocks", description: "ค้นหุ้นตามธาตุ/เซกเตอร์/คำ (เช่น 'หุ้นธาตุทองมีตัวไหนบ้าง')", parameters: { type: "object", properties: { element: { type: "string", enum: ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"] }, keyword: { type: "string" }, market: { type: "string" }, limit: { type: "number" } } } } },
   { type: "function", function: { name: "generateReport", description: "รายงานย่อหุ้น (ดวง + พื้นฐาน + Buffett)", parameters: { type: "object", properties: { ticker: { type: "string" } }, required: ["ticker"] } } },
+  { type: "function", function: { name: "getTodayAlmanac", description: "ปฏิทิน/ดวงวันนี้ (สีมงคล ยามมงคล ทิศมงคล ขึ้นแรม ดาวประจำวัน) — ใช้ตอบ 'วันนี้ดวงเป็นยังไง/ฤกษ์/สีมงคล'", parameters: { type: "object", properties: { date: { type: "string", description: "YYYY-MM-DD (ไม่ส่ง = วันนี้)" } } } } },
 ] as const;
 
 export const TOOL_NAMES = TOOL_DEFS.map((t) => t.function.name);
@@ -65,6 +66,7 @@ export function runTool(name: string, args: Record<string, unknown>, state: Calc
     case "getNewsImpact": return getNewsImpact({ query: args.query as string | undefined, market: args.market as string | undefined, limit: args.limit as number | undefined });
     case "searchStocks": return searchStocks({ element: args.element as "ไม้" | "ไฟ" | "ดิน" | "ทอง" | "น้ำ" | undefined, keyword: args.keyword as string | undefined, market: args.market as string | undefined, limit: args.limit as number | undefined });
     case "generateReport": return generateReport(String(args.ticker ?? ""), state);
+    case "getTodayAlmanac": return getTodayAlmanac({ date: args.date as string | undefined });
     default: return { ok: false, data: null, error: `tool ไม่รู้จัก: ${name}`, disclaimer: DISCLAIMER };
   }
 }
@@ -211,6 +213,14 @@ export function fallbackAnswer(userText: string, state: CalculatedStateValue): {
     case "news_impact": {
       const r = getNewsImpact({ query: intent.matched[0], market: intent.market, limit: 3 });
       return { text: r.ok && r.data?.length ? `📰 ข่าวที่เกี่ยวข้อง:\n${r.data.map((n, i) => `${i + 1}. [${n.source}] ${n.title}`).join("\n")}\n${DISCLAIMER}` : `ยังไม่มีข่าวที่เกี่ยวข้อง ${DISCLAIMER}`, intent: intent.intent };
+    }
+    case "daily_fortune": {
+      const r = getTodayAlmanac();
+      if (!r.ok || !r.data) return { text: `ยังไม่มีข้อมูลปฏิทินวันนี้ ${DISCLAIMER}`, intent: intent.intent };
+      const d = r.data as { weekday: string; colors: Array<{ element: string; colors: string }>; luckyHours: Array<{ code: string; range: string }>; luckyDirection: string; jianchu: { name: string; meaning: string } | null };
+      const colors = d.colors.map((c) => `${c.element}→${c.colors}`).join(" · ");
+      const hours = d.luckyHours.slice(0, 3).map((h) => `${h.range}`).join(", ");
+      return { text: `🗓️ วัน${d.weekday}${d.jianchu ? ` (${d.jianchu.name} — ${d.jianchu.meaning})` : ""}\n🎨 สีมงคล: ${colors}\n🧭 ทิศมงคล: ${d.luckyDirection}\n⏰ ยามดี: ${hours}\n${DISCLAIMER}`, intent: intent.intent };
     }
     default:
       return { text: `🙏 ลองถามได้เลย: "หุ้นวันนี้ตัวไหนเด่น" / "วิเคราะห์ KBANK" / "KBANK กับดวงเรา" / "ข่าวทรัมป์" / "มี IPO ไหม"\n${DISCLAIMER}`, intent: intent.intent };

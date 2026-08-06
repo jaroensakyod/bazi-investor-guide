@@ -18,8 +18,8 @@ afterEach(() => {
 });
 
 describe("assistant — LLM + tool calling (Phase 1.5)", () => {
-  it("TOOL_DEFS มีครบ 7 tools", () => {
-    expect(TOOL_NAMES).toEqual(["getTodayMovers", "getUpcomingIPOs", "getBaziVerdict", "getFundamentals", "getNewsImpact", "searchStocks", "generateReport"]);
+  it("TOOL_DEFS มีครบ 8 tools", () => {
+    expect(TOOL_NAMES).toEqual(["getTodayMovers", "getUpcomingIPOs", "getBaziVerdict", "getFundamentals", "getNewsImpact", "searchStocks", "generateReport", "getTodayAlmanac"]);
   });
 
   it("runTool — dispatch ถูก + tool ไม่รู้จัก → ok:false", () => {

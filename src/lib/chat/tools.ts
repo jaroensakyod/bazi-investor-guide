@@ -17,6 +17,7 @@ import { buffettChecks, buffettScore, type BuffettCheck } from "../report/buffet
 import { filterNewsByKeywords, filterNewsByMarket, type NewsItem } from "../market/news";
 import { yahooTicker } from "../market/yahoo";
 import { upcomingIpos, type IpoEntry } from "../investor/ipo";
+import { buildAlmanacDay, checkHour } from "../bazi/almanac/almanac-engine";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";
@@ -136,6 +137,36 @@ export function searchStocks(opts: { element?: ThaiElement; sector?: string; key
   return ok(
     list.slice(0, opts.limit ?? 15).map((s) => ({ ticker: s.ticker, name: s.name, primaryElement: s.primaryElement, tier: s.tier, market: s.market })),
   );
+}
+
+// ── 8. ปฏิทิน/ดวงวันนี้ (almanac — port จาก bazi-sft-dataset) ──
+export function getTodayAlmanac(opts: { date?: string } = {}): ToolResult<object> {
+  const now = new Date();
+  const [y, m, d] = opts.date ? opts.date.split("-").map(Number) : [now.getFullYear(), now.getMonth() + 1, now.getDate()];
+  if (!y || !m || !d) return fail("date ต้องเป็น YYYY-MM-DD");
+  const day = buildAlmanacDay(y, m, d);
+  const hour = checkHour(y, m, d, now.getHours());
+  const badStars = day.dayStars.filter((s) => s.polarity === "bad").slice(0, 3);
+  return ok({
+    date: day.date,
+    yearBE: day.yearBE,
+    weekday: day.weekday,
+    pillars: { day: day.dayPillar.ganzhi, month: day.monthPillar.ganzhi, year: day.yearPillar.ganzhi },
+    jianchu: day.jianchu,
+    deity: day.deity,
+    colors: day.colors.map((c) => ({ element: c.element, colors: c.colors })),
+    luckyDirection: day.luckyDirection,
+    asura: day.asura,
+    luckyHours: day.luckyHours.slice(0, 4),
+    currentHour: hour,
+    gates: day.gates.slice(0, 3),
+    dayStars: day.dayStars.slice(0, 5),
+    badStars,
+    thaiLunar: day.thaiLunar,
+    specialDays: day.specialDays.map((s) => s.name),
+    solarTerm: day.solarTerm?.name ?? null,
+    monthInfo: { deity: day.monthInfo.deity, caishenDir: day.monthInfo.caishenDir, lapDir: day.monthInfo.lapDir, asuraDir: day.monthInfo.asuraDir },
+  });
 }
 
 // ── 7. รายงาน (ฉบับย่อตอนนี้ — ฉบับเต็ม Phase 3) ──

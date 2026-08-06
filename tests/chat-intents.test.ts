@@ -68,4 +68,10 @@ describe("detectIntent — เข้าใจคำถามไทย (Phase 1.1
     expect(r.intent).toBe("smalltalk");
     expect(r.confidence).toBeLessThan(0.5);
   });
+
+  it("วันนี้ดวง/สีมงคล → daily_fortune (ใหม่ — almanac)", () => {
+    expect(detectIntent("วันนี้ดวงเราเป็นยังไง").intent).toBe("daily_fortune");
+    expect(detectIntent("สีมงคลวันนี้คืออะไร").intent).toBe("daily_fortune");
+    expect(detectIntent("ฤกษ์ยามวันนี้เหมาะทำอะไร").intent).toBe("daily_fortune");
+  });
 });

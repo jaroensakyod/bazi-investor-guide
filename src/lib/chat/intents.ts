@@ -17,6 +17,7 @@ export type Intent =
   | "stock_analysis"
   | "news_impact"
   | "report"
+  | "daily_fortune"
   | "smalltalk";
 
 export type IntentResult = {
@@ -37,6 +38,7 @@ const KW: Record<Exclude<Intent, "smalltalk">, string[]> = {
   stock_analysis: ["วิเคราะห์", "พื้นฐาน", "กำไร", "รายได้", "งบ", "pe", "p/e", "ราคาเป้า", "เป้าหมาย", "buffett", "บัฟเฟตต์", "คุณภาพ", "หนี้", "roa", "roe"],
   news_impact: ["ข่าว", "ทรัมป์", "ภาษี", "เฟด", "fomc", "ขึ้นดอกเบี้ย", "ลดดอกเบี้ย", "ผลกระทบ", "กระทบ", "เหตุการณ์", "น้ำมันขึ้น", "ทองขึ้น", "สงคราม", "เลือกตั้ง", "เงินเฟ้อ"],
   report: ["รายงาน", "สรุปให้", "สรุปหุ้น", "วอร์เรน", "รายงานสถาบัน", "pdf", "เล่ม"],
+  daily_fortune: ["วันนี้ดวง", "ดวงวันนี้", "ฤกษ์", "ยาม", "สีมงคล", "สีถูกโฉลก", "วันนี้เหมาะ", "วันนี้ควร", "วันนี้เลี่ยง", "ทิศมงคล", "ทิศอสูร", "ขึ้นแรม", "วันพระ", "วันธงชัย"],
 };
 
 const GREETING = ["สวัสดี", "hello", "hi", "ทักทาย", "มีไร", "มีอะไร", "ขอบคุณ", "bye", "ลาก่อน", "ช่วยหน่อย"];
@@ -127,9 +129,12 @@ export function detectIntent(text: string): IntentResult {
     return found.length;
   };
 
-  // ลำดับ: verdict (เจาะจงสุด) → analysis (มี ticker) → news → ipo → movers → report
+  // ลำดับ: verdict (เจาะจงสุด) → analysis (มี ticker) → daily_fortune → news → ipo → movers → report
   if (hit(KW.stock_verdict) > 0 && ticker) {
     return { intent: "stock_verdict", ticker, market, confidence: 0.95, matched };
+  }
+  if (hit(KW.daily_fortune) > 0) {
+    return { intent: "daily_fortune", market, confidence: 0.9, matched };
   }
   if (ticker) {
     hit(KW.stock_analysis);
