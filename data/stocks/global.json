@@ -4483,11 +4483,11 @@
       "risingStar": false,
       "listedDate": null,
       "elements": [
-        "ไฟ",
-        "ไม้"
+        "ไม้",
+        "ไฟ"
       ],
-      "primaryElement": "ไฟ",
-      "elementReason": "ธุรกิจ: การศึกษา กวดวิชา EdTech → ธาตุ ไฟ (map จาก career-business.txt — รอซินแสตรวจ)",
+      "primaryElement": "ไม้",
+      "elementReason": "TAL Education = การศึกษา = ไม้ (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การศึกษา/ศาสนา) — แก้จากไฟตามตารางซินแส",
       "elementSource": "career-business.txt (draft รอตรวจ)",
       "tier": "mid",
       "isHighLiquidity": false,

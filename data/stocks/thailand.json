@@ -3839,11 +3839,11 @@
       "risingStar": false,
       "listedDate": null,
       "elements": [
-        "ไฟ",
-        "ไม้"
+        "ไม้",
+        "ไฟ"
       ],
-      "primaryElement": "ไฟ",
-      "elementReason": "โรงเรียน/การสอน = ไฟ (career-business.txt §ธาตุไฟ); การศึกษา = ไม้ (รอง, decision log)",
+      "primaryElement": "ไม้",
+      "elementReason": "โรงเรียนนานาชาติ = การศึกษา = ไม้ (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การศึกษา/ศาสนา) — แก้จากไฟตามตารางซินแส",
       "elementSource": "career-business.txt + decision-log.md",
       "tier": "mai",
       "isHighLiquidity": false,
@@ -5108,7 +5108,7 @@
         "ดิน"
       ],
       "primaryElement": "น้ำ",
-      "elementReason": "อาหาร = น้ำ (career-business.txt); อาหารสัตว์/ปศุสัตว์ = ดิน (รอง)",
+      "elementReason": "อาหาร = น้ำ (career-business.txt); อาหารสัตว์/ปศุสัตว์ = ดิน (รอง) · ⚠️ อาหารสัตว์ (Source6=ดิน) vs อาหารแปรรูป (น้ำ) — รอซินแส",
       "elementSource": "career-business.txt + decision-log.md + Source4 §5",
       "tier": "SET100",
       "isHighLiquidity": true,

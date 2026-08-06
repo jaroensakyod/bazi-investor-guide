@@ -638,7 +638,7 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ข้าวโพด = พืชผล = ธาตุไม้",
+      "elementReason": "ข้าวโพด = พืชผล = ธาตุไม้ · ⚠️ ข้าวโพด=ไร่ (Source6 ชาวไร่=ดิน) — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "agriculture",
@@ -657,7 +657,7 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ข้าวสาลี = พืชผล = ธาตุไม้",
+      "elementReason": "ข้าวสาลี = พืชผล = ธาตุไม้ · ⚠️ ข้าวสาลี=ไร่ (Source6 ชาวไร่=ดิน) — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "agriculture",
@@ -676,7 +676,7 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ถั่วเหลือง = พืชผล = ธาตุไม้",
+      "elementReason": "ถั่วเหลือง = พืชผล = ธาตุไม้ · ⚠️ ถั่วเหลือง=ไร่ (Source6 ชาวไร่=ดิน) — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "subtype": "agriculture",
@@ -733,7 +733,7 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "น้ำตาล = พืชผล = ธาตุไม้",
+      "elementReason": "น้ำตาล = พืชผล = ธาตุไม้ · ⚠️ อ้อย/น้ำตาล=ไร่ (Source6 ชาวไร่=ดิน) — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
@@ -752,7 +752,7 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ฝ้าย = พืชผล = ธาตุไม้",
+      "elementReason": "ฝ้าย = พืชผล = ธาตุไม้ · ⚠️ ฝ้าย=ไร่ (Source6 ชาวไร่=ดิน) — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "agriculture",
@@ -1048,10 +1048,10 @@
       "currency": "USD",
       "sector": "ปศุสัตว์",
       "elements": [
-        "ไม้"
+        "ดิน"
       ],
-      "primaryElement": "ไม้",
-      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้นตามตาราง — รอตรวจ)",
+      "primaryElement": "ดิน",
+      "elementReason": "ปศุสัตว์ (โค) = ดิน (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การเกษตร/ปศุสัตว์) — แก้จากไม้ตามตารางซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "livestock",
@@ -1067,10 +1067,10 @@
       "currency": "USD",
       "sector": "ปศุสัตว์",
       "elements": [
-        "ไม้"
+        "ดิน"
       ],
-      "primaryElement": "ไม้",
-      "elementReason": "หมู/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้นตามตาราง — รอตรวจ)",
+      "primaryElement": "ดิน",
+      "elementReason": "ปศุสัตว์ (หมู) = ดิน (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การเกษตร/ปศุสัตว์) — แก้จากไม้ตามตารางซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "livestock",
@@ -1086,10 +1086,10 @@
       "currency": "USD",
       "sector": "ปศุสัตว์",
       "elements": [
-        "ไม้"
+        "ดิน"
       ],
-      "primaryElement": "ไม้",
-      "elementReason": "โค/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้นตามตาราง — รอตรวจ)",
+      "primaryElement": "ดิน",
+      "elementReason": "ปศุสัตว์ (โคขุน) = ดิน (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การเกษตร/ปศุสัตว์) — แก้จากไม้ตามตารางซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "subtype": "livestock",
@@ -2022,10 +2022,10 @@
       "currency": "THB",
       "sector": "ของสะสม",
       "elements": [
-        "ทอง"
+        "ไฟ"
       ],
-      "primaryElement": "ทอง",
-      "elementReason": "ของสะสมมีค่า = ธาตุทอง",
+      "primaryElement": "ไฟ",
+      "elementReason": "กล้องถ่ายรูป = ไฟ (Source6 การงานธุรกิจ §1.1.2 (ซินแส): กล้องถ่ายรูป) — แก้จากทองตามตารางซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "business": "กล้องฟิล์มวินเทจ/สะสม — ลงทุนโดยตรง สภาพคล่องต่ำ ต้องศึกษาตลาด/ทำเล เหมาะถือระยะยาว",

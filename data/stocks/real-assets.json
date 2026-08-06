@@ -156,10 +156,10 @@
       "currency": "THB",
       "sector": "ปศุสัตว์",
       "elements": [
-        "ไม้"
+        "ดิน"
       ],
-      "primaryElement": "ไม้",
-      "elementReason": "ปศุสัตว์ (หมู/ไก่/โค) = ธาตุไม้ (ตัดสินใจเบื้องต้น — รอตรวจ)",
+      "primaryElement": "ดิน",
+      "elementReason": "ฟาร์มปศุสัตว์ (หมู/ไก่/โค) = ดิน (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การเกษตร/ปศุสัตว์) — แก้จากไม้ตามตารางซินแส",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "medium",
       "subtype": "livestock",
@@ -259,7 +259,7 @@
         "ทอง"
       ],
       "primaryElement": "ทอง",
-      "elementReason": "พระเครื่อง/วัตถุมงคล = ของมีค่า/โลหะ = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
+      "elementReason": "พระเครื่อง/วัตถุมงคล = ของมีค่า/โลหะ = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ) · ⚠️ พระเครื่อง=ความเชื่อ (Source6 ไฟ) vs โลหะ (ทอง) — รอซินแส",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "risky",
       "subtype": "collectible",
@@ -296,10 +296,10 @@
       "currency": "USD",
       "sector": "ของสะสม",
       "elements": [
-        "ทอง"
+        "ไม้"
       ],
-      "primaryElement": "ทอง",
-      "elementReason": "งานศิลปะ = ของมีค่า/สะสม = ธาตุทอง (ตัดสินใจเบื้องต้น — รอตรวจ)",
+      "primaryElement": "ไม้",
+      "elementReason": "งานศิลปะ/จิตรกร = ไม้ (Source6 การงานธุรกิจ §1.1.2 (ซินแส): ศิลปะ จิตรกร) — แก้จากทองตามตารางซินแส",
       "elementSource": "รอซินแส (decision-log)",
       "riskTier": "risky",
       "subtype": "collectible",
@@ -453,7 +453,7 @@
         "ดิน"
       ],
       "primaryElement": "ดิน",
-      "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน",
+      "elementReason": "อสังหาริมทรัพย์ = ที่ดิน/สิ่งปลูกสร้าง = ธาตุดิน · ⚠️ โรงแรม Source6=น้ำ (บริการ) แต่เป็นอสังหา=ดิน — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "status": "draft",
@@ -504,10 +504,10 @@
       "currency": "THB",
       "sector": "ปศุสัตว์",
       "elements": [
-        "ไม้"
+        "ดิน"
       ],
-      "primaryElement": "ไม้",
-      "elementReason": "ไก่ไข่/ปศุสัตว์ = ธาตุไม้ (ตัดสินใจเบื้องต้น — รอตรวจ)",
+      "primaryElement": "ดิน",
+      "elementReason": "ฟาร์มไก่ไข่ = ดิน (Source6 การงานธุรกิจ §1.1.2 (ซินแส): การเกษตร/ปศุสัตว์) — แก้จากไม้ตามตารางซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "status": "draft",
@@ -543,7 +543,7 @@
         "ไม้"
       ],
       "primaryElement": "ไม้",
-      "elementReason": "ข้าว = พืชผล = ธาตุไม้",
+      "elementReason": "ข้าว = พืชผล = ธาตุไม้ · ⚠️ นาข้าว=ชาวนา (Source6 ชาวนา=ดิน) — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "medium",
       "status": "draft",
@@ -597,7 +597,7 @@
         "ทอง"
       ],
       "primaryElement": "ทอง",
-      "elementReason": "ไวน์/วิสกี้สะสม = ของมีค่า = ธาตุทอง",
+      "elementReason": "ไวน์/วิสกี้สะสม = ของมีค่า = ธาตุทอง · ⚠️ ไวน์=เครื่องดื่ม (Source6 น้ำ) vs ของสะสม — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "status": "draft",
@@ -615,7 +615,7 @@
         "ทอง"
       ],
       "primaryElement": "ทอง",
-      "elementReason": "แสตมป์สะสม = ของมีค่า = ธาตุทอง",
+      "elementReason": "แสตมป์สะสม = ของมีค่า = ธาตุทอง · ⚠️ แสตมป์=สิ่งพิมพ์ (Source6 ไม้) vs ของสะสม — รอซินแส",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "status": "draft",
@@ -648,10 +648,10 @@
       "currency": "THB",
       "sector": "อัญมณี",
       "elements": [
-        "ทอง"
+        "ดิน"
       ],
-      "primaryElement": "ทอง",
-      "elementReason": "หยก/หินมีค่า = ของมีค่า = ธาตุทอง",
+      "primaryElement": "ดิน",
+      "elementReason": "หยก = แร่ธาตุ = ดิน (Source6 การงานธุรกิจ §1.1.2 (ซินแส): แร่ธาตุ) — เทียบ เพชร=ทอง (รอซินแสยืนยัน)",
       "elementSource": "career-business.txt / data-spec §2.3",
       "riskTier": "risky",
       "status": "draft",

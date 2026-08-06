@@ -91,6 +91,7 @@ npm run typecheck && npm run lint && npm test   # 128 เทสต์
 **เปลี่ยนเครื่องใหม่**: `npm install` (node 20+) · ข้อมูลทั้งหมด commit ใน repo แล้ว (cache/ราคา/ข่าว/IPO) — ไม่ต้องพึ่ง network · ไม่มี secret ใน repo (LLM key ใส่ `.env` ตอน Phase 1+) · อ่าน `UPDATE.md` + `.hermes/plans/2026-08-05_ai-investor-chat.md` + `KNOWN-ISSUES.md` ก่อน
 
 ### 🧾 คิวถามซินแส (decision-log — รวบรวมถามรอบเดียว)
+- [ ] **ธาตุคลุมเครือ (กำกับ ⚠️ ใน elementReason แล้ว — ดูจาก export CSV)**: ไร่นา (ข้าว/ข้าวโพด/ข้าวสาลี/ถั่วเหลือง/ฝ้าย/น้ำตาล — Source6 ชาวไร่=ดิน vs สวน=ไม้) · โรงแรม (Source6=น้ำ แต่เป็นอสังหา=ดิน) · ไวน์ (เครื่องดื่ม=น้ำ vs สะสม) · แสตมป์ (สิ่งพิมพ์=ไม้ vs สะสม) · พระเครื่อง (ความเชื่อ=ไฟ vs โลหะ=ทอง) · หยก (แร่ธาตุ=ดิน vs เพชร=ทอง) · อาหารสัตว์ GFPT · ICT FPT · กล้อง Canon/Nikon · สัตว์น้ำ/ไข่มุก
 - [ ] ธาตุ: ปศุสัตว์(หมู/ไก่/โค) · พระเครื่อง · สลากออมสิน · คาร์บอนเครดิต · งานศิลปะ
 - [ ] ทิศ→ธาตุตลาด **15 ตลาดใหม่**: TW/SG/ID/MY/PH · GB/DE/FR/CH · PK/SA/BR · MX/TR/ZA (ตอนนี้ verdict รายตัวใช้ธาตุธุรกิจ — ธาตุตลาดใช้เฉพาะบท 8 ภาพรวมประเทศ)
 - [ ] review ธาตุหุ้นไทย 129 ตัว (CSV รอส่ง — `npx tsx scripts/review-checklist.ts export`)
