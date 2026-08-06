@@ -65,14 +65,20 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(d.principle.supplementElement).toBe("ไฟ");
     expect(d.principle.outputElement).toBeTruthy();
     expect(d.principle.desc).toContain("เสริม");
-    // ไทม์ไลน์: วัย 15–80 (7 ช่วง) มีคำแนะนำ
-    expect(d.timeline.length).toBeGreaterThanOrEqual(5);
+    // ไทม์ไลน์: ทุก 5 ปี วัย 15–80 (≥10 ช่วง) มีคำแนะนำ + ช่วงละ 5 ปี
+    expect(d.timeline.length).toBeGreaterThanOrEqual(10);
     expect(d.timeline[0].ageRange).toContain("15");
-    expect(d.timeline[d.timeline.length - 1].ageRange).toContain("75");
+    expect(d.timeline[d.timeline.length - 1].ageRange).toContain("80");
     for (const ph of d.timeline) {
       expect(ph.ageRange).toBeTruthy();
       expect(["invest", "accumulate", "avoid", "no-risk"]).toContain(ph.verdict);
       expect(ph.advice.length).toBeGreaterThan(10);
+    }
+    // ทุกช่วงยาว 5 ปีพอดี (15–19, 20–24, ...)
+    for (let i = 0; i < d.timeline.length - 1; i += 1) {
+      const cur = Number(d.timeline[i].ageRange.split("–")[0]);
+      const next = Number(d.timeline[i + 1].ageRange.split("–")[0]);
+      expect(next - cur).toBe(5);
     }
     // ธาตุเดือน: fit + ข้อความ
     expect(["good", "avoid", "neutral"]).toContain(d.monthAdvice.fit);

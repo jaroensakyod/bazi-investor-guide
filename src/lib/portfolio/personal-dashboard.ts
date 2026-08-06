@@ -145,7 +145,7 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     outputElement: outputEl,
     supplementElement: strengthenEl,
   };
-  const timeline = buildInvestorTimeline(state)
+  const timeline = buildInvestorTimeline(state, { split5: true }) // ทุก 5 ปี (ต้น/กิ่ง)
     .filter((p) => p.endAge >= 15 && p.startAge <= 80) // วัย 15–80
     .map((p) => ({ ageRange: p.ageRange, verdict: p.verdict, reaction: p.reaction, advice: p.advice }));
   const monthEl = month.monthElement;

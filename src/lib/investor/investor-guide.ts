@@ -208,25 +208,20 @@ export function resolveInvestorPersona(state: CalculatedStateValue): InvestorPer
 // ───────── 4. ไทม์ไลน์วัยจรทั้งชีวิต ─────────
 
 /** วัยจรแต่ละช่วง → verdict ลงทุน/เก็บ/เลี่ยง (Source4 §6 + 12 เชี่ยงแซธาตุลาภ) */
-export function buildInvestorTimeline(state: CalculatedStateValue): InvestorPhase[] {
+export function buildInvestorTimeline(state: CalculatedStateValue, opts?: { split5?: boolean }): InvestorPhase[] {
+  const split5 = opts?.split5 ?? false;
   const band = getEngineStrengthBand(state);
   const weak = band === "weak" || band === "very-weak";
   const wealth = wealthElementTh(state);
   const goodRoles = weak ? ["คู่ธาตุ", "ธาตุส่งเสริม"] : ["ธาตุถ่ายเท", "ธาตุลาภ"];
 
-  return state.daYun.map((entry) => {
-    const stemRole = resolveDaYunReaction(state, entry.stem, "stem");
-    const branchRole = resolveDaYunReaction(state, entry.branch, "branch");
-    const role = goodRoles.includes(stemRole) || goodRoles.includes(branchRole)
-      ? (goodRoles.includes(stemRole) ? stemRole : branchRole)
-      : (goodRoles.includes(stemRole) ? stemRole : branchRole);
-
+  // สร้าง phase 1 ช่วง (10 ปี หรือ 5 ปี) จากบทบาทธาตุต้น/ธาตุกิ่งของวัยจร
+  const phaseOf = (entry: (typeof state.daYun)[number], role: string, start: number, end: number): InvestorPhase => {
     // เชี่ยงแซของธาตุลาภในวัยนี้ (ใช้กิ่งวัยจรเทียบดิถี → stage)
     const wealthQi = resolveDisplayTwelveQiStage(state.dayMaster, entry.branch) ?? "";
     const wealthQiGood = WEALTH_QI_GOOD_FOR_INVEST.includes(wealthQi);
     const wealthQiBad = wealthQi === "ซี่" || wealthQi === "เจ๊าะ";
-
-    const isGood = goodRoles.includes(stemRole) || goodRoles.includes(branchRole);
+    const isGood = goodRoles.includes(role);
     let verdict: InvestorPhase["verdict"];
     let advice: string;
 
@@ -235,19 +230,19 @@ export function buildInvestorTimeline(state: CalculatedStateValue): InvestorPhas
       advice = `ธาตุลาภ (${wealth}) อยู่ในเชี่ยงแซ ${wealthQi} ⚠️ ห้ามเสี่ยง งดลงทุนก้อน เก็บเงินสด/กันสำรอง`;
     } else if (isGood && wealthQiGood) {
       verdict = "invest";
-      advice = `วัยจร${stemRole}/${branchRole} หนุน + ธาตุลาภเชี่ยงแซ ${wealthQi} → เหมาะลงทุน ริเริ่มก่อเกิดลาภ`;
+      advice = `วัยจร${role} หนุน + ธาตุลาภเชี่ยงแซ ${wealthQi} → เหมาะลงทุน ริเริ่มก่อเกิดลาภ`;
     } else if (isGood) {
       verdict = "accumulate";
-      advice = `วัยจร${stemRole}/${branchRole} ดี แต่เชี่ยงแซธาตุลาภ ${wealthQi} กลาง → เก็บสะสม DCA ไม่เสี่ยงก้อน`;
+      advice = `วัยจร${role} ดี แต่เชี่ยงแซธาตุลาภ ${wealthQi} กลาง → เก็บสะสม DCA ไม่เสี่ยงก้อน`;
     } else {
       verdict = "avoid";
-      advice = `วัยจร${stemRole}/${branchRole} ไม่หนุน → หลีกเลี่ยงการเสี่ยง เน้นถือเงินสด/กันสำรอง`;
+      advice = `วัยจร${role} ไม่หนุน → หลีกเลี่ยงการเสี่ยง เน้นถือเงินสด/กันสำรอง`;
     }
 
     return {
-      ageRange: `${entry.startAge}–${entry.endAge}`,
-      startAge: entry.startAge,
-      endAge: entry.endAge,
+      ageRange: `${start}–${end}`,
+      startAge: start,
+      endAge: end,
       stem: entry.stem,
       branch: entry.branch,
       reaction: role,
@@ -255,6 +250,17 @@ export function buildInvestorTimeline(state: CalculatedStateValue): InvestorPhas
       verdict,
       advice,
     };
+  };
+
+  return state.daYun.flatMap((entry) => {
+    const stemRole = resolveDaYunReaction(state, entry.stem, "stem");
+    const branchRole = resolveDaYunReaction(state, entry.branch, "branch");
+    if (split5) {
+      // แยก 10 ปี → 2 ช่วง 5 ปี: ครึ่งแรก = ธาตุต้น (ปีก้าน) · ครึ่งหลัง = ธาตุกิ่ง
+      return [phaseOf(entry, stemRole, entry.startAge, entry.startAge + 4), phaseOf(entry, branchRole, entry.startAge + 5, entry.endAge)];
+    }
+    const role = goodRoles.includes(stemRole) || goodRoles.includes(branchRole) ? (goodRoles.includes(stemRole) ? stemRole : branchRole) : (goodRoles.includes(stemRole) ? stemRole : branchRole);
+    return [phaseOf(entry, role, entry.startAge, entry.endAge)];
   });
 }
 
