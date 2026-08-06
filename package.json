@@ -11,19 +11,27 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "build": "tsc --noEmit",
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "api": "tsx scripts/api-server.ts --port 8787",
     "smoke": "tsx scripts/smoke-engine.ts"
   },
   "dependencies": {
     "lunar-javascript": "^1.7.7",
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "^22",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
     "tsx": "^4.21.0",
     "typescript": "^5",
-    "vitest": "^4.1.4",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.3"
+    "vitest": "^4.1.4"
   }
 }

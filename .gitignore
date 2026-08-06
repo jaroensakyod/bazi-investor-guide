@@ -11,3 +11,5 @@ data/stocks/.yahoo-cache.json
 .hermes-tmp.*/
 data/users/
 data/usage.jsonl
+.next/
+npm-debug.log*
