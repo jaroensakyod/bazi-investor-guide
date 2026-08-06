@@ -56,10 +56,10 @@ export default function StocksPage() {
     return () => clearTimeout(h);
   }, [load]);
 
-  async function showDetail(ticker: string) {
+  async function showDetail(ticker: string, market: string) {
     setLoadingDetail(true);
     setError("");
-    const r = await get<StockDetail>(`/api/stock?ticker=${encodeURIComponent(ticker)}`);
+    const r = await get<StockDetail>(`/api/stock?ticker=${encodeURIComponent(ticker)}&market=${encodeURIComponent(market)}`);
     setLoadingDetail(false);
     if (r.ok) setDetail(r.data);
     else setError(r.error);
@@ -152,7 +152,7 @@ export default function StocksPage() {
             </thead>
             <tbody>
               {(data?.stocks ?? []).map((s) => (
-                <tr key={s.ticker} onClick={() => showDetail(s.ticker)} style={{ cursor: "pointer" }}>
+                <tr key={`${s.market}:${s.ticker}`} onClick={() => showDetail(s.ticker, s.market)} style={{ cursor: "pointer" }}>
                   <td>
                     <b>{s.ticker}</b>
                   </td>

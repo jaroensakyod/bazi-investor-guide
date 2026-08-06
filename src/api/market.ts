@@ -157,8 +157,12 @@ export function handleStocks(q: Query): ApiResponse<unknown> {
 /** รายละเอียดหุ้นตัวเดียว (ประกอบกิจการอะไร + ราคาวันนี้ + พื้นฐานถ้ามี) */
 export function handleStockDetail(q: Query): ApiResponse<unknown> {
   const ticker = String(q.ticker ?? "").toUpperCase();
-  const stock = getAllStocks().find((s) => s.ticker.toUpperCase() === ticker);
-  if (!stock) return err(`ไม่พบหุ้น ${ticker} ในคลัง`);
+  const market = q.market ? String(q.market) : "";
+  // ticker ซ้ำข้ามตลาดได้ (FPT@HOSE vs FPT@SET) → ต้อง match ticker+market (หรือตัวแรกถ้าไม่ระบุ)
+  const stock = market
+    ? getAllStocks().find((s) => s.ticker.toUpperCase() === ticker && s.market === market)
+    : getAllStocks().find((s) => s.ticker.toUpperCase() === ticker);
+  if (!stock) return err(`ไม่พบหุ้น ${ticker}${market ? ` (${market})` : ""} ในคลัง`);
   const snap = loadSnapshot();
   const yt = yahooTicker(stock.ticker, stock.market) ?? "";
   const md = snap?.quotes[yt];
