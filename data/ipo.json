@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-05",
-  "count": 8,
+  "updatedAt": "2026-08-06",
+  "count": 9,
   "entries": [
     {
       "ticker": "ATTO",
@@ -13,7 +13,7 @@
       "priceRange": "$17.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-05T08:32:58.364Z"
     },
     {
@@ -27,7 +27,7 @@
       "priceRange": "$10.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-05T08:32:58.364Z"
     },
     {
@@ -42,7 +42,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-05T08:32:58.364Z"
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
     },
     {
       "ticker": "OCLT",
@@ -56,7 +56,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-05T08:32:58.364Z"
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
     },
     {
       "ticker": "VOGX",
@@ -65,12 +65,12 @@
       "market": "NYSE/NASDAQ",
       "country": "US",
       "exchange": "NASDAQ",
-      "ipoDate": "2026-08-06",
+      "ipoDate": "2026-08-07",
       "priceRange": "$11.00 - $13.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-05T08:32:58.364Z"
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
     },
     {
       "ticker": "BLSM",
@@ -84,7 +84,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-05T08:32:58.364Z"
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
     },
     {
       "ticker": "LTGO",
@@ -98,7 +98,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-05T08:32:58.364Z"
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
     },
     {
       "ticker": "FOIL",
@@ -112,7 +112,21 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-05T08:32:58.364Z"
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
+    },
+    {
+      "ticker": "PHAX",
+      "name": "Phalanx Acquisition Corp I",
+      "nameEn": "Phalanx Acquisition Corp I",
+      "market": "NYSE/NASDAQ",
+      "country": "US",
+      "exchange": "NASDAQ",
+      "ipoDate": "2026-08-06",
+      "priceRange": "$10.00",
+      "currency": "USD",
+      "source": "StockAnalysis IPO calendar",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-06T11:59:57.116Z"
     }
   ]
 }
