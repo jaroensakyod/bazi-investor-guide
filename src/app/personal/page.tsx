@@ -15,6 +15,10 @@ type PersonalData = {
   instruments: { emergency: string[]; cold: string[]; fast: string[] };
   topStocks: Array<{ ticker: string; name: string; market: string; price: number | null; changePct: number | null; score: number }>;
   topAssets: Array<{ ticker: string; name: string; type: string; riskTier: string; price: number | null; changePct: number | null }>;
+  auspiciousDays: {
+    next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }>;
+    month: { monthElement: string | null; caishenDir: string; goodDays: Array<{ date: string; weekday: string }>; avoidDays: Array<{ date: string; weekday: string }>; goodDayCount: number; avoidDayCount: number };
+  };
   disclaimer: string;
 };
 
@@ -156,6 +160,41 @@ export default function PersonalPage() {
                 <b>🛟 {t("personal.emergency")}:</b> {data.instruments.emergency.join(" · ")}
               </p>
             </div>
+          </div>
+
+          {/* ── วันมงคล/วันระวัง ── */}
+          <div className="card">
+            <h2>📅 {t("personal.days")}</h2>
+            <p style={{ fontSize: 12.5, color: "#9a937f", marginBottom: 8 }}>
+              {t("personal.daysSub")} · {t("personal.legend")}:
+              <span style={{ color: "#8fd4a0" }}> {t("personal.good")}</span> · <span style={{ color: "#9a937f" }}>{t("personal.neutral")}</span> · <span style={{ color: "#d48f8f" }}>{t("personal.avoidDay")}</span>
+            </p>
+            <div style={{ display: "flex", gap: 6, overflowX: "auto", paddingBottom: 6 }}>
+              {data.auspiciousDays.next14.map((x) => (
+                <div
+                  key={x.date}
+                  style={{
+                    minWidth: 74,
+                    padding: "8px 6px",
+                    borderRadius: 8,
+                    textAlign: "center",
+                    fontSize: 12,
+                    background: x.fit === "good" ? "#15231a" : x.fit === "avoid" ? "#241517" : "#191c24",
+                    border: `1px solid ${x.fit === "good" ? "#3e7d4e" : x.fit === "avoid" ? "#7d3e3e" : "#2a2e39"}`,
+                  }}
+                >
+                  <div style={{ fontSize: 11, color: "#9a937f" }}>{x.date.slice(5)}</div>
+                  <div style={{ fontWeight: 700 }}>{x.weekday}</div>
+                  <div style={{ color: ELEMENT_COLOR[elKey(x.dayElement ?? "")] ?? "#d4af37" }}>{x.dayElement ? t(`el.${elKey(x.dayElement)}` as never) : "-"}</div>
+                  <div style={{ fontSize: 10.5, color: x.fit === "good" ? "#8fd4a0" : x.fit === "avoid" ? "#d48f8f" : "#9a937f" }}>
+                    {x.fit === "good" ? "✅ มงคล" : x.fit === "avoid" ? "⛔ ระวัง" : "—"}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize: 12.5, color: "#9a937f", marginTop: 10 }}>
+              🗓️ {t("personal.monthFit")}: {t("personal.monthElement")} <b>{data.auspiciousDays.month.monthElement ? t(`el.${elKey(data.auspiciousDays.month.monthElement)}` as never) : "-"}</b> · {t("personal.caishen")} <b>{data.auspiciousDays.month.caishenDir}</b> · ✅ {t("personal.good")} {data.auspiciousDays.month.goodDayCount} {t("personal.daysWord")} ({data.auspiciousDays.month.goodDays.map((g) => g.date.slice(8)).join(", ")}) · ⛔ {t("personal.avoidDay")} {data.auspiciousDays.month.avoidDayCount} {t("personal.daysWord")} ({data.auspiciousDays.month.avoidDays.map((g) => g.date.slice(8)).join(", ")})
+            </p>
           </div>
 
           {/* ── หุ้นเสริมธาตุ + สินทรัพย์เด่น ── */}

@@ -41,4 +41,17 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(Object.keys(d.trading.split)).toEqual(["emergency", "cold", "fast"]);
     expect(d.trading.split.emergency + d.trading.split.cold + d.trading.split.fast).toBe(100);
   });
+
+  it("วันมงคล/วันระวัง — 14 วัน + เดือนนี้ + วันไม้=ระวัง (ธาตุพิฆาต)", () => {
+    const d = buildPersonalDashboard(state);
+    expect(d.auspiciousDays.next14.length).toBe(14);
+    // วันธาตุไม้ (avoid ของดวงนี้) ต้องเป็น avoid
+    const woodDay = d.auspiciousDays.next14.find((x) => x.dayElement === "ไม้");
+    if (woodDay) expect(woodDay.fit).toBe("avoid");
+    // เดือนนี้: มีวันดี + วันเลี่ยง + ธาตุเดือน
+    expect(d.auspiciousDays.month.goodDayCount).toBeGreaterThan(0);
+    expect(d.auspiciousDays.month.avoidDayCount).toBeGreaterThan(0);
+    expect(d.auspiciousDays.month.monthElement).toBeTruthy();
+    expect(d.auspiciousDays.month.caishenDir ?? "").toBeTruthy();
+  });
 });

@@ -7,6 +7,8 @@ import { getAllStocks } from "../investor/stock-database";
 import { loadFundamentalsCache } from "../market/fundamentals";
 import { buffettChecks, buffettScore } from "../report/buffett-checks";
 import { getAssets } from "../assets/asset-universe";
+import { dayFitForUser, monthInvestFit, dayElementOf } from "../fortune/investment-days";
+import { buildAlmanacDay } from "../bazi/almanac/almanac-engine";
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
 
 const ELEMENT_ORDER = ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"] as const;
@@ -91,6 +93,18 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     })
     .slice(0, 5);
 
+  // ── 6. วันมงคล/วันระวัง (ของใครของมัน — เทียบธาตุวันกับดวง) ──
+  const next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }> = [];
+  for (let i = 0; i < 14; i += 1) {
+    const d = new Date();
+    d.setDate(d.getDate() + i);
+    const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const al = buildAlmanacDay(d.getFullYear(), d.getMonth() + 1, d.getDate());
+    next14.push({ date: iso, weekday: al.weekday, dayElement: dayElementOf(iso), fit: dayFitForUser(state, iso) });
+  }
+  const now = new Date();
+  const month = monthInvestFit(state, now.getFullYear(), now.getMonth() + 1);
+
   return {
     persona: {
       element: persona.element,
@@ -111,6 +125,18 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     instruments,
     topStocks,
     topAssets,
+    auspiciousDays: {
+      next14,
+      month: {
+        monthElement: month.monthElement,
+        yearElement: month.yearElement,
+        caishenDir: month.caishenDir,
+        goodDays: month.goodDays,
+        avoidDays: month.avoidDays,
+        goodDayCount: month.goodDayCount,
+        avoidDayCount: month.avoidDayCount,
+      },
+    },
     disclaimer: "บทวิเคราะห์อ้างอิงจากดวง (ดิถี/ธาตุ) + ตลาด + แนวโน้ม — ไม่ใช่คำแนะนำการลงทุน",
   };
 }
