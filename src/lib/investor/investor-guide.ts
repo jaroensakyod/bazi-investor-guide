@@ -128,6 +128,13 @@ export function scoreStock(state: CalculatedStateValue, stock: {
 }): StockScore {
   const { invest, avoid } = resolveInvestElements(state);
   const wealth = wealthElementTh(state);
+  const band = getEngineStrengthBand(state);
+  const weak = band === "weak" || band === "very-weak";
+  // ธาตุเกินในดวง (มากสุด) — ดิถีอ่อน: อย่าเพิ่มธาตุเกิน (身弱财旺: ลาภเกิน = ดูดพลัง)
+  const counts = (state.elementAnalysis.totalCounts ?? state.elementAnalysis.visibleCounts) as Record<string, number>;
+  const EN2TH: Record<string, string> = { wood: "ไม้", fire: "ไฟ", earth: "ดิน", metal: "ทอง", water: "น้ำ" };
+  const excessElement = Object.entries(counts).sort((a, b) => (b[1] ?? 0) - (a[1] ?? 0))[0]?.[0];
+  const excessTh = EN2TH[excessElement] ?? "";
   let score = 0;
   const reasons: string[] = [];
 
@@ -143,8 +150,17 @@ export function scoreStock(state: CalculatedStateValue, stock: {
     reasons.push(`ธาตุ${stock.primaryElement} = ธาตุที่ควรทำอันดับรอง`);
   }
   if (stock.primaryElement === wealth) {
-    score += 2;
-    reasons.push(`ธาตุ${stock.primaryElement} = ธาตุลาภ (ดาวเงินของดวง)`);
+    if (weak) {
+      score -= 1; // 身弱财旺: ธาตุลาภมีเกินแล้ว — ไล่ลาภ = ดูดพลังดิถีอ่อน
+      reasons.push(`ธาตุ${stock.primaryElement} = ธาตุลาภ แต่ดิถีอ่อน+${stock.primaryElement}เกิน (身弱财旺) ⚠️ อย่าไล่ลาภ ดูดพลัง`);
+    } else {
+      score += 2;
+      reasons.push(`ธาตุ${stock.primaryElement} = ธาตุลาภ (ดาวเงินของดวง)`);
+    }
+  }
+  if (excessTh && stock.primaryElement === excessTh && !invest.includes(stock.primaryElement) && !avoid.includes(stock.primaryElement)) {
+    score -= 1; // ธาตุเกินในดวง — อย่าเพิ่ม (ยกเว้นธาตุที่ดวงต้องการ)
+    reasons.push(`ธาตุ${stock.primaryElement} = มีเกินในดวง (${counts[excessElement]} ตัว) — อย่าเพิ่ม`);
   }
   for (const e of getEngineUsefulElements(state)) {
     if (stock.elements.includes(e) && e !== stock.primaryElement) {

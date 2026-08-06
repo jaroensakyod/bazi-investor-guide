@@ -84,7 +84,10 @@ const server = createServer(async (req, res) => {
       return send(res, r.ok ? 200 : 400, r);
     }
     if (req.method === "GET" && path === "/api/movers") return send(res, 200, handleMovers(q));
-    if (req.method === "GET" && path === "/api/ipo") return send(res, 200, handleIpo(q));
+    if (req.method === "GET" && path === "/api/ipo") {
+      const r = await handleIpo(q);
+      return send(res, r.ok ? 200 : 400, r);
+    }
     if (req.method === "GET" && path === "/api/news") return send(res, 200, handleNews(q));
     if (req.method === "GET" && path === "/api/almanac") return send(res, 200, handleAlmanac(q));
     if (req.method === "GET" && path === "/api/fortune") {

@@ -30,9 +30,9 @@ type PicksData = {
 const ELMAP: Record<string, string> = { ไม้: "wood", ไฟ: "fire", ดิน: "earth", ทอง: "metal", น้ำ: "water" };
 const ELEMENT_COLOR: Record<string, string> = { wood: "#4a9c6d", fire: "#c2574a", earth: "#b08a3e", metal: "#c9a227", water: "#3e6fb0" };
 const STRATS = [
-  { id: "TH", emoji: "🇹🇭", title: "TH10 — เหนือ SET", sub: "10 หุ้นไทยเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
-  { id: "US", emoji: "🇺🇸", title: "US10 — เหนือ S&P 500", sub: "10 หุ้นสหรัฐเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
-  { id: "MID", emoji: "📈", title: "MID10 — หุ้นกลางไทย", sub: "10 หุ้นขนาดกลางไทย (mid/small) ศักยภาพโตในประเทศ+ภูมิภาค" },
+  { id: "TH", emoji: "🇹🇭", title: "TH30 — เหนือ SET", sub: "30 หุ้นไทยเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
+  { id: "US", emoji: "🇺🇸", title: "US30 — เหนือ S&P 500", sub: "30 หุ้นสหรัฐเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
+  { id: "MID", emoji: "📈", title: "MID30 — หุ้นกลางไทย", sub: "30 หุ้นขนาดกลางไทย (mid/small) ศักยภาพโตในประเทศ+ภูมิภาค" },
 ];
 
 export default function PicksPage() {

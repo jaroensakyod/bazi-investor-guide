@@ -27,9 +27,10 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(water!.count).toBeGreaterThanOrEqual(d.elementBalance[1].count);
     // ต้องเสริมไฟ
     expect(d.strengthen.element).toBe("ไฟ");
-    // สินค้าแนะนำครบทุกหมวด: 10 หมวด + มี unlock tier + หุ้นไทย/ต่างประเทศ/คริปโต
+    // สินค้าแนะนำครบทุกหมวด: 11 หมวด (รวม IPO) + มี unlock tier + หุ้นไทย/ต่างประเทศ/คริปโต
     const cats = d.categories;
-    expect(cats.length).toBe(10);
+    expect(cats.length).toBe(11);
+    expect(cats.some((c) => c.id === "ipo" && c.unlock === "pro")).toBe(true);
     expect(cats.some((c) => c.id === "stocks_th" && c.items.length > 0)).toBe(true);
     expect(cats.some((c) => c.id === "stocks_global" && c.items.length > 0)).toBe(true);
     expect(cats.some((c) => c.id === "crypto" && c.unlock === "premium")).toBe(true);

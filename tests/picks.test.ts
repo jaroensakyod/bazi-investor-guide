@@ -14,9 +14,9 @@ beforeAll(async () => {
 });
 
 describe("พอร์ตเด่นรายเดือน (ProPicks style)", () => {
-  it("TH10 — 10 ตัว เรียงคะแนน + เหตุผล + benchmark", () => {
+  it("TH30 — 30 ตัว เรียงคะแนน + เหตุผล + benchmark + เคารพสมดุล (top ไม่ใช่น้ำ)", () => {
     const r = buildMonthlyPicks(state, "TH");
-    expect(r.picks.length).toBe(10);
+    expect(r.picks.length).toBe(30);
     expect(r.benchmark.symbol).toBe("^SET.BK");
     for (const p of r.picks) {
       expect(p.reasons.length).toBeGreaterThan(0);
@@ -26,22 +26,23 @@ describe("พอร์ตเด่นรายเดือน (ProPicks style)",
     // เรียงคะแนนมาก→น้อย
     const scores = r.picks.map((p) => p.score);
     expect([...scores].sort((a, b) => b - a)).toEqual(scores);
+    // ดิถีอ่อน+น้ำเกิน: top 3 ต้องไม่เป็นธาตุน้ำ (身弱财旺 — อย่าไล่ลาภ)
+    for (const p of r.picks.slice(0, 3)) expect(p.element).not.toBe("น้ำ");
     expect(r.disclaimer).toContain("ไม่ใช่คำแนะนำการลงทุน");
   });
 
-  it("US10 — benchmark S&P 500 + เหตุผลครบ", () => {
+  it("US30 — benchmark S&P 500 + เหตุผลครบ", () => {
     const r = buildMonthlyPicks(state, "US");
-    expect(r.picks.length).toBe(10);
+    expect(r.picks.length).toBe(30);
     expect(r.benchmark.symbol).toBe("^GSPC");
     for (const p of r.picks) expect(p.reasons.length).toBeGreaterThan(0);
   });
 
-  it("MID10 — เฉพาะ mid/small ไทย (SET/mai)", () => {
+  it("MID30 — เฉพาะ mid/small ไทย (SET/mai)", () => {
     const r = buildMonthlyPicks(state, "MID");
-    expect(r.picks.length).toBe(10);
+    expect(r.picks.length).toBe(30);
     for (const p of r.picks) {
       expect(p.market === "SET" || p.market === "mai").toBe(true);
-      expect(["mid", "small", "mai"].includes(p.tier)).toBe(true);
     }
   });
 

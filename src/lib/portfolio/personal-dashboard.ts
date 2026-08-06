@@ -7,6 +7,8 @@ import { getAllStocks } from "../investor/stock-database";
 import { loadFundamentalsCache } from "../market/fundamentals";
 import { buffettChecks, buffettScore } from "../report/buffett-checks";
 import { getAssets } from "../assets/asset-universe";
+import { classifyIpoElement, elementFitForUser, type IpoRow } from "../market/ipo-elements";
+import { readFileSync } from "node:fs";
 import { dayFitForUser, monthInvestFit, dayElementOf } from "../fortune/investment-days";
 import { buildAlmanacDay } from "../bazi/almanac/almanac-engine";
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
@@ -120,6 +122,21 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
   const reitProp = top(assetsOf.filter((a) => (a.type === "reit" || (a.type === "real_asset" && (a.sector ?? "").includes("อสังหา")))).map((a) => assetRow(a, "free")), 3);
   const emergency = top(assetsOf.filter((a) => a.type === "deposit" || a.type === "lottery" || a.ticker === "CASH_THB").map((a) => assetRow(a, "free")), 2);
   const realEstate = top(assetsOf.filter((a) => a.type === "real_asset" && a.primaryElement === "ดิน" && (a.sector ?? "").includes("อสังหา")).map((a) => assetRow(a, "pro")), 3);
+  // IPO ใหม่ที่เหมาะดวง (ธาตุ ∈ invest) — ใช้ classifyIpoElement จากชื่อบริษัท
+  let ipoRows: IpoRow[] = [];
+  try {
+    const ipoDb = JSON.parse(readFileSync("data/ipo.json", "utf8")) as { entries?: IpoRow[] };
+    ipoRows = ipoDb.entries ?? [];
+  } catch {
+    ipoRows = [];
+  }
+  const ipoList = ipoRows
+    .filter((e) => (invest as string[]).includes(classifyIpoElement(e).element))
+    .map((e) => {
+      const { element, reason } = classifyIpoElement(e);
+      return { ticker: e.ticker, name: e.name, element, fit: elementFitForUser(state, element), riskTier: "ipo", price: null, changePct: null, unlock: "pro", ipoDate: e.ipoDate ?? "" };
+    })
+    .slice(0, 3);
 
   const categories = [
     { id: "stocks_th", label: "หุ้นไทยเสริมธาตุ", unlock: "pro", items: sTh },
@@ -132,6 +149,7 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     { id: "emergency", label: "เงินฝาก/สลาก (ฉุกเฉิน)", unlock: "free", items: emergency },
     { id: "real_estate", label: "ที่ดิน/อสังหาจริง", unlock: "pro", items: realEstate },
     { id: "crypto", label: "คริปโต (เก็งกำไร — ดิถีอ่อนระวัง)", unlock: "premium", items: crypto },
+    { id: "ipo", label: "IPO ใหม่ (เหมาะดวง)", unlock: "pro", items: ipoList },
   ];
 
   // ── 6. วันมงคล/วันระวัง (ของใครของมัน — เทียบธาตุวันกับดวง) ──

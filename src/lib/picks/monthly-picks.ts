@@ -32,12 +32,12 @@ export type MonthlyPick = {
 };
 
 const MARKET_SCOPES: Record<PickMarket, { markets: string[]; tiers?: string[]; benchmark: string; benchmarkName: string; label: string; desc: string }> = {
-  TH: { markets: ["SET", "mai"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "TH10 — เหนือ SET", desc: "10 หุ้นไทยเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
-  US: { markets: ["NYSE", "NASDAQ", "NYSE/NASDAQ"], benchmark: "^GSPC", benchmarkName: "S&P 500", label: "US10 — เหนือ S&P 500", desc: "10 หุ้นสหรัฐเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
-  MID: { markets: ["SET", "mai"], tiers: ["mid", "small"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "MID10 — หุ้นกลางไทย", desc: "10 หุ้นขนาดกลางไทยเด่น (mid/small) — โตในประเทศ+ภูมิภาค" },
+  TH: { markets: ["SET", "mai"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "TH30 — เหนือ SET", desc: "30 หุ้นไทยเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
+  US: { markets: ["NYSE", "NASDAQ", "NYSE/NASDAQ"], benchmark: "^GSPC", benchmarkName: "S&P 500", label: "US30 — เหนือ S&P 500", desc: "30 หุ้นสหรัฐเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
+  MID: { markets: ["SET", "mai"], tiers: ["mid", "small"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "MID30 — หุ้นกลางไทย", desc: "30 หุ้นขนาดกลางไทยเด่น (mid/small) — โตในประเทศ+ภูมิภาค" },
 };
 
-export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarket = "TH", limit = 10) {
+export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarket = "TH", limit = 30) {
   const cfg = MARKET_SCOPES[market];
   const snap = loadSnapshot();
   const fundCache = loadFundamentalsCache();
@@ -89,5 +89,5 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
 
 /** ใช้ใน API + แชท */
 export function picksForUser(state: CalculatedStateValue, market?: PickMarket, limit?: number) {
-  return buildMonthlyPicks(state, market ?? "TH", limit ?? 10);
+  return buildMonthlyPicks(state, market ?? "TH", limit ?? 30);
 }

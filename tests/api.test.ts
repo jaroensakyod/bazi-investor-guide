@@ -54,9 +54,14 @@ describe("API layer — backend ที่ทดสอบได้ (web/LINE เ�
     if (r.ok) expect((r.data as unknown[]).length).toBeGreaterThan(0);
   });
 
-  it("GET /api/ipo — IPO จริง", () => {
-    const r = handleIpo({ limit: "5" });
+  it("GET /api/ipo — IPO จริง + ธาตุ", async () => {
+    const r = await handleIpo({ limit: "5" });
     expect(r.ok).toBe(true);
+    if (r.ok) {
+      const d = r.data as { list: Array<{ ticker: string; element: string }> };
+      expect(d.list.length).toBeGreaterThan(0);
+      for (const e of d.list) expect(e.element).toBeTruthy();
+    }
   });
 
   it("GET /api/news — ข่าวจริง", () => {
