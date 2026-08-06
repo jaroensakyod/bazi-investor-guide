@@ -115,12 +115,21 @@ async function main() {
       process.stdin.on("end", () => res(buf.trim()));
     });
   }
+  const useLlm = arg("--llm") !== undefined;
   if (stdin) {
     for (const line of stdin.split("\n")) {
       if (!line.trim()) continue;
       const intent = detectIntent(line);
+      let text: string;
+      if (useLlm) {
+        const { chatWithAssistant } = await import("../src/lib/chat/assistant");
+        const r = await chatWithAssistant(line, state);
+        text = r.usedLlm ? r.text : `[โหมด fallback — LLM ไม่ว่าง]\n${r.text}`;
+      } else {
+        text = answer(intent, state);
+      }
       console.log(`🧑 คุณ: ${line}`);
-      console.log(`🤖 บอท: ${answer(intent, state)}\n`);
+      console.log(`🤖 บอท: ${text}\n`);
     }
     return;
   }
@@ -130,8 +139,14 @@ async function main() {
   console.log("พิมพ์คำถาม (exit เพื่อออก):");
   rl.on("line", async (line) => {
     if (line.trim().toLowerCase() === "exit") return rl.close();
-    const intent = detectIntent(line);
-    console.log(`🤖 ${answer(intent, state)}\n`);
+    if (useLlm) {
+      const { chatWithAssistant } = await import("../src/lib/chat/assistant");
+      const r = await chatWithAssistant(line, state);
+      console.log(`🤖 ${r.usedLlm ? r.text : `[โหมด fallback — LLM ไม่ว่าง]\n${r.text}`}\n`);
+    } else {
+      const intent = detectIntent(line);
+      console.log(`🤖 ${answer(intent, state)}\n`);
+    }
   });
 }
 
