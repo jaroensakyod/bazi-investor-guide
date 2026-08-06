@@ -57,4 +57,23 @@ describe("แดชบอร์ดแนะนำส่วนตัว (ดิ�
     expect(d.auspiciousDays.month.monthElement).toBeTruthy();
     expect(d.auspiciousDays.month.caishenDir ?? "").toBeTruthy();
   });
+
+  it("หลักการแข็ง-ถ่ายเท/อ่อน-เสริม + ไทม์ไลน์ + ธาตุเดือน", () => {
+    const d = buildPersonalDashboard(state);
+    // ดิถีอ่อน → หลัก 'เสริม' + เสริมไฟ
+    expect(d.principle.mode).toBe("เสริม");
+    expect(d.principle.supplementElement).toBe("ไฟ");
+    expect(d.principle.outputElement).toBeTruthy();
+    expect(d.principle.desc).toContain("เสริม");
+    // ไทม์ไลน์: 4 ช่วง มีคำแนะนำ
+    expect(d.timeline.length).toBe(4);
+    for (const ph of d.timeline) {
+      expect(ph.ageRange).toBeTruthy();
+      expect(["invest", "accumulate", "avoid", "no-risk"]).toContain(ph.verdict);
+      expect(ph.advice.length).toBeGreaterThan(10);
+    }
+    // ธาตุเดือน: fit + ข้อความ
+    expect(["good", "avoid", "neutral"]).toContain(d.monthAdvice.fit);
+    expect(d.monthAdvice.text.length).toBeGreaterThan(10);
+  });
 });

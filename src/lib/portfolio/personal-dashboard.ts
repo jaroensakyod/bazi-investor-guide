@@ -1,6 +1,6 @@
 import { calculateBaziChart } from "../bazi/symbolic-engine";
 import { createInMemoryKnowledgeRepository } from "../bazi/in-memory-repository";
-import { resolveInvestorPersona, resolveInvestElements, wealthElementTh, elementBusinessHint } from "../investor/investor-guide";
+import { resolveInvestorPersona, resolveInvestElements, wealthElementTh, elementBusinessHint, outputElementTh, buildInvestorTimeline } from "../investor/investor-guide";
 import { loadSnapshot } from "../market/market-data";
 import { yahooTicker } from "../market/yahoo";
 import { getAllStocks } from "../investor/stock-database";
@@ -131,6 +131,36 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
   const now = new Date();
   const month = monthInvestFit(state, now.getFullYear(), now.getMonth() + 1);
 
+  // ── 7. หลักการแข็ง-อ่อน (ซินแส: แข็งเกิน→ถ่ายเท เอาออก · อ่อนขาด→เสริม) + ไทม์ไลน์ + ธาตุเดือน ──
+  const outputEl = outputElementTh(state);
+  const principle = {
+    band,
+    mode: band === "weak" ? "เสริม" : band === "strong" ? "ถ่ายเท" : "สมดุล",
+    desc:
+      band === "weak"
+        ? `ดิถีอ่อน/ธาตุขาด → ใช้หลัก "เสริม" (คู่ธาตุ + ธาตุส่งเสริม) — เสริมธาตุ ${strengthenEl}`
+        : band === "strong"
+          ? `ดิถีแข็งเกินไป → ใช้หลัก "ถ่ายเท" (ธาตุระบายออก เอาออก) — ถ่ายเทธาตุ ${outputEl}`
+          : `ดิถีสมดุล → ใช้ทั้ง "ถ่ายเท" (ธาตุ ${outputEl}) และ "ธาตุลาภ" (${wealth})`,
+    outputElement: outputEl,
+    supplementElement: strengthenEl,
+  };
+  const timeline = buildInvestorTimeline(state)
+    .slice(0, 4)
+    .map((p) => ({ ageRange: p.ageRange, verdict: p.verdict, reaction: p.reaction, advice: p.advice }));
+  const monthEl = month.monthElement;
+  const monthFit = monthEl ? ((avoid as string[]).includes(monthEl) ? "avoid" : (invest as string[]).includes(monthEl) ? "good" : "neutral") : "neutral";
+  const monthAdvice = {
+    element: monthEl,
+    fit: monthFit,
+    text:
+      monthFit === "good"
+        ? `เดือนนี้ธาตุ${monthEl} = ตรงดวง → เหมาะเริ่มลงทุน/ทำตามแผน`
+        : monthFit === "avoid"
+          ? `เดือนนี้ธาตุ${monthEl} = ขัดดวง ⚠️ → เลี่ยงเสี่ยง เน้นสะสมเงินเย็น อย่าลงทุนก้อน`
+          : `เดือนนี้ธาตุ${monthEl} = กลาง → ค่อยๆ สะสม ไม่เร่ง`,
+  };
+
   return {
     persona: {
       element: persona.element,
@@ -150,6 +180,9 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     trading,
     instruments,
     categories,
+    principle,
+    timeline,
+    monthAdvice,
     auspiciousDays: {
       next14,
       month: {

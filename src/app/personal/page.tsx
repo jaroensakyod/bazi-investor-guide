@@ -25,6 +25,9 @@ type PersonalData = {
     next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }>;
     month: { monthElement: string | null; caishenDir: string; goodDays: Array<{ date: string; weekday: string }>; avoidDays: Array<{ date: string; weekday: string }>; goodDayCount: number; avoidDayCount: number };
   };
+  principle: { band: string; mode: string; desc: string; outputElement: string; supplementElement: string };
+  timeline: Array<{ ageRange: string; verdict: "invest" | "accumulate" | "avoid" | "no-risk"; reaction: string; advice: string }>;
+  monthAdvice: { element: string | null; fit: "good" | "avoid" | "neutral"; text: string };
   disclaimer: string;
 };
 
@@ -140,6 +143,20 @@ export default function PersonalPage() {
             </p>
           </div>
 
+          {/* ── หลักการแข็ง-ถ่ายเท / อ่อน-เสริม (ซินแส) ── */}
+          <div className="card" style={{ borderColor: "#8fd4a0" }}>
+            <h2>🧭 {t("personal.principle")}</h2>
+            <p style={{ fontSize: 12.5, color: "#9a937f" }}>
+              {t("personal.principleRule")}: <b style={{ color: "#d48f8f" }}>{t("personal.strong")} → {t("personal.drain")}</b> · <b style={{ color: "#8fd4a0" }}>{t("personal.weak")} → {t("personal.supplement")}</b>
+            </p>
+            <p style={{ fontSize: 13.5, marginTop: 6, background: "#15231a", padding: 10, borderRadius: 8 }}>
+              {data.principle.band === "weak" ? "🌱" : data.principle.band === "strong" ? "🔥" : "⚖️"} <b>{t("personal.yourCase")}: {data.principle.mode}</b> — {data.principle.desc}
+            </p>
+            <p style={{ fontSize: 12.5, color: "#9a937f", marginTop: 6 }}>
+              {t("personal.output")}: <b style={{ color: ELEMENT_COLOR[elKey(data.principle.outputElement)] ?? "#d4af37" }}>{t(`el.${elKey(data.principle.outputElement)}` as never)}</b> ({t("personal.outputDesc")}) · {t("personal.supplementEl")}: <b style={{ color: "#8fd4a0" }}>{t(`el.${elKey(data.principle.supplementElement)}` as never)}</b>
+            </p>
+          </div>
+
           {/* ── ธาตุในดวง ── */}
           <div className="card">
             <h2>⚖️ {t("personal.elements")}</h2>
@@ -226,6 +243,23 @@ export default function PersonalPage() {
             <p style={{ fontSize: 12.5, color: "#9a937f", marginTop: 10 }}>
               🗓️ {t("personal.monthFit")}: {t("personal.monthElement")} <b>{data.auspiciousDays.month.monthElement ? t(`el.${elKey(data.auspiciousDays.month.monthElement)}` as never) : "-"}</b> · {t("personal.caishen")} <b>{data.auspiciousDays.month.caishenDir}</b> · ✅ {t("personal.good")} {data.auspiciousDays.month.goodDayCount} {t("personal.daysWord")} ({data.auspiciousDays.month.goodDays.map((g) => g.date.slice(8)).join(", ")}) · ⛔ {t("personal.avoidDay")} {data.auspiciousDays.month.avoidDayCount} {t("personal.daysWord")} ({data.auspiciousDays.month.avoidDays.map((g) => g.date.slice(8)).join(", ")})
             </p>
+            <p style={{ fontSize: 13, marginTop: 6, padding: 8, borderRadius: 8, background: data.monthAdvice.fit === "avoid" ? "#241517" : data.monthAdvice.fit === "good" ? "#15231a" : "#191c24" }}>
+              📌 {data.monthAdvice.text}
+            </p>
+          </div>
+
+          {/* ── ไทม์ไลน์วัยจร ── */}
+          <div className="card">
+            <h2>📈 {t("personal.timeline")}</h2>
+            {data.timeline.map((ph, i) => (
+              <div key={i} style={{ display: "flex", gap: 10, padding: "6px 0", borderBottom: "1px solid #1d2029", fontSize: 13 }}>
+                <span style={{ minWidth: 64, fontWeight: 700, color: "#d4af37" }}>{ph.ageRange}</span>
+                <span style={{ minWidth: 90 }}>
+                  {ph.verdict === "invest" ? <b style={{ color: "#8fd4a0" }}>✅ ลงทุนได้</b> : ph.verdict === "accumulate" ? <b style={{ color: "#d4af37" }}>🪙 สะสม</b> : ph.verdict === "no-risk" ? <b style={{ color: "#d48f8f" }}>🛑 ห้ามเสี่ยง</b> : <b style={{ color: "#d48f8f" }}>⛔ เลี่ยง</b>}
+                </span>
+                <span style={{ color: "#9a937f", flex: 1 }}>{ph.advice}</span>
+              </div>
+            ))}
           </div>
 
           {/* ── สินค้าแนะนำครบทุกหมวด ── */}
