@@ -82,6 +82,11 @@ npm run typecheck && npm run lint && npm test   # 128 เทสต์
 | 17 | **Cleanup token-match ลบ description ถูกทิ้ง 18 ตัว** (ชื่อไทยไม่มีคำอังกฤษ → false positive: BBL/CPALL/SCB/TOP/PLANB/JBH ฯลฯ) | **ห้ามใช้ token-overlap กับชื่อไทย** — กู้จาก `git show HEAD:<file>` แล้ว merge เฉพาะตัวที่ลบผิด · ตรวจด้วยสายตาเสมอ | — |
 | 18 | **Numeric ticker ชนข้ามตลาด** — `7203`@TADAWUL (Elm ซาอุฯ) ชน `7203.T` (Toyota) ด้วย findQuote startsWith | findQuote ใช้ `yahooTicker()` เป็น key ตรง (ไม่ใช้ startsWith) + dedupe 68 ตัวซ้ำ (700.HK vs 0700.HK) | `market/movers.ts` |
 | 19 | **BMV class share**: `GMEXICO/B` → Yahoo ต้อง `GMEXICO.B.MX` (มีจุดแล้วแต่ต้องเติม suffix ต่อ) | yahooTicker: ถ้า mkt=BMV และไม่จบ .MX → เติม .MX (ก่อน logic "มีจุด = คืนทันที") | `market/yahoo.ts` |
+| 20 | **Windows taskkill ฆ่า tsx wrapper ไม่ตาย — node child ค้างพอร์ต** (EADDRINUSE รอบถัดไป) | ฆ่า PID ที่ `netstat -ano \| grep :8787 \| grep LISTEN` คืนมา (ไม่ใช่ PID จาก background process) | — |
+| 21 | **Next dev server ค้างหลัง hot-reload นาน** (LISTEN แต่ไม่ตอบ / jest-worker crash → ทุก /api/* คืน HTML error = "backend ไม่พร้อม") | `taskkill /PID <PID :3000> /F` + `npm run dev` ใหม่ — API server (8787) ปกติไม่ต้องแตะ · ถ้า user เจอ "backend ไม่พร้อม" ให้ตรวจ BFF ก่อนเสมอ | scripts/api-server.ts |
+| 22 | **curl ส่งภาษาไทยจาก Windows shell encoding เพี้ยน** → intent กลายเป็น smalltalk | เขียน JSON ลงไฟล์ (UTF-8) แล้ว `curl --data @file` | — |
+| 23 | **ฟอนต์ไทย PDF (Leelawadee) ไม่มี glyph emoji/→/⚠️+FE0F** → ขึ้นกล่อง \u0000 | clean(): กรอง `\u{1F000}-\u{1FFFF}` + `\uFE00-\uFE0F` + `\u2000-\u2BFF` ทุกจุดที่เขียน (line/row/footer — ไม่ใช่แค่บางสาย) | `api/report-pdf.ts` |
+| 24 | **fundamentals cache เก็บค่าเป็น % อยู่แล้ว** (roe=8.8 หมายถึง 8.8%) | อย่าคูณ 100 อีก — แสดง `${v}%` ตรงๆ | `report/full-report.ts` |
 
 **เปลี่ยนเครื่องใหม่**: `npm install` (node 20+) · ข้อมูลทั้งหมด commit ใน repo แล้ว (cache/ราคา/ข่าว/IPO) — ไม่ต้องพึ่ง network · ไม่มี secret ใน repo (LLM key ใส่ `.env` ตอน Phase 1+) · อ่าน `UPDATE.md` + `.hermes/plans/2026-08-05_ai-investor-chat.md` + `KNOWN-ISSUES.md` ก่อน
 
