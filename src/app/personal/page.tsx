@@ -36,6 +36,57 @@ const TRADING_STYLE = {
   yes: { color: "#8fd4a0", emoji: "✅" },
 };
 
+/** โดนัท SVG — แสดง % ภายในวงกลม (บนแต่ละชิ้น) */
+function Donut({ split }: { split: { cold: number; fast: number; emergency: number } }) {
+  const t = useT();
+  const R = 70;
+  const C = 2 * Math.PI * R; // เส้นรอบวง
+  const segs = [
+    { pct: split.cold, color: "#3e6fb0", label: t("personal.cold") },
+    { pct: split.fast, color: "#c9a227", label: t("personal.fast") },
+    { pct: split.emergency, color: "#4a9c6d", label: t("personal.emergency") },
+  ];
+  let acc = 0;
+  return (
+    <svg viewBox="0 0 200 200" width={190} height={190} style={{ flexShrink: 0 }}>
+      {segs.map((s) => {
+        const dash = `${(s.pct / 100) * C} ${C}`;
+        const startAngle = -90 + acc * 3.6;
+        const midAngle = startAngle + (s.pct * 3.6) / 2;
+        const rad = (midAngle * Math.PI) / 180;
+        const tx = 100 + R * Math.cos(rad);
+        const ty = 100 + R * Math.sin(rad);
+        acc += s.pct;
+        return (
+          <g key={s.label}>
+            <circle
+              cx={100}
+              cy={100}
+              r={R}
+              fill="none"
+              stroke={s.color}
+              strokeWidth={30}
+              strokeDasharray={dash}
+              transform={`rotate(${startAngle} 100 100)`}
+            />
+            {s.pct >= 8 && (
+              <text x={tx} y={ty} fill="#fff" fontSize={13} fontWeight={700} textAnchor="middle" dominantBaseline="central">
+                {s.pct}%
+              </text>
+            )}
+          </g>
+        );
+      })}
+      <text x={100} y={100} fill="#cfcabe" fontSize={10.5} textAnchor="middle" dominantBaseline="central">
+        จัดสรร
+      </text>
+      <text x={100} y={113} fill="#9a937f" fontSize={9.5} textAnchor="middle" dominantBaseline="central">
+        ตามกำลังดวง
+      </text>
+    </svg>
+  );
+}
+
 export default function PersonalPage() {
   const t = useT();
   const [data, setData] = useState<PersonalData | null>(null);
@@ -116,33 +167,7 @@ export default function PersonalPage() {
           <div className="card">
             <h2>🥧 {t("personal.split")}</h2>
             <div style={{ display: "flex", gap: 24, alignItems: "center", flexWrap: "wrap" }}>
-              <div
-                style={{
-                  width: 170,
-                  height: 170,
-                  borderRadius: "50%",
-                  background: `conic-gradient(#3e6fb0 0% ${data.trading.split.cold}%, #c9a227 ${data.trading.split.cold}% ${data.trading.split.cold + data.trading.split.fast}%, #4a9c6d ${data.trading.split.cold + data.trading.split.fast}% 100%)`,
-                  position: "relative",
-                  flexShrink: 0,
-                }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 38,
-                    borderRadius: "50%",
-                    background: "#14161d",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    textAlign: "center",
-                    fontSize: 12,
-                    color: "#cfcabe",
-                  }}
-                >
-                  {data.trading.allowed === "no" ? "เงินเย็น\n70%" : "จัดสรร\nตามกำลังดวง"}
-                </div>
-              </div>
+              <Donut split={data.trading.split} />
               <div style={{ fontSize: 13, flex: 1, minWidth: 220 }}>
                 <p>
                   <span style={{ color: "#3e6fb0" }}>■</span> <b>{t("personal.cold")}</b> {data.trading.split.cold}% — {t("personal.coldDesc")}
