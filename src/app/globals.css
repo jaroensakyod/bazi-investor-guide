@@ -177,6 +177,11 @@ label {
 .chip:hover {
   border-color: #d4af37;
 }
+.chip.on {
+  border-color: #d4af37;
+  background: #2a2410;
+  color: #d4af37;
+}
 
 /* landing */
 .hero {

@@ -19,6 +19,7 @@ export type Intent =
   | "report"
   | "daily_fortune"
   | "fortune_invest"
+  | "assets"
   | "advice_request"
   | "smalltalk";
 
@@ -42,6 +43,7 @@ const KW: Record<Exclude<Intent, "smalltalk">, string[]> = {
   report: ["รายงาน", "สรุปให้", "สรุปหุ้น", "วอร์เรน", "รายงานสถาบัน", "pdf", "เล่ม"],
   daily_fortune: ["วันนี้ดวง", "ดวงวันนี้", "ฤกษ์", "ยาม", "สีมงคล", "สีถูกโฉลก", "วันนี้เหมาะ", "วันนี้ควร", "วันนี้เลี่ยง", "ทิศมงคล", "ทิศอสูร", "ขึ้นแรม", "วันพระ", "วันธงชัย"],
   fortune_invest: ["ดวงกับหุ้น", "หุ้นกับดวง", "เดือนนี้ลงทุน", "เดือนนี้ซื้อ", "สัปดาห์นี้ลงทุน", "สัปดาห์นี้ซื้อ", "เดือนนี้", "สัปดาห์นี้", "ipo ตัวไหน", "ipo ที่เหมาะ", "ซื้อที่ดิน", "ซื้อหุ้นวันไหน", "ซื้อวันไหน", "วันไหนดี", "ฤกษ์ซื้อ", "ธาตุวันนี้", "วันนี้ธาตุ"],
+  assets: ["ทองคำ", "ทอง", "เงิน", "btc", "bitcoin", "คริปโต", "ethereum", "eth", "น้ำมัน", "ก๊าซธรรมชาติ", "ที่ดิน", "อสังหา", "คอนโด", "สวนยาง", "ปาล์ม", "ผลไม้", "สลาก", "พระเครื่อง", "กองทุน", "พันธบัตร", "หุ้นกู้", "เงินฝาก", "สินทรัพย์", "จัดสรร", "พอร์ต", "reit", "ประกัน", "ฟาร์ม", "เพชร", "นาฬิกา", "งานศิลปะ"],
   advice_request: ["แนะนำ", "แนะนำหน่อย", "ควรซื้อ", "ซื้อเลย", "ซื้อตัวไหน", "ซื้อหุ้นตัวไหน", "ควรลงทุน", "ซื้อไหม", "ขายไหม", "ซื้อดีไหม", "ซื้อหรือไม่", "ช่วยตัดสินใจ"],
 };
 
@@ -143,15 +145,18 @@ export function detectIntent(text: string): IntentResult {
   if (hit(KW.fortune_invest) > 0) {
     return { intent: "fortune_invest", ticker, market, confidence: 0.85, matched };
   }
+  if (hit(KW.news_impact) > 0) {
+    return { intent: "news_impact", market, confidence: 0.85, matched };
+  }
+  if (hit(KW.assets) > 0) {
+    return { intent: "assets", ticker, market, confidence: 0.8, matched };
+  }
   if (hit(KW.daily_fortune) > 0) {
     return { intent: "daily_fortune", market, confidence: 0.9, matched };
   }
   if (ticker) {
     hit(KW.stock_analysis);
     return { intent: "stock_analysis", ticker, market, confidence: 0.9, matched };
-  }
-  if (hit(KW.news_impact) > 0) {
-    return { intent: "news_impact", market, confidence: 0.85, matched };
   }
   if (hit(KW.upcoming_ipo) > 0) {
     return { intent: "upcoming_ipo", market, confidence: 0.9, matched };

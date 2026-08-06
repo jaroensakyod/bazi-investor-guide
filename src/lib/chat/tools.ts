@@ -22,6 +22,9 @@ import {
   dayElementOf, dayFitForUser, favorElementsToday, stocksForDay, monthInvestFit,
   luckyDaysForAsset, ipoFitForWeek, todayHours, monthPortfolioGuide, COMPLIANCE_NOTE,
 } from "../fortune/investment-days";
+import { getAssets, getAssetsByType } from "../assets/asset-universe";
+import { assetVerdict } from "../assets/asset-verdict";
+import { allocatePortfolio } from "../assets/portfolio";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";
@@ -206,6 +209,51 @@ export function getFortuneInvest(
     hours: todayHours(date),
     compliance: COMPLIANCE_NOTE,
   });
+}
+
+// ── 10. สินทรัพย์นอกหุ้น (ทอง/BTC/ที่ดิน/REIT/กองทุน...) + จัดสรรพอร์ต ──
+export function getAssetVerdicts(
+  state: CalculatedStateValue,
+  opts: { type?: string; limit?: number } = {},
+): ToolResult<object> {
+  const { invest, avoid } = resolveInvestElements(state);
+  const persona = resolveInvestorPersona(state);
+  const snap = loadSnapshot();
+  const all = getAssets().filter((a) => !opts.type || a.type === opts.type);
+  const assets = all
+    .filter((a) => !opts.type || a.type === opts.type)
+    .map((a) => {
+      const v = assetVerdict(a, {
+        usefulElements: invest,
+        avoidElements: avoid,
+        strengthBand: persona.band as "weak" | "balanced" | "strong",
+        changePct: snap?.quotes[a.ticker]?.changePct,
+      });
+      return {
+        ticker: a.ticker,
+        name: a.name,
+        type: a.type,
+        sector: a.sector ?? null,
+        element: a.primaryElement,
+        riskTier: a.riskTier,
+        verdict: v.verdict,
+        score: v.score,
+        reasons: v.reasons.slice(0, 2),
+        capped: v.cappedByStrength ?? false,
+        changePct: snap?.quotes[a.ticker]?.changePct ?? null,
+      };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, opts.limit ?? 30);
+  return ok({ count: all.length, assets, compliance: COMPLIANCE_NOTE });
+}
+
+export function getPortfolioAllocation(state: CalculatedStateValue): ToolResult<object> {
+  const { invest } = resolveInvestElements(state);
+  const persona = resolveInvestorPersona(state);
+  const rows = allocatePortfolio({ usefulElements: invest, strengthBand: persona.band as "weak" | "balanced" | "strong" });
+  const total = rows.reduce((a, r) => a + r.pct, 0);
+  return ok({ rows, total, compliance: COMPLIANCE_NOTE });
 }
 
 // ── 7. รายงาน (ฉบับย่อตอนนี้ — ฉบับเต็ม Phase 3) ──

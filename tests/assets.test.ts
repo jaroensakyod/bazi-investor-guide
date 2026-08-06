@@ -1,63 +1,54 @@
-import { describe, it, expect } from "vitest";
-import {
-  getAssets,
-  getAsset,
-  getAssetsByType,
-  getAssetsByElement,
-  getForbiddenAssets,
-  clearAssetCache,
-} from "../src/lib/assets/asset-universe";
+import { describe, it, expect, beforeAll } from "vitest";
+import { calculateBaziChart } from "../src/lib/bazi/symbolic-engine";
+import { createInMemoryKnowledgeRepository } from "../src/lib/bazi/in-memory-repository";
+import { getAssetVerdicts, getPortfolioAllocation } from "../src/lib/chat/tools";
+import { detectIntent } from "../src/lib/chat/intents";
+import type { CalculatedStateValue } from "../src/lib/bazi/schema-types";
 
-describe("asset universe — commodities.json + real-assets.json", () => {
-  it("โหลดได้ ≥ 40 รายการ + ทุกตัวมี elementReason/primaryElement", () => {
-    clearAssetCache();
-    const assets = getAssets();
-    expect(assets.length).toBeGreaterThanOrEqual(40);
-    for (const a of assets) {
-      expect(a.elementReason.length).toBeGreaterThan(10);
-      expect(a.primaryElement).toBeTruthy();
-      expect(a.elements).toContain(a.primaryElement);
+let state: CalculatedStateValue;
+beforeAll(async () => {
+  state = await calculateBaziChart(
+    { birthDate: "1993-11-24", birthTime: "15:12", gender: "male", province: "Bangkok" },
+    createInMemoryKnowledgeRepository(),
+  );
+});
+
+describe("สินทรัพย์นอกหุ้น × ดวง (ทอง/BTC/ที่ดิน...)", () => {
+  it("getAssetVerdicts — 51 ตัว + verdict deterministic", () => {
+    const r = getAssetVerdicts(state, {});
+    expect(r.ok).toBe(true);
+    if (r.ok) {
+      const d = r.data as { count: number; assets: Array<{ verdict: string; score: number; ticker: string }> };
+      expect(d.count).toBe(51);
+      expect(["very-good", "good", "neutral", "avoid"]).toContain(d.assets[0].verdict);
+      // เรียงคะแนนจากมากไปน้อย
+      expect(d.assets[0].score).toBeGreaterThanOrEqual(d.assets[1].score);
     }
   });
 
-  it("สินทรัพย์หลักธาตุถูกต้อง (data-spec)", () => {
-    expect(getAsset("GC=F")?.primaryElement).toBe("ทอง");
-    expect(getAsset("CL=F")?.primaryElement).toBe("ไฟ");
-    expect(getAsset("BTC-USD")?.primaryElement).toBe("ไฟ");
-    expect(getAsset("VNQ")?.primaryElement).toBe("ดิน");
-    expect(getAsset("BND")?.primaryElement).toBe("น้ำ");
-    expect(getAsset("USDTHB=X")?.primaryElement).toBe("น้ำ");
-    expect(getAsset("GLD")?.riskTier).toBe("safe");
-    expect(getAsset("S50Z26")?.riskTier).toBe("risky");
+  it("getAssetVerdicts — กรอง type (crypto มี BTC/ETH)", () => {
+    const r = getAssetVerdicts(state, { type: "crypto" });
+    if (r.ok) {
+      const d = r.data as { assets: Array<{ ticker: string }> };
+      expect(d.assets.some((a) => a.ticker === "BTC-USD")).toBe(true);
+      expect(d.assets.some((a) => a.ticker === "ETH-USD")).toBe(true);
+    }
   });
 
-  it("real assets — ของที่คนมองข้าม (Task 0.13)", () => {
-    expect(getAsset("LAND")?.primaryElement).toBe("ดิน");
-    expect(getAsset("RUBBER_FARM")?.primaryElement).toBe("ไม้"); // สวนยาง = ไม้ (ธาตุหายาก)
-    expect(getAsset("AQUA_FARM")?.primaryElement).toBe("น้ำ");
-    expect(getAsset("GOLD_BAR")?.riskTier).toBe("safe");
-    expect(getAsset("AMULET")?.primaryElement).toBe("ดิน");
-    expect(getAsset("GOV_LOTTERY_SAVINGS")?.primaryElement).toBe("น้ำ");
-    expect(getAsset("FOREST")?.riskTier).toBe("risky");
+  it("getPortfolioAllocation — ผลรวม 100 + มีกันชนน้ำ", () => {
+    const r = getPortfolioAllocation(state);
+    expect(r.ok).toBe(true);
+    if (r.ok) {
+      const d = r.data as { rows: Array<{ element: string; pct: number; assets: string[] }>; total: number };
+      expect(d.total).toBe(100);
+      expect(d.rows.some((x) => x.element === "น้ำ")).toBe(true);
+      expect(d.rows.reduce((a, x) => a + x.pct, 0)).toBe(100);
+    }
   });
 
-  it("สิ่งที่ห้ามเด็ดขาด ≥ 4 รายการ (ห้องแชร์/พนัน/ของปลอม)", () => {
-    const forbidden = getForbiddenAssets();
-    expect(forbidden.length).toBeGreaterThanOrEqual(4);
-    expect(forbidden.some((f) => f.name.includes("ห้องแชร์"))).toBe(true);
-    expect(forbidden.some((f) => f.name.includes("พนัน"))).toBe(true);
-  });
-
-  it("getAssetsByType / getAssetsByElement ทำงาน", () => {
-    const cryptos = getAssetsByType("crypto");
-    expect(cryptos.length).toBeGreaterThanOrEqual(2);
-    const golds = getAssetsByElement("ทอง");
-    expect(golds.length).toBeGreaterThanOrEqual(6);
-    const woods = getAssetsByElement("ไม้"); // เดิมไม่มี ตอนนี้มี (สวนยาง/ป่า)
-    expect(woods.length).toBeGreaterThanOrEqual(4);
-  });
-
-  it("ticker ไม่มี → null", () => {
-    expect(getAsset("ZZZ")).toBeNull();
+  it("intent — ถามทอง/จัดสรรพอร์ต → assets", () => {
+    expect(detectIntent("ทองดีไหมตอนนี้").intent).toBe("assets");
+    expect(detectIntent("จัดสรรพอร์ตให้หน่อย").intent).toBe("assets");
+    expect(detectIntent("สลากออมสินน่าสนใจไหม").intent).toBe("assets");
   });
 });

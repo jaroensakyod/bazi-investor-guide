@@ -62,4 +62,24 @@ export async function handleReport(q: Query): Promise<ApiResponse<unknown>> {
   return res.ok ? ok(res.data) : err(res.error ?? "report error");
 }
 
+/** สินทรัพย์นอกหุ้น × ดวง (ต้องมี profile) */
+export async function handleAssets(q: Query): Promise<ApiResponse<unknown>> {
+  const profile = loadUser(q.userId ?? "guest");
+  if (!profile) return err("ยังไม่มีโปรไฟล์ — ลงทะเบียนก่อน (POST /api/profile)");
+  const state = await stateOfProfile(profile);
+  const { getAssetVerdicts } = await import("../lib/chat/tools");
+  const res = getAssetVerdicts(state, { type: q.type, limit: Number(q.limit ?? 51) });
+  return res.ok ? ok(res.data) : err(res.error ?? "assets error");
+}
+
+/** จัดสรรพอร์ตตามดวง (ต้องมี profile) */
+export async function handlePortfolio(q: Query): Promise<ApiResponse<unknown>> {
+  const profile = loadUser(q.userId ?? "guest");
+  if (!profile) return err("ยังไม่มีโปรไฟล์ — ลงทะเบียนก่อน (POST /api/profile)");
+  const state = await stateOfProfile(profile);
+  const { getPortfolioAllocation } = await import("../lib/chat/tools");
+  const res = getPortfolioAllocation(state);
+  return res.ok ? ok(res.data) : err(res.error ?? "portfolio error");
+}
+
 export type { UserProfile };

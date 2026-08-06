@@ -13,7 +13,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
 import { detectIntent } from "./intents";
-import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac, getFortuneInvest } from "./tools";
+import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac, getFortuneInvest, getAssetVerdicts, getPortfolioAllocation } from "./tools";
 import { COMPLIANCE_NOTE } from "../fortune/investment-days";
 import { t, type Locale } from "../i18n/dictionary";
 
@@ -55,6 +55,8 @@ export const TOOL_DEFS = [
   { type: "function", function: { name: "generateReport", description: "รายงานย่อหุ้น (ดวง + พื้นฐาน + Buffett)", parameters: { type: "object", properties: { ticker: { type: "string" } }, required: ["ticker"] } } },
   { type: "function", function: { name: "getTodayAlmanac", description: "ปฏิทิน/ดวงวันนี้ (สีมงคล ยามมงคล ทิศมงคล ขึ้นแรม ดาวประจำวัน) — ใช้ตอบ 'วันนี้ดวงเป็นยังไง/ฤกษ์/สีมงคล'", parameters: { type: "object", properties: { date: { type: "string", description: "YYYY-MM-DD (ไม่ส่ง = วันนี้)" } } } } },
   { type: "function", function: { name: "getFortuneInvest", description: "ดวง×การลงทุน: scope=day (ธาตุวันนี้+หุ้นที่ตรงธาตุ) / week (IPO ช่วงนี้ เหมาะกับดวงไหม — ธาตุธุรกิจ+ธาตุวันเกิด) / month (ธาตุเดือน+ทิศเงิน+วันดีทั้งเดือน + asset=land วันเหมาะซื้อที่ดิน)", parameters: { type: "object", properties: { scope: { type: "string", enum: ["day", "week", "month"] }, asset: { type: "string", enum: ["stocks", "land", "ipo"] }, date: { type: "string" }, year: { type: "number" }, month: { type: "number" } } } } },
+  { type: "function", function: { name: "getAssetVerdicts", description: "สินทรัพย์นอกหุ้น (ทอง/BTC/ที่ดิน/REIT/กองทุน/สลาก...) เทียบดวง — ใช้ตอบ 'ทอง/BTC/ที่ดิน/อสังหา/สลาก ดีไหม'", parameters: { type: "object", properties: { type: { type: "string", enum: ["commodity", "crypto", "etf", "reit", "bond", "deposit", "forex", "fund", "derivative", "real_asset", "lottery", "insurance"] }, limit: { type: "number" } } } } },
+  { type: "function", function: { name: "getPortfolioAllocation", description: "จัดสรรพอร์ตตามดวง (ธาตุหลัก/รอง + กันชนปลอดภัย + ส่วนเก็งกำไร) — ใช้ตอบ 'จัดสรรพอร์ต/ลงทุนอะไรดี'", parameters: { type: "object", properties: {} } } },
 ] as const;
 
 export const TOOL_NAMES = TOOL_DEFS.map((t) => t.function.name);
@@ -71,6 +73,8 @@ export function runTool(name: string, args: Record<string, unknown>, state: Calc
     case "generateReport": return generateReport(String(args.ticker ?? ""), state);
     case "getTodayAlmanac": return getTodayAlmanac({ date: args.date as string | undefined });
     case "getFortuneInvest": return getFortuneInvest({ scope: args.scope as "day" | "week" | "month" | undefined, asset: args.asset as "stocks" | "land" | "ipo" | undefined, date: args.date as string | undefined, year: args.year as number | undefined, month: args.month as number | undefined }, state);
+    case "getAssetVerdicts": return getAssetVerdicts(state, { type: args.type as string | undefined, limit: args.limit as number | undefined });
+    case "getPortfolioAllocation": return getPortfolioAllocation(state);
     default: return { ok: false, data: null, error: `tool ไม่รู้จัก: ${name}`, disclaimer: DISCLAIMER };
   }
 }
@@ -280,6 +284,16 @@ export function fallbackAnswer(userText: string, state: CalculatedStateValue, lo
     }
     case "advice_request":
       return { text: t(locale, "tpl.advice"), intent: intent.intent };
+    case "assets": {
+      const lower = intent.matched.join(" ");
+      const typeMap: Record<string, string> = { ทอง: "commodity", คริปโต: "crypto", btc: "crypto", ethereum: "crypto", eth: "crypto", bitcoin: "crypto", reit: "reit", พันธบัตร: "bond", หุ้นกู้: "bond", เงินฝาก: "deposit", กองทุน: "fund", สลาก: "lottery", ประกัน: "insurance" };
+      const type = Object.entries(typeMap).find(([k]) => lower.includes(k))?.[1];
+      const r = getAssetVerdicts(state, { type, limit: 8 });
+      if (!r.ok || !r.data) return { text: `${t(locale, "tpl.nodata")} ${DIS}`, intent: intent.intent };
+      const d = r.data as { assets: Array<{ ticker: string; name: string; element: string; verdict: string; score: number; changePct: number | null }> };
+      const lines = d.assets.slice(0, 6).map((a) => `${a.ticker} ${a.name} — ${a.verdict} (${a.score})${a.changePct != null ? ` ${a.changePct >= 0 ? "+" : ""}${a.changePct}%` : ""}`);
+      return { text: `${t(locale, "tpl.assets.header")}\n${lines.join("\n")}\n${DIS}`, intent: intent.intent };
+    }
     default:
       return { text: `${t(locale, "tpl.greet")}\n${DIS}`, intent: intent.intent };
   }
