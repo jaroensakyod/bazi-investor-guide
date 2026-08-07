@@ -41,3 +41,6 @@ export function getLlmConfig(): LlmConfig {
 }
 
 export const ROOT_DIR = ROOT;
+
+/** รหัสเจ้าของ (owner) — ใช้สร้างสินค้า PDF / งาน admin ภายใน · เปลี่ยนใน .env (OWNER_PASS) */
+export const OWNER_PASS = process.env.OWNER_PASS ?? "bazi2569";

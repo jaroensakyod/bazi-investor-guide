@@ -14,6 +14,7 @@ import { classifyStockTier, type TierInput } from "../lib/investor/stock-tiers";
 import { elementFitForUser } from "../lib/market/ipo-elements";
 import { ok, err, type ApiResponse, type Query } from "./types";
 import { stateOfProfile } from "./chat";
+import type { CalculatedStateValue } from "../lib/bazi/schema-types";
 import { execFile } from "node:child_process";
 import path from "node:path";
 import { ROOT_DIR } from "./config";
@@ -349,6 +350,53 @@ export async function handleFullReportPdf(q: Query): Promise<{ ok: true; data: B
   if (!profile) return { ok: false, error: "ไม่มีโปรไฟล์ — ต้องบันทึกวันเกิดก่อน" };
   try {
     const state = await stateOfProfile(profile);
+    const { buildFullReportPdf } = await import("./report-pdf-full");
+    return { ok: true, data: await buildFullReportPdf(state) };
+  } catch (e) {
+    return { ok: false, error: `PDF error: ${(e as Error).message}` };
+  }
+}
+
+/** สร้าง state จากวันเกิดตรงๆ (ไม่พึ่ง user store — ใช้หน้า demo/owner) */
+async function stateFromBirth(q: Query): Promise<CalculatedStateValue | null> {
+  try {
+    const birth = {
+      birthDate: String(q.birthDate ?? ""),
+      birthTime: String(q.birthTime ?? "12:00"),
+      gender: (String(q.gender ?? "male") === "female" ? "female" : "male") as "male" | "female",
+      province: String(q.province ?? "Bangkok"),
+    };
+    if (!birth.birthDate) return null;
+    return await stateOfProfile(birth as UserProfile);
+  } catch {
+    return null;
+  }
+}
+
+/** การ์ดตัวตนฟรี (สาธารณะ — demo หน้าแรก) — กรอกวันเกิด → PDF 1 หน้า */
+export async function handleCardPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  const state = await stateFromBirth(q);
+  if (!state) return { ok: false, error: "ต้องระบุ birthDate (YYYY-MM-DD)" };
+  try {
+    const { buildFreeCardPdf } = await import("./report-pdf-card");
+    return { ok: true, data: await buildFreeCardPdf(state) };
+  } catch (e) {
+    return { ok: false, error: `PDF error: ${(e as Error).message}` };
+  }
+}
+
+/** สร้างสินค้า PDF (เฉพาะเจ้าของ — passcode) — kind=card|full · คนอื่นสร้างไม่ได้ */
+export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  const { OWNER_PASS } = await import("./config");
+  if (String(q.pass ?? "") !== OWNER_PASS) return { ok: false, error: "รหัสเจ้าของไม่ถูกต้อง" };
+  const state = await stateFromBirth(q);
+  if (!state) return { ok: false, error: "ต้องระบุ birthDate" };
+  try {
+    const kind = String(q.kind ?? "full");
+    if (kind === "card") {
+      const { buildFreeCardPdf } = await import("./report-pdf-card");
+      return { ok: true, data: await buildFreeCardPdf(state) };
+    }
     const { buildFullReportPdf } = await import("./report-pdf-full");
     return { ok: true, data: await buildFullReportPdf(state) };
   } catch (e) {
