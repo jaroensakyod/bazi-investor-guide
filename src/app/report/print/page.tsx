@@ -74,7 +74,7 @@ export default function PrintReportPage() {
         {p?.intro && <p className="intro">{p.intro}</p>}
         {p?.body && <div className="prose">{p.body}</div>}
         <div className="evidence">{dataNode}</div>
-        {picks.length > 0 && (
+        {picks.length > 0 && p?.picks && Object.keys(p.picks).length > 0 && (
           <div className="picks">
             <h3>คำอธิบายรายตัว</h3>
             {picks.map((pk) => {

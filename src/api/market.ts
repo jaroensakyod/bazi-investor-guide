@@ -447,12 +447,12 @@ export async function handleReportHtmlData(q: Query): Promise<ApiResponse<unknow
   try {
     const { buildPersonalDashboard } = await import("../lib/portfolio/personal-dashboard");
     const { buildMonthlyPicks } = await import("../lib/picks/monthly-picks");
-    const { generateReportNarrative } = await import("../lib/report/narrative");
     const { readBookNarrativeFromCache } = await import("../lib/report/narrative-v6");
     const d = buildPersonalDashboard(state);
     const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
     const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
-    const narrative = await generateReportNarrative(state).catch(() => ({}));
+    // อ่าน narrative จาก cache เท่านั้น — ห้าม gen LLM ใน API (ไม่อุดตัน)
+    const narrative = {} as Record<string, string>;
     const book = readBookNarrativeFromCache();
     return ok({
       persona: d.persona,
