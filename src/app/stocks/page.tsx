@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, Fragment } from "react";
 import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
-type StockRow = { ticker: string; name: string; market: string; country: string; sector: string; element: string; tier: string; price: number | null; changePct: number | null };
+type StockRow = { ticker: string; name: string; market: string; country: string; sector: string; element: string; tier: string; stockTier: string; stockTierScore: number; price: number | null; changePct: number | null };
 type StocksData = { count: number; total: number; markets: Record<string, number>; elementCounts: Record<string, number>; countries: Record<string, number>; stocks: StockRow[] };
 type StockDetail = {
   ticker: string;
@@ -57,7 +57,7 @@ export default function StocksPage() {
     if (element) params.set("element", element);
     if (country) params.set("country", country);
     if (q.trim()) params.set("q", q.trim());
-    const r = await get<StocksData>(`/api/stocks?${params}`);
+    const r = await get<StocksData>(`/api/stocks?${params}&userId=${myUserId()}`);
     if (r.ok) setData(r.data);
     else setError(r.error);
   }, [market, element, country, q]);
@@ -78,6 +78,8 @@ export default function StocksPage() {
 
   const elKey = (e: string) => ELMAP[e] ?? e;
   const CTRY: Record<string, string> = { TH: "🇹🇭 ไทย", US: "🇺🇸 สหรัฐฯ", JP: "🇯🇵 ญี่ปุ่น", CN: "🇨🇳 จีน", IN: "🇮🇳 อินเดีย", KR: "🇰🇷 เกาหลี", HK: "🇭🇰 ฮ่องกง", TW: "🇹🇼 ไต้หวัน", VN: "🇻🇳 เวียดนาม", SG: "🇸🇬 สิงคโปร์", ID: "🇮🇩 อินโดนีเซีย", MY: "🇲🇾 มาเลเซีย", PH: "🇵🇭 ฟิลิปปินส์", AU: "🇦🇺 ออสเตรเลีย", CA: "🇨🇦 แคนาดา", GB: "🇬🇧 อังกฤษ", DE: "🇩🇪 เยอรมนี", FR: "🇫🇷 ฝรั่งเศส", CH: "🇨🇭 สวิส", PK: "🇵🇰 ปากีสถาน", SA: "🇸🇦 ซาอุ", BR: "🇧🇷 บราซิล", MX: "🇲🇽 เม็กซิโก", TR: "🇹🇷 ตุรกี", ZA: "🇿🇦 แอฟริกาใต้" };
+  const TIER_ICON: Record<string, string> = { gold: "🥇", silver: "🥈", bronze: "🥉", base: "📦" };
+  const TIER_COLOR: Record<string, string> = { gold: "#f5c542", silver: "#c0c8d4", bronze: "#d08a4e", base: "#9a937f" };
   const markets = data ? Object.entries(data.markets).sort((a, b) => b[1] - a[1]) : [];
   const countries = data ? Object.entries(data.countries).sort((a, b) => b[1] - a[1]) : [];
   const elements = ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"];
@@ -149,6 +151,7 @@ export default function StocksPage() {
                 <th>ชื่อ</th>
                 <th>ตลาด</th>
                 <th>ธาตุ</th>
+                <th>🏆 เทียร์</th>
                 <th>{t("assets.risk")}</th>
                 <th>ราคา</th>
                 <th>%วันนี้</th>
@@ -182,6 +185,11 @@ export default function StocksPage() {
                       <span style={{ color: ELEMENT_COLOR[elKey(s.element)] ?? "#d4af37", fontWeight: 700 }}>{t(`el.${elKey(s.element)}` as never)}</span>
                     </td>
                     <td>{s.tier}</td>
+                    <td>
+                      <span title={`เทียร์ ${TIER_ICON[s.stockTier] ?? "📦"} (คะแนน ${s.stockTierScore}) — ตรงดวง+พื้นฐาน+สภาพคล่อง`}>
+                        {TIER_ICON[s.stockTier] ?? "📦"} <span style={{ color: TIER_COLOR[s.stockTier] ?? "#9a937f", fontSize: 12 }}>{s.stockTier}</span>
+                      </span>
+                    </td>
                     <td>{s.price != null ? s.price.toLocaleString() : "-"}</td>
                     <td style={{ color: (s.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(s.changePct)}</td>
                   </tr>

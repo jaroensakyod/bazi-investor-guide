@@ -107,7 +107,10 @@ const server = createServer(async (req, res) => {
       if (!r.ok) return send(res, 400, err(r.error));
       return sendRaw(res, 200, r.data, "application/pdf");
     }
-    if (req.method === "GET" && path === "/api/stocks") return send(res, 200, handleStocks(q));
+    if (req.method === "GET" && path === "/api/stocks") {
+      const r = await handleStocks(q);
+      return send(res, r.ok ? 200 : 400, r);
+    }
     if (req.method === "GET" && path === "/api/stock") return send(res, 200, handleStockDetail(q));
     if (req.method === "GET" && path === "/api/search") return send(res, 200, handleSearch(q));
     if (req.method === "GET" && path === "/api/indices") return send(res, 200, handleIndices(q));

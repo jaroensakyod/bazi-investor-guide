@@ -8,6 +8,7 @@ import { loadFundamentalsCache } from "../market/fundamentals";
 import { buffettChecks, buffettScore } from "../report/buffett-checks";
 import { getAssets } from "../assets/asset-universe";
 import { classifyIpoElement, elementFitForUser, type IpoRow } from "../market/ipo-elements";
+import { classifyStockTier, TIER_META, type StockTier } from "../investor/stock-tiers";
 import { readFileSync } from "node:fs";
 import { dayFitForUser, monthInvestFit, dayElementOf } from "../fortune/investment-days";
 import { buildAlmanacDay } from "../bazi/almanac/almanac-engine";
@@ -90,21 +91,32 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
   };
   const assetsOf = getAssets();
   const mdOf = (ticker: string) => snap?.quotes[ticker];
-  const assetRow = (a: (typeof assetsOf)[number], unlock: string) => {
-    const md = mdOf(a.ticker);
-    return { ticker: a.ticker, name: a.name, element: a.primaryElement, fit: fitOf(a.primaryElement), riskTier: a.riskTier, price: md?.price ?? null, changePct: md?.changePct ?? null, unlock };
-  };
   const scoreOf = (md: { changePct?: number | null } | undefined, f?: unknown): number => {
     let s = 0;
     if (f) s += buffettScore(buffettChecks(f as never)) / 4; // 0..2.5
     if (md?.changePct != null) s += Math.max(-1, Math.min(1, md.changePct / 5));
     return Math.round(s * 10) / 10;
   };
+  // เทียร์หุ้น/สินทรัพย์ (Hormozi) — fit จากดวง + พื้นฐาน + ขนาด + โมเมนตัม
+  const tierOf = (fit: "good" | "neutral" | "avoid" | "drain", f: unknown | undefined, capTier: string | undefined, changePct: number | null): StockTier => {
+    const bf = f ? buffettScore(buffettChecks(f as never)) : null;
+    const roe = f ? (f as { roe?: number }).roe ?? null : null;
+    return classifyStockTier({ fit, roe, buffett: bf, capTier, changePct }).tier;
+  };
+  const ASSET_CAP: Record<string, string> = { safe: "mega", balanced: "large", growth: "mid", risky: "small" };
+  const assetRow = (a: (typeof assetsOf)[number], unlock: string) => {
+    const md = mdOf(a.ticker);
+    const fit = fitOf(a.primaryElement);
+    const tier = tierOf(fit, undefined, ASSET_CAP[a.riskTier] ?? "mid", md?.changePct ?? null);
+    return { ticker: a.ticker, name: a.name, element: a.primaryElement, fit, riskTier: a.riskTier, price: md?.price ?? null, changePct: md?.changePct ?? null, unlock, stockTier: tier, tierUnlock: TIER_META[tier].unlock };
+  };
   const stockRow = (s: { ticker: string; name: string; market: string; primaryElement: string; tier: string }, unlock: string) => {
     const yt = yahooTicker(s.ticker, s.market) ?? "";
     const md = snap?.quotes[yt];
     const f = fundCache.get(yt);
-    return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, fit: fitOf(s.primaryElement), riskTier: s.tier, price: md?.price ?? null, changePct: md?.changePct ?? null, score: scoreOf(md, f), unlock };
+    const fit = fitOf(s.primaryElement);
+    const tier = tierOf(fit, f, s.tier, md?.changePct ?? null);
+    return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, fit, riskTier: s.tier, price: md?.price ?? null, changePct: md?.changePct ?? null, score: scoreOf(md, f), unlock, stockTier: tier, tierUnlock: TIER_META[tier].unlock };
   };
   const allStocks = getAllStocks();
   const byEl = (el: string) => allStocks.filter((s) => s.primaryElement === el);
@@ -134,7 +146,9 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     .filter((e) => (invest as string[]).includes(classifyIpoElement(e).element))
     .map((e) => {
       const { element, reason } = classifyIpoElement(e);
-      return { ticker: e.ticker, name: e.name, element, fit: elementFitForUser(state, element), riskTier: "ipo", price: null, changePct: null, unlock: "pro", ipoDate: e.ipoDate ?? "" };
+      const fit = elementFitForUser(state, element);
+      const tier = tierOf(fit, undefined, "small", null);
+      return { ticker: e.ticker, name: e.name, element, fit, riskTier: "ipo", price: null, changePct: null, unlock: "pro", ipoDate: e.ipoDate ?? "", stockTier: tier, tierUnlock: TIER_META[tier].unlock };
     })
     .slice(0, 3);
 

@@ -8,6 +8,10 @@ import { getNewsImpact } from "../lib/chat/tools";
 import { getTodayAlmanac } from "../lib/chat/tools";
 import { getFortuneInvest } from "../lib/chat/tools";
 import { loadUser, toggleWatchlist, type UserProfile } from "../lib/chat/user-store";
+import { buffettScore, buffettChecks } from "../lib/report/buffett-checks";
+import { loadFundamentalsCache } from "../lib/market/fundamentals";
+import { classifyStockTier, type TierInput } from "../lib/investor/stock-tiers";
+import { elementFitForUser } from "../lib/market/ipo-elements";
 import { ok, err, type ApiResponse, type Query } from "./types";
 import { stateOfProfile } from "./chat";
 import { execFile } from "node:child_process";
@@ -15,9 +19,7 @@ import path from "node:path";
 import { ROOT_DIR } from "./config";
 import { getAllStocks } from "../lib/investor/stock-database";
 import { loadSnapshot } from "../lib/market/market-data";
-import { loadFundamentalsCache } from "../lib/market/fundamentals";
 import { yahooTicker } from "../lib/market/yahoo";
-import { buffettChecks, buffettScore } from "../lib/report/buffett-checks";
 import { getAssets } from "../lib/assets/asset-universe";
 import { INDICES, FX, FEATURED_ASSET_SYMBOLS } from "../lib/market/indices";
 
@@ -149,7 +151,7 @@ export async function handlePortfolio(q: Query): Promise<ApiResponse<unknown>> {
 }
 
 /** คลังหุ้นทั้งหมด — แบ่งตามตลาด + ค้น (ราคาจาก snapshot) */
-export function handleStocks(q: Query): ApiResponse<unknown> {
+export async function handleStocks(q: Query): Promise<ApiResponse<unknown>> {
   const snap = loadSnapshot();
   const query = (q.q ?? "").toLowerCase().trim();
   const marketIn = q.market ?? "";
@@ -157,7 +159,20 @@ export function handleStocks(q: Query): ApiResponse<unknown> {
   const markets = marketAlias[marketIn.toLowerCase()] ?? (marketIn ? [marketIn] : []);
   const elementIn = q.element ?? "";
   const countryIn = q.country ?? "";
+  // ดวงผู้ใช้ (ถ้ามี) — เทียร์แบบ personal (fit ตรงดวง) ถ้าไม่มี = เทียร์พื้นฐานล้วน
+  let state: Awaited<ReturnType<typeof stateOfProfile>> | null = null;
+  if (q.userId) {
+    const profile = loadUser(q.userId);
+    if (profile) {
+      try {
+        state = await stateOfProfile(profile);
+      } catch {
+        state = null;
+      }
+    }
+  }
   const all0 = getAllStocks();
+  const fundCache = loadFundamentalsCache();
   // นับรวม (สำหรับ UI กรอง) — ทั้งหมด ไม่กรอง
   const elementCounts: Record<string, number> = {};
   const countries: Record<string, number> = {};
@@ -171,8 +186,15 @@ export function handleStocks(q: Query): ApiResponse<unknown> {
     .filter((s) => !countryIn || s.country === countryIn)
     .filter((s) => !query || s.ticker.toLowerCase().includes(query) || s.name.toLowerCase().includes(query) || (s.nameEn ?? "").toLowerCase().includes(query))
     .map((s) => {
-      const md = snap?.quotes[yahooTicker(s.ticker, s.market) ?? ""];
-      return { ticker: s.ticker, name: s.name, market: s.market, country: s.country, sector: s.sector, element: s.primaryElement, tier: s.tier, price: md?.price ?? null, changePct: md?.changePct ?? null };
+      const yt = yahooTicker(s.ticker, s.market) ?? "";
+      const md = snap?.quotes[yt];
+      const f = fundCache.get(yt);
+      // เทียร์: มีดวง → fit จริง · ไม่มี → พื้นฐานล้วน (fit null)
+      const fit: TierInput["fit"] = state ? elementFitForUser(state, s.primaryElement) : null;
+      const bf = f ? buffettScore(buffettChecks(f as never)) : null;
+      const roe = f ? f.roe ?? null : null;
+      const tiered = classifyStockTier({ fit, roe, buffett: bf, capTier: s.tier, changePct: md?.changePct ?? null });
+      return { ticker: s.ticker, name: s.name, market: s.market, country: s.country, sector: s.sector, element: s.primaryElement, tier: s.tier, stockTier: tiered.tier, stockTierScore: tiered.score, price: md?.price ?? null, changePct: md?.changePct ?? null };
     });
   const marketCounts: Record<string, number> = {};
   for (const s of getAllStocks()) marketCounts[s.market] = (marketCounts[s.market] ?? 0) + 1;

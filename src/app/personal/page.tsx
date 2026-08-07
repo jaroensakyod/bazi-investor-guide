@@ -19,7 +19,7 @@ type PersonalData = {
     id: string;
     label: string;
     unlock: "free" | "pro" | "premium";
-    items: Array<{ ticker: string; name: string; market?: string; element: string; fit: "good" | "neutral" | "avoid" | "drain"; riskTier: string; price: number | null; changePct: number | null; score?: number }>;
+    items: Array<{ ticker: string; name: string; market?: string; element: string; fit: "good" | "neutral" | "avoid" | "drain"; riskTier: string; price: number | null; changePct: number | null; score?: number; stockTier?: string; tierUnlock?: string }>;
   }>;
   auspiciousDays: {
     next14: Array<{ date: string; weekday: string; dayElement: string | null; fit: "good" | "neutral" | "avoid" }>;
@@ -107,12 +107,35 @@ export default function PersonalPage() {
 
   const elKey = (e: string) => ELMAP[e] ?? e;
   const pct = (v: number | null) => (v == null ? "-" : `${v >= 0 ? "+" : ""}${v}%`);
+  const TIER_ICON: Record<string, string> = { gold: "🥇", silver: "🥈", bronze: "🥉", base: "📦" };
+  const TIER_COLOR: Record<string, string> = { gold: "#f5c542", silver: "#c0c8d4", bronze: "#d08a4e", base: "#9a937f" };
+  // สรุปเทียร์รวมทุกหมวด (สำหรับ hero)
+  const tierSummary = data
+    ? data.categories.reduce<Record<string, number>>((acc, c) => {
+        for (const it of c.items) if (it.stockTier) acc[it.stockTier] = (acc[it.stockTier] ?? 0) + 1;
+        return acc;
+      }, {})
+    : {};
 
   return (
     <div>
-      <div className="card">
-        <h2>🔮 {t("personal.title")}</h2>
-        <p style={{ fontSize: 12.5, color: "#9a937f" }}>{t("personal.sub")}</p>
+      <div className="card" style={{ borderColor: "#d4af37", background: "linear-gradient(135deg,#161a24 0%,#1d2130 100%)" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+          <div>
+            <h2 style={{ marginBottom: 2 }}>
+              🔮 {t("personal.title")} <span className="tag">{data ? data.persona.name : ""}</span>
+            </h2>
+            <p style={{ fontSize: 12.5, color: "#9a937f" }}>{t("personal.sub")}</p>
+          </div>
+          {data && (
+            <div style={{ textAlign: "right", fontSize: 12 }}>
+              <p style={{ color: "#9a937f", marginBottom: 2 }}>🏆 เทียร์สินค้าแนะนำ (จ่ายสูง → เห็นเทียร์ดีขึ้น)</p>
+              <p>
+                <span style={{ color: "#f5c542" }}>🥇 {tierSummary.gold ?? 0}</span> · <span style={{ color: "#c0c8d4" }}>🥈 {tierSummary.silver ?? 0}</span> · <span style={{ color: "#d08a4e" }}>🥉 {tierSummary.bronze ?? 0}</span> · <span style={{ color: "#9a937f" }}>📦 {tierSummary.base ?? 0}</span>
+              </p>
+            </div>
+          )}
+        </div>
         {error && <p style={{ color: "#d48f8f" }}>{error}</p>}
       </div>
 
@@ -143,7 +166,8 @@ export default function PersonalPage() {
             </p>
           </div>
 
-          {/* ── หลักการแข็ง-ถ่ายเท / อ่อน-เสริม (ซินแส) ── */}
+          {/* ── หลักการแข็ง-ถ่ายเท / อ่อน-เสริม (ซินแส) + ธาตุในดวง — 2 คอลัมน์ ── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 12 }}>
           <div className="card" style={{ borderColor: "#8fd4a0" }}>
             <h2>🧭 {t("personal.principle")}</h2>
             <p style={{ fontSize: 12.5, color: "#9a937f" }}>
@@ -184,6 +208,7 @@ export default function PersonalPage() {
           </div>
 
           {/* ── วงกลมจัดสรร เงินเร็ว/เงินเย็น ── */}
+          </div>
           <div className="card">
             <h2>🥧 {t("personal.split")}</h2>
             <div style={{ display: "flex", gap: 24, alignItems: "center", flexWrap: "wrap" }}>
@@ -272,10 +297,19 @@ export default function PersonalPage() {
               {t("personal.allProductsSub")}{" "}
               <span className="tag">🆓 {t("personal.free")}</span> <span className="tag">⭐ Pro</span> <span className="tag">👑 Premium</span>
             </p>
-            {data.categories.map((cat) => (
+            {data.categories.map((cat) => {
+              const catTiers: Record<string, number> = {};
+              for (const it of cat.items) if (it.stockTier) catTiers[it.stockTier] = (catTiers[it.stockTier] ?? 0) + 1;
+              return (
               <div key={cat.id} style={{ marginBottom: 14 }}>
                 <p style={{ fontSize: 13.5, fontWeight: 700, marginBottom: 4, color: "#d4af37" }}>
-                  {cat.unlock === "free" ? "🆓" : cat.unlock === "pro" ? "⭐" : "👑"} {cat.label}
+                  {cat.unlock === "free" ? "🆓" : cat.unlock === "pro" ? "⭐" : "👑"} {cat.label}{" "}
+                  <span style={{ fontSize: 11.5, fontWeight: 400 }}>
+                    {catTiers.gold ? <span style={{ color: "#f5c542" }}>🥇{catTiers.gold}</span> : ""}{" "}
+                    {catTiers.silver ? <span style={{ color: "#c0c8d4" }}>🥈{catTiers.silver}</span> : ""}{" "}
+                    {catTiers.bronze ? <span style={{ color: "#d08a4e" }}>🥉{catTiers.bronze}</span> : ""}{" "}
+                    {catTiers.base ? <span style={{ color: "#9a937f" }}>📦{catTiers.base}</span> : ""}
+                  </span>
                 </p>
                 {cat.items.length === 0 ? (
                   <p style={{ fontSize: 12, color: "#9a937f" }}>— ยังไม่มีข้อมูล</p>
@@ -283,6 +317,7 @@ export default function PersonalPage() {
                   cat.items.map((p) => (
                     <div key={p.ticker} style={{ display: "flex", justifyContent: "space-between", gap: 8, padding: "4px 0", borderBottom: "1px solid #1d2029", fontSize: 13 }}>
                       <span>
+                        {p.stockTier ? <span title={`เทียร์ ${TIER_ICON[p.stockTier]} — จ่าย ${p.tierUnlock === "premium" ? "VIP" : p.tierUnlock === "pro" ? "Pro" : "ฟรี"} ถึงเห็น`}>{TIER_ICON[p.stockTier] ?? "📦"}</span> : ""}{" "}
                         <b>{p.ticker}</b>{" "}
                         <span style={{ color: ELEMENT_COLOR[elKey(p.element)] ?? "#d4af37" }}>{t(`el.${elKey(p.element)}` as never)}</span>{" "}
                         <span style={{ fontSize: 11.5 }}>
@@ -298,7 +333,8 @@ export default function PersonalPage() {
                   ))
                 )}
               </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="card" style={{ fontSize: 12, color: "#9a937f" }}>
