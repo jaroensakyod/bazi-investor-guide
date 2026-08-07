@@ -408,4 +408,38 @@ export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buff
   }
 }
 
+/** ข้อมูลการ์ดตัวตน (หน้า /demo — แสดง HTML preview น่าแชร์ + ดาวน์โหลด PDF) */
+export async function handleCardData(q: Query): Promise<ApiResponse<unknown>> {
+  const state = await stateFromBirth(q);
+  if (!state) return err("ต้องระบุ birthDate (YYYY-MM-DD)");
+  try {
+    const { buildPersonalDashboard } = await import("../lib/portfolio/personal-dashboard");
+    const d = buildPersonalDashboard(state);
+    const goodStocks: Array<{ ticker: string; name: string; element: string; fit: string }> = [];
+    const goodAssets: Array<{ ticker: string; name: string; element: string; fit: string }> = [];
+    for (const c of d.categories) {
+      for (const it of c.items) {
+        const isAsset = it.ticker.includes("=") || it.ticker.startsWith("^") || it.ticker.includes("_") || it.ticker.includes("-");
+        if (!isAsset && (it.stockTier === "gold" || it.stockTier === "silver") && goodStocks.length < 3) {
+          goodStocks.push({ ticker: it.ticker, name: it.name, element: it.element, fit: it.fit });
+        } else if (isAsset && it.fit === "good" && goodAssets.length < 3) {
+          goodAssets.push({ ticker: it.ticker, name: it.name, element: it.element, fit: it.fit });
+        }
+      }
+    }
+    return ok({
+      persona: d.persona,
+      trading: d.trading,
+      strengthen: d.strengthen,
+      avoid: d.avoid,
+      principle: d.principle,
+      goodStocks,
+      goodAssets,
+      disclaimer: d.disclaimer,
+    });
+  } catch (e) {
+    return err(`card data error: ${(e as Error).message}`);
+  }
+}
+
 export type { UserProfile };

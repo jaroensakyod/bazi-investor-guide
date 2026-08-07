@@ -132,7 +132,7 @@ export async function buildFreeCardPdf(state: CalculatedStateValue): Promise<Buf
   for (const c of d.categories) {
     for (const it of c.items) {
       if (goodAssets.length >= 3) break;
-      const isAsset = it.ticker.includes("=") || it.ticker.startsWith("^") || it.ticker.includes("_") || it.ticker.length > 5;
+      const isAsset = it.ticker.includes("=") || it.ticker.startsWith("^") || it.ticker.includes("_") || it.ticker.includes("-");
       if (it.fit === "good" && isAsset) goodAssets.push({ ticker: it.ticker, name: it.name, element: it.element });
     }
     if (goodAssets.length >= 3) break;

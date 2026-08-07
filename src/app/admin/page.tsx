@@ -69,11 +69,14 @@ export default function AdminPage() {
       <div className="card">
         <h2>{t("admin.datarefresh")}</h2>
         <button className="btn" onClick={() => refresh("ipo")} disabled={refreshing !== null} style={{ marginRight: 8 }}>
-          {refreshing === "ipo" ? "⏳..." : "🚀 อัปเดต IPO"}
+          🔄 อัปเดต IPO
         </button>
         <button className="btn secondary" onClick={() => refresh("prices")} disabled={refreshing !== null} style={{ marginRight: 8 }}>
-          {refreshing === "prices" ? "⏳..." : "💰 อัปเดตราคา"}
+          🔄 ดึงราคา
         </button>
+        <a className="btn" href="/admin/pdf" style={{ marginRight: 8 }}>
+          🛠️ สร้างสินค้า PDF (เฉพาะเจ้าของ)
+        </a>
         {refreshOut && (
           <pre style={{ background: "#10131a", padding: 10, borderRadius: 8, fontSize: 12, marginTop: 10, whiteSpace: "pre-wrap" }}>{refreshOut}</pre>
         )}
