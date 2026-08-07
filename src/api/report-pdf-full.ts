@@ -9,6 +9,7 @@ import { buildPersonalDashboard } from "../lib/portfolio/personal-dashboard";
 import { buildMonthlyPicks } from "../lib/picks/monthly-picks";
 import type { StockTier } from "../lib/investor/stock-tiers";
 import { generateReportNarrative, type Narrative } from "../lib/report/narrative";
+import { generateBookNarrative } from "../lib/report/narrative-v5";
 
 const FONT_CANDIDATES = [
   process.env.PDF_FONT,
@@ -34,8 +35,8 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   const d = buildPersonalDashboard(state);
   const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
   const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
-  // LLM อธิบายความหมาย (ทำไม/เพื่ออะไร/ดี-ไม่ดี/แล้วยังไง) — ล้มเหลว = ใช้เทมเพลต
-  const narrative = await generateReportNarrative(state).catch(() => ({}) as Narrative);
+  // LLM อธิบายความหมาย — v5 หนังสือขาย (gen 25 บท) + fallback v4
+  const narrative = await generateBookNarrative(state).catch(async () => (await generateReportNarrative(state).catch(() => ({}))) as Narrative);
   const font = (FONT_CANDIDATES.find((f) => existsSync(f)) ?? "Helvetica") as string;
   const doc = new PDFDocument({ size: "A4", margins: { top: 0, bottom: 0, left: 0, right: 0 }, bufferPages: true });
   const chunks: Buffer[] = [];
@@ -194,6 +195,9 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   bullet("วัยจร — วงจร 10 ปีที่เปลี่ยนธาตุ สลับกันทั้งชีวิต — เปลี่ยนทิศทางดวงการเงินทุกช่วง");
   bullet("เทียร์หุ้น 1-4 — ระดับคุณภาพคำแนะนำ: 1=VIP (ตรงดวง+แข็ง) → 4=INFO (แค่ข้อมูล)");
   callout("วิธีใช้เล่มนี้ (3 นาที)", "ภาค 1 รู้ตัวเอง → ภาค 2 เลือกของที่ตรง → ภาค 3 วิธีลงทุน → ภาค 4 จังหวะชีวิต → ภาค 5 กันเจ๊ง → ภาค 6 เสริมดวง · ใช้บท 26 เป็นคู่มือรายเดือน", "good");
+
+  // helper: ข้อความ narrative per chapter (v5 → v4 fallback → template)
+  const n = (ch: string, fb: string) => (narrative as Record<string, string>)[ch] || fb;
 
   const phaseOf = (s: number, e: number) => d.timeline.filter((t) => { const a = parseInt((t.ageRange.split("–")[0] || t.ageRange.split("-")[0] || "0"), 10); return a >= s && a < e; });
   const lifeRow = (t: { ageRange: string; verdict: string; advice: string }) => {
