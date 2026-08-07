@@ -165,8 +165,17 @@ export default function AdminPdfPage() {
           )}
 
           <button className="btn" onClick={generate} disabled={busy || !birthDate} style={{ marginTop: 16, width: "100%", fontSize: 15, padding: "12px" }}>
-            {busy ? "⏳ กำลังสร้าง..." : "📥 สร้าง PDF"}
+            {busy ? "⏳ กำลังสร้าง..." : "📥 สร้าง PDF (ด่วน)"}
           </button>
+          <a
+            className="btn secondary"
+            href={`/report/print?birthDate=${birthDate || "1993-11-24"}&birthTime=${birthTime || "15:12"}&gender=${gender}&province=${province}&tier=${tier}`}
+            target="_blank"
+            rel="noopener"
+            style={{ marginTop: 8, width: "100%", fontSize: 14, padding: "11px", display: "block", textAlign: "center" }}
+          >
+            🖨️ เปิดรายงานคุณภาพ (HTML → พิมพ์ PDF)
+          </a>
           {note && <p style={{ color: "#8fd4a0", fontSize: 12.5, marginTop: 10 }}>{note}</p>}
           {error && <p style={{ color: "#d48f8f", fontSize: 12.5, marginTop: 10 }}>{error}</p>}
         </div>

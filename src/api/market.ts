@@ -440,4 +440,39 @@ export async function handleCardData(q: Query): Promise<ApiResponse<unknown>> {
   }
 }
 
+/** ข้อมูลรายงาน HTML (หน้า /report/print — พิมพ์ PDF คุณภาพสูงผ่านเบราว์เซอร์) */
+export async function handleReportHtmlData(q: Query): Promise<ApiResponse<unknown>> {
+  const state = await stateFromBirth(q);
+  if (!state) return err("ต้องระบุ birthDate (YYYY-MM-DD)");
+  try {
+    const { buildPersonalDashboard } = await import("../lib/portfolio/personal-dashboard");
+    const { buildMonthlyPicks } = await import("../lib/picks/monthly-picks");
+    const { generateReportNarrative } = await import("../lib/report/narrative");
+    const d = buildPersonalDashboard(state);
+    const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
+    const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
+    const narrative = await generateReportNarrative(state).catch(() => ({}));
+    return ok({
+      persona: d.persona,
+      trading: d.trading,
+      principle: d.principle,
+      strengthen: d.strengthen,
+      avoid: d.avoid,
+      elementBalance: d.elementBalance,
+      instruments: d.instruments,
+      monthAdvice: d.monthAdvice,
+      auspiciousDays: d.auspiciousDays,
+      timeline: d.timeline,
+      categories: d.categories,
+      thPicks,
+      usPicks,
+      narrative,
+      disclaimer: d.disclaimer,
+      generatedAt: new Date().toISOString().slice(0, 10),
+    });
+  } catch (e) {
+    return err(`report html data error: ${(e as Error).message}`);
+  }
+}
+
 export type { UserProfile };
