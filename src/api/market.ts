@@ -286,7 +286,7 @@ export async function handlePicks(q: Query): Promise<ApiResponse<unknown>> {
   const state = await stateOfProfile(profile);
   const { buildMonthlyPicks } = await import("../lib/picks/monthly-picks");
   const market = (q.market ?? "TH") as "TH" | "US" | "MID";
-  return ok(buildMonthlyPicks(state, market, Number(q.limit ?? 30)));
+  return ok(buildMonthlyPicks(state, market, Number(q.limit ?? 30), (q.unlock as "free" | "pro" | "premium" | undefined) ?? "free"));
 }
 
 /** Export CSV ให้ซินแสตรวจธาตุ — kind=assets (สินทรัพย์ 113) / kind=thai-stocks */

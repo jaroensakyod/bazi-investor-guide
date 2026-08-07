@@ -163,7 +163,7 @@ export function scoreStock(state: CalculatedStateValue, stock: {
     reasons.push(`ธาตุ${stock.primaryElement} = มีเกินในดวง (${counts[excessElement]} ตัว) — อย่าเพิ่ม`);
   }
   for (const e of getEngineUsefulElements(state)) {
-    if (stock.elements.includes(e) && e !== stock.primaryElement) {
+    if ((stock.elements ?? [stock.primaryElement]).includes(e) && e !== stock.primaryElement) {
       score += 1;
       reasons.push(`มีธาตุ${e} (useful god) เป็นธาตุรอง`);
       break;

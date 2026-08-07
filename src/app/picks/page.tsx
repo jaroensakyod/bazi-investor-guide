@@ -10,6 +10,8 @@ type PickRow = {
   market: string;
   element: string;
   tier: string;
+  stockTier: string;
+  unlock: string;
   score: number;
   price: number | null;
   changePct: number | null;
@@ -22,10 +24,15 @@ type PicksData = {
   desc: string;
   benchmark: { symbol: string; name: string; changePct: number | null; price: number | null };
   updatedAt: string | null;
+  unlock: string;
+  tierCounts: Record<string, number>;
   picks: PickRow[];
   methodology: string[];
   disclaimer: string;
 };
+const TIER_ICON: Record<string, string> = { gold: "🥇", silver: "🥈", bronze: "🥉", base: "📦" };
+const TIER_COLOR: Record<string, string> = { gold: "#f5c542", silver: "#c0c8d4", bronze: "#d08a4e", base: "#9a937f" };
+const TIER_DESC: Record<string, string> = { gold: "เทียร์ 1 (VIP) — ธาตุตรงดวง+พื้นฐานแกร่ง+โมเมนตัม", silver: "เทียร์ 2 (Pro) — ตรงดวง/พื้นฐานดี", bronze: "เทียร์ 3 (ฟรี) — หุ้นกลาง", base: "เทียร์ 4 — ข้อมูลตลาด" };
 
 const ELMAP: Record<string, string> = { ไม้: "wood", ไฟ: "fire", ดิน: "earth", ทอง: "metal", น้ำ: "water" };
 const ELEMENT_COLOR: Record<string, string> = { wood: "#4a9c6d", fire: "#c2574a", earth: "#b08a3e", metal: "#c9a227", water: "#3e6fb0" };
@@ -42,7 +49,7 @@ export default function PicksPage() {
   const [error, setError] = useState("");
 
   const load = useCallback(async () => {
-    const r = await get<PicksData>(`/api/picks?market=${market}&userId=${myUserId()}`);
+    const r = await get<PicksData>(`/api/picks?market=${market}&userId=${myUserId()}&unlock=premium`);
     if (r.ok) setData(r.data);
     else setError(r.error);
   }, [market]);
@@ -93,6 +100,16 @@ export default function PicksPage() {
           </div>
 
           <div className="card">
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8, fontSize: 12 }}>
+              <span style={{ color: "#9a937f" }}>🎯 เทียร์หุ้น (จ่ายสูง ปลดล็อกเทียร์ดีขึ้น):</span>
+              <span style={{ color: "#f5c542" }}>🥇 เทียร์ 1 (VIP)</span>·
+              <span style={{ color: "#c0c8d4" }}>🥈 เทียร์ 2 (Pro)</span>·
+              <span style={{ color: "#d08a4e" }}>🥉 เทียร์ 3 (ฟรี)</span>·
+              <span style={{ color: "#9a937f" }}>📦 เทียร์ 4 (ข้อมูลตลาด)</span>
+              <span className="tag" style={{ marginLeft: 6 }}>
+                {data.tierCounts ? `🥇${data.tierCounts.gold} 🥈${data.tierCounts.silver} 🥉${data.tierCounts.bronze} 📦${data.tierCounts.base}` : ""}
+              </span>
+            </div>
             {data.picks.map((p, i) => (
               <div key={p.ticker} style={{ borderBottom: "1px solid #262a34", padding: "10px 0" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
@@ -101,7 +118,10 @@ export default function PicksPage() {
                       #{i + 1} {p.ticker}
                     </b>{" "}
                     <span style={{ color: ELEMENT_COLOR[elKey(p.element)] ?? "#d4af37" }}>{t(`el.${elKey(p.element)}` as never)}</span>{" "}
-                    <span className="tag">{p.market}</span> <span className="tag">{p.tier}</span>
+                    <span className="tag">{p.market}</span> <span className="tag">{p.tier}</span>{" "}
+                    <span style={{ fontSize: 13 }} title={`${TIER_DESC[p.stockTier] ?? ""}`}>
+                      {TIER_ICON[p.stockTier] ?? "📦"} <span style={{ color: TIER_COLOR[p.stockTier] ?? "#9a937f", fontSize: 12 }}>{p.stockTier}</span>
+                    </span>
                     <div style={{ fontSize: 12.5, color: "#9a937f" }}>{p.name}</div>
                   </div>
                   <div style={{ textAlign: "right" }}>

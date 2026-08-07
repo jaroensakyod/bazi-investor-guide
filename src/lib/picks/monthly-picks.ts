@@ -13,6 +13,7 @@ import { loadSnapshot } from "../market/market-data";
 import { yahooTicker } from "../market/yahoo";
 import { getAllStocks } from "../investor/stock-database";
 import { loadFundamentalsCache } from "../market/fundamentals";
+import { classifyStockTier, visibleTiers, TIER_META, type StockTier, type UnlockLevel, type TierInput } from "../investor/stock-tiers";
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
 
 export type PickMarket = "TH" | "US" | "MID";
@@ -23,6 +24,8 @@ export type MonthlyPick = {
   market: string;
   element: string;
   tier: string;
+  stockTier: StockTier;
+  unlock: UnlockLevel;
   score: number; // composite (ธาตุ×2 + พื้นฐาน + โมเมนตัม)
   elementScore: number; // เฉพาะธาตุ (scoreStock)
   price: number | null;
@@ -37,10 +40,11 @@ const MARKET_SCOPES: Record<PickMarket, { markets: string[]; tiers?: string[]; b
   MID: { markets: ["SET", "mai"], tiers: ["mid", "small"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "MID30 — หุ้นกลางไทย", desc: "30 หุ้นขนาดกลางไทยเด่น (mid/small) — โตในประเทศ+ภูมิภาค" },
 };
 
-export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarket = "TH", limit = 30) {
+export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarket = "TH", limit = 30, unlock: UnlockLevel = "free") {
   const cfg = MARKET_SCOPES[market];
   const snap = loadSnapshot();
   const fundCache = loadFundamentalsCache();
+  const visible = visibleTiers(unlock);
   const stocks = getAllStocks()
     .filter((s) => cfg.markets.includes(s.market))
     .filter((s) => !cfg.tiers || (cfg.tiers.includes(s.tier) || s.growthStage === "mid" || s.growthStage === "small"))
@@ -51,9 +55,11 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
       let score = es.score * 2; // ธาตุ×ดวง = หัวใจ (ถ่วง 2 เท่า)
       const reasons = [...es.reasons];
       let fundInfo: MonthlyPick["fundamentals"] = null;
+      let roe: number | null = null;
+      let bf = 0;
       if (f) {
-        const bf = buffettScore(buffettChecks(f));
-        const roe = f.roe;
+        bf = buffettScore(buffettChecks(f));
+        roe = f.roe ?? null;
         score += bf / 5; // Buffett 0-10 → +0..+2
         if (roe != null) score += roe >= 15 ? 1 : roe >= 8 ? 0.5 : 0;
         reasons.push(`พื้นฐาน: ROE ${roe != null ? `${roe}%` : "-"} · Buffett ${bf}/10`);
@@ -64,19 +70,27 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
         score += Math.max(-1, Math.min(1, chg / 5)); // โมเมนตัมวันนี้ +-1
         reasons.push(`โมเมนตัมวันนี้ ${chg >= 0 ? "+" : ""}${chg}%`);
       }
-      return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, tier: s.tier, score: Math.round(score * 10) / 10, elementScore: es.score, price: md?.price ?? null, changePct: chg, reasons, fundamentals: fundInfo };
+      // เทียร์หุ้น (Hormozi ladder): fit จาก verdict ของ scoreStock (very-good/good/neutral/avoid)
+      const fitOf: TierInput["fit"] = es.verdict === "very-good" || es.verdict === "good" ? "good" : es.verdict === "neutral" ? "neutral" : "avoid";
+      const tiered = classifyStockTier({ fit: fitOf, roe, buffett: bf || null, capTier: s.tier, changePct: chg });
+      return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, tier: s.tier, stockTier: tiered.tier, unlock: TIER_META[tiered.tier].unlock, score: Math.round(score * 10) / 10, elementScore: es.score, price: md?.price ?? null, changePct: chg, reasons, fundamentals: fundInfo };
     })
+    .filter((p) => visible.includes(p.stockTier))
     .sort((a, b) => b.score - a.score)
     .slice(0, limit);
 
   const bench = snap?.quotes[cfg.benchmark];
   const meta = snap?.updatedAt ?? null;
+  const tierCounts: Record<string, number> = { gold: 0, silver: 0, bronze: 0, base: 0 };
+  for (const p of stocks) tierCounts[p.stockTier] += 1;
   return {
     market,
     label: cfg.label,
     desc: cfg.desc,
     benchmark: { symbol: cfg.benchmark, name: cfg.benchmarkName, changePct: bench?.changePct ?? null, price: bench?.price ?? null },
     updatedAt: meta,
+    unlock,
+    tierCounts,
     picks: stocks,
     methodology: [
       "คัดจากหุ้นในคลัง (TH: SET+mai / US: NYSE+NASDAQ) เรียงตามคะแนนรวม",

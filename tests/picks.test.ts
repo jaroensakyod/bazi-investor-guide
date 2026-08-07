@@ -32,7 +32,7 @@ describe("พอร์ตเด่นรายเดือน (ProPicks style)",
   });
 
   it("US30 — benchmark S&P 500 + เหตุผลครบ", () => {
-    const r = buildMonthlyPicks(state, "US");
+    const r = buildMonthlyPicks(state, "US", 30, "premium");
     expect(r.picks.length).toBe(30);
     expect(r.benchmark.symbol).toBe("^GSPC");
     for (const p of r.picks) expect(p.reasons.length).toBeGreaterThan(0);
@@ -46,9 +46,26 @@ describe("พอร์ตเด่นรายเดือน (ProPicks style)",
     }
   });
 
+  it("unlock filter (Hormozi): ฟรีเห็นเฉพาะ bronze/base · premium เห็นครบ + badge", () => {
+    const free = buildMonthlyPicks(state, "TH", 50, "free");
+    expect(free.picks.every((p) => p.stockTier === "bronze" || p.stockTier === "base")).toBe(true);
+    const prem = buildMonthlyPicks(state, "TH", 50, "premium");
+    const tiers = new Set(prem.picks.map((p) => p.stockTier));
+    expect(prem.unlock).toBe("premium");
+    // premium เห็น gold ถ้ามี + ทุกตัวมี unlock ตาม tier
+    for (const p of prem.picks) {
+      expect(p.unlock).toBe(p.stockTier === "gold" ? "premium" : p.stockTier === "silver" ? "pro" : "free");
+    }
+    if (tiers.has("gold")) {
+      const gold = prem.picks.find((p) => p.stockTier === "gold");
+      expect(gold).toBeTruthy();
+    }
+  });
+
   it("deterministic — คำนวณซ้ำได้ผลเหมือนเดิม", () => {
     const a = buildMonthlyPicks(state, "TH");
     const b = buildMonthlyPicks(state, "TH");
     expect(a.picks.map((p) => p.ticker)).toEqual(b.picks.map((p) => p.ticker));
+    expect(a.picks.map((p) => p.score)).toEqual(b.picks.map((p) => p.score));
   });
 });

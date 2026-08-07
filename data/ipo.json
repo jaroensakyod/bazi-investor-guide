@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-06",
-  "count": 45,
+  "updatedAt": "2026-08-07",
+  "count": 68,
   "entries": [
     {
       "ticker": "ATTO",
@@ -41,7 +41,7 @@
       "priceRange": "$15.00 - $17.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
@@ -55,7 +55,7 @@
       "priceRange": "$10.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
@@ -70,7 +70,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:56:56.210Z"
+      "fetchedAt": "2026-08-07T04:56:32.360Z"
     },
     {
       "ticker": "BLSM",
@@ -84,7 +84,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:56:56.210Z"
+      "fetchedAt": "2026-08-07T04:56:32.360Z"
     },
     {
       "ticker": "LTGO",
@@ -98,7 +98,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:56:56.210Z"
+      "fetchedAt": "2026-08-07T04:56:32.360Z"
     },
     {
       "ticker": "FOIL",
@@ -112,7 +112,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-06T12:56:56.210Z"
+      "fetchedAt": "2026-08-07T04:56:32.360Z"
     },
     {
       "ticker": "PHAX",
@@ -125,7 +125,7 @@
       "priceRange": "$10.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-06T12:56:56.210Z"
     },
     {
@@ -377,8 +377,7 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.935Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "ALU",
@@ -405,12 +404,11 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "AXR",
-      "name": "Axiant Resources Limited - Friday 28 August 2026",
+      "name": "Axiant Resources Limited - Friday 28 August 2026 11.00am AEST",
       "ipoDate": "2026-08-28",
       "priceRange": "A$0.20",
       "business": "Gold and base metal exploration",
@@ -419,8 +417,7 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "ELK",
@@ -433,8 +430,7 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "EF2",
@@ -447,8 +443,7 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "GRS",
@@ -475,8 +470,7 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "WLC",
@@ -489,12 +483,11 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "SCX",
-      "name": "SCX.ai Holdings Limited - Friday 21 August 2026 11.00am AEST",
+      "name": "SCX.ai Holdings Limited - Friday 21 August 2026 12.00pm AEST",
       "ipoDate": "2026-08-21",
       "priceRange": "A$0.30",
       "business": "Provider of sovereign AI computer infrastructure and cloud platform services.",
@@ -503,8 +496,7 @@
       "country": "AU",
       "exchange": "ASX",
       "currency": "AUD",
-      "source": "ASX upcoming floats",
-      "fetchedAt": "2026-08-06T12:46:41.936Z"
+      "source": "ASX upcoming floats"
     },
     {
       "ticker": "2261",
@@ -685,6 +677,351 @@
       "business": "Food service/catering (UAE) — เปิดจอง 23-30 ก.ย.",
       "source": "DFM 2026-09",
       "fetchedAt": "2026-08-07T03:32:11.260Z"
+    },
+    {
+      "ticker": "SHIPROCKET",
+      "name": "Shiprocket (शिप्रॉकेट)",
+      "nameEn": "Shiprocket Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-14",
+      "priceRange": "₹200-212",
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Logistics/E-commerce tech platform (open 12-14 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.259Z"
+    },
+    {
+      "ticker": "MILKYMIST",
+      "name": "Milky Mist Dairy Food",
+      "nameEn": "Milky Mist Dairy Food Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-13",
+      "priceRange": null,
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Dairy products (open 11-13 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "DHOOT",
+      "name": "Dhoot Transmission",
+      "nameEn": "Dhoot Transmission Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-12",
+      "priceRange": null,
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Auto transmission parts ₹1,400cr (open 10-12 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "MOLBIO",
+      "name": "Molbio Diagnostics",
+      "nameEn": "Molbio Diagnostics Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-12",
+      "priceRange": null,
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Diagnostics/biotech (open 10-12 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "LEAP",
+      "name": "LEAP India",
+      "nameEn": "LEAP India Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-11",
+      "priceRange": "₹151-159",
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Logistics/pallet pooling ₹2,480cr (open 07-11 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "TECHNO",
+      "name": "Technocraft Ventures",
+      "nameEn": "Technocraft Ventures Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-11",
+      "priceRange": "₹200-212",
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Industrial machinery (open 07-11 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "ARDEE",
+      "name": "Ardee Industries",
+      "nameEn": "Ardee Industries Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-07",
+      "priceRange": "₹50-53",
+      "currency": "INR",
+      "status": "upcoming",
+      "business": "Steel castings ₹425cr (open 05-07 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "MANIPAL",
+      "name": "Manipal Health Enterprises",
+      "nameEn": "Manipal Health Enterprises Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-05",
+      "priceRange": "₹590",
+      "currency": "INR",
+      "status": "listed",
+      "business": "Hospitals/healthcare chain ₹9,275cr (open 29-31 Jul)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "JGE",
+      "name": "Juniper Green Energy",
+      "nameEn": "Juniper Green Energy Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-03",
+      "priceRange": "₹214-225",
+      "currency": "INR",
+      "status": "listed",
+      "business": "Renewable energy ₹1,800cr (open 30 Jul-03 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "MVEL",
+      "name": "MV Electrosystems",
+      "nameEn": "MV Electrosystems Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": "2026-08-03",
+      "priceRange": "₹425",
+      "currency": "INR",
+      "status": "listed",
+      "business": "Electrical systems ₹290cr (open 30 Jul-03 Aug)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "SBIFM",
+      "name": "SBI Funds Management",
+      "nameEn": "SBI Funds Management Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Mutual fund AMC (ใหญ่สุดอินเดีย)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "CUBEHWY",
+      "name": "Cube Highways Trust",
+      "nameEn": "Cube Highways Trust InvIT",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Highways infrastructure InvIT",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "CALIBER",
+      "name": "Caliber Mining",
+      "nameEn": "Caliber Mining India Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Mining",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "LOHIA",
+      "name": "Lohia Corp",
+      "nameEn": "Lohia Corp Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Textile (Lohia elastic — textile products)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "INDOMIM",
+      "name": "Indo-MIM",
+      "nameEn": "Indo-MIM Pvt. Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Metal injection molding/ชิ้นส่วนโลหะ",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "ALPINETX",
+      "name": "Alpine Texworld",
+      "nameEn": "Alpine Texworld Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Textile/synthetic fiber",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "LASERP",
+      "name": "Laser Power & Infra",
+      "nameEn": "Laser Power & Infra Pvt. Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Solar power projects",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "CORDELIA",
+      "name": "Cordelia Cruises",
+      "nameEn": "Waterways Leisure Tourism (Cordelia Cruises)",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Luxury cruises/ท่องเที่ยวทางน้ำ",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "KNACK",
+      "name": "Knack Packaging",
+      "nameEn": "Knack Packaging Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Packaging (plastic packaging)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "ADVIT",
+      "name": "Advit Jewels",
+      "nameEn": "Advit Jewels Ltd.",
+      "market": "NSE",
+      "country": "IN",
+      "exchange": "BSE, NSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "INR",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "Jewelry (gold jewellery)",
+      "source": "Chittorgarh 2026-08",
+      "fetchedAt": "2026-08-07T04:51:56.260Z"
+    },
+    {
+      "ticker": "688828",
+      "name": "国仪公司 (Guoyi)",
+      "nameEn": "Guoyi Quantum Sensing Co.",
+      "market": "SSE",
+      "country": "CN",
+      "exchange": "SSE STAR (科创板)",
+      "ipoDate": null,
+      "priceRange": "¥21.22",
+      "currency": "CNY",
+      "status": "อนุมัติ",
+      "business": "Quantum sensing/scientific instruments (申购 7/31 · 中签 8/4)",
+      "source": "sse.com.cn 2026-08",
+      "fetchedAt": "2026-08-07T05:08:06.816Z"
+    },
+    {
+      "ticker": "603468",
+      "name": "津富士达 (Tianjin Fujida)",
+      "nameEn": "Tianjin Fujida Connector Co.",
+      "market": "SSE",
+      "country": "CN",
+      "exchange": "SSE Main Board",
+      "ipoDate": "2026-08-06",
+      "priceRange": "¥17.46",
+      "currency": "CNY",
+      "status": "upcoming",
+      "business": "Electronic connectors (PE 19.25 · 申购 7/24)",
+      "source": "sse.com.cn 2026-08",
+      "fetchedAt": "2026-08-07T05:08:06.817Z"
+    },
+    {
+      "ticker": "301688",
+      "name": "格林生物 (Green Biology)",
+      "nameEn": "Green Biology (Zhejiang) Co.",
+      "market": "SZSE",
+      "country": "CN",
+      "exchange": "SZSE ChiNext (创业板)",
+      "ipoDate": "2026-08-20",
+      "priceRange": null,
+      "currency": "CNY",
+      "status": "upcoming",
+      "business": "Biotech/green chemistry (上网发行 8/20)",
+      "source": "sina 新股日历 2026-08",
+      "fetchedAt": "2026-08-07T05:08:06.817Z"
     }
   ]
 }

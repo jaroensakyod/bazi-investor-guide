@@ -31,7 +31,7 @@ export const RULES: Array<{ el: "ไม้" | "ไฟ" | "ดิน" | "ทอ�
   // 2) ดิน: เกษตร/ปศุสัตว์/อาหารสัตว์ (ก่อน น้ำ-อาหาร — pet food = อาหารสัตว์ = ดิน)
   { el: "ดิน", kw: /agri|farm|plantation|livestock|rice|rubber|pet food|อาหารสัตว์|ปศุสัตว์|ฟาร์ม|ยาง|ข้าว|ไร่|มันสำปะหลัง/i, note: "เกษตร/ปศุสัตว์/อาหารสัตว์ (Source6: การเกษตร อาหารสัตว์=ดิน)" },
   // 3) ดิน: อสังหา/ก่อสร้าง/วัสดุ (ก่อน น้ำ-โรงแรม — REIT โรงแรม = อสังหา)
-  { el: "ดิน", kw: /real estate|property|land|reit|leasehold|construction|cement|estate|อสังหาริมทรัพย์|สิทธิการเช่า|คอนกรีต|วัสดุก่อสร้าง|ก่อสร้าง|ประตูเหล็ก|ผนัง|เหมือง|ปูน|อิฐ|รับเหมาก่อสร้าง|건설|부동산/i, note: "อสังหา/ก่อสร้าง/วัสดุ (Source6: อสังหาริมทรัพย์=ดิน)" },
+  { el: "ดิน", kw: /real estate|property|land|reit|leasehold|construction|cement|estate|highway|toll|motorway|อสังหาริมทรัพย์|สิทธิการเช่า|คอนกรีต|วัสดุก่อสร้าง|ก่อสร้าง|ประตูเหล็ก|ผนัง|เหมือง|ปูน|อิฐ|รับเหมาก่อสร้าง|건설|부동산/i, note: "อสังหา/ก่อสร้าง/วัสดุ/ทางด่วน (Source6: อสังหาริมทรัพย์=ดิน)" },
   // 4) ไม้: กระดาษ/สิ่งทอ/สื่อ/ศึกษา/เฟอร์นิเจอร์/สวน/ปาล์ม (ก่อน น้ำ-อาหาร — ปาล์ม=สวน)
   { el: "ไม้", kw: /textile|fashion|apparel|furniture|paper|publish|media|education|school|internet|telecom|wireless|5g|packaging|กระดาษ|บรรจุภัณฑ์|กล่อง|สิ่งพิมพ์|สื่อ|การศึกษา|โรงเรียน|เสื้อผ้า|สิ่งทอ|เฟอร์นิเจอร์|ของตกแต่ง|อินเทอร์เน็ต|โทรคมนาคม|เครื่องนอน|ผ้าขนหนู|สวน|ปาล์ม|กล้วยไม้|의류|섬유|출판|교육/i, note: "กระดาษ/สิ่งทอ/สื่อ/ศึกษา/เฟอร์นิเจอร์/สวนปาล์ม (Source6: กระดาษ สิ่งพิมพ์ การศึกษา เฟอร์นิเจอร์ ต้นไม้=ไม้)" },
   // 5) น้ำ: ค้าปลีก/อาหาร/เครื่องดื่ม/ขนส่ง/โรงแรม/ท่องเที่ยว/บันเทิง
@@ -43,9 +43,9 @@ export const RULES: Array<{ el: "ไม้" | "ไฟ" | "ดิน" | "ทอ�
   // 8) น้ำ: การเงิน/FinTech/SPAC
   { el: "น้ำ", kw: /acquisition|capital|financial|bank|invest|insurance|credit|fintech|wealthtech|ธนาคาร|การเงิน|เงินทุน|หลักทรัพย์|ประกัน|สินเชื่อ|ลิสซิ่ง|ไฟแนนซ์|กองทุน|โบรกเกอร์|금융|은행|보험/i, note: "การเงิน/เงินทุน/SPAC/FinTech (Source6: การเงิน บัญชี สินเชื่อ=น้ำ)" },
   // 9) ทอง: เทคโนโลยี/ดิจิทัล (ห้าม "ai " — ซ้อนใน Thai)
-  { el: "ทอง", kw: /tech|software|digital|semi|chip|data|quantum|robot|artificial|cloud|cyber|comput|erp|เทคโนโลยี|ดิจิทัล|ซอฟต์แวร์|แพลตฟอร์ม|ปัญญาประดิษฐ์|อิเล็กทรอนิกส์|반도체|소프트웨어|로봇/i, note: "เทคโนโลยี/ดิจิทัล (Source6: คอมพิวเตอร์/เทคโนโลยี=ทอง)" },
+  { el: "ทอง", kw: /tech|software|digital|semi|chip|data|quantum|robot|artificial|cloud|cyber|comput|erp|electron|เทคโนโลยี|ดิจิทัล|ซอฟต์แวร์|แพลตฟอร์ม|ปัญญาประดิษฐ์|อิเล็กทรอนิกส์|반도체|소프트웨어|로봇/i, note: "เทคโนโลยี/ดิจิทัล (Source6: คอมพิวเตอร์/เทคโนโลยี=ทอง)" },
   // 10) ทอง: โลหะ/เครื่องจักร/วิศวกรรม
-  { el: "ทอง", kw: /metal|steel|copper|gold |mining|industrial|machin|pump|valve|engineering|โลหะ|เหล็ก|ทองแดง|เครื่องจักร|เครื่องสูบ|วิศวกรรม|ชิ้นส่วน|ยานยนต์/i, note: "โลหะ/เครื่องจักร/วิศวกรรม (Source6: โลหะ=ทอง)" },
+  { el: "ทอง", kw: /metal|steel|copper|gold |mining|industrial|machin|pump|valve|engineering|automotive|transmission|โลหะ|เหล็ก|ทองแดง|เครื่องจักร|เครื่องสูบ|วิศวกรรม|ชิ้นส่วน|ยานยนต์/i, note: "โลหะ/เครื่องจักร/วิศวกรรม/ยานยนต์ (Source6: โลหะ=ทอง)" },
 ];
 
 /** จำแนกธาตุจากชื่อ/ธุรกิจ/อุตสาหกรรม — คืน {element, reason} (เดา fallback = น้ำ + flag รอซินแส) */

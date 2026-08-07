@@ -77,6 +77,7 @@ export default function StocksPage() {
   }
 
   const elKey = (e: string) => ELMAP[e] ?? e;
+  const CTRY: Record<string, string> = { TH: "🇹🇭 ไทย", US: "🇺🇸 สหรัฐฯ", JP: "🇯🇵 ญี่ปุ่น", CN: "🇨🇳 จีน", IN: "🇮🇳 อินเดีย", KR: "🇰🇷 เกาหลี", HK: "🇭🇰 ฮ่องกง", TW: "🇹🇼 ไต้หวัน", VN: "🇻🇳 เวียดนาม", SG: "🇸🇬 สิงคโปร์", ID: "🇮🇩 อินโดนีเซีย", MY: "🇲🇾 มาเลเซีย", PH: "🇵🇭 ฟิลิปปินส์", AU: "🇦🇺 ออสเตรเลีย", CA: "🇨🇦 แคนาดา", GB: "🇬🇧 อังกฤษ", DE: "🇩🇪 เยอรมนี", FR: "🇫🇷 ฝรั่งเศส", CH: "🇨🇭 สวิส", PK: "🇵🇰 ปากีสถาน", SA: "🇸🇦 ซาอุ", BR: "🇧🇷 บราซิล", MX: "🇲🇽 เม็กซิโก", TR: "🇹🇷 ตุรกี", ZA: "🇿🇦 แอฟริกาใต้" };
   const markets = data ? Object.entries(data.markets).sort((a, b) => b[1] - a[1]) : [];
   const countries = data ? Object.entries(data.countries).sort((a, b) => b[1] - a[1]) : [];
   const elements = ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"];
@@ -108,7 +109,7 @@ export default function StocksPage() {
             <option value="">🌍 {t("stocks.countryAll")}</option>
             {countries.map(([c, n]) => (
               <option key={c} value={c}>
-                {c} ({n})
+                {CTRY[c] ?? c} ({n})
               </option>
             ))}
           </select>
