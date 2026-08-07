@@ -385,10 +385,8 @@ export async function handleCardPdf(q: Query): Promise<{ ok: true; data: Buffer 
   }
 }
 
-/** สร้างสินค้า PDF (เฉพาะเจ้าของ — passcode) — kind=card|full · คนอื่นสร้างไม่ได้ */
+/** สร้างสินค้า PDF — เฉพาะเจ้าของ · ยังไม่ deploy → ไม่เช็ครหัส (คืนรหัสกลับตอน deploy) */
 export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
-  const { OWNER_PASS } = await import("./config");
-  if (String(q.pass ?? "") !== OWNER_PASS) return { ok: false, error: "รหัสเจ้าของไม่ถูกต้อง" };
   const state = await stateFromBirth(q);
   if (!state) return { ok: false, error: "ต้องระบุ birthDate" };
   try {

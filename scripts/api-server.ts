@@ -123,7 +123,7 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === "GET" && path === "/api/product-pdf") {
       const r = await handleProductPdf(q);
-      if (!r.ok) return send(res, 403, err(r.error));
+      if (!r.ok) return send(res, 400, err(r.error));
       return sendRaw(res, 200, r.data, "application/pdf");
     }
     if (req.method === "GET" && path === "/api/stocks") {

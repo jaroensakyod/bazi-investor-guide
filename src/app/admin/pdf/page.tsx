@@ -3,11 +3,9 @@
 import { useState } from "react";
 import { useT } from "../../lib/i18n";
 
-/** สร้างสินค้า PDF — เฉพาะเจ้าของ (passcode) · คนอื่นสร้างไม่ได้ (sub รายเดือนค่อยทำ) */
+/** สร้างสินค้า PDF — เฉพาะเจ้าของ (ยังไม่ deploy → ไม่มีรหัส) · คนอื่นสร้างไม่ได้ (sub รายเดือนค่อยทำ) */
 export default function AdminPdfPage() {
   const t = useT();
-  const [pass, setPass] = useState("");
-  const [authed, setAuthed] = useState(() => (typeof window !== "undefined" ? sessionStorage.getItem("owner_pdf") === "1" : false));
   const [birthDate, setBirthDate] = useState("1993-11-24");
   const [birthTime, setBirthTime] = useState("15:12");
   const [gender, setGender] = useState("male");
@@ -18,23 +16,16 @@ export default function AdminPdfPage() {
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
 
-  function unlock() {
-    if (pass.trim()) {
-      sessionStorage.setItem("owner_pdf", "1");
-      setAuthed(true);
-    }
-  }
-
   async function generate() {
     setBusy(true);
     setError("");
     setNote("");
     try {
-      const params = new URLSearchParams({ pass, birthDate, birthTime, gender, province, kind, tier });
+      const params = new URLSearchParams({ birthDate, birthTime, gender, province, kind, tier });
       const res = await fetch(`/api/product-pdf?${params}`);
       if (!res.ok) {
         const j = await res.json().catch(() => null);
-        setError(j?.error ?? "สร้างไม่สำเร็จ (รหัสผิด?)");
+        setError(j?.error ?? "สร้างไม่สำเร็จ");
         setBusy(false);
         return;
       }
@@ -55,23 +46,63 @@ export default function AdminPdfPage() {
     }
   }
 
-  if (!authed) {
-    return (
-      <div style={{ maxWidth: 420, margin: "0 auto" }}>
-        <div className="card">
-          <h2>🔐 สร้างสินค้า PDF (เฉพาะเจ้าของ)</h2>
-          <p style={{ fontSize: 12.5, color: "#9a937f" }}>กรอกรหัสเจ้าของ — คนอื่นสร้าง PDF ไม่ได้</p>
-          <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} placeholder="รหัสเจ้าของ (OWNER_PASS)" style={{ width: "100%" }} />
-          <button className="btn" onClick={unlock} style={{ marginTop: 10 }}>
-            ปลดล็อก
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div style={{ maxWidth: 560, margin: "0 auto" }}>
+    <div style={{ maxWidth: 620, margin: "0 auto" }}>
+      {/* ── Tools bar ── */}
+      <div
+        style={{
+          display: "flex",
+          gap: 8,
+          flexWrap: "wrap",
+          alignItems: "center",
+          padding: "8px 12px",
+          borderRadius: 10,
+          background: "#141823",
+          border: "1px solid #262a34",
+          marginBottom: 12,
+          fontSize: 12.5,
+        }}
+      >
+        <b style={{ color: "#d4af37" }}>🧰 Tools</b>
+        <button
+          className="btn secondary"
+          style={{ padding: "5px 12px", fontSize: 12 }}
+          onClick={() => {
+            setBirthDate("1993-11-24");
+            setBirthTime("15:12");
+            setGender("male");
+            setProvince("Bangkok");
+          }}
+        >
+          🎯 ตัวอย่างดวง (ทดสอบ)
+        </button>
+        <button
+          className="btn secondary"
+          style={{ padding: "5px 12px", fontSize: 12 }}
+          onClick={() => {
+            setBirthDate("");
+            setBirthTime("");
+            setGender("male");
+            setProvince("Bangkok");
+          }}
+        >
+          🧹 ล้างฟอร์ม
+        </button>
+        <a className="btn secondary" href="/demo" target="_blank" rel="noopener" style={{ padding: "5px 12px", fontSize: 12 }}>
+          🃏 เปิดหน้า demo (สาธารณะ)
+        </a>
+        <a
+          className="btn secondary"
+          href={`/api/card-pdf?birthDate=${birthDate || "1993-11-24"}&birthTime=${birthTime || "15:12"}&gender=${gender}&province=${province}`}
+          target="_blank"
+          rel="noopener"
+          style={{ padding: "5px 12px", fontSize: 12 }}
+        >
+          👁️ ดูตัวอย่างการ์ด (PDF)
+        </a>
+        <span style={{ marginLeft: "auto", fontSize: 11, color: "#9a937f" }}>🔓 โหมดพัฒนา — ยังไม่ deploy ไม่ต้องใช้รหัส</span>
+      </div>
+
       <div className="card" style={{ borderColor: "#d4af37" }}>
         <h2>🛠️ สร้างสินค้า PDF (เฉพาะเจ้าของ)</h2>
         <p style={{ fontSize: 12.5, color: "#9a937f" }}>กรอกวันเกิดลูกค้า → เลือกแบบ + ราคาที่จ่าย → สร้าง PDF (ส่วนที่ยังไม่จ่าย = เบลอ/ล็อก — ลูกค้าเห็นแล้วอยากอัปเกรด)</p>
