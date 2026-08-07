@@ -36,25 +36,23 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   const d = buildPersonalDashboard(state);
   const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
   const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
-  // narrative จาก cache (gen แยก background — PDF ไม่อุดตัน)
-  const narrativeCache: Record<string, string> = {};
-  for (let i = 1; i <= 26; i++) {
-    const f = path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../.."), "data/cache/narratives-v5");
-    try {
-      const files = readdirSync(f);
-      for (const fn of files) {
-        if (fn.startsWith(`${i}-`)) {
-          const c = JSON.parse(readFileSync(path.join(f, fn), "utf8"));
-          if (c.text) narrativeCache[String(i)] = c.text;
-        }
-      }
-    } catch { /* ignore */ }
-  }
-  // v4 fallback
-  let narrative: Record<string, string> = narrativeCache;
+  // narrative จาก cache (gen แยก background — PDF ไม่อุดตัน) — อ่าน dir ครั้งเดียว ไม่ loop 26 รอบ
+  const narrative: Record<string, string> = {};
+  const cacheDir = path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../.."), "data/cache/narratives-v5");
+  try {
+    for (const fn of readdirSync(cacheDir)) {
+      const chMatch = fn.match(/^(\d+)-/);
+      if (!chMatch) continue;
+      const ch = chMatch[1];
+      try {
+        const c = JSON.parse(readFileSync(path.join(cacheDir, fn), "utf8"));
+        if (c.text && c.text.length > 50) narrative[ch] = c.text;
+      } catch { /* ignore */ }
+    }
+  } catch { /* dir ไม่มี — ใช้ v4 fallback */ }
   if (Object.keys(narrative).length < 6) {
     const v4 = await generateReportNarrative(state).catch(() => ({} as Narrative));
-    for (const [k, v] of Object.entries(v4)) { if (v) narrative[k] = v; }
+    for (const [k, v] of Object.entries(v4)) { if (v && !narrative[k]) narrative[k] = v; }
   }
   const font = (FONT_CANDIDATES.find((f) => existsSync(f)) ?? "Helvetica") as string;
   const doc = new PDFDocument({ size: "A4", margins: { top: 0, bottom: 0, left: 0, right: 0 }, bufferPages: true });
