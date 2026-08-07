@@ -343,4 +343,17 @@ export async function handleReportPdf(q: Query): Promise<{ ok: true; data: Buffe
   }
 }
 
+/** PDF รายงานคู่ดวงฉบับเต็ม (userId → ดวง → ดาวน์โหลด .pdf) */
+export async function handleFullReportPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  const profile = loadUser(String(q.userId ?? ""));
+  if (!profile) return { ok: false, error: "ไม่มีโปรไฟล์ — ต้องบันทึกวันเกิดก่อน" };
+  try {
+    const state = await stateOfProfile(profile);
+    const { buildFullReportPdf } = await import("./report-pdf-full");
+    return { ok: true, data: await buildFullReportPdf(state) };
+  } catch (e) {
+    return { ok: false, error: `PDF error: ${(e as Error).message}` };
+  }
+}
+
 export type { UserProfile };

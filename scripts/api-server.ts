@@ -16,7 +16,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { ok, err, type Query } from "../src/api/types";
 import { handleProfile, handleChat } from "../src/api/chat";
-import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf, handleStocks, handleStockDetail, handleRefresh, handleSearch, handleIndices, handleWatchlist, handleExport, handlePicks, handlePersonal } from "../src/api/market";
+import { handleMovers, handleIpo, handleNews, handleAlmanac, handleFortune, handleReport, handleAssets, handlePortfolio, handleReportPdf, handleFullReportPdf, handleStocks, handleStockDetail, handleRefresh, handleSearch, handleIndices, handleWatchlist, handleExport, handlePicks, handlePersonal } from "../src/api/market";
 import { handleDashboard } from "../src/api/dashboard";
 
 const PORT = Number(process.argv[process.argv.indexOf("--port") + 1] ?? 8787);
@@ -104,6 +104,11 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === "GET" && path === "/api/report/pdf") {
       const r = await handleReportPdf(q);
+      if (!r.ok) return send(res, 400, err(r.error));
+      return sendRaw(res, 200, r.data, "application/pdf");
+    }
+    if (req.method === "GET" && path === "/api/report/full-pdf") {
+      const r = await handleFullReportPdf(q);
       if (!r.ok) return send(res, 400, err(r.error));
       return sendRaw(res, 200, r.data, "application/pdf");
     }

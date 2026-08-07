@@ -137,6 +137,22 @@ export default function PersonalPage() {
           )}
         </div>
         {error && <p style={{ color: "#d48f8f" }}>{error}</p>}
+        <div style={{ marginTop: 10 }}>
+          <button
+            className="btn"
+            style={{ background: "#8d6e63", color: "#fff", border: "none", borderRadius: 8, padding: "8px 14px", fontSize: 13, cursor: "pointer" }}
+            onClick={() => {
+              const a = document.createElement("a");
+              a.href = `/api/report/full-pdf?userId=${myUserId()}`;
+              a.download = `รายงานคู่ดวง-${new Date().toISOString().slice(0, 10)}.pdf`;
+              document.body.appendChild(a);
+              a.click();
+              a.remove();
+            }}
+          >
+            📄 ดาวน์โหลดรายงาน PDF (ฉบับเต็ม)
+          </button>
+        </div>
       </div>
 
       {data && (
