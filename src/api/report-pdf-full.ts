@@ -64,53 +64,53 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
     doc.font(F).fontSize(8).fillColor("#bbbbbb").text(`หนา ${doc.bufferedPageRange().count}`, 500, pageH - 52, { width: 48, align: "right" });
   };
   const h1 = (text: string, num: string) => {
-    ensure(40);
-    doc.rect(0, y - 8, 595, 30).fill(C.primary);
-    doc.rect(0, y + 22, 595, 3).fill(C.gold);
-    doc.font(F_B).fontSize(16).fillColor(C.white).text(clean(`${num}  ${text}`), 52, y, { width: 500 });
-    y += 36;
+    ensure(46);
+    doc.rect(0, y - 10, 595, 34).fill(C.primary);
+    doc.rect(0, y + 24, 595, 3).fill(C.gold);
+    doc.font(F_B).fontSize(18).fillColor(C.white).text(clean(`${num}  ${text}`), 52, y, { width: 500 });
+    y += 42;
   };
   const h2 = (text: string) => {
-    ensure(30);
-    doc.rect(52, y, 5, 14).fill(C.gold);
-    doc.fontSize(13).font(F_B).fillColor(C.primary).text(clean(text), 66, y - 1);
-    y += 20;
+    ensure(34);
+    doc.rect(52, y, 5, 16).fill(C.gold);
+    doc.fontSize(15).font(F_B).fillColor(C.primary).text(clean(text), 66, y - 1);
+    y += 24;
   };
   const h3 = (text: string) => {
-    ensure(24);
-    doc.font(F_B).fontSize(11).fillColor(C.ink).text(clean(text), 52, y);
-    y += 16;
+    ensure(28);
+    doc.font(F_B).fontSize(12.5).fillColor(C.ink).text(clean(text), 52, y);
+    y += 20;
   };
-  const p = (text: string, size = 10, color = "#333333") => {
-    ensure(24);
-    doc.fontSize(size).font(F).fillColor(color).text(clean(text), 52, y, { width: 490 });
-    y = doc.y + 4;
+  const p = (text: string, size = 11, color = "#333333") => {
+    ensure(32);
+    doc.fontSize(size).font(F).fillColor(color).text(clean(text), 52, y, { width: 490, lineGap: 4 });
+    y = doc.y + 6;
   };
   const bullet = (txt: string, color = "#333333") => {
-    ensure(22);
-    doc.circle(58, y + 4, 2).fill(color === "#333333" ? C.gold : color);
-    doc.font(F).fontSize(10).fillColor(color).text(clean(txt), 68, y, { width: 472 });
-    y = doc.y + 3;
+    ensure(26);
+    doc.circle(58, y + 5, 2.5).fill(color === "#333333" ? C.gold : color);
+    doc.font(F).fontSize(10.5).fillColor(color).text(clean(txt), 68, y, { width: 472, lineGap: 3 });
+    y = doc.y + 4;
   };
   const callout = (title: string, text: string, kind: "good" | "warn" | "info" = "info") => {
-    ensure(40);
+    ensure(50);
     const fill = kind === "good" ? "#e8f3ea" : kind === "warn" ? "#f9ecec" : "#fdf6e3";
     const edge = kind === "good" ? C.green : kind === "warn" ? C.red : C.gold;
-    doc.roundedRect(52, y, 490, 36, 6).fill(fill);
-    doc.rect(52, y, 4, 36).fill(edge);
-    doc.font(F_B).fontSize(9.5).fillColor(edge).text(clean(title), 64, y + 5, { width: 460 });
-    doc.font(F).fontSize(9).fillColor("#555555").text(clean(text), 64, y + 18, { width: 460 });
-    y += 44;
+    doc.roundedRect(52, y, 490, 44, 8).fill(fill);
+    doc.rect(52, y, 5, 44).fill(edge);
+    doc.font(F_B).fontSize(10.5).fillColor(edge).text(clean(title), 66, y + 7, { width: 460 });
+    doc.font(F).fontSize(10).fillColor("#555555").text(clean(text), 66, y + 24, { width: 460, lineGap: 3 });
+    y += 54;
   };
   const row = (cols: Array<{ text: string; w: number; bold?: boolean; color?: string }>, header = false) => {
-    ensure(20);
+    ensure(22);
     let x = 52;
-    if (header) doc.rect(52, y, 490, 17).fill("#eef2ec");
+    if (header) doc.rect(52, y, 490, 19).fill("#eef2ec");
     for (const c of cols) {
-      doc.font(c.bold || header ? F_B : F).fontSize(header ? 8.5 : 9).fillColor(header ? C.primary : c.color ?? "#333333").text(clean(c.text), x, y + (header ? 3 : 1), { width: c.w });
+      doc.font(c.bold || header ? F_B : F).fontSize(header ? 9 : 10).fillColor(header ? C.primary : c.color ?? "#333333").text(clean(c.text), x, y + (header ? 4 : 1), { width: c.w });
       x += c.w;
     }
-    y += header ? 18 : 15;
+    y += header ? 20 : 17;
   };
   // กราฟโดนัท (polygon approximation — กัน typing/arc)
   const donut = (cx: number, cy: number, r: number, segs: Array<{ pct: number; color: string }>, holeRatio = 0.62) => {
