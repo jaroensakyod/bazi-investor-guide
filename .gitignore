@@ -13,3 +13,5 @@ data/users/
 data/usage.jsonl
 .next/
 npm-debug.log*
+
+data/cache/narratives/
