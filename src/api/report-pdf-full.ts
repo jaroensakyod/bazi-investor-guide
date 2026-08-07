@@ -180,17 +180,43 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
     lockedSection(4, "สินค้าแนะนำตามดวง (11 หมวด)", maxSection <= 2 ? "ฉบับ Pro (฿490)" : "VIP (฿790/เดือน)");
   }
 
-  // ── 5. ไทม์ไลน์วัยจร ──
+  // ── 5. แผนที่ชีวิต (Life Map) ⭐ จุดขาย Pro ──
   if (maxSection >= 5) {
-  h2("5. ไทม์ไลน์วัยจร (15-84 ปี — ทุก 5 ปี)");
-  row([{ text: "ช่วงอายุ", w: 70, bold: true }, { text: "สถานะ", w: 80, bold: true }, { text: "คำแนะนำ", w: 380, bold: true }], true);
-  for (const t of d.timeline) {
-    const verdict = t.verdict === "invest" ? "ลงทุนได" : t.verdict === "accumulate" ? "สะสม" : t.verdict === "avoid" ? "เลี่ยง" : "ไมเสยง";
-    row([{ text: `${t.ageRange} ป`, w: 70 }, { text: verdict, w: 80, bold: true, color: t.verdict === "invest" ? "#2e7d32" : t.verdict === "avoid" ? "#c62828" : "#8d6e63" }, { text: t.advice, w: 380, color: "#555555" }]);
+  h2("5. แผนที่ชีวิต (Life Map) 0-80+ ปี — ดูจบในตาเดียว");
+  const vMeta: Record<string, { label: string; color: string; tint: string }> = {
+    invest: { label: "ลงทุนเต็มที่", color: "#1e6f3e", tint: "#e8f3ea" },
+    accumulate: { label: "สะสม/ถือ", color: "#b8860b", tint: "#f7f1e2" },
+    avoid: { label: "หลีกเลี่ยง", color: "#9b2c2c", tint: "#f9ecec" },
+    "no-risk": { label: "ห้ามเสี่ยง", color: "#6b1f1f", tint: "#f3e3e3" },
+  };
+  // legend (4 สีเรียงแถว)
+  const legendX = [52, 178, 296, 414];
+  for (const [i, m] of Object.values(vMeta).entries()) {
+    doc.roundedRect(legendX[i], y + 2, 10, 10, 2).fill(m.color);
+    doc.font(F).fontSize(8.5).fillColor(C.muted).text(clean(m.label), legendX[i] + 14, y, { width: 100 });
   }
-  y += 4;
+  y += 12;
+  // แต่ละช่วงวัยจร = แถบสี (5 ปี)
+  for (const t of d.timeline) {
+    const m = vMeta[t.verdict] ?? vMeta.accumulate;
+    ensure(22);
+    doc.roundedRect(52, y, 490, 20, 4).fill(m.tint);
+    doc.roundedRect(52, y, 6, 20, 3).fill(m.color);
+    doc.font(F_B).fontSize(9.5).fillColor(C.ink).text(clean(`${t.ageRange} ปี`), 66, y + 4, { width: 58 });
+    doc.font(F_B).fontSize(9.5).fillColor(m.color).text(clean(m.label), 128, y + 4, { width: 82 });
+    doc.font(F).fontSize(8.5).fillColor("#555555").text(clean(t.advice), 214, y + 4, { width: 324 });
+    y += 24;
+  }
+  // สรุปช่วงทอง
+  const golds = d.timeline.filter((t) => t.verdict === "invest");
+  if (golds.length) {
+    y += 2;
+    doc.roundedRect(52, y, 490, 24, 4).fill("#fdf6e3").strokeColor(C.gold).lineWidth(1).stroke();
+    doc.font(F_B).fontSize(9.5).fillColor(C.gold).text(clean(`ช่วงทองของคุณ: ${golds.map((g) => g.ageRange).join(", ")} ปี — ลงทุนเต็มที่ ริเริ่มก่อเกิดลาภ`), 62, y + 6, { width: 470 });
+    y += 30;
+  }
   } else {
-    lockedSection(5, "ไทม์ไลน์วัยจร (แผนที่ชีวิต)", "VIP (฿790/เดือน)");
+    lockedSection(5, "แผนที่ชีวิต (Life Map) 0-80+", "VIP (฿790/เดือน)");
   }
 
   // ── 6. วันมงคลเดือนนี้ ──
