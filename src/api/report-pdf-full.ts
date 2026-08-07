@@ -2,14 +2,15 @@
  * PDF รายงานคู่ดวง ฉบับหนังสือ (สถาบัน) — ปก + สารบัญ + บทนำ + 6 บท (กราฟโดนัท/แท่ง + กล่องรู้/ระวัง) + ภาคผนวก (เช็กลิสต์/อภิธาน)
  * ใช้กับ /api/product-pdf?tier=free|99|490|790 · กราฟวาดด้วย PDFKit (arc/rect) — ไม่ต้องใช้รูปภายนอก
  */
-import { existsSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import PDFDocument from "pdfkit";
 import type { CalculatedStateValue } from "../lib/bazi/schema-types";
 import { buildPersonalDashboard } from "../lib/portfolio/personal-dashboard";
 import { buildMonthlyPicks } from "../lib/picks/monthly-picks";
 import type { StockTier } from "../lib/investor/stock-tiers";
 import { generateReportNarrative, type Narrative } from "../lib/report/narrative";
-import { generateBookNarrative } from "../lib/report/narrative-v5";
 
 const FONT_CANDIDATES = [
   process.env.PDF_FONT,
@@ -35,8 +36,26 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   const d = buildPersonalDashboard(state);
   const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
   const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
-  // LLM อธิบายความหมาย — v5 หนังสือขาย (gen 25 บท) + fallback v4
-  const narrative = await generateBookNarrative(state).catch(async () => (await generateReportNarrative(state).catch(() => ({}))) as Narrative);
+  // narrative จาก cache (gen แยก background — PDF ไม่อุดตัน)
+  const narrativeCache: Record<string, string> = {};
+  for (let i = 1; i <= 26; i++) {
+    const f = path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../.."), "data/cache/narratives-v5");
+    try {
+      const files = readdirSync(f);
+      for (const fn of files) {
+        if (fn.startsWith(`${i}-`)) {
+          const c = JSON.parse(readFileSync(path.join(f, fn), "utf8"));
+          if (c.text) narrativeCache[String(i)] = c.text;
+        }
+      }
+    } catch { /* ignore */ }
+  }
+  // v4 fallback
+  let narrative: Record<string, string> = narrativeCache;
+  if (Object.keys(narrative).length < 6) {
+    const v4 = await generateReportNarrative(state).catch(() => ({} as Narrative));
+    for (const [k, v] of Object.entries(v4)) { if (v) narrative[k] = v; }
+  }
   const font = (FONT_CANDIDATES.find((f) => existsSync(f)) ?? "Helvetica") as string;
   const doc = new PDFDocument({ size: "A4", margins: { top: 0, bottom: 0, left: 0, right: 0 }, bufferPages: true });
   const chunks: Buffer[] = [];
@@ -327,16 +346,26 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   if (maxSection >= 3) {
     partH("4", "ลงทุนเมื่อไหร่", "จังหวะชีวิตทั้ง 80 ปี — ช่วงไหนรวย ช่วงไหนต้องระวัง");
     h2("บท 16 · วัยจร 0-20 (ปฐมวัย — สร้างนิสัย)");
+    const n16 = n("16", "ช่วงแรกของชีวิต — ตั้งฐานการเงินผ่านนิสัยการออมและการใช้เงิน");
+    if (n16) p(n16, 11);
     for (const t of phaseOf(0, 20)) lifeRow(t);
     h2("บท 17 · วัยจร 20-40 (สร้างตัว — สะสมก้อน)");
+    const n17 = n("17", "ช่วงสร้างฐาน: เริ่มมีรายได้ — ใช้เงินฉุกเฉินก่อน เงินเย็นตาม เงินเร็วสุดท้าย");
+    if (n17) p(n17, 11);
     for (const t of phaseOf(20, 40)) lifeRow(t);
     h2("บท 18 · วัยจร 40-60 (จังหวะทอง)");
+    const n18 = n("18", "จังหวะทองของชีวิต — วัยนี้คือเวลาลงทุนเต็มที่ อย่าพลาด");
+    if (n18) p(n18, 11);
     for (const t of phaseOf(40, 60)) lifeRow(t);
     const golds = phaseOf(40, 60).filter((t) => t.verdict === "invest");
     if (golds.length) callout("ช่วงทอง", `${golds.map((g) => g.ageRange).join(", ")} ปี — ลงทุนเต็มที่ ริเริ่มก่อเกิดลาภ อย่าพลาด`, "good");
     h2("บท 19 · วัยจร 60-80 (รักษาทรัพย์)");
+    const n19 = n("19", "ช่วงรักษาทรัพย์ — เปลี่ยนเป็นเงินเย็น/มรดก งดเสี่ยงก้อนใหญ่");
+    if (n19) p(n19, 11);
     for (const t of phaseOf(60, 100)) lifeRow(t);
     h2("บท 20 · แผนที่ชีวิต (Life Map 0-80+ ดูจบในตาเดียว)");
+    const n20 = n("20", "แผนที่ทั้งชีวิตในหน้าเดียว — นี่คือเข็มทิศการเงินของคุณ");
+    if (n20) p(n20, 11);
     for (const t of d.timeline) lifeRow(t);
     const allGolds = d.timeline.filter((t) => t.verdict === "invest");
     if (allGolds.length) {
@@ -371,12 +400,16 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   if (maxSection >= 6) {
     partH("6", "เสริมดวง", "ดวงดีขึ้นได้ — สี/ทิศ/เครื่องราง + เสริมตามวัยจร");
     h2("บท 24 · สี / ทิศ / เครื่องราง (เสริมธาตุ)");
+    const n24 = n("24", "อาวุธลับที่หลายคนมองข้าม — สีเสื้อ ทิศทางที่นั่ง เครื่องรางเล็กๆ");
+    if (n24) p(n24, 11);
     const boost = { ไม้: { color: "เขียว/น้ำตาล", dir: "ตะวันออก", item: "ต้นไม้ ไม้มงคล หนังสือ" }, ไฟ: { color: "แดง/ส้ม/ม่วง", dir: "ทิศใต้", item: "เทียน ตะเกียง ของร้อนแรง" }, ดิน: { color: "เหลือง/ครีม/น้ำตาล", dir: "กลาง/ตะวันตกเฉียงใต้", item: "หิน แร่ เซรามิก" }, ทอง: { color: "ขาว/เงิน/ทอง", dir: "ตะวันตก", item: "เหรียญ กุญแจ โลหะ" }, น้ำ: { color: "ดำ/น้ำเงินเข้ม", dir: "ทิศเหนือ", item: "น้ำพุ ตู้ปลา กระจก" } }[d.strengthen.element] ?? { color: "แดง/ส้ม", dir: "ทิศใต้", item: "เทียน ของร้อนแรง" };
     row([{ text: "ธาตุที่ต้องเสริม", w: 120, bold: true }, { text: d.strengthen.element, w: 370, color: C.green }], true);
     row([{ text: "สี", w: 120, bold: true }, { text: boost.color, w: 370 }]);
     row([{ text: "ทิศ", w: 120, bold: true }, { text: boost.dir, w: 370 }]);
     row([{ text: "เครื่องราง/ของเสริม", w: 120, bold: true }, { text: boost.item, w: 370 }]);
     h2("บท 25 · เสริมตามวัยจร (ช่วงนี้ต้องเสริมอะไร)");
+    const n25 = n("25", "ตรงนี้ — ในวัยนี้ คุณต้องพึ่งธาตุอะไรให้ดวงดี");
+    if (n25) p(n25, 11);
     for (const t of d.timeline.slice(0, 4)) lifeRow(t);
     p("* วัยจรถัดไป = เปลี่ยนธาตุ — อ่านภาค 4 วางแผนล่วงหน้า 5 ปี", 9, "#999999");
     h1(`ฉบับเดือนนี้ (${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })})`, "บท 26");
