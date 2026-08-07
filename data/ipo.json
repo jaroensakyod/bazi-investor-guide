@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-08-06",
-  "count": 41,
+  "count": 45,
   "entries": [
     {
       "ticker": "ATTO",
@@ -625,6 +625,66 @@
       "business": "Biotech/therapeutics (청약 8/18)",
       "source": "38.co.kr 2026-08",
       "fetchedAt": "2026-08-06T12:48:28.542Z"
+    },
+    {
+      "ticker": "UAP",
+      "name": "UNITED ASIAPAC ENERGY BERHAD",
+      "nameEn": "United Asiapac Energy Berhad",
+      "market": "BURSA",
+      "country": "MY",
+      "exchange": "Bursa ACE Market",
+      "ipoDate": "2026-08-19",
+      "priceRange": "RM0.35",
+      "currency": "MYR",
+      "status": "upcoming",
+      "business": "พลังงาน — 139.22M หุ้น public issue (offer 28/7-5/8)",
+      "source": "Bursa IPO Summary 2026",
+      "fetchedAt": "2026-08-07T03:32:11.260Z"
+    },
+    {
+      "ticker": "DVAC",
+      "name": "DatVietVAC (Điện ảnh & truyền thông)",
+      "nameEn": "DatVietVAC Holdings",
+      "market": "HOSE",
+      "country": "VN",
+      "exchange": "HOSE",
+      "ipoDate": null,
+      "priceRange": "₫54,800",
+      "currency": "VND",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "สื่อ/บันเทิง — เบื้องหลังรายการ Anh trai say hi (IPO 54,800₫)",
+      "source": "thanhnien.vn 2026-08",
+      "fetchedAt": "2026-08-07T03:32:11.260Z"
+    },
+    {
+      "ticker": "DMX",
+      "name": "Điện Máy Xanh (The Gioi Di Dong)",
+      "nameEn": "Dien May Xanh JSC",
+      "market": "HOSE",
+      "country": "VN",
+      "exchange": "HOSE",
+      "ipoDate": null,
+      "priceRange": null,
+      "currency": "VND",
+      "status": "ยื่น ก.ล.ต.",
+      "business": "ค้าปลีกเครื่องใช้ไฟฟ้า — chào bán 179.5M หุ้น (P/E ~10x)",
+      "source": "thanhnien.vn 2026-08",
+      "fetchedAt": "2026-08-07T03:32:11.260Z"
+    },
+    {
+      "ticker": "ALEIK",
+      "name": "أليك القابضة (Aleik Holding)",
+      "nameEn": "Aleik Holding PJSC",
+      "market": "DFM",
+      "country": "AE",
+      "exchange": "DFM",
+      "ipoDate": "2026-09-30",
+      "priceRange": null,
+      "currency": "AED",
+      "status": "upcoming",
+      "business": "Food service/catering (UAE) — เปิดจอง 23-30 ก.ย.",
+      "source": "DFM 2026-09",
+      "fetchedAt": "2026-08-07T03:32:11.260Z"
     }
   ]
 }
