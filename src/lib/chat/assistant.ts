@@ -154,6 +154,36 @@ async function callLLM(
   };
 }
 
+/** wrapper สำหรับงานเจนข้อความตรงๆ (ไม่ใช้ tools) — เช่น เขียนคำอธิบายรายงาน PDF */
+export async function chatComplete(messages: ChatMessage[], opts?: { maxTokens?: number; temperature?: number; timeoutMs?: number }): Promise<string> {
+  const key = ENV.LLM_API_KEY;
+  if (!key) throw new Error("LLM_API_KEY ไม่มี");
+  const base = ENV.LLM_BASE_URL ?? "https://api.nousresearch.com/v1";
+  const model = ENV.LLM_MODEL ?? "deepseek/deepseek-v4-flash-0731";
+  // ใช้ race timeout (ไม่ abort fetch — กัน libuv crash บน Windows) · งบ tokens ต้องพอ (reasoning กินงบก่อน)
+  const res = await Promise.race([
+    fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+      body: JSON.stringify({
+        model,
+        messages,
+        temperature: opts?.temperature ?? 0.5,
+        max_tokens: opts?.maxTokens ?? 1500,
+      }),
+    }),
+    new Promise<never>((_, rej) => setTimeout(() => rej(new Error(`LLM timeout (${opts?.timeoutMs ?? 60000}ms)`)), opts?.timeoutMs ?? 60000)),
+  ]);
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    throw new Error(`LLM HTTP ${res.status}: ${body.slice(0, 200)}`);
+  }
+  const json = (await res.json()) as { choices?: Array<{ message?: { content?: string | null } }> };
+  const content = json.choices?.[0]?.message?.content;
+  if (!content) throw new Error("LLM ตอบไม่มี content");
+  return content;
+}
+
 export type AssistantOptions = {
   /** ส่ง key ตรงๆ (เทสต์/CLI) — ถ้าไม่ส่ง อ่านจาก .env */
   apiKey?: string;

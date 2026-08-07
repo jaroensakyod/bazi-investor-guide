@@ -7,7 +7,8 @@ import PDFDocument from "pdfkit";
 import type { CalculatedStateValue } from "../lib/bazi/schema-types";
 import { buildPersonalDashboard } from "../lib/portfolio/personal-dashboard";
 import { buildMonthlyPicks } from "../lib/picks/monthly-picks";
-import { TIER_META, type StockTier } from "../lib/investor/stock-tiers";
+import type { StockTier } from "../lib/investor/stock-tiers";
+import { generateReportNarrative, type Narrative } from "../lib/report/narrative";
 
 const FONT_CANDIDATES = [
   process.env.PDF_FONT,
@@ -35,6 +36,8 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   const d = buildPersonalDashboard(state);
   const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
   const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
+  // LLM อธิบายความหมาย (ทำไม/เพื่ออะไร/ดี-ไม่ดี/แล้วยังไง) — ล้มเหลว = ใช้เทมเพลต
+  const narrative = await generateReportNarrative(state).catch(() => ({}) as Narrative);
   const font = (FONT_CANDIDATES.find((f) => existsSync(f)) ?? "Helvetica") as string;
   const doc = new PDFDocument({ size: "A4", margins: { top: 0, bottom: 0, left: 0, right: 0 }, bufferPages: true });
   const chunks: Buffer[] = [];
@@ -125,6 +128,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   // ── 1. มุมมองดวง ──
   if (maxSection >= 1) {
   h2("1. มุมมองดวง (Verdict)");
+  p(narrative["1"] ?? "ส่วนนี้สรุปกำลังดวงของคุณ — เป็นหลักตั้งต้นของทุกคำแนะนำในรายงานฉบับนี้ (อ่านก่อนส่วนอื่น)", 10, "#8d6e63");
   p(`${d.principle.band === "weak" ? "ดิถีอ่อน" : d.principle.band === "strong" ? "ดิถีแข็ง" : "ดิถีสมดุล"} — ${d.principle.mode} · ${d.principle.desc}`, 11, "#333333");
   p(`หลักการ: ดวงแข็งเกินไป → ถ่ายเท (${d.principle.outputElement}) · ดวงอ่อน/ขาด → เสริม (${d.principle.supplementElement})`, 10.5);
   p(`ธาตุที่ต้องเสริม: ${d.strengthen.element} (${d.strengthen.businessHint}) · ธาตุลาภ: ${d.strengthen.wealth} · ธาตุเลี่ยง: ${d.avoid.join("/")}`, 10.5, "#8d6e63");
@@ -140,6 +144,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   // ── 2. จัดสรรเงินตามกำลังดวง ──
   if (maxSection >= 2) {
   h2("2. การจัดสรรเงินตามกำลังดวง");
+  p(narrative["2"] ?? "ทำไมต้องสัดส่วนนี้: กำลังดวงของคุณกำหนดว่า 'ไล่กำไรได้แค่ไหน' — ดิถีอ่อนต้องกันเงินเย็นไว้มาก (70%) เพื่อไม่ให้พลาดจังหวะรวยตอนวัยจรหนุน", 10, "#8d6e63");
   p(`เงินเย็น (ยาว) ${d.trading.split.cold}% — ${d.instruments.cold.join(", ")}`, 10.5);
   p(`เงินเร็ว (เทรด) ${d.trading.split.fast}% — ${d.instruments.fast.join(", ")}`, 10.5);
   p(`เงินสำรองฉุกเฉิน ${d.trading.split.emergency}% — ${d.instruments.emergency.join(", ")}`, 10.5);
@@ -152,6 +157,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   // ── 3. หุ้นเด่นประจำเดือน (เทียร์) ──
   if (maxSection >= 3) {
   h2("3. พอร์ตเด่นประจำเดือน (คัดโดย ดวง x พื้นฐาน x โมเมนตัม)");
+  p(narrative["3"] ?? "วิธีอ่าน: เทียร์ 1 [VIP] = ตรงดวง+พื้นฐานแข็งสุด (เริ่มดูที่นี่ก่อน) · เทียร์ 4 [INFO] = ข้อมูลเท่านั้น ยังไม่ควรแตะ — คัดจาก 5,958 หุ้น 27 ตลาด เฉพาะธาตุตรงดวง + เคารพสมดุลดิถี", 10, "#8d6e63");
   p(`TH30 (เทียบ SET): ${thPicks.benchmark.changePct != null ? `${thPicks.benchmark.changePct}%` : "-"} วันนี้ · คัดเฉพาะธาตุตรงดวง — เคารพสมดุลดิถี (อ่อน: อย่าไล่ลาภ)`, 10, "#666666");
   row([{ text: "อันดับ", w: 40, bold: true }, { text: "หุ้น", w: 90, bold: true }, { text: "ธาตุ", w: 40, bold: true }, { text: "เทียร์", w: 110, bold: true }, { text: "คะแนน", w: 50, bold: true }, { text: "เหตุผลหลัก", w: 170, bold: true }], true);
   for (const [i, pk] of thPicks.picks.entries()) {
@@ -171,6 +177,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   // ── 4. สินค้าแนะนำ (หมวดเด่น + เทียร์) ──
   if (maxSection >= 4) {
   h2("4. สินค้าแนะนำตามดวง (11 หมวด)");
+  p(narrative["4"] ?? "วิธีอ่าน: 'ตรงดวง' = ธาตุสินค้าอยู่ในธาตุที่ดวงคุณต้องเสริม (ลงทุนได้) · 'ดูดพลัง' = ธาตุลาภเกิน/ขัด — หลีกเลี่ยง · 'ขัดดวง' = ธาตุพิฆาต — อย่าแตะ", 10, "#8d6e63");
   for (const cat of d.categories) {
     const items = cat.items.slice(0, 2).map((it) => `${it.ticker}(${TIER_LABEL[it.stockTier as StockTier] ?? "[FREE]"} ${it.fit === "good" ? "ตรงดวง" : it.fit === "drain" ? "ดูดพลัง" : it.fit === "avoid" ? "ขัดดวง" : "กลาง"})`).join(", ");
     if (items) p(`${cat.label}: ${items}`, 10, "#333333");
@@ -183,6 +190,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   // ── 5. แผนที่ชีวิต (Life Map) ⭐ จุดขาย Pro ──
   if (maxSection >= 5) {
   h2("5. แผนที่ชีวิต (Life Map) 0-80+ ปี — ดูจบในตาเดียว");
+  p(narrative["5"] ?? "วิธีอ่าน: แต่ละแถบ = วัยจร 5 ปี (เปลี่ยนทุก 5 ปี) — เขียว=ลงทุนเต็มที่ · เหลือง=สะสม/ถือ · แดง=เลี่ยง/ห้ามเสี่ยง — วางแผนการเงินทั้งชีวิตจากแถบนี้ อย่าพลาดช่วงทอง", 10, "#8d6e63");
   const vMeta: Record<string, { label: string; color: string; tint: string }> = {
     invest: { label: "ลงทุนเต็มที่", color: "#1e6f3e", tint: "#e8f3ea" },
     accumulate: { label: "สะสม/ถือ", color: "#b8860b", tint: "#f7f1e2" },
@@ -222,11 +230,22 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   // ── 6. วันมงคลเดือนนี้ ──
   if (maxSection >= 6) {
   h2("6. วันมงคล / วันระวัง (เดือนนี้)");
+  p(narrative["6"] ?? "วิธีใช้: วันมงคล = เหมาะทำธุรกรรมใหญ่ (ซื้อก้อน/ลงทุน/เซ็นสัญญา) · วันระวัง = งดตัดสินใจเสี่ยง เก็บเงินสด — ธาตุเดือนที่เปลี่ยนไป = ปรับน้ำหนักพอร์ตตาม", 10, "#8d6e63");
   p(`ธาตุเดือน: ${d.monthAdvice.element ?? "-"} (${d.monthAdvice.fit === "good" ? "หนุนดวง" : d.monthAdvice.fit === "avoid" ? "ขัดดวง" : "กลาง"}) — ${d.monthAdvice.text}`, 10.5);
   p(`วันมงคล ${d.auspiciousDays.month.goodDayCount} วัน: ${d.auspiciousDays.month.goodDays.map((g) => g.date).join(", ")}`, 10.5, "#2e7d32");
   p(`วันระวัง ${d.auspiciousDays.month.avoidDayCount} วัน: ${d.auspiciousDays.month.avoidDays.map((g) => g.date).join(", ")}`, 10.5, "#c62828");
   } else {
     lockedSection(6, "วันมงคล / วันระวัง (รายเดือน)", "VIP (฿790/เดือน)");
+  }
+
+  // ── สรุปท้าย (LLM) ──
+  if (maxSection >= 2 && narrative.summary) {
+    ensure(40);
+    doc.roundedRect(52, y, 490, 8, 2).fill(C.gold);
+    doc.roundedRect(52, y + 8, 490, 56, 4).fill("#fdf6e3");
+    doc.font(F_B).fontSize(11.5).fillColor(C.primary).text(clean("สรุป — ทำอะไรเป็นอันดับแรก"), 62, y + 16, { width: 470 });
+    doc.font(F).fontSize(9.5).fillColor("#555555").text(clean(narrative.summary), 62, y + 34, { width: 470 });
+    y += 72;
   }
 
   doc.end();
