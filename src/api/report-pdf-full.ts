@@ -160,7 +160,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   doc.font(F_B).fontSize(13).fillColor("#cfe3d4").text(clean("ดวงนักลงทุน  ·  ฉบับสถาบัน"), 52, 40);
   doc.font(F_B).fontSize(34).fillColor(C.white).text(clean("รายงานการลงทุนคู่ดวง"), 52, 80, { width: 490 });
   doc.font(F).fontSize(13).fillColor("#cfe3d4").text(clean("ดวง 60 กะจื่อ  x  หุ้น/สินทรัพย์จริง  x  แผนที่ชีวิตทั้งชีวิต"), 52, 130, { width: 490 });
-  doc.font(F).fontSize(11).fillColor("#9fb8a8").text(`ฉบับ ${maxSection >= 6 ? "VIP ฉบับเต็ม" : maxSection >= 4 ? "PRO" : maxSection >= 2 ? "ฉบับสรุป" : "ตัวอย่าง"}  ·  วันที่ ${new Date().toISOString().slice(0, 10)}`, 52, 160);
+  doc.font(F).fontSize(11).fillColor("#9fb8a8").text(`ฉบับ ${maxSection >= 6 ? "VIP ฉบับเต็ม" : maxSection >= 4 ? "PRO" : maxSection >= 2 ? "ฉบับสรุป" : "ตัวอย่าง"}  ·  ${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })}`, 52, 160);
   doc.roundedRect(52, 540, 490, 70, 10).fill("#fdf6e3");
   doc.font(F_B).fontSize(20).fillColor(C.primary).text(clean(`${d.persona.emoji} ${d.persona.name}`), 68, 556, { width: 450 });
   doc.font(F).fontSize(11.5).fillColor(C.muted).text(clean(`${d.persona.bandLabel}  ·  สไตล์ ${d.persona.style}  ·  เทรด: ${d.trading.label}`), 68, 584, { width: 450 });
@@ -384,31 +384,77 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
     lockedSection("บทที่ 6", "วันมงคล / วันระวัง (รายเดือน)", "VIP (฿790/เดือน)");
   }
 
+  // ══════════ บท 7: ฉบับเดือนนี้ (VIP — ของสด) ══════════
+  if (maxSection >= 6) {
+    doc.addPage();
+    y = 52;
+    footer();
+    h1(`ฉบับเดือนนี้ (${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })})`, "บทที่ 7");
+    p("ส่วนนี้คือ 'ของสด' ของสมาชิก VIP — อัปเดตทุกเดือนตามธาตุเดือนที่เปลี่ยนไป (เนื้อหาส่วนอื่นเป็นพื้นฐานคงที่)", 10, "#8d6e63");
+    h2("ธาตุเดือนนี้ — หนุนหรือขัดดวง");
+    const mf = d.monthAdvice.fit === "good" ? "หนุนดวง" : d.monthAdvice.fit === "avoid" ? "ขัดดวง" : "กลาง";
+    callout(`ธาตุเดือน: ${d.monthAdvice.element ?? "-"} (${mf})`, d.monthAdvice.text, d.monthAdvice.fit === "good" ? "good" : d.monthAdvice.fit === "avoid" ? "warn" : "info");
+    h2("ปฏิทินมงคลทั้งเดือน");
+    p(`วันมงคล ${d.auspiciousDays.month.goodDayCount} วัน (เหมาะซื้อก้อน/เซ็นสัญญา):`, 10, C.green);
+    const gd = d.auspiciousDays.month.goodDays.map((g) => g.date);
+    for (let i = 0; i < gd.length; i += 6) row(gd.slice(i, i + 6).map((x) => ({ text: x, w: 78, color: C.green })));
+    p(`วันระวัง ${d.auspiciousDays.month.avoidDayCount} วัน (งดเสี่ยง):`, 10, C.red);
+    const ad = d.auspiciousDays.month.avoidDays.map((g) => g.date);
+    for (let i = 0; i < ad.length; i += 6) row(ad.slice(i, i + 6).map((x) => ({ text: x, w: 78, color: C.red })));
+    h2("แผนเดือนนี้ (ตามธาตุเดือน)");
+    const plan = d.monthAdvice.fit === "good"
+      ? `เดือนนี้ ${d.monthAdvice.element ?? "ธาตุ"} หนุนดวง → เพิ่มน้ำหนักสินทรัพย์ธาตุ ${d.strengthen.element} ได้ · ทำธุรกรรมใหญ่ในวันมงคล · ทยอย DCA ตามแผน`
+      : d.monthAdvice.fit === "avoid"
+        ? `เดือนนี้ ${d.monthAdvice.element ?? "ธาตุ"} ขัดดวง → ลดความเสี่ยง งดซื้อก้อนใหญ่ เก็บเงินสดในวันระวัง · รอเดือนหน้า`
+        : "เดือนนี้ธาตุกลาง → ทำตามแผนปกติ ทยอยสะสมในวันมงคล อย่าเปลี่ยนกลยุทธ์กลางคัน";
+    callout("สิ่งที่ต้องทำเดือนนี้", plan, "good");
+    callout("กฎเหล็ก 5 ข้อ (ทุกเดือน)", "1) ซื้อเฉพาะวันมงคล  2) ไม่เกิน 5% ต่อตัว  3) ผ่านเช็กลิสต์ 30 ข้อก่อน  4) เงินฉุกเฉินห้ามแตะ  5) ธาตุเดือนขัด = ลดน้ำหนัก", "warn");
+  } else {
+    doc.addPage();
+    y = 52;
+    footer();
+    lockedSection("บทที่ 7", `ฉบับเดือนนี้ (ของสด VIP)`, "VIP (฿790/เดือน)");
+  }
+
   // ══════════ ภาคผนวก ก: เช็กลิสต์ ══════════
   if (maxSection >= 3) {
     doc.addPage();
     y = 52;
     footer();
-    h1("เช็กลิสต์ก่อนลงทุน (20 ข้อ)", "ภาคผนวก ก");
-    p("ตรวจทุกข้อก่อนซื้อทุกครั้ง — ผ่าน 16/20 ขึ้นไปถึงเริ่ม  (ข้อไหนไม่ได้ = หยุดก่อน)", 10, "#8d6e63");
-    const checks: Array<[string, boolean]> = [
+    h1("เช็กลิสต์ก่อนลงทุน (30 ข้อ)", "ภาคผนวก ก");
+    p("ตรวจทุกข้อก่อนซื้อทุกครั้ง — ผ่าน 24/30 ขึ้นไปถึงเริ่ม  (ข้อไหนไม่ได้ = หยุดก่อน)", 10, "#8d6e63");
+    const checks = [
       [`หุ้นธาตุ = ${d.strengthen.element} หรือธาตุที่ควรทำ (ไม่ใช่ ${d.avoid.join("/")})`, true],
       ["fit ไม่ใช่ 'ขัดดวง' (ธาตุพิฆาต)", true],
       ["fit ไม่ใช่ 'ดูดพลัง' ถ้าดิถีอ่อน", true],
       ["เทียร์ไม่ใช่ INFO (เทียร์ 4 = ยังไม่ควรแตะ)", true],
       ["อยู่ในช่วงวัยจรที่ไม่ใช่ 'เลี่ยง/ห้ามเสี่ยง'", true],
-      ["สัดส่วนเงินเย็น/เร็ว/ฉุกเฉินยังคงเดิม (ไม่เอาเงินฉุกเฉินไปลง)", true],
+      ["สัดส่วนเงินเย็น/เร็ว/ฉุกเฉินยังคงเดิม", true],
       ["ซื้อเฉพาะวันมงคล (บท 6)", true],
       ["ไม่ซื้อเกิน 5% ของพอร์ตต่อตัวเดียว", true],
       ["มีเหตุผลเขียนได้ 1 บรรทัด (ธุรกิจ+ธาตุ+เทียร์)", true],
-      ["ราคา/สภาพคล่อง: หุ้นเล็กซื้อได้เฉพาะเงินเร็ว", true],
+      ["หุ้นใหญ่/สภาพคล่องดี (เล็ก = เงินเร็วเท่านั้น)", true],
       ["DCA ดีกว่าซื้อทีเดียวถ้าวัยจร 'สะสม'", true],
       ["ไม่ใช้เงินกู้/มาร์จิ้น (ดิถีอ่อนยิ่งห้าม)", true],
       ["ตั้งจุดตัดขาดทุนไว้ก่อนซื้อ (เช่น -15%)", true],
-      ["ธาตุเดือนนี้ไม่ขัด (บท 6)", true],
+      ["ธาตุเดือนนี้ไม่ขัด (บท 7)", true],
       ["หุ้นมีธาตุชัดเจน (ไม่ใช่ธาตุคลุมเครือ)", true],
-      ["ผ่านเกณฑ์: 16/20 ขึ้นไป", false],
-    ];
+      ["พื้นฐาน: ROE ≥ 15% หรือ Buffett ผ่าน (ถ้ามีข้อมูล)", true],
+      ["ราคาไม่แพงเกิน: PE ไม่สูงสุดเป็นประวัติการณ์", true],
+      ["เงินเย็นของเดือนนี้เหลือพอ (ไม่กู้เกิน)", true],
+      ["ซื้อแล้วถือได้ 1 ปีขึ้นไป (ไม่ใช่เล่นสั้น)", true],
+      ["มีเงินฉุกเฉิน 6 เดือนก่อนซื้อ", true],
+      ["เช็กข่าวลบรอบตัวหุ้น (อัปเดต 1 สัปดาห์)", true],
+      ["ไม่ซื้อตามกระแสโซเชียล (ดวงไม่เอื้อ)", true],
+      ["เปรียบเทียบกับพอร์ต: ไม่ซ้ำธาตุเดียวเกิน 40%", true],
+      ["วันนี้ไม่ใช่วันระวัง/ผั่วไฉ่โข่ว", true],
+      ["สินทรัพย์ตรงกับกองที่ตั้งไว้ (เย็น/เร็ว/ฉุกเฉิน)", true],
+      ["หุ้น IPO: ธาตุบริษัทชัดเจน + รอผ่านวันขึ้น 1 สัปดาห์", true],
+      ["ไม่ได้ใช้เงินที่ต้องใช้ใน 6 เดือน", true],
+      ["เข้าใจธุรกิจของหุ้น (อธิบายได้ 2 ประโยค)", true],
+      ["ตั้งเป้าหมายกำไร/ขายไว้ล่วงหน้า", true],
+      ["ผ่านเกณฑ์ 24/30 ขึ้นไป", false],
+    ] as Array<[string, boolean]>;
     for (const [txt, ok] of checks) {
       doc.circle(58, y + 5, 5).stroke(ok ? C.green : C.gold).lineWidth(1);
       doc.font(F).fontSize(9.5).fillColor("#333333").text(clean(txt), 70, y, { width: 470 });
