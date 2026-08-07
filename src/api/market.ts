@@ -155,8 +155,20 @@ export function handleStocks(q: Query): ApiResponse<unknown> {
   const marketIn = q.market ?? "";
   const marketAlias: Record<string, string[]> = { th: ["SET", "mai"], us: ["NYSE", "NASDAQ", "NYSE/NASDAQ"], cn: ["SSE", "SZSE"], eu: ["LSE", "XETR", "EPA", "SWX"] };
   const markets = marketAlias[marketIn.toLowerCase()] ?? (marketIn ? [marketIn] : []);
-  const all = getAllStocks()
+  const elementIn = q.element ?? "";
+  const countryIn = q.country ?? "";
+  const all0 = getAllStocks();
+  // นับรวม (สำหรับ UI กรอง) — ทั้งหมด ไม่กรอง
+  const elementCounts: Record<string, number> = {};
+  const countries: Record<string, number> = {};
+  for (const s of all0) {
+    elementCounts[s.primaryElement] = (elementCounts[s.primaryElement] ?? 0) + 1;
+    countries[s.country] = (countries[s.country] ?? 0) + 1;
+  }
+  const all = all0
     .filter((s) => markets.length === 0 || markets.includes(s.market))
+    .filter((s) => !elementIn || s.primaryElement === elementIn)
+    .filter((s) => !countryIn || s.country === countryIn)
     .filter((s) => !query || s.ticker.toLowerCase().includes(query) || s.name.toLowerCase().includes(query) || (s.nameEn ?? "").toLowerCase().includes(query))
     .map((s) => {
       const md = snap?.quotes[yahooTicker(s.ticker, s.market) ?? ""];
@@ -164,7 +176,7 @@ export function handleStocks(q: Query): ApiResponse<unknown> {
     });
   const marketCounts: Record<string, number> = {};
   for (const s of getAllStocks()) marketCounts[s.market] = (marketCounts[s.market] ?? 0) + 1;
-  return ok({ count: all.length, total: getAllStocks().length, markets: marketCounts, stocks: all.slice(0, Number(q.limit ?? 200)) });
+  return ok({ count: all.length, total: getAllStocks().length, markets: marketCounts, elementCounts, countries, stocks: all.slice(0, Number(q.limit ?? 200)) });
 }
 
 /** รายละเอียดหุ้นตัวเดียว (ประกอบกิจการอะไร + ราคาวันนี้ + พื้นฐานถ้ามี) */

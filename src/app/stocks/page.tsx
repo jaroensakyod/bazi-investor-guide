@@ -5,7 +5,7 @@ import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
 type StockRow = { ticker: string; name: string; market: string; country: string; sector: string; element: string; tier: string; price: number | null; changePct: number | null };
-type StocksData = { count: number; total: number; markets: Record<string, number>; stocks: StockRow[] };
+type StocksData = { count: number; total: number; markets: Record<string, number>; elementCounts: Record<string, number>; countries: Record<string, number>; stocks: StockRow[] };
 type StockDetail = {
   ticker: string;
   name: string;
@@ -37,6 +37,8 @@ export default function StocksPage() {
   const t = useT();
   const [data, setData] = useState<StocksData | null>(null);
   const [market, setMarket] = useState("");
+  const [element, setElement] = useState("");
+  const [country, setCountry] = useState("");
   const [q, setQ] = useState("");
   const [detail, setDetail] = useState<StockDetail | null>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -52,11 +54,13 @@ export default function StocksPage() {
   const load = useCallback(async () => {
     const params = new URLSearchParams({ limit: "300" });
     if (market) params.set("market", market);
+    if (element) params.set("element", element);
+    if (country) params.set("country", country);
     if (q.trim()) params.set("q", q.trim());
     const r = await get<StocksData>(`/api/stocks?${params}`);
     if (r.ok) setData(r.data);
     else setError(r.error);
-  }, [market, q]);
+  }, [market, element, country, q]);
 
   useEffect(() => {
     const h = setTimeout(load, 200);
@@ -74,6 +78,8 @@ export default function StocksPage() {
 
   const elKey = (e: string) => ELMAP[e] ?? e;
   const markets = data ? Object.entries(data.markets).sort((a, b) => b[1] - a[1]) : [];
+  const countries = data ? Object.entries(data.countries).sort((a, b) => b[1] - a[1]) : [];
+  const elements = ["ไม้", "ไฟ", "ดิน", "ทอง", "น้ำ"];
   const pct = (v: number | null) => (v == null ? "-" : `${v >= 0 ? "+" : ""}${v}%`);
 
   return (
@@ -83,15 +89,42 @@ export default function StocksPage() {
           {t("stocks.title")} {data ? <span className="tag">{data.total.toLocaleString()} ตัว</span> : ""}
         </h2>
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("stocks.search")} />
+
+        {/* ── กรองตามธาตุ ── */}
         <div className="chips" style={{ marginTop: 8 }}>
-          <button className={`chip ${market === "" ? "on" : ""}`} onClick={() => setMarket("")}>
-            {t("assets.all")} ({data?.total ?? 0})
+          <button className={`chip ${element === "" ? "on" : ""}`} onClick={() => setElement("")}>
+            ⚖️ ทั้งหมด ({data ? elements.reduce((a, e) => a + (data.elementCounts[e] ?? 0), 0) : 0})
           </button>
-          {markets.map(([m, n]) => (
-            <button key={m} className={`chip ${market === m ? "on" : ""}`} onClick={() => setMarket(m)}>
-              {m} ({n})
+          {elements.map((e) => (
+            <button key={e} className={`chip ${element === e ? "on" : ""}`} style={{ color: ELEMENT_COLOR[elKey(e)] ?? "#d4af37" }} onClick={() => setElement(e)}>
+              {t(`el.${elKey(e)}` as never)} ({data?.elementCounts[e] ?? 0})
             </button>
           ))}
+        </div>
+
+        {/* ── กรองตามประเทศ + ตลาด ── */}
+        <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" }}>
+          <select value={country} onChange={(e) => setCountry(e.target.value)} style={{ background: "#1a1d26", color: "#cfcabe", border: "1px solid #2a2e39", borderRadius: 6, padding: "5px 8px", fontSize: 12.5 }}>
+            <option value="">🌍 {t("stocks.countryAll")}</option>
+            {countries.map(([c, n]) => (
+              <option key={c} value={c}>
+                {c} ({n})
+              </option>
+            ))}
+          </select>
+          <select value={market} onChange={(e) => setMarket(e.target.value)} style={{ background: "#1a1d26", color: "#cfcabe", border: "1px solid #2a2e39", borderRadius: 6, padding: "5px 8px", fontSize: 12.5 }}>
+            <option value="">🏛️ {t("stocks.marketAll")}</option>
+            {markets.map(([m, n]) => (
+              <option key={m} value={m}>
+                {m} ({n})
+              </option>
+            ))}
+          </select>
+          {data && (
+            <span style={{ fontSize: 12, color: "#9a937f", alignSelf: "center" }}>
+              {t("stocks.found")}: {data.count.toLocaleString()} ตัว
+            </span>
+          )}
         </div>
       </div>
 

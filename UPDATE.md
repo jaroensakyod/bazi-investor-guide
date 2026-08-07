@@ -90,6 +90,7 @@ npm run typecheck && npm run lint && npm test   # 128 เทสต์
 | 25 | **parseQuery split "=" ตัวแรกเจอค่าใน URL** (`ticker=GC=F` กลายเป็น "GC") | `pair.indexOf("=")` แยกเฉพาะตัวแรก — decodeURIComponent หลัง split | `scripts/api-server.ts` |
 | 26 | **หลังแก้ backend (src/lib, src/api) ต้อง restart api-server เสมอ** — Next hot-reload ไปก่อน → หน้าเรียก field ใหม่ที่ API เก่ายังไม่มี → Runtime TypeError (เช่น `reading 'next14'`) | restart: `taskkill /PID $(netstat -ano \| grep :8787 \| grep LISTEN \| awk '{print $NF}') /F` + `npx tsx scripts/api-server.ts --port 8787` (runbook 20) — แล้ว curl ทดสอบ endpoint ก่อนเปิดหน้า | scripts/api-server.ts |
 | 27 | **Windows `execFile("npx")` ล้มเหลว** — `spawn npx ENOENT` (หา .cmd ไม่เจอ) แล้วพอแก้เป็น `npx.cmd` → `spawn EINVAL` | ใช้ `npx.cmd` (win32) + `shell: true` (กฎ Windows: spawn .cmd ต้องผ่าน shell) — args เป็นค่าคงที่ ปลอดภัย | `src/api/market.ts` handleRefresh |
+| 28 | **URL query encode เพี้ยน → `decodeURIComponent` throw → server crash ทั้งตัว** (URIError: URI malformed — เช่น curl ส่งไทยไม่ encode) | parseQuery: ครอบ try/catch ต่อคู่ key=value — คู่ที่ malformed ข้ามไป ไม่ crash | `scripts/api-server.ts` parseQuery |
 
 **เปลี่ยนเครื่องใหม่**: `npm install` (node 20+) · ข้อมูลทั้งหมด commit ใน repo แล้ว (cache/ราคา/ข่าว/IPO) — ไม่ต้องพึ่ง network · ไม่มี secret ใน repo (LLM key ใส่ `.env` ตอน Phase 1+) · อ่าน `UPDATE.md` + `.hermes/plans/2026-08-05_ai-investor-chat.md` + `KNOWN-ISSUES.md` ก่อน
 

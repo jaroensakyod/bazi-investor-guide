@@ -65,7 +65,11 @@ function parseQuery(url: string | undefined): Query {
     const eq = pair.indexOf("=");
     const k = eq >= 0 ? pair.slice(0, eq) : pair;
     const v = eq >= 0 ? pair.slice(eq + 1) : "";
-    if (k) q[decodeURIComponent(k)] = v ? decodeURIComponent(v) : "";
+    try {
+      if (k) q[decodeURIComponent(k)] = v ? decodeURIComponent(v) : "";
+    } catch {
+      // URL malformed (encode เพี้ยน) — ข้ามคู่นั้น กัน server crash
+    }
   }
   return q;
 }
