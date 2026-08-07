@@ -393,12 +393,16 @@ export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buff
   if (!state) return { ok: false, error: "ต้องระบุ birthDate" };
   try {
     const kind = String(q.kind ?? "full");
+    // tier → เปิดถึง section ไหน (free=0 · ฿99=2 · ฿490=4 · ฿790/เดือน=6 เต็ม)
+    const tierMap: Record<string, number> = { free: 0, "99": 2, "490": 4, "790": 6 };
+    const tier = String(q.tier ?? "490");
+    const maxSection = tierMap[tier] ?? 4;
     if (kind === "card") {
       const { buildFreeCardPdf } = await import("./report-pdf-card");
       return { ok: true, data: await buildFreeCardPdf(state) };
     }
     const { buildFullReportPdf } = await import("./report-pdf-full");
-    return { ok: true, data: await buildFullReportPdf(state) };
+    return { ok: true, data: await buildFullReportPdf(state, { maxSection, lockedNote: `ปลดล็อกส่วนที่เหลือด้วยฉบับที่สูงขึ้น (ตอนนี้: ${tier === "free" ? "ฟรี" : `฿${tier}`})` }) };
   } catch (e) {
     return { ok: false, error: `PDF error: ${(e as Error).message}` };
   }

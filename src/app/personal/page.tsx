@@ -141,13 +141,26 @@ export default function PersonalPage() {
           <button
             className="btn"
             style={{ background: "#8d6e63", color: "#fff", border: "none", borderRadius: 8, padding: "8px 14px", fontSize: 13, cursor: "pointer" }}
-            onClick={() => {
-              const a = document.createElement("a");
-              a.href = `/api/report/full-pdf?userId=${myUserId()}`;
-              a.download = `รายงานคู่ดวง-${new Date().toISOString().slice(0, 10)}.pdf`;
-              document.body.appendChild(a);
-              a.click();
-              a.remove();
+            onClick={async () => {
+              try {
+                const res = await fetch(`/api/report/full-pdf?userId=${myUserId()}`);
+                if (!res.ok) {
+                  const j = await res.json().catch(() => null);
+                  setError(j?.error ?? "ดาวน์โหลดไม่สำเร็จ — ตรวจว่าได้บันทึกวันเกิดในหน้าโปรไฟล์แล้ว");
+                  return;
+                }
+                const blob = await res.blob();
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                a.download = `รายงานคู่ดวง-${new Date().toISOString().slice(0, 10)}.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(a.href);
+                setError("");
+              } catch (e) {
+                setError((e as Error).message);
+              }
             }}
           >
             📄 ดาวน์โหลดรายงาน PDF (ฉบับเต็ม)

@@ -13,6 +13,7 @@ export default function AdminPdfPage() {
   const [gender, setGender] = useState("male");
   const [province, setProvince] = useState("Bangkok");
   const [kind, setKind] = useState("full");
+  const [tier, setTier] = useState("490"); // free/99/490/790 — คนนี้จ่ายเท่าไหร่
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
@@ -29,7 +30,7 @@ export default function AdminPdfPage() {
     setError("");
     setNote("");
     try {
-      const params = new URLSearchParams({ pass, birthDate, birthTime, gender, province, kind });
+      const params = new URLSearchParams({ pass, birthDate, birthTime, gender, province, kind, tier });
       const res = await fetch(`/api/product-pdf?${params}`);
       if (!res.ok) {
         const j = await res.json().catch(() => null);
@@ -73,7 +74,7 @@ export default function AdminPdfPage() {
     <div style={{ maxWidth: 560, margin: "0 auto" }}>
       <div className="card" style={{ borderColor: "#d4af37" }}>
         <h2>🛠️ สร้างสินค้า PDF (เฉพาะเจ้าของ)</h2>
-        <p style={{ fontSize: 12.5, color: "#9a937f" }}>กรอกวันเกิดลูกค้า → เลือกแบบ → สร้าง + ส่งไฟล์ (การขาย PDF = เจ้าของสร้างเท่านั้น)</p>
+        <p style={{ fontSize: 12.5, color: "#9a937f" }}>กรอกวันเกิดลูกค้า → เลือกแบบ + ราคาที่จ่าย → สร้าง PDF (ส่วนที่ยังไม่จ่าย = เบลอ/ล็อก — ลูกค้าเห็นแล้วอยากอัปเกรด)</p>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 12 }}>
           <label style={{ fontSize: 12.5 }}>
@@ -101,7 +102,7 @@ export default function AdminPdfPage() {
           <p style={{ fontSize: 12.5, marginBottom: 4 }}>แบบสินค้า:</p>
           <div className="chips">
             {[
-              { id: "full", label: "📄 รายงานคู่ดวง 5 หน้า (฿99)" },
+              { id: "full", label: "📄 รายงานคู่ดวง (gen เต็ม → เบลอตามที่จ่าย)" },
               { id: "card", label: "🃏 การ์ดตัวตนฟรี (lead magnet)" },
             ].map((k) => (
               <button key={k.id} className={`chip ${kind === k.id ? "on" : ""}`} onClick={() => setKind(k.id)}>
@@ -110,6 +111,27 @@ export default function AdminPdfPage() {
             ))}
           </div>
         </div>
+
+        {kind === "full" && (
+          <div style={{ marginTop: 10 }}>
+            <p style={{ fontSize: 12.5, marginBottom: 4 }}>💳 คนนี้จ่ายเท่าไหร่? (gen เต็มก่อน → เบลอส่วนที่ยังไม่จ่าย):</p>
+            <div className="chips">
+              {[
+                { id: "free", label: "🆓 ฟรี (ตัวอย่าง — เบลอทุกส่วน)" },
+                { id: "99", label: "💵 ฿99 (เปิด 1-2)" },
+                { id: "490", label: "⭐ ฿490 (เปิด 1-4)" },
+                { id: "790", label: "👑 ฿790/เดือน (เปิดหมด)" },
+              ].map((tk) => (
+                <button key={tk.id} className={`chip ${tier === tk.id ? "on" : ""}`} onClick={() => setTier(tk.id)}>
+                  {tk.label}
+                </button>
+              ))}
+            </div>
+            <p style={{ fontSize: 11.5, color: "#9a937f", marginTop: 6 }}>
+              ฟรี = เบลอทั้งหมด · ฿99 = เปิด มุมมองดวง+จัดสรรเงิน · ฿490 = +พอร์ตเด่น+สินค้า · ฿790 = เต็ม (ไทม์ไลน์+วันมงคล)
+            </p>
+          </div>
+        )}
 
         <button className="btn" onClick={generate} disabled={busy} style={{ marginTop: 14 }}>
           {busy ? "⏳ กำลังสร้าง..." : "📥 สร้าง PDF"}
