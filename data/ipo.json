@@ -84,7 +84,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-07T04:56:32.360Z"
+      "fetchedAt": "2026-08-07T09:23:29.164Z"
     },
     {
       "ticker": "LTGO",
@@ -98,7 +98,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-07T04:56:32.360Z"
+      "fetchedAt": "2026-08-07T09:23:29.164Z"
     },
     {
       "ticker": "FOIL",
@@ -112,7 +112,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-07T04:56:32.360Z"
+      "fetchedAt": "2026-08-07T09:23:29.164Z"
     },
     {
       "ticker": "PHAX",
@@ -1003,7 +1003,7 @@
       "ipoDate": "2026-08-06",
       "priceRange": "¥17.46",
       "currency": "CNY",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Electronic connectors (PE 19.25 · 申购 7/24)",
       "source": "sse.com.cn 2026-08",
       "fetchedAt": "2026-08-07T05:08:06.817Z"
