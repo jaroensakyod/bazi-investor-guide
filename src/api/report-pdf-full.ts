@@ -151,16 +151,16 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
     y += 62;
   };
 
-  // ══════════ ปก (หนังสือ) ══════════
+  // ══════════ ปก (หนังสือ 6 ภาค 25 บท) ══════════
+  const FIT_LABEL_PDF: Record<string, string> = { good: "ตรงดวง", drain: "ดูดพลัง", avoid: "ขัดดวง", neutral: "กลาง" };
   doc.rect(0, 0, 595, 260).fill(C.primary);
   doc.rect(0, 260, 595, 6).fill(C.gold);
   doc.rect(0, 780, 595, 62).fill("#0c2416");
-  // วงแหวนธาตุบนปก (โดนัท 5 ธาตุ)
   donut(297, 420, 95, d.elementBalance.map((e) => ({ pct: e.pct, color: EL_COLOR[e.element] ?? C.muted })), 0.55);
   doc.font(F_B).fontSize(13).fillColor("#cfe3d4").text(clean("ดวงนักลงทุน  ·  ฉบับสถาบัน"), 52, 40);
-  doc.font(F_B).fontSize(34).fillColor(C.white).text(clean("รายงานการลงทุนคู่ดวง"), 52, 80, { width: 490 });
-  doc.font(F).fontSize(13).fillColor("#cfe3d4").text(clean("ดวง 60 กะจื่อ  x  หุ้น/สินทรัพย์จริง  x  แผนที่ชีวิตทั้งชีวิต"), 52, 130, { width: 490 });
-  doc.font(F).fontSize(11).fillColor("#9fb8a8").text(`ฉบับ ${maxSection >= 6 ? "VIP ฉบับเต็ม" : maxSection >= 4 ? "PRO" : maxSection >= 2 ? "ฉบับสรุป" : "ตัวอย่าง"}  ·  ${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })}`, 52, 160);
+  doc.font(F_B).fontSize(32).fillColor(C.white).text(clean("หนังสือการลงทุนคู่ดวง"), 52, 82, { width: 490 });
+  doc.font(F).fontSize(13).fillColor("#cfe3d4").text(clean("6 ภาค · 25 บท — ดวง 60 กะจื่อ  x  หุ้น/สินทรัพย์จริง  x  แผนที่ชีวิตทั้งชีวิต"), 52, 128, { width: 490 });
+  doc.font(F).fontSize(11).fillColor("#9fb8a8").text(`ฉบับ ${maxSection >= 6 ? "VIP ฉบับเต็ม (25 บท)" : maxSection >= 4 ? "PRO (20 บท)" : maxSection >= 2 ? "ฉบับสรุป (10 บท)" : "ตัวอย่าง"}  ·  ${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })}`, 52, 158);
   doc.roundedRect(52, 540, 490, 70, 10).fill("#fdf6e3");
   doc.font(F_B).fontSize(20).fillColor(C.primary).text(clean(`${d.persona.emoji} ${d.persona.name}`), 68, 556, { width: 450 });
   doc.font(F).fontSize(11.5).fillColor(C.muted).text(clean(`${d.persona.bandLabel}  ·  สไตล์ ${d.persona.style}  ·  เทรด: ${d.trading.label}`), 68, 584, { width: 450 });
@@ -170,252 +170,224 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   doc.addPage();
   y = 52;
   footer();
-  h1("สารบัญ", "");
+  h1("สารบัญ (6 ภาค · 25 บท)", "");
   const toc = [
-    ["บทที่ 1", "มุมมองดวง (Verdict) — กำลังดิถี + ธาตุในดวง"],
-    ["บทที่ 2", "การจัดสรรเงินตามกำลังดวง (70/10/20)"],
-    ["บทที่ 3", "พอร์ตเด่นประจำเดือน (เทียร์ 1-4)"],
-    ["บทที่ 4", "สินค้าแนะนำตามดวง (11 หมวด)"],
-    ["บทที่ 5", "แผนที่ชีวิต Life Map 0-80+ ปี"],
-    ["บทที่ 6", "วันมงคล / วันระวัง (เดือนนี้)"],
-    ["ภาคผนวก ก", "เช็กลิสต์ก่อนลงทุน (20 ข้อ)"],
-    ["ภาคผนวก ข", "อภิธานศัพท์ (ธาตุ/วัยจร/เชี่ยงแซ/เทียร์)"],
+    ["ภาค 1", "ดีเอ็นเอการเงิน — ธาตุลาภ/กำลังดิถี/คลังทรัพย์/จิตวิทยา/การ์ด (บท 1-5)"],
+    ["ภาค 2", "ลงทุนอะไร — เซกเตอร์/สินทรัพย์/ตลาด/สิ่งต้องห้าม/เช็กลิสต์ (บท 6-10)"],
+    ["ภาค 3", "ลงทุนยังไง — สไตล์/เงินเร็วเย็น/พอร์ตธาตุ/DCA/ฟอเร็กซ์-คริปโต (บท 11-15)"],
+    ["ภาค 4", "ลงทุนเมื่อไหร่ — วัยจร 4 ช่วง + แผนที่ชีวิต (บท 16-20)"],
+    ["ภาค 5", "ป้องกัน — ผั่วไฉ่โข่ว/คลังแตก/กฎเหล็ก (บท 21-23)"],
+    ["ภาค 6", "เสริมดวง — สี/ทิศ/เครื่องราง + เสริมวัยจร (บท 24-25)"],
+    ["บท 26", "ฉบับเดือนนี้ (ของสด VIP) — ธาตุเดือน/ปฏิทินมงคล/แผนเดือน"],
+    ["ภาคผนวก", "เช็กลิสต์ 30 ข้อ + อภิธานศัพท์"],
   ];
   for (const [n, t] of toc) {
     row([{ text: n, w: 70, bold: true, color: C.gold }, { text: t, w: 420 }]);
   }
   y += 6;
   h1("บทนำ  —  วิธีอ่านหนังสือเล่มนี้", "อ่านก่อน");
-  p("หนังสือเล่มนี้สร้างจากข้อมูลจริงของคุณเท่านั้น: ดวงคำนวณด้วยตำรา 60 กะจื่อ (deterministic — ไม่ใช่ดวงเดา) × ข้อมูลตลาดจริง 5,958 หุ้น 27 ตลาด × ตารางธาตุจากซินแส", 10);
+  p("หนังสือ 25 บทนี้สร้างจากข้อมูลจริงของคุณเท่านั้น: ดวงคำนวณด้วยตำรา 60 กะจื่อ (deterministic — ไม่ใช่ดวงเดา) × ข้อมูลตลาดจริง 5,958 หุ้น 27 ตลาด × ตารางธาตุจากซินแส", 10);
   h2("คำศัพท์ที่ต้องรู้ก่อนอ่าน");
   bullet("ธาตุ (ไม้/ไฟ/ดิน/ทอง/น้ำ) — พลัง 5 ชนิดในดวงและในธุรกิจ — หุ้นแต่ละตัวมีธาตุของตัวเอง (เช่น โรงพยาบาล=ไฟ, ธนาคาร=น้ำ)");
   bullet("กำลังดิถี — แรงของวันเกิด: อ่อน=ต้องเสริม อย่าไล่ลาภ / แข็ง=ถ่ายเทได้ ลงทุนกล้าได้");
   bullet("ธาตุลาภ — ธาตุที่ 'เป็นเงิน' ของดวงคุณ แต่ถ้ามีเกิน (เช่น น้ำ 45%) การไล่ลาภ = ดูดพลัง");
   bullet("วัยจร — วงจร 10 ปีที่เปลี่ยนธาตุ สลับกันทั้งชีวิต — เปลี่ยนทิศทางดวงการเงินทุกช่วง");
   bullet("เทียร์หุ้น 1-4 — ระดับคุณภาพคำแนะนำ: 1=VIP (ตรงดวง+แข็ง) → 4=INFO (แค่ข้อมูล)");
-  callout("วิธีใช้เล่มนี้ (3 นาที)", "อ่านบท 1 เพื่อรู้กำลังตัวเอง → เปิดบท 3 เลือกหุ้นเทียร์ 1-2 → ใช้บท 5 วางแผนช่วงวัย → ทำเช็กลิสต์ภาคผนวก ก ก่อนซื้อทุกครั้ง", "good");
+  callout("วิธีใช้เล่มนี้ (3 นาที)", "ภาค 1 รู้ตัวเอง → ภาค 2 เลือกของที่ตรง → ภาค 3 วิธีลงทุน → ภาค 4 จังหวะชีวิต → ภาค 5 กันเจ๊ง → ภาค 6 เสริมดวง · ใช้บท 26 เป็นคู่มือรายเดือน", "good");
 
-  // ══════════ บท 1: มุมมองดวง ══════════
+  const phaseOf = (s: number, e: number) => d.timeline.filter((t) => { const a = parseInt((t.ageRange.split("–")[0] || t.ageRange.split("-")[0] || "0"), 10); return a >= s && a < e; });
+  const lifeRow = (t: { ageRange: string; verdict: string; advice: string }) => {
+    const m = { invest: { label: "ลงทุนเต็มที่", color: "#1e6f3e", tint: "#e8f3ea" }, accumulate: { label: "สะสม/ถือ", color: "#b8860b", tint: "#f7f1e2" }, avoid: { label: "หลีกเลี่ยง", color: "#9b2c2c", tint: "#f9ecec" }, "no-risk": { label: "ห้ามเสี่ยง", color: "#6b1f1f", tint: "#f3e3e3" } }[t.verdict] ?? { label: "สะสม/ถือ", color: "#b8860b", tint: "#f7f1e2" };
+    ensure(20);
+    doc.roundedRect(52, y, 490, 18, 4).fill(m.tint);
+    doc.roundedRect(52, y, 5, 18, 3).fill(m.color);
+    doc.font(F_B).fontSize(9).fillColor(C.ink).text(clean(`${t.ageRange} ปี`), 64, y + 3, { width: 58 });
+    doc.font(F_B).fontSize(9).fillColor(m.color).text(clean(m.label), 126, y + 3, { width: 80 });
+    doc.font(F).fontSize(8.5).fillColor("#555555").text(clean(t.advice), 210, y + 3, { width: 330 });
+    y += 22;
+  };
+  const partH = (num: string, title: string, desc: string) => {
+    doc.addPage();
+    y = 52;
+    footer();
+    doc.rect(0, y - 10, 595, 56).fill(C.primary);
+    doc.rect(0, y + 46, 595, 3).fill(C.gold);
+    doc.font(F_B).fontSize(12).fillColor("#cfe3d4").text(clean(`ภาค ${num}  ·  ${title}`), 52, y + 4, { width: 490 });
+    doc.font(F).fontSize(9.5).fillColor("#9fb8a8").text(clean(desc), 52, y + 24, { width: 490 });
+    y += 62;
+  };
+
+  // ══════════ ภาค 1: ดีเอ็นเอการเงิน (บท 1-5) ══════════
   if (maxSection >= 1) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1("มุมมองดวง (Verdict)", "บทที่ 1");
-    p(narrative["1"] ?? "ส่วนนี้สรุปกำลังดวงของคุณ — เป็นหลักตั้งต้นของทุกคำแนะนำในเล่มนี้", 10, "#8d6e63");
-    h2("กำลังดิถีของคุณ");
-    row([{ text: "กำลัง", w: 90, bold: true }, { text: "ผลต่อการลงทุน", w: 200, bold: true }, { text: "แนวทาง", w: 200, bold: true }], true);
-    row([{ text: d.principle.band === "weak" ? "ดิถีอ่อน" : d.principle.band === "strong" ? "ดิถีแข็ง" : "ดิถีสมดุล", w: 90, bold: true }, { text: d.principle.mode, w: 200 }, { text: `เสริม ${d.principle.supplementElement}`, w: 200, color: C.green }]);
+    partH("1", "ดีเอ็นเอการเงิน", "รู้จักตัวเองในเรื่องเงิน — ธาตุอะไรคือเงินของคุณ กำลังเท่าไหร่ เก็บอะไรแล้วอยู่");
+    h2("บท 1 · ธาตุลาภ — เงินของคุณมาจากธาตุอะไร");
+    p(`ธาตุลาภของคุณ = ${d.strengthen.wealth} (มี ${d.elementBalance.find((e) => e.element === d.strengthen.wealth)?.count ?? "?"} ตัว / ${d.elementBalance.find((e) => e.element === d.strengthen.wealth)?.pct ?? "?"}%) — ${d.principle.excessElement === d.strengthen.wealth ? "แต่เกิน → อย่าไล่ลาภ (ดูดพลัง) เสริมธาตุที่ขาดก่อน" : "ลงทุนธุรกิจธาตุนี้ได้"}`, 10, "#8d6e63");
+    p(`ตัวอย่างธุรกิจธาตุ ${d.strengthen.wealth}: ${d.strengthen.businessHint}`, 10);
+    h2("บท 2 · กำลังดิถี — ไล่ลาภได้เต็มที่ หรือต้องสะสม");
+    p(`${d.principle.band === "weak" ? "ดิถีอ่อน" : d.principle.band === "strong" ? "ดิถีแข็ง" : "ดิถีสมดุล"} — ${d.principle.mode} · แนวทาง: เสริม ${d.principle.supplementElement}`, 10.5);
     p(d.principle.desc, 10, "#555555");
-    h2("ธาตุในดวงของคุณ (5 ธาตุ)");
-    const eb = d.elementBalance;
-    donut(180, y + 75, 62, eb.map((e) => ({ pct: e.pct, color: EL_COLOR[e.element] ?? C.muted })));
-    // legend ขวาของโดนัท
-    let ly = y + 40;
-    for (const e of eb) {
-      doc.roundedRect(280, ly, 12, 12, 2).fill(EL_COLOR[e.element] ?? C.muted);
-      doc.font(F).fontSize(10).fillColor("#333333").text(clean(`${e.element} ${e.pct}%`), 298, ly, { width: 200 });
-      ly += 18;
+    callout("เทรดได้/ไม่ได้", `${d.trading.label} — ${d.trading.reason}`, d.trading.allowed === "no" ? "warn" : "good");
+    h2("บท 3 · คลังทรัพย์ — เก็บอะไรแล้วอยู่");
+    const goodAssets: Array<{ ticker: string; name: string; element: string }> = [];
+    for (const c of d.categories) {
+      for (const it of c.items) {
+        if (goodAssets.length >= 6) break;
+        if (it.fit === "good") goodAssets.push({ ticker: it.ticker, name: it.name, element: it.element });
+      }
+      if (goodAssets.length >= 6) break;
     }
-    y += 150;
-    h3("ตารางธาตุในดวง — ดี/ไม่ดี ยังไง");
-    row([{ text: "ธาตุ", w: 50, bold: true }, { text: "จำนวน", w: 60, bold: true }, { text: "บทบาท", w: 180, bold: true }, { text: "ควรทำ", w: 200, bold: true }], true);
-    for (const e of eb) {
-      const role = e.element === d.strengthen.wealth ? `ธาตุลาภ${e.pct >= 30 ? " (เกิน — ดูดพลัง)" : ""}` : e.element === d.strengthen.element ? "ธาตุที่ต้องเสริม" : d.avoid.includes(e.element) ? "ธาตุพิฆาต" : "กลาง";
-      const act = e.element === d.strengthen.element ? "ลงทุนธุรกิจธาตุนี้" : d.avoid.includes(e.element) ? "หลีกเลี่ยง" : e.pct >= 30 ? "อย่าเพิ่ม" : "ถือไว้";
-      row([{ text: e.element, w: 50, bold: true, color: EL_COLOR[e.element] ?? "#333" }, { text: `${e.count ?? "?"} ตัว (${e.pct}%)`, w: 60 }, { text: role, w: 180 }, { text: act, w: 200, color: act.includes("หลีก") ? C.red : act.includes("อย่า") ? C.red : C.green }]);
+    if (goodAssets.length) {
+      for (const a of goodAssets) bullet(`${a.ticker} — ${a.name} (${a.element} · ตรงดวง)`, "#333333");
     }
-    if (d.principle.excessElement) {
-      callout("ขอเตือน", `ธาตุ ${d.principle.excessElement} มีเกิน (${d.principle.excessCount} ตัว) — ${d.principle.excessNote ?? "อย่าเพิ่ม ไม่งั้นเสียสมดุล"}`, "warn");
-    }
-    callout("ข้อควรรู้", `ธาตุลาภของคุณคือ ${d.strengthen.wealth} — เงินของคุณมาจากธุรกิจธาตุนี้ แต่ถ้า${d.principle.excessElement ? ` ${d.principle.excessElement} เกินอยู่แล้ว` : "มีน้อย"} ให้ใช้หลัก "เสริมก่อน ไล่ลาภทีหลัง"`, "info");
+    h2("บท 4 · จิตวิทยาเงิน — จุดอ่อนการตัดสินใจของคุณ");
+    p(`จุดแข็ง: ${d.persona.strengths ?? d.persona.style}`, 10, "#1e6f3e");
+    p(`จุดที่ต้องระวัง: ${d.persona.weaknesses ?? "ใจร้อนตามธาตุ ต้องมีกฎเหล็กรอซื้อ/ตัดขาดทุน"}`, 10, "#9b2c2c");
+    h2("บท 5 · การ์ดตัวตนนักลงทุน (สรุปภาค 1)");
+    row([{ text: "หัวข้อ", w: 120, bold: true }, { text: "คำตอบของคุณ", w: 370, bold: true }], true);
+    row([{ text: "ตัวตน", w: 120 }, { text: `${d.persona.name} (${d.persona.bandLabel})`, w: 370, bold: true }]);
+    row([{ text: "ธาตุลาภ / เสริม / เลี่ยง", w: 120 }, { text: `${d.strengthen.wealth} / ${d.strengthen.element} / ${d.avoid.join("/")}`, w: 370 }]);
+    row([{ text: "เทรด + สัดส่วนเงิน", w: 120 }, { text: `${d.trading.label} · เย็น ${d.trading.split.cold}% เร็ว ${d.trading.split.fast}% ฉุกเฉิน ${d.trading.split.emergency}%`, w: 370 }]);
   } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 1", "มุมมองดวง (Verdict)", maxSection <= 0 ? "ฉบับสรุป (฿99)" : "ฉบับ Pro (฿490)");
+    doc.addPage(); y = 52; footer();
+    lockedSection("ภาค 1", "ดีเอ็นเอการเงิน (บท 1-5)", maxSection <= 0 ? "ฉบับสรุป (฿99)" : "ฉบับ Pro (฿490)");
   }
 
-  // ══════════ บท 2: จัดสรรเงิน ══════════
+  // ══════════ ภาค 2: ลงทุนอะไร (บท 6-10) ══════════
   if (maxSection >= 2) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1("การจัดสรรเงินตามกำลังดวง", "บทที่ 2");
-    p(narrative["2"] ?? "กำลังดวงกำหนดว่า 'ไล่กำไรได้แค่ไหน' — ดิถีอ่อนต้องกันเงินเย็นไว้มาก", 10, "#8d6e63");
+    partH("2", "ลงทุนอะไร", "เอาเงินไปไว้ที่ไหน — เซกเตอร์/สินทรัพย์/ตลาด ที่ตรงธาตุ + สิ่งต้องห้าม");
+    h2("บท 6 · เซกเตอร์/หุ้นที่ตรงธาตุ");
+    p(`หุ้นธาตุ ${d.strengthen.element} (ต้องเสริม) — ตัวอย่างจาก 5,958 หุ้น:`, 10, "#8d6e63");
+    row([{ text: "#", w: 24, bold: true }, { text: "หุ้น", w: 84, bold: true }, { text: "ธาตุ", w: 36, bold: true }, { text: "เทียร์", w: 88, bold: true }, { text: "คะแนน", w: 42, bold: true }, { text: "เหตุผล", w: 216, bold: true }], true);
+    for (const [i, pk] of thPicks.picks.slice(0, 8).entries()) {
+      row([{ text: `${i + 1}`, w: 24 }, { text: pk.ticker, w: 84, bold: true }, { text: pk.element, w: 36, color: EL_COLOR[pk.element] ?? "#333" }, { text: TIER_LABEL[pk.stockTier], w: 88, color: pk.stockTier === "gold" ? "#b8860b" : "#333" }, { text: `${pk.score}`, w: 42 }, { text: pk.reasons[0] ?? "", w: 216, color: "#555555" }]);
+    }
+    h2("บท 7 · สินค้า/สินทรัพย์ (fit 4 ระดับ)");
+    row([{ text: "หมวด", w: 130, bold: true }, { text: "สินค้าเด่น", w: 360, bold: true }], true);
+    for (const cat of d.categories) {
+      const items = cat.items.slice(0, 2).map((it) => `${it.ticker}(${TIER_LABEL[it.stockTier as StockTier] ?? ""} ${FIT_LABEL_PDF[it.fit] ?? "กลาง"})`).join(", ");
+      if (items) row([{ text: cat.label, w: 130 }, { text: items, w: 360, color: "#555555" }]);
+    }
+    h2("บท 8 · ตลาด/ประเทศ (ธาตุตลาด × ดวงคุณ)");
+    row([{ text: "ตลาด", w: 130, bold: true }, { text: "ธาตุ", w: 60, bold: true }, { text: "กับดวงคุณ", w: 300, bold: true }], true);
+    row([{ text: "ไทย", w: 130 }, { text: "น้ำ", w: 60 }, { text: d.avoid.includes("น้ำ") ? "⚠️ ธาตุเลี่ยง — เลือกหุ้นรายตัวที่ตรงธาตุ" : "กลาง", w: 300 }]);
+    row([{ text: "สหรัฐฯ", w: 130 }, { text: "ไม้", w: 60 }, { text: d.avoid.includes("ไม้") ? "⚠️ ธาตุเลี่ยง — เน้นหุ้นรายตัวธาตุอื่น" : "กลาง", w: 300 }]);
+    row([{ text: "อินเดีย", w: 130 }, { text: "ทอง", w: 60 }, { text: d.strengthen.element === "ทอง" ? "✅ ตรงธาตุที่ต้องเสริม" : "กลาง", w: 300 }]);
+    row([{ text: "ออสเตรเลีย", w: 130 }, { text: "ไฟ", w: 60 }, { text: d.strengthen.element === "ไฟ" ? "✅ ตรงธาตุที่ต้องเสริม" : "กลาง", w: 300 }]);
+    p("* ธาตุตลาด = ทิศจากไทย (ใช้เฉพาะภาพรวม) — ทุกหุ้น verdict รายตัว ไม่เหมารวมตลาด", 9, "#999999");
+    h2("บท 9 · สิ่งต้องห้าม (ธาตุพิฆาต)");
+    callout("ธาตุพิฆาตของคุณ", `${d.avoid.join(" / ")} — ห้ามแตะธุรกิจ/หุ้น/สินทรัพย์ธาตุนี้เด็ดขาด (ต่อให้พื้นฐานดีแค่ไหน)`, "warn");
+    h2("บท 10 · เช็กลิสต์ 30 ข้อก่อนซื้อ");
+    p("ตรวจทุกข้อก่อนซื้อทุกครั้ง — ผ่าน 24/30 ขึ้นไปถึงเริ่ม (เต็มอยู่ในภาคผนวก ก)", 10, "#8d6e63");
+  } else {
+    doc.addPage(); y = 52; footer();
+    lockedSection("ภาค 2", "ลงทุนอะไร (บท 6-10)", maxSection <= 0 ? "ฉบับสรุป (฿99)" : "ฉบับ Pro (฿490)");
+  }
+
+  // ══════════ ภาค 3: ลงทุนยังไง (บท 11-15) ══════════
+  if (maxSection >= 3) {
+    partH("3", "ลงทุนยังไง", "วิธีลงทุนให้เข้ากับดวง — สไตล์/สัดส่วน/พอร์ตตามธาตุ/DCA/เก็งกำไร");
+    h2("บท 11 · สไตล์ตามเชี่ยงแซ (5 ปีนี้)");
+    p(`สไตล์ของคุณ: ${d.persona.style} — ${d.principle.band === "weak" ? "ดิถีอ่อน → ใช้หลักเสริม (สะสมก้อนมั่นคง)" : d.principle.band === "strong" ? "ดิถีแข็ง → ใช้หลักถ่ายเท (กล้าลงทุนหลายธีม)" : "ดิถีสมดุล → ใช้ทั้งสอง"}`, 10);
+    h2("บท 12 · เงินเร็ว-เย็น-ฉุกเฉิน (สัดส่วน)");
     donut(170, y + 80, 65, [
       { pct: d.trading.split.cold, color: C.green },
       { pct: d.trading.split.fast, color: C.gold },
       { pct: d.trading.split.emergency, color: "#1565c0" },
     ]);
-    let l2y = y + 46;
+    let l12y = y + 46;
     for (const [lab, pct, col] of [["เงินเย็น (ยาว)", d.trading.split.cold, C.green], ["เงินเร็ว (เทรด)", d.trading.split.fast, C.gold], ["เงินฉุกเฉิน", d.trading.split.emergency, "#1565c0"]] as const) {
-      doc.roundedRect(270, l2y, 12, 12, 2).fill(col);
-      doc.font(F_B).fontSize(10.5).fillColor("#333333").text(`${lab} ${pct}%`, 288, l2y, { width: 220 });
-      l2y += 18;
+      doc.roundedRect(270, l12y, 12, 12, 2).fill(col);
+      doc.font(F_B).fontSize(10.5).fillColor("#333333").text(`${lab} ${pct}%`, 288, l12y, { width: 220 });
+      l12y += 18;
     }
     y += 165;
-    h2("เครื่องมือของแต่ละกอง");
-    row([{ text: "กอง", w: 100, bold: true }, { text: "เครื่องมือที่แนะนำ", w: 390, bold: true }], true);
-    row([{ text: "เงินเย็น 70%", w: 100, bold: true, color: C.green }, { text: d.instruments.cold.join(" · "), w: 390 }]);
-    row([{ text: "เงินเร็ว 10%", w: 100, bold: true, color: C.gold }, { text: d.instruments.fast.join(" · "), w: 390 }]);
-    row([{ text: "ฉุกเฉิน 20%", w: 100, bold: true, color: "#1565c0" }, { text: d.instruments.emergency.join(" · "), w: 390 }]);
-    callout("ข้อควรระวัง", "เงินเย็น = ห้ามแตะแม้ตลาดร่วง (นี่คือกอง 'รอจังหวะทอง') · เงินเร็ว = ขาดทุนได้แต่ห้ามเกินสัดส่วน · ฉุกเฉิน = กันภัย 6 เดือน", "warn");
-    callout("ข้อควรรู้", `การเทรด: ${d.trading.label} — ${d.trading.reason}`, "info");
-  } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 2", "การจัดสรรเงินตามกำลังดวง", maxSection <= 0 ? "ฉบับสรุป (฿99)" : "ฉบับ Pro (฿490)");
-  }
-
-  // ══════════ บท 3: พอร์ตเด่น ══════════
-  if (maxSection >= 3) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1("พอร์ตเด่นประจำเดือน (เทียร์ 1-4)", "บทที่ 3");
-    p(narrative["3"] ?? "วิธีอ่านเทียร์: 1=VIP ตรงดวง+แข็ง · 2=PRO · 3=FREE · 4=INFO แค่ข้อมูล", 10, "#8d6e63");
-    h2("TH30 — 30 หุ้นไทยที่ตรงดวงที่สุด (เทียบ SET)");
-    p(`SET วันนี้: ${thPicks.benchmark.changePct != null ? `${thPicks.benchmark.changePct}%` : "-"} · คัดจาก 5,958 หุ้น 27 ตลาด เฉพาะธาตุตรงดวง`, 9.5, "#666666");
-    row([{ text: "#", w: 24, bold: true }, { text: "หุ้น", w: 84, bold: true }, { text: "ธาตุ", w: 36, bold: true }, { text: "เทียร์", w: 88, bold: true }, { text: "คะแนน", w: 42, bold: true }, { text: "เหตุผลหลัก", w: 216, bold: true }], true);
-    for (const [i, pk] of thPicks.picks.entries()) {
-      row([{ text: `${i + 1}`, w: 24 }, { text: pk.ticker, w: 84, bold: true }, { text: pk.element, w: 36, color: EL_COLOR[pk.element] ?? "#333" }, { text: TIER_LABEL[pk.stockTier], w: 88, color: pk.stockTier === "gold" ? "#b8860b" : "#333" }, { text: `${pk.score}`, w: 42 }, { text: pk.reasons[0] ?? "", w: 216, color: "#555555" }]);
-    }
-    h2("คะแนนพอร์ตเด่น (กราฟ)");
-    bars(52, y + 10, 490, thPicks.picks.slice(0, 10).map((pk) => ({ label: pk.ticker, value: pk.score, color: pk.stockTier === "gold" ? C.gold : pk.stockTier === "silver" ? "#9aa5b1" : pk.stockTier === "bronze" ? "#b08d57" : "#c9c2b2" })));
+    p(`เย็น: ${d.instruments.cold.join(" · ")}`, 9.5, "#555555");
+    p(`เร็ว: ${d.instruments.fast.join(" · ")}`, 9.5, "#555555");
+    p(`ฉุกเฉิน: ${d.instruments.emergency.join(" · ")}`, 9.5, "#555555");
+    h2("บท 13 · จัดพอร์ตตามธาตุ");
+    bars(52, y + 10, 490, d.elementBalance.map((e) => ({ label: e.element, value: e.pct, color: EL_COLOR[e.element] ?? C.muted })), 50);
     y += 95;
-    callout("วิธีใช้พอร์ตนี้", "เริ่มจากเทียร์ 1-2 ก่อน (ตรงดวง+พื้นฐานแข็ง) · เทียร์ 3 = ฟรี ใช้ประกอบ · เทียร์ 4 = ยังไม่ควรแตะ · ซื้อเฉพาะวันมงคล (บท 6) + ผ่านเช็กลิสต์ (ภาคผนวก ก)", "good");
+    p(`ดวงคุณมี ${d.strengthen.element} ${d.elementBalance.find((e) => e.element === d.strengthen.element)?.pct ?? 0}% → เพิ่มน้ำหนักสินทรัพย์ธาตุ ${d.strengthen.element} (ไม่เกิน 40% ต่อธาตุเดียว)`, 10);
+    h2("บท 14 · DCA / สะสม (จังหวะทยอยซื้อ)");
+    const accs = phaseOf(0, 100).filter((t) => t.verdict === "accumulate").slice(0, 3);
+    for (const t of accs) lifeRow(t);
+    if (!accs.length) p("ช่วงวัยจรของคุณส่วนใหญ่เป็น 'ลงทุนเต็มที่' — ซื้อก้อนได้ในวันมงคล", 10);
+    h2("บท 15 · forex / คริปโต (เก็งกำไรขั้นสูง)");
+    callout("คำเตือน", d.trading.allowed === "no" ? "ดวงคุณเทรดไม่ได้ — เก็งกำไรสูงสุด (ฟอเร็กซ์/คริปโต/ฟิวเจอร์ส) = เสี่ยงสุด จำกัดไม่เกิน 5% ของเงินเร็ว หรือเลี่ยง" : "เก็งกำไรได้เฉพาะสัดส่วนเงินเร็ว + วันมงคล + มีจุดตัดขาดทุน", "warn");
   } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 3", "พอร์ตเด่นประจำเดือน (เทียร์)", maxSection <= 2 ? "ฉบับ Pro (฿490)" : "VIP (฿790/เดือน)");
+    doc.addPage(); y = 52; footer();
+    lockedSection("ภาค 3", "ลงทุนยังไง (บท 11-15)", "ฉบับ Pro (฿490)");
   }
 
-  // ══════════ บท 4: สินค้าแนะนำ ══════════
-  if (maxSection >= 4) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1("สินค้าแนะนำตามดวง (11 หมวด)", "บทที่ 4");
-    p(narrative["4"] ?? "ตรงดวง = ลงทุนได้ · ดูดพลัง = เลี่ยง · ขัดดวง = อย่าแตะ", 10, "#8d6e63");
-    row([{ text: "หมวด", w: 130, bold: true }, { text: "สินค้าเด่น (เทียร์/fit)", w: 360, bold: true }], true);
-    for (const cat of d.categories) {
-      const items = cat.items.slice(0, 2).map((it) => `${it.ticker}(${TIER_LABEL[it.stockTier as StockTier] ?? ""} ${it.fit === "good" ? "ตรงดวง" : it.fit === "drain" ? "ดูดพลัง" : it.fit === "avoid" ? "ขัดดวง" : "กลาง"})`).join(", ");
-      if (items) row([{ text: cat.label, w: 130 }, { text: items, w: 360, color: "#555555" }]);
-    }
-    callout("ความหมายของ fit", "ตรงดวง = ธาตุสินค้าอยู่ในธาตุที่ต้องเสริม (ลงทุนได้) · ดูดพลัง = ธาตุลาภเกิน — การไล่ลาภจะดึงพลัง (ดิถีอ่อนเสี่ยงสุด) · ขัดดวง = ธาตุพิฆาต — ห้ามแตะเด็ดขาด", "info");
-    callout("ข้อควรระวัง", "สินค้าที่ fit='ตรงดวง' แต่เทียร์ 4 = แค่ข้อมูล — ต้องมีพื้นฐานแข็ง (เทียร์ 1-2) ถึงลงทุนจริง", "warn");
-  } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 4", "สินค้าแนะนำตามดวง (11 หมวด)", maxSection <= 2 ? "ฉบับ Pro (฿490)" : "VIP (฿790/เดือน)");
-  }
-
-  // ══════════ บท 5: Life Map ══════════
-  if (maxSection >= 5) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1("แผนที่ชีวิต (Life Map) 0-80+ ปี", "บทที่ 5");
-    p(narrative["5"] ?? "แต่ละแถบ = วัยจร 5 ปี — วางแผนการเงินทั้งชีวิตจากแถบนี้", 10, "#8d6e63");
-    const vMeta: Record<string, { label: string; color: string; tint: string }> = {
-      invest: { label: "ลงทุนเต็มที่", color: "#1e6f3e", tint: "#e8f3ea" },
-      accumulate: { label: "สะสม/ถือ", color: "#b8860b", tint: "#f7f1e2" },
-      avoid: { label: "หลีกเลี่ยง", color: "#9b2c2c", tint: "#f9ecec" },
-      "no-risk": { label: "ห้ามเสี่ยง", color: "#6b1f1f", tint: "#f3e3e3" },
-    };
-    const legendX = [52, 178, 296, 414];
-    for (const [i, m] of Object.values(vMeta).entries()) {
-      doc.roundedRect(legendX[i], y + 2, 10, 10, 2).fill(m.color);
-      doc.font(F).fontSize(8.5).fillColor(C.muted).text(clean(m.label), legendX[i] + 14, y, { width: 100 });
-    }
-    y += 14;
-    for (const t of d.timeline) {
-      const m = vMeta[t.verdict] ?? vMeta.accumulate;
-      ensure(22);
-      doc.roundedRect(52, y, 490, 20, 4).fill(m.tint);
-      doc.roundedRect(52, y, 6, 20, 3).fill(m.color);
-      doc.font(F_B).fontSize(9.5).fillColor(C.ink).text(clean(`${t.ageRange} ปี`), 66, y + 4, { width: 58 });
-      doc.font(F_B).fontSize(9.5).fillColor(m.color).text(clean(m.label), 128, y + 4, { width: 82 });
-      doc.font(F).fontSize(8.5).fillColor("#555555").text(clean(t.advice), 214, y + 4, { width: 324 });
-      y += 24;
-    }
-    const golds = d.timeline.filter((t) => t.verdict === "invest");
-    if (golds.length) {
+  // ══════════ ภาค 4: ลงทุนเมื่อไหร่ (บท 16-20) ══════════
+  if (maxSection >= 3) {
+    partH("4", "ลงทุนเมื่อไหร่", "จังหวะชีวิตทั้ง 80 ปี — ช่วงไหนรวย ช่วงไหนต้องระวัง");
+    h2("บท 16 · วัยจร 0-20 (ปฐมวัย — สร้างนิสัย)");
+    for (const t of phaseOf(0, 20)) lifeRow(t);
+    h2("บท 17 · วัยจร 20-40 (สร้างตัว — สะสมก้อน)");
+    for (const t of phaseOf(20, 40)) lifeRow(t);
+    h2("บท 18 · วัยจร 40-60 (จังหวะทอง)");
+    for (const t of phaseOf(40, 60)) lifeRow(t);
+    const golds = phaseOf(40, 60).filter((t) => t.verdict === "invest");
+    if (golds.length) callout("ช่วงทอง", `${golds.map((g) => g.ageRange).join(", ")} ปี — ลงทุนเต็มที่ ริเริ่มก่อเกิดลาภ อย่าพลาด`, "good");
+    h2("บท 19 · วัยจร 60-80 (รักษาทรัพย์)");
+    for (const t of phaseOf(60, 100)) lifeRow(t);
+    h2("บท 20 · แผนที่ชีวิต (Life Map 0-80+ ดูจบในตาเดียว)");
+    for (const t of d.timeline) lifeRow(t);
+    const allGolds = d.timeline.filter((t) => t.verdict === "invest");
+    if (allGolds.length) {
       y += 2;
-      doc.roundedRect(52, y, 490, 26, 4).fill("#fdf6e3").strokeColor(C.gold).lineWidth(1).stroke();
-      doc.font(F_B).fontSize(10).fillColor(C.gold).text(clean(`ช่วงทองของคุณ: ${golds.map((g) => g.ageRange).join(", ")} ปี — ลงทุนเต็มที่ ริเริ่มก่อเกิดลาภ`), 62, y + 7, { width: 470 });
-      y += 32;
+      doc.roundedRect(52, y, 490, 24, 4).fill("#fdf6e3").strokeColor(C.gold).lineWidth(1).stroke();
+      doc.font(F_B).fontSize(10).fillColor(C.gold).text(clean(`ช่วงทองของคุณ: ${allGolds.map((g) => g.ageRange).join(", ")} ปี — ลงทุนเต็มที่ ริเริ่มก่อเกิดลาภ`), 62, y + 6, { width: 470 });
+      y += 30;
     }
-    callout("วิธีใช้ Life Map", "ดูแถบสีอายุปัจจุบัน → ทำตามคำแนะนำช่วงนั้น · วางแผนว่า 'ช่วงทอง' จะมาถึงเมื่อไหร่ → เตรียมเงินเย็นไว้รอ · ช่วงแดง = ห้ามเสี่ยงเด็ดขาด กันเงินสด", "good");
   } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 5", "แผนที่ชีวิต (Life Map)", "VIP (฿790/เดือน)");
+    doc.addPage(); y = 52; footer();
+    lockedSection("ภาค 4", "ลงทุนเมื่อไหร่ (บท 16-20)", "ฉบับ Pro (฿490)");
   }
 
-  // ══════════ บท 6: วันมงคล ══════════
-  if (maxSection >= 6) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1("วันมงคล / วันระวัง (เดือนนี้)", "บทที่ 6");
-    p(narrative["6"] ?? "วันมงคล = ทำธุรกรรมใหญ่ · วันระวัง = งดเสี่ยง", 10, "#8d6e63");
-    h2("ธาตุเดือนนี้");
-    p(`ธาตุเดือน: ${d.monthAdvice.element ?? "-"} (${d.monthAdvice.fit === "good" ? "หนุนดวง" : d.monthAdvice.fit === "avoid" ? "ขัดดวง" : "กลาง"}) — ${d.monthAdvice.text}`, 10.5);
-    h2("วันมงคล (${d.auspiciousDays.month.goodDayCount} วัน)");
-    const gd = d.auspiciousDays.month.goodDays.map((g) => g.date);
-    for (let i = 0; i < gd.length; i += 6) {
-      row(gd.slice(i, i + 6).map((x) => ({ text: x, w: 78, color: C.green })));
-    }
-    h2("วันระวัง (${d.auspiciousDays.month.avoidDayCount} วัน)");
-    const ad = d.auspiciousDays.month.avoidDays.map((g) => g.date);
-    for (let i = 0; i < ad.length; i += 6) {
-      row(ad.slice(i, i + 6).map((x) => ({ text: x, w: 78, color: C.red })));
-    }
-    callout("วิธีใช้", "วางแผนซื้อก้อน/ลงทุน/เซ็นสัญญาในวันมงคล · วันระวัง = งดตัดสินใจเสี่ยง เก็บเงินสด · ธาตุเดือนเปลี่ยน = ปรับน้ำหนักพอร์ตตาม (หนุน→เพิ่ม  ขัด→ลด)", "good");
+  // ══════════ ภาค 5: ป้องกัน (บท 21-23) ══════════
+  if (maxSection >= 5) {
+    partH("5", "ป้องกัน", "กันเจ๊ง — จุดรั่วไหล ช่วงคลังแตก กฎเหล็กคุ้มครอง");
+    h2("บท 21 · ผั่วไฉ่โข่ว (จุดรั่วไหลของเงิน)");
+    p(`เดือนนี้มีวันระวัง ${d.auspiciousDays.month.avoidDayCount} วัน: ${d.auspiciousDays.month.avoidDays.map((g) => g.date).join(", ")} — งดซื้อก้อนใหญ่/เซ็นสัญญา เก็บเงินสด`, 10, "#9b2c2c");
+    h2("บท 22 · คลังแตก (ช่วงที่ต้องลดความเสี่ยง)");
+    const risks = d.timeline.filter((t) => t.verdict === "avoid" || t.verdict === "no-risk");
+    for (const t of risks) lifeRow(t);
+    if (!risks.length) p("ไม่มีช่วง 'ห้ามเสี่ยง' ในวัยจรของคุณ — แต่ยังต้องมีเงินสำรอง 6 เดือนเสมอ", 10);
+    h2("บท 23 · กฎเหล็ก 5 ข้อ (คุ้มครองตัวเอง)");
+    bullet("1) ซื้อเฉพาะวันมงคล  2) ไม่เกิน 5% ของพอร์ตต่อตัว  3) ผ่านเช็กลิสต์ 30 ข้อก่อน");
+    bullet("4) เงินฉุกเฉินห้ามแตะเด็ดขาด  5) ธาตุเดือนขัดดวง = ลดน้ำหนัก งดเสี่ยง");
   } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 6", "วันมงคล / วันระวัง (รายเดือน)", "VIP (฿790/เดือน)");
+    doc.addPage(); y = 52; footer();
+    lockedSection("ภาค 5", "ป้องกัน (บท 21-23)", "VIP (฿790/เดือน)");
   }
 
-  // ══════════ บท 7: ฉบับเดือนนี้ (VIP — ของสด) ══════════
+  // ══════════ ภาค 6: เสริม (บท 24-25) + บท 26 ฉบับเดือนนี้ ══════════
   if (maxSection >= 6) {
-    doc.addPage();
-    y = 52;
-    footer();
-    h1(`ฉบับเดือนนี้ (${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })})`, "บทที่ 7");
-    p("ส่วนนี้คือ 'ของสด' ของสมาชิก VIP — อัปเดตทุกเดือนตามธาตุเดือนที่เปลี่ยนไป (เนื้อหาส่วนอื่นเป็นพื้นฐานคงที่)", 10, "#8d6e63");
-    h2("ธาตุเดือนนี้ — หนุนหรือขัดดวง");
+    partH("6", "เสริมดวง", "ดวงดีขึ้นได้ — สี/ทิศ/เครื่องราง + เสริมตามวัยจร");
+    h2("บท 24 · สี / ทิศ / เครื่องราง (เสริมธาตุ)");
+    const boost = { ไม้: { color: "เขียว/น้ำตาล", dir: "ตะวันออก", item: "ต้นไม้ ไม้มงคล หนังสือ" }, ไฟ: { color: "แดง/ส้ม/ม่วง", dir: "ทิศใต้", item: "เทียน ตะเกียง ของร้อนแรง" }, ดิน: { color: "เหลือง/ครีม/น้ำตาล", dir: "กลาง/ตะวันตกเฉียงใต้", item: "หิน แร่ เซรามิก" }, ทอง: { color: "ขาว/เงิน/ทอง", dir: "ตะวันตก", item: "เหรียญ กุญแจ โลหะ" }, น้ำ: { color: "ดำ/น้ำเงินเข้ม", dir: "ทิศเหนือ", item: "น้ำพุ ตู้ปลา กระจก" } }[d.strengthen.element] ?? { color: "แดง/ส้ม", dir: "ทิศใต้", item: "เทียน ของร้อนแรง" };
+    row([{ text: "ธาตุที่ต้องเสริม", w: 120, bold: true }, { text: d.strengthen.element, w: 370, color: C.green }], true);
+    row([{ text: "สี", w: 120, bold: true }, { text: boost.color, w: 370 }]);
+    row([{ text: "ทิศ", w: 120, bold: true }, { text: boost.dir, w: 370 }]);
+    row([{ text: "เครื่องราง/ของเสริม", w: 120, bold: true }, { text: boost.item, w: 370 }]);
+    h2("บท 25 · เสริมตามวัยจร (ช่วงนี้ต้องเสริมอะไร)");
+    for (const t of d.timeline.slice(0, 4)) lifeRow(t);
+    p("* วัยจรถัดไป = เปลี่ยนธาตุ — อ่านภาค 4 วางแผนล่วงหน้า 5 ปี", 9, "#999999");
+    h1(`ฉบับเดือนนี้ (${new Date().toLocaleDateString("th-TH", { month: "long", year: "numeric" })})`, "บท 26");
     const mf = d.monthAdvice.fit === "good" ? "หนุนดวง" : d.monthAdvice.fit === "avoid" ? "ขัดดวง" : "กลาง";
     callout(`ธาตุเดือน: ${d.monthAdvice.element ?? "-"} (${mf})`, d.monthAdvice.text, d.monthAdvice.fit === "good" ? "good" : d.monthAdvice.fit === "avoid" ? "warn" : "info");
     h2("ปฏิทินมงคลทั้งเดือน");
-    p(`วันมงคล ${d.auspiciousDays.month.goodDayCount} วัน (เหมาะซื้อก้อน/เซ็นสัญญา):`, 10, C.green);
-    const gd = d.auspiciousDays.month.goodDays.map((g) => g.date);
-    for (let i = 0; i < gd.length; i += 6) row(gd.slice(i, i + 6).map((x) => ({ text: x, w: 78, color: C.green })));
-    p(`วันระวัง ${d.auspiciousDays.month.avoidDayCount} วัน (งดเสี่ยง):`, 10, C.red);
-    const ad = d.auspiciousDays.month.avoidDays.map((g) => g.date);
-    for (let i = 0; i < ad.length; i += 6) row(ad.slice(i, i + 6).map((x) => ({ text: x, w: 78, color: C.red })));
-    h2("แผนเดือนนี้ (ตามธาตุเดือน)");
-    const plan = d.monthAdvice.fit === "good"
-      ? `เดือนนี้ ${d.monthAdvice.element ?? "ธาตุ"} หนุนดวง → เพิ่มน้ำหนักสินทรัพย์ธาตุ ${d.strengthen.element} ได้ · ทำธุรกรรมใหญ่ในวันมงคล · ทยอย DCA ตามแผน`
-      : d.monthAdvice.fit === "avoid"
-        ? `เดือนนี้ ${d.monthAdvice.element ?? "ธาตุ"} ขัดดวง → ลดความเสี่ยง งดซื้อก้อนใหญ่ เก็บเงินสดในวันระวัง · รอเดือนหน้า`
-        : "เดือนนี้ธาตุกลาง → ทำตามแผนปกติ ทยอยสะสมในวันมงคล อย่าเปลี่ยนกลยุทธ์กลางคัน";
+    p(`วันมงคล ${d.auspiciousDays.month.goodDayCount} วัน: ${d.auspiciousDays.month.goodDays.map((g) => g.date).join(", ")}`, 10, "#1e6f3e");
+    p(`วันระวัง ${d.auspiciousDays.month.avoidDayCount} วัน: ${d.auspiciousDays.month.avoidDays.map((g) => g.date).join(", ")}`, 10, "#9b2c2c");
+    const plan = d.monthAdvice.fit === "good" ? `เดือนนี้ ${d.monthAdvice.element ?? "ธาตุ"} หนุนดวง → เพิ่มน้ำหนักธาตุ ${d.strengthen.element} · ธุรกรรมใหญ่ในวันมงคล · ทยอย DCA` : d.monthAdvice.fit === "avoid" ? `เดือนนี้ ${d.monthAdvice.element ?? "ธาตุ"} ขัดดวง → ลดความเสี่ยง งดก้อนใหญ่ เก็บเงินสดในวันระวัง` : "เดือนนี้ธาตุกลาง → ทำตามแผนปกติ ทยอยสะสมในวันมงคล";
     callout("สิ่งที่ต้องทำเดือนนี้", plan, "good");
-    callout("กฎเหล็ก 5 ข้อ (ทุกเดือน)", "1) ซื้อเฉพาะวันมงคล  2) ไม่เกิน 5% ต่อตัว  3) ผ่านเช็กลิสต์ 30 ข้อก่อน  4) เงินฉุกเฉินห้ามแตะ  5) ธาตุเดือนขัด = ลดน้ำหนัก", "warn");
+    callout("กฎเหล็ก 5 ข้อ (ทุกเดือน)", "1) ซื้อเฉพาะวันมงคล  2) ไม่เกิน 5% ต่อตัว  3) เช็กลิสต์ 30 ข้อ  4) เงินฉุกเฉินห้ามแตะ  5) ธาตุเดือนขัด = ลดน้ำหนัก", "warn");
   } else {
-    doc.addPage();
-    y = 52;
-    footer();
-    lockedSection("บทที่ 7", `ฉบับเดือนนี้ (ของสด VIP)`, "VIP (฿790/เดือน)");
+    doc.addPage(); y = 52; footer();
+    lockedSection("ภาค 6 + บท 26", "เสริมดวง + ฉบับเดือนนี้ (ของสด VIP)", "VIP (฿790/เดือน)");
   }
-
   // ══════════ ภาคผนวก ก: เช็กลิสต์ ══════════
   if (maxSection >= 3) {
     doc.addPage();
