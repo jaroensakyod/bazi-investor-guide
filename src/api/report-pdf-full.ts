@@ -18,6 +18,8 @@ const FONT_CANDIDATES = [
 
 const EL_COLOR: Record<string, string> = { ไม้: "#2e7d32", ไฟ: "#c62828", ดิน: "#8d6e63", ทอง: "#b8860b", น้ำ: "#1565c0" };
 const TIER_LABEL: Record<StockTier, string> = { gold: "[VIP เทียร์ 1]", silver: "[PRO เทียร์ 2]", bronze: "[FREE เทียร์ 3]", base: "[INFO เทียร์ 4]" };
+// ── Design system (ตรงกับการ์ด) ──
+const C = { primary: "#14532d", gold: "#b8860b", ink: "#2b2417", muted: "#8a8478", cream: "#f7f4ec", line: "#e0d9c8", red: "#9b2c2c", green: "#1e6f3e", white: "#ffffff" };
 
 /** ฟอนต์ไทยไม่มี glyph emoji → กรองออก (รวม variation selector) */
 function clean(s: string): string {
@@ -54,12 +56,16 @@ export async function buildFullReportPdf(state: CalculatedStateValue): Promise<B
   };
   const footer = () => {
     doc.fontSize(7.5).fillColor("#999999").font(F).text(clean(d.disclaimer), 52, pageH - 40, { width: 500, align: "center" });
+    // brand + หมายเลขหน้า
+    doc.font(F_B).fontSize(8).fillColor(C.gold).text(clean("ดวงนักลงทุน"), 52, pageH - 52);
+    doc.font(F).fontSize(8).fillColor("#bbbbbb").text(`หนา ${doc.bufferedPageRange().count}`, 500, pageH - 52, { width: 48, align: "right" });
   };
-  const h2 = (text: string, color = "#8d6e63") => {
+  const h2 = (text: string, color = C.gold) => {
     ensure(34);
-    doc.fontSize(15).font(F_B).fillColor(color).text(clean(text), 52, y);
-    y += 24;
-    doc.moveTo(52, y).lineTo(540, y).strokeColor(color).lineWidth(0.7).stroke();
+    doc.rect(52, y, 5, 16).fill(color);
+    doc.fontSize(14.5).font(F_B).fillColor(C.primary).text(clean(text), 66, y - 2);
+    y += 22;
+    doc.moveTo(52, y).lineTo(540, y).strokeColor(C.line).lineWidth(0.7).stroke();
     y += 12;
   };
   const p = (text: string, size = 10.5, color = "#333333") => {
@@ -67,24 +73,38 @@ export async function buildFullReportPdf(state: CalculatedStateValue): Promise<B
     doc.fontSize(size).font(F).fillColor(color).text(clean(text), 52, y, { width: 490 });
     y = doc.y + 4;
   };
-  const row = (cols: Array<{ text: string; w: number; bold?: boolean; color?: string }>) => {
+  const callout = (text: string, color = C.red) => {
+    ensure(26);
+    doc.roundedRect(52, y, 490, 22, 4).fill(color === C.red ? "#f9ecec" : "#eef5ee");
+    doc.font(F_B).fontSize(9.5).fillColor(color).text(clean(text), 62, y + 5, { width: 470 });
+    y += 28;
+  };
+  const row = (cols: Array<{ text: string; w: number; bold?: boolean; color?: string }>, header = false) => {
     ensure(20);
     let x = 52;
+    if (header) {
+      doc.rect(52, y, 490, 17).fill("#eef2ec");
+    }
     for (const c of cols) {
-      doc.font(c.bold ? F_B : F).fontSize(9.5).fillColor(c.color ?? "#333333").text(clean(c.text), x, y, { width: c.w });
+      doc.font(c.bold || header ? F_B : F).fontSize(header ? 9 : 9.5).fillColor(header ? C.primary : c.color ?? "#333333").text(clean(c.text), x, y + (header ? 3 : 0), { width: c.w });
       x += c.w;
     }
-    y += 16;
+    y += header ? 19 : 16;
   };
 
-  // ── ปก ──
-  doc.font(F_B).fontSize(26).fillColor("#8d6e63").text(clean("รายงานการลงทุนคู่ดวง"), 52, 120, { align: "center", width: 500 });
-  doc.font(F).fontSize(13).fillColor("#666666").text(clean("ฉบับสถาบัน — ดวง x หุ้น x สินทรัพย์ (จัดทำโดย AI ผู้ช่วยลงทุนคู่ดวง)"), 52, 160, { align: "center", width: 500 });
-  doc.font(F_B).fontSize(18).fillColor("#333333").text(clean(`${d.persona.emoji} ${d.persona.name}`), 52, 250, { align: "center", width: 500 });
-  doc.font(F).fontSize(12).fillColor("#555555").text(clean(`${d.persona.bandLabel} · สไตล์ ${d.persona.style}`), 52, 280, { align: "center", width: 500 });
-  doc.font(F).fontSize(11).fillColor("#777777").text(`วันที่ ${new Date().toISOString().slice(0, 10)} · แหล่งข้อมูล Yahoo Finance + ตารางธาตุซินแส`, 52, 310, { align: "center", width: 500 });
-  doc.moveTo(52, 380).lineTo(548, 380).strokeColor("#c9b28a").lineWidth(1).stroke();
-  doc.font(F).fontSize(9.5).fillColor("#888888").text(clean(d.disclaimer), 52, 400, { width: 500, align: "center" });
+  // ── ปก (แถบสี + ทอง) ──
+  doc.rect(0, 0, 595, 150).fill(C.primary);
+  doc.rect(0, 150, 595, 4).fill(C.gold);
+  doc.font(F_B).fontSize(13).fillColor("#cfe3d4").text(clean("ดวงนักลงทุน  ·  ฉบับสถาบัน"), 52, 32);
+  doc.font(F_B).fontSize(30).fillColor(C.white).text(clean("รายงานการลงทุนคู่ดวง"), 52, 62, { width: 490 });
+  doc.font(F).fontSize(12.5).fillColor("#cfe3d4").text(clean("ดวง x หุ้น x สินทรัพย์ — คำนวณจากตำรา 60 กะจื่อ × ข้อมูลตลาดจริง"), 52, 104, { width: 490 });
+  doc.roundedRect(52, 200, 490, 60, 8).fill(C.cream);
+  doc.font(F_B).fontSize(19).fillColor(C.primary).text(clean(`${d.persona.emoji} ${d.persona.name}`), 70, 214, { width: 450 });
+  doc.font(F).fontSize(11.5).fillColor(C.muted).text(clean(`${d.persona.bandLabel}  ·  สไตล์ ${d.persona.style}  ·  เทรด: ${d.trading.label}`), 70, 240, { width: 450 });
+  doc.font(F).fontSize(10).fillColor(C.muted).text(`วันที่ ${new Date().toISOString().slice(0, 10)}  ·  แหล่ง: Yahoo Finance + ตารางธาตุซินแส`, 52, 280, { width: 490 });
+  doc.font(F_B).fontSize(11).fillColor(C.gold).text(clean("สารบัญ: 1.มุมมองดวง  2.จัดสรรเงิน  3.พอร์ตเด่น(เทียร์)  4.สินค้าแนะนำ  5.ไทม์ไลน์วัยจร  6.วันมงคล"), 52, 320, { width: 490 });
+  doc.rect(0, 812, 595, 30).fill(C.cream);
+  doc.font(F).fontSize(7.5).fillColor("#999999").text(clean(d.disclaimer), 52, 819, { width: 490, align: "center" });
   doc.addPage();
   y = 52;
   footer();
@@ -111,13 +131,13 @@ export async function buildFullReportPdf(state: CalculatedStateValue): Promise<B
   // ── 3. หุ้นเด่นประจำเดือน (เทียร์) ──
   h2("3. พอร์ตเด่นประจำเดือน (คัดโดย ดวง x พื้นฐาน x โมเมนตัม)");
   p(`TH30 (เทียบ SET): ${thPicks.benchmark.changePct != null ? `${thPicks.benchmark.changePct}%` : "-"} วันนี้ · คัดเฉพาะธาตุตรงดวง — เคารพสมดุลดิถี (อ่อน: อย่าไล่ลาภ)`, 10, "#666666");
-  row([{ text: "อันดับ", w: 40, bold: true }, { text: "หุ้น", w: 90, bold: true }, { text: "ธาตุ", w: 40, bold: true }, { text: "เทียร์", w: 110, bold: true }, { text: "คะแนน", w: 50, bold: true }, { text: "เหตุผลหลัก", w: 170, bold: true }]);
+  row([{ text: "อันดับ", w: 40, bold: true }, { text: "หุ้น", w: 90, bold: true }, { text: "ธาตุ", w: 40, bold: true }, { text: "เทียร์", w: 110, bold: true }, { text: "คะแนน", w: 50, bold: true }, { text: "เหตุผลหลัก", w: 170, bold: true }], true);
   for (const [i, pk] of thPicks.picks.entries()) {
     const reason = pk.reasons[0] ?? "";
     row([{ text: `#${i + 1}`, w: 40 }, { text: pk.ticker, w: 90, bold: true }, { text: pk.element, w: 40, color: EL_COLOR[pk.element] ?? "#333" }, { text: TIER_LABEL[pk.stockTier], w: 110, color: pk.stockTier === "gold" ? "#b8860b" : "#333" }, { text: `${pk.score}`, w: 50 }, { text: reason, w: 170, color: "#555555" }]);
   }
   p("US30 (เทียบ S&P 500) — ตัวอย่าง:", 10, "#666666");
-  row([{ text: "อันดับ", w: 40, bold: true }, { text: "หุ้น", w: 90, bold: true }, { text: "ธาตุ", w: 40, bold: true }, { text: "เทียร์", w: 110, bold: true }, { text: "คะแนน", w: 50, bold: true }, { text: "เหตุผลหลัก", w: 170, bold: true }]);
+  row([{ text: "อันดับ", w: 40, bold: true }, { text: "หุ้น", w: 90, bold: true }, { text: "ธาตุ", w: 40, bold: true }, { text: "เทียร์", w: 110, bold: true }, { text: "คะแนน", w: 50, bold: true }, { text: "เหตุผลหลัก", w: 170, bold: true }], true);
   for (const [i, pk] of usPicks.picks.entries()) {
     row([{ text: `#${i + 1}`, w: 40 }, { text: pk.ticker, w: 90, bold: true }, { text: pk.element, w: 40, color: EL_COLOR[pk.element] ?? "#333" }, { text: TIER_LABEL[pk.stockTier], w: 110, color: pk.stockTier === "gold" ? "#b8860b" : "#333" }, { text: `${pk.score}`, w: 50 }, { text: pk.reasons[0] ?? "", w: 170, color: "#555555" }]);
   }
@@ -133,7 +153,7 @@ export async function buildFullReportPdf(state: CalculatedStateValue): Promise<B
 
   // ── 5. ไทม์ไลน์วัยจร ──
   h2("5. ไทม์ไลน์วัยจร (15-84 ปี — ทุก 5 ปี)");
-  row([{ text: "ช่วงอายุ", w: 70, bold: true }, { text: "สถานะ", w: 80, bold: true }, { text: "คำแนะนำ", w: 380, bold: true }]);
+  row([{ text: "ช่วงอายุ", w: 70, bold: true }, { text: "สถานะ", w: 80, bold: true }, { text: "คำแนะนำ", w: 380, bold: true }], true);
   for (const t of d.timeline) {
     const verdict = t.verdict === "invest" ? "ลงทุนได" : t.verdict === "accumulate" ? "สะสม" : t.verdict === "avoid" ? "เลี่ยง" : "ไมเสยง";
     row([{ text: `${t.ageRange} ป`, w: 70 }, { text: verdict, w: 80, bold: true, color: t.verdict === "invest" ? "#2e7d32" : t.verdict === "avoid" ? "#c62828" : "#8d6e63" }, { text: t.advice, w: 380, color: "#555555" }]);
