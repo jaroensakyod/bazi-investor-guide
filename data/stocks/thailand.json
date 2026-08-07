@@ -60,7 +60,8 @@
         "TRUE",
         "INTUCH",
         "JMART"
-      ]
+      ],
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -102,7 +103,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Airports_of_Thailand",
         "quote": "The Airports of Thailand Public Company Limited (AOT) (Thai: บริษัท ท่าอากาศยานไทย จำกัด (มหาชน)) is a public company that manages ten international airports in Thailand. AOT was established on Septem"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -142,7 +144,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Bangkok_Bank",
         "quote": "Bangkok Bank Public Company Limited (Thai: ธนาคารกรุงเทพ, RTGS: Thanakhan Krung Thep) is one of the largest commercial banks in Thailand. Its branch network includes over 800 branches as of May 2024, "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -183,7 +186,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Bangkok_Dusit_Medical_Services",
         "quote": "Bangkok Dusit Medical Services (Thai: บริษัท กรุงเทพดุสิตเวชการ จำกัด (มหาชน), stock symbol: SET: BDMS) is Thailand's largest private healthcare group. It was founded by the Thai billionaire Prasert P"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -225,7 +229,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Bangkok_Expressway_and_Metro",
         "quote": "Bangkok Expressway and Metro Public Company Limited or BEM (Thai: บริษัท ทางด่วนและรถไฟฟ้ากรุงเทพ จำกัด (มหาชน)) is a public transportation company in Thailand. It operates two metro lines in Bangkok "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -268,7 +273,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Bumrungrad_Hospital",
         "quote": "Bumrungrad International Hospital (Thai: โรงพยาบาลบำรุงราษฎร์, RTGS: Rongphayaban Bamrung Rat, pronounced [rōːŋ.pʰā.jāː.bāːn bām.rūŋ râːt]; SET: BH) is a private hospital founded in 1980 in Bangkok, T"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -308,7 +314,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Berli_Jucker",
         "quote": "บริษัท เบอร์ลี่ ยุคเกอร์ จำกัด (มหาชน) (อังกฤษ: BERLI JUCKER PUBLIC COMPANY LIMITED ชื่อย่อ: BJC) ดำเนินกิจการเป็นผู้ผลิตและจัดจำหน่ายสินค้าและบริการครบวงจร ตั้งแต่ ต้นน้ำ กลางน้ำ และปลายน้ำ โดยมีกิจก"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -351,7 +358,8 @@
         "quote": "BTS Group Holdings Public Company Limited engages in transportation, marketing, and other businesses in Thailand. It operates in three segments: Move, Mix, and Match."
       },
       "website": "https://www.btsgroup.co.th",
-      "industry": "Railroads"
+      "industry": "Railroads",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -391,7 +399,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/CP_All",
         "quote": "CP All Public Company Limited was established in 1988 by the Charoen Pokphand Group to operate convenience store businesses in Thailand under the 7-Eleven trademark. The company was granted a license "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -433,7 +442,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Charoen_Pokphand_Foods",
         "quote": "Charoen Pokphand Foods Public Company Limited, (Thai: บริษัท เจริญโภคภัณฑ์อาหาร จำกัด (มหาชน)) a company of the Charoen Pokphand Group, is an agro-industrial and food conglomerate headquartered in Tha"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -490,7 +500,8 @@
         "SIRI",
         "AP",
         "CRC"
-      ]
+      ],
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -530,7 +541,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Central_Retail",
         "quote": "Central Group is a Thai multinational conglomerate founded by Tiang and Samrit Chirathivat in 1947, and still privately owned by the Chirathivat family as of 2025. Its publicly traded subsidiaries inc"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -592,7 +604,8 @@
         "HANA",
         "KCE",
         "SMT"
-      ]
+      ],
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -637,7 +650,8 @@
         "quote": "Energy Absolute Public Company Limited, together with its subsidiaries, engages in the manufacture and distribution of crude palm oil, biodiesel, and glycerol products in Thailand."
       },
       "website": "https://www.energyabsolute.co.th",
-      "industry": "Utilities - Renewable"
+      "industry": "Utilities - Renewable",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -678,7 +692,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Siam_Global_House",
         "quote": "Charoen Pokphand Foods Public Company Limited, (Thai: บริษัท เจริญโภคภัณฑ์อาหาร จำกัด (มหาชน)) a company of the Charoen Pokphand Group, is an agro-industrial and food conglomerate headquartered in Tha"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -719,7 +734,8 @@
         "quote": "Global Power Synergy Public Company Limited, together with its subsidiaries, engages in the production and distribution of electricity, steam, and water for industrial use to the government and indust"
       },
       "website": "https://www.gpscgroup.com",
-      "industry": "Utilities - Regulated Electric"
+      "industry": "Utilities - Regulated Electric",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -763,7 +779,8 @@
         "quote": "Gulf Development Public Company Limited generates and sells electricity and steam to public and private clients in Thailand and internationally. The company operates through Power Business, Consulting"
       },
       "website": "https://www.gulf.co.th",
-      "industry": "Utilities - Independent Power Producers"
+      "industry": "Utilities - Independent Power Producers",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -806,7 +823,8 @@
         "quote": "Home Product Center Public Company Limited, together with its subsidiaries, operates as a home improvement retailer in Thailand, Malaysia, and Vietnam. It engages in the trading of various goods and m"
       },
       "website": "https://www.homepro.co.th",
-      "industry": "Home Improvement Retail"
+      "industry": "Home Improvement Retail",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -847,7 +865,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Intouch",
         "quote": "Intouch Holdings PCL (Thai: บริษัท อินทัช โฮลดิ้งส์ จำกัด (มหาชน); formerly Shin Corporation) is a Thai holding company which focuses on the telecommunication industry. It is the parent company of Adv"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -889,7 +908,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Indorama_Ventures",
         "quote": "Indorama Ventures (IVL) is a producer of intermediate petrochemicals industry, the world's largest producer of PET resins."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -951,7 +971,8 @@
         "SCB",
         "KTB",
         "TTB"
-      ]
+      ],
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -993,7 +1014,8 @@
         "quote": "Krung Thai Bank Public Company Limited, together with its subsidiaries, engages in commercial banking business in Thailand and internationally. The company operates through three segments: Retail Bank"
       },
       "website": "https://krungthai.com",
-      "industry": "Banks - Regional"
+      "industry": "Banks - Regional",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1035,7 +1057,8 @@
         "quote": "Krungthai Card Public Company Limited engages in the credit card, personal loan, and other related businesses in Thailand. It also involved in the merchant acquiring, payment services, provincial reta"
       },
       "website": "https://www.ktc.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1075,7 +1098,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Land_and_Houses",
         "quote": "Land and Houses Public Company Limited (also known as Land and Houses) is a large real-estate based company in Thailand. It was established in 1983 by Ms Piangjai Harnpanij and her son, Mr Anant Asava"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1117,7 +1141,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Minor_International",
         "quote": "Minor International is a Thai multi-national company based in Bangkok, Thailand. The three core businesses of Minor International are hospitality, restaurants, and lifestyle brands distribution, opera"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1159,7 +1184,8 @@
         "quote": "Muangthai Capital Public Company Limited engages in the credit business in Thailand. It offers agricultural vehicle registration, motorcycle, and vehicle title loans; land title deed loans; and instal"
       },
       "website": "https://muangthaicap.com",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1203,7 +1229,8 @@
         "quote": "PTT Oil and Retail Business Public Company Limited, together with its subsidiaries, engages in the commercial and retail marketing of petroleum products and other services in Thailand and internationa"
       },
       "website": "https://www.pttor.com",
-      "industry": "Oil & Gas Refining & Marketing"
+      "industry": "Oil & Gas Refining & Marketing",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1243,7 +1270,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Osotspa",
         "quote": "Osotspa Public Company Limited (Thai: บริษัท โอสถสภา จำกัด (มหาชน)) is a Thai beverage producer of drinks such as M-150 and Shark Energy. It is based in Bangkok."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1307,7 +1335,8 @@
         "TOP",
         "IRPC",
         "OR"
-      ]
+      ],
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1347,7 +1376,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/PTT_Exploration_and_Production",
         "quote": "PTT Exploration and Production Public Company Limited (Thai: บริษัท ปตท.สำรวจและผลิตปิโตรเลียม จำกัด (มหาชน)), also known as PTTEP, is a national petroleum exploration and production company based in "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1387,7 +1417,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/PTT_Global_Chemical",
         "quote": "PTT Global Chemical (Thai: บริษัท พีทีที โกลบอล เคมิคอล จำกัด (มหาชน)), also known as PTTGC, is a petrochemical company that specializes in synthesizing olefins and aromatics. It was founded in 2011 a"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1426,7 +1457,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Ratch",
         "quote": "RATCH-Australia Corporation (RAC) is an Australian electricity generation company. It is a subsidiary of RATCH Group (formerly known as Ratchaburi Electricity Generating Holding Company), a public com"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1466,7 +1498,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Siam_Commercial_Bank",
         "quote": "Siam Commercial Bank (Thai: ธนาคารไทยพาณิชย์; RTGS: Thanakhan Thai Phanit), officially The Siam Commercial Bank Public Company Limited, is the first and the oldest Thai bank. It was founded on 30 Janu"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1510,7 +1543,8 @@
         "quote": "The Siam Cement Public Company Limited, together with its subsidiaries, operates in the cement and building materials, chemicals, and packaging businesses in Thailand and internationally. It operates "
       },
       "website": "https://www.scg.com",
-      "industry": "Conglomerates"
+      "industry": "Conglomerates",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1552,7 +1586,8 @@
         "quote": "Tidlor Holdings Public Company Limited provides loans and insurance brokerage services in Thailand. The company offers vehicle title loans for motorcycles, cars, pickups trucks, and commercial trucks;"
       },
       "website": "https://www.tidlorinvestor.com",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1594,7 +1629,8 @@
         "quote": "TISCO Financial Group Public Company Limited, together with its subsidiaries, provides commercial banking products and services for individuals and businesses in Thailand. The company operates through"
       },
       "website": "https://www.tisco.co.th",
-      "industry": "Banks - Regional"
+      "industry": "Banks - Regional",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1634,7 +1670,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Thai_Oil",
         "quote": "Thai Oil Public Company Limited or simply Thaioil (Thai: ไทยออยล์) is a Thai public company. It is listed on the Stock Exchange of Thailand (SET). It is a subsidiary of PTT Group. The company was foun"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1675,7 +1712,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/True",
         "quote": "True most commonly refers to truth, the state of being in congruence with fact or reality. True may also refer to:"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1715,7 +1753,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/TMBThanachart_Bank",
         "quote": "TMBThanachart Bank (TTB) (Thai: ธนาคารทหารไทยธนชาต จำกัด (มหาชน); [Thai Military Thanachart Bank] RTGS: thanakhan thahan thai thanachat chamkat maha chon) is a Thai bank based in Bangkok. It has been "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1756,7 +1795,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Thai_Union",
         "quote": "Thai Union Group PCL is a Thailand-based producer of seafood based products. It was founded in 1977, and was listed on the Stock Exchange of Thailand (SET) on 22 November 1994."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1798,7 +1838,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/WHA",
         "quote": "บริษัท ดับบลิวเอชเอ คอร์ปอเรชั่น จำกัด (มหาชน) (ชื่อย่อ WHA) เป็นบริษัทมหาชนจำกัดที่ประกอบธุรกิจให้บริการโลจิสติกส์ แบ่งออกเป็น 4 กลุ่มธุรกิจ คือ ธุรกิจพัฒนาและบริหารจัดการอสังหาริมทรัพย์ (Logistics H"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1839,7 +1880,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Banpu",
         "quote": "Banpu Public Company Limited is an energy company based in Thailand. Its three core businesses are energy resources (coal and gas); energy generation (conventional and renewable); and energy technolog"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1879,7 +1921,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Ch_Karnchang",
         "quote": "CH. Karnchang Public Company Limited (CK, Thai: บริษัท ช.การช่าง จำกัด (มหาชน)) is a Thai contractor and construction firm, operating in Thailand and Laos. The second-largest construction firm in Thai"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1923,7 +1966,8 @@
         "quote": "Com7 Public Company Limited, together with its subsidiaries, engages in the retail business of information technology (IT) products in Thailand. It sells IT products, desktop computers, mobile phones,"
       },
       "website": "https://www.comseven.com",
-      "industry": "Specialty Retail"
+      "industry": "Specialty Retail",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -1966,7 +2010,8 @@
         "quote": "Hana Microelectronics Public Company Limited, together with its subsidiaries, engages in the manufacture and trading of electronic components. The company provides printed circuit board assemblies, ch"
       },
       "website": "https://www.hanagroup.com",
-      "industry": "Electronic Components"
+      "industry": "Electronic Components",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2006,7 +2051,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/KCE_Electronics",
         "quote": "KCE Electronics is a Thai electronics manufacturer, mostly involved in the production of circuitboards. It was founded in 1992, and employs 4,703 people. It is listed on the SET50 Index and SET100 Ind"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2046,7 +2092,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Siam_Makro",
         "quote": "Makro is a Dutch international brand of warehouse clubs, also called cash and carry stores. Makro was founded by SHV Holdings, a Dutch conglomerate based in Utrecht in partnership with German company "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2088,7 +2135,8 @@
         "quote": "Srisawad Corporation Public Company Limited, together with its subsidiaries, provides financial services in Thailand and internationally. It operates through Hire Purchase; Loan; and Asset Management "
       },
       "website": "https://www.sawad.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2127,7 +2175,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Amata",
         "quote": "According to Roman mythology, Amata (also called Palanto) was the wife of Latinus, king of the Latins, and the mother of their only child, Lavinia. In the Aeneid of Virgil, she commits suicide during "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2167,7 +2216,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/B.Grimm_Power",
         "quote": "B.Grimm Group (Thai: บี.กริม) is a multinational conglomerate founded in 1878, based in Bangkok, Thailand. The large-scale conglomerate is active in healthcare, energy, building and industrial systems"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2208,7 +2258,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/IRPC",
         "quote": "IRPC Public Company Limited or simply IRPC (Integrated Refinery & Petrochemical Complex) (Thai: ไออาร์พีซี) is a Thai Public SET-listed Petroleum and Petrochemical company. It is a subsidiary of PTT G"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2249,7 +2300,8 @@
         "quote": "Super Energy Corporation Public Company Limited, together with its subsidiaries, engages in the generation and sale of electricity in Thailand and Vietnam. The company generates and sells electricity "
       },
       "website": "https://www.supercorp.co.th",
-      "industry": "Utilities - Renewable"
+      "industry": "Utilities - Renewable",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2292,7 +2344,8 @@
         "quote": "Asia Aviation Public Company Limited provides airline services in Thailand. It operates through two segments, Scheduled Flight Operations and Chartered Flight Operations. The Scheduled Flight Operatio"
       },
       "website": "https://www.aavplc.com",
-      "industry": "Airlines"
+      "industry": "Airlines",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2334,7 +2387,8 @@
         "quote": "Bangkok Chain Hospital Public Company Limited, together with its subsidiaries, operates private hospitals in Bangkok vicinity, Chiang Rai, Saraburi, Nonthaburi, Pathumthani, Ayudhaya, Chachoengsao, Pr"
       },
       "website": "https://www.bangkokchainhospital.com/th/home",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2376,7 +2430,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/BEC_World",
         "quote": "BEC World Public Company Limited (Thai: บริษัท บีอีซี เวิลด์ จำกัด (มหาชน)), doing business as BEC World, is a Thai media conglomerate, best known as the operator of television Channel 3."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2418,7 +2473,8 @@
         "quote": "Bangkok Life Assurance Public Company Limited, together with its subsidiaries, provides life insurance services in Thailand. The company's life insurance products include protection, savings, educatio"
       },
       "website": "https://www.bangkoklife.com",
-      "industry": "Insurance - Life"
+      "industry": "Insurance - Life",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2457,7 +2513,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Banpu_Power",
         "quote": "Banpu Public Company Limited is an energy company based in Thailand. Its three core businesses are energy resources (coal and gas); energy generation (conventional and renewable); and energy technolog"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2498,7 +2555,8 @@
         "quote": "Carabao Group Public Company Limited, through its subsidiaries, manufactures, markets, distributes, and sells beverages in Thailand and internationally."
       },
       "website": "https://www.carabaogroup.com",
-      "industry": "Beverages - Non-Alcoholic"
+      "industry": "Beverages - Non-Alcoholic",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2541,7 +2599,8 @@
         "quote": "Central Plaza Hotel Public Company Limited, together with its subsidiaries, engages in the hotel business in Thailand, the Republic of Maldives, and Japan. It operates in two segments, Hotel and Relat"
       },
       "website": "https://www.centarahotelsresorts.com",
-      "industry": "Resorts & Casinos"
+      "industry": "Resorts & Casinos",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2583,7 +2642,8 @@
         "quote": "Chularat Hospital Public Company Limited, together with its subsidiaries, operates clinics and hospitals in Thailand. The company also provides a comprehensive health screening center. In addition, it"
       },
       "website": "https://www.chularat.com",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2624,7 +2684,8 @@
         "quote": "CK Power Public Company Limited, through its subsidiaries, generates and sells electricity and steam in Thailand and Lao People's Democratic Republic. It operates through three segments: Generation of"
       },
       "website": "https://www.ckpower.co.th",
-      "industry": "Utilities - Independent Power Producers"
+      "industry": "Utilities - Independent Power Producers",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2667,7 +2728,8 @@
         "quote": "Dohome Public Company Limited, together with its subsidiaries, engages in the retailing and wholesaling of construction materials, office equipment, and household products in Thailand."
       },
       "website": "https://www.dohome.co.th",
-      "industry": "Home Improvement Retail"
+      "industry": "Home Improvement Retail",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2708,7 +2770,8 @@
         "quote": "Electricity Generating Public Company Limited, together with its subsidiaries, generates and sells electricity to government sector and industrial users primarily in Thailand, Laos, the Philippines, I"
       },
       "website": "https://www.egco.com/th/home",
-      "industry": "Utilities - Independent Power Producers"
+      "industry": "Utilities - Independent Power Producers",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2744,7 +2807,8 @@
       "reviewedAt": null,
       "notes": "",
       "description": "",
-      "businessEvidence": null
+      "businessEvidence": null,
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2784,7 +2848,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Gunkul_Engineering",
         "quote": "บริษัท กันกุลเอ็นจิเนียริ่ง จำกัด (มหาชน) (อังกฤษ: Gunkul Engineering Public Company Limited; SET: GUNKUL) กลุ่มบริษัทดำเนินธุรกิจผลิต จัดหา และจำหน่ายอุปกรณ์สำหรับระบบไฟฟ้าและระบบพลังงานทดแทนซึ่งครอบ"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2823,7 +2888,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Ichitan",
         "quote": "Ichitan Group Co., Ltd. is a Thai beverage company that manufactures green tea drinks, herbal drinks, fruit drinks, and energy drinks."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2867,7 +2933,8 @@
         "quote": "Jaymart Group Holdings Public Company Limited, together with its subsidiaries, engages in the wholesale and retail of mobile phones, accessories, and gadgets in Thailand. The company operates through "
       },
       "website": "https://www.jaymart.co.th/en/home",
-      "industry": "Specialty Retail"
+      "industry": "Specialty Retail",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2909,7 +2976,8 @@
         "quote": "JMT Network Services Public Company Limited, together with its subsidiaries, provides debt collection and distressed debt management services for financial institutions and entrepreneurs in Thailand. "
       },
       "website": "https://www.jmtnetwork.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2949,7 +3017,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Kiatnakin_Phatra",
         "quote": "Kiatnakin Phatra Bank (Thai: ธนาคารเกียรตินาคินภัทร) is a full-service bank based in Thailand. The bank was founded in January 1971 in Bangkok with 17,000 million baht in funds, and has grown to 52 br"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -2990,7 +3059,8 @@
         "quote": "L.P.N. Development Public Company Limited, together with its subsidiaries, engages in the real estate business in Thailand. The company develops offices, residential condominiums, houses, and townhome"
       },
       "website": "https://www.lpn.co.th",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3032,7 +3102,8 @@
         "quote": "MK Restaurant Group Public Company Limited, together with its subsidiaries, engages in the sale of food and beverages through restaurants under the MK Restaurants trademark in Thailand. The company op"
       },
       "website": "https://www.mkrestaurant.com",
-      "industry": "Restaurants"
+      "industry": "Restaurants",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3076,7 +3147,8 @@
         "quote": "Mega Lifesciences Public Company Limited, together with its subsidiaries, manufactures and sells health food supplements, prescription pharmaceutical products, over-the-counter products, herbal produc"
       },
       "website": "https://www.megawecare.com",
-      "industry": "Drug Manufacturers - Specialty & Generic"
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3118,7 +3190,8 @@
         "quote": "Precious Shipping Public Company Limited, a holding company, owns and operates dry bulk ships on a tramp shipping basis in Thailand and internationally. The company is involved in chartering and ownin"
       },
       "website": "https://www.preciousshipping.com",
-      "industry": "Marine Shipping"
+      "industry": "Marine Shipping",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3159,7 +3232,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Quality_Houses",
         "quote": "Quality function deployment (QFD) is a method developed in Japan beginning in 1966 to help transform the voice of the customer into engineering characteristics for a product."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3203,7 +3277,8 @@
         "quote": "Singha Estate Public Company Limited, together with its subsidiaries, develops and invests in real estate properties for rental and sale in Thailand and internationally. The company develops private e"
       },
       "website": "https://www.singhaestate.co.th",
-      "industry": "Resorts & Casinos"
+      "industry": "Resorts & Casinos",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3243,7 +3318,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Sansiri",
         "quote": "Sansiri (Thai: แสนสิริ) is one of the largest real estate developers in Thailand. It was founded in 1984 by Srettha Thavisin, Apichat Chutrakul, and Wanchak Buranasiri."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3286,7 +3362,8 @@
         "quote": "Sri Trang Agro-Industry Public Company Limited, together with its subsidiaries, manufactures and distributes natural rubber products in Thailand, China, the United States, Japan, Korea, India, Germany"
       },
       "website": "https://www.sritranggroup.com",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3321,7 +3398,8 @@
       "reviewedAt": null,
       "notes": "",
       "description": "",
-      "businessEvidence": null
+      "businessEvidence": null,
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3365,7 +3443,8 @@
         "quote": "Sri Trang Gloves (Thailand) Public Company Limited, together with its subsidiaries, manufactures and distributes rubber gloves in Asia, North America, South America, Europe, and internationally. It op"
       },
       "website": "https://www.sritranggloves.com",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3404,7 +3483,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Tipco_Asphalt",
         "quote": "บริษัท ทิปโก้แอสฟัลท์ จำกัด (มหาชน) (บริษัทฯ)(อังกฤษ: TIPCO ASPHALT PUBLIC COMPANY LIMITED ชื่อย่อ: TASCO) ก่อตั้งขึ้นตั้งแต่ พ.ศ. 2522 ปัจจุบันบริษัทฯ บริษัทย่อย กิจการร่วมค้า และบริษัทร่วม (กลุ่มบริ"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3444,7 +3524,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Thanachart_Capital",
         "quote": "Thanachart Bank Public Company Limited (TBank) (Thai: ธนาคารธนชาต) was a bank headquartered in Bangkok, Thailand. It commenced operations on 22 April 2002 with Thanachart Capital PCL (TCAP) as its par"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3485,7 +3566,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Thai_Airways",
         "quote": "Thai Airways International operates a fleet of wide-body aircraft from Airbus and Boeing and narrow-body aircraft from Airbus."
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3527,7 +3609,8 @@
         "quote": "Thonburi Healthcare Group Public Company Limited, together with its subsidiaries, engages in the operation of hospitals in Thailand and Singapore. It operates through six segments: Hospital Operations"
       },
       "website": "https://thg.co.th",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3566,7 +3649,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Taokaenoi_Food_and_Marketing",
         "quote": "Tao Kae Noi (Thai: เถ้าแก่น้อย; RTGS: Thao Kae Noi) is a Thai crispy seaweed snack product. It was founded by Itthipat Peeradechapan in 2004. Taokaenoi Food & Marketing PCL (SET: TKN, บริษัท เถ้าแก่น้"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3607,7 +3691,8 @@
         "quote": "TQM Alpha Public Company Limited engages in the insurance brokerage business in Thailand. It offers individual and group life insurance products; non-life insurance products comprising motor and non-m"
       },
       "website": "https://www.tqmalpha.com",
-      "industry": "Insurance Brokers"
+      "industry": "Insurance Brokers",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3648,7 +3733,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Thoresen_Thai_Agencies",
         "quote": "บริษัท โทรีเซนไทย เอเยนต์ซีส์ จำกัด (มหาชน) (อังกฤษ: THORESEN THAI AGENCIES PUBLIC COMPANY LIMITED ชื่อย่อ:TTA) เป็นบริษัทมหาชนจำกัดที่ประกอบธุรกิจโดยการถือหุ้นเพื่อการลงทุนเชิงกลยุทธ์ (strategic inve"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3690,7 +3776,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Thai_Vegetable_Oil",
         "quote": "บริษัท น้ำมันพืชไทย จำกัด (มหาชน) (อังกฤษ: THAI VEGETABLE OIL PUBLIC COMPANY LIMITED ชื่อย่อ:TVO) บริษัทดำเนินกิจการเป็นผู้ประกอบการอุตสาหกรรมการเกษตร สินค้าหลักที่บริษัทผลิตได้แก่ น้ำมันถั่วเหลือง น้"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3731,7 +3818,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/VGI",
         "quote": "บริษัท วีจีไอ จำกัด (มหาชน) (ย่อ: VGI) เป็นบริษัทประกอบธุรกิจสื่อโฆษณานอกบ้านและธุรกิจบริการด้านดิจิทัล วีจีไอได้จดทะเบียนจัดตั้งบริษัทในนาม บริษัท โกลบอล เทคโนโลยีส์ แอนด์ เทเลคอม จำกัด เมื่อวันที่ 5"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3775,7 +3863,8 @@
         "quote": "WHA Utilities and Power Public Company Limited provides utilities and water solutions in Thailand and internationally. It produces and distributes industrial water; and provides waste water treatment "
       },
       "website": "https://www.wha-up.com",
-      "industry": "Utilities - Regulated Water"
+      "industry": "Utilities - Regulated Water",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -3816,7 +3905,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Aapico_Hitech",
         "quote": "บริษัท อาปิโก ไฮเทค จำกัด (มหาชน) (อังกฤษ: AAPICO HITECH PUBLIC COMPANY LIMITED ชื่อย่อ:AH) บริษัทก่อตั้งขึ้นเมื่อวันที่ 25 มีนาคม 2539 เพื่อดำเนินธุรกิจอุตสาหกรรมยานยนต์ ปัจจุบันบริษัทมีบริษัทย่อยและ"
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -3856,7 +3946,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/SISB",
         "quote": "SISB Public Company Limited is an operator of international schools in Thailand. The only school listed on the Stock Exchange of Thailand, its schools teach the Singaporean curriculum. As of 2023, SIS"
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -3895,7 +3986,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Beauty_Community",
         "quote": "บริษัท บิวตี้ คอมมูนิตี้ จำกัด (มหาชน) (อังกฤษ: BEAUTY COMMUNITY PUBLIC COMPANY LIMITED ชื่อย่อ:BEAUTY) เดิมชื่อ บริษัท โมนาโพลิแตนท์ จำกัด จัดตั้งขึ้นเมื่อวันที่ 19 ตุลาคม 2543 เพื่อดำเนินธุรกิจจำหน่"
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -3937,7 +4029,8 @@
         "quote": "Leo Global Logistics Public Company Limited provides logistics services in Thailand. It operates through four segments: Sea Freight, Air Freight, Integrated Logistics Services, and Storage Rental and "
       },
       "website": "https://leogloballogistics.com",
-      "industry": "Integrated Freight & Logistics"
+      "industry": "Integrated Freight & Logistics",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -3979,7 +4072,8 @@
         "quote": "Principal Capital Public Company Limited, together with its subsidiaries, operates and manages hospitals that provide healthcare services in Thailand. It operates through Healthcare Services Business,"
       },
       "website": "https://www.principalcapital.co.th",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4022,7 +4116,8 @@
         "quote": "TPI Polene Power Public Company Limited generates and distributes electricity, refuse derived fuel, and organics waste in Thailand. It operates in two segments, Energy & Utilities, and Petrol and Gas "
       },
       "website": "https://www.tpipolenepower.co.th",
-      "industry": "Utilities - Renewable"
+      "industry": "Utilities - Renewable",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4063,7 +4158,8 @@
         "quote": "TOA Paint (Thailand) Public Company Limited, together with its subsidiaries, manufactures and distributes paints and chemicals in Thailand, Vietnam, Laos, Myanmar, Cambodia, Indonesia, and Malaysia."
       },
       "website": "https://www.toagroup.com/th/home",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4102,7 +4198,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Absolute_Clean_Energy",
         "quote": "บริษัท แอ๊บโซลูท คลีน เอ็นเนอร์จี้ จำกัด (มหาชน) (อังกฤษ: Absolute Clean Energy Public Company Limited; SET: ACE) ประกอบธุรกิจวิจัยและพัฒนาด้านพันธุ์พืชพลังงาน ปลูกไม้โตเร็ว ธุรกิจผลิตภัณฑ์จากไม้ปลูก "
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4146,7 +4243,8 @@
         "quote": "AMR Asia Public Company Limited, together with its subsidiaries, provides construction services for telecommunication, and electronic and computer systems in Thailand."
       },
       "website": "https://www.amrasia.com",
-      "industry": "Engineering & Construction"
+      "industry": "Engineering & Construction",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4187,7 +4285,8 @@
         "quote": "XSpring Capital Public Company Limited, together with its subsidiaries, engages in the investment and securities businesses in Thailand and internationally. It operates through five segments: Securiti"
       },
       "website": "https://www.xspringcapital.com",
-      "industry": "Asset Management"
+      "industry": "Asset Management",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4227,7 +4326,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Plan_B_Media",
         "quote": "บริษัท แพลน บี มีเดีย จำกัด (มหาชน) (อังกฤษ: Plan B Media Company Limited) เป็นบริษัทประกอบธุรกิจให้บริการ และผลิตสื่อโฆษณาภายนอกที่อยู่อาศัย ได้แก่ สื่อโฆษณาบนระบบขนส่งมวลชน สื่อโฆษณาภาพนิ่งกลางแจ้ง "
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4270,7 +4370,8 @@
         "quote": "Sappe Public Company Limited, together with its subsidiaries, manufactures and distributes health drinking, food, and coconut products in Thailand, Asia, Europe, the United States, and internationally"
       },
       "website": "https://www.sappe.com",
-      "industry": "Beverages - Non-Alcoholic"
+      "industry": "Beverages - Non-Alcoholic",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4312,7 +4413,8 @@
         "quote": "Ekachai Medical Care Public Company Limited, together with its subsidiaries, operates Ekachai hospital in Thailand. The company offers various surgeries comprising face and neck lift; forehead augment"
       },
       "website": "https://www.ekachaihospital.com",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4352,7 +4454,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Vibhavadi_Medical_Center",
         "quote": "บริษัท โรงพยาบาลวิภาวดี จำกัด (มหาชน) เป็นบริษัทประกอบธุรกิจโรงพยาบาลเอกชนภายใต้ชื่อ \"โรงพยาบาลวิภาวดี\" ในกรุงเทพมหานคร เปิดให้บริการเมื่อวันที่ 1 มีนาคม พ.ศ. 2529 ด้วยทุนจดทะเบียนเริ่มต้น 20 ล้านบาท "
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4390,7 +4493,8 @@
       "reviewedAt": null,
       "notes": "",
       "description": "",
-      "businessEvidence": null
+      "businessEvidence": null,
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4427,7 +4531,8 @@
       "reviewedAt": null,
       "notes": "",
       "description": "",
-      "businessEvidence": null
+      "businessEvidence": null,
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4469,7 +4574,8 @@
         "quote": "AP (Thailand) Public Company Limited, together with its subsidiaries, engages in the provision of real estate development business in Thailand. It operates through three segments: LowRise, HighRise,"
       },
       "website": "https://www.apthai.com",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4509,7 +4615,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Supalai",
         "quote": "บริษัท ศุภาลัย จำกัด (มหาชน) (อังกฤษ: SUPALAI PUBLIC COMPANY LIMITED ชื่อย่อ:SPALI) บริษัทและบริษัทย่อยประกอบธุรกิจพัฒนาอสังหาริมทรัพย์เพื่อเป็นที่อยู่อาศัยและเพื่อการพาณิชย์ เป็นผู้ดำเนินการและเป็นเจ"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4550,7 +4657,8 @@
         "quote": "Origin Property Public Company Limited, together with its subsidiaries, engages in property development in Thailand. It sells land and houses, and residential condominium units. The company also offer"
       },
       "website": "https://origin.co.th",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4591,7 +4699,8 @@
         "quote": "Noble Development Public Company Limited, together with its subsidiaries, develops and sells real estate properties in Thailand. It operates through Condominium, House and Land, Rental and Service Bus"
       },
       "website": "https://www.noblehome.com",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4630,7 +4739,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Ananda_Development",
         "quote": "บริษัท อนันดา ดีเวลลอปเม้นท์ จำกัด (มหาชน) เริ่มก่อตั้งเมื่อปี 2542 ประกอบธุรกิจหลักประเภทพัฒนาอสังหาริมทรัพย์ โดยได้จดทะเบียนแปรสภาพเป็นบริษัทมหาชนจำกัดเมื่อปี 2554 และนำหุ้นเข้าจดทะเบียนเป็นหลักทรัพ"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4670,7 +4780,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/SC_Asset",
         "quote": "บริษัท เอสซี แอสเสท คอร์ปอเรชั่น จำกัด (มหาชน) (อังกฤษ: SC ASSET CORPORATION PUBLIC COMPANY LIMITED ชื่อย่อ: SC) บริษัทและบริษัทย่อยประกอบธุรกิจพัฒนาอสังหาริมทรัพย์อย่างครบวงจร โดยบริษัทจะเน้นการลงทุน"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4709,7 +4820,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Pruksa",
         "quote": "บริษัท พฤกษา โฮลดิ้ง จำกัด (มหาชน) (อังกฤษ: Pruksa Holding Public Company Limited) เดิมคือ บริษัท พฤกษา เรียลเอสเตท จำกัด (มหาชน) (อังกฤษ: Pruksa Real Estate Public Company Limited) หรือเรียกง่าย ๆ ว่"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4750,7 +4862,8 @@
         "quote": "TTCL Public Company Limited, together with its subsidiaries, designs, procures, and constructs integrated industrial factories in Thailand and internationally. It operates through three segments: Ener"
       },
       "website": "https://www.ttcl.com",
-      "industry": "Engineering & Construction"
+      "industry": "Engineering & Construction",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4792,7 +4905,8 @@
         "quote": "Seafco Public Company Limited, together with its subsidiaries, engages in the construction of foundation and general public works in Thailand and internationally."
       },
       "website": "https://www.seafco.co.th",
-      "industry": "Engineering & Construction"
+      "industry": "Engineering & Construction",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -4831,7 +4945,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Italian-Thai_Development",
         "quote": "Italian-Thai Development Public Company Limited (ITD) is a construction company based in Bangkok, Thailand. Founded in 1958, it is one of the largest construction firms in the country, and is one of t"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4873,7 +4988,8 @@
         "quote": "Tata Steel (Thailand) Public Company Limited, together with its subsidiaries, engages in the manufacturing, distribution, and trading of steel bars, wire rods, and small section products in Thailand a"
       },
       "website": "https://www.tatasteelthailand.com",
-      "industry": "Steel"
+      "industry": "Steel",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4914,7 +5030,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/TPI_Polene",
         "quote": "TPI Polene Public Company Limited is Thailand's third largest cement manufacturer. It also manufactures petrochemicals, including low-density polyethylene (LDPE) and ethylene-vinyl acetate copolymer ("
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4955,7 +5072,8 @@
         "quote": "Diamond Building Products Public Company Limited manufactures roof tiles, artificial woods, and autoclaved aerated concrete products in Thailand and internationally. The company offers roofing, interi"
       },
       "website": "https://www.dbp.co.th",
-      "industry": "Building Products & Equipment"
+      "industry": "Building Products & Equipment",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -4994,7 +5112,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Dynasty_Ceramic",
         "quote": "บริษัท ไดนาสตี้เซรามิค จำกัด (มหาชน) (อังกฤษ: DYNASTY CERAMIC PUBLIC COMPANY LIMITED; ชื่อย่อ: DCC) บริษัทประกอบธุรกิจหลักเป็นผู้ผลิตและจำหน่ายกระเบื้องเซรามิค กาวยาแนว รวมทั้งผลิตภัณฑ์ที่ซื้อมาจากบริ"
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -5038,7 +5157,8 @@
         "quote": "Thai Stanley Electric Public Company Limited manufactures and sells automotive bulbs, lighting equipment, molds and dies, and product designs in Thailand and internationally. The company offers head a"
       },
       "website": "https://www.thaistanley.com",
-      "industry": "Auto Parts"
+      "industry": "Auto Parts",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5079,7 +5199,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Somboon_Advance_Technology",
         "quote": "บริษัท สมบูรณ์ แอ๊ดวานซ์ เทคโนโลยี จำกัด (มหาชน) (อังกฤษ: Somboon Advance Technology Public Company Limited; SET: SAT) บริษัทประกอบธุรกิจผลิตชิ้นส่วนยานยนต์ โดยมีผลิตภัณฑ์หลักคือ เพลาข้าง โดยบริษัทมีโ"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5121,7 +5242,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/GFPT",
         "quote": "บริษัท จีเอฟพีที จำกัด (มหาชน) (อังกฤษ: GFPT PUBLIC COMPANY LIMITED ชื่อย่อ:GFPT) ก่อตั้งเมื่อวันที่ 25 พฤศจิกายน พ.ศ. 2524 ดำเนินธุรกิจการผลิตและจัดจำหน่ายผลิตภัณฑ์ ไก่สดแช่แข็งและไก่แปรรูป ภายใต้เคร"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5162,7 +5284,8 @@
         "quote": "The Erawan Group Public Company Limited engages in hotel, and building rental and management businesses primarily in Thailand, Japan, and Philippines. The company operates hotels and resorts under the"
       },
       "website": "https://www.theerawan.com",
-      "industry": "Lodging"
+      "industry": "Lodging",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5202,7 +5325,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Dusit_Thani",
         "quote": "Dusit Thani (Thai: ดุสิตธานี) was a miniature city and micronation project created by King Vajiravudh (Rama VI) of Siam (Thailand) in Dusit Palace (later moved to Phaya Thai) in the 1910s–1920s. The p"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5243,7 +5367,8 @@
         "quote": "TTW Public Company Limited, together with its subsidiaries, engages in the production and sale of treated water in Thailand. The company supplies water to the Provincial Waterworks Authority in the Am"
       },
       "website": "https://www.ttwplc.com",
-      "industry": "Utilities - Regulated Water"
+      "industry": "Utilities - Regulated Water",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5285,7 +5410,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Workpoint_Entertainment",
         "quote": "Workpoint Entertainment Public Company Limited is a Thai media company. The company and its subsidiaries do business in television production, film making, event management, animation, publishing, eve"
-      }
+      },
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -5324,7 +5450,8 @@
         "source": "Wikipedia intro (auto) — draft รอตรวจ",
         "url": "https://en.wikipedia.org/wiki/Major_Cineplex",
         "quote": "Major Cineplex Group Public Co. Ltd. is the largest operator of movie theaters in Thailand, and Laos. Combined with its subsidiary, EGV Entertainment, the company has 838 screens in 180 locations arou"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5366,7 +5493,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/PTG_Energy",
         "quote": "บริษัท พีทีจี เอ็นเนอยี จำกัด (มหาชน) (อังกฤษ: PTG Energy Public Company Limited, ชื่อย่อ: PTG) เป็นบริษัทในประเทศไทยที่ดำเนินธุรกิจค้าปลีกน้ำมันเชื้อเพลิงสำเร็จรูป ภายใต้เครื่องหมายการค้า \"PT\" นอกจาก"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5407,7 +5535,8 @@
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
         "url": "https://th.wikipedia.org/wiki/Siam_Gas_and_Petrochemicals",
         "quote": "บริษัท สยามแก๊ส แอนด์ ปิโตรเคมีคัลส์ จำกัด(มหาชน) (อังกฤษ: SIAMGAS AND PETROCHEMICALS PUBLIC COMPANY LIMITED ชื่อย่อ:SGP) ก่อตั้งเมื่อวันที่ 17 มกราคม พ.ศ. 2544 โดยมีหน้าที่หลักคือผลิตและขนส่ง ก๊าซหุง"
-      }
+      },
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5443,7 +5572,8 @@
         "quote": "Bank of Ayudhya Public Company Limited, together with its subsidiaries, provides commercial banking products and services to individuals, corporates, small and medium-sized businesses, and financial i"
       },
       "website": "https://www.krungsri.com",
-      "industry": "Banks - Regional"
+      "industry": "Banks - Regional",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5478,7 +5608,8 @@
         "url": "https://finance.yahoo.com/quote/VAYU1.BK",
         "quote": "Vayupak Fund1 is headquartered in Bangkok, Thailand."
       },
-      "website": "https://www.ktam.co.th/en/service.php"
+      "website": "https://www.ktam.co.th/en/service.php",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5514,7 +5645,8 @@
         "quote": "CP Axtra Public Company Limited engages in the wholesale and retail businesses of food and non-food products in Thailand, Malaysia, and internationally. The company operates through the Wholesale and "
       },
       "website": "https://www.cpaxtra.com",
-      "industry": "Food Distribution"
+      "industry": "Food Distribution",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5550,7 +5682,8 @@
         "quote": "SCG Packaging Public Company Limited provides consumer packaging solutions in Thailand, Vietnam, Indonesia, China, and internationally. It operates through Integrated Packaging Business, Fibrous Busin"
       },
       "website": "https://www.scgpackaging.com",
-      "industry": "Packaging & Containers"
+      "industry": "Packaging & Containers",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5586,7 +5719,8 @@
         "quote": "Thai Life Insurance Public Company Limited provides life insurance products in Thailand. It operates in two segments, Agent Channel and Partnership and Other Channels."
       },
       "website": "https://www.thailife.com",
-      "industry": "Insurance - Life"
+      "industry": "Insurance - Life",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5622,7 +5756,8 @@
         "quote": "Asset World Corp Public Company Limited invests in, develops, and manages real estate properties in Thailand. It operates through two segments: Hotel and Related Services, and Rental and Rendering of "
       },
       "website": "https://www.assetworldcorp-th.com",
-      "industry": "Lodging"
+      "industry": "Lodging",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5658,7 +5793,8 @@
         "quote": "Cal-Comp Electronics (Thailand) Public Company Limited, together with its subsidiaries, manufactures electronic products worldwide. The company offers computer peripherals, such as mainboards, externa"
       },
       "website": "https://www.calcomp.co.th",
-      "industry": "Computer Hardware"
+      "industry": "Computer Hardware",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5694,7 +5830,8 @@
         "quote": "Bangchak Corporation Public Company Limited, together with its subsidiaries, engages in the refining and marketing of petroleum products in Thailand, Singapore, Norway, Korea, Laos, and internationall"
       },
       "website": "https://www.bangchak.co.th",
-      "industry": "Oil & Gas Refining & Marketing"
+      "industry": "Oil & Gas Refining & Marketing",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5730,7 +5867,8 @@
         "quote": "Thai President Foods Public Company Limited, together with its subsidiaries, engages in the manufacture and distribution of instant noodles, semi-instant foods, and biscuits products in Thailand and i"
       },
       "website": "https://www.mama.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5766,7 +5904,8 @@
         "quote": "MR. D.I.Y. Holding (Thailand) Public Company Limited, together with its subsidiaries, operates as a home improvement and lifestyle retailer in Thailand."
       },
       "website": "https://www.mrdiy.co.th",
-      "industry": "Specialty Retail"
+      "industry": "Specialty Retail",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5802,7 +5941,8 @@
         "quote": "Thaifoods Group Public Company Limited, together with its subsidiaries, engages in the production and distribution of chicken and swine products in Thailand, Vietnam, Japan, and internationally. It op"
       },
       "website": "https://www.tfg.co.th",
-      "industry": "Farm Products"
+      "industry": "Farm Products",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5838,7 +5978,8 @@
         "quote": "CPN Retail Growth Leasehold REIT (CPNREIT) was established on 1 December 2017 from the conversion from CPN Retail Growth Leasehold Property Fund (CPNRF). The trust units of CPNREIT were first traded o"
       },
       "website": "https://www.cpnreit.com/en",
-      "industry": "REIT - Diversified"
+      "industry": "REIT - Diversified",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5874,7 +6015,8 @@
         "quote": "Star Petroleum Refining Public Company Limited engages in refinery and petroleum product distribution in Thailand and internationally. It offers petroleum products, including liquefied petroleum gas, "
       },
       "website": "https://www.sprc.co.th",
-      "industry": "Oil & Gas Refining & Marketing"
+      "industry": "Oil & Gas Refining & Marketing",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5910,7 +6052,8 @@
         "quote": "Siam City Cement Public Company Limited, together with its subsidiaries, manufactures, imports, exports, and sells cement and cement related products in Thailand, Vietnam, Sri Lanka, Singapore, Austra"
       },
       "website": "https://www.siamcitycement.com/thailand/",
-      "industry": "Building Materials"
+      "industry": "Building Materials",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5946,7 +6089,8 @@
         "quote": "Frasers Property Thailand Industrial Freehold & Leasehold REIT is a real estate investment trust externally managed by TICON Management Company Limited. The firm acquire, lease and/or sub-lease of imm"
       },
       "website": "https://www.treit.co.th/",
-      "industry": "REIT - Industrial"
+      "industry": "REIT - Industrial",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -5982,7 +6126,8 @@
         "quote": "Saha Pathana Inter-Holding Public Company Limited engages in the investment and development of industrial parks in Thailand. The company operates through three segments: Investment in Consumer Goods B"
       },
       "website": "https://www.spi.co.th",
-      "industry": "Real Estate Services"
+      "industry": "Real Estate Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6018,7 +6163,8 @@
         "quote": "Betagro Public Company Limited operates through agro-industrial and food business in Thailand, Southeast Asia, the rest of Asia, and internationally. It operates through four segments: Agro Business, "
       },
       "website": "https://www.betagro.com",
-      "industry": "Farm Products"
+      "industry": "Farm Products",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6054,7 +6200,8 @@
         "quote": "Bangkok Airways Public Company Limited, together with its subsidiaries, provides air transportation and airport services. The company operates through Airline, Airport, and Supporting Airline Business"
       },
       "website": "https://www.bangkokair.com",
-      "industry": "Airlines"
+      "industry": "Airlines",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6090,7 +6237,8 @@
         "quote": "WHA Premium Growth Freehold And Leasehold Real Estate Investment Trust is a real estate investment trust externally managed by WHA Real Estate Management Company Limited."
       },
       "website": "https://www.whareit.com/th/home",
-      "industry": "REIT - Diversified"
+      "industry": "REIT - Diversified",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6126,7 +6274,8 @@
         "quote": "BKI Holdings Public Company Limited engages in the provision of non-life insurance in Thailand. It operates through Motor, Non-motor, Total insurance segments, and Others segments."
       },
       "website": "https://www.bkiholdings.com",
-      "industry": "Insurance - Diversified"
+      "industry": "Insurance - Diversified",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6162,7 +6311,8 @@
         "quote": "MBK Public Company Limited, together with its subsidiaries, engages in the shopping center, hotel and tourism, golf, real estate, food solution, financial, and auction businesses in Thailand, the Unit"
       },
       "website": "https://www.mbkgroup.co.th",
-      "industry": "Conglomerates"
+      "industry": "Conglomerates",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6198,7 +6348,8 @@
         "quote": "Axtra Future City Freehold And Leasehold Real Estate Investment Trust specializes in investments in freehold and leasehold of 17 shopping malls anchored by a Tesco Lotus hypermarket. Axtra Future City"
       },
       "website": "https://www.axtrart.com/en/home",
-      "industry": "REIT - Retail"
+      "industry": "REIT - Retail",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6234,7 +6385,8 @@
         "quote": "Thai Credit Bank Public Company Limited provides financial services to micro, small, and medium-sized enterprises in Thailand. It operates in two segments, e-Wallet Business and Banking Business."
       },
       "website": "https://www.thaicreditbank.com",
-      "industry": "Banks - Regional"
+      "industry": "Banks - Regional",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6270,7 +6422,8 @@
         "quote": "Regional Container Lines Public Company Limited, together with its subsidiaries, engages in the feeder and vessel operations in Thailand, Singapore, Hong Kong, the People's Republic of China, Taiwan, "
       },
       "website": "https://www.rclgroup.com",
-      "industry": "Marine Shipping"
+      "industry": "Marine Shipping",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6306,7 +6459,8 @@
         "quote": "Stecon Group Public Company Limited, through its subsidiaries, engages in the engineering and construction, utilities and power, infrastructure related to logistics, transportation, and other business"
       },
       "website": "https://www.stecongroup.co.th",
-      "industry": "Engineering & Construction"
+      "industry": "Engineering & Construction",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6342,7 +6496,8 @@
         "quote": "LH Financial Group Public Company Limited, an investment holding company, engages in the banking business in Thailand. It operates through four segments: Investment Holding Business, Banking Business,"
       },
       "website": "https://www.lhfg.co.th",
-      "industry": "Banks - Regional"
+      "industry": "Banks - Regional",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6378,7 +6533,8 @@
         "quote": "AEON Thana Sinsap (Thailand) Public Company Limited provides various retail finance services in Thailand and internationally. It operates through Retail Finance Services and Other Business segments."
       },
       "website": "https://www.aeon.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6414,7 +6570,8 @@
         "quote": "Bangkok Commercial Asset Management Public Company Limited operates as an asset management company in Thailand. The company operates through Non-Performing Loans (NPLs); and Non-Performing Assets (NPA"
       },
       "website": "https://www.bam.co.th",
-      "industry": "Asset Management"
+      "industry": "Asset Management",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6450,7 +6607,8 @@
         "quote": "Prima Marine Public Company Limited provides marine transportation of petroleum and chemical products in Thailand, Malaysia, the United Arab Emirates, Singapore, and internationally. The company trans"
       },
       "website": "https://www.primamarine.co.th",
-      "industry": "Oil & Gas Midstream"
+      "industry": "Oil & Gas Midstream",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6486,7 +6644,8 @@
         "quote": "President Bakery Public Company Limited manufactures and sells bakery products in Thailand. The company's bakery products include sliced and snack bread, burger and hot dog buns, snack buns, pastries,"
       },
       "website": "https://www.farmhouse.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6522,7 +6681,8 @@
         "quote": "Ramkhamhaeng Hospital Public Company Limited, together with its subsidiaries, engages in the hospital business in Thailand. It operates in two segments, Hospital and Other."
       },
       "website": "https://www.ram-hosp.co.th",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6558,7 +6718,8 @@
         "quote": "BCPG Public Company Limited, a renewable energy company, engages in the solar power, hydropower, wind power, and natural gas businesses in Thailand, Japan, Laos, and Taiwan. It operates through Produc"
       },
       "website": "https://www.bcpggroup.com",
-      "industry": "Utilities - Renewable"
+      "industry": "Utilities - Renewable",
+      "riskTier": "medium"
     },
     {
       "type": "stock",
@@ -6594,7 +6755,8 @@
         "quote": "Jasmine Technology Solution Public Company Limited, through its subsidiaries, engages in the design and installation of telecommunication systems, telecom services, bitcoin mining, generative AI, and "
       },
       "website": "https://www.jts.co.th",
-      "industry": "Telecom Services"
+      "industry": "Telecom Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6630,7 +6792,8 @@
         "quote": "Impact Growth Real Estate Investment Trust (the Trust) is a real estate investment trust. The firm is established under the Trust for Transaction in Capital Market Act, B.E.2550 (the Act) in accordanc"
       },
       "website": "https://www.impactgrowthreit.com/",
-      "industry": "REIT - Specialty"
+      "industry": "REIT - Specialty",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6666,7 +6829,8 @@
         "quote": "Ichitan Group Public Company Limited, engages in the manufacture and sale of beverages in Thailand and internationally. The company offers ready-to-drink green tea under the ICHITAN green tea brand; h"
       },
       "website": "https://www.ichitangroup.com",
-      "industry": "Beverages - Non-Alcoholic"
+      "industry": "Beverages - Non-Alcoholic",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6702,7 +6866,8 @@
         "quote": "Aurora Design Public Company Limited, together with its subsidiaries, retails gold jewelry, diamond jewelry, and gemstones through its chain and online stores in Thailand."
       },
       "website": "https://www.auroradesign.co.th",
-      "industry": "Luxury Goods"
+      "industry": "Luxury Goods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6738,7 +6903,8 @@
         "quote": "Vibhavadi Medical Center Public Company Limited operates a hospital under the Vibhavadi Hospital name in Thailand. It operates through two segments, Hospital General Hospital and Hospital in Social Se"
       },
       "website": "https://www.vibhavadi.com",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6774,7 +6940,8 @@
         "quote": "Saha Pathanapibul Public Company Limited, together with its subsidiaries, engages in the consumer goods distribution business in Thailand and internationally. It operates in two segments, Sales of Con"
       },
       "website": "https://www.sahapat.co.th",
-      "industry": "Food Distribution"
+      "industry": "Food Distribution",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6810,7 +6977,8 @@
         "quote": "SCGJWD Logistics Public Company Limited, together with its subsidiaries, engages in the integrated in-land and oversea logistics business in Thailand and internationally. It operates in two segments, "
       },
       "website": "https://jwd-group.com",
-      "industry": "Integrated Freight & Logistics"
+      "industry": "Integrated Freight & Logistics",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6846,7 +7014,8 @@
         "quote": "Eastern Polymer Group Public Company Limited, through its subsidiaries, engages in the manufacture and distribution of rubber insulation, automotive, and plastic packing products in Thailand and inter"
       },
       "website": "https://www.epg.co.th",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6882,7 +7051,8 @@
         "quote": "Allianz Ayudhya Capital Public Company Limited, an investment holding company, provides non-life insurance products in Thailand. It operates through three segments: Non-Life Insurance Business, Invest"
       },
       "website": "https://ayud.azay.co.th",
-      "industry": "Insurance - Property & Casualty"
+      "industry": "Insurance - Property & Casualty",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6918,7 +7088,8 @@
         "quote": "Frasers Property (Thailand) Public Company Limited, together with its subsidiaries, engages in the industrial real estate development business in Thailand."
       },
       "website": "https://www.frasersproperty.co.th",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6954,7 +7125,8 @@
         "quote": "Sikarin Public Company Limited, together with its subsidiaries, operates hospitals in Thailand. The company operates diabetes and endocrine center, general medicine clinic, emergency and trauma center"
       },
       "website": "https://www.sikarin.com",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -6990,7 +7162,8 @@
         "quote": "Forth Corporation Public Company Limited, together with its subsidiaries, manufactures and distributes electronic equipment in Thailand, Netherlands, United States of America, and internationally. It "
       },
       "website": "https://www.forth.co.th",
-      "industry": "Conglomerates"
+      "industry": "Conglomerates",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7026,7 +7199,8 @@
         "quote": "LH Hotel Leasehold Real Estate Investment Trust operates as a real estate investment trust in Thailand. It is involved in the rental of immovable properties. The company was founded in 2015 and is bas"
       },
       "website": "https://www.lhhotelreit.com",
-      "industry": "REIT - Hotel & Motel"
+      "industry": "REIT - Hotel & Motel",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7062,7 +7236,8 @@
         "quote": "Univanich Palm Oil Public Company Limited, together with its subsidiaries, engages in oil palm plantations, crushing mills, and oil palm research and seed businesses in Thailand and the Philippines. I"
       },
       "website": "https://www.univanich.com",
-      "industry": "Farm Products"
+      "industry": "Farm Products",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7098,7 +7273,8 @@
         "quote": "Thaitheparos Public Company Limited manufactures and distributes sauces and condiments in Thailand and internationally. It offers seasoning food products, including seasoning sauces, distilled vinegar"
       },
       "website": "https://www.thaitheparos.com",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7134,7 +7310,8 @@
         "quote": "Birla Carbon (Thailand) Public Company Limited engages in the manufacture and sale of carbon black. Its carbon solutions are used in tires, mechanical rubber goods, plastics, inks, coatings, energy sy"
       },
       "website": "https://www.birlacarbon.com",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7170,7 +7347,8 @@
         "quote": "Don Muang Tollway Public Company Limited, together with its subsidiaries, provides elevated toll road services in Thailand. The company constructs and operates an elevated toll road; and offers toll c"
       },
       "website": "https://www.tollway.co.th",
-      "industry": "Infrastructure Operations"
+      "industry": "Infrastructure Operations",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7206,7 +7384,8 @@
         "quote": "Ratchthani Leasing Public Company Limited, together with its subsidiary, provides hire-purchase and finance leasing services in Thailand. The company offers hire purchase loans for new and used cars; "
       },
       "website": "https://www.ratchthani.com",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7242,7 +7421,8 @@
         "quote": "Praram 9 Hospital Public Company Limited engages in hospital operations primarily in Thailand. The company operates medicine, surgery, diabetes and metabolic, spine, orthopedic, physical therapy and r"
       },
       "website": "https://www.praram9.com",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7278,7 +7458,8 @@
         "quote": "Dhipaya Group Holdings Public Company Limited, through its subsidiaries, provides non-life insurance products in Thailand. It operates through three segments: Non-life Insurance, Investment Business, "
       },
       "website": "https://www.dhipayagroup.co.th",
-      "industry": "Insurance - Diversified"
+      "industry": "Insurance - Diversified",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7314,7 +7495,8 @@
         "quote": "Moshi Moshi Retail Corporation Public Company Limited engages in the retail and wholesale of lifestyle products in Thailand. The company distributes home furnishings, stationery products, bags, plush "
       },
       "website": "https://www.moshimoshi.co.th",
-      "industry": "Department Stores"
+      "industry": "Department Stores",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7350,7 +7532,8 @@
         "quote": "Sky ICT Public Company Limited, together with its subsidiaries, engages in information and communication technology (ICT), and system integration businesses in Thailand. It operates through two segmen"
       },
       "website": "https://www.skyict.co.th",
-      "industry": "Information Technology Services"
+      "industry": "Information Technology Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7386,7 +7569,8 @@
         "quote": "Polyplex (Thailand) Public Company Limited manufactures and distributes polyester films, metallized films, extrusion-coated films, cast polypropylene films, silicone-coated films, blown films, hologra"
       },
       "website": "https://www.polyplexthailand.com",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7422,7 +7606,8 @@
         "quote": "Srisawad Capital 1969 Public Company Limited provides financial services in Thailand. It offers hire-purchase and loan services. The company was incorporated in 1969 and is based in Bangkok, Thailand."
       },
       "website": "https://www.bfit.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7458,7 +7643,8 @@
         "quote": "Rojana Industrial Park Public Company Limited, together with its subsidiaries, engages in the manufacture and sale of electricity from solar cell system in Thailand. The company operates through Real "
       },
       "website": "https://www.rojana.com",
-      "industry": "Utilities - Independent Power Producers"
+      "industry": "Utilities - Independent Power Producers",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7494,7 +7680,8 @@
         "quote": "I.C.C. International Public Company Limited engages in the distribution of consumer products in Thailand. The company operates through four segments: Cosmetics Toiletries & Perfumeries; Women's Appare"
       },
       "website": "https://www.icc.co.th",
-      "industry": "Apparel Retail"
+      "industry": "Apparel Retail",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7522,7 +7709,8 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ"
+      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7558,7 +7746,8 @@
         "quote": "LH Shopping Centers Leasehold Real Estate Investment Trust is a real estate investment trust externally managed by Land and Houses Fund Management Company Limited."
       },
       "website": "https://www.lhscreit.com",
-      "industry": "REIT - Diversified"
+      "industry": "REIT - Diversified",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7594,7 +7783,8 @@
         "quote": "PSG Corporation Public Company Limited, together with its subsidiary, engages in turnkey engineering procurement construction (EPC) and large-scale construction projects in Thailand and the Lao People"
       },
       "website": "https://www.psgcorp.co.th",
-      "industry": "Engineering & Construction"
+      "industry": "Engineering & Construction",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7630,7 +7820,8 @@
         "quote": "SG Capital Public Company Limited engages in the sale of hire purchase contracts of electrical appliances, commercial product, mobile phones, and vehicles in Thailand. It also provides loan receivable"
       },
       "website": "https://www.sgcapital.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7666,7 +7857,8 @@
         "quote": "STP&I Public Company Limited engages in the fabrication of steel works, and manufacture and sale of boilers and pressure vessels in Thailand, Australia, the United States, Canada."
       },
       "website": "https://www.stpi.co.th",
-      "industry": "Metal Fabrication"
+      "industry": "Metal Fabrication",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7702,7 +7894,8 @@
         "quote": "Millennium Group Corporation (Asia) Public Company Limited, together with its subsidiaries, sells automobiles, yachts, and spare parts in Thailand. The company buys, sells, rents, and provides service"
       },
       "website": "https://www.mgc-asia.com",
-      "industry": "Auto & Truck Dealerships"
+      "industry": "Auto & Truck Dealerships",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7738,7 +7931,8 @@
         "quote": "P.S.P. Specialties Public Company Limited, together with its subsidiaries, manufactures and sells lubricant and grease oils in Thailand. It operates through Sales and Services segments."
       },
       "website": "https://www.psp.co.th",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7774,7 +7968,8 @@
         "quote": "Ditto (Thailand) Public Company Limited engages in the distribution and rendering service of data and document management solutions in Thailand. The company rents, distributes, and services photocopie"
       },
       "website": "https://www.dittothailand.com",
-      "industry": "Information Technology Services"
+      "industry": "Information Technology Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7810,7 +8005,8 @@
         "quote": "Alucon Public Company Limited engages in producing and distributing aluminum containers primarily in Thailand. It operates in two segments, Can and Tube, and Slug. The company offers aluminum collapsi"
       },
       "website": "https://www.alucon.th.com",
-      "industry": "Aluminum"
+      "industry": "Aluminum",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7846,7 +8042,8 @@
         "quote": "Bangkok Land Public Company Limited engages in the real estate development, exhibition and convention, food and beverage, and hotel and education investment businesses in Thailand. It operates through"
       },
       "website": "https://www.bangkokland.co.th",
-      "industry": "Real Estate Services"
+      "industry": "Real Estate Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7882,7 +8079,8 @@
         "quote": "Muang Thai Insurance Public Company Limited provides non-life insurance products and services in Thailand. It operates through two segments: Insurance, and Investment and Others."
       },
       "website": "https://www.muangthaiinsurance.com",
-      "industry": "Insurance - Property & Casualty"
+      "industry": "Insurance - Property & Casualty",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7918,7 +8116,8 @@
         "quote": "R&B Food Supply Public Company Limited, together with its subsidiaries, manufactures and trades in bread products, colours, fragrances, and chemicals that are used in food, beverage, and consumer prod"
       },
       "website": "https://www.rbfoodsupply.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7954,7 +8153,8 @@
         "quote": "KGI Securities (Thailand) Public Company Limited, together with its subsidiaries, engages in the securities and derivatives business in Thailand. It provides securities brokerage, securities dealing, "
       },
       "website": "https://www.kgieworld.co.th",
-      "industry": "Capital Markets"
+      "industry": "Capital Markets",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -7990,7 +8190,8 @@
         "quote": "SPCG Public Company Limited produces and distributes electricity from solar energy in Thailand and internationally. It invests in and develops 36 solar farm projects."
       },
       "website": "https://www.spcg.co.th",
-      "industry": "Utilities - Renewable"
+      "industry": "Utilities - Renewable",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8026,7 +8227,8 @@
         "quote": "Singer Thailand Public Company Limited, together with its subsidiaries, distributes household electrical and commercial appliances in Thailand. The company operates through three segments: Trade Sales"
       },
       "website": "https://info.singerthai.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8054,7 +8256,8 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ"
+      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8090,7 +8293,8 @@
         "quote": "AIM Industrial Growth Freehold and Leasehold Real Estate Investment Trust focuses on investing in freehold right of land, cold storage buildings, and immovable assets related to cold storage and wareh"
       },
       "website": "https://www.aimirt.com",
-      "industry": "REIT - Industrial"
+      "industry": "REIT - Industrial",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8126,7 +8330,8 @@
         "quote": "Eastern Water Resources Development and Management Public Company Limited, together with its subsidiaries, engages in the development and management of water distribution pipeline systems in the Easte"
       },
       "website": "https://www.eastwater.com",
-      "industry": "Utilities - Regulated Water"
+      "industry": "Utilities - Regulated Water",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8162,7 +8367,8 @@
         "quote": "Karmarts Public Company Limited, together with its subsidiaries, engages in the manufacturing, packaging, import, and distribution of cosmetics and consumer products in Thailand."
       },
       "website": "https://www.karmarts.co.th",
-      "industry": "Household & Personal Products"
+      "industry": "Household & Personal Products",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8198,7 +8404,8 @@
         "quote": "MC Group Public Company Limited, together with its subsidiaries, engages in the manufacture and distribution management of clothing and accessories in Thailand. The company offers a range of products,"
       },
       "website": "https://www.mcgroupnet.com",
-      "industry": "Apparel Manufacturing"
+      "industry": "Apparel Manufacturing",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8234,7 +8441,8 @@
         "quote": "SCG Decor Public Company Limited, through its subsidiaries, produces and distributes ceramic tiles, sanitary ware, and other related products and services in Thailand, Vietnam, and internationally. Th"
       },
       "website": "https://www.scgdecor.com",
-      "industry": "Building Materials"
+      "industry": "Building Materials",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8270,7 +8478,8 @@
         "quote": "SiS Distribution (Thailand) Public Company Limited, together with its subsidiaries, distributes computer components, smartphones, and office automation equipment in Thailand. It operates in four segme"
       },
       "website": "https://www.sisthai.com",
-      "industry": "Electronics & Computer Distribution"
+      "industry": "Electronics & Computer Distribution",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8298,7 +8507,8 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ"
+      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8334,7 +8544,8 @@
         "quote": "Asia Sermkij Leasing Public Company Limited, together with its subsidiaries, engages in the provision of auto hire purchase services in Thailand. It operates through hire purchase, leasing, and loan s"
       },
       "website": "https://www.ask.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8370,7 +8581,8 @@
         "quote": "Thai Group Holdings Public Company Limited, through its subsidiaries, engages in the life insurance, non-life insurance, financial services, and other businesses in Thailand."
       },
       "website": "https://www.tgh.co.th",
-      "industry": "Insurance - Diversified"
+      "industry": "Insurance - Diversified",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8406,7 +8618,8 @@
         "quote": "Thai Coconut Public Company Limited produces and distributes coconut products in Asia, the United States, Europe, the Middle East, Oceania, and Africa. The company operates through three segments: Coc"
       },
       "website": "https://www.thaicoconut.com",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8442,7 +8655,8 @@
         "quote": "Asian Alliance International Public Company Limited, together with its subsidiaries, produces and sells pet food and ready-to-eat human food products in Thailand, the United States, the United Kingdom"
       },
       "website": "https://asianalliance.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8478,7 +8692,8 @@
         "quote": "Siamese Asset Public Company Limited engages in the real estate development business in Thailand. The company operates through Property Development, Service, and Hotel, Rental, and Other segments. It "
       },
       "website": "https://www.siameseasset.co.th",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8514,7 +8729,8 @@
         "quote": "Synnex (Thailand) Public Company Limited distributes computers, computer peripherals, software, information technology systems, computer consumables, and communication devices in Thailand."
       },
       "website": "https://www.synnex.co.th",
-      "industry": "Electronics & Computer Distribution"
+      "industry": "Electronics & Computer Distribution",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8550,7 +8766,8 @@
         "quote": "North East Rubber Public Company Limited manufactures and sells rubber products in Thailand. It offers rubber smoked sheets, skim block rubbers, mixtures rubber, ribbed smoked, and standard Thai rubbe"
       },
       "website": "https://www.nerubber.com",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8586,7 +8803,8 @@
         "quote": "Exotic Food Public Company Limited manufactures and distributes various food products in Europe, the United States, and internationally. The company operates through two segments, Seasoning and Dippin"
       },
       "website": "https://www.exoticfoodthailand.com",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8622,7 +8840,8 @@
         "quote": "PRG Corporation Public Company Limited, together with its subsidiaries, engages in the production, improvement, packaging, and distribution of milled rice in Thailand, the United States, Canada, Europ"
       },
       "website": "https://www.prg.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8658,7 +8877,8 @@
         "quote": "Saha-Union Public Company Limited, together with its subsidiaries, engages in plastic, rubber and metal, chemicals, trading, energy, hotel, investment, and other businesses."
       },
       "website": "https://www.sahaunion.com",
-      "industry": "Conglomerates"
+      "industry": "Conglomerates",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8694,7 +8914,8 @@
         "quote": "Lanna Resources Public Company Limited, together with its subsidiaries, manufacture and distributes coal. It operates through three segments: Domestic Coal, Overseas Coal, and Ethanol Division. The co"
       },
       "website": "https://www.lannar.com",
-      "industry": "Thermal Coal"
+      "industry": "Thermal Coal",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8730,7 +8951,8 @@
         "quote": "Medeze Group Public Company Limited engages in collection and storage of stem cells for use in medication in Thailand, Vietnam, Cambodia, Philippines, and internationally. The company operates through"
       },
       "website": "https://www.medezegroup.com",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8766,7 +8988,8 @@
         "quote": "BBGI Public Company Limited, together with its subsidiaries, manufactures and distributes biofuel and related products in Thailand. It operates in three segments: Biodiesel, Ethanol, and Others. The c"
       },
       "website": "https://www.bbgigroup.com",
-      "industry": "Specialty Chemicals"
+      "industry": "Specialty Chemicals",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8802,7 +9025,8 @@
         "quote": "Samart Aviation Solutions Public Company Limited, an investment holding company, provides air traffic control services in Cambodia, Laos, and Thailand. The company offers air navigation services, incl"
       },
       "website": "https://www.samartaviation.com",
-      "industry": "Airports & Air Services"
+      "industry": "Airports & Air Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8838,7 +9062,8 @@
         "quote": "Saksiam Leasing Public Company Limited provides financial services in Thailand. It operates through Hire-purchase and Personal Loan, and Others segments. The company offers personal and secured loans,"
       },
       "website": "https://www.saksiam.com",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8874,7 +9099,8 @@
         "quote": "Advanced Information Technology Public Company Limited, together with its subsidiaries, engages in sale, design, installation, project management, repair and maintenance, training, and turnkey for net"
       },
       "website": "https://www.ait.co.th",
-      "industry": "Information Technology Services"
+      "industry": "Information Technology Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8910,7 +9136,8 @@
         "quote": "Neo Corporate Public Company Limited, together with its subsidiary, engages in the manufacturing and distribution of consumer products in Thailand, Cambodia, Laos, Myanmar, and Vietnam."
       },
       "website": "https://www.neo-corporate.com",
-      "industry": "Household & Personal Products"
+      "industry": "Household & Personal Products",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8946,7 +9173,8 @@
         "quote": "Khon Kaen Sugar Industry Public Company Limited, together with its subsidiaries, manufactures and distributes sugar and molasses in Thailand, the Lao People's Democratic Republic, and the Kingdom of C"
       },
       "website": "https://www.kslgroup.com",
-      "industry": "Confectioners"
+      "industry": "Confectioners",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -8982,7 +9210,8 @@
         "quote": "Rhom Bho Property Public Company Limited, together with its subsidiaries, engages in the property development business in Thailand. It develops and rents residential condominiums; develops hotel prope"
       },
       "website": "https://www.rhombho.co.th",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9018,7 +9247,8 @@
         "quote": "Kaset Thai International Sugar Corporation Public Company Limited, together with its subsidiaries, manufactures and distributes sugar in Thailand and internationally."
       },
       "website": "https://www.ktisgroup.com",
-      "industry": "Confectioners"
+      "industry": "Confectioners",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9054,7 +9284,8 @@
         "quote": "NSL Foods Public Company Limited engages in the manufacture and distribution of bakery and snack products in Thailand. The company offers snacks, bakeries, desserts, and other food products."
       },
       "website": "https://www.nslfoods.com",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9090,7 +9321,8 @@
         "quote": "Bangkok Aviation Fuel Services Public Company Limited provides aviation fuel storage and aircraft refueling services at Bangkok International Airport in Thailand. It operates in three segments: Aviati"
       },
       "website": "https://www.bafsthai.com",
-      "industry": "Airports & Air Services"
+      "industry": "Airports & Air Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9126,7 +9358,8 @@
         "quote": "Assetwise Public Company Limited engages in property development and other real estate activities in Thailand. The company develops condominiums, and horizontal residential properties, including singl"
       },
       "website": "https://assetwise.co.th",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9162,7 +9395,8 @@
         "quote": "Index Living Mall Public Company Limited engages in the retail and wholesale of furniture, electronic, and home decorative products in Thailand. It operates through four segments: Retail of Furniture,"
       },
       "website": "https://www.indexlivingmall.com",
-      "industry": "Furnishings, Fixtures & Appliances"
+      "industry": "Furnishings, Fixtures & Appliances",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9198,7 +9432,8 @@
         "quote": "Haad Thip Public Company Limited, together with its subsidiaries, manufactures and distributes soft drinks in Thailand. The company operates through Carbonated Soft Drink and Real Estate segments."
       },
       "website": "https://www.haadthip.com",
-      "industry": "Beverages - Non-Alcoholic"
+      "industry": "Beverages - Non-Alcoholic",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9226,7 +9461,8 @@
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ"
+      "notes": "auto จาก TradingView — รอซินแสตรวจธาตุ",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9262,7 +9498,8 @@
         "quote": "Asia Network International Public Company Limited, together with its subsidiaries, engages in air freight forwarding business in Southeast Asia and China. The company operates as a cargo general sales"
       },
       "website": "https://www.anicargo.com",
-      "industry": "Integrated Freight & Logistics"
+      "industry": "Integrated Freight & Logistics",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9298,7 +9535,8 @@
         "quote": "Golden Ventures Leasehold Real Estate Investment Trust, a real estate investment trust, engages in the rental of properties in Thailand. It holds leasehold rights of Park Ventures Ecoplex building, as"
       },
       "website": "https://www.gvreit.com",
-      "industry": "REIT - Office"
+      "industry": "REIT - Office",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9334,7 +9572,8 @@
         "quote": "Thai Union Feedmill Public Company Limited, together with its subsidiaries, manufactures and distributes animal feeds in Thailand, Sri Lanka, Pakistan, Indonesia, and internationally. The company oper"
       },
       "website": "https://www.thaiunionfeedmill.com",
-      "industry": "Farm Products"
+      "industry": "Farm Products",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9370,7 +9609,8 @@
         "quote": "AIRA Capital Public Company Limited, together with its subsidiaries, engages in the investment and financial advisory activities in Thailand. It operates through Securities and Investment Business, Ad"
       },
       "website": "https://www.airacapital.co.th",
-      "industry": "Capital Markets"
+      "industry": "Capital Markets",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9406,7 +9646,8 @@
         "quote": "The Klinique Medical Clinic Public Company Limited provides skin medical treatment services under the Klinique brand name in Thailand. Its services include face lift, acne, pimples, and acne scars, sk"
       },
       "website": "https://www.theklinique.com",
-      "industry": "Personal Services"
+      "industry": "Personal Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9442,7 +9683,8 @@
         "quote": "Srinanaporn Marketing Public Company Limited engages in the manufacture and distribution of snacks and beverages in Thailand. The company provides technical and administrative services."
       },
       "website": "https://www.snnp.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9477,7 +9719,8 @@
         "url": "https://finance.yahoo.com/quote/CPTREIT.BK",
         "quote": "C.P. Tower Growth Leasehold Property Fund specializes in real estate investments. It seeks to invest in office space and commercial buildings."
       },
-      "industry": "REIT - Diversified"
+      "industry": "REIT - Diversified",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9513,7 +9756,8 @@
         "quote": "Muramoto Electron (Thailand) Public Company Limited manufactures and sells metal and plastic parts for audio/visual equipment, and electronic equipment for automobiles and office automation appliances"
       },
       "website": "https://www.metco.co.th",
-      "industry": "Electronic Components"
+      "industry": "Electronic Components",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9549,7 +9793,8 @@
         "quote": "Premier Marketing Public Company Limited engages in marketing, promotion, and distribution of snack food and consumer products in Thailand, Cambodia, Laos, Myanmar, Vietnam, China, South Korea, Austra"
       },
       "website": "https://www.premier-marketing.co.th",
-      "industry": "Food Distribution"
+      "industry": "Food Distribution",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9585,7 +9830,8 @@
         "quote": "Asian Sea Corporation Public Company Limited, together with its subsidiaries, engages in the production and distribution of processed frozen seafood. The company operates through three segments: Froze"
       },
       "website": "https://www.asiansea.co.th",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9621,7 +9867,8 @@
         "quote": "Petchsrivichai Enterprise Public Company Limited produces and distributes crude palm kernel oil in Thailand and internationally. It operates through three segments: Manufacture and Distribution of Pal"
       },
       "website": "https://www.pce-th.com",
-      "industry": "Farm Products"
+      "industry": "Farm Products",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9657,7 +9904,8 @@
         "quote": "Nex Point Public Company Limited sells and rents commercial vehicles in Thailand. The company provides EV buses and coaches, trucks, and industrial vehicles; vehicle repair and maintenance services; m"
       },
       "website": "https://www.nexpoint.co.th",
-      "industry": "Farm & Heavy Construction Machinery"
+      "industry": "Farm & Heavy Construction Machinery",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9693,7 +9941,8 @@
         "quote": "Sermsang Power Corporation Public Company Limited operates in the renewable energy business in Thailand, Japan, Vietnam, Mongolia, and Indonesia. The company produces electricity through solar farms, "
       },
       "website": "https://www.sermsang.com",
-      "industry": "Utilities - Renewable"
+      "industry": "Utilities - Renewable",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9729,7 +9978,8 @@
         "quote": "Kang Yong Electric Public Company Limited manufactures and distributes household electrical appliances in Thailand, Japan, and internationally. The company offers home refrigerators and freezers; fans"
       },
       "website": "https://www.mitsubishi-kye.com",
-      "industry": "Furnishings, Fixtures & Appliances"
+      "industry": "Furnishings, Fixtures & Appliances",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9765,7 +10015,8 @@
         "quote": "Samart Corporation Public Company Limited engages in the design, installation, and sale of telecommunications systems and equipment in Thailand, Cambodia, and internationally. It operates through the "
       },
       "website": "https://www.samartcorp.com",
-      "industry": "Information Technology Services"
+      "industry": "Information Technology Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9801,7 +10052,8 @@
         "quote": "KCG Corporation Public Company Limited manufactures, sells, and imports food and bakery products in Thailand and internationally. It provides dairy products, including butter, cheese, and other dairy "
       },
       "website": "https://www.kcgcorporation.com",
-      "industry": "Packaged Foods"
+      "industry": "Packaged Foods",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9837,7 +10089,8 @@
         "quote": "Stella X Public Company Limited engages in the property development business in Thailand. It operates through three segments: Property Development, Rental and Service, and Medical and Health. The comp"
       },
       "website": "https://stella.listedcompany.com",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9873,7 +10126,8 @@
         "quote": "Thanulux Public Company Limited, an investment holding company, provides financial solutions in Thailand. It operates in five segments: Investment Business; Secured Lending Business; Assets Management"
       },
       "website": "https://www.tnl.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9909,7 +10163,8 @@
         "quote": "Sriracha Construction Public Company Limited engages in the construction, rendering manpower, and maintenance service businesses in Thailand and internationally. It also offers outsourcing and outsour"
       },
       "website": "https://www.sricha.com",
-      "industry": "Engineering & Construction"
+      "industry": "Engineering & Construction",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9945,7 +10200,8 @@
         "quote": "Roctec Global Public Company Limited, together with its subsidiaries, provides system integration services in public and private sectors and advertising services."
       },
       "website": "https://www.roctecglobal.co.th",
-      "industry": "Information Technology Services"
+      "industry": "Information Technology Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -9981,7 +10237,8 @@
         "quote": "Sabina Public Company Limited, together with its subsidiaries, manufactures and sells readymade clothes for women in Thailand and internationally. The company offers underwear, function bras, shape we"
       },
       "website": "https://www.sabina.co.th",
-      "industry": "Apparel Manufacturing"
+      "industry": "Apparel Manufacturing",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10017,7 +10274,8 @@
         "quote": "Forth Smart Service Public Company Limited, together with its subsidiaries, provides prepaid mobile top-up services in Thailand. The company operates through two segments, Top up machine and Lending."
       },
       "website": "https://www.boonterm.com",
-      "industry": "Telecom Services"
+      "industry": "Telecom Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10053,7 +10311,8 @@
         "quote": "Next Capital Public Company Limited provides motorcycle hire-purchase and loans secured against vehicle registrations in Thailand. The company offers hire purchase for new motorcycles and second hand "
       },
       "website": "https://www.nextcapital.co.th",
-      "industry": "Credit Services"
+      "industry": "Credit Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10089,7 +10348,8 @@
         "quote": "United Paper Public Company Limited engages in the production and distribution of box surface paper and Kraft paper for packaging corrugated boxes in Thailand. The company was incorporated in 1990 and"
       },
       "website": "https://www.unitedpaper.co.th",
-      "industry": "Paper & Paper Products"
+      "industry": "Paper & Paper Products",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10125,7 +10385,8 @@
         "quote": "Pinthong Industrial Park Public Company Limited, together with its subsidiaries, engages in the industrial real estate projects development and building rental activities in Thailand. The company is i"
       },
       "website": "https://www.pinthongindustrial.com",
-      "industry": "Real Estate - Development"
+      "industry": "Real Estate - Development",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10161,7 +10422,8 @@
         "quote": "Sahamitr Pressure Container Public Company Limited engages in the manufacture and sale of LPG and other pressure cylinders in Asia, Africa, the United States, and internationally."
       },
       "website": "https://www.smpcplc.com",
-      "industry": "Packaging & Containers"
+      "industry": "Packaging & Containers",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10197,7 +10459,8 @@
         "quote": "Thai Nakarin Hospital Public Company Limited, together with its subsidiaries engages in the hospital business in Thailand. The company offers medical services in the areas of heart, bone and joint, ho"
       },
       "website": "https://www.thainakarin.co.th",
-      "industry": "Medical Care Facilities"
+      "industry": "Medical Care Facilities",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10233,7 +10496,8 @@
         "quote": "Asia Plus Group Holdings Public Company Limited, together with its subsidiaries, engages in the securities business in Thailand. It operates through four segments: Securities and Derivatives Brokerage"
       },
       "website": "https://www.asiaplusgroup.co.th",
-      "industry": "Capital Markets"
+      "industry": "Capital Markets",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10269,7 +10533,8 @@
         "quote": "Namyong Terminal Public Company Limited, together with its subsidiary, provides port, carriage, handling of goods, and warehouse services in Thailand. It operates through three segments: Seaport and R"
       },
       "website": "https://www.namyongterminal.com",
-      "industry": "Marine Shipping"
+      "industry": "Marine Shipping",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10305,7 +10570,8 @@
         "quote": "Thaicom Public Company Limited, together with its subsidiaries, provides transponder services for domestic and international communications in Thailand, Australia, India, Myanmar, and internationally."
       },
       "website": "https://www.thaicom.net",
-      "industry": "Telecom Services"
+      "industry": "Telecom Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10341,7 +10607,8 @@
         "quote": "Jasmine International Public Company Limited, through its subsidiaries, engages in telecommunications, media, and technology businesses in Thailand. The company operates in three segments: Media and C"
       },
       "website": "https://www.jasmine.com",
-      "industry": "Telecom Services"
+      "industry": "Telecom Services",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10377,7 +10644,8 @@
         "quote": "Astra Enterprise Public Company Limited, together with its subsidiaries, engages in the production of television satellite programs in Thailand. The company also supplies, produces, and co-produces po"
       },
       "website": "https://astratreasury.com",
-      "industry": "Capital Markets"
+      "industry": "Capital Markets",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10413,7 +10681,8 @@
         "quote": "The ONE Enterprise Public Company Limited engages in the media and entertainment businesses in Thailand. The company produces various programs, such as dramas, sitcoms, series, variety shows, and news"
       },
       "website": "https://www.theoneenterprise.com",
-      "industry": "Entertainment"
+      "industry": "Entertainment",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10449,7 +10718,8 @@
         "quote": "S Hotels and Resorts Public Company Limited, together with its subsidiaries, engages in the investment and hospitality businesses. The company offers a portfolio of properties to guests in the Republi"
       },
       "website": "https://www.shotelsresorts.com",
-      "industry": "Resorts & Casinos"
+      "industry": "Resorts & Casinos",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10485,7 +10755,8 @@
         "quote": "Super Turtle Public Company Limited engages in importing, producing, and distributing of publications primarily in Thailand. It is involved in renting of merchandising spaces on BTS Skytrain stations."
       },
       "website": "https://www.superturtle.co.th",
-      "industry": "Restaurants"
+      "industry": "Restaurants",
+      "riskTier": "risky"
     },
     {
       "type": "stock",
@@ -10521,7 +10792,8 @@
         "quote": "Shangri-La Hotel Public Company Limited engages in hotel operations in Bangkok and Chiang Mai provinces. It operates through two segments, Hotel Business and Holding Investment."
       },
       "website": "https://www.shangri-la.com/bangkok",
-      "industry": "Lodging"
+      "industry": "Lodging",
+      "riskTier": "risky"
     }
   ]
 }

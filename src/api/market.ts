@@ -194,7 +194,7 @@ export async function handleStocks(q: Query): Promise<ApiResponse<unknown>> {
       const bf = f ? buffettScore(buffettChecks(f as never)) : null;
       const roe = f ? f.roe ?? null : null;
       const tiered = classifyStockTier({ fit, roe, buffett: bf, capTier: s.tier, changePct: md?.changePct ?? null });
-      return { ticker: s.ticker, name: s.name, market: s.market, country: s.country, sector: s.sector, element: s.primaryElement, tier: s.tier, stockTier: tiered.tier, stockTierScore: tiered.score, price: md?.price ?? null, changePct: md?.changePct ?? null };
+      return { ticker: s.ticker, name: s.name, market: s.market, country: s.country, sector: s.sector, element: s.primaryElement, tier: s.tier, riskTier: s.riskTier ?? "medium", stockTier: tiered.tier, stockTierScore: tiered.score, price: md?.price ?? null, changePct: md?.changePct ?? null };
     });
   const marketCounts: Record<string, number> = {};
   for (const s of getAllStocks()) marketCounts[s.market] = (marketCounts[s.market] ?? 0) + 1;

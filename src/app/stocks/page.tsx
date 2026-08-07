@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, Fragment } from "react";
 import { get, post, myUserId } from "../lib/api";
 import { useT } from "../lib/i18n";
 
-type StockRow = { ticker: string; name: string; market: string; country: string; sector: string; element: string; tier: string; stockTier: string; stockTierScore: number; price: number | null; changePct: number | null };
+type StockRow = { ticker: string; name: string; market: string; country: string; sector: string; element: string; tier: string; riskTier: string; stockTier: string; stockTierScore: number; price: number | null; changePct: number | null };
 type StocksData = { count: number; total: number; markets: Record<string, number>; elementCounts: Record<string, number>; countries: Record<string, number>; stocks: StockRow[] };
 type StockDetail = {
   ticker: string;
@@ -190,7 +190,12 @@ export default function StocksPage() {
                         {TIER_ICON[s.stockTier] ?? "📦"} <span style={{ color: TIER_COLOR[s.stockTier] ?? "#9a937f", fontSize: 12 }}>{s.stockTier}</span>
                       </span>
                     </td>
-                    <td>{s.price != null ? s.price.toLocaleString() : "-"}</td>
+                    <td>
+                      <span style={{ color: s.riskTier === "safe" ? "#8fd4a0" : s.riskTier === "risky" ? "#d48f8f" : "#d4af37", fontSize: 12 }}>
+                        {s.riskTier === "safe" ? "🟢" : s.riskTier === "risky" ? "🔴" : "🟡"} {s.riskTier === "safe" ? "ปลอดภัย" : s.riskTier === "risky" ? "เสี่ยง" : "ปานกลาง"}
+                      </span>{" "}
+                      <span style={{ fontSize: 11, color: "#9a937f" }}>({s.tier})</span>
+                    </td>
                     <td style={{ color: (s.changePct ?? 0) >= 0 ? "#8fd4a0" : "#d48f8f" }}>{pct(s.changePct)}</td>
                   </tr>
                   {detail && detail.ticker === s.ticker && detail.market === s.market && (

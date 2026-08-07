@@ -27,6 +27,7 @@ export type StockEntry = {
   elementReason: string;
   elementSource: string;
   tier: string;
+  riskTier?: "safe" | "medium" | "risky";
   isHighLiquidity: boolean;
   status: "draft" | "in_review" | "reviewed" | "published";
   reviewedBy: string | null;
