@@ -1,0 +1,2313 @@
+@font-face {
+  font-family: "Report Sarabun";
+  src: url("/report/fonts/Sarabun-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Report Sarabun";
+  src: url("/report/fonts/Sarabun-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Report Display";
+  src: url("/report/fonts/IBMPlexSansThai-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.book {
+  --paper: #faf7ef;
+  --paper-deep: #eee7da;
+  --ink: #29252b;
+  --ink-soft: #555057;
+  --plum: #4b2736;
+  --plum-dark: #241d27;
+  --jade: #315f59;
+  --jade-soft: #dce7e1;
+  --cinnabar: #a84332;
+  --gold: #ba9150;
+  --line: #d7cbb9;
+  --white: #fffdfa;
+  --profile-accent: var(--cinnabar);
+  --profile-support: var(--jade);
+  width: 210mm;
+  margin: 0 auto;
+  color: var(--ink);
+  background: #d9d4cb;
+  font-family: "Report Sarabun", Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+.book :global(*) {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.book :global(.toolbar) {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 18mm;
+  color: #fff;
+  background: var(--plum-dark);
+}
+
+.book :global(.toolbar button) {
+  padding: 10px 18px;
+  color: #fff;
+  background: var(--cinnabar);
+  border: 0;
+  font: 700 14px "Report Sarabun", sans-serif;
+  cursor: pointer;
+}
+
+.book :global(.toolbar span) {
+  font-size: 13px;
+  color: #d8ced5;
+}
+
+.book :global(.page) {
+  position: relative;
+  width: 210mm;
+  height: 296mm;
+  overflow: hidden;
+  padding: 16mm 18mm 18mm;
+  background: var(--paper);
+  break-after: page;
+  page-break-after: always;
+}
+
+.book :global(.page::before) {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: radial-gradient(rgba(61, 51, 46, 0.12) 0.45px, transparent 0.55px);
+  background-size: 5px 5px;
+}
+
+.book :global(.page > *) {
+  position: relative;
+  z-index: 1;
+}
+
+.book :global(.page-head) {
+  display: grid;
+  grid-template-columns: 39mm 1fr;
+  gap: 9mm;
+  align-items: start;
+  margin-bottom: 10mm;
+}
+
+.book :global(.page-head .folio) {
+  padding-top: 3mm;
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.page-head .folio b),
+.book :global(.page-head .folio span) {
+  display: block;
+}
+
+.book :global(.page-head .folio b) {
+  color: var(--profile-accent);
+  font: 700 12.5px "Report Display", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.book :global(.page-head .folio span) {
+  margin-top: 1.5mm;
+  color: #786f72;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.book :global(.page-head h1) {
+  margin: 0;
+  font: 700 35px/1.22 "Report Display", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.book :global(.page footer) {
+  position: absolute;
+  left: 18mm;
+  right: 18mm;
+  bottom: 7mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5mm;
+  color: #847b78;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.book :global(.page footer b) {
+  color: var(--profile-accent);
+  font-family: "Report Display", sans-serif;
+}
+
+.book :global(p) {
+  margin: 0 0 4mm;
+}
+
+.book :global(h2),
+.book :global(h3),
+.book :global(blockquote) {
+  margin-top: 0;
+}
+
+.book :global(.cover) {
+  padding: 0;
+  background: var(--paper) url("/report/cover-v5.png") center / cover no-repeat;
+}
+
+.book :global(.cover::before) {
+  z-index: 1;
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(250, 247, 239, 0.98) 0%, rgba(250, 247, 239, 0.92) 42%, rgba(250, 247, 239, 0.12) 68%, rgba(250, 247, 239, 0) 100%);
+}
+
+.book :global(.cover::after) {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  width: 7mm;
+  background: var(--profile-accent);
+}
+
+.book :global(.cover footer) {
+  display: none;
+}
+
+.book :global(.cover-copy) {
+  position: absolute;
+  top: 22mm;
+  left: 20mm;
+  z-index: 3;
+  width: 104mm;
+}
+
+.book :global(.cover-kicker) {
+  color: var(--plum);
+  font: 700 12px "Report Display", sans-serif;
+  letter-spacing: 0.13em;
+}
+
+.book :global(.cover h1) {
+  margin: 40mm 0 7mm;
+  font: 700 51px/1.14 "Report Display", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.book :global(.cover h1 span) {
+  display: block;
+  color: var(--profile-accent);
+}
+
+.book :global(.cover-deck) {
+  width: 87mm;
+  padding-top: 5mm;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--gold);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.book :global(.cover-profile) {
+  position: absolute;
+  left: 20mm;
+  bottom: 23mm;
+  z-index: 3;
+  display: grid;
+  gap: 1.2mm;
+  width: 91mm;
+  padding: 5mm 0 0;
+  border-top: 2px solid var(--plum);
+}
+
+.book :global(.cover-profile b) {
+  color: var(--plum);
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.cover-profile span) {
+  color: #5f595b;
+  font-size: 12px;
+}
+
+.book :global(.cover-edition) {
+  position: absolute;
+  right: 12mm;
+  top: 15mm;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 25mm;
+  height: 25mm;
+  color: #fff;
+  background: var(--plum);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  outline: 1px solid var(--plum);
+  outline-offset: 2mm;
+  font: 700 12px/1.2 "Report Display", sans-serif;
+  text-align: center;
+}
+
+.book :global(.letter-layout) {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 12mm;
+}
+
+.book :global(.letter-copy) {
+  padding-left: 8mm;
+  border-left: 1px solid var(--gold);
+}
+
+.book :global(.letter-copy .opening) {
+  margin-bottom: 5mm;
+  color: var(--plum);
+  font: 700 20px/1.5 "Report Display", sans-serif;
+}
+
+.book :global(.letter-copy p) {
+  text-align: left;
+}
+
+.book :global(.letter-sign) {
+  margin-top: 8mm;
+  color: var(--plum);
+  font-weight: 700;
+}
+
+.book :global(.margin-note) {
+  align-self: start;
+  padding: 7mm 0;
+  border-top: 4px solid var(--plum);
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.margin-note span) {
+  color: var(--cinnabar);
+  font: 700 11px "Report Display", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.book :global(.margin-note h3) {
+  margin: 4mm 0 3mm;
+  font: 700 22px/1.35 "Report Display", sans-serif;
+}
+
+.book :global(.margin-note p) {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.book :global(.letter-prompts) {
+  display: grid;
+  grid-template-columns: 42mm repeat(3, 1fr);
+  gap: 7mm;
+  margin-top: 10mm;
+  padding: 6mm 0;
+  border-top: 3px solid var(--plum);
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.letter-prompts b) {
+  color: var(--cinnabar);
+  font: 700 14px/1.45 "Report Display", sans-serif;
+}
+
+.book :global(.letter-prompts span) {
+  color: var(--plum);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.book :global(.toc-list) {
+  margin-top: 3mm;
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.toc-row) {
+  display: grid;
+  grid-template-columns: 19mm 1fr 23mm;
+  gap: 7mm;
+  align-items: start;
+  padding: 8mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.toc-row > b) {
+  color: var(--cinnabar);
+  font: 700 25px "Report Display", sans-serif;
+}
+
+.book :global(.toc-row h2) {
+  margin-bottom: 1mm;
+  font: 700 21px "Report Display", sans-serif;
+}
+
+.book :global(.toc-row p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.book :global(.toc-row > span) {
+  color: var(--plum);
+  font: 700 12px "Report Display", sans-serif;
+  text-align: right;
+}
+
+.book :global(.reading-promise) {
+  display: grid;
+  grid-template-columns: 33mm 1fr;
+  gap: 7mm;
+  margin-top: 10mm;
+  padding: 6mm 0;
+  border-top: 2px solid var(--gold);
+}
+
+.book :global(.reading-promise b) {
+  color: var(--plum);
+}
+
+.book :global(.reading-promise p) {
+  margin: 0;
+}
+
+.book :global(.answer-list) {
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.answer-row) {
+  display: grid;
+  grid-template-columns: 16mm 48mm 1fr;
+  gap: 6mm;
+  align-items: start;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.answer-row > b) {
+  color: var(--gold);
+  font: 700 22px "Report Display", sans-serif;
+}
+
+.book :global(.answer-row span) {
+  color: var(--cinnabar);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.book :global(.answer-row h2) {
+  margin: 0 0 1.5mm;
+  font: 700 19px/1.35 "Report Display", sans-serif;
+}
+
+.book :global(.answer-row p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.book :global(.answer-quote) {
+  margin: 11mm 0 0;
+  padding: 7mm 10mm;
+  color: #fff;
+  background: var(--plum);
+  font: 700 21px/1.55 "Report Display", sans-serif;
+  text-align: center;
+}
+
+.book :global(.chapter) {
+  padding: 0;
+  color: #fff;
+  background: var(--plum-dark);
+}
+
+.book :global(.chapter::before) {
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(36, 29, 39, 0.98) 0 48%, rgba(36, 29, 39, 0.38) 73%, rgba(36, 29, 39, 0.06)), url("/report/cover-v5.png") 74% center / cover no-repeat;
+}
+
+.book :global(.chapter.alt::before) {
+  background: linear-gradient(90deg, rgba(46, 32, 37, 0.97) 0 45%, rgba(46, 32, 37, 0.32) 72%, rgba(46, 32, 37, 0.04)), url("/report/cover-v5.png") 72% 72% / 142% auto no-repeat;
+}
+
+.book :global(.chapter footer) {
+  color: #c8bdc4;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.book :global(.chapter footer b) {
+  color: #e0b66f;
+}
+
+.book :global(.chapter-copy) {
+  position: absolute;
+  top: 38mm;
+  left: 21mm;
+  width: 93mm;
+}
+
+.book :global(.chapter-no) {
+  color: #d8ad68;
+  font: 700 12px "Report Display", sans-serif;
+  letter-spacing: 0.16em;
+}
+
+.book :global(.chapter h1) {
+  margin: 28mm 0 6mm;
+  font: 700 48px/1.18 "Report Display", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.book :global(.chapter p) {
+  padding-top: 5mm;
+  color: #ddd5da;
+  border-top: 1px solid rgba(224, 182, 111, 0.7);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.book :global(.chapter-key) {
+  position: absolute;
+  left: 21mm;
+  bottom: 28mm;
+  display: flex;
+  gap: 8mm;
+  color: #d8cfd5;
+  font-size: 12px;
+}
+
+.book :global(.chapter-key b) {
+  color: #e0b66f;
+}
+
+.book :global(.balance-layout) {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 12mm;
+  align-items: start;
+}
+
+.book :global(.balance-lead) {
+  padding: 9mm 7mm;
+  color: #fff;
+  background: var(--plum);
+}
+
+.book :global(.balance-lead span) {
+  color: #e1b86f;
+  font-size: 12px;
+}
+
+.book :global(.balance-lead b) {
+  display: block;
+  margin: 10mm 0 2mm;
+  font: 700 52px/1 "Report Display", sans-serif;
+}
+
+.book :global(.balance-lead h2) {
+  font: 700 24px/1.35 "Report Display", sans-serif;
+}
+
+.book :global(.balance-lead p) {
+  color: #e5dfe2;
+  font-size: 14px;
+}
+
+.book :global(.balance-bars) {
+  padding-top: 2mm;
+}
+
+.book :global(.balance-bar) {
+  display: grid;
+  grid-template-columns: 14mm 1fr 13mm;
+  gap: 4mm;
+  align-items: center;
+  padding: 3.5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.balance-bar > span) {
+  font-weight: 700;
+}
+
+.book :global(.balance-bar i) {
+  height: 4mm;
+  background: #e5ded2;
+}
+
+.book :global(.balance-bar i b) {
+  display: block;
+  height: 100%;
+  background: var(--element-color);
+}
+
+.book :global(.balance-bar > b) {
+  color: var(--element-color);
+  font-size: 13px;
+  text-align: right;
+}
+
+.book :global(.interpretation) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7mm;
+  margin-top: 12mm;
+  padding-top: 7mm;
+  border-top: 2px solid var(--gold);
+}
+
+.book :global(.interpretation article) {
+  border-right: 1px solid var(--line);
+  padding-right: 5mm;
+}
+
+.book :global(.interpretation article:last-child) {
+  border-right: 0;
+}
+
+.book :global(.interpretation span) {
+  color: var(--cinnabar);
+  font: 700 11px "Report Display", sans-serif;
+}
+
+.book :global(.interpretation h3) {
+  margin: 2mm 0;
+  font: 700 18px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.interpretation p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.book :global(.portrait-lead) {
+  display: grid;
+  grid-template-columns: 57mm 1fr;
+  gap: 10mm;
+  align-items: center;
+  margin-bottom: 9mm;
+}
+
+.book :global(.portrait-word) {
+  display: grid;
+  place-items: center;
+  width: 57mm;
+  height: 57mm;
+  color: var(--plum);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  font: 700 31px "Report Display", sans-serif;
+}
+
+.book :global(.portrait-lead blockquote) {
+  margin: 0;
+  color: var(--plum);
+  font: 700 25px/1.5 "Report Display", sans-serif;
+}
+
+.book :global(.prose-columns) {
+  columns: 2;
+  column-gap: 11mm;
+  column-rule: 1px solid var(--line);
+}
+
+.book :global(.prose-columns p) {
+  break-inside: avoid;
+}
+
+.book :global(.portrait-signs) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4mm;
+  margin-top: 8mm;
+  padding: 5mm 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.book :global(.portrait-signs b) {
+  display: block;
+  color: var(--cinnabar);
+  font-size: 12px;
+}
+
+.book :global(.portrait-signs span) {
+  font-size: 13px;
+}
+
+.book :global(.water-sentence) {
+  display: grid;
+  grid-template-columns: 45mm 1fr;
+  gap: 9mm;
+  align-items: center;
+  margin-bottom: 9mm;
+  padding: 8mm 0;
+  border-top: 1px solid var(--jade);
+  border-bottom: 1px solid var(--jade);
+}
+
+.book :global(.water-sentence b) {
+  color: var(--jade);
+  font: 700 49px "Report Display", sans-serif;
+}
+
+.book :global(.water-sentence h2) {
+  margin: 0;
+  font: 700 25px/1.45 "Report Display", sans-serif;
+}
+
+.book :global(.flow-line) {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9mm;
+  margin: 10mm 0;
+}
+
+.book :global(.flow-line::before) {
+  content: "";
+  position: absolute;
+  top: 6mm;
+  left: 5mm;
+  right: 5mm;
+  height: 1px;
+  background: var(--jade);
+}
+
+.book :global(.flow-stop) {
+  position: relative;
+  padding-top: 13mm;
+}
+
+.book :global(.flow-stop::before) {
+  content: "";
+  position: absolute;
+  top: 4mm;
+  width: 5mm;
+  height: 5mm;
+  background: var(--paper);
+  border: 2px solid var(--jade);
+  border-radius: 50%;
+}
+
+.book :global(.flow-stop span) {
+  color: var(--jade);
+  font: 700 11px "Report Display", sans-serif;
+}
+
+.book :global(.flow-stop h3) {
+  margin: 2mm 0;
+  font: 700 19px "Report Display", sans-serif;
+}
+
+.book :global(.flow-stop p) {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.book :global(.editorial-callout) {
+  display: grid;
+  grid-template-columns: 42mm 1fr;
+  gap: 8mm;
+  margin-top: 9mm;
+  padding: 6mm 0;
+  border-top: 3px solid var(--cinnabar);
+}
+
+.book :global(.editorial-callout b) {
+  color: var(--cinnabar);
+  font: 700 15px "Report Display", sans-serif;
+}
+
+.book :global(.editorial-callout p) {
+  margin: 0;
+}
+
+.book :global(.fire-layout) {
+  display: grid;
+  grid-template-columns: 51mm 1fr;
+  gap: 11mm;
+}
+
+.book :global(.fire-zero) {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  width: 51mm;
+  height: 51mm;
+  color: var(--cinnabar);
+  border: 1px solid var(--cinnabar);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.book :global(.fire-zero b) {
+  display: block;
+  font: 700 36px "Report Display", sans-serif;
+}
+
+.book :global(.fire-zero span) {
+  font-size: 12px;
+}
+
+.book :global(.fire-intro h2) {
+  font: 700 25px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.practice-list) {
+  margin-top: 8mm;
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.practice-row) {
+  display: grid;
+  grid-template-columns: 15mm 39mm 1fr;
+  gap: 5mm;
+  padding: 5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.practice-row > b) {
+  color: var(--gold);
+  font: 700 20px "Report Display", sans-serif;
+}
+
+.book :global(.practice-row h3) {
+  margin: 0;
+  color: var(--cinnabar);
+  font: 700 17px "Report Display", sans-serif;
+}
+
+.book :global(.practice-row p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.book :global(.loop-grid) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 9mm;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.book :global(.loop-step) {
+  min-height: 52mm;
+  padding: 6mm;
+  background: var(--white);
+}
+
+.book :global(.loop-step b) {
+  color: var(--cinnabar);
+  font: 700 20px "Report Display", sans-serif;
+}
+
+.book :global(.loop-step h3) {
+  margin: 6mm 0 2mm;
+  font: 700 19px "Report Display", sans-serif;
+}
+
+.book :global(.loop-step p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.book :global(.interrupt) {
+  display: grid;
+  grid-template-columns: 48mm 1fr;
+  gap: 8mm;
+  padding: 7mm;
+  color: #fff;
+  background: var(--plum);
+}
+
+.book :global(.interrupt h2) {
+  margin: 0;
+  color: #e1b86f;
+  font: 700 20px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.interrupt p) {
+  margin: 0;
+}
+
+.book :global(.money-chapter) {
+  padding: 0;
+  color: #fff;
+  background: var(--plum-dark);
+}
+
+.book :global(.money-chapter::before) {
+  opacity: 1;
+  background: radial-gradient(circle at 82% 28%, rgba(186, 145, 80, 0.17), transparent 29%), linear-gradient(155deg, #241d27 0 67%, #315f59 67%);
+}
+
+.book :global(.money-chapter footer) {
+  color: #d4cbd0;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.book :global(.money-title) {
+  position: absolute;
+  top: 30mm;
+  left: 21mm;
+  right: 21mm;
+}
+
+.book :global(.money-title span) {
+  color: #dcb46e;
+  font: 700 12px "Report Display", sans-serif;
+  letter-spacing: 0.15em;
+}
+
+.book :global(.money-title h1) {
+  margin: 24mm 0 8mm;
+  font: 700 45px/1.2 "Report Display", sans-serif;
+}
+
+.book :global(.ratio-type) {
+  margin: 20mm 0 10mm;
+  color: #dcb46e;
+  font: 700 70px/1 "Report Display", sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.book :global(.money-title p) {
+  width: 105mm;
+  padding-top: 5mm;
+  color: #ded6da;
+  border-top: 1px solid rgba(220, 180, 110, 0.65);
+  font-size: 17px;
+}
+
+.book :global(.ledger) {
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.ledger-row) {
+  display: grid;
+  grid-template-columns: 28mm 42mm 1fr 51mm;
+  gap: 6mm;
+  align-items: start;
+  min-height: 52mm;
+  padding: 7mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.ledger-row > b) {
+  color: var(--plum);
+  font: 700 31px "Report Display", sans-serif;
+}
+
+.book :global(.ledger-row .amount) {
+  color: var(--cinnabar);
+  font: 700 17px "Report Display", sans-serif;
+}
+
+.book :global(.ledger-row h2) {
+  margin-bottom: 1.5mm;
+  font: 700 21px "Report Display", sans-serif;
+}
+
+.book :global(.ledger-row p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.book :global(.ledger-row aside) {
+  padding-left: 5mm;
+  color: #5e5759;
+  border-left: 1px solid var(--gold);
+  font-size: 13px;
+}
+
+.book :global(.demo-note) {
+  margin-top: 7mm;
+  color: #7b7372;
+  font-size: 11.5px;
+}
+
+.book :global(.portfolio-intro) {
+  display: grid;
+  grid-template-columns: 1fr 61mm;
+  gap: 10mm;
+  margin-bottom: 9mm;
+}
+
+.book :global(.portfolio-intro h2) {
+  font: 700 26px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.portfolio-intro p) {
+  color: var(--ink-soft);
+}
+
+.book :global(.portfolio-badge) {
+  padding: 6mm;
+  color: #fff;
+  background: var(--jade);
+}
+
+.book :global(.portfolio-badge span),
+.book :global(.portfolio-badge b) {
+  display: block;
+}
+
+.book :global(.portfolio-badge span) {
+  color: #d8c28f;
+  font-size: 11px;
+}
+
+.book :global(.portfolio-badge b) {
+  margin-top: 8mm;
+  font: 700 22px/1.35 "Report Display", sans-serif;
+}
+
+.book :global(.allocation-bar) {
+  display: flex;
+  height: 22mm;
+  margin: 5mm 0 4mm;
+  color: #fff;
+  font: 700 13px "Report Display", sans-serif;
+}
+
+.book :global(.allocation-bar span) {
+  display: grid;
+  place-items: center;
+  min-width: 24mm;
+}
+
+.book :global(.allocation-bar .equity) { background: var(--cinnabar); }
+.book :global(.allocation-bar .bond) { background: var(--gold); }
+.book :global(.allocation-bar .cash) { background: var(--jade); }
+
+.book :global(.allocation-values) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7mm;
+  margin-bottom: 11mm;
+}
+
+.book :global(.allocation-values b) {
+  display: block;
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.allocation-values span) {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+
+.book :global(.stress-test) {
+  padding-top: 6mm;
+  border-top: 2px solid var(--plum);
+}
+
+.book :global(.stress-test h2) {
+  font: 700 21px "Report Display", sans-serif;
+}
+
+.book :global(.stress-row) {
+  display: grid;
+  grid-template-columns: 52mm 1fr 31mm;
+  gap: 5mm;
+  align-items: center;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.stress-row span) {
+  color: var(--ink-soft);
+}
+
+.book :global(.stress-row i) {
+  height: 3mm;
+  background: var(--paper-deep);
+}
+
+.book :global(.stress-row i b) {
+  display: block;
+  height: 100%;
+  background: var(--plum);
+}
+
+.book :global(.stress-row > b) {
+  color: var(--plum);
+  text-align: right;
+}
+
+.book :global(.phase-portrait) {
+  display: grid;
+  grid-template-columns: 55mm 1fr;
+  gap: 10mm;
+  align-items: stretch;
+  margin-bottom: 9mm;
+}
+
+.book :global(.phase-age) {
+  display: grid;
+  place-items: center;
+  padding: 8mm;
+  color: #fff;
+  background: var(--plum);
+  text-align: center;
+}
+
+.book :global(.phase-age span) {
+  font-size: 12px;
+}
+
+.book :global(.phase-age b) {
+  display: block;
+  font: 700 35px "Report Display", sans-serif;
+}
+
+.book :global(.phase-copy) {
+  padding: 7mm;
+  background: var(--paper-deep);
+}
+
+.book :global(.phase-copy span) {
+  color: var(--cinnabar);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.book :global(.phase-copy h2) {
+  margin: 3mm 0;
+  font: 700 25px/1.35 "Report Display", sans-serif;
+}
+
+.book :global(.phase-decisions) {
+  margin-top: 8mm;
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.phase-decision) {
+  display: grid;
+  grid-template-columns: 40mm 1fr 44mm;
+  gap: 6mm;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.phase-decision b) {
+  color: var(--plum);
+  font-family: "Report Display", sans-serif;
+}
+
+.book :global(.phase-decision p) {
+  margin: 0;
+  font-size: 14px;
+}
+
+.book :global(.phase-decision span) {
+  color: var(--cinnabar);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.book :global(.life-groups) {
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.life-group) {
+  display: grid;
+  grid-template-columns: 32mm 32mm 1fr;
+  gap: 6mm;
+  align-items: center;
+  min-height: 35mm;
+  padding: 5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.life-group.active) {
+  margin: 0 -6mm;
+  padding-right: 6mm;
+  padding-left: 6mm;
+  background: #efe1da;
+  border-left: 4px solid var(--cinnabar);
+}
+
+.book :global(.life-group > b) {
+  font: 700 19px "Report Display", sans-serif;
+}
+
+.book :global(.life-group > span) {
+  color: var(--phase-color);
+  font: 700 14px "Report Display", sans-serif;
+}
+
+.book :global(.life-group h3) {
+  margin: 0 0 1mm;
+  font: 700 17px "Report Display", sans-serif;
+}
+
+.book :global(.life-group p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.book :global(.month-banner) {
+  display: grid;
+  grid-template-columns: 49mm 1fr;
+  gap: 9mm;
+  align-items: center;
+  margin-bottom: 7mm;
+  padding: 7mm 0;
+  border-top: 1px solid var(--jade);
+  border-bottom: 1px solid var(--jade);
+}
+
+.book :global(.month-element) {
+  color: var(--jade);
+  font: 700 46px "Report Display", sans-serif;
+  text-align: center;
+}
+
+.book :global(.month-banner h2) {
+  font: 700 24px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.week-plan) {
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.week-row) {
+  display: grid;
+  grid-template-columns: 27mm 44mm 1fr;
+  gap: 6mm;
+  padding: 5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.week-row > b) {
+  color: var(--gold);
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.week-row h3) {
+  margin: 0;
+  color: var(--plum);
+  font: 700 17px "Report Display", sans-serif;
+}
+
+.book :global(.week-row p) {
+  margin: 0;
+  font-size: 14px;
+}
+
+.book :global(.day-pair) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7mm;
+  margin-top: 7mm;
+}
+
+.book :global(.day-pair div) {
+  padding: 5mm 0;
+  border-top: 3px solid var(--jade);
+}
+
+.book :global(.day-pair div:last-child) {
+  border-color: var(--cinnabar);
+}
+
+.book :global(.day-pair b) {
+  display: block;
+  color: var(--plum);
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.day-pair span) {
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.book :global(.funnel) {
+  margin-top: 2mm;
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.funnel-row) {
+  display: grid;
+  grid-template-columns: 16mm 42mm 1fr;
+  gap: 6mm;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.funnel-row > b) {
+  color: var(--gold);
+  font: 700 21px "Report Display", sans-serif;
+}
+
+.book :global(.funnel-row h2) {
+  margin: 0;
+  color: var(--plum);
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.funnel-row p) {
+  margin: 0;
+  font-size: 14px;
+}
+
+.book :global(.funnel-result) {
+  margin-top: 8mm;
+  padding: 7mm;
+  color: #fff;
+  background: var(--jade);
+  text-align: center;
+  font: 700 19px/1.5 "Report Display", sans-serif;
+}
+
+.book :global(.duo-intro) {
+  margin-bottom: 8mm;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.book :global(.company-duo) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10mm;
+}
+
+.book :global(.company-duo article) {
+  padding-top: 5mm;
+  border-top: 4px solid var(--cinnabar);
+}
+
+.book :global(.company-duo article:last-child) {
+  border-color: var(--jade);
+}
+
+.book :global(.company-duo .ticker) {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.book :global(.company-duo .ticker b) {
+  color: var(--plum);
+  font: 700 31px "Report Display", sans-serif;
+}
+
+.book :global(.company-duo .ticker span) {
+  color: var(--gold);
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.company-duo h2) {
+  margin: 1mm 0 4mm;
+  font: 700 18px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.company-duo p) {
+  font-size: 14px;
+}
+
+.book :global(.metric-line) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3mm;
+  margin: 5mm 0;
+  padding: 4mm 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.metric-line span),
+.book :global(.metric-line b) {
+  display: block;
+}
+
+.book :global(.metric-line span) {
+  color: #756e6f;
+  font-size: 10.5px;
+}
+
+.book :global(.metric-line b) {
+  font: 700 15px "Report Display", sans-serif;
+}
+
+.book :global(.company-duo h3) {
+  margin: 4mm 0 2mm;
+  color: var(--cinnabar);
+  font: 700 15px "Report Display", sans-serif;
+}
+
+.book :global(.company-duo ul) {
+  margin: 0;
+  padding-left: 5mm;
+  font-size: 13.5px;
+}
+
+.book :global(.comparison-close) {
+  margin-top: 8mm;
+  padding-top: 5mm;
+  border-top: 2px solid var(--gold);
+  font-weight: 700;
+}
+
+.book :global(.energy-list) {
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.energy-row) {
+  display: grid;
+  grid-template-columns: 30mm 1fr 60mm;
+  gap: 7mm;
+  min-height: 55mm;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.energy-row > b) {
+  color: var(--plum);
+  font: 700 24px "Report Display", sans-serif;
+}
+
+.book :global(.energy-row h2) {
+  margin: 0 0 1mm;
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.energy-row p) {
+  margin: 0;
+  font-size: 14px;
+}
+
+.book :global(.energy-row aside) {
+  padding-left: 5mm;
+  border-left: 1px solid var(--gold);
+  font-size: 13px;
+}
+
+.book :global(.energy-row aside b) {
+  display: block;
+  margin-bottom: 1.5mm;
+  color: var(--cinnabar);
+}
+
+.book :global(.watchlist) {
+  border-top: 1px solid var(--ink);
+}
+
+.book :global(.watch-row) {
+  display: grid;
+  grid-template-columns: 16mm 29mm 1fr 46mm;
+  gap: 5mm;
+  align-items: start;
+  min-height: 32mm;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.watch-row > b) {
+  color: var(--gold);
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.watch-row h2) {
+  margin: 0;
+  font: 700 17px "Report Display", sans-serif;
+}
+
+.book :global(.watch-row h3) {
+  margin: 0 0 1mm;
+  font: 700 14px "Report Display", sans-serif;
+}
+
+.book :global(.watch-row p) {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+
+.book :global(.watch-row aside) {
+  color: var(--plum);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.book :global(.trust-note) {
+  margin-top: 7mm;
+  padding: 5mm 0;
+  border-top: 3px solid var(--plum);
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.book :global(.worksheet-meta) {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 8mm;
+  padding-bottom: 5mm;
+  border-bottom: 1px solid var(--ink);
+}
+
+.book :global(.worksheet-meta span) {
+  color: var(--cinnabar);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.book :global(.worksheet-meta p) {
+  margin: 3mm 0 0;
+  font-size: 12px;
+}
+
+.book :global(.worksheet) {
+  margin-top: 5mm;
+}
+
+.book :global(.worksheet article) {
+  display: grid;
+  grid-template-columns: 12mm 1fr;
+  gap: 5mm;
+  min-height: 37mm;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.worksheet article > b) {
+  color: var(--gold);
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.worksheet h3) {
+  margin: 0;
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.worksheet small) {
+  display: block;
+  color: #7a7271;
+  font-size: 11px;
+}
+
+.book :global(.write-lines) {
+  margin-top: 3mm;
+  color: #aaa09b;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.book :global(.action-timeline) {
+  position: relative;
+  margin: 3mm 0 0 10mm;
+  padding-left: 13mm;
+  border-left: 1px solid var(--gold);
+}
+
+.book :global(.action-stage) {
+  position: relative;
+  min-height: 55mm;
+  padding: 3mm 0 7mm;
+}
+
+.book :global(.action-stage::before) {
+  content: "";
+  position: absolute;
+  top: 5mm;
+  left: -16mm;
+  width: 6mm;
+  height: 6mm;
+  background: var(--paper);
+  border: 2px solid var(--cinnabar);
+  border-radius: 50%;
+}
+
+.book :global(.action-stage header) {
+  display: grid;
+  grid-template-columns: 27mm 1fr;
+  gap: 5mm;
+  align-items: baseline;
+}
+
+.book :global(.action-stage header b) {
+  color: var(--cinnabar);
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.action-stage h2) {
+  margin: 0;
+  font: 700 21px "Report Display", sans-serif;
+}
+
+.book :global(.action-stage ul) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1mm 8mm;
+  margin: 4mm 0 0;
+  padding-left: 5mm;
+  font-size: 13.5px;
+}
+
+.book :global(.closing) {
+  padding: 0;
+  color: #fff;
+  background: var(--plum-dark) url("/report/cover-v5.png") 72% center / cover no-repeat;
+}
+
+.book :global(.closing::before) {
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(36, 29, 39, 0.98) 0 52%, rgba(36, 29, 39, 0.76) 72%, rgba(36, 29, 39, 0.35));
+}
+
+.book :global(.closing footer) {
+  color: #c9c0c5;
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.book :global(.closing footer b) {
+  color: #ddb46c;
+}
+
+.book :global(.closing-copy) {
+  position: absolute;
+  top: 39mm;
+  left: 21mm;
+  width: 106mm;
+}
+
+.book :global(.closing-copy span) {
+  color: #ddb46c;
+  font: 700 12px "Report Display", sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.book :global(.closing-copy h1) {
+  margin: 24mm 0 8mm;
+  font: 700 39px/1.38 "Report Display", sans-serif;
+}
+
+.book :global(.closing-copy p) {
+  width: 92mm;
+  padding-top: 5mm;
+  color: #ded6da;
+  border-top: 1px solid rgba(221, 180, 108, 0.7);
+  font-size: 16px;
+}
+
+.book :global(.method-box) {
+  position: absolute;
+  left: 21mm;
+  right: 21mm;
+  bottom: 22mm;
+  display: grid;
+  grid-template-columns: 37mm 1fr;
+  gap: 8mm;
+  padding: 5mm 0;
+  color: #d2c9ce;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+  font-size: 11px;
+}
+
+.book :global(.method-box b) {
+  color: #ddb46c;
+  font-family: "Report Display", sans-serif;
+}
+
+/* Evidence and product-value pages. These use open editorial rules instead of
+   dashboard cards so the report still reads like a book when printed. */
+.book :global(.confidence-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 9mm;
+  margin-top: 2mm;
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.confidence-grid article) {
+  min-height: 50mm;
+  padding: 6mm 0 5mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.confidence-grid span),
+.book :global(.financial-ledger span),
+.book :global(.goal-hero span),
+.book :global(.ips-grid span),
+.book :global(.portfolio-side span),
+.book :global(.baseline-grid span) {
+  display: block;
+  color: var(--profile-accent);
+  font: 700 11.5px "Report Display", sans-serif;
+  letter-spacing: 0.07em;
+}
+
+.book :global(.confidence-grid b) {
+  display: block;
+  margin: 2mm 0 1mm;
+  font: 700 22px/1.3 "Report Display", sans-serif;
+}
+
+.book :global(.confidence-grid p) {
+  margin-bottom: 2mm;
+  font-size: 14.5px;
+}
+
+.book :global(.confidence-grid small) {
+  display: block;
+  color: #756e70;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.book :global(.confidence-rule),
+.book :global(.delta-contract) {
+  display: grid;
+  grid-template-columns: 34mm repeat(4, 1fr);
+  gap: 0;
+  margin-top: 8mm;
+  color: var(--paper);
+  background: var(--plum-dark);
+}
+
+.book :global(.confidence-rule > *),
+.book :global(.delta-contract > *) {
+  display: grid;
+  min-height: 17mm;
+  place-items: center;
+  padding: 2mm;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  text-align: center;
+}
+
+.book :global(.confidence-rule b),
+.book :global(.delta-contract b) {
+  color: #edc57f;
+  font-family: "Report Display", sans-serif;
+}
+
+.book :global(.financial-ledger) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 11mm;
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.financial-ledger > div) {
+  min-height: 40mm;
+  padding: 5mm 0 4mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.financial-ledger b) {
+  display: block;
+  margin: 1.5mm 0 1mm;
+  font: 700 26px/1.25 "Report Display", sans-serif;
+}
+
+.book :global(.financial-ledger p) {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.book :global(.positive) { color: var(--jade); }
+.book :global(.negative),
+.book :global(.warn) { color: var(--cinnabar); }
+.book :global(.done),
+.book :global(.ok) { color: var(--jade); }
+
+.book :global(.priority-box) {
+  display: grid;
+  grid-template-columns: 38mm 1fr;
+  gap: 8mm;
+  margin-top: 8mm;
+  padding: 6mm 0;
+  border-top: 1px solid var(--profile-accent);
+  border-bottom: 1px solid var(--profile-accent);
+}
+
+.book :global(.priority-box > b) {
+  color: var(--profile-accent);
+  font: 700 15px "Report Display", sans-serif;
+}
+
+.book :global(.priority-box ol) {
+  margin: 0;
+  padding-left: 6mm;
+  font-size: 14px;
+}
+
+.book :global(.priority-box li) { padding: 0 0 1.5mm 2mm; }
+
+.book :global(.risk-columns) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10mm;
+  margin-top: 2mm;
+}
+
+.book :global(.risk-columns article) {
+  min-height: 77mm;
+  padding: 7mm 0 6mm;
+  border-top: 2px solid var(--profile-accent);
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.risk-columns span) {
+  color: #827879;
+  font: 700 11px "Report Display", sans-serif;
+  letter-spacing: 0.13em;
+}
+
+.book :global(.risk-columns h2) {
+  margin: 5mm 0 2mm;
+  color: var(--profile-accent);
+  font: 700 38px/1 "Report Display", sans-serif;
+}
+
+.book :global(.risk-columns article > b) {
+  font: 700 14px/1.5 "Report Display", sans-serif;
+}
+
+.book :global(.risk-columns p) {
+  margin-top: 4mm;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.book :global(.effective-risk) {
+  display: grid;
+  grid-template-columns: 34mm 43mm 1fr;
+  gap: 5mm;
+  align-items: center;
+  margin-top: 8mm;
+  padding: 6mm 7mm;
+  color: var(--white);
+  background: var(--plum-dark);
+}
+
+.book :global(.effective-risk span) {
+  color: #dfc17f;
+  font: 700 12px "Report Display", sans-serif;
+}
+
+.book :global(.effective-risk b) {
+  font: 700 25px "Report Display", sans-serif;
+}
+
+.book :global(.effective-risk p) {
+  margin: 0;
+  color: #ded6da;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.book :global(.alert-list) { margin-top: 7mm; }
+
+.book :global(.alert-list > div) {
+  display: grid;
+  grid-template-columns: 12mm 1fr;
+  gap: 4mm;
+  padding: 3mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.alert-list b) {
+  color: var(--profile-accent);
+  font: 700 13px "Report Display", sans-serif;
+}
+
+.book :global(.alert-list p) {
+  margin: 0;
+  font-size: 14px;
+}
+
+.book :global(.goal-hero) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--profile-accent);
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.goal-hero > div) {
+  min-height: 54mm;
+  padding: 7mm 6mm 5mm 0;
+  border-right: 1px solid var(--line);
+}
+
+.book :global(.goal-hero > div + div) { padding-left: 6mm; }
+.book :global(.goal-hero > div:last-child) { border-right: 0; }
+
+.book :global(.goal-hero b) {
+  display: block;
+  margin-top: 5mm;
+  font: 700 24px/1.25 "Report Display", sans-serif;
+}
+
+.book :global(.goal-hero p) {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.book :global(.goal-scenarios) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6mm;
+  margin-top: 9mm;
+}
+
+.book :global(.goal-scenarios > div) {
+  padding-top: 4mm;
+  border-top: 1px solid var(--gold);
+}
+
+.book :global(.goal-scenarios span) {
+  color: #796e70;
+  font-size: 12px;
+}
+
+.book :global(.goal-scenarios > div > b) {
+  display: block;
+  color: var(--profile-accent);
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.goal-scenarios h3) {
+  margin: 5mm 0 2mm;
+  font: 700 18px/1.35 "Report Display", sans-serif;
+}
+
+.book :global(.goal-scenarios p) {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.book :global(.goal-verdict) {
+  display: grid;
+  grid-template-columns: 44mm 1fr;
+  gap: 7mm;
+  align-items: center;
+  margin-top: 10mm;
+  padding: 6mm 0;
+  border-top: 2px solid var(--profile-accent);
+  border-bottom: 1px solid var(--profile-accent);
+}
+
+.book :global(.goal-verdict b) {
+  color: var(--profile-accent);
+  font: 700 21px/1.3 "Report Display", sans-serif;
+}
+
+.book :global(.goal-verdict p) { margin: 0; font-size: 14px; }
+
+.book :global(.ips-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 10mm;
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.ips-grid article) {
+  min-height: 49mm;
+  padding: 5mm 0 4mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.ips-grid h3) {
+  margin: 2mm 0 1mm;
+  font: 700 17px/1.4 "Report Display", sans-serif;
+}
+
+.book :global(.ips-grid p) {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.book :global(.ips-sign) {
+  display: flex;
+  justify-content: space-between;
+  gap: 5mm;
+  margin-top: 7mm;
+  color: #756d70;
+  font-size: 11.5px;
+}
+
+.book :global(.portfolio-compare) {
+  display: grid;
+  grid-template-columns: 1fr 17mm 1fr;
+  align-items: stretch;
+  margin-top: 3mm;
+  border-top: 2px solid var(--profile-accent);
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.portfolio-side) { padding: 8mm 0 7mm; }
+.book :global(.portfolio-side.target) { text-align: right; }
+
+.book :global(.portfolio-side h2) {
+  margin: 6mm 0 2mm;
+  font: 700 29px "Report Display", sans-serif;
+}
+
+.book :global(.portfolio-side p) {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.book :global(.portfolio-arrow) {
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font: 700 25px "Report Display", sans-serif;
+}
+
+.book :global(.drift-list) { margin-top: 8mm; }
+
+.book :global(.drift-list > div) {
+  display: grid;
+  grid-template-columns: 42mm 1fr 24mm;
+  gap: 5mm;
+  align-items: center;
+  min-height: 16mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.drift-list span),
+.book :global(.drift-list strong) { font-size: 13.5px; }
+.book :global(.drift-list strong) { text-align: right; }
+
+.book :global(.drift-list i) {
+  display: block;
+  height: 3mm;
+  overflow: hidden;
+  background: #e5ddd1;
+  border-radius: 99px;
+}
+
+.book :global(.drift-list i b) {
+  display: block;
+  height: 100%;
+  background: var(--profile-support);
+  border-radius: inherit;
+}
+
+.book :global(.portfolio-questions) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6mm;
+  margin-top: 9mm;
+}
+
+.book :global(.portfolio-questions article) {
+  padding-top: 4mm;
+  border-top: 1px solid var(--gold);
+}
+
+.book :global(.portfolio-questions b) {
+  display: block;
+  margin-bottom: 2mm;
+  font: 700 14px "Report Display", sans-serif;
+}
+
+.book :global(.portfolio-questions h3) {
+  margin: 0 0 1mm;
+  font: 700 15px "Report Display", sans-serif;
+}
+
+.book :global(.portfolio-questions p) {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.book :global(.scenario-list) {
+  margin-top: 2mm;
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.scenario-row) {
+  display: grid;
+  grid-template-columns: 19mm 47mm 1fr;
+  gap: 6mm;
+  align-items: center;
+  min-height: 39mm;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.scenario-row > b) {
+  color: var(--profile-accent);
+  font: 700 25px "Report Display", sans-serif;
+}
+
+.book :global(.scenario-row h3) {
+  margin: 0 0 1mm;
+  font: 700 16px "Report Display", sans-serif;
+}
+
+.book :global(.scenario-row span),
+.book :global(.scenario-row p) {
+  display: block;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.book :global(.scenario-row aside) {
+  padding-left: 6mm;
+  border-left: 1px solid var(--line);
+}
+
+.book :global(.scenario-row aside strong) {
+  display: block;
+  color: var(--profile-accent);
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.scenario-row aside small) {
+  color: var(--ink-soft);
+  font-size: 11.5px;
+}
+
+.book :global(.income-shock) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6mm;
+  align-items: center;
+  margin-top: 9mm;
+  padding: 6mm 0;
+  border-top: 1px solid var(--profile-accent);
+  border-bottom: 1px solid var(--profile-accent);
+}
+
+.book :global(.income-shock article + article) { border-left: 1px solid var(--line); padding-left: 6mm; }
+.book :global(.income-shock span) { display: block; font-size: 12px; color: var(--ink-soft); }
+.book :global(.income-shock b) { display: block; color: var(--profile-accent); font: 700 18px "Report Display", sans-serif; }
+.book :global(.income-shock p) { margin: 1mm 0 0; font-size: 12.5px; }
+
+.book :global(.journal-sheet) {
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.journal-sheet article) {
+  display: grid;
+  grid-template-columns: 43mm 1fr;
+  gap: 7mm;
+  min-height: 31mm;
+  padding: 5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.journal-sheet span) {
+  color: var(--profile-accent);
+  font: 700 13px "Report Display", sans-serif;
+}
+
+.book :global(.journal-sheet p) {
+  margin: 0;
+  color: #978d88;
+  font-size: 13px;
+  line-height: 2.05;
+}
+
+.book :global(.journal-score) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2mm 8mm;
+  margin-top: 7mm;
+}
+
+.book :global(.journal-score > div) {
+  display: grid;
+  grid-template-columns: 8mm 1fr;
+  gap: 2mm;
+  font-size: 13px;
+}
+
+.book :global(.journal-score span) { color: var(--profile-accent); }
+
+.book :global(.baseline-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 10mm;
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.baseline-grid article) {
+  min-height: 45mm;
+  padding: 5mm 0 4mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.baseline-grid b) {
+  display: block;
+  margin: 2mm 0 1mm;
+  font: 700 22px "Report Display", sans-serif;
+}
+
+.book :global(.baseline-grid p) {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.book :global(.delta-contract) {
+  grid-template-columns: 34mm repeat(5, 1fr);
+  margin-top: 8mm;
+}
+
+.book :global(.quarter-roadmap) {
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.quarter-roadmap article) {
+  display: grid;
+  grid-template-columns: 17mm 42mm 1fr 48mm;
+  gap: 5mm;
+  align-items: start;
+  min-height: 49mm;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.quarter-roadmap article > b) {
+  color: var(--profile-accent);
+  font: 700 18px "Report Display", sans-serif;
+}
+
+.book :global(.quarter-roadmap h3) {
+  margin: 0;
+  font: 700 16px/1.45 "Report Display", sans-serif;
+}
+
+.book :global(.quarter-roadmap p) {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.book :global(.quarter-roadmap span) {
+  color: var(--ink-soft);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.book :global(.source-ledger) {
+  border-top: 2px solid var(--profile-accent);
+}
+
+.book :global(.source-ledger > div) {
+  display: grid;
+  grid-template-columns: 43mm 1fr 43mm;
+  gap: 5mm;
+  align-items: start;
+  min-height: 22mm;
+  padding: 3.5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book :global(.source-ledger .source-head) {
+  min-height: auto;
+  padding: 2mm 0;
+  color: var(--paper);
+  background: var(--plum-dark);
+  border: 0;
+}
+
+.book :global(.source-head b) { padding: 0 3mm; font: 700 11px "Report Display", sans-serif; }
+.book :global(.source-ledger span) { font: 700 12.5px/1.45 "Report Display", sans-serif; }
+.book :global(.source-ledger p) { margin: 0; font-size: 12px; line-height: 1.5; }
+.book :global(.source-ledger small) { color: var(--ink-soft); font-size: 10.5px; line-height: 1.45; }
+
+.book :global(.load-state) {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  color: var(--plum);
+  background: var(--paper);
+  font-size: 18px;
+}
+
+.book :global(.load-state.error) {
+  color: var(--cinnabar);
+}
+
+@media screen {
+  .book :global(.page) {
+    margin: 8mm 0;
+    box-shadow: 0 12px 40px rgba(35, 27, 32, 0.18);
+  }
+}
+
+@media print {
+  :global(html),
+  :global(body) {
+    width: auto !important;
+    margin: 0 !important;
+    background: #fff !important;
+  }
+
+  .book {
+    width: auto;
+    margin: 0;
+    background: #fff;
+  }
+
+  .book :global(.no-print),
+  :global(body > header),
+  :global(body > footer),
+  :global(.topbar),
+  :global(.site-footer),
+  :global(body > div[style*="position: fixed"]) {
+    display: none !important;
+  }
+
+  .book :global(.page) {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .book :global(.page:last-of-type) {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}

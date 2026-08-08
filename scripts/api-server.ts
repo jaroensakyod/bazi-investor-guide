@@ -74,6 +74,14 @@ function parseQuery(url: string | undefined): Query {
   return q;
 }
 
+function bodyAsQuery(body: Record<string, unknown>): Query {
+  const q: Query = {};
+  for (const [key, value] of Object.entries(body)) {
+    if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") q[key] = String(value);
+  }
+  return q;
+}
+
 const server = createServer(async (req, res) => {
   if (req.method === "OPTIONS") return send(res, 204, {});
   const url = req.url ?? "/";
@@ -125,8 +133,17 @@ const server = createServer(async (req, res) => {
       const r = await handleReportHtmlData(q);
       return send(res, r.ok ? 200 : 400, r);
     }
+    if (req.method === "POST" && path === "/api/report-html-data") {
+      const r = await handleReportHtmlData(bodyAsQuery(await readBody(req)));
+      return send(res, r.ok ? 200 : 400, r);
+    }
     if (req.method === "GET" && path === "/api/product-pdf") {
       const r = await handleProductPdf(q);
+      if (!r.ok) return send(res, 400, err(r.error));
+      return sendRaw(res, 200, r.data, "application/pdf");
+    }
+    if (req.method === "POST" && path === "/api/product-pdf") {
+      const r = await handleProductPdf(bodyAsQuery(await readBody(req)));
       if (!r.ok) return send(res, 400, err(r.error));
       return sendRaw(res, 200, r.data, "application/pdf");
     }

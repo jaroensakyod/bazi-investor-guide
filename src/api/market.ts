@@ -3,7 +3,6 @@
  * ทุกตัว deterministic (tools) — LLM เฉพาะ chat route
  */
 import { getTodayMovers } from "../lib/chat/tools";
-import { getUpcomingIPOs } from "../lib/chat/tools";
 import { getNewsImpact } from "../lib/chat/tools";
 import { getTodayAlmanac } from "../lib/chat/tools";
 import { getFortuneInvest } from "../lib/chat/tools";
@@ -16,7 +15,6 @@ import { ok, err, type ApiResponse, type Query } from "./types";
 import { stateOfProfile } from "./chat";
 import type { CalculatedStateValue } from "../lib/bazi/schema-types";
 import { execFile } from "node:child_process";
-import path from "node:path";
 import { ROOT_DIR } from "./config";
 import { getAllStocks } from "../lib/investor/stock-database";
 import { loadSnapshot } from "../lib/market/market-data";
@@ -241,7 +239,7 @@ export function handleStockDetail(q: Query): ApiResponse<unknown> {
 }
 
 /** ภาพรวมตลาดสไตล์ investing.com — ดัชนี/FX/สินทรัพย์เด่น (จาก snapshot) */
-export function handleIndices(q: Query): ApiResponse<unknown> {
+export function handleIndices(_q: Query): ApiResponse<unknown> {
   const snap = loadSnapshot();
   const qq = snap?.quotes ?? {};
   const pick = (sym: string) => {
@@ -272,7 +270,6 @@ export async function handleWatchlist(q: Query): Promise<ApiResponse<unknown>> {
     return ok({ entries: list, entry });
   }
 
-  const state = await stateOfProfile(profile);
   const snap = loadSnapshot();
   const rows = [];
   for (const e of entries) {
@@ -385,22 +382,38 @@ export async function handleCardPdf(q: Query): Promise<{ ok: true; data: Buffer 
   }
 }
 
-/** สร้างสินค้า PDF — เฉพาะเจ้าของ · ยังไม่ deploy → ไม่เช็ครหัส (คืนรหัสกลับตอน deploy) */
+/** สร้างสินค้า PDF — dev เปิด preview; production paid tier ต้องมี entitlement ที่ผูกกับโปรไฟล์ */
 export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
-  const state = await stateFromBirth(q);
-  if (!state) return { ok: false, error: "ต้องระบุ birthDate" };
   try {
     const kind = String(q.kind ?? "full");
-    // tier → เปิดถึง section ไหน (free=0 · ฿99=2 · ฿490=4 · ฿790/เดือน=6 เต็ม)
-    const tierMap: Record<string, number> = { free: 0, "99": 2, "490": 4, "790": 6 };
-    const tier = String(q.tier ?? "490");
-    const maxSection = tierMap[tier] ?? 4;
     if (kind === "card") {
+      const state = await stateFromBirth(q);
+      if (!state) return { ok: false, error: "ต้องระบุ birthDate" };
       const { buildFreeCardPdf } = await import("./report-pdf-card");
       return { ok: true, data: await buildFreeCardPdf(state) };
     }
-    const { buildFullReportPdf } = await import("./report-pdf-full");
-    return { ok: true, data: await buildFullReportPdf(state, { maxSection, lockedNote: `ปลดล็อกส่วนที่เหลือด้วยฉบับที่สูงขึ้น (ตอนนี้: ${tier === "free" ? "ฟรี" : `฿${tier}`})` }) };
+    const { readerFromRecord, resolveFinancialInputs } = await import("../lib/report/report-input");
+    const { resolveReportAccess } = await import("../lib/report/report-entitlement");
+    const { buildCachedEditorialProductPdf, readCachedEditorialProductPdf } = await import("./report-pdf-artifact-cache");
+    const reader = readerFromRecord(q as Record<string, unknown>);
+    const profile = {
+      birthDate: String(q.birthDate ?? ""),
+      birthTime: String(q.birthTime ?? ""),
+      gender: String(q.gender ?? ""),
+      province: String(q.province ?? ""),
+    };
+    const access = resolveReportAccess(reader, profile);
+    const allowDemo = process.env.NODE_ENV !== "production" || String(q.preview ?? "") === "1";
+    const resolved = resolveFinancialInputs(reader, { allowDemo });
+    const renderOptions = { tier: access.tier, financial: resolved.inputs, profile };
+    const cached = readCachedEditorialProductPdf(renderOptions);
+    if (cached) return { ok: true, data: cached.buffer };
+    const state = await stateFromBirth(q);
+    if (!state) return { ok: false, error: "ต้องระบุ birthDate" };
+    const artifact = await buildCachedEditorialProductPdf(state, {
+      ...renderOptions,
+    });
+    return { ok: true, data: artifact.buffer };
   } catch (e) {
     return { ok: false, error: `PDF error: ${(e as Error).message}` };
   }
@@ -445,16 +458,41 @@ export async function handleReportHtmlData(q: Query): Promise<ApiResponse<unknow
   const state = await stateFromBirth(q);
   if (!state) return err("ต้องระบุ birthDate (YYYY-MM-DD)");
   try {
+    const { readerFromRecord, resolveFinancialInputs } = await import("../lib/report/report-input");
+    const { resolveReportAccess } = await import("../lib/report/report-entitlement");
     const { buildPersonalDashboard } = await import("../lib/portfolio/personal-dashboard");
     const { buildMonthlyPicks } = await import("../lib/picks/monthly-picks");
     const { readBookNarrativeFromCache } = await import("../lib/report/narrative-v6");
+    const reader = readerFromRecord(q as Record<string, unknown>);
+    const profile = {
+      birthDate: String(q.birthDate ?? ""),
+      birthTime: String(q.birthTime ?? ""),
+      gender: String(q.gender ?? ""),
+      province: String(q.province ?? ""),
+    };
+    const access = resolveReportAccess(reader, profile);
+    const allowDemo = process.env.NODE_ENV !== "production" || String(q.preview ?? "") === "1";
+    const resolvedFinancial = resolveFinancialInputs(reader, { allowDemo });
     const d = buildPersonalDashboard(state);
-    const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
-    const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
+    const thLimit = access.tier === "free" ? 3 : access.tier === "99" ? 5 : 10;
+    const thPicks = buildMonthlyPicks(state, "TH", thLimit, access.tier === "free" ? "free" : access.tier === "99" ? "pro" : "premium");
+    const usPicks = access.tier === "790" ? buildMonthlyPicks(state, "US", 8, "premium") : null;
     // อ่าน narrative จาก cache เท่านั้น — ห้าม gen LLM ใน API (ไม่อุดตัน)
     const narrative = {} as Record<string, string>;
-    const book = readBookNarrativeFromCache();
+    const book = readBookNarrativeFromCache(state);
     return ok({
+      profile: {
+        birthDate: q.birthDate ?? "",
+        birthTime: q.birthTime ?? "",
+        gender: q.gender ?? "",
+        province: q.province ?? "",
+      },
+      entitlement: access,
+      financialInputs: resolvedFinancial.inputs,
+      financialCompleteness: {
+        deliverable: resolvedFinancial.deliverable,
+        missingFields: resolvedFinancial.missingFields,
+      },
       persona: d.persona,
       trading: d.trading,
       principle: d.principle,

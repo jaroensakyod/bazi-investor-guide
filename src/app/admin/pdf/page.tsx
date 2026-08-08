@@ -1,6 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FINANCIAL_PRESETS } from "../../../lib/report/financial-system";
+import {
+  getReportManifest,
+  REPORT_TIER_CONFIGS,
+  REPORT_TIERS,
+  type ReportTier,
+} from "../../../lib/report/product-system";
+import { requiredFinancialFieldsForTier } from "../../../lib/report/report-input";
 
 type Preview = {
   persona?: { name: string; emoji: string; bandLabel: string; style: string };
@@ -12,12 +20,52 @@ type Preview = {
 };
 
 const EL_COLOR: Record<string, string> = { ไม้: "#4caf50", ไฟ: "#ef5350", ดิน: "#a1887f", ทอง: "#d4af37", น้ำ: "#42a5f5" };
-const TIERS = [
-  { id: "free", label: "🆓 ฟรี", price: "฿0", open: ["การ์ดตัวตน 1 หน้า"], locked: ["มุมมองดวง", "จัดสรรเงิน", "พอร์ตเด่น", "Life Map", "วันมงคล"] },
-  { id: "99", label: "💵 ฿99", price: "฿99", open: ["การ์ด", "มุมมองดวง", "จัดสรรเงิน"], locked: ["พอร์ตเด่น", "สินค้าแนะนำ", "Life Map", "วันมงคล"] },
-  { id: "490", label: "⭐ ฿490", price: "฿490", open: ["การ์ด", "มุมมองดวง", "จัดสรรเงิน", "พอร์ตเด่น", "สินค้าแนะนำ"], locked: ["Life Map", "วันมงคล"] },
-  { id: "790", label: "👑 ฿790/เดือน", price: "฿790/เดือน", open: ["ทุกส่วน — ฉบับเต็ม 6 ส่วน"], locked: [] },
-];
+
+type FinancialPresetName = keyof typeof FINANCIAL_PRESETS;
+type FinancialForm = Record<string, string>;
+
+const TIER_ICON: Record<ReportTier, string> = { free: "🆓", "99": "💵", "490": "⭐", "790": "👑" };
+const TIER_HIGHLIGHTS: Record<ReportTier, string[]> = {
+  free: ["บุคลิกการเงินและสมดุลธาตุ", "วงจรตัดสินใจ", "แผนเดือนนี้ + 30/90/365 วัน"],
+  "99": ["ทุกอย่างใน FREE", "ระบบแบ่งเงินและความเสี่ยง", "Life Map + แบบคัดก่อนลงทุน"],
+  "490": ["ทุกอย่างใน ฿99", "ฐานะ เป้าหมาย Allocation และ IPS", "คิววิจัย พอร์ต และสถานการณ์จำลอง"],
+  "790": ["ทุกอย่างใน ฿490", "Deep research เปรียบเทียบ 3 บริษัท", "Journal + Baseline + แผนทบทวน 12 เดือน"],
+};
+const TIERS = REPORT_TIERS.map((id) => ({
+  id,
+  label: `${TIER_ICON[id]} ${REPORT_TIER_CONFIGS[id].priceLabel}`,
+  price: REPORT_TIER_CONFIGS[id].priceLabel,
+  pages: getReportManifest(id).pageCount,
+  promise: REPORT_TIER_CONFIGS[id].promise,
+  open: TIER_HIGHLIGHTS[id],
+}));
+
+const FINANCIAL_FIELDS = [
+  { key: "monthlyIncome", label: "รายรับสุทธิ/เดือน", group: "basic" },
+  { key: "monthlyExpense", label: "รายจ่ายจำเป็น/เดือน", group: "basic" },
+  { key: "emergencySavings", label: "เงินสำรองฉุกเฉินปัจจุบัน", group: "basic" },
+  { key: "debtBalance", label: "ยอดหนี้คงเหลือ", group: "basic" },
+  { key: "debtApr", label: "ดอกเบี้ยหนี้ต่อปี (%)", group: "basic" },
+  { key: "horizonYears", label: "ระยะเวลาลงทุน (ปี)", group: "basic" },
+  { key: "maxDrawdown", label: "ขาดทุนสูงสุดที่รับได้ (%)", group: "basic" },
+  { key: "capital", label: "สินทรัพย์ลงทุนปัจจุบัน", group: "full" },
+  { key: "monthly", label: "เงินลงทุนเพิ่ม/เดือน", group: "full" },
+  { key: "emergencyMonths", label: "เป้าหมายเงินสำรอง (เดือน)", group: "full" },
+  { key: "goalAmount", label: "เป้าหมายเงินก้อน", group: "full" },
+  { key: "currentGoalSavings", label: "เงินสะสมเพื่อเป้าหมายแล้ว", group: "full" },
+  { key: "goalYears", label: "เวลาถึงเป้าหมาย (ปี)", group: "full" },
+  { key: "currentEquityPct", label: "หุ้นปัจจุบัน (%)", group: "full" },
+  { key: "currentBondPct", label: "ตราสารหนี้ปัจจุบัน (%)", group: "full" },
+  { key: "currentCashPct", label: "เงินสดปัจจุบัน (%)", group: "full" },
+] as const;
+
+function presetForm(name: FinancialPresetName): FinancialForm {
+  const preset = FINANCIAL_PRESETS[name];
+  return Object.fromEntries([
+    ...FINANCIAL_FIELDS.map((field) => [field.key, String(preset[field.key])]),
+    ["goal", preset.goal],
+  ]);
+}
 
 /** สร้างสินค้า PDF — เฉพาะเจ้าของ (ยังไม่ deploy → ไม่มีรหัส) · live preview การ์ดลูกค้า */
 export default function AdminPdfPage() {
@@ -26,7 +74,11 @@ export default function AdminPdfPage() {
   const [gender, setGender] = useState("male");
   const [province, setProvince] = useState("Bangkok");
   const [kind, setKind] = useState("full");
-  const [tier, setTier] = useState("490");
+  const [tier, setTier] = useState<ReportTier>("490");
+  const [financeMode, setFinanceMode] = useState<"demo" | "real">("demo");
+  const [financePreset, setFinancePreset] = useState<FinancialPresetName>("builder");
+  const [financial, setFinancial] = useState<FinancialForm>(() => presetForm("builder"));
+  const [entitlement, setEntitlement] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
@@ -54,13 +106,53 @@ export default function AdminPdfPage() {
     return () => clearTimeout(id);
   }, [birthDate, birthTime, gender, province]);
 
+  function choosePreset(name: FinancialPresetName) {
+    setFinancePreset(name);
+    setFinancial(presetForm(name));
+    setFinanceMode("demo");
+  }
+
+  function reportParams() {
+    const params = new URLSearchParams({
+      birthDate,
+      birthTime: birthTime || "12:00",
+      gender,
+      province,
+      kind,
+      tier,
+      financePreset,
+      profileMode: financeMode,
+    });
+    for (const [key, value] of Object.entries(financial)) {
+      if (value.trim()) params.set(key, value.trim());
+    }
+    if (entitlement.trim()) params.set("entitlement", entitlement.trim());
+    return params;
+  }
+
+  function validatePaidInputs(): string | null {
+    if (kind !== "full" || tier === "free" || financeMode === "demo") return null;
+    const missing = requiredFinancialFieldsForTier(tier).filter((key) => !financial[key]?.trim());
+    if (missing.length) return `ข้อมูลการเงินจริงยังไม่ครบ ${missing.length} ช่อง`;
+    return null;
+  }
+
   async function generate() {
     setBusy(true);
     setError("");
     setNote("");
     try {
-      const params = new URLSearchParams({ birthDate, birthTime: birthTime || "12:00", gender, province, kind, tier });
-      const res = await fetch(`/api/product-pdf?${params}`);
+      const validationError = validatePaidInputs();
+      if (validationError) {
+        setError(validationError);
+        return;
+      }
+      const params = reportParams();
+      const res = await fetch("/api/product-pdf", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(params)),
+      });
       if (!res.ok) {
         const j = await res.json().catch(() => null);
         setError(j?.error ?? "สร้างไม่สำเร็จ");
@@ -82,6 +174,17 @@ export default function AdminPdfPage() {
     } finally {
       setBusy(false);
     }
+  }
+
+  function openPrintPreview() {
+    const validationError = validatePaidInputs();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+    const draftId = crypto.randomUUID();
+    localStorage.setItem(`bazi-report-draft:${draftId}`, JSON.stringify(Object.fromEntries(reportParams())));
+    window.open(`/report/print?localDraft=${encodeURIComponent(draftId)}`, "_blank", "noopener,noreferrer");
   }
 
   const tierInfo = TIERS.find((x) => x.id === tier) ?? TIERS[2];
@@ -107,7 +210,7 @@ export default function AdminPdfPage() {
         <div>
           <h2 style={{ margin: 0, color: "#d4af37", fontSize: 20 }}>🛠️ โรงงานสินค้า PDF</h2>
           <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "#cfe3d4" }}>
-            เฉพาะเจ้าของ · กรอกวันเกิดลูกค้า → เลือกแบบ+ราคา → สร้าง PDF (ส่วนที่ยังไม่จ่าย = เบลอ/ล็อก)
+            เฉพาะเจ้าของ · แต่ละราคาคือหนังสือสมบูรณ์ของตัวเอง ไม่มีหน้าเบลอหรือหน้าล็อก
           </p>
         </div>
         <span style={{ fontSize: 11.5, color: "#9a937f", border: "1px solid #3a3f4d", borderRadius: 20, padding: "4px 12px" }}>
@@ -144,7 +247,7 @@ export default function AdminPdfPage() {
           <p style={{ fontWeight: 700, fontSize: 13.5, margin: "14px 0 8px" }}>📦 แบบสินค้า</p>
           <div className="chips">
             <button className={`chip ${kind === "full" ? "on" : ""}`} onClick={() => setKind("full")}>
-              📄 รายงานคู่ดวง (เบลอตามที่จ่าย)
+              📄 หนังสือเฉพาะบุคคล (สมบูรณ์ตาม tier)
             </button>
             <button className={`chip ${kind === "card" ? "on" : ""}`} onClick={() => setKind("card")}>
               🃏 การ์ดตัวตนฟรี (lead magnet)
@@ -157,9 +260,57 @@ export default function AdminPdfPage() {
               <div className="chips">
                 {TIERS.map((tk) => (
                   <button key={tk.id} className={`chip ${tier === tk.id ? "on" : ""}`} onClick={() => setTier(tk.id)}>
-                    {tk.label}
+                    {tk.label} · {tk.pages} หน้า
                   </button>
                 ))}
+              </div>
+
+              <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid #323845" }}>
+                <p style={{ fontWeight: 700, fontSize: 13.5, margin: "0 0 8px" }}>💰 ข้อมูลการเงินที่ใช้คำนวณ</p>
+                <div className="chips" style={{ marginBottom: 8 }}>
+                  <button className={`chip ${financeMode === "real" ? "on" : ""}`} onClick={() => setFinanceMode("real")}>ข้อมูลลูกค้าจริง</button>
+                  <button className={`chip ${financeMode === "demo" ? "on" : ""}`} onClick={() => setFinanceMode("demo")}>ตัวอย่าง QA</button>
+                </div>
+                <p style={{ margin: "0 0 8px", fontSize: 11.5, color: financeMode === "real" ? "#8fd4a0" : "#d4af37" }}>
+                  {financeMode === "real"
+                    ? "ตัวเลขจะถูกระบุว่าเป็นข้อมูลที่ลูกค้าให้ และใช้สร้างรายงานส่งมอบได้"
+                    : "เล่มจะติดป้าย DEMO DATA ชัดเจน และ production จะไม่ยอมส่งมอบ tier แบบชำระเงิน"}
+                </p>
+                <div className="chips" style={{ marginBottom: 10 }}>
+                  {(["starter", "builder", "established"] as FinancialPresetName[]).map((name) => (
+                    <button key={name} className={`chip ${financePreset === name ? "on" : ""}`} onClick={() => choosePreset(name)}>
+                      QA: {name}
+                    </button>
+                  ))}
+                </div>
+                {tier !== "free" && (
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 9 }}>
+                    {FINANCIAL_FIELDS.filter((field) => field.group === "basic" || tier === "490" || tier === "790").map((field) => (
+                      <label key={field.key} style={{ fontSize: 11.5 }}>
+                        {field.label}
+                        <input
+                          inputMode="decimal"
+                          value={financial[field.key] ?? ""}
+                          onChange={(event) => setFinancial((current) => ({ ...current, [field.key]: event.target.value }))}
+                          style={{ width: "100%" }}
+                        />
+                      </label>
+                    ))}
+                    {(tier === "490" || tier === "790") && (
+                      <label style={{ fontSize: 11.5, gridColumn: "1 / -1" }}>
+                        เป้าหมายการเงิน
+                        <input value={financial.goal ?? ""} onChange={(event) => setFinancial((current) => ({ ...current, goal: event.target.value }))} style={{ width: "100%" }} />
+                      </label>
+                    )}
+                  </div>
+                )}
+                <details style={{ marginTop: 10, fontSize: 11.5, color: "#9a937f" }}>
+                  <summary>Production entitlement</summary>
+                  <label>
+                    Token สิทธิ์จากระบบชำระเงิน
+                    <input value={entitlement} onChange={(event) => setEntitlement(event.target.value)} placeholder="เว้นว่างได้ในโหมดพัฒนา" style={{ width: "100%" }} />
+                  </label>
+                </details>
               </div>
             </>
           )}
@@ -167,15 +318,13 @@ export default function AdminPdfPage() {
           <button className="btn" onClick={generate} disabled={busy || !birthDate} style={{ marginTop: 16, width: "100%", fontSize: 15, padding: "12px" }}>
             {busy ? "⏳ กำลังสร้าง..." : "📥 สร้าง PDF (ด่วน)"}
           </button>
-          <a
+          <button
             className="btn secondary"
-            href={`/report/print?birthDate=${birthDate || "1993-11-24"}&birthTime=${birthTime || "15:12"}&gender=${gender}&province=${province}&tier=${tier}`}
-            target="_blank"
-            rel="noopener"
+            onClick={openPrintPreview}
             style={{ marginTop: 8, width: "100%", fontSize: 14, padding: "11px", display: "block", textAlign: "center" }}
           >
             🖨️ เปิดรายงานคุณภาพ (HTML → พิมพ์ PDF)
-          </a>
+          </button>
           {note && <p style={{ color: "#8fd4a0", fontSize: 12.5, marginTop: 10 }}>{note}</p>}
           {error && <p style={{ color: "#d48f8f", fontSize: 12.5, marginTop: 10 }}>{error}</p>}
         </div>
@@ -234,17 +383,13 @@ export default function AdminPdfPage() {
           {/* tier checklist */}
           <div className="card" style={{ marginTop: 12 }}>
             <p style={{ fontWeight: 700, fontSize: 13, margin: "0 0 8px" }}>
-              {tierInfo.label} <span style={{ color: "#d4af37" }}>({tierInfo.price})</span> — ลูกค้าได้อะไร:
+              {tierInfo.label} <span style={{ color: "#d4af37" }}>· {tierInfo.pages} หน้า</span> — ลูกค้าได้อะไร:
             </p>
+            <p style={{ fontSize: 11.5, color: "#cfe3d4", margin: "0 0 7px" }}>{tierInfo.promise}</p>
             <div style={{ fontSize: 12, lineHeight: 1.8 }}>
               {tierInfo.open.map((o) => (
                 <p key={o} style={{ margin: 0, color: "#8fd4a0" }}>
                   ✅ {o}
-                </p>
-              ))}
-              {tierInfo.locked.map((l) => (
-                <p key={l} style={{ margin: 0, color: "#9a937f" }}>
-                  🔒 {l} — <span style={{ color: "#d4af37" }}>ปลดล็อกด้วย tier ถัดไป</span>
                 </p>
               ))}
             </div>

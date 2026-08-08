@@ -1,9 +1,69 @@
-# สรุปงาน — ระบบหนังสือ PDF "การลงทุนคู่ดวง" (6 ภาค)
+# สรุปงานล่าสุด — Editorial Report v7.2
 
 **วันที่**: 8 ส.ค. 2569 · **Repo**: `C:\Users\ASUS\Desktop\biz\bazi-investor-guide` · **Branch**: `investor-guide`
-**HEAD**: `512fd30` · **เทสต์**: 226/226 (30 ไฟล์) · typecheck/build เขียว
+**Commit**: ตรวจด้วย `git log -1 --oneline` · **สถานะ QA ล่าสุด**: typecheck และ report-system tests ผ่าน
 
 ---
+
+## ✅ สิ่งที่ส่งมอบใน v7.2
+
+- เปลี่ยนจาก PDF ยาวแบบรายงานงบ/ตารางซ้ำ เป็นหนังสือ A4 แบบ editorial ที่ตอบคำถามทีละเรื่อง
+- ฟอนต์เนื้อหาหลักประมาณ 12pt, จัดชิดซ้าย, ใช้ตารางเท่าที่จำเป็น และไม่มีภาพทับตัวหนังสือ
+- แต่ละราคาคือเล่มสมบูรณ์: `FREE=11`, `฿99=18`, `฿490=28`, `฿790=32` หน้า
+- เพิ่ม Financial Snapshot, willingness เทียบ capacity, goal gap, allocation, IPS, portfolio diagnostic, stress scenario, source ledger, decision journal และ baseline ตาม tier
+- ตัวเลขการเงินทั้งหมดคำนวณด้วย deterministic engine; LLM ห้ามคำนวณยอดเงิน ผลตอบแทน หรือ allocation
+- Paid production ต้องมีข้อมูลการเงินจริงครบและ signed entitlement ที่ผูกกับโปรไฟล์
+- แก้ narrative cache ให้ดึงได้เฉพาะ identity ของคนเดียวกัน และเพิ่ม artifact cache แบบ hash + atomic write + in-flight dedupe
+- หน้าแอดมินแสดงคุณค่าจริงของแต่ละ tier รับข้อมูลการเงินตามระดับ และส่งข้อมูลผ่าน POST แทนการใส่ตัวเลขใน URL
+
+## 💎 Value ladder
+
+| Tier | หน้า | สิ่งที่ผู้ซื้อได้เพิ่ม |
+|---|---:|---|
+| FREE | 11 | บุคลิกการเงิน หลักฐาน/ข้อจำกัด วงจรตัดสินใจ แผนเดือน และ 30/90/365 วัน |
+| ฿99 | 18 | ระบบแบ่งเงิน กรอบ willingness/capacity จังหวะชีวิต Life Map และ worksheet |
+| ฿490 | 28 | ฐานะ เป้าหมาย Allocation, IPS, กรวยคัดหุ้น คิววิจัย วินิจฉัยพอร์ต stress test และแหล่งข้อมูล |
+| ฿790 | 32 | Deep research 3 บริษัท, decision journal, monthly baseline และแผนทบทวน 12 เดือน |
+
+## 🧪 เปรียบเทียบหลายคนและเวลาเจน
+
+คำสั่ง `npm run report:matrix` ทดสอบ 6 โปรไฟล์ × 4 tier รวม 24 แบบ และสร้าง PDF 32 หน้าจริงให้ทุกโปรไฟล์:
+
+- ลายเซ็นเฉพาะบุคคล 6/6 ไม่ซ้ำ
+- ธาตุเด่น 3 แบบ · ธาตุเสริม 4 แบบ · คิววิจัย 5 แบบ
+- เวลา PDF 32 หน้า: 749–938 ms ต่อคนบนเครื่องทดสอบ
+- API cold หลังโหลดโมดูล ~1.00 วินาที · ครั้งแรกหลังเปิด process ~2.60 วินาที · cache hit 24–30 ms
+- ขนาดเล่มประมาณ 2.66 MB และทุก tier มีจำนวนหน้าตรง manifest
+- ผลแบบอ่านได้: `output/report-matrix/report-matrix.md`
+- ผลแบบเครื่องอ่าน: `output/report-matrix/report-matrix.json`
+
+## 📄 Final proofs
+
+```text
+output/pdf/bazi-report-free-editorial-v7.2.pdf
+output/pdf/bazi-report-99-editorial-v7.2.pdf
+output/pdf/bazi-report-490-editorial-v7.2.pdf
+output/pdf/bazi-report-790-editorial-v7.2.pdf
+```
+
+ใช้ `npm run report:proofs` เพื่อสร้างใหม่ และต้อง render ตรวจทุกหน้าก่อนส่งลูกค้า
+
+## 🏗️ ไฟล์ source of truth
+
+| ไฟล์ | หน้าที่ |
+|---|---|
+| `src/lib/report/product-system.ts` | tier manifest, page ladder, promises, page count |
+| `src/lib/report/financial-system.ts` | คำนวณฐานะ ความเสี่ยง เป้าหมาย allocation และ scenarios |
+| `src/lib/report/report-input.ts` | contract ข้อมูลขั้นต่ำตาม tier |
+| `src/lib/report/report-entitlement.ts` | สิทธิ์ paid ที่ลงลายเซ็นและผูก profile |
+| `src/api/report-pdf-editorial.ts` | canonical PDF renderer |
+| `src/api/report-pdf-artifact-cache.ts` | cache ไฟล์ส่งมอบแบบแยก input/profile |
+| `src/app/report/print/page.tsx` | HTML print preview |
+| `scripts/report-matrix.ts` | cross-profile regression + performance benchmark |
+
+---
+
+## ภาคผนวก: snapshot ระบบ 6 ภาครุ่นก่อน v7
 
 ## 🎯 ภาพรวมงานวันนี้
 

@@ -15,7 +15,9 @@
     "dev": "next dev",
     "start": "next start",
     "api": "tsx scripts/api-server.ts --port 8787",
-    "smoke": "tsx scripts/smoke-engine.ts"
+    "smoke": "tsx scripts/smoke-engine.ts",
+    "report:matrix": "tsx scripts/report-matrix.ts",
+    "report:proofs": "tsx scripts/render-report-proofs.ts"
   },
   "dependencies": {
     "@types/pdfkit": "^0.17.6",

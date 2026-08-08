@@ -3,7 +3,65 @@
 > อัปเดต: 8 สิงหาคม 2569  
 > โปรเจกต์: `bazi-investor-guide`  
 > Branch หลักขณะบันทึก: `investor-guide`  
-> Remote HEAD ที่ยืนยันแล้วก่อนเอกสารชุดนี้: `af09ea8`
+> Commit ล่าสุด: ตรวจด้วย `git log -1 --oneline` หลัง restore
+
+## 0. สถานะล่าสุด — Editorial Report v7.2
+
+ระบบส่งมอบถูกปรับจาก “เพิ่มหน้าและล็อกเนื้อหา” เป็น **หนังสือสมบูรณ์แยกตามคุณค่าของแต่ละราคา** ทุกเล่มไม่มีหน้าเบลอ ไม่มีหน้าล็อก และไม่มีหน้าตารางที่เพิ่มมาเพื่อให้ดูยาว
+
+| Tier | หน้า | คำสัญญาหลัก | ข้อมูลการเงินที่ต้องมี |
+|---|---:|---|---|
+| FREE | 11 | เข้าใจบุคลิก วงจรตัดสินใจ และมีแผนเริ่มทำทันที | ไม่บังคับ; ถ้าไม่มีต้องระบุว่าเป็นตัวอย่าง |
+| ฿99 | 18 | ระบบแบ่งเงิน ความเสี่ยง Life Map และแผน 90 วัน | รายรับ รายจ่าย เงินสำรอง หนี้ ระยะเวลา และขาดทุนที่รับได้ |
+| ฿490 | 28 | ฐานะ เป้าหมาย Allocation, IPS, คิววิจัย พอร์ต และ scenario | ข้อมูล ฿99 + พอร์ต เป้าหมาย เงินเติม และ allocation ปัจจุบัน |
+| ฿790 | 32 | ฿490 + deep research, journal, baseline และแผนติดตาม 12 เดือน | ชุดข้อมูลเต็มเหมือน ฿490 และใช้เป็นฐานเทียบรอบถัดไป |
+
+Source of truth ของ Tier และลำดับหน้าอยู่ที่ `src/lib/report/product-system.ts` เท่านั้น ห้าม hardcode จำนวนหน้าหรือคำสัญญาซ้ำใน renderer/หน้าแอดมิน
+
+### สถาปัตยกรรมส่งมอบ v7.2
+
+```text
+ข้อมูลเกิด + ข้อมูลการเงินจริง
+          │
+          ├─ deterministic BaZi engine
+          ├─ deterministic financial engine (LLM ห้ามคำนวณตัวเลข)
+          ├─ tier manifest + entitlement ที่ผูกกับโปรไฟล์
+          └─ market snapshot + narrative cache ที่แยกตาม profile
+                         │
+                         ├─ canonical PDFKit editorial PDF
+                         └─ HTML print preview
+                                   │
+                         artifact cache ตาม profile+tier+input+data date
+```
+
+- หน้าแอดมินส่งข้อมูลการเงินผ่าน `POST` JSON ไม่ใส่ตัวเลขการเงินใน URL
+- HTML preview ใช้ local draft ID ชั่วคราว แล้วลบข้อมูลจาก browser หลังโหลดสำเร็จ
+- Production paid tier ต้องมี `REPORT_ENTITLEMENT_SECRET` และ signed entitlement; เปลี่ยน `tier=790` ใน URL อย่างเดียวไม่ได้
+- Paid tier ใน production ปฏิเสธการส่งมอบเมื่อข้อมูลการเงินจริงไม่ครบ
+- Artifact filename ใช้ hash ไม่ใช้ชื่อ วันเกิด หรือข้อมูลการเงินของลูกค้า
+- LLM ไม่อยู่ใน critical delivery path; ใช้ cache เฉพาะโปรไฟล์เดียวกันเท่านั้น
+
+### Benchmark และ regression matrix
+
+รัน `npm run report:matrix` เพื่อทดสอบ 6 โปรไฟล์ × 4 tier = 24 รูปแบบส่งมอบ ผลล่าสุด:
+
+- personal signature ไม่ซ้ำ 6/6
+- dominant element 3 แบบ, support element 4 แบบ, research queue 5 แบบ
+- สร้าง PDF 32 หน้าจริงต่อโปรไฟล์ 749–938 ms บนเครื่องทดสอบ
+- API cold หลังโหลดโมดูลประมาณ 1.00 s; request แรกหลังเปิด process 2.60 s; artifact cache hit 24–30 ms
+- ไฟล์ทุกเล่มมากกว่า 1 MB และจำนวนหน้าตรง manifest
+- รายละเอียดอ่านได้ที่ `output/report-matrix/report-matrix.md`
+
+### Final proof
+
+```text
+output/pdf/bazi-report-free-editorial-v7.2.pdf  (11 หน้า)
+output/pdf/bazi-report-99-editorial-v7.2.pdf    (18 หน้า)
+output/pdf/bazi-report-490-editorial-v7.2.pdf   (28 หน้า)
+output/pdf/bazi-report-790-editorial-v7.2.pdf   (32 หน้า)
+```
+
+สร้างใหม่ด้วย `npm run report:proofs` และตรวจภาพทุกหน้าด้วย Poppler ก่อนส่งมอบ
 
 ## 1. เอกสารที่ต้องอ่านก่อน
 
@@ -25,9 +83,9 @@
 - Next dev server พอร์ต 3000
 - BaZi engine แบบ deterministic
 - Market/fundamental data เก็บเป็น JSON snapshots/cache
-- HTML print เป็น PDF คุณภาพหลัก
-- PDFKit เป็นช่องทางสำรอง/เอกสารสั้น
-- LLM narratives สร้าง background แล้วเก็บ cache
+- PDFKit editorial เป็น canonical downloadable PDF
+- HTML print เป็นช่องทาง preview/พิมพ์สำรอง
+- LLM narratives เป็น optional enrichment ที่สร้าง background แล้วเก็บ cache แยก profile
 
 ### URL ตัวอย่างล่าสุด
 
@@ -35,7 +93,7 @@
 http://localhost:3000/report/print?birthDate=1993-11-24&birthTime=15%3A12&gender=male&province=Bangkok&tier=790
 ```
 
-### PDF proof ล่าสุด
+### PDF proof รุ่นเก่า (เก็บเพื่อเทียบย้อนหลัง)
 
 ```text
 output/pdf/bazi-investor-private-editorial-v5.pdf
@@ -168,6 +226,8 @@ npm run typecheck
 npm test
 npm run lint
 npm run build
+npm run report:matrix
+npm run report:proofs
 ```
 
 จากนั้นตรวจด้วยตา:

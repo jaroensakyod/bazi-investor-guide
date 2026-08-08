@@ -7,7 +7,6 @@
  * ⚠️ ไม่ปลอมผลตอบแทนย้อนหลัง — แสดงแค่: พอร์ตเดือนนี้ + เทียบ benchmark วันนี้ + methodology
  */
 import { scoreStock } from "../investor/investor-guide";
-import { getFundamentals } from "../chat/tools";
 import { buffettChecks, buffettScore } from "../report/buffett-checks";
 import { loadSnapshot } from "../market/market-data";
 import { yahooTicker } from "../market/yahoo";
@@ -21,17 +20,49 @@ export type PickMarket = "TH" | "US" | "MID";
 export type MonthlyPick = {
   ticker: string;
   name: string;
+  business: string;
+  description?: string;
   market: string;
+  sector: string;
   element: string;
+  elementReason: string;
   tier: string;
+  riskTier?: "safe" | "medium" | "risky";
+  isHighLiquidity: boolean;
   stockTier: StockTier;
   unlock: UnlockLevel;
   score: number; // composite (ธาตุ×2 + พื้นฐาน + โมเมนตัม)
   elementScore: number; // เฉพาะธาตุ (scoreStock)
   price: number | null;
   changePct: number | null;
+  valuation: {
+    pe: number | null;
+    pbv: number | null;
+    dividendYield: number | null;
+    marketCap: number | null;
+    high52w: number | null;
+    low52w: number | null;
+    currency: string | null;
+  };
+  evidence: {
+    businessSource: string | null;
+    businessUrl: string | null;
+    elementSource: string | null;
+    reviewStatus: string;
+    reviewedBy: string | null;
+    reviewedAt: string | null;
+  };
   reasons: string[];
-  fundamentals: { roe: number | null; buffett: number | null } | null;
+  fundamentals: {
+    roe: number | null;
+    buffett: number | null;
+    profitMargin: number | null;
+    revenueGrowth: number | null;
+    debtToEquity: number | null;
+    currentRatio: number | null;
+    sector: string | null;
+    industry: string | null;
+  } | null;
 };
 
 const MARKET_SCOPES: Record<PickMarket, { markets: string[]; tiers?: string[]; benchmark: string; benchmarkName: string; label: string; desc: string }> = {
@@ -63,7 +94,16 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
         score += bf / 5; // Buffett 0-10 → +0..+2
         if (roe != null) score += roe >= 15 ? 1 : roe >= 8 ? 0.5 : 0;
         reasons.push(`พื้นฐาน: ROE ${roe != null ? `${roe}%` : "-"} · Buffett ${bf}/10`);
-        fundInfo = { roe: roe ?? null, buffett: bf };
+        fundInfo = {
+          roe: roe ?? null,
+          buffett: bf,
+          profitMargin: f.profitMargin ?? null,
+          revenueGrowth: f.revenueGrowth ?? null,
+          debtToEquity: f.debtToEquity ?? null,
+          currentRatio: f.currentRatio ?? null,
+          sector: f.sector ?? null,
+          industry: f.industry ?? null,
+        };
       }
       const chg = md?.changePct ?? null;
       if (chg != null) {
@@ -73,7 +113,44 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
       // เทียร์หุ้น (Hormozi ladder): fit จาก verdict ของ scoreStock (very-good/good/neutral/avoid)
       const fitOf: TierInput["fit"] = es.verdict === "very-good" || es.verdict === "good" ? "good" : es.verdict === "neutral" ? "neutral" : "avoid";
       const tiered = classifyStockTier({ fit: fitOf, roe, buffett: bf || null, capTier: s.tier, changePct: chg });
-      return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, tier: s.tier, stockTier: tiered.tier, unlock: TIER_META[tiered.tier].unlock, score: Math.round(score * 10) / 10, elementScore: es.score, price: md?.price ?? null, changePct: chg, reasons, fundamentals: fundInfo };
+      return {
+        ticker: s.ticker,
+        name: s.name,
+        business: s.business,
+        description: s.description,
+        market: s.market,
+        sector: s.sector,
+        element: s.primaryElement,
+        elementReason: s.elementReason,
+        tier: s.tier,
+        riskTier: s.riskTier,
+        isHighLiquidity: s.isHighLiquidity,
+        stockTier: tiered.tier,
+        unlock: TIER_META[tiered.tier].unlock,
+        score: Math.round(score * 10) / 10,
+        elementScore: es.score,
+        price: md?.price ?? null,
+        changePct: chg,
+        valuation: {
+          pe: md?.pe ?? null,
+          pbv: md?.pbv ?? null,
+          dividendYield: md?.dividendYield ?? null,
+          marketCap: md?.marketCap ?? null,
+          high52w: md?.high52w ?? null,
+          low52w: md?.low52w ?? null,
+          currency: md?.currency ?? s.currency ?? null,
+        },
+        evidence: {
+          businessSource: s.businessEvidence?.source ?? null,
+          businessUrl: s.businessEvidence?.url ?? s.website ?? null,
+          elementSource: s.elementSource ?? null,
+          reviewStatus: s.status,
+          reviewedBy: s.reviewedBy ?? null,
+          reviewedAt: s.reviewedAt ?? null,
+        },
+        reasons,
+        fundamentals: fundInfo,
+      };
     })
     .filter((p) => visible.includes(p.stockTier))
     .sort((a, b) => b.score - a.score)

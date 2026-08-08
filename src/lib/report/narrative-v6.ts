@@ -4,7 +4,7 @@
  * 6 calls (1 ต่อภาค) — cache ต่อภาค
  */
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
@@ -144,20 +144,23 @@ export async function generatePartNarrative(state: CalculatedStateValue, part: n
   return parsed;
 }
 
-/** อ่านจาก cache เท่านั้น (ไม่ gen) — ใช้ใน PDF/print เพื่อไม่อุดตัน */
-export function readBookNarrativeFromCache(): BookNarrative {
+/** identity ของ cache ต้องผูกกับดวงและข้อมูลที่ใช้จริงเสมอ */
+export function bookNarrativeCacheIdentity(state: CalculatedStateValue, part: number): string {
+  return path.basename(cachePath(part, partData(state, part)));
+}
+
+/** อ่านจาก cache ของเจ้าของรายงานนี้เท่านั้น (ไม่ gen) — ห้ามอ่านไฟล์ล่าสุดแบบ global */
+export function readBookNarrativeFromCache(state: CalculatedStateValue): BookNarrative {
   const out: BookNarrative = {};
-  try {
-    for (const fn of readdirSync(CACHE_DIR)) {
-      const m = fn.match(/^(\d)-/);
-      if (!m) continue;
-      const part = m[1] as keyof BookNarrative;
-      try {
-        const c = JSON.parse(readFileSync(path.join(CACHE_DIR, fn), "utf8"));
-        if (c.body && c.body.length > 100) out[part] = c;
-      } catch { /* ignore */ }
-    }
-  } catch { /* dir ไม่มี */ }
+  for (const partNumber of [1, 2, 3, 4, 5, 6]) {
+    const part = String(partNumber) as keyof BookNarrative;
+    const file = cachePath(partNumber, partData(state, partNumber));
+    if (!existsSync(file)) continue;
+    try {
+      const cached = JSON.parse(readFileSync(file, "utf8")) as PartNarrative;
+      if (cached.body && cached.body.length > 100) out[part] = cached;
+    } catch { /* cache เสียหรือ schema เก่า — ข้ามโดยไม่ปะปนกับผู้ใช้อื่น */ }
+  }
   return out;
 }
 

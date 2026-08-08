@@ -6,7 +6,19 @@ import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["node_modules/**", "dist/**", "data/**"] },
+  {
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "dist/**",
+      "out/**",
+      "output/**",
+      "tmp/**",
+      "data/**",
+      "public/**",
+      "scripts/.tmp-*.ts",
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {

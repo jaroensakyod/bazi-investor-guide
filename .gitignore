@@ -15,3 +15,8 @@ data/usage.jsonl
 npm-debug.log*
 
 data/cache/narratives/
+data/cache/narratives-v6/
+data/cache/report-artifacts-v7/
+output/
+tmp/
+scripts/.tmp-v6.ts
