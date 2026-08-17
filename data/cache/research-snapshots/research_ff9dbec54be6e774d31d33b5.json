@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 3,
+  "snapshotId": "research_ff9dbec54be6e774d31d33b5",
+  "createdAt": "2026-08-09T09:14:42.159Z",
+  "securityId": "NASDAQ:AAPL",
+  "contentHash": "ff9dbec54be6e774d31d33b55bef59c0f9d12a4e7d5ed585ae787b5d99054b1b",
+  "versions": {
+    "researchModel": "stock-research-v1",
+    "patternModel": "trend-observation-v1",
+    "decisionProtocol": "decision-protocol-v2",
+    "personalLensModel": null
+  },
+  "sourceAsOf": [
+    {
+      "evidenceId": "NASDAQ:AAPL:identity",
+      "datasetId": "curated-security-catalog",
+      "asOf": null,
+      "source": "stock-catalog",
+      "sourceRef": null,
+      "freshness": "unknown",
+      "license": "unknown"
+    },
+    {
+      "evidenceId": "NASDAQ:AAPL:business",
+      "datasetId": "curated-security-catalog",
+      "asOf": null,
+      "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+      "sourceRef": "https://finance.yahoo.com/quote/AAPL",
+      "freshness": "unknown",
+      "license": "unknown"
+    },
+    {
+      "evidenceId": "NASDAQ:AAPL:quote",
+      "datasetId": "yahoo-development-market",
+      "asOf": "2026-08-07T05:28:17.566Z",
+      "source": "Yahoo development snapshot",
+      "sourceRef": null,
+      "freshness": "fresh",
+      "license": "development_only"
+    },
+    {
+      "evidenceId": "NASDAQ:AAPL:fundamentals",
+      "datasetId": "yahoo-development-market",
+      "asOf": "2026-08-08T10:21:55.371Z",
+      "source": "Yahoo development snapshot",
+      "sourceRef": null,
+      "freshness": "fresh",
+      "license": "development_only"
+    },
+    {
+      "evidenceId": "NASDAQ:AAPL:series",
+      "datasetId": "yahoo-development-market",
+      "asOf": "2026-08-07",
+      "source": "yahoo-development-chart",
+      "sourceRef": null,
+      "freshness": "fresh",
+      "license": "development_only"
+    },
+    {
+      "evidenceId": "NASDAQ:AAPL:birth",
+      "datasetId": "official-security-events",
+      "asOf": "1980-12-12",
+      "source": "Apple Investor Relations FAQ",
+      "sourceRef": "https://investor.apple.com/investor-relations/faq/default.aspx",
+      "freshness": "fresh",
+      "license": "unknown"
+    }
+  ],
+  "assessment": {
+    "modelVersion": "stock-research-v1",
+    "security": {
+      "securityId": "NASDAQ:AAPL",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "currency": "USD",
+      "sector": "เทค",
+      "business": "สมาร์ตโฟน แมค บริการดิจิทัล"
+    },
+    "asOf": "2026-08-08T10:21:55.371Z",
+    "dataQuality": {
+      "score": 100,
+      "availableFundamentalWeightPct": 100,
+      "hasCurrentQuote": true,
+      "hasPriceSeries": true,
+      "hasOfficialSecurityDate": true,
+      "missing": []
+    },
+    "marketAssessment": {
+      "qualityScore": 88,
+      "patternScore": 50,
+      "screenScore": 76.6,
+      "status": "deeper_research_candidate",
+      "positiveEvidence": [
+        "ROE 148.8% อยู่ในระดับแข็งแรงตามเกณฑ์ทั่วไป",
+        "อัตรากำไรสุทธิเป็นบวก 27.6%",
+        "รายได้เติบโต 16.4%"
+      ],
+      "riskFlags": [],
+      "valuationContext": {
+        "pe": 35.7,
+        "pbv": 42.45,
+        "dividendYieldPct": 0.35,
+        "peerNormalized": false
+      }
+    },
+    "pattern": {
+      "modelVersion": "trend-observation-v1",
+      "securityId": "NASDAQ:AAPL",
+      "asOf": "2026-08-07",
+      "sampleSize": 1255,
+      "regime": "mixed",
+      "direction": "neutral",
+      "lastPrice": 313.33,
+      "trend": {
+        "sma20": 323.4315,
+        "sma50": 309.7854,
+        "sma20Slope5Pct": -0.29,
+        "distanceFromSma20Pct": -3.12
+      },
+      "risk": {
+        "atr14Pct": 2.98,
+        "annualizedVolatility60Pct": 32.15,
+        "volatilityBand": "moderate",
+        "maxDrawdown252Pct": 13.8
+      },
+      "levels": {
+        "recentSupport20": 300,
+        "recentResistance20": 344.57,
+        "positionInRange20Pct": 29.91
+      },
+      "observations": [
+        "below_20d_average",
+        "above_50d_average"
+      ],
+      "scenarios": [
+        {
+          "horizonSessions": 5,
+          "sampleCount": 751,
+          "lower10Pct": -4.3,
+          "medianPct": 0.44,
+          "upper90Pct": 5.19,
+          "positiveFrequencyPct": 54.46,
+          "label": "historical_distribution_not_forecast"
+        },
+        {
+          "horizonSessions": 20,
+          "sampleCount": 736,
+          "lower10Pct": -6.51,
+          "medianPct": 1.69,
+          "upper90Pct": 10.83,
+          "positiveFrequencyPct": 61.14,
+          "label": "historical_distribution_not_forecast"
+        },
+        {
+          "horizonSessions": 60,
+          "sampleCount": 696,
+          "lower10Pct": -11.19,
+          "medianPct": 5.46,
+          "upper90Pct": 21.13,
+          "positiveFrequencyPct": 67.82,
+          "label": "historical_distribution_not_forecast"
+        }
+      ],
+      "dataQuality": {
+        "validBars": 1255,
+        "rejectedBars": 0,
+        "sufficientForTrend": true,
+        "sufficientForEvaluation": true
+      },
+      "publication": {
+        "mode": "observation_only",
+        "forecastRelease": "internal_only_pending_legal_and_model_review",
+        "forbiddenUse": "personalized_buy_sell_timing"
+      }
+    },
+    "securityBirth": {
+      "securityId": "NASDAQ:AAPL",
+      "grade": "B",
+      "status": "official_date_only",
+      "calculationMode": "three_pillars_with_time_sensitivity",
+      "selectedEvent": {
+        "schemaVersion": 1,
+        "securityId": "NASDAQ:AAPL",
+        "kind": "exchange_admission",
+        "localDate": "1980-12-12",
+        "localTime": null,
+        "timePrecision": "unknown",
+        "timeZone": "America/New_York",
+        "exchange": "NASDAQ",
+        "venueCity": "New York",
+        "venueCountry": "US",
+        "evidence": {
+          "authority": "issuer",
+          "sourceName": "Apple Investor Relations FAQ",
+          "sourceUrl": "https://investor.apple.com/investor-relations/faq/default.aspx",
+          "retrievedAt": "2026-08-08T00:00:00.000Z",
+          "verification": "verified",
+          "displayRights": "unknown"
+        },
+        "note": "Issuer-confirmed IPO date; exact first-trade time is not stated."
+      },
+      "timeKnown": false,
+      "scenarioCount": 12,
+      "limitations": [
+        "แหล่งทางการยืนยันวัน แต่ไม่ยืนยันเวลา first trade"
+      ]
+    },
+    "baziCompatibility": null,
+    "evidence": [
+      {
+        "id": "NASDAQ:AAPL:identity",
+        "datasetId": "curated-security-catalog",
+        "category": "identity",
+        "source": "stock-catalog",
+        "asOf": null,
+        "freshness": "unknown",
+        "license": "unknown"
+      },
+      {
+        "id": "NASDAQ:AAPL:business",
+        "datasetId": "curated-security-catalog",
+        "category": "business",
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "sourceRef": "https://finance.yahoo.com/quote/AAPL",
+        "asOf": null,
+        "freshness": "unknown",
+        "license": "unknown"
+      },
+      {
+        "id": "NASDAQ:AAPL:quote",
+        "datasetId": "yahoo-development-market",
+        "category": "market",
+        "source": "Yahoo development snapshot",
+        "asOf": "2026-08-07T05:28:17.566Z",
+        "freshness": "fresh",
+        "license": "development_only"
+      },
+      {
+        "id": "NASDAQ:AAPL:fundamentals",
+        "datasetId": "yahoo-development-market",
+        "category": "fundamental",
+        "source": "Yahoo development snapshot",
+        "asOf": "2026-08-08T10:21:55.371Z",
+        "freshness": "fresh",
+        "license": "development_only"
+      },
+      {
+        "id": "NASDAQ:AAPL:series",
+        "datasetId": "yahoo-development-market",
+        "category": "price_series",
+        "source": "yahoo-development-chart",
+        "asOf": "2026-08-07",
+        "freshness": "fresh",
+        "license": "development_only"
+      },
+      {
+        "id": "NASDAQ:AAPL:birth",
+        "datasetId": "official-security-events",
+        "category": "security_event",
+        "source": "Apple Investor Relations FAQ",
+        "sourceRef": "https://investor.apple.com/investor-relations/faq/default.aspx",
+        "asOf": "1980-12-12",
+        "freshness": "fresh",
+        "license": "unknown"
+      }
+    ],
+    "releasePolicy": {
+      "capability": "generic_screen",
+      "mode": "research_only",
+      "decision": "internal_only",
+      "publicReleaseAllowed": false,
+      "legalReviewRequired": true,
+      "controls": [
+        "แสดง source, asOf, freshness และข้อจำกัดของข้อมูล",
+        "ห้ามรับประกันผลตอบแทนหรืออ้างว่าสามารถหาจุดสูงสุดได้",
+        "ห้ามใช้ถ้อยคำสั่งซื้อ ขาย หรือถือหลักทรัพย์",
+        "ใช้เกณฑ์เดียวกันกับผู้ใช้ทุกคน และไม่ปรับอันดับจากดวงหรือพอร์ตส่วนตัว"
+      ],
+      "reason": "การจัดอันดับหรือให้คะแนนหลักทรัพย์อาจเข้าข่ายกิจกรรมที่ต้องกำกับ จึงเป็นงานภายในจนกว่าจะผ่าน legal review/operating model"
+    },
+    "productionDataAllowed": false,
+    "disclosure": "ข้อมูลนี้เป็นเครื่องมือวิจัยและการศึกษา ไม่ใช่คำแนะนำให้ซื้อ ขาย หรือถือหลักทรัพย์ ผลลัพธ์มีความไม่แน่นอนและต้องตรวจสอบกับแหล่งข้อมูลล่าสุด"
+  },
+  "decision": {
+    "schemaVersion": 2,
+    "protocolVersion": "decision-protocol-v2",
+    "securityId": "NASDAQ:AAPL",
+    "question": "หลักฐานปัจจุบันบอกอะไรเกี่ยวกับ AAPL และต้องทบทวนอะไรต่อ",
+    "status": "research",
+    "answer": "หลักฐานปัจจุบันของ AAPL รองรับการวิจัยเชิงลึกต่อ แต่ยังไม่ใช่ข้อสรุปสำหรับทำธุรกรรม",
+    "lenses": {
+      "market": {
+        "assessmentStatus": "deeper_research_candidate",
+        "summary": "คุณภาพและแนวโน้มบางส่วนผ่านเกณฑ์คัดกรองทั่วไป จึงต้องตรวจมูลค่า ความเสี่ยง และสมมติฐานต่อ",
+        "evidenceIds": [
+          "NASDAQ:AAPL:identity",
+          "NASDAQ:AAPL:business",
+          "NASDAQ:AAPL:quote",
+          "NASDAQ:AAPL:fundamentals",
+          "NASDAQ:AAPL:series",
+          "NASDAQ:AAPL:birth"
+        ]
+      },
+      "personal": {
+        "available": false,
+        "framework": null,
+        "summary": "ยังไม่ได้ใช้ข้อมูลส่วนบุคคลในการสะท้อนพฤติกรรมสำหรับ decision นี้",
+        "guardrails": [
+          "การไม่มี personal lens ไม่เปลี่ยนผลประเมินหลักฐานตลาด"
+        ],
+        "affectsMarketStatus": false
+      }
+    },
+    "claims": [
+      {
+        "id": "support_1_12b10c0b5a",
+        "stance": "supports",
+        "text": "ROE 148.8% อยู่ในระดับแข็งแรงตามเกณฑ์ทั่วไป",
+        "evidenceIds": [
+          "NASDAQ:AAPL:business",
+          "NASDAQ:AAPL:fundamentals"
+        ],
+        "derivedBy": "stock-research-v1"
+      },
+      {
+        "id": "support_2_388e560a60",
+        "stance": "supports",
+        "text": "อัตรากำไรสุทธิเป็นบวก 27.6%",
+        "evidenceIds": [
+          "NASDAQ:AAPL:business",
+          "NASDAQ:AAPL:fundamentals"
+        ],
+        "derivedBy": "stock-research-v1"
+      },
+      {
+        "id": "support_3_9a77a66d19",
+        "stance": "supports",
+        "text": "รายได้เติบโต 16.4%",
+        "evidenceIds": [
+          "NASDAQ:AAPL:business",
+          "NASDAQ:AAPL:fundamentals"
+        ],
+        "derivedBy": "stock-research-v1"
+      }
+    ],
+    "confidence": {
+      "score": 90,
+      "level": "high",
+      "reasons": [
+        "คะแนนคุณภาพข้อมูลตั้งต้น 100/100",
+        "ไม่ทราบความสดของหลักฐาน 2 รายการ"
+      ]
+    },
+    "unknowns": [],
+    "risks": [
+      {
+        "id": "data_1_54069882fa",
+        "label": "ยังประเมินความสดของข้อมูลจาก stock-catalog ไม่ได้",
+        "severity": "medium",
+        "lens": "data",
+        "basis": "system_validation",
+        "evidenceIds": [
+          "NASDAQ:AAPL:identity"
+        ]
+      },
+      {
+        "id": "data_2_a7b5fb8c49",
+        "label": "ยังประเมินความสดของข้อมูลจาก Yahoo Finance assetProfile (auto) — draft รอตรวจ ไม่ได้",
+        "severity": "medium",
+        "lens": "data",
+        "basis": "system_validation",
+        "evidenceIds": [
+          "NASDAQ:AAPL:business"
+        ]
+      }
+    ],
+    "changeConditions": [
+      {
+        "id": "change_material_update",
+        "direction": "review",
+        "description": "ทบทวนเมื่อผลประกอบการ มูลค่า ความเสี่ยง หรือเหตุการณ์สำคัญเปลี่ยน",
+        "evidenceNeeded": "งบ เหตุการณ์บริษัท และข้อมูลตลาดชุดใหม่จากแหล่งที่ตรวจสอบได้"
+      }
+    ],
+    "nextAction": {
+      "kind": "research",
+      "label": "สร้าง thesis, valuation range และเงื่อนไขที่ทำให้ thesis ใช้ไม่ได้",
+      "dueAt": null,
+      "trigger": "เมื่อมีงบ เหตุการณ์บริษัท หรือข้อมูลตลาดชุดใหม่"
+    },
+    "evidence": [
+      {
+        "id": "NASDAQ:AAPL:identity",
+        "datasetId": "curated-security-catalog",
+        "category": "identity",
+        "source": "stock-catalog",
+        "asOf": null,
+        "freshness": "unknown",
+        "license": "unknown",
+        "sourceRef": null
+      },
+      {
+        "id": "NASDAQ:AAPL:business",
+        "datasetId": "curated-security-catalog",
+        "category": "business",
+        "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
+        "sourceRef": "https://finance.yahoo.com/quote/AAPL",
+        "asOf": null,
+        "freshness": "unknown",
+        "license": "unknown"
+      },
+      {
+        "id": "NASDAQ:AAPL:quote",
+        "datasetId": "yahoo-development-market",
+        "category": "market",
+        "source": "Yahoo development snapshot",
+        "asOf": "2026-08-07T05:28:17.566Z",
+        "freshness": "fresh",
+        "license": "development_only",
+        "sourceRef": null
+      },
+      {
+        "id": "NASDAQ:AAPL:fundamentals",
+        "datasetId": "yahoo-development-market",
+        "category": "fundamental",
+        "source": "Yahoo development snapshot",
+        "asOf": "2026-08-08T10:21:55.371Z",
+        "freshness": "fresh",
+        "license": "development_only",
+        "sourceRef": null
+      },
+      {
+        "id": "NASDAQ:AAPL:series",
+        "datasetId": "yahoo-development-market",
+        "category": "price_series",
+        "source": "yahoo-development-chart",
+        "sourceRef": null,
+        "asOf": "2026-08-07",
+        "freshness": "fresh",
+        "license": "development_only"
+      },
+      {
+        "id": "NASDAQ:AAPL:birth",
+        "datasetId": "official-security-events",
+        "category": "security_event",
+        "source": "Apple Investor Relations FAQ",
+        "sourceRef": "https://investor.apple.com/investor-relations/faq/default.aspx",
+        "asOf": "1980-12-12",
+        "freshness": "fresh",
+        "license": "unknown"
+      }
+    ],
+    "provenance": {
+      "generatedAt": "2026-08-09T09:14:42.159Z",
+      "dataAsOf": "2026-08-08T10:21:55.371Z",
+      "versions": {
+        "decisionProtocol": "decision-protocol-v2",
+        "researchModel": "stock-research-v1",
+        "patternModel": "trend-observation-v1",
+        "personalLensModel": null
+      }
+    },
+    "release": {
+      "publicReleaseAllowed": false,
+      "blockingReasons": [
+        "capability ยังไม่ผ่าน operating-model/legal release gate",
+        "NASDAQ:AAPL:identity: use นี้ไม่อยู่ในสิทธิ์ที่อนุญาต",
+        "NASDAQ:AAPL:business: use นี้ไม่อยู่ในสิทธิ์ที่อนุญาต",
+        "NASDAQ:AAPL:quote: dataset นี้อนุญาตเฉพาะ development",
+        "NASDAQ:AAPL:fundamentals: dataset นี้อนุญาตเฉพาะ development",
+        "NASDAQ:AAPL:series: dataset นี้อนุญาตเฉพาะ development",
+        "NASDAQ:AAPL:birth: ยังไม่ผ่าน gate: source_attribution, legal_review"
+      ]
+    },
+    "disclosure": "ข้อมูลนี้เป็นเครื่องมือวิจัยและการศึกษา ไม่ใช่คำแนะนำให้ซื้อ ขาย หรือถือหลักทรัพย์ ผลลัพธ์มีความไม่แน่นอนและต้องตรวจสอบกับแหล่งข้อมูลล่าสุด",
+    "decisionId": "decision_e07d7acdc14de215526c4ae8",
+    "contentHash": "e07d7acdc14de215526c4ae88135e27b2a488908965695faa4671b2b1abcb850"
+  }
+}

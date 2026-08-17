@@ -108,7 +108,6 @@ export default function PersonalPage() {
   const elKey = (e: string) => ELMAP[e] ?? e;
   const pct = (v: number | null) => (v == null ? "-" : `${v >= 0 ? "+" : ""}${v}%`);
   const TIER_ICON: Record<string, string> = { gold: "🥇", silver: "🥈", bronze: "🥉", base: "📦" };
-  const TIER_COLOR: Record<string, string> = { gold: "#f5c542", silver: "#c0c8d4", bronze: "#d08a4e", base: "#9a937f" };
   // สรุปเทียร์รวมทุกหมวด (สำหรับ hero)
   const tierSummary = data
     ? data.categories.reduce<Record<string, number>>((acc, c) => {

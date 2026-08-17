@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Day-precision NSE listing evidence for current REIT/InvIT lines absent from the exchange's daily REITS_L.csv or INVITS_L.csv files.",
+  "records": [
+    {
+      "symbol": "BAGMANE",
+      "companyName": "Bagmane Prime Office REIT",
+      "series": "RR",
+      "listingDate": "2026-05-14",
+      "isin": "INE2OVN25015",
+      "sourceName": "NSE-hosted Bagmane Prime Office REIT financial results",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/BAGMANE_03062026123253_OutcomeofBoardMeeting.pdf"
+    },
+    {
+      "symbol": "KRT",
+      "companyName": "Knowledge Realty Trust",
+      "series": "RR",
+      "listingDate": "2025-08-18",
+      "isin": "INE1JAR25012",
+      "sourceName": "NSE-hosted Knowledge Realty Trust Annual Report 2025-26",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/KRT_17062026122333_Outcome_of_BM_17_June_2026_1.pdf"
+    },
+    {
+      "symbol": "NHIT",
+      "companyName": "National Highways Infra Trust",
+      "series": "IV",
+      "listingDate": "2021-11-10",
+      "isin": "INE0H7R23014",
+      "sourceName": "NSE-hosted National Highways Infra Trust FY2024-25 financial statements",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/NHIT_28052025202643_NHITOutcomeBMFSValuationUPSIPolicy.pdf"
+    }
+  ]
+}

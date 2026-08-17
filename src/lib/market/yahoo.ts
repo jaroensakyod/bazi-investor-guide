@@ -58,8 +58,9 @@ export function yahooTicker(ticker: string, market = ""): string {
   // หุ้น class (BF.B / BRK.B / GIB.A.TO): Yahoo ใช้ขีด (BF-B / GIB-A.TO)
   if (/^\w+\.\w+\.(TO|AX|VN|BK|NS|T|KS|SS|SZ|HK|TW|TWO|SI|JK|KL|PS)$/.test(raw)) {
     raw = raw.replace(".", "-");
-  } else if ((mkt.includes("NYSE") || mkt.includes("NASDAQ")) && /^\w+\.\w+$/.test(raw)) {
-    raw = raw.replace(".", "-");
+  } else if (mkt.includes("NYSE") || mkt.includes("NASDAQ")) {
+    // US share classes and preferred series: BRK.B -> BRK-B, BAC/PB -> BAC-PB.
+    raw = raw.replace(/[./]/g, "-");
   }
   if (raw.includes(".")) return raw; // มี suffix อยู่แล้ว
   if (mkt.includes("NYSE") || mkt.includes("NASDAQ") || mkt === "SP500" || mkt === "US") return raw;
@@ -107,6 +108,11 @@ async function fetchJson(url: string, cookie: string, retries = 4, onRateLimited
 /** ข้อมูลดิบจาก v7 quote — ฟิลด์ที่เราใช้ */
 export type YahooQuote = {
   symbol: string;
+  /** Provider metadata only: may be the beginning of Yahoo history, not the legal listing date. */
+  firstTradeDateMilliseconds?: number;
+  exchangeTimezoneName?: string;
+  exchange?: string;
+  fullExchangeName?: string;
   currency?: string;
   regularMarketPrice?: number;
   regularMarketChangePercent?: number;
@@ -115,7 +121,8 @@ export type YahooQuote = {
   marketCap?: number;
   trailingPE?: number;
   priceToBook?: number;
-  dividendYield?: number; // ทศนิยม (0.0123 = 1.23%)
+  /** Yahoo v7 quote returns percentage points (for example 2.62 means 2.62%). */
+  dividendYield?: number;
   fiftyTwoWeekHigh?: number;
   fiftyTwoWeekLow?: number;
 };
@@ -144,6 +151,8 @@ export async function fetchQuotes(
     const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(chunk.join(","))}&crumb=${encodeURIComponent(session.crumb)}`;
     const json = (await fetchJson(url, session.cookie, 4, () => {
       consecutive429 += 1;
+      // Intentional operator-facing circuit-breaker notice for long-running research fetches.
+      // eslint-disable-next-line no-console
       if (consecutive429 === 3) console.warn("⚠️ โดน 429 ติดกัน 3 ครั้ง — หยุดก่อน (circuit breaker) บันทึกของที่ได้แล้ว รันซ้ำทีหลัง");
     })) as { quoteResponse?: { result?: YahooQuote[] } } | null;
     const results = json?.quoteResponse?.result ?? [];

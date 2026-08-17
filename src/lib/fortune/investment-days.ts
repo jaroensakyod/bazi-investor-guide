@@ -13,7 +13,7 @@ import { buildAlmanacDay, checkHour } from "@/lib/bazi/almanac/almanac-engine";
 import { elementThOfStem, doElementsTh, type ElementTh } from "@/lib/bazi/constants/career-finance-table";
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
 import { resolveInvestElements, resolveInvestorPersona } from "@/lib/investor/investor-guide";
-import { getAllStocks } from "@/lib/investor/stock-database";
+import { getResearchableStocks } from "@/lib/investor/stock-database";
 import { allocatePortfolio } from "@/lib/assets/portfolio";
 import { loadSnapshot } from "@/lib/market/market-data";
 import { yahooTicker } from "@/lib/market/yahoo";
@@ -67,7 +67,7 @@ export function stocksForDay(state: CalculatedStateValue, date: string, limit = 
   const favor = favorElementsToday(state, date);
   if (favor.length === 0) return [];
   const snap = loadSnapshot();
-  const rows = getAllStocks()
+  const rows = getResearchableStocks()
     .filter((s) => favor.includes(s.primaryElement))
     .map((s) => {
       const md = snap?.quotes[yahooTicker(s.ticker, s.market) ?? ""];
@@ -85,7 +85,6 @@ export function monthInvestFit(state: CalculatedStateValue, year: number, month:
   const monthEl = elementThOfStem(d.monthPillar.stem);
   const yearEl = elementThOfStem(d.yearPillar.stem);
   const { invest, avoid } = resolveInvestElements(state);
-  const band = band3(resolveInvestorPersona(state).band);
   const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
   const days: Array<{ date: string; weekday: string; dayElement: ElementTh | null; fit: "good" | "avoid" | "asset" | "neutral" }> = [];
   for (let dd = 1; dd <= daysInMonth; dd += 1) {

@@ -6,7 +6,7 @@
  *   - ไม่เปลือง request · deterministic · เทสต์ง่าย
  *   - ข้อมูลสดพอ (fetch วันละ 1 รอบ)
  */
-import { getAllStocks, type StockEntry, type ThaiElement } from "../investor/stock-database";
+import { getResearchableStocks, type StockEntry, type ThaiElement } from "../investor/stock-database";
 import { loadSnapshot, type MarketSnapshot } from "./market-data";
 import { yahooTicker } from "./yahoo";
 
@@ -32,7 +32,7 @@ export function topMovers(snap: MarketSnapshot | null = loadSnapshot(), opts: Mo
   const { market, limit = 10, direction = "gainers" } = opts;
   if (!snap) return [];
   const rows: MoverRow[] = [];
-  for (const stock of getAllStocks()) {
+  for (const stock of getResearchableStocks()) {
     if (market && !matchMarket(stock, market)) continue;
     const q = findQuote(snap, stock);
     if (!q || typeof q.changePct !== "number" || typeof q.price !== "number") continue;

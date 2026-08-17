@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-10T10:09:11.309Z",
+  "thresholds": {
+    "fundamentalsRefreshDays": 120,
+    "eodRefreshDays": 7,
+    "patternMinimumBars": 252
+  },
+  "rightsPolicy": {
+    "internalCoverageIncludesDevelopmentData": true,
+    "commercialEligibleRequiresExplicitCommercialProvenance": true,
+    "legacyFundamentalsWithoutProvenance": "classified_as_yahoo_development_only"
+  },
+  "overall": {
+    "total": 6142,
+    "fundamentals": {
+      "usable": 1424,
+      "usablePct": 23.18,
+      "core": 1374,
+      "corePct": 22.37,
+      "fresh": 1424,
+      "freshPct": 23.18,
+      "commercialEligible": 0,
+      "commercialEligiblePct": 0
+    },
+    "eod": {
+      "available": 1359,
+      "availablePct": 22.13,
+      "fresh": 1355,
+      "freshPct": 22.06,
+      "patternReady": 1312,
+      "patternReadyPct": 21.36,
+      "commercialEligible": 0,
+      "commercialEligiblePct": 0,
+      "compressedBytes": 37041831
+    }
+  },
+  "byMarket": [
+    {
+      "market": "NYSE/NASDAQ",
+      "total": 1040,
+      "fundamentals": {
+        "usable": 1039,
+        "usablePct": 99.9,
+        "core": 993,
+        "corePct": 95.48,
+        "fresh": 1039,
+        "freshPct": 99.9,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 1040,
+        "availablePct": 100,
+        "fresh": 1036,
+        "freshPct": 99.62,
+        "patternReady": 996,
+        "patternReadyPct": 95.77,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 30703877
+      }
+    },
+    {
+      "market": "TSE",
+      "total": 411,
+      "fundamentals": {
+        "usable": 3,
+        "usablePct": 0.73,
+        "core": 3,
+        "corePct": 0.73,
+        "fresh": 3,
+        "freshPct": 0.73,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "TSX",
+      "total": 400,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "HOSE",
+      "total": 351,
+      "fundamentals": {
+        "usable": 43,
+        "usablePct": 12.25,
+        "core": 43,
+        "corePct": 12.25,
+        "fresh": 43,
+        "freshPct": 12.25,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "SSE",
+      "total": 324,
+      "fundamentals": {
+        "usable": 5,
+        "usablePct": 1.54,
+        "core": 5,
+        "corePct": 1.54,
+        "fresh": 5,
+        "freshPct": 1.54,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "SZSE",
+      "total": 308,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "NSE",
+      "total": 297,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "HKEX",
+      "total": 293,
+      "fundamentals": {
+        "usable": 1,
+        "usablePct": 0.34,
+        "core": 1,
+        "corePct": 0.34,
+        "fresh": 1,
+        "freshPct": 0.34,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "LSE",
+      "total": 275,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "SET",
+      "total": 251,
+      "fundamentals": {
+        "usable": 251,
+        "usablePct": 100,
+        "core": 249,
+        "corePct": 99.2,
+        "fresh": 251,
+        "freshPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 251,
+        "availablePct": 100,
+        "fresh": 251,
+        "freshPct": 100,
+        "patternReady": 248,
+        "patternReadyPct": 98.8,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 4265351
+      }
+    },
+    {
+      "market": "ASX",
+      "total": 247,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "XETR",
+      "total": 239,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "KRX",
+      "total": 234,
+      "fundamentals": {
+        "usable": 14,
+        "usablePct": 5.98,
+        "core": 14,
+        "corePct": 5.98,
+        "fresh": 14,
+        "freshPct": 5.98,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "TWSE",
+      "total": 188,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "IDX",
+      "total": 149,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "EPA",
+      "total": 127,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "BURSA",
+      "total": 117,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "SWX",
+      "total": 117,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "BOVESPA",
+      "total": 101,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "BIST",
+      "total": 100,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "SGX",
+      "total": 97,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "KSE",
+      "total": 93,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "BMV",
+      "total": 89,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "TADAWUL",
+      "total": 87,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "PSE",
+      "total": 85,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "JSE",
+      "total": 54,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "market": "NYSE",
+      "total": 35,
+      "fundamentals": {
+        "usable": 35,
+        "usablePct": 100,
+        "core": 33,
+        "corePct": 94.29,
+        "fresh": 35,
+        "freshPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 35,
+        "availablePct": 100,
+        "fresh": 35,
+        "freshPct": 100,
+        "patternReady": 35,
+        "patternReadyPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 1178557
+      }
+    },
+    {
+      "market": "NASDAQ",
+      "total": 19,
+      "fundamentals": {
+        "usable": 19,
+        "usablePct": 100,
+        "core": 19,
+        "corePct": 100,
+        "fresh": 19,
+        "freshPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 19,
+        "availablePct": 100,
+        "fresh": 19,
+        "freshPct": 100,
+        "patternReady": 19,
+        "patternReadyPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 631556
+      }
+    },
+    {
+      "market": "mai",
+      "total": 14,
+      "fundamentals": {
+        "usable": 14,
+        "usablePct": 100,
+        "core": 14,
+        "corePct": 100,
+        "fresh": 14,
+        "freshPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 14,
+        "availablePct": 100,
+        "fresh": 14,
+        "freshPct": 100,
+        "patternReady": 14,
+        "patternReadyPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 262490
+      }
+    }
+  ],
+  "byCountry": [
+    {
+      "country": "US",
+      "total": 1080,
+      "fundamentals": {
+        "usable": 1079,
+        "usablePct": 99.91,
+        "core": 1031,
+        "corePct": 95.46,
+        "fresh": 1079,
+        "freshPct": 99.91,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 1080,
+        "availablePct": 100,
+        "fresh": 1076,
+        "freshPct": 99.63,
+        "patternReady": 1036,
+        "patternReadyPct": 95.93,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 32087533
+      }
+    },
+    {
+      "country": "CN",
+      "total": 647,
+      "fundamentals": {
+        "usable": 20,
+        "usablePct": 3.09,
+        "core": 20,
+        "corePct": 3.09,
+        "fresh": 20,
+        "freshPct": 3.09,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 14,
+        "availablePct": 2.16,
+        "fresh": 14,
+        "freshPct": 2.16,
+        "patternReady": 14,
+        "patternReadyPct": 2.16,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 426457
+      }
+    },
+    {
+      "country": "JP",
+      "total": 411,
+      "fundamentals": {
+        "usable": 3,
+        "usablePct": 0.73,
+        "core": 3,
+        "corePct": 0.73,
+        "fresh": 3,
+        "freshPct": 0.73,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "CA",
+      "total": 400,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "VN",
+      "total": 351,
+      "fundamentals": {
+        "usable": 43,
+        "usablePct": 12.25,
+        "core": 43,
+        "corePct": 12.25,
+        "fresh": 43,
+        "freshPct": 12.25,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "IN",
+      "total": 297,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "HK",
+      "total": 292,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "GB",
+      "total": 275,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "TH",
+      "total": 265,
+      "fundamentals": {
+        "usable": 265,
+        "usablePct": 100,
+        "core": 263,
+        "corePct": 99.25,
+        "fresh": 265,
+        "freshPct": 100,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 265,
+        "availablePct": 100,
+        "fresh": 265,
+        "freshPct": 100,
+        "patternReady": 262,
+        "patternReadyPct": 98.87,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 4527841
+      }
+    },
+    {
+      "country": "AU",
+      "total": 247,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "DE",
+      "total": 239,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "KR",
+      "total": 234,
+      "fundamentals": {
+        "usable": 14,
+        "usablePct": 5.98,
+        "core": 14,
+        "corePct": 5.98,
+        "fresh": 14,
+        "freshPct": 5.98,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "TW",
+      "total": 188,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "ID",
+      "total": 149,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "FR",
+      "total": 127,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "CH",
+      "total": 117,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "MY",
+      "total": 117,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "BR",
+      "total": 101,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "TR",
+      "total": 100,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "SG",
+      "total": 97,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "PK",
+      "total": 93,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "MX",
+      "total": 89,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "SA",
+      "total": 87,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "PH",
+      "total": 85,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    },
+    {
+      "country": "ZA",
+      "total": 54,
+      "fundamentals": {
+        "usable": 0,
+        "usablePct": 0,
+        "core": 0,
+        "corePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0
+      },
+      "eod": {
+        "available": 0,
+        "availablePct": 0,
+        "fresh": 0,
+        "freshPct": 0,
+        "patternReady": 0,
+        "patternReadyPct": 0,
+        "commercialEligible": 0,
+        "commercialEligiblePct": 0,
+        "compressedBytes": 0
+      }
+    }
+  ]
+}

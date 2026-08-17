@@ -3,10 +3,9 @@
  * ใช้กับ GET /api/report/pdf — สร้าง .pdf จริง (ดาวน์โหลดได้)
  */
 import { existsSync } from "node:fs";
-import path from "node:path";
 import PDFDocument from "pdfkit";
 import type { CalculatedStateValue } from "../lib/bazi/schema-types";
-import { buildFullReport, type FullReport } from "../lib/report/full-report";
+import { buildFullReport } from "../lib/report/full-report";
 
 const FONT_CANDIDATES = [
   process.env.PDF_FONT,
@@ -23,8 +22,16 @@ const EL_COLOR: Record<string, string> = { ไม้: "#2e7d32", ไฟ: "#c6282
 
 /** ฟอนต์ Leelawadee ไม่มี glyph emoji/สัญลักษณ์ → กรองออกก่อนเขียน (รวม variation selector FE0F) */
 function clean(s: string): string {
-  return s
-    .replace(/[\u{1F000}-\u{1FFFF}\uFE00-\uFE0F\u2000-\u2BFF]/gu, "")
+  return [...s]
+    .filter((character) => {
+      const codePoint = character.codePointAt(0) ?? 0;
+      return !(
+        (codePoint >= 0x1f000 && codePoint <= 0x1ffff)
+        || (codePoint >= 0xfe00 && codePoint <= 0xfe0f)
+        || (codePoint >= 0x2000 && codePoint <= 0x2bff)
+      );
+    })
+    .join("")
     .replace(/\s+/g, " ")
     .trim();
 }

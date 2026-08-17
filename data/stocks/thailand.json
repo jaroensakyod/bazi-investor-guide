@@ -834,6 +834,14 @@
       "country": "TH",
       "market": "SET",
       "currency": "THB",
+      "securityStatus": "merged",
+      "successorTicker": "GULF",
+      "statusEffectiveDate": "2025-04-01",
+      "statusReason": "INTUCH สิ้นสภาพนิติบุคคลจากการควบรวมกับ GULFI และโอนไปยัง GULF ใหม่",
+      "statusEvidence": {
+        "source": "SET delisting announcement",
+        "url": "https://www.set.or.th/en/market/news-and-alert/newsdetails?id=95444200&symbol=INTUCH"
+      },
       "sector": "โทรคมนาคม",
       "business": "ถือหุ้นในธุรกิจโทรคมนาคม ดิจิทัล (บริษัทลูก: AIS, ITD)",
       "businessKeywords": [
@@ -2062,6 +2070,14 @@
       "country": "TH",
       "market": "SET",
       "currency": "THB",
+      "securityStatus": "renamed",
+      "successorTicker": "CPAXT",
+      "statusEffectiveDate": "2023-06-21",
+      "statusReason": "เปลี่ยนชื่อบริษัทและชื่อย่อหลักทรัพย์จาก MAKRO เป็น CPAXT",
+      "statusEvidence": {
+        "source": "SET symbol-change announcement",
+        "url": "https://www.set.or.th/en/market/news-and-alert/newsdetails?id=8216010&symbol=SET"
+      },
       "sector": "พาณิชย์",
       "business": "ค้าส่งสินค้าอุปโภคบริโภค แม็คโคร",
       "businessKeywords": [
@@ -2484,6 +2500,14 @@
       "country": "TH",
       "market": "SET",
       "currency": "THB",
+      "securityStatus": "merged",
+      "successorTicker": "BANPU",
+      "statusEffectiveDate": "2026-07-31",
+      "statusReason": "BPP ควบรวมกับ BANPU เดิมเป็น BANPU NewCo",
+      "statusEvidence": {
+        "source": "Banpu official amalgamation announcement",
+        "url": "https://www.banpu.com/news/banpu-sets-joint-shareholders-meeting-on-21-july-proceeding-with-banpu-bpp-amalgamation-into-new-company-under-the-name-banpu/"
+      },
       "sector": "พลังงาน",
       "business": "ผลิตไฟฟ้า พลังงานทดแทน",
       "businessKeywords": [
@@ -2775,14 +2799,22 @@
     },
     {
       "type": "stock",
-      "ticker": "ESSO",
-      "name": "เอสโซ่ (ไทย)",
-      "nameEn": "Esso Thailand",
+      "ticker": "BSRC",
+      "name": "บางจาก ศรีราชา",
+      "nameEn": "Bangchak Sriracha",
       "country": "TH",
       "market": "SET",
       "currency": "THB",
+      "securityStatus": "replaced",
+      "successorTicker": "BCP",
+      "statusEffectiveDate": "2025-12-12",
+      "statusReason": "BSRC ถูกเพิกถอนตามแผนปรับโครงสร้าง และผู้ถือหุ้นแลกเป็นหุ้นเพิ่มทุน BCP",
+      "statusEvidence": {
+        "source": "SET delisting and replacement announcement",
+        "url": "https://www.set.or.th/en/market/news-and-alert/newsdetails?id=100436400&symbol=SET"
+      },
       "sector": "พลังงาน",
-      "business": "โรงกลั่นน้ำมัน ปิโตรเลียม",
+      "business": "โรงกลั่นน้ำมันและการตลาดผลิตภัณฑ์ปิโตรเลียม",
       "businessKeywords": [
         "น้ำมัน",
         "กลั่น",
@@ -3373,6 +3405,14 @@
       "country": "TH",
       "market": "SET",
       "currency": "THB",
+      "securityStatus": "replaced",
+      "successorTicker": "STECON",
+      "statusEffectiveDate": "2024-10-29",
+      "statusReason": "STEC ถูกเพิกถอนและ STECON เข้าจดทะเบียนแทนจากการปรับโครงสร้างการถือหุ้น",
+      "statusEvidence": {
+        "source": "SET delisting and replacement announcement",
+        "url": "https://www.set.or.th/en/market/news-and-alert/newsdetails?id=91670200&symbol=STEC"
+      },
       "sector": "ก่อสร้าง",
       "business": "รับเหมาก่อสร้าง โครงสร้างพื้นฐาน",
       "businessKeywords": [
@@ -3955,7 +3995,7 @@
       "name": "บิวตี้ คอมมูนิตี้",
       "nameEn": "Beauty Community",
       "country": "TH",
-      "market": "mai",
+      "market": "SET",
       "currency": "THB",
       "sector": "ความงาม",
       "business": "ร้านค้าความงาม เครื่องสำอาง",
@@ -3975,12 +4015,12 @@
       "primaryElement": "ไฟ",
       "elementReason": "ความงาม/เครื่องสำอาง = ไฟ (career-business.txt §ธาตุไฟ)",
       "elementSource": "career-business.txt + decision-log.md",
-      "tier": "mai",
+      "tier": "mid",
       "isHighLiquidity": false,
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
+      "notes": "แก้ตลาดเป็น SET ตาม SET Factsheet วันที่ 2026-08-08",
       "description": "บริษัท บิวตี้ คอมมูนิตี้ จำกัด (มหาชน) (อังกฤษ: BEAUTY COMMUNITY PUBLIC COMPANY LIMITED ชื่อย่อ:BEAUTY) เดิมชื่อ บริษัท โมนาโพลิแตนท์ จำกัด จัดตั้งขึ้นเมื่อวันที่ 19 ตุลาคม 2543 เพื่อดำเนินธุรกิจจำหน่ายปลีกผลิตภัณฑ์เครื่องสำอางและบำรุงผิว ด้วยแนวความคิดที่ต้องการจะนำเสนอผลิตภัณฑ์เพื่อความงามอันหลากหลายที่ผ่านการคัดสรรอย่างดีทั้งในด้านวัตถุดิบและรูป…",
       "businessEvidence": {
         "source": "Wikipedia th intro (auto) — draft รอตรวจ",
@@ -4252,32 +4292,35 @@
       "name": "เอ็กซ์พีจี",
       "nameEn": "XPG",
       "country": "TH",
-      "market": "mai",
+      "market": "SET",
       "currency": "THB",
-      "sector": "พลังงาน",
-      "business": "พลังงานทดแทน พลังงานแสงอาทิตย์",
+      "sector": "เงินทุนและหลักทรัพย์",
+      "business": "การลงทุน ธุรกิจหลักทรัพย์ บริหารกองทุน สินทรัพย์ดิจิทัล และบริหารสินทรัพย์",
       "businessKeywords": [
-        "พลังงาน",
-        "โซลาร์"
+        "การลงทุน",
+        "หลักทรัพย์",
+        "บริหารกองทุน",
+        "บริหารสินทรัพย์"
       ],
       "growthStage": "small",
       "theme": [
-        "พลังงานสะอาด"
+        "การเงิน",
+        "สินทรัพย์ดิจิทัล"
       ],
       "risingStar": false,
       "listedDate": null,
       "elements": [
-        "ไฟ"
+        "น้ำ"
       ],
-      "primaryElement": "ไฟ",
-      "elementReason": "พลังงาน/โซลาร์ = ไฟ (career-business.txt §ธาตุไฟ)",
+      "primaryElement": "น้ำ",
+      "elementReason": "การลงทุน/หลักทรัพย์/บริหารสินทรัพย์ = น้ำ ตามกฎธุรกิจการเงิน",
       "elementSource": "career-business.txt + decision-log.md",
-      "tier": "mai",
+      "tier": "mid",
       "isHighLiquidity": false,
       "status": "draft",
       "reviewedBy": null,
       "reviewedAt": null,
-      "notes": "",
+      "notes": "แก้ข้อมูลเดิมที่จัด XPG เป็นพลังงานผิดประเภท; SET Factsheet ระบุธุรกิจการเงิน/เงินทุนและหลักทรัพย์",
       "description": "XSpring Capital Public Company Limited, together with its subsidiaries, engages in the investment and securities businesses in Thailand and internationally. It operates through five segments: Securities, Fund Asset Management, Digital Assets, Asset Management, and Investment and Other.",
       "businessEvidence": {
         "source": "Yahoo Finance assetProfile (auto) — draft รอตรวจ",
@@ -4459,51 +4502,20 @@
     },
     {
       "type": "stock",
-      "ticker": "MED",
-      "name": "เมดิเซ่ กรุ๊ป",
-      "nameEn": "Medeze Group",
-      "country": "TH",
-      "market": "mai",
-      "currency": "THB",
-      "sector": "การแพทย์/ความงาม",
-      "business": "สเต็มเซลล์ เวชศาสตร์ความงาม คลินิก",
-      "businessKeywords": [
-        "การแพทย์",
-        "ความงาม",
-        "สเต็มเซลล์"
-      ],
-      "growthStage": "mid",
-      "theme": [
-        "การแพทย์",
-        "ความงาม"
-      ],
-      "risingStar": false,
-      "listedDate": null,
-      "elements": [
-        "ไฟ",
-        "น้ำ"
-      ],
-      "primaryElement": "ไฟ",
-      "elementReason": "การแพทย์/ความงาม = ไฟ (career-business.txt §ธาตุไฟ)",
-      "elementSource": "career-business.txt + decision-log.md + Source4 §5",
-      "tier": "mai",
-      "isHighLiquidity": false,
-      "status": "draft",
-      "reviewedBy": null,
-      "reviewedAt": null,
-      "notes": "",
-      "description": "",
-      "businessEvidence": null,
-      "riskTier": "risky"
-    },
-    {
-      "type": "stock",
       "ticker": "TICON",
       "name": "ไทคอน",
       "nameEn": "Ticon Industrial Connection",
       "country": "TH",
       "market": "SET",
       "currency": "THB",
+      "securityStatus": "renamed",
+      "successorTicker": "FPT",
+      "statusEffectiveDate": "2019-01-31",
+      "statusReason": "เปลี่ยนชื่อบริษัทและชื่อย่อหลักทรัพย์จาก TICON เป็น FPT",
+      "statusEvidence": {
+        "source": "Frasers Property (Thailand) issuer filing",
+        "url": "https://fpt.listedcompany.com/misc/AR/20201214-fpt-ar2020-en.pdf"
+      },
       "sector": "นิคมอุตสาหกรรม",
       "business": "โรงงาน/คลังสินค้าให้เช่า นิคมอุตสาหกรรม",
       "businessKeywords": [

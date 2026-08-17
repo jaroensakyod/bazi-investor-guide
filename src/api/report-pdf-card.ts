@@ -29,8 +29,16 @@ const C = {
 const EL: Record<string, string> = { ไม้: "#2e7d32", ไฟ: "#c62828", ดิน: "#8d6e63", ทอง: "#b8860b", น้ำ: "#1565c0" };
 
 function clean(s: string): string {
-  return s
-    .replace(/[\u{1F000}-\u{1FFFF}\uFE00-\uFE0F\u2000-\u2BFF]/gu, "")
+  return [...s]
+    .filter((character) => {
+      const codePoint = character.codePointAt(0) ?? 0;
+      return !(
+        (codePoint >= 0x1f000 && codePoint <= 0x1ffff)
+        || (codePoint >= 0xfe00 && codePoint <= 0xfe0f)
+        || (codePoint >= 0x2000 && codePoint <= 0x2bff)
+      );
+    })
+    .join("")
     .replace(/\s+/g, " ")
     .trim();
 }

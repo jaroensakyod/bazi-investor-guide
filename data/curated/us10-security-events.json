@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-08T00:00:00.000Z",
+  "reviewPolicy": "Issuer/issuer-filing evidence only; IPO dates that do not explicitly say trading began are stored as exchange_admission, never as an exact first trade time.",
+  "events": [
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:AAPL",
+      "kind": "incorporation",
+      "localDate": "1977-01-03",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/Los_Angeles",
+      "venueCity": "Cupertino",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Apple Investor Relations FAQ",
+        "sourceUrl": "https://investor.apple.com/investor-relations/faq/default.aspx",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Apple states that it was incorporated in California on this date. This is company context, not the Nasdaq security birth."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:AAPL",
+      "kind": "exchange_admission",
+      "localDate": "1980-12-12",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Apple Investor Relations FAQ",
+        "sourceUrl": "https://investor.apple.com/investor-relations/faq/default.aspx",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Issuer-confirmed IPO date; exact first-trade time is not stated."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:MSFT",
+      "kind": "incorporation",
+      "localDate": "1981-06-25",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/Los_Angeles",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Microsoft Investor Relations FAQ",
+        "sourceUrl": "https://www.microsoft.com/en-us/investor/faq",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Original Washington incorporation; Microsoft later reincorporated in Delaware and then Washington."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:MSFT",
+      "kind": "exchange_admission",
+      "localDate": "1986-03-13",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Microsoft Investor Relations FAQ",
+        "sourceUrl": "https://www.microsoft.com/en-us/investor/faq",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Issuer-confirmed IPO date; exact first-trade time is not stated."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:NVDA",
+      "kind": "exchange_admission",
+      "localDate": "1999-01-22",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "NVIDIA Investor FAQs",
+        "sourceUrl": "https://investor.nvidia.com/investor-resources/faqs/default.aspx",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "NVIDIA states that it went public on this date; exact first-trade time is not stated."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:AMZN",
+      "kind": "exchange_admission",
+      "localDate": "1997-05-15",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Amazon Investor Relations FAQ",
+        "sourceUrl": "https://ir.aboutamazon.com/faqs/default.aspx/1000/",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Amazon states that it went public on this date; exact first-trade time is not stated."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:GOOGL",
+      "kind": "exchange_admission",
+      "localDate": "2004-08-19",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer_filing",
+        "sourceName": "Alphabet 2019 Annual Report",
+        "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2019_alphabet_annual_report.pdf",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Annual report says the listed class has been listed on Nasdaq since this date and had no prior public market."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:META",
+      "kind": "first_trading_day",
+      "localDate": "2012-05-18",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer_filing",
+        "sourceName": "Facebook 2014 Annual Report",
+        "sourceUrl": "https://investor.atmeta.com/files/doc_financials/annual_reports/FB2014AR.pdf",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Annual report identifies this as the date Class A common stock commenced trading; ticker later changed from FB to META."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:TSLA",
+      "kind": "first_trading_day",
+      "localDate": "2010-06-29",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer_filing",
+        "sourceName": "Tesla 2011 Form 10-K",
+        "sourceUrl": "https://ir.tesla.com/_flysystem/s3/sec/000119312512081990/d279413d10k.html",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Form 10-K states that Tesla common stock began trading on Nasdaq on this date."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NASDAQ:NFLX",
+      "kind": "first_trading_day",
+      "localDate": "2002-05-23",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NASDAQ",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Netflix IPO announcement",
+        "sourceUrl": "https://ir.netflix.net/investor-news-and-events/financial-releases/press-release-details/2002/Netflix-Announces-Initial-Public-Offering/default.aspx",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Issuer announcement states that NFLX would begin quotation on Nasdaq on this date."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NYSE:BABA",
+      "kind": "exchange_admission",
+      "localDate": "2014-09-19",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NYSE",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Alibaba Group Investor FAQ",
+        "sourceUrl": "https://www.alibabagroup.com/en-US/faqs-investor-information",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Issuer states that the US ADS was listed on NYSE on this date; HKEX:9988 is a separate security event."
+    },
+    {
+      "schemaVersion": 1,
+      "securityId": "NYSE:V",
+      "kind": "first_trading_day",
+      "localDate": "2008-03-19",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "America/New_York",
+      "exchange": "NYSE",
+      "venueCity": "New York",
+      "venueCountry": "US",
+      "evidence": {
+        "authority": "issuer",
+        "sourceName": "Visa first day of trading announcement",
+        "sourceUrl": "https://investor.visa.com/news/news-details/2008/Visa-Hosts-Students-from-Brooklyns-Kappa-V-School-at-New-York-Stock-Exchange-as-Part-of-First-Day-of-Trading/default.aspx",
+        "retrievedAt": "2026-08-08T00:00:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "Issuer announcement explicitly identifies this as Visa's first day of trading on NYSE."
+    }
+  ]
+}
+

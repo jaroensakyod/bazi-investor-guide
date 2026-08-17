@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "vitest";
-import { t, dictionaryCompleteness, LOCALES, type Locale } from "../src/lib/i18n/dictionary";
+import { t, dictionaryCompleteness, LOCALES } from "../src/lib/i18n/dictionary";
 import { calculateBaziChart } from "../src/lib/bazi/symbolic-engine";
 import { createInMemoryKnowledgeRepository } from "../src/lib/bazi/in-memory-repository";
 import { fallbackAnswer } from "../src/lib/chat/assistant";

@@ -1,0 +1,1709 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-08-09T02:23:36.493Z",
+  "retrievedAt": "2026-08-09T02:23:51.509Z",
+  "updatedAt": "2026-08-09T02:23:51.980Z",
+  "sourceRowCount": 3497,
+  "sourcePolicy": {
+    "authority": "exchange",
+    "sourceName": "B3 Listed Companies",
+    "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/?language=en-us",
+    "verification": "verified",
+    "displayRights": "unknown",
+    "commercialUse": "BLOCKED_PENDING_B3_TERMS_AND_DATA_LICENSE_REVIEW",
+    "issuerLevelDate": true,
+    "exactSecurityCodeConfirmedByGetDetail": true,
+    "oddLotCodesExcluded": true,
+    "rawJsonStored": false,
+    "exactFirstTradeTimeAvailable": false
+  },
+  "summary": {
+    "catalog": 174,
+    "oddLotAliasesExcluded": 77,
+    "issuerTargets": 80,
+    "matchedIssuerRows": 80,
+    "unmatchedIssuerRows": 0,
+    "ambiguousIssuerRows": 0,
+    "invalidIssuerRows": 0,
+    "fetchError": 0,
+    "confirmedCatalogCodes": 97,
+    "listingDates": 80,
+    "quotationDatesContextOnly": 80
+  },
+  "records": [
+    {
+      "issuingCompany": "ABEV",
+      "catalogTickers": [
+        "ABEV3"
+      ],
+      "status": "matched",
+      "codeCvm": "23264",
+      "companyName": "AMBEV S.A.",
+      "tradingName": "AMBEV S/A",
+      "listingDate": "2013-10-31",
+      "quotationDate": "2013-11-11",
+      "codes": [
+        "ABEV3"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/23264/ABEV/overview?language=en-us",
+      "sourceHash": "51f2a14adf3a0ce132a199b35a08d7f3470d613ed026a470fbfb2207f7cfcc7a",
+      "retrievedAt": "2026-08-09T02:23:42.048Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ALOS",
+      "catalogTickers": [
+        "ALOS3"
+      ],
+      "status": "matched",
+      "codeCvm": "22357",
+      "companyName": "ALLOS S.A",
+      "tradingName": "ALLOS",
+      "listingDate": "2011-02-01",
+      "quotationDate": "2011-02-03",
+      "codes": [
+        "ALOS3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/22357/ALOS/overview?language=en-us",
+      "sourceHash": "e1c40c31fbc8d1f7e0f1c3e79d3488298dad5dc1484a1701509bd81deec6e632",
+      "retrievedAt": "2026-08-09T02:23:42.050Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ALPA",
+      "catalogTickers": [
+        "ALPA3"
+      ],
+      "status": "matched",
+      "codeCvm": "10456",
+      "companyName": "ALPARGATAS S.A.",
+      "tradingName": "ALPARGATAS",
+      "listingDate": "1913-04-11",
+      "quotationDate": "1977-07-20",
+      "codes": [
+        "ALPA3",
+        "ALPA4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/10456/ALPA/overview?language=en-us",
+      "sourceHash": "b56da3d01f6d0a96232176bb54d2ad96edc21cd14d246223a87a8d2af12779d6",
+      "retrievedAt": "2026-08-09T02:23:42.051Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ALUP",
+      "catalogTickers": [
+        "ALUP3"
+      ],
+      "status": "matched",
+      "codeCvm": "21490",
+      "companyName": "ALUPAR INVESTIMENTO S/A",
+      "tradingName": "ALUPAR",
+      "listingDate": "2013-04-02",
+      "quotationDate": "2013-04-24",
+      "codes": [
+        "ALUP11",
+        "ALUP3",
+        "ALUP4"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/21490/ALUP/overview?language=en-us",
+      "sourceHash": "562f71437c39606ea862497b40444c1fea79ec805f02dad0f15fe7172f1da03b",
+      "retrievedAt": "2026-08-09T02:23:42.051Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ASAI",
+      "catalogTickers": [
+        "ASAI3"
+      ],
+      "status": "matched",
+      "codeCvm": "25372",
+      "companyName": "SENDAS DISTRIBUIDORA S.A.",
+      "tradingName": "ASSAI",
+      "listingDate": "2021-02-10",
+      "quotationDate": "2021-03-01",
+      "codes": [
+        "ASAI3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25372/ASAI/overview?language=en-us",
+      "sourceHash": "0aa13a1e3c6f499ca959c9aca11287c35abcd3347d32208dc424ec92f8a002a9",
+      "retrievedAt": "2026-08-09T02:23:42.504Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "AURE",
+      "catalogTickers": [
+        "AURE3"
+      ],
+      "status": "matched",
+      "codeCvm": "26620",
+      "companyName": "AUREN ENERGIA S.A.",
+      "tradingName": "AUREN",
+      "listingDate": "2022-03-25",
+      "quotationDate": "2022-03-28",
+      "codes": [
+        "AURE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/26620/AURE/overview?language=en-us",
+      "sourceHash": "c5991409aa205e3f1c04c9addd67b3e97f2bd3c6b611e351f54a08bc824f0999",
+      "retrievedAt": "2026-08-09T02:23:42.506Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "AXIA",
+      "catalogTickers": [
+        "AXIA3",
+        "AXIA7"
+      ],
+      "status": "matched",
+      "codeCvm": "2437",
+      "companyName": "AXIA ENERGIA S.A.",
+      "tradingName": "AXIA ENERGIA",
+      "listingDate": "1971-09-07",
+      "quotationDate": "1971-09-07",
+      "codes": [
+        "AXIA3",
+        "AXIA7",
+        "AXIA98",
+        "AXIA99"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/2437/AXIA/overview?language=en-us",
+      "sourceHash": "b0cc65c0cbccbf19b4cad205071b276d44bb72cd03d23db4669dcfd69fa7185e",
+      "retrievedAt": "2026-08-09T02:23:42.507Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "AZUL",
+      "catalogTickers": [
+        "AZUL3"
+      ],
+      "status": "matched",
+      "codeCvm": "24112",
+      "companyName": "AZUL S.A.",
+      "tradingName": "AZUL",
+      "listingDate": "2017-04-07",
+      "quotationDate": "2017-04-11",
+      "codes": [
+        "AZUL19",
+        "AZUL3",
+        "AZUL97",
+        "AZUL98",
+        "AZUL99"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/24112/AZUL/overview?language=en-us",
+      "sourceHash": "5a83cf6c7f26cc8d8e1f56ef1ff362fd95adc3a4de3db0bfa6f4a914131c19aa",
+      "retrievedAt": "2026-08-09T02:23:42.584Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "B3SA",
+      "catalogTickers": [
+        "B3SA3"
+      ],
+      "status": "matched",
+      "codeCvm": "21610",
+      "companyName": "B3 S.A. - BRASIL. BOLSA. BALCÃO",
+      "tradingName": "B3",
+      "listingDate": "2008-08-11",
+      "quotationDate": "2008-08-20",
+      "codes": [
+        "B3SA3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/21610/B3SA/overview?language=en-us",
+      "sourceHash": "4d5051a2ce7382e82eae3ce8bfc42c88e45cf7ca9100a07811ad0c23b3120cd6",
+      "retrievedAt": "2026-08-09T02:23:42.963Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BBAS",
+      "catalogTickers": [
+        "BBAS3"
+      ],
+      "status": "matched",
+      "codeCvm": "1023",
+      "companyName": "BCO BRASIL S.A.",
+      "tradingName": "BRASIL",
+      "listingDate": "1921-06-18",
+      "quotationDate": "1977-07-20",
+      "codes": [
+        "BBAS11",
+        "BBAS12",
+        "BBAS3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/1023/BBAS/overview?language=en-us",
+      "sourceHash": "5747437c2a86ea6245435ad769bb8ec2289b0b5c9a0f0afca355eb34a0d56336",
+      "retrievedAt": "2026-08-09T02:23:42.965Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BBDC",
+      "catalogTickers": [
+        "BBDC3",
+        "BBDC4"
+      ],
+      "status": "matched",
+      "codeCvm": "906",
+      "companyName": "BCO BRADESCO S.A.",
+      "tradingName": "BRADESCO",
+      "listingDate": "1946-11-26",
+      "quotationDate": "1946-11-26",
+      "codes": [
+        "BBDC1",
+        "BBDC2",
+        "BBDC3",
+        "BBDC4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/906/BBDC/overview?language=en-us",
+      "sourceHash": "888d54ca798e5a105fe094ba167bcf5991e8ba52aaeda72ff8523d02d98bd788",
+      "retrievedAt": "2026-08-09T02:23:43.041Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BBSE",
+      "catalogTickers": [
+        "BBSE3"
+      ],
+      "status": "matched",
+      "codeCvm": "23159",
+      "companyName": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
+      "tradingName": "BBSEGURIDADE",
+      "listingDate": "2013-04-25",
+      "quotationDate": "2013-04-29",
+      "codes": [
+        "BBSE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/23159/BBSE/overview?language=en-us",
+      "sourceHash": "d6bd65a8095795fe6446d7b59823f85365f59f47c3cc1023cb08c21c0b14b0ff",
+      "retrievedAt": "2026-08-09T02:23:43.042Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BNBR",
+      "catalogTickers": [
+        "BNBR3"
+      ],
+      "status": "matched",
+      "codeCvm": "1228",
+      "companyName": "BCO NORDESTE DO BRASIL S.A.",
+      "tradingName": "NORD BRASIL",
+      "listingDate": "1968-05-02",
+      "quotationDate": "1968-05-02",
+      "codes": [
+        "BNBR3"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/1228/BNBR/overview?language=en-us",
+      "sourceHash": "9f841cd0c754548bb282a3da758c03e94ffe2535371f367d022fa379ecccf231",
+      "retrievedAt": "2026-08-09T02:23:43.406Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BPAC",
+      "catalogTickers": [
+        "BPAC3",
+        "BPAC5"
+      ],
+      "status": "matched",
+      "codeCvm": "22616",
+      "companyName": "BCO BTG PACTUAL S.A.",
+      "tradingName": "BTGP BANCO",
+      "listingDate": "2011-11-10",
+      "quotationDate": "2012-04-26",
+      "codes": [
+        "BPAC11",
+        "BPAC3",
+        "BPAC5"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/22616/BPAC/overview?language=en-us",
+      "sourceHash": "1f0f0f55671171c36fa443ac2f8b88956fa475bad0041f091bed247a7b002f62",
+      "retrievedAt": "2026-08-09T02:23:43.422Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BRAP",
+      "catalogTickers": [
+        "BRAP3"
+      ],
+      "status": "matched",
+      "codeCvm": "18724",
+      "companyName": "BRADESPAR S.A.",
+      "tradingName": "BRADESPAR",
+      "listingDate": "2000-08-07",
+      "quotationDate": "2000-08-10",
+      "codes": [
+        "BRAP3",
+        "BRAP4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18724/BRAP/overview?language=en-us",
+      "sourceHash": "97664c0bc7717785b72716c3d802fb7ad2d546d2ba5e83c51b4d280d11f6a352",
+      "retrievedAt": "2026-08-09T02:23:43.502Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "BRAV",
+      "catalogTickers": [
+        "BRAV3"
+      ],
+      "status": "matched",
+      "codeCvm": "25291",
+      "companyName": "BRAVA ENERGIA S.A.",
+      "tradingName": "BRAVA",
+      "listingDate": "2020-11-09",
+      "quotationDate": "2020-11-12",
+      "codes": [
+        "BRAV3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25291/BRAV/overview?language=en-us",
+      "sourceHash": "4f3266ed6714e76df14d28c19f41802d55e5dee831a7b5a37aabb814543aa47a",
+      "retrievedAt": "2026-08-09T02:23:43.518Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CBAV",
+      "catalogTickers": [
+        "CBAV3"
+      ],
+      "status": "matched",
+      "codeCvm": "25984",
+      "companyName": "COMPANHIA BRASILEIRA DE ALUMÍNIO",
+      "tradingName": "CBA",
+      "listingDate": "2021-07-13",
+      "quotationDate": "2021-07-15",
+      "codes": [
+        "CBAV3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25984/CBAV/overview?language=en-us",
+      "sourceHash": "a5d1f1758d392e954b569a9b5031bb76778163afe585c85860759395eb1a8a6f",
+      "retrievedAt": "2026-08-09T02:23:43.864Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CEEB",
+      "catalogTickers": [
+        "CEEB3"
+      ],
+      "status": "matched",
+      "codeCvm": "14524",
+      "companyName": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
+      "tradingName": "COELBA",
+      "listingDate": "1994-07-28",
+      "quotationDate": "1995-05-23",
+      "codes": [
+        "CEEB3",
+        "CEEB5",
+        "CEEB6"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/14524/CEEB/overview?language=en-us",
+      "sourceHash": "a46e241e0438c94b8c98f4b03b3d52fe535dca1441c533f64d3327fe1afb0f68",
+      "retrievedAt": "2026-08-09T02:23:43.880Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CGAS",
+      "catalogTickers": [
+        "CGAS3",
+        "CGAS5"
+      ],
+      "status": "matched",
+      "codeCvm": "15636",
+      "companyName": "CIA GAS DE SAO PAULO - COMGAS",
+      "tradingName": "COMGAS",
+      "listingDate": "1997-08-27",
+      "quotationDate": "1997-09-11",
+      "codes": [
+        "CGAS3",
+        "CGAS5"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/15636/CGAS/overview?language=en-us",
+      "sourceHash": "ed1e8706b88c4ce28700530de2904d606268e6c418c3b45bbfa818d207daf2a6",
+      "retrievedAt": "2026-08-09T02:23:43.956Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CMIG",
+      "catalogTickers": [
+        "CMIG3",
+        "CMIG4"
+      ],
+      "status": "matched",
+      "codeCvm": "2453",
+      "companyName": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+      "tradingName": "CEMIG",
+      "listingDate": "1972-01-14",
+      "quotationDate": "1972-01-14",
+      "codes": [
+        "CMIG3",
+        "CMIG4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/2453/CMIG/overview?language=en-us",
+      "sourceHash": "2ddf82e6db60214a1539b3f9485aa3cdfdeef598b2bdeddb751fa3efb74a6bf0",
+      "retrievedAt": "2026-08-09T02:23:44.070Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CMIN",
+      "catalogTickers": [
+        "CMIN3"
+      ],
+      "status": "matched",
+      "codeCvm": "25585",
+      "companyName": "CSN MINERAÇÃO S.A.",
+      "tradingName": "CSNMINERACAO",
+      "listingDate": "2021-02-12",
+      "quotationDate": "2021-02-18",
+      "codes": [
+        "CMIN3"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25585/CMIN/overview?language=en-us",
+      "sourceHash": "65672e064b0648e190925985800972e86d688f5baa010239bb137a041d29c9e3",
+      "retrievedAt": "2026-08-09T02:23:44.307Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CPFE",
+      "catalogTickers": [
+        "CPFE3"
+      ],
+      "status": "matched",
+      "codeCvm": "18660",
+      "companyName": "CPFL ENERGIA S.A.",
+      "tradingName": "CPFL ENERGIA",
+      "listingDate": "2000-05-18",
+      "quotationDate": "2003-06-02",
+      "codes": [
+        "CPFE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18660/CPFE/overview?language=en-us",
+      "sourceHash": "22ac75770bc988295852faaf14636582d54f71879b845e2ca163b639f5e16125",
+      "retrievedAt": "2026-08-09T02:23:44.402Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CPLE",
+      "catalogTickers": [
+        "CPLE3"
+      ],
+      "status": "matched",
+      "codeCvm": "14311",
+      "companyName": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "tradingName": "COPEL",
+      "listingDate": "1994-04-04",
+      "quotationDate": "1994-04-12",
+      "codes": [
+        "CPLE3",
+        "CPLE99"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/14311/CPLE/overview?language=en-us",
+      "sourceHash": "6be4f0fa9810571d6ce0fe68a3c675288aaff3aa2cd18d363cc438967b95bc56",
+      "retrievedAt": "2026-08-09T02:23:44.415Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CSAN",
+      "catalogTickers": [
+        "CSAN3"
+      ],
+      "status": "matched",
+      "codeCvm": "19836",
+      "companyName": "COSAN S.A.",
+      "tradingName": "COSAN",
+      "listingDate": "2005-10-26",
+      "quotationDate": "2005-11-18",
+      "codes": [
+        "CSAN3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/19836/CSAN/overview?language=en-us",
+      "sourceHash": "e98e48c6a29527377c5320144cafac835d0677c70dd0142d2ac82ec110b3e1ea",
+      "retrievedAt": "2026-08-09T02:23:44.528Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CSMG",
+      "catalogTickers": [
+        "CSMG3"
+      ],
+      "status": "matched",
+      "codeCvm": "19445",
+      "companyName": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+      "tradingName": "COPASA",
+      "listingDate": "2006-02-06",
+      "quotationDate": "2006-02-08",
+      "codes": [
+        "CSMG3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/19445/CSMG/overview?language=en-us",
+      "sourceHash": "2911eab160d344b06ca6457bc8f96b5c94e089f6881cb7ca049b1e013a20a7f8",
+      "retrievedAt": "2026-08-09T02:23:44.755Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CURY",
+      "catalogTickers": [
+        "CURY3"
+      ],
+      "status": "matched",
+      "codeCvm": "25100",
+      "companyName": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+      "tradingName": "CURY S/A",
+      "listingDate": "2020-09-17",
+      "quotationDate": "2020-09-21",
+      "codes": [
+        "CURY3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25100/CURY/overview?language=en-us",
+      "sourceHash": "a49f6fdcb85d303e9b1c42e1275497fbdb5006bd1720a55780cf7e8b404bf1bd",
+      "retrievedAt": "2026-08-09T02:23:44.859Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CXSE",
+      "catalogTickers": [
+        "CXSE3"
+      ],
+      "status": "matched",
+      "codeCvm": "23795",
+      "companyName": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
+      "tradingName": "CAIXA SEGURI",
+      "listingDate": "2021-04-28",
+      "quotationDate": "2021-04-29",
+      "codes": [
+        "CXSE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/23795/CXSE/overview?language=en-us",
+      "sourceHash": "663b5303b27faa7308e07b1af7d393880cd6e2a9c1ea0343cb87acdc60c74b11",
+      "retrievedAt": "2026-08-09T02:23:44.869Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "CYRE",
+      "catalogTickers": [
+        "CYRE3"
+      ],
+      "status": "matched",
+      "codeCvm": "14460",
+      "companyName": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+      "tradingName": "CYRELA REALT",
+      "listingDate": "1994-07-07",
+      "quotationDate": "1994-07-18",
+      "codes": [
+        "CYRE3",
+        "CYRE4",
+        "CYRE99"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/14460/CYRE/overview?language=en-us",
+      "sourceHash": "b666a986efc70a62725de3a27e6fe2879103f5c5f31a3e129f8e2991e5499da3",
+      "retrievedAt": "2026-08-09T02:23:44.985Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "EGIE",
+      "catalogTickers": [
+        "EGIE3"
+      ],
+      "status": "matched",
+      "codeCvm": "17329",
+      "companyName": "ENGIE BRASIL ENERGIA S.A.",
+      "tradingName": "ENGIE BRASIL",
+      "listingDate": "1998-05-28",
+      "quotationDate": "2002-03-01",
+      "codes": [
+        "EGIE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/17329/EGIE/overview?language=en-us",
+      "sourceHash": "d770ef6a445a39bbd5677bdac13773444d95a685e13959d4843cc0fff24fda93",
+      "retrievedAt": "2026-08-09T02:23:45.204Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "EMBJ",
+      "catalogTickers": [
+        "EMBJ3"
+      ],
+      "status": "matched",
+      "codeCvm": "20087",
+      "companyName": "EMBRAER S.A.",
+      "tradingName": "EMBRAER",
+      "listingDate": "2006-05-23",
+      "quotationDate": "2006-06-05",
+      "codes": [
+        "EMBJ3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20087/EMBJ/overview?language=en-us",
+      "sourceHash": "0c75cd7e15cd451043a89e2ab382c93217e95582a33eb56bc37439fae82472cd",
+      "retrievedAt": "2026-08-09T02:23:45.317Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ENEV",
+      "catalogTickers": [
+        "ENEV3"
+      ],
+      "status": "matched",
+      "codeCvm": "21237",
+      "companyName": "ENEVA S.A",
+      "tradingName": "ENEVA",
+      "listingDate": "2007-12-07",
+      "quotationDate": "2007-12-14",
+      "codes": [
+        "ENEV3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/21237/ENEV/overview?language=en-us",
+      "sourceHash": "631f8dea00c355017ea8590c013838390873fc578abb4512382767a06e9e13b4",
+      "retrievedAt": "2026-08-09T02:23:45.319Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ENGI",
+      "catalogTickers": [
+        "ENGI3",
+        "ENGI4"
+      ],
+      "status": "matched",
+      "codeCvm": "15253",
+      "companyName": "ENERGISA S.A.",
+      "tradingName": "ENERGISA",
+      "listingDate": "2007-03-02",
+      "quotationDate": "2000-12-01",
+      "codes": [
+        "ENGI11",
+        "ENGI12",
+        "ENGI3",
+        "ENGI4"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/15253/ENGI/overview?language=en-us",
+      "sourceHash": "6350ed1a51fe7f05bf31320b5b7e56d771fc6719ad936ad38db28a7bcfa76171",
+      "retrievedAt": "2026-08-09T02:23:45.427Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ENMT",
+      "catalogTickers": [
+        "ENMT3"
+      ],
+      "status": "matched",
+      "codeCvm": "14605",
+      "companyName": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
+      "tradingName": "ENERGISA MT",
+      "listingDate": "1994-10-25",
+      "quotationDate": "1995-06-14",
+      "codes": [
+        "ENMT3",
+        "ENMT4"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/14605/ENMT/overview?language=en-us",
+      "sourceHash": "4bec39bb984e2ffa3bebdcdf193f12e99ebabbacb393cf42d8b2cf6274bf6e15",
+      "retrievedAt": "2026-08-09T02:23:45.646Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "EQPA",
+      "catalogTickers": [
+        "EQPA3"
+      ],
+      "status": "matched",
+      "codeCvm": "18309",
+      "companyName": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
+      "tradingName": "EQTL PARA",
+      "listingDate": "1999-06-14",
+      "quotationDate": "1999-07-13",
+      "codes": [
+        "EQPA3",
+        "EQPA5",
+        "EQPA6",
+        "EQPA7"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18309/EQPA/overview?language=en-us",
+      "sourceHash": "674faee20d3cf3e42eafaadb3f427f174da05b091d5c178b12c2c6fcec4da290",
+      "retrievedAt": "2026-08-09T02:23:45.771Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "EQTL",
+      "catalogTickers": [
+        "EQTL3"
+      ],
+      "status": "matched",
+      "codeCvm": "20010",
+      "companyName": "EQUATORIAL S.A.",
+      "tradingName": "EQUATORIAL",
+      "listingDate": "2006-03-30",
+      "quotationDate": "2006-04-03",
+      "codes": [
+        "EQTL3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20010/EQTL/overview?language=en-us",
+      "sourceHash": "05d3876079c72fde1059c244a3baeacee355e8f1ab1d91bd429bc1e22ba29b68",
+      "retrievedAt": "2026-08-09T02:23:45.787Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "FLRY",
+      "catalogTickers": [
+        "FLRY3"
+      ],
+      "status": "matched",
+      "codeCvm": "21881",
+      "companyName": "FLEURY S.A.",
+      "tradingName": "FLEURY",
+      "listingDate": "2009-12-14",
+      "quotationDate": "2009-12-17",
+      "codes": [
+        "FLRY3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/21881/FLRY/overview?language=en-us",
+      "sourceHash": "5f2724ceb8f4bbb71730b0cb7c5e88cabd9ca616705416b7da52d002afaf1b21",
+      "retrievedAt": "2026-08-09T02:23:45.961Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "GGBR",
+      "catalogTickers": [
+        "GGBR3",
+        "GGBR4"
+      ],
+      "status": "matched",
+      "codeCvm": "3980",
+      "companyName": "GERDAU S.A.",
+      "tradingName": "GERDAU",
+      "listingDate": "1980-10-01",
+      "quotationDate": "2001-02-01",
+      "codes": [
+        "GGBR3",
+        "GGBR4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/3980/GGBR/overview?language=en-us",
+      "sourceHash": "4c2ab0ef712bdd6e803d31ef79a57139ed47e3c00e94f3b73ee152b44705ce31",
+      "retrievedAt": "2026-08-09T02:23:46.103Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "GGPS",
+      "catalogTickers": [
+        "GGPS3"
+      ],
+      "status": "matched",
+      "codeCvm": "25712",
+      "companyName": "GPS PARTICIPACOES E EMPREENDIMENTOS S.A.",
+      "tradingName": "GPS",
+      "listingDate": "2021-04-22",
+      "quotationDate": "2021-04-26",
+      "codes": [
+        "GGPS3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25712/GGPS/overview?language=en-us",
+      "sourceHash": "8456b7035d05bcff536f9f06dd08603d0992a4934188120ecf1289bdf450ffb2",
+      "retrievedAt": "2026-08-09T02:23:46.230Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "GMAT",
+      "catalogTickers": [
+        "GMAT3"
+      ],
+      "status": "matched",
+      "codeCvm": "25186",
+      "companyName": "GRUPO MATEUS S.A.",
+      "tradingName": "GRUPO MATEUS",
+      "listingDate": "2020-10-08",
+      "quotationDate": "2020-10-13",
+      "codes": [
+        "GMAT3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25186/GMAT/overview?language=en-us",
+      "sourceHash": "3dc6b1694e3b1f42d5acc2b11401adf24a1daac645bfa37a6488b3bbc15a40d0",
+      "retrievedAt": "2026-08-09T02:23:46.232Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "GOAU",
+      "catalogTickers": [
+        "GOAU3",
+        "GOAU4"
+      ],
+      "status": "matched",
+      "codeCvm": "8656",
+      "companyName": "METALURGICA GERDAU S.A.",
+      "tradingName": "GERDAU MET",
+      "listingDate": "1972-01-13",
+      "quotationDate": "1968-05-17",
+      "codes": [
+        "GOAU3",
+        "GOAU4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/8656/GOAU/overview?language=en-us",
+      "sourceHash": "413d18692b2fcf80abfcdab843d8ef7bd87cbdc88a9a788966de36596c9e4e3d",
+      "retrievedAt": "2026-08-09T02:23:46.417Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "HYPE",
+      "catalogTickers": [
+        "HYPE3"
+      ],
+      "status": "matched",
+      "codeCvm": "21431",
+      "companyName": "HYPERA S.A.",
+      "tradingName": "HYPERA",
+      "listingDate": "2008-04-16",
+      "quotationDate": "2008-04-18",
+      "codes": [
+        "HYPE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/21431/HYPE/overview?language=en-us",
+      "sourceHash": "ca298797ed118ee922cccd5de6cda3bc73343374808e785fc09b9ca766bffc13",
+      "retrievedAt": "2026-08-09T02:23:46.560Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "IGTI",
+      "catalogTickers": [
+        "IGTI3"
+      ],
+      "status": "matched",
+      "codeCvm": "8672",
+      "companyName": "IGUATEMI S.A.",
+      "tradingName": "IGUATEMI S.A",
+      "listingDate": "1974-01-15",
+      "quotationDate": "2021-11-22",
+      "codes": [
+        "IGTI11",
+        "IGTI3",
+        "IGTI4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/8672/IGTI/overview?language=en-us",
+      "sourceHash": "db41e95cd914c2b6faa33e80da249144375a0823a53297f3f39006e73b53ac13",
+      "retrievedAt": "2026-08-09T02:23:46.670Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ISAE",
+      "catalogTickers": [
+        "ISAE3",
+        "ISAE4"
+      ],
+      "status": "matched",
+      "codeCvm": "18376",
+      "companyName": "ISA ENERGIA BRASIL S.A",
+      "tradingName": "ISA ENERGIA",
+      "listingDate": "1999-07-14",
+      "quotationDate": "1999-07-26",
+      "codes": [
+        "ISAE3",
+        "ISAE4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18376/ISAE/overview?language=en-us",
+      "sourceHash": "f13d10606e948c023bc2022db477391bd430b02e4a2bff1a0553423f4f662dd8",
+      "retrievedAt": "2026-08-09T02:23:46.671Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ITSA",
+      "catalogTickers": [
+        "ITSA3",
+        "ITSA4"
+      ],
+      "status": "matched",
+      "codeCvm": "7617",
+      "companyName": "ITAUSA S.A.",
+      "tradingName": "ITAUSA",
+      "listingDate": "1966-06-30",
+      "quotationDate": "1978-06-30",
+      "codes": [
+        "ITSA3",
+        "ITSA4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/7617/ITSA/overview?language=en-us",
+      "sourceHash": "dcb0a2716d273d26b8d7dca6ef032751baa3dafb0d2ff3b997197179ecdb1369",
+      "retrievedAt": "2026-08-09T02:23:46.874Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ITUB",
+      "catalogTickers": [
+        "ITUB3",
+        "ITUB4"
+      ],
+      "status": "matched",
+      "codeCvm": "19348",
+      "companyName": "ITAU UNIBANCO HOLDING S.A.",
+      "tradingName": "ITAUUNIBANCO",
+      "listingDate": "2002-12-30",
+      "quotationDate": "2003-03-24",
+      "codes": [
+        "ITUB3",
+        "ITUB4"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/19348/ITUB/overview?language=en-us",
+      "sourceHash": "a1ec3af5c933a0a8db033146f68b83ee61fc3cde526cfa4d361eb3aa33ce988f",
+      "retrievedAt": "2026-08-09T02:23:47.000Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "JHSF",
+      "catalogTickers": [
+        "JHSF3"
+      ],
+      "status": "matched",
+      "codeCvm": "20605",
+      "companyName": "JHSF PARTICIPACOES S.A.",
+      "tradingName": "JHSF PART",
+      "listingDate": "2007-04-04",
+      "quotationDate": "2007-04-12",
+      "codes": [
+        "JHSF3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20605/JHSF/overview?language=en-us",
+      "sourceHash": "554cdf2a249dbacc1ee3ef7612bdabb062cfba20cc9b7ecee6d2a955cbccb734",
+      "retrievedAt": "2026-08-09T02:23:47.109Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "KLBN",
+      "catalogTickers": [
+        "KLBN3",
+        "KLBN4"
+      ],
+      "status": "matched",
+      "codeCvm": "12653",
+      "companyName": "KLABIN S.A.",
+      "tradingName": "KLABIN S/A",
+      "listingDate": "1991-01-24",
+      "quotationDate": "2002-01-02",
+      "codes": [
+        "KLBN11",
+        "KLBN3",
+        "KLBN4"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/12653/KLBN/overview?language=en-us",
+      "sourceHash": "edb5c9ff0d7704f74b6ab90833d1c571353fd99a49bd414bf22713730327d309",
+      "retrievedAt": "2026-08-09T02:23:47.125Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "LREN",
+      "catalogTickers": [
+        "LREN3"
+      ],
+      "status": "matched",
+      "codeCvm": "8133",
+      "companyName": "LOJAS RENNER S.A.",
+      "tradingName": "LOJAS RENNER",
+      "listingDate": "1972-01-03",
+      "quotationDate": "1988-04-07",
+      "codes": [
+        "LREN3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/8133/LREN/overview?language=en-us",
+      "sourceHash": "cbc62136ce0ba1792c5dcae3075d58dd75756147234a1627e707bae09bfe8739",
+      "retrievedAt": "2026-08-09T02:23:47.329Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "MBRF",
+      "catalogTickers": [
+        "MBRF3"
+      ],
+      "status": "matched",
+      "codeCvm": "20788",
+      "companyName": "MARFRIG GLOBAL FOODS S.A.",
+      "tradingName": "MARFRIG",
+      "listingDate": "2007-06-18",
+      "quotationDate": "2007-06-28",
+      "codes": [
+        "MBRF3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20788/MBRF/overview?language=en-us",
+      "sourceHash": "0cf774c107f9cc1051a6f63a52383d80b9ec39eaacf7c2080d9b42fe29b55dbd",
+      "retrievedAt": "2026-08-09T02:23:47.455Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "MOTV",
+      "catalogTickers": [
+        "MOTV3"
+      ],
+      "status": "matched",
+      "codeCvm": "18821",
+      "companyName": "MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.",
+      "tradingName": "MOTIVA SA",
+      "listingDate": "2002-01-30",
+      "quotationDate": "2002-02-01",
+      "codes": [
+        "MOTV3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18821/MOTV/overview?language=en-us",
+      "sourceHash": "f35dc4076be9ecee6ed1df80a87fbf7cebf985bdfd424593b899c36d4a5791a9",
+      "retrievedAt": "2026-08-09T02:23:47.562Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "MRSA",
+      "catalogTickers": [
+        "MRSA3B",
+        "MRSA5B"
+      ],
+      "status": "matched",
+      "codeCvm": "17949",
+      "companyName": "MRS LOGISTICA S.A.",
+      "tradingName": "MRS LOGIST",
+      "listingDate": "1998-12-18",
+      "quotationDate": "1998-12-18",
+      "codes": [
+        "MRSA3B",
+        "MRSA5B",
+        "MRSA6B"
+      ],
+      "market": "SOMA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/17949/MRSA/overview?language=en-us",
+      "sourceHash": "5088c2232a9a84c995ff9adb41a37f226bc98884b5b1894a796c9561f39e9d04",
+      "retrievedAt": "2026-08-09T02:23:47.563Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "MULT",
+      "catalogTickers": [
+        "MULT3"
+      ],
+      "status": "matched",
+      "codeCvm": "20982",
+      "companyName": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+      "tradingName": "MULTIPLAN",
+      "listingDate": "2007-07-25",
+      "quotationDate": "2007-07-27",
+      "codes": [
+        "MULT3"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20982/MULT/overview?language=en-us",
+      "sourceHash": "6d8d0e579ab9c32e22d4cbcf04a83abbc32b0355ee344eff099fd12c8f1b684b",
+      "retrievedAt": "2026-08-09T02:23:47.782Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "NATU",
+      "catalogTickers": [
+        "NATU3"
+      ],
+      "status": "matched",
+      "codeCvm": "19550",
+      "companyName": "NATURA COSMETICOS S.A.",
+      "tradingName": "NATURA",
+      "listingDate": "2004-05-21",
+      "quotationDate": "2004-05-26",
+      "codes": [
+        "NATU3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/19550/NATU/overview?language=en-us",
+      "sourceHash": "d20f4426d6958507e22a3e647effc6e4002fa1cac19e544e97249411b803bef1",
+      "retrievedAt": "2026-08-09T02:23:47.988Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "ORVR",
+      "catalogTickers": [
+        "ORVR3"
+      ],
+      "status": "matched",
+      "codeCvm": "25550",
+      "companyName": "ORIZON VALORIZACAO DE RESIDUOS S.A.",
+      "tradingName": "ORIZON",
+      "listingDate": "2021-02-12",
+      "quotationDate": "2021-02-17",
+      "codes": [
+        "ORVR11",
+        "ORVR3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25550/ORVR/overview?language=en-us",
+      "sourceHash": "d80c3bbfb720f7e20c2b91825b38da6016e61aaed24e9d5777ffffbbe4d97c8b",
+      "retrievedAt": "2026-08-09T02:23:48.019Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "PASS",
+      "catalogTickers": [
+        "PASS3"
+      ],
+      "status": "matched",
+      "codeCvm": "25127",
+      "companyName": "COMPASS GAS E ENERGIA S.A.",
+      "tradingName": "COMPASS",
+      "listingDate": "2021-08-04",
+      "quotationDate": "2021-08-12",
+      "codes": [
+        "PASS3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/25127/PASS/overview?language=en-us",
+      "sourceHash": "4881073c0e31bd826ddb98e051256d680455ba51712c65abfeacc2bd7af7b0fd",
+      "retrievedAt": "2026-08-09T02:23:48.223Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "PETR",
+      "catalogTickers": [
+        "PETR3",
+        "PETR4"
+      ],
+      "status": "matched",
+      "codeCvm": "9512",
+      "companyName": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+      "tradingName": "PETROBRAS",
+      "listingDate": "1968-08-27",
+      "quotationDate": "1977-07-20",
+      "codes": [
+        "PETR3",
+        "PETR4"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/9512/PETR/overview?language=en-us",
+      "sourceHash": "951e768d4abc4e52efca7eb7698d92c061d278d4a1104cf5ccbc2468eb96e68d",
+      "retrievedAt": "2026-08-09T02:23:48.444Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "PRIO",
+      "catalogTickers": [
+        "PRIO3"
+      ],
+      "status": "matched",
+      "codeCvm": "22187",
+      "companyName": "PRIO S.A.",
+      "tradingName": "PRIO",
+      "listingDate": "2010-10-21",
+      "quotationDate": "2010-10-25",
+      "codes": [
+        "PRIO3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/22187/PRIO/overview?language=en-us",
+      "sourceHash": "2564fbf8017fec26742205b693d5534351e923deb00a4f05052cd36073bba295",
+      "retrievedAt": "2026-08-09T02:23:48.459Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "PSSA",
+      "catalogTickers": [
+        "PSSA3"
+      ],
+      "status": "matched",
+      "codeCvm": "16659",
+      "companyName": "PORTO SEGURO S.A.",
+      "tradingName": "PORTO SEGURO",
+      "listingDate": "1997-11-28",
+      "quotationDate": "2004-11-22",
+      "codes": [
+        "PSSA3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/16659/PSSA/overview?language=en-us",
+      "sourceHash": "5ec46c8dc46fb64717afe788d946b6b5c52b7170ae488c72b3a3610e35d7eaca",
+      "retrievedAt": "2026-08-09T02:23:48.664Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "RADL",
+      "catalogTickers": [
+        "RADL3"
+      ],
+      "status": "matched",
+      "codeCvm": "5258",
+      "companyName": "RAIA DROGASIL S.A.",
+      "tradingName": "RAIADROGASIL",
+      "listingDate": "1973-07-11",
+      "quotationDate": "2007-07-03",
+      "codes": [
+        "RADL3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/5258/RADL/overview?language=en-us",
+      "sourceHash": "1076ff0322c7cd8f0da06ea2a26931698a9f6876228c24ecf4d79e0daa820579",
+      "retrievedAt": "2026-08-09T02:23:48.901Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "RAIL",
+      "catalogTickers": [
+        "RAIL3"
+      ],
+      "status": "matched",
+      "codeCvm": "17450",
+      "companyName": "RUMO S.A.",
+      "tradingName": "RUMO S.A.",
+      "listingDate": "1998-07-02",
+      "quotationDate": "2004-03-15",
+      "codes": [
+        "RAIL3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/17450/RAIL/overview?language=en-us",
+      "sourceHash": "3dc9c21f7b564e642b6ef60584492c950ab5bdd7a0c6e16cd2227375f83140e5",
+      "retrievedAt": "2026-08-09T02:23:48.916Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "RDOR",
+      "catalogTickers": [
+        "RDOR3"
+      ],
+      "status": "matched",
+      "codeCvm": "24821",
+      "companyName": "REDE DOR SÃO LUIZ S.A.",
+      "tradingName": "REDE D OR",
+      "listingDate": "2020-12-09",
+      "quotationDate": "2020-12-10",
+      "codes": [
+        "RDOR3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/24821/RDOR/overview?language=en-us",
+      "sourceHash": "11cdb128acc2276f71847990a117a663fb0ebf96eb71ff2c5b64f6bdeff56e9a",
+      "retrievedAt": "2026-08-09T02:23:49.134Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "REDE",
+      "catalogTickers": [
+        "REDE3"
+      ],
+      "status": "matched",
+      "codeCvm": "3190",
+      "companyName": "REDE ENERGIA PARTICIPAÇÕES S.A.",
+      "tradingName": "REDE ENERGIA",
+      "listingDate": "1950-01-26",
+      "quotationDate": "2006-06-21",
+      "codes": [
+        "REDE3"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/3190/REDE/overview?language=en-us",
+      "sourceHash": "44847c6b51ab52eb50c8bab29f8d5ae4f774797ceb73e1f463036731e0388ba8",
+      "retrievedAt": "2026-08-09T02:23:49.370Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "RENT",
+      "catalogTickers": [
+        "RENT3",
+        "RENT4"
+      ],
+      "status": "matched",
+      "codeCvm": "19739",
+      "companyName": "LOCALIZA RENT A CAR S.A.",
+      "tradingName": "LOCALIZA",
+      "listingDate": "2005-05-06",
+      "quotationDate": "2005-05-23",
+      "codes": [
+        "RENT3",
+        "RENT4",
+        "RENT99"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/19739/RENT/overview?language=en-us",
+      "sourceHash": "536e3944c6291d0c3540df25af8eb4a9b3e5a14b8754d48a5ac2a8c83248b70a",
+      "retrievedAt": "2026-08-09T02:23:49.434Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SANB",
+      "catalogTickers": [
+        "SANB3",
+        "SANB4"
+      ],
+      "status": "matched",
+      "codeCvm": "20532",
+      "companyName": "BCO SANTANDER (BRASIL) S.A.",
+      "tradingName": "SANTANDER BR",
+      "listingDate": "2007-03-02",
+      "quotationDate": "2007-04-03",
+      "codes": [
+        "SANB11",
+        "SANB3",
+        "SANB4"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20532/SANB/overview?language=en-us",
+      "sourceHash": "92d6b86461f5819303d657f276d962b8ffa4963710c6b3d176acf42ce7f90868",
+      "retrievedAt": "2026-08-09T02:23:49.591Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SAPR",
+      "catalogTickers": [
+        "SAPR3"
+      ],
+      "status": "matched",
+      "codeCvm": "18627",
+      "companyName": "CIA SANEAMENTO DO PARANA - SANEPAR",
+      "tradingName": "SANEPAR",
+      "listingDate": "2002-05-02",
+      "quotationDate": "2002-05-03",
+      "codes": [
+        "SAPR11",
+        "SAPR3",
+        "SAPR4"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18627/SAPR/overview?language=en-us",
+      "sourceHash": "4787cdebd95969b0c310dcb1aa5ec904e16d3da8fce7f858861b59bcec0863db",
+      "retrievedAt": "2026-08-09T02:23:49.811Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SAUD",
+      "catalogTickers": [
+        "SAUD3"
+      ],
+      "status": "matched",
+      "codeCvm": "20125",
+      "companyName": "BRADSAUDE S.A.",
+      "tradingName": "BRADSAUDE",
+      "listingDate": "2006-11-27",
+      "quotationDate": "2006-12-01",
+      "codes": [
+        "SAUD3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20125/SAUD/overview?language=en-us",
+      "sourceHash": "fc590745a6d473394ee033de8c7d0bb38f76a9fedd1460a3ee6a1aa0ea8c4984",
+      "retrievedAt": "2026-08-09T02:23:49.889Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SBSP",
+      "catalogTickers": [
+        "SBSP3"
+      ],
+      "status": "matched",
+      "codeCvm": "14443",
+      "companyName": "CIA SANEAMENTO BASICO EST SAO PAULO",
+      "tradingName": "SABESP",
+      "listingDate": "1997-05-21",
+      "quotationDate": "1997-06-04",
+      "codes": [
+        "SBSP3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/14443/SBSP/overview?language=en-us",
+      "sourceHash": "1adcadcdcbf0ba2d4d1fa8b337ddf4aa939a097562f3a25e813ce1b78bae342c",
+      "retrievedAt": "2026-08-09T02:23:50.127Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SLCE",
+      "catalogTickers": [
+        "SLCE3"
+      ],
+      "status": "matched",
+      "codeCvm": "20745",
+      "companyName": "SLC AGRICOLA S.A.",
+      "tradingName": "SLC AGRICOLA",
+      "listingDate": "2007-06-12",
+      "quotationDate": "2007-06-15",
+      "codes": [
+        "SLCE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20745/SLCE/overview?language=en-us",
+      "sourceHash": "7738f6e5c6dd998e42ab69abc1e676f4860d01854ba6136ffbf52efa281503f0",
+      "retrievedAt": "2026-08-09T02:23:50.174Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SMFT",
+      "catalogTickers": [
+        "SMFT3"
+      ],
+      "status": "matched",
+      "codeCvm": "24260",
+      "companyName": "SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.",
+      "tradingName": "SMART FIT",
+      "listingDate": "2018-02-15",
+      "quotationDate": "2018-02-26",
+      "codes": [
+        "SMFT3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/24260/SMFT/overview?language=en-us",
+      "sourceHash": "b92228ee056e88016cd4405946dbd5520f5cd359d3d7d0dfc36ce54552ee4d58",
+      "retrievedAt": "2026-08-09T02:23:50.267Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "SUZB",
+      "catalogTickers": [
+        "SUZB3"
+      ],
+      "status": "matched",
+      "codeCvm": "13986",
+      "companyName": "SUZANO S.A.",
+      "tradingName": "SUZANO S.A.",
+      "listingDate": "1992-04-15",
+      "quotationDate": "2004-08-05",
+      "codes": [
+        "SUZB3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/13986/SUZB/overview?language=en-us",
+      "sourceHash": "3cb0c1ef2f410a55640810b04393c1f829724d0d856fe801752f5d2c68eb9973",
+      "retrievedAt": "2026-08-09T02:23:50.376Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "TAEE",
+      "catalogTickers": [
+        "TAEE3",
+        "TAEE4"
+      ],
+      "status": "matched",
+      "codeCvm": "20257",
+      "companyName": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+      "tradingName": "TAESA",
+      "listingDate": "2006-10-10",
+      "quotationDate": "2006-10-27",
+      "codes": [
+        "TAEE11",
+        "TAEE3",
+        "TAEE4"
+      ],
+      "market": "BOVESPA NIVEL 2",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/20257/TAEE/overview?language=en-us",
+      "sourceHash": "1462fba5102bdf2d557be0fde917c3d93de07783bdd7c6fad0ff81f08004ac4e",
+      "retrievedAt": "2026-08-09T02:23:50.564Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "TIMS",
+      "catalogTickers": [
+        "TIMS3"
+      ],
+      "status": "matched",
+      "codeCvm": "24929",
+      "companyName": "TIM S.A.",
+      "tradingName": "TIM",
+      "listingDate": "2020-09-28",
+      "quotationDate": "2020-10-13",
+      "codes": [
+        "TIMS3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/24929/TIMS/overview?language=en-us",
+      "sourceHash": "33a4a1a2263e141f01bd76750d8da3d6117cbf38eceb1d938dba2658ceb55dd5",
+      "retrievedAt": "2026-08-09T02:23:50.613Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "TOTS",
+      "catalogTickers": [
+        "TOTS3"
+      ],
+      "status": "matched",
+      "codeCvm": "19992",
+      "companyName": "TOTVS S.A.",
+      "tradingName": "TOTVS",
+      "listingDate": "2006-03-07",
+      "quotationDate": "2006-03-09",
+      "codes": [
+        "TOTS3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/19992/TOTS/overview?language=en-us",
+      "sourceHash": "6fb73263b84347c0ac4546a78f565fec82fc4425e26aa6d0308226f4fde44682",
+      "retrievedAt": "2026-08-09T02:23:50.722Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "UGPA",
+      "catalogTickers": [
+        "UGPA3"
+      ],
+      "status": "matched",
+      "codeCvm": "18465",
+      "companyName": "ULTRAPAR PARTICIPACOES S.A.",
+      "tradingName": "ULTRAPAR",
+      "listingDate": "1999-09-27",
+      "quotationDate": "1999-10-13",
+      "codes": [
+        "UGPA3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/18465/UGPA/overview?language=en-us",
+      "sourceHash": "34546ed4b62e943ac8b915a0084c3f715f8e55ef96f832b1961be80cb763d2f7",
+      "retrievedAt": "2026-08-09T02:23:50.832Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "UNIP",
+      "catalogTickers": [
+        "UNIP3"
+      ],
+      "status": "matched",
+      "codeCvm": "11592",
+      "companyName": "UNIPAR CARBOCLORO S.A.",
+      "tradingName": "UNIPAR",
+      "listingDate": "1971-12-08",
+      "quotationDate": "1980-06-04",
+      "codes": [
+        "UNIP3",
+        "UNIP5",
+        "UNIP6"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/11592/UNIP/overview?language=en-us",
+      "sourceHash": "0d59de81d76aa0914f6d85eee88355fc2a597e9b04de40f96b02fc4f01fad468",
+      "retrievedAt": "2026-08-09T02:23:51.022Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "USIM",
+      "catalogTickers": [
+        "USIM3"
+      ],
+      "status": "matched",
+      "codeCvm": "14320",
+      "companyName": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "tradingName": "USIMINAS",
+      "listingDate": "1994-04-11",
+      "quotationDate": "1994-04-18",
+      "codes": [
+        "USIM3",
+        "USIM5",
+        "USIM6"
+      ],
+      "market": "BOVESPA NIVEL 1",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/14320/USIM/overview?language=en-us",
+      "sourceHash": "32c205455770e11d13b33d61cb74b8c266458c1c5f7c04f05cce41d7fd94b92f",
+      "retrievedAt": "2026-08-09T02:23:51.053Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "VALE",
+      "catalogTickers": [
+        "VALE3"
+      ],
+      "status": "matched",
+      "codeCvm": "4170",
+      "companyName": "VALE S.A.",
+      "tradingName": "VALE",
+      "listingDate": "1968-04-04",
+      "quotationDate": "1968-04-01",
+      "codes": [
+        "VALE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/4170/VALE/overview?language=en-us",
+      "sourceHash": "2ca37032b56086f469d272199f9fa5b715fa31699615ddf526fee84254bbb938",
+      "retrievedAt": "2026-08-09T02:23:51.257Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "VBBR",
+      "catalogTickers": [
+        "VBBR3"
+      ],
+      "status": "matched",
+      "codeCvm": "24295",
+      "companyName": "VIBRA ENERGIA S.A.",
+      "tradingName": "VIBRA",
+      "listingDate": "2017-12-12",
+      "quotationDate": "2017-12-15",
+      "codes": [
+        "VBBR3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/24295/VBBR/overview?language=en-us",
+      "sourceHash": "df158fad3341b528c135b8686463b72bff8f69d8fe0de0ee8a933af4871c404d",
+      "retrievedAt": "2026-08-09T02:23:51.273Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "VIVT",
+      "catalogTickers": [
+        "VIVT3"
+      ],
+      "status": "matched",
+      "codeCvm": "17671",
+      "companyName": "TELEFÔNICA BRASIL S.A",
+      "tradingName": "TELEF BRASIL",
+      "listingDate": "1998-09-11",
+      "quotationDate": "1998-09-21",
+      "codes": [
+        "VIVT3"
+      ],
+      "market": "BOLSA",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/17671/VIVT/overview?language=en-us",
+      "sourceHash": "3ebd50c144e2da16e23c0d83e12af18c5ab2e11e0276b9dd6eb3dd6c922b58cd",
+      "retrievedAt": "2026-08-09T02:23:51.478Z",
+      "warnings": []
+    },
+    {
+      "issuingCompany": "WEGE",
+      "catalogTickers": [
+        "WEGE3"
+      ],
+      "status": "matched",
+      "codeCvm": "5410",
+      "companyName": "WEG S.A.",
+      "tradingName": "WEG",
+      "listingDate": "1981-04-23",
+      "quotationDate": "2004-08-02",
+      "codes": [
+        "WEGE3"
+      ],
+      "market": "NOVO MERCADO",
+      "sourceUrl": "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/main/5410/WEGE/overview?language=en-us",
+      "sourceHash": "aca01fefc7be39e62ba7ee3b9f4831e1944f750c5acb332c02a9e6b0c2e4fe45",
+      "retrievedAt": "2026-08-09T02:23:51.509Z",
+      "warnings": []
+    }
+  ]
+}

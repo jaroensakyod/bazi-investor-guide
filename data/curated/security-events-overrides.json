@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "schemaVersion": 1,
+      "securityId": "SET:PRM",
+      "kind": "exchange_admission",
+      "localDate": "2017-09-14",
+      "localTime": null,
+      "timePrecision": "unknown",
+      "timeZone": "Asia/Bangkok",
+      "exchange": "SET",
+      "venueCity": "Bangkok",
+      "venueCountry": "TH",
+      "evidence": {
+        "authority": "exchange",
+        "sourceName": "SET Factsheet — PRM",
+        "sourceUrl": "https://www.set.or.th/en/market/product/stock/quote/PRM/factsheet",
+        "retrievedAt": "2026-08-08T09:25:00.000Z",
+        "verification": "verified",
+        "displayRights": "unknown"
+      },
+      "note": "SET ระบุวันเข้าตลาด 14 Sep 2017; หน้า live ตอบค่า '-' ชั่วคราวในรอบเก็บอัตโนมัติ จึงเก็บเป็น curated override พร้อม URL หลักฐาน"
+    }
+  ]
+}

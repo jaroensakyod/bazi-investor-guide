@@ -1,104 +1,137 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./home.module.css";
 import { useT } from "./lib/i18n";
 
 export default function HomePage() {
   const t = useT();
-  const features = [
-    { icon: "🔮", title: t("feat.movers.title"), desc: t("feat.movers.desc") },
-    { icon: "🚀", title: t("feat.ipo.title"), desc: t("feat.ipo.desc") },
-    { icon: "🗓️", title: t("feat.almanac.title"), desc: t("feat.almanac.desc") },
-    { icon: "📑", title: t("feat.report.title"), desc: t("feat.report.desc") },
-    { icon: "🏠", title: t("feat.land.title"), desc: t("feat.land.desc") },
-    { icon: "📈", title: t("feat.gems.title"), desc: t("feat.gems.desc") },
-  ];
+  const marketItems = [t("home.market.1"), t("home.market.2"), t("home.market.3"), t("home.market.4")];
+  const personalItems = [t("home.personal.1"), t("home.personal.2"), t("home.personal.3"), t("home.personal.4")];
   const steps = [
-    { n: "1", icon: "📅", title: t("land.step1.title"), desc: t("land.step1.desc") },
-    { n: "2", icon: "🃏", title: t("land.step2.title"), desc: t("land.step2.desc") },
-    { n: "3", icon: "📈", title: t("land.step3.title"), desc: t("land.step3.desc") },
+    { title: t("home.loop.1.title"), body: t("home.loop.1.body") },
+    { title: t("home.loop.2.title"), body: t("home.loop.2.body") },
+    { title: t("home.loop.3.title"), body: t("home.loop.3.body") },
   ];
-  const prices = [
-    { id: "free", label: t("land.price.free"), cls: "" },
-    { id: "99", label: t("land.price.t99"), cls: "" },
-    { id: "490", label: t("land.price.t490"), cls: "hot" },
-    { id: "790", label: t("land.price.t790"), cls: "" },
-  ];
-  const compares = [
-    { who: "🧙 ซินแส/หมอดู", line: t("land.compare.sinsean"), ok: false },
-    { who: "📊 โบรกเกอร์/บล็อก", line: t("land.compare.broker"), ok: false },
-    { who: "☯ ดวงนักลงทุน", line: t("land.compare.us"), ok: true },
+  const tiers = [
+    { price: t("home.tier.free.price"), title: t("home.tier.free.title"), body: t("home.tier.free.body") },
+    { price: t("home.tier.99.price"), title: t("home.tier.99.title"), body: t("home.tier.99.body") },
+    { price: t("home.tier.490.price"), title: t("home.tier.490.title"), body: t("home.tier.490.body") },
+    { price: t("home.tier.790.price"), title: t("home.tier.790.title"), body: t("home.tier.790.body") },
   ];
 
   return (
-    <div>
-      {/* ── Hero ── */}
-      <div className="hero" style={{ textAlign: "center" }}>
-        <h1 style={{ fontSize: 34, marginBottom: 6 }}>{t("hero.title")}</h1>
-        <p style={{ maxWidth: 620, margin: "0 auto", fontSize: 15, lineHeight: 1.6 }}>{t("land.pas")}</p>
-        <p style={{ color: "#d4af37", fontWeight: 700, fontSize: 14, marginTop: 10 }}>{t("land.stats")}</p>
-        <div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 16, flexWrap: "wrap" }}>
-          <Link className="btn" href="/demo" style={{ fontSize: 16, padding: "11px 30px" }}>
-            {t("land.cta")}
-          </Link>
-          <Link className="btn" href="/chat" style={{ fontSize: 16, padding: "11px 30px" }}>
-            {t("hero.cta2")}
-          </Link>
+    <article className={styles.page}>
+      <section className={styles.hero}>
+        <div>
+          <p className={styles.eyebrow}>{t("home.eyebrow")}</p>
+          <h1>{t("home.title")}</h1>
+          <p className={styles.lead}>{t("home.lead")}</p>
+          <div className={styles.actions}>
+            <Link className={styles.primaryAction} href="/report">{t("home.cta.primary")}</Link>
+            <Link className={styles.secondaryAction} href="/trust">{t("home.cta.secondary")}</Link>
+          </div>
+          <p className={styles.proofLine}>{t("home.proof")}</p>
         </div>
-      </div>
 
-      {/* ── 3 ขั้นตอน ── */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 12, marginTop: 6 }}>
-        {steps.map((s) => (
-          <div key={s.n} className="card" style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 26 }}>{s.icon}</div>
-            <p style={{ fontWeight: 700, margin: "6px 0 4px", fontSize: 14.5 }}>
-              {s.n}. {s.title}
-            </p>
-            <p style={{ fontSize: 12, color: "#9a937f", lineHeight: 1.55 }}>{s.desc}</p>
+        <aside className={styles.decisionCard} aria-label={t("home.sample.label")}>
+          <p className={styles.sampleLabel}>{t("home.sample.label")}</p>
+          <div className={styles.securityRow}>
+            <h2>SET: ADVANC</h2>
+            <span>{t("home.sample.asof")}</span>
           </div>
-        ))}
-      </div>
-
-      {/* ── เทียบคู่แข่ง ── */}
-      <div className="card" style={{ marginTop: 14, borderColor: "#d4af37" }}>
-        <h2>🏆 {t("land.compare.title")}</h2>
-        {compares.map((c) => (
-          <div key={c.who} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "8px 0", borderBottom: "1px solid #262a34" }}>
-            <span style={{ fontSize: 16 }}>{c.ok ? "✅" : "❌"}</span>
-            <div>
-              <b style={{ fontSize: 13.5 }}>{c.who}</b>
-              <p style={{ fontSize: 12, color: "#9a937f", margin: "2px 0 0" }}>{c.line}</p>
-            </div>
+          <div className={styles.statusRow}>
+            <strong>RESEARCH</strong>
+            <span>{t("home.sample.status")}</span>
           </div>
-        ))}
-      </div>
+          <p className={styles.cardAnswer}>{t("home.sample.answer")}</p>
+          <div className={styles.confidenceRow}>
+            <span>{t("home.sample.confidence")}</span>
+            <strong>68 / 100</strong>
+          </div>
+          <div className={styles.confidenceTrack} role="img" aria-label={`${t("home.sample.confidence")} 68/100`}><span /></div>
+          <ul className={styles.evidenceList}>
+            <li><b>{t("home.sample.support")}</b><span>{t("home.sample.supportText")}</span></li>
+            <li><b>{t("home.sample.unknown")}</b><span>{t("home.sample.unknownText")}</span></li>
+            <li><b>{t("home.sample.review")}</b><span>{t("home.sample.reviewText")}</span></li>
+          </ul>
+          <div className={styles.cardFooter}>
+            <span>decision-protocol-v2</span>
+            <span>{t("home.sample.notice")}</span>
+          </div>
+        </aside>
+      </section>
 
-      {/* ── ราคา ── */}
-      <div style={{ marginTop: 14 }}>
-        <h2 style={{ textAlign: "center" }}>💰 {t("land.price.title")}</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 12 }}>
-          {prices.map((p) => (
-            <div key={p.id} className="card" style={p.cls === "hot" ? { borderColor: "#d4af37", boxShadow: "0 0 14px rgba(212,175,55,.25)" } : undefined}>
-              <p style={{ fontSize: 13, lineHeight: 1.6, margin: 0 }}>{p.label}</p>
-              {p.cls === "hot" && <p style={{ fontSize: 11, color: "#d4af37", marginTop: 6 }}>⭐ ขายดี</p>}
-            </div>
+      <section className={styles.rails} aria-labelledby="two-rails-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.sectionNo}>01</p>
+          <div>
+            <h2 id="two-rails-title">{t("home.rails.title")}</h2>
+            <p>{t("home.rails.body")}</p>
+          </div>
+        </div>
+        <div className={styles.railGrid}>
+          <article className={styles.rail}>
+            <p className={styles.railLabel}>Market evidence</p>
+            <h3>{t("home.market.title")}</h3>
+            <p>{t("home.market.body")}</p>
+            <ul>{marketItems.map((item) => <li key={item}>{item}</li>)}</ul>
+          </article>
+          <div className={styles.separation}>{t("home.separation")}</div>
+          <article className={styles.rail}>
+            <p className={styles.railLabel}>Personal decision lens</p>
+            <h3>{t("home.personal.title")}</h3>
+            <p>{t("home.personal.body")}</p>
+            <ul>{personalItems.map((item) => <li key={item}>{item}</li>)}</ul>
+          </article>
+        </div>
+      </section>
+
+      <section className={styles.section} aria-labelledby="decision-loop-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.sectionNo}>02</p>
+          <div>
+            <h2 id="decision-loop-title">{t("home.loop.title")}</h2>
+            <p>{t("home.loop.body")}</p>
+          </div>
+        </div>
+        <div className={styles.loopGrid}>
+          {steps.map((step, index) => (
+            <article key={step.title} className={styles.loopStep}>
+              <span>0{index + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </article>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* ── Features ── */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 12, marginTop: 14 }}>
-        {features.map((f) => (
-          <div key={f.title} className="card">
-            <p style={{ fontSize: 22, margin: 0 }}>{f.icon}</p>
-            <p style={{ fontWeight: 700, margin: "6px 0 4px", fontSize: 14 }}>{f.title}</p>
-            <p style={{ fontSize: 12, color: "#9a937f", lineHeight: 1.55 }}>{f.desc}</p>
+      <section className={styles.tiers} aria-labelledby="tier-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.sectionNo}>03</p>
+          <div>
+            <h2 id="tier-title">{t("home.tiers.title")}</h2>
+            <p>{t("home.tiers.body")}</p>
           </div>
-        ))}
-      </div>
+        </div>
+        <div className={styles.tierGrid}>
+          {tiers.map((tier) => (
+            <article key={tier.price} className={styles.tier}>
+              <span className={styles.tierPrice}>{tier.price}</span>
+              <h3>{tier.title}</h3>
+              <p>{tier.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <p style={{ textAlign: "center", fontSize: 11, color: "#666", marginTop: 18 }}>{t("disclaimer")}</p>
-    </div>
+      <section className={styles.trustStrip}>
+        <div>
+          <h2>{t("home.trust.title")}</h2>
+          <p>{t("home.trust.body")}</p>
+        </div>
+        <Link href="/trust">{t("home.trust.cta")}</Link>
+      </section>
+    </article>
   );
 }

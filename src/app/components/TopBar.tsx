@@ -7,24 +7,21 @@ export default function TopBar() {
   const t = useT();
   return (
     <header className="topbar">
-      <Link href="/" className="brand">
-        {t("brand")}
-      </Link>
-      <nav>
-        <Link href="/chat">{t("nav.chat")}</Link>
-        <Link href="/personal">{t("nav.personal")}</Link>
-        <Link href="/picks">{t("nav.picks")}</Link>
-        <Link href="/markets">{t("nav.markets")}</Link>
-        <Link href="/demo">🃏 การ์ดฟรี</Link>
-        <Link href="/ipo">{t("nav.ipo")}</Link>
-        <Link href="/stocks">{t("nav.stocks")}</Link>
-        <Link href="/assets">{t("nav.assets")}</Link>
-        <Link href="/watchlist">{t("nav.watchlist")}</Link>
-        <Link href="/report">{t("nav.report")}</Link>
-        <Link href="/profile">{t("nav.profile")}</Link>
-        <Link href="/admin">{t("nav.admin")}</Link>
-        <LocaleSwitcher />
-      </nav>
+      <div className="topbarInner">
+        <Link href="/" className="brand" aria-label={t("brand")}>
+          <span className="brandMark" aria-hidden="true">☯</span>
+          <span>{t("brand").replace(/^☯\s*/, "")}</span>
+        </Link>
+        <nav aria-label="Primary navigation">
+          <Link href="/personal">{t("nav.personal")}</Link>
+          <Link href="/report" className="navCta">{t("nav.report")}</Link>
+          <Link href="/assets">{t("nav.assets")}</Link>
+          <Link href="/watchlist">{t("nav.watchlist")}</Link>
+          <Link href="/trust">{t("nav.trust")}</Link>
+          <Link href="/profile">{t("nav.profile")}</Link>
+          <LocaleSwitcher />
+        </nav>
+      </div>
     </header>
   );
 }

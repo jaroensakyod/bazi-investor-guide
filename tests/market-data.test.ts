@@ -2,7 +2,15 @@ import { describe, it, expect } from "vitest";
 import os from "node:os";
 import path from "node:path";
 import { yahooTicker } from "../src/lib/market/yahoo";
-import { buildSnapshot, normalizeQuote, loadSnapshot, withMarketData, saveSnapshot } from "../src/lib/market/market-data";
+import {
+  buildSnapshot,
+  normalizeQuote,
+  loadSnapshot,
+  withMarketData,
+  saveSnapshot,
+  upgradeMarketSnapshot,
+  MARKET_NORMALIZATION_VERSION,
+} from "../src/lib/market/market-data";
 import type { StockEntry } from "../src/lib/investor/stock-database";
 
 describe("yahooTicker — แปลง ticker คลังเรา → รูปแบบ Yahoo", () => {
@@ -17,6 +25,8 @@ describe("yahooTicker — แปลง ticker คลังเรา → รู�
   it("หุ้น class ใช้ขีด", () => {
     expect(yahooTicker("BRK.B", "NYSE")).toBe("BRK-B");
     expect(yahooTicker("BF.B", "NASDAQ")).toBe("BF-B");
+    expect(yahooTicker("BAC/PB", "NYSE/NASDAQ")).toBe("BAC-PB");
+    expect(yahooTicker("HEI.A", "NYSE/NASDAQ")).toBe("HEI-A");
   });
   it("US ไม่มี suffix", () => {
     expect(yahooTicker("AAPL", "NASDAQ")).toBe("AAPL");
@@ -32,7 +42,7 @@ describe("yahooTicker — แปลง ticker คลังเรา → รู�
 });
 
 describe("normalizeQuote — v7 quote → schema ชั้น B", () => {
-  it("แมปฟิลด์ครบ + dividendYield ทศนิยม → %", () => {
+  it("แมปฟิลด์ครบ + dividendYield ที่ Yahoo ส่งเป็น percentage points", () => {
     const md = normalizeQuote(
       {
         symbol: "KBANK.BK",
@@ -41,7 +51,7 @@ describe("normalizeQuote — v7 quote → schema ชั้น B", () => {
         regularMarketChangePercent: 1.25,
         trailingPE: 8.4,
         priceToBook: 1.1,
-        dividendYield: 0.0456,
+        dividendYield: 4.56,
         marketCap: 350000000000,
         averageVolume: 20000000,
         fiftyTwoWeekHigh: 180,
@@ -63,6 +73,16 @@ describe("normalizeQuote — v7 quote → schema ชั้น B", () => {
   it("quote ไม่มีราคา → ฟิลด์ว่างไม่โผล่", () => {
     const md = normalizeQuote({ symbol: "X" }, "t");
     expect(md.price).toBeUndefined();
+  });
+
+  it("อัปเกรด snapshot v1 โดยหาร dividend yield ที่เคยคูณซ้ำเพียงครั้งเดียว", () => {
+    const upgraded = upgradeMarketSnapshot({
+      updatedAt: "2026-08-07T00:00:00Z",
+      quotes: { "BH.BK": { price: 191, dividendYield: 262 } },
+    });
+    expect(upgraded.normalizationVersion).toBe(MARKET_NORMALIZATION_VERSION);
+    expect(upgraded.quotes["BH.BK"].dividendYield).toBe(2.62);
+    expect(upgradeMarketSnapshot(upgraded).quotes["BH.BK"].dividendYield).toBe(2.62);
   });
 });
 

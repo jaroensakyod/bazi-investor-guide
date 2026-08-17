@@ -1,0 +1,931 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-08-08T13:03:52.873Z",
+  "sourceRowCount": 708,
+  "records": [
+    {
+      "ticker": "558",
+      "companyName": "UMS INTEGRATION LIMITED",
+      "listingDate": "2001-05-25",
+      "listingDates": [
+        "2001-05-25",
+        "2003-05-05"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1677"
+    },
+    {
+      "ticker": "5E2",
+      "companyName": "SEATRIUM LTD",
+      "listingDate": "2024-05-07",
+      "listingDates": [
+        "2024-05-07"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3012"
+    },
+    {
+      "ticker": "8A8",
+      "companyName": "CHINA MEDICAL SYSTEM HLDGS LTD",
+      "listingDate": "2025-07-15",
+      "listingDates": [
+        "2025-07-15"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3053"
+    },
+    {
+      "ticker": "8C8U",
+      "companyName": "CENTURION ACCOMMODATION REIT",
+      "listingDate": "2025-09-25",
+      "listingDates": [
+        "2025-09-25"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3066"
+    },
+    {
+      "ticker": "8YZ",
+      "companyName": "YANGZIJIANG MARITIME",
+      "listingDate": "2025-11-18",
+      "listingDates": [
+        "2025-11-18"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3072"
+    },
+    {
+      "ticker": "9A4U",
+      "companyName": "ESR REIT",
+      "listingDate": "2025-04-30",
+      "listingDates": [
+        "2025-04-30"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3039"
+    },
+    {
+      "ticker": "9CI",
+      "companyName": "CAPITALAND INVESTMENT LIMITED",
+      "listingDate": "2021-09-20",
+      "listingDates": [
+        "2021-09-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2931"
+    },
+    {
+      "ticker": "A17U",
+      "companyName": "CAPITALAND ASCENDAS REIT",
+      "listingDate": "2002-11-19",
+      "listingDates": [
+        "2002-11-19"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1988"
+    },
+    {
+      "ticker": "A50",
+      "companyName": "THOMSON MEDICAL GROUP LIMITED",
+      "listingDate": "2002-07-10",
+      "listingDates": [
+        "2002-07-10"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1717"
+    },
+    {
+      "ticker": "A7RU",
+      "companyName": "KEPPEL INFRA TRUST WEF 2015",
+      "listingDate": "2007-02-12",
+      "listingDates": [
+        "2007-02-12"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2073"
+    },
+    {
+      "ticker": "AGS",
+      "companyName": "THE HOUR GLASS LIMITED",
+      "listingDate": "1988-10-03",
+      "listingDates": [
+        "1988-10-03",
+        "1992-10-07"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2608"
+    },
+    {
+      "ticker": "AIY",
+      "companyName": "IFAST CORPORATION LTD.",
+      "listingDate": "2014-12-11",
+      "listingDates": [
+        "2014-12-11"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2612"
+    },
+    {
+      "ticker": "AJBU",
+      "companyName": "KEPPEL DC REIT",
+      "listingDate": "2014-12-12",
+      "listingDates": [
+        "2014-12-12"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2613"
+    },
+    {
+      "ticker": "AMQ",
+      "companyName": "AMBIQ MICRO, INC.",
+      "listingDate": "2026-07-30",
+      "listingDates": [
+        "2026-07-30"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3104"
+    },
+    {
+      "ticker": "AP4",
+      "companyName": "RIVERSTONE HOLDINGS LIMITED",
+      "listingDate": "2006-11-20",
+      "listingDates": [
+        "2006-11-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2056"
+    },
+    {
+      "ticker": "AU8U",
+      "companyName": "CAPITALAND CHINA TRUST",
+      "listingDate": "2006-12-08",
+      "listingDates": [
+        "2006-12-08"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2059"
+    },
+    {
+      "ticker": "AVP",
+      "companyName": "AVEPOINT, INC.",
+      "listingDate": "2025-09-19",
+      "listingDates": [
+        "2025-09-19"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3065"
+    },
+    {
+      "ticker": "AWX",
+      "companyName": "AEM HOLDINGS LTD",
+      "listingDate": "2000-12-19",
+      "listingDates": [
+        "2000-12-19"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2648"
+    },
+    {
+      "ticker": "B61",
+      "companyName": "BUKIT SEMBAWANG ESTATES LTD",
+      "listingDate": "1968-07-29",
+      "listingDates": [
+        "1968-07-29"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2038"
+    },
+    {
+      "ticker": "BEC",
+      "companyName": "BRC ASIA LIMITED",
+      "listingDate": "2000-07-24",
+      "listingDates": [
+        "2000-07-24"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2684"
+    },
+    {
+      "ticker": "BN4",
+      "companyName": "KEPPEL LTD.",
+      "listingDate": "1980-10-24",
+      "listingDates": [
+        "1980-10-24"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2086"
+    },
+    {
+      "ticker": "BS6",
+      "companyName": "YANGZIJIANG SHIPBLDG HLDGS LTD",
+      "listingDate": "2007-04-18",
+      "listingDates": [
+        "2007-04-18"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2082"
+    },
+    {
+      "ticker": "BUOU",
+      "companyName": "FRASERS LOGISTICS & COMMERCIAL TRUST",
+      "listingDate": "2016-06-20",
+      "listingDates": [
+        "2016-06-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2778"
+    },
+    {
+      "ticker": "BVA",
+      "companyName": "TOP GLOVE CORPORATION BHD",
+      "listingDate": "2016-06-28",
+      "listingDates": [
+        "2016-06-28"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2779"
+    },
+    {
+      "ticker": "C2PU",
+      "companyName": "PARKWAYLIFE REIT",
+      "listingDate": "2007-08-23",
+      "listingDates": [
+        "2007-08-23"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2124"
+    },
+    {
+      "ticker": "C38U",
+      "companyName": "CAPITALAND INTEGRATED COMM TR",
+      "listingDate": "2002-07-17",
+      "listingDates": [
+        "2002-07-17"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1978"
+    },
+    {
+      "ticker": "C52",
+      "companyName": "COMFORTDELGRO CORPORATION LTD",
+      "listingDate": "2003-04-01",
+      "listingDates": [
+        "2003-04-01"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1749"
+    },
+    {
+      "ticker": "C6L",
+      "companyName": "SINGAPORE AIRLINES LTD",
+      "listingDate": "1985-12-18",
+      "listingDates": [
+        "1985-12-18"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2128"
+    },
+    {
+      "ticker": "CC3",
+      "companyName": "STARHUB LTD",
+      "listingDate": "2004-10-13",
+      "listingDates": [
+        "2004-10-13"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2101"
+    },
+    {
+      "ticker": "CJLU",
+      "companyName": "NETLINK NBN TRUST",
+      "listingDate": "2017-07-19",
+      "listingDates": [
+        "2017-07-19"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2817"
+    },
+    {
+      "ticker": "CY6U",
+      "companyName": "CAPITALAND INDIA TRUST",
+      "listingDate": "2007-08-01",
+      "listingDates": [
+        "2007-08-01"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2113"
+    },
+    {
+      "ticker": "D01",
+      "companyName": "DFI RETAIL GROUP HOLDINGS LIMITED",
+      "listingDate": "1991-02-20",
+      "listingDates": [
+        "1991-02-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1517"
+    },
+    {
+      "ticker": "D05",
+      "companyName": "DBS GROUP HOLDINGS LTD",
+      "listingDate": "1999-09-20",
+      "listingDates": [
+        "1999-09-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/991"
+    },
+    {
+      "ticker": "E5H",
+      "companyName": "GOLDEN AGRI-RESOURCES LTD",
+      "listingDate": "1999-07-09",
+      "listingDates": [
+        "1999-07-09"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2176"
+    },
+    {
+      "ticker": "EB5",
+      "companyName": "FIRST RESOURCES LIMITED",
+      "listingDate": "2007-12-10",
+      "listingDates": [
+        "2007-12-10"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2156"
+    },
+    {
+      "ticker": "EMI",
+      "companyName": "EMPERADOR INC.",
+      "listingDate": "2022-07-14",
+      "listingDates": [
+        "2022-07-14"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2964"
+    },
+    {
+      "ticker": "F03",
+      "companyName": "FOOD EMPIRE HOLDINGS LIMITED",
+      "listingDate": "2000-04-27",
+      "listingDates": [
+        "2000-04-27"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1574"
+    },
+    {
+      "ticker": "F17",
+      "companyName": "GUOCOLAND LIMITED",
+      "listingDate": "1978-11-14",
+      "listingDates": [
+        "1978-11-14"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1003"
+    },
+    {
+      "ticker": "F34",
+      "companyName": "WILMAR INTERNATIONAL LIMITED",
+      "listingDate": "2000-07-20",
+      "listingDates": [
+        "2000-07-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2025"
+    },
+    {
+      "ticker": "G07",
+      "companyName": "GREAT EASTERN HLDGS LTD",
+      "listingDate": "1999-11-29",
+      "listingDates": [
+        "1999-11-29"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1584"
+    },
+    {
+      "ticker": "G13",
+      "companyName": "GENTING SINGAPORE LIMITED",
+      "listingDate": "2005-12-12",
+      "listingDates": [
+        "2005-12-12"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1296"
+    },
+    {
+      "ticker": "G92",
+      "companyName": "CHINA AVIATION OIL(S) CORP LTD",
+      "listingDate": "2001-12-06",
+      "listingDates": [
+        "2001-12-06"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1994"
+    },
+    {
+      "ticker": "H02",
+      "companyName": "HAW PAR CORP LTD",
+      "listingDate": "1969-11-17",
+      "listingDates": [
+        "1969-11-17"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1014"
+    },
+    {
+      "ticker": "H13",
+      "companyName": "HO BEE LAND LIMITED",
+      "listingDate": "1999-12-02",
+      "listingDates": [
+        "1999-12-02"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1535"
+    },
+    {
+      "ticker": "H15",
+      "companyName": "HOTEL PROPERTIES LTD",
+      "listingDate": "1982-06-17",
+      "listingDates": [
+        "1982-06-17"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1251"
+    },
+    {
+      "ticker": "H22",
+      "companyName": "HONG LEONG ASIA LTD.",
+      "listingDate": "1998-03-06",
+      "listingDates": [
+        "1998-03-06"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1454"
+    },
+    {
+      "ticker": "H78",
+      "companyName": "HONGKONG LAND HOLDINGS LIMITED",
+      "listingDate": "1990-10-01",
+      "listingDates": [
+        "1990-10-01"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1330"
+    },
+    {
+      "ticker": "HMN",
+      "companyName": "CAPITALAND ASCOTT TRUST",
+      "listingDate": "2006-03-31",
+      "listingDates": [
+        "2006-03-31"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2891"
+    },
+    {
+      "ticker": "J36",
+      "companyName": "JARDINE MATHESON HOLDINGS LTD",
+      "listingDate": "1991-02-20",
+      "listingDates": [
+        "1991-02-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1327"
+    },
+    {
+      "ticker": "J69U",
+      "companyName": "FRASERS CENTREPOINT TRUST",
+      "listingDate": "2006-07-05",
+      "listingDates": [
+        "2006-07-05"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2023"
+    },
+    {
+      "ticker": "JYEU",
+      "companyName": "LENDLEASE GLOBAL COMMERCIAL REIT",
+      "listingDate": "2019-10-02",
+      "listingDates": [
+        "2019-10-02"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2887"
+    },
+    {
+      "ticker": "K71U",
+      "companyName": "KEPPEL REIT",
+      "listingDate": "2006-04-28",
+      "listingDates": [
+        "2006-04-28"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2006"
+    },
+    {
+      "ticker": "M44U",
+      "companyName": "MAPLETREE LOGISTICS TRUST",
+      "listingDate": "2005-07-28",
+      "listingDates": [
+        "2005-07-28"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1974"
+    },
+    {
+      "ticker": "ME8U",
+      "companyName": "MAPLETREE INDUSTRIAL TRUST",
+      "listingDate": "2010-10-21",
+      "listingDates": [
+        "2010-10-21"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2348"
+    },
+    {
+      "ticker": "N2IU",
+      "companyName": "MAPLETREE PANASIA COM TRUST",
+      "listingDate": "2011-04-27",
+      "listingDates": [
+        "2011-04-27"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2406"
+    },
+    {
+      "ticker": "NS8U",
+      "companyName": "HUTCHISON PORT HOLDINGS TRUST",
+      "listingDate": "2011-03-18",
+      "listingDates": [
+        "2011-03-18"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2400"
+    },
+    {
+      "ticker": "NTDU",
+      "companyName": "NTT DC REIT",
+      "listingDate": "2025-07-14",
+      "listingDates": [
+        "2025-07-14"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3054"
+    },
+    {
+      "ticker": "O5RU",
+      "companyName": "AIMS APAC REIT",
+      "listingDate": "2007-04-19",
+      "listingDates": [
+        "2007-04-19"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2425"
+    },
+    {
+      "ticker": "OU8",
+      "companyName": "CENTURION CORPORATION LIMITED",
+      "listingDate": "1995-01-26",
+      "listingDates": [
+        "1995-01-26",
+        "1998-10-28"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2419"
+    },
+    {
+      "ticker": "OV8",
+      "companyName": "SHENG SIONG GROUP LTD",
+      "listingDate": "2011-08-17",
+      "listingDates": [
+        "2011-08-17"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2421"
+    },
+    {
+      "ticker": "OYY",
+      "companyName": "PROPNEX LIMITED",
+      "listingDate": "2018-07-02",
+      "listingDates": [
+        "2018-07-02"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2847"
+    },
+    {
+      "ticker": "P40U",
+      "companyName": "STARHILL GLOBAL REIT",
+      "listingDate": "2005-09-20",
+      "listingDates": [
+        "2005-09-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1975"
+    },
+    {
+      "ticker": "P52",
+      "companyName": "PAN-UNITED CORPORATION LTD",
+      "listingDate": "1993-12-22",
+      "listingDates": [
+        "1993-12-22"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1211"
+    },
+    {
+      "ticker": "P7VU",
+      "companyName": "HUTCHISON PORT HOLDINGS TRUST",
+      "listingDate": "2011-03-18",
+      "listingDates": [
+        "2011-03-18"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2400"
+    },
+    {
+      "ticker": "P8Z",
+      "companyName": "BUMITAMA AGRI LTD.",
+      "listingDate": "2012-04-12",
+      "listingDates": [
+        "2012-04-12"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2448"
+    },
+    {
+      "ticker": "PCT",
+      "companyName": "PC PARTNER GROUP LIMITED",
+      "listingDate": "2024-11-15",
+      "listingDates": [
+        "2024-11-15"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3026"
+    },
+    {
+      "ticker": "Q0F",
+      "companyName": "IHH HEALTHCARE BERHAD",
+      "listingDate": "2012-07-25",
+      "listingDates": [
+        "2012-07-25"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2461"
+    },
+    {
+      "ticker": "Q5T",
+      "companyName": "FAR EAST HOSPITALITY TRUST",
+      "listingDate": "2012-08-27",
+      "listingDates": [
+        "2012-08-27"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2466"
+    },
+    {
+      "ticker": "S07",
+      "companyName": "SHANGRI-LA ASIA LIMITED",
+      "listingDate": "1999-09-15",
+      "listingDates": [
+        "1999-09-15"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1510"
+    },
+    {
+      "ticker": "S58",
+      "companyName": "SATS LTD.",
+      "listingDate": "2000-05-12",
+      "listingDates": [
+        "2000-05-12"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1581"
+    },
+    {
+      "ticker": "S59",
+      "companyName": "SIA ENGINEERING CO LTD",
+      "listingDate": "2000-05-12",
+      "listingDates": [
+        "2000-05-12"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1582"
+    },
+    {
+      "ticker": "S63",
+      "companyName": "SINGAPORE TECH ENGINEERING LTD",
+      "listingDate": "1997-12-08",
+      "listingDates": [
+        "1997-12-08"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1447"
+    },
+    {
+      "ticker": "S68",
+      "companyName": "SINGAPORE EXCHANGE LIMITED",
+      "listingDate": "2000-11-23",
+      "listingDates": [
+        "2000-11-23"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1637"
+    },
+    {
+      "ticker": "SEB",
+      "companyName": "STONEWEG EUROPE STAPLED TRUST",
+      "listingDate": "2017-11-30",
+      "listingDates": [
+        "2017-11-30"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3042"
+    },
+    {
+      "ticker": "SET",
+      "companyName": "STONEWEG EUROPE STAPLED TRUST",
+      "listingDate": "2017-11-30",
+      "listingDates": [
+        "2017-11-30"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3042"
+    },
+    {
+      "ticker": "T14",
+      "companyName": "TIANJIN PHARM DA REN TANG GRP",
+      "listingDate": "1997-06-27",
+      "listingDates": [
+        "1997-06-27"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1769"
+    },
+    {
+      "ticker": "T82U",
+      "companyName": "SUNTEC REAL ESTATE INV TRUST",
+      "listingDate": "2004-12-09",
+      "listingDates": [
+        "2004-12-09"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1976"
+    },
+    {
+      "ticker": "TQ5",
+      "companyName": "FRASERS PROPERTY LIMITED",
+      "listingDate": "2014-01-09",
+      "listingDates": [
+        "2014-01-09"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2563"
+    },
+    {
+      "ticker": "TS0U",
+      "companyName": "OUE REIT",
+      "listingDate": "2014-01-27",
+      "listingDates": [
+        "2014-01-27"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2566"
+    },
+    {
+      "ticker": "U06",
+      "companyName": "SINGAPORE LAND GROUP LTD",
+      "listingDate": "1971-03-17",
+      "listingDates": [
+        "1971-03-17"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1128"
+    },
+    {
+      "ticker": "U10",
+      "companyName": "UOB-KAY HIAN HOLDINGS LIMITED",
+      "listingDate": "2000-10-23",
+      "listingDates": [
+        "2000-10-23"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1635"
+    },
+    {
+      "ticker": "U11",
+      "companyName": "UNITED OVERSEAS BANK LIMITED",
+      "listingDate": "1970-07-20",
+      "listingDates": [
+        "1970-07-20"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1131"
+    },
+    {
+      "ticker": "U14",
+      "companyName": "UOL GROUP LIMITED",
+      "listingDate": "1964-09-04",
+      "listingDates": [
+        "1964-09-04"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1132"
+    },
+    {
+      "ticker": "U96",
+      "companyName": "SEMBCORP INDUSTRIES LTD",
+      "listingDate": "1998-10-05",
+      "listingDates": [
+        "1998-10-05"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1934"
+    },
+    {
+      "ticker": "UGS",
+      "companyName": "ULTRAGREEN.AI LIMITED",
+      "listingDate": "2025-12-03",
+      "listingDates": [
+        "2025-12-03"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3078"
+    },
+    {
+      "ticker": "ULG",
+      "companyName": "ULTRAGREEN.AI LIMITED",
+      "listingDate": "2025-12-03",
+      "listingDates": [
+        "2025-12-03"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/3078"
+    },
+    {
+      "ticker": "V03",
+      "companyName": "VENTURE CORPORATION LIMITED",
+      "listingDate": "1992-04-27",
+      "listingDates": [
+        "1992-04-27",
+        "1997-04-23"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1191"
+    },
+    {
+      "ticker": "VC2",
+      "companyName": "OLAM GROUP LIMITED",
+      "listingDate": "2022-03-16",
+      "listingDates": [
+        "2022-03-16"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2954"
+    },
+    {
+      "ticker": "W05",
+      "companyName": "WING TAI HOLDINGS LIMITED",
+      "listingDate": "1989-02-21",
+      "listingDates": [
+        "1989-02-21"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/1149"
+    },
+    {
+      "ticker": "Y92",
+      "companyName": "THAI BEVERAGE PUBLIC CO LTD",
+      "listingDate": "2006-05-30",
+      "listingDates": [
+        "2006-05-30"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2016"
+    },
+    {
+      "ticker": "Z25",
+      "companyName": "YANLORD LAND GROUP LIMITED",
+      "listingDate": "2006-06-22",
+      "listingDates": [
+        "2006-06-22"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2021"
+    },
+    {
+      "ticker": "Z74",
+      "companyName": "SINGTEL",
+      "listingDate": "1993-11-01",
+      "listingDates": [
+        "1993-11-01"
+      ],
+      "listingBoard": "MAINBOARD",
+      "sourceUrl": "https://links.sgx.com/1.0.0/corporate-information/2032"
+    }
+  ]
+}

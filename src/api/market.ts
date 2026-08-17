@@ -16,11 +16,20 @@ import { stateOfProfile } from "./chat";
 import type { CalculatedStateValue } from "../lib/bazi/schema-types";
 import { execFile } from "node:child_process";
 import { ROOT_DIR } from "./config";
-import { getAllStocks } from "../lib/investor/stock-database";
+import { getAllStocks, isResearchableStock, resolveCanonicalStock } from "../lib/investor/stock-database";
 import { loadSnapshot } from "../lib/market/market-data";
 import { yahooTicker } from "../lib/market/yahoo";
 import { getAssets } from "../lib/assets/asset-universe";
 import { INDICES, FX, FEATURED_ASSET_SYMBOLS } from "../lib/market/indices";
+import { getSecurityBirth, getSecurityEvents } from "../lib/research/security-event-repository";
+import type { ResearchReleaseUse } from "../lib/research/research-release-gate";
+
+const LEGACY_PERSONALIZED_PRODUCTION_MESSAGE =
+  "ฟังก์ชัน personalized รุ่นเดิมถูกปิดใน production ระหว่างย้ายไป Decision Profile, evidence gate และระบบกำกับที่ตรวจสอบได้";
+
+function legacyPersonalizedProductionBlocked(): boolean {
+  return process.env.NODE_ENV === "production";
+}
 
 /** อัปเดตข้อมูล (IPO/ราคา/ข่าว) — รันสคริปต์ backend แล้วคืน output ท้ายสุด */
 export function handleRefresh(kind: string): Promise<ApiResponse<unknown>> {
@@ -65,7 +74,7 @@ export async function handleIpo(q: Query): Promise<ApiResponse<unknown>> {
   if (!r.ok) return err(r.error ?? "ยังไม่มีข้อมูล IPO");
   const { classifyIpoElement, elementFitForUser } = await import("../lib/market/ipo-elements");
   let state: Awaited<ReturnType<typeof stateOfProfile>> | null = null;
-  const profile = loadUser(q.userId ?? "");
+  const profile = legacyPersonalizedProductionBlocked() ? null : loadUser(q.userId ?? "");
   if (profile) state = await stateOfProfile(profile);
   const rows = (r.data ?? []).map((e: { ticker?: string; name?: string; nameEn?: string; market?: string; country?: string; exchange?: string; ipoDate?: string | null; priceRange?: string; currency?: string; status?: string; business?: string; industry?: string }) => {
     const { element, reason } = classifyIpoElement(e as never);
@@ -84,6 +93,7 @@ export function handleAlmanac(q: Query): ApiResponse<unknown> {
 
 /** fortune ต้องมี profile (ดวงผู้ใช้) — scope: day/week/month · asset: stocks/land/ipo */
 export async function handleFortune(q: Query): Promise<ApiResponse<unknown>> {
+  if (legacyPersonalizedProductionBlocked()) return err(LEGACY_PERSONALIZED_PRODUCTION_MESSAGE);
   const profile = loadUser(q.userId ?? "guest");
   if (!profile) return err("ยังไม่มีโปรไฟล์ — ลงทะเบียนก่อน (POST /api/profile)");
   const state = await stateOfProfile(profile);
@@ -101,6 +111,7 @@ export async function handleFortune(q: Query): Promise<ApiResponse<unknown>> {
 }
 
 export async function handleReport(q: Query): Promise<ApiResponse<unknown>> {
+  if (legacyPersonalizedProductionBlocked()) return err(LEGACY_PERSONALIZED_PRODUCTION_MESSAGE);
   const ticker = String(q.ticker ?? "").toUpperCase();
   if (!ticker) return err("ต้องระบุ ticker");
   const profile = loadUser(q.userId ?? "guest");
@@ -131,7 +142,7 @@ export function handleSearch(q: Query): ApiResponse<unknown> {
 
 /** สินทรัพย์นอกหุ้น × ดวง (ต้องมี profile) */
 export async function handleAssets(q: Query): Promise<ApiResponse<unknown>> {
-  const profile = loadUser(q.userId ?? "");
+  const profile = legacyPersonalizedProductionBlocked() ? null : loadUser(q.userId ?? "");
   const state = profile ? await stateOfProfile(profile) : undefined;
   const { getAssetVerdicts } = await import("../lib/chat/tools");
   const res = getAssetVerdicts(state, { type: q.type ? String(q.type) : undefined, limit: Number(q.limit ?? 200) });
@@ -141,6 +152,7 @@ export async function handleAssets(q: Query): Promise<ApiResponse<unknown>> {
 
 /** จัดสรรพอร์ตตามดวง (ต้องมี profile) */
 export async function handlePortfolio(q: Query): Promise<ApiResponse<unknown>> {
+  if (legacyPersonalizedProductionBlocked()) return err(LEGACY_PERSONALIZED_PRODUCTION_MESSAGE);
   const profile = loadUser(q.userId ?? "guest");
   if (!profile) return err("ยังไม่มีโปรไฟล์ — ลงทะเบียนก่อน (POST /api/profile)");
   const state = await stateOfProfile(profile);
@@ -160,7 +172,7 @@ export async function handleStocks(q: Query): Promise<ApiResponse<unknown>> {
   const countryIn = q.country ?? "";
   // ดวงผู้ใช้ (ถ้ามี) — เทียร์แบบ personal (fit ตรงดวง) ถ้าไม่มี = เทียร์พื้นฐานล้วน
   let state: Awaited<ReturnType<typeof stateOfProfile>> | null = null;
-  if (q.userId) {
+  if (!legacyPersonalizedProductionBlocked() && q.userId) {
     const profile = loadUser(q.userId);
     if (profile) {
       try {
@@ -170,7 +182,8 @@ export async function handleStocks(q: Query): Promise<ApiResponse<unknown>> {
       }
     }
   }
-  const all0 = getAllStocks();
+  const includeInactive = String(q.includeInactive ?? "").toLowerCase() === "true";
+  const all0 = getAllStocks().filter((stock) => includeInactive || isResearchableStock(stock));
   const fundCache = loadFundamentalsCache();
   // นับรวม (สำหรับ UI กรอง) — ทั้งหมด ไม่กรอง
   const elementCounts: Record<string, number> = {};
@@ -192,27 +205,38 @@ export async function handleStocks(q: Query): Promise<ApiResponse<unknown>> {
       const fit: TierInput["fit"] = state ? elementFitForUser(state, s.primaryElement) : null;
       const bf = f ? buffettScore(buffettChecks(f as never)) : null;
       const roe = f ? f.roe ?? null : null;
-      const tiered = classifyStockTier({ fit, roe, buffett: bf, capTier: s.tier, changePct: md?.changePct ?? null });
-      return { ticker: s.ticker, name: s.name, market: s.market, country: s.country, sector: s.sector, element: s.primaryElement, tier: s.tier, riskTier: s.riskTier ?? "medium", stockTier: tiered.tier, stockTierScore: tiered.score, price: md?.price ?? null, changePct: md?.changePct ?? null };
+      const tiered = legacyPersonalizedProductionBlocked()
+        ? null
+        : classifyStockTier({ fit, roe, buffett: bf, capTier: s.tier, changePct: md?.changePct ?? null });
+      return { ticker: s.ticker, name: s.name, market: s.market, country: s.country, sector: s.sector, element: s.primaryElement, tier: s.tier, riskTier: s.riskTier ?? "medium", securityStatus: s.securityStatus ?? "active", successorTicker: s.successorTicker ?? null, stockTier: tiered?.tier ?? null, stockTierScore: tiered?.score ?? null, price: md?.price ?? null, changePct: md?.changePct ?? null };
     });
   const marketCounts: Record<string, number> = {};
-  for (const s of getAllStocks()) marketCounts[s.market] = (marketCounts[s.market] ?? 0) + 1;
-  return ok({ count: all.length, total: getAllStocks().length, markets: marketCounts, elementCounts, countries, stocks: all.slice(0, Number(q.limit ?? 200)) });
+  for (const s of all0) marketCounts[s.market] = (marketCounts[s.market] ?? 0) + 1;
+  return ok({ count: all.length, total: all0.length, inactiveExcluded: includeInactive ? 0 : getAllStocks().length - all0.length, markets: marketCounts, elementCounts, countries, stocks: all.slice(0, Number(q.limit ?? 200)) });
 }
 
 /** รายละเอียดหุ้นตัวเดียว (ประกอบกิจการอะไร + ราคาวันนี้ + พื้นฐานถ้ามี) */
 export function handleStockDetail(q: Query): ApiResponse<unknown> {
   const ticker = String(q.ticker ?? "").toUpperCase();
   const market = q.market ? String(q.market) : "";
+  const catalog = getAllStocks();
   // ticker ซ้ำข้ามตลาดได้ (FPT@HOSE vs FPT@SET) → ต้อง match ticker+market (หรือตัวแรกถ้าไม่ระบุ)
-  const stock = market
-    ? getAllStocks().find((s) => s.ticker.toUpperCase() === ticker && s.market === market)
-    : getAllStocks().find((s) => s.ticker.toUpperCase() === ticker);
-  if (!stock) return err(`ไม่พบหุ้น ${ticker}${market ? ` (${market})` : ""} ในคลัง`);
+  const matchedStock = market
+    ? catalog.find((s) => s.ticker.toUpperCase() === ticker && s.market === market)
+    : catalog.find((s) => s.ticker.toUpperCase() === ticker);
+  if (!matchedStock) return err(`ไม่พบหุ้น ${ticker}${market ? ` (${market})` : ""} ในคลัง`);
+  const stock = resolveCanonicalStock(matchedStock, catalog);
   const snap = loadSnapshot();
   const yt = yahooTicker(stock.ticker, stock.market) ?? "";
   const md = snap?.quotes[yt];
   const fund = loadFundamentalsCache().get(yt);
+  const securityBirth = getSecurityBirth(stock.market, stock.ticker);
+  const securityEvents = getSecurityEvents(securityBirth.securityId);
+  const companyOrigin = securityEvents.find((event) => event.kind === "merger_successor") ?? securityEvents.find((event) => event.kind === "incorporation") ?? null;
+  const exchangeAdmission = securityEvents.find((event) => event.kind === "first_trade")
+    ?? securityEvents.find((event) => event.kind === "first_trading_day")
+    ?? securityEvents.find((event) => event.kind === "exchange_admission")
+    ?? null;
   return ok({
     ticker: stock.ticker,
     name: stock.name,
@@ -220,11 +244,36 @@ export function handleStockDetail(q: Query): ApiResponse<unknown> {
     market: stock.market,
     country: stock.country,
     currency: stock.currency,
+    securityStatus: stock.securityStatus ?? "active",
+    researchable: isResearchableStock(stock),
+    successorTicker: stock.successorTicker ?? null,
+    statusEffectiveDate: stock.statusEffectiveDate ?? null,
+    statusReason: stock.statusReason ?? null,
+    statusEvidence: stock.statusEvidence ?? null,
     sector: stock.sector,
     business: stock.business,
     theme: stock.theme,
     growthStage: stock.growthStage,
-    listedDate: stock.listedDate,
+    companyFoundedDate: companyOrigin?.localDate ?? null,
+    companyOriginKind: companyOrigin?.kind ?? null,
+    listedDate: exchangeAdmission?.localDate ?? stock.listedDate,
+    securityBirth: {
+      grade: securityBirth.grade,
+      status: securityBirth.status,
+      calculationMode: securityBirth.calculationMode,
+      timeKnown: securityBirth.timeKnown,
+      scenarioCount: securityBirth.scenarioCount,
+      limitations: securityBirth.limitations,
+    },
+    securityEvents: securityEvents.map((event) => ({
+      kind: event.kind,
+      localDate: event.localDate,
+      localTime: event.localTime,
+      timePrecision: event.timePrecision,
+      sourceName: event.evidence.sourceName,
+      sourceUrl: event.evidence.sourceUrl ?? null,
+      verification: event.evidence.verification,
+    })),
     elements: stock.elements,
     primaryElement: stock.primaryElement,
     elementReason: stock.elementReason,
@@ -292,6 +341,7 @@ export async function handleWatchlist(q: Query): Promise<ApiResponse<unknown>> {
 
 /** แดชบอร์ดแนะนำส่วนตัว (ดิถี/ธาตุ/เงินเร็ว-เงินเย็น) — ต้องมี profile */
 export async function handlePersonal(q: Query): Promise<ApiResponse<unknown>> {
+  if (legacyPersonalizedProductionBlocked()) return err(LEGACY_PERSONALIZED_PRODUCTION_MESSAGE);
   const profile = loadUser(q.userId ?? "");
   if (!profile) return err("ยังไม่มีโปรไฟล์ — กรอกวันเกิดก่อน (หน้าโปรไฟล์)");
   const state = await stateOfProfile(profile);
@@ -301,12 +351,165 @@ export async function handlePersonal(q: Query): Promise<ApiResponse<unknown>> {
 
 /** พอร์ตเด่นรายเดือน (สไตล์ ProPicks AI) — ต้องมี profile (ดวง) */
 export async function handlePicks(q: Query): Promise<ApiResponse<unknown>> {
+  if (process.env.NODE_ENV === "production" && process.env.ENABLE_LEGACY_PERSONALIZED_PICKS !== "1") {
+    return err("พอร์ตเด่นเฉพาะบุคคลถูกพักใน production ระหว่างตรวจขอบเขตกฎหมาย — ใช้ /api/research สำหรับข้อมูลวิจัยรายหลักทรัพย์");
+  }
   const profile = loadUser(q.userId ?? "");
   if (!profile) return err("ยังไม่มีโปรไฟล์ — กรอกวันเกิดก่อน (หน้าโปรไฟล์)");
   const state = await stateOfProfile(profile);
   const { buildMonthlyPicks } = await import("../lib/picks/monthly-picks");
   const market = (q.market ?? "TH") as "TH" | "US" | "MID";
   return ok(buildMonthlyPicks(state, market, Number(q.limit ?? 30), (q.unlock as "free" | "pro" | "premium" | undefined) ?? "free"));
+}
+
+/**
+ * Research snapshot — market facts and pattern are objective; optional BaZi is
+ * returned as a separate symbolic block and never changes the market score.
+ */
+export type ResearchRequestContext = {
+  requestKind?: "preview" | "commit";
+  releaseUse?: ResearchReleaseUse;
+  environment?: "development" | "production";
+  /** File persistence is a local preview adapter, never the production audit backend. */
+  snapshotRoot?: string;
+  auditRoot?: string;
+  generatedAt?: string;
+  auditReady?: boolean;
+  /** Server-derived approvals only; never accept these gates from client input. */
+  satisfiedGatesByDataset?: Readonly<Record<string, readonly import("../lib/trust/data-rights-registry").DataRightGate[]>>;
+};
+
+export async function handleResearch(
+  q: Query,
+  context: ResearchRequestContext = {},
+): Promise<ApiResponse<unknown>> {
+  if (process.env.NODE_ENV === "production" && process.env.ENABLE_GENERIC_RESEARCH_DOSSIER !== "1") {
+    return err("research dossier ยังไม่เปิดใน production จนกว่าจะยืนยันสิทธิ์ข้อมูลและผ่าน legal review");
+  }
+  const environment = context.environment ?? (process.env.NODE_ENV === "production" ? "production" : "development");
+  const requestKind = context.requestKind ?? "preview";
+  const releaseUse = context.releaseUse ?? "internal_research";
+  const ticker = String(q.ticker ?? "").trim().toUpperCase();
+  if (!ticker) return err("ต้องระบุ ticker");
+  try {
+    let baziState: CalculatedStateValue | null = null;
+    if (String(q.includeBazi ?? "") === "1") {
+      const profile = loadUser(String(q.userId ?? ""));
+      if (!profile) return err("การแสดงความเข้ากันเชิงสัญลักษณ์ต้องมีโปรไฟล์ผู้ใช้");
+      baziState = await stateOfProfile(profile);
+    }
+    const [{ buildStockResearchSnapshot }, { createResearchSnapshot }, { assessResearchRelease }] = await Promise.all([
+      import("../lib/research/research-service"),
+      import("../lib/research/research-snapshot"),
+      import("../lib/research/research-release-gate"),
+    ]);
+    const assessment = buildStockResearchSnapshot({ ticker, market: q.market, baziState });
+    const snapshot = createResearchSnapshot(assessment, context.generatedAt);
+    const releaseGate = assessResearchRelease(assessment, {
+      use: releaseUse,
+      environment,
+      auditReady: context.auditReady,
+      satisfiedGatesByDataset: context.satisfiedGatesByDataset,
+    });
+    if (environment === "production" && releaseUse !== "internal_research" && !releaseGate.allowed) {
+      return err("ยังไม่อนุญาตให้เผยแพร่ผลวิจัยนี้: " + releaseGate.blockers.join("; "));
+    }
+
+    let persistence: {
+      committed: boolean;
+      snapshotId: string | null;
+      auditEventId: string | null;
+    } = { committed: false, snapshotId: null, auditEventId: null };
+    if (requestKind === "commit") {
+      if (environment === "production") {
+        return err("production commit ถูกปิดไว้จนกว่าจะเชื่อม transactional snapshot และ audit backend");
+      }
+      const [{ saveResearchSnapshot }, { appendAuditEvent }, { stableSha256 }] = await Promise.all([
+        import("../lib/research/research-snapshot-store"),
+        import("../lib/trust/audit-log"),
+        import("../lib/research/canonical-json"),
+      ]);
+      saveResearchSnapshot(snapshot, context.snapshotRoot);
+      const auditEvent = appendAuditEvent(
+        `research-${snapshot.securityId}`,
+        {
+          occurredAt: snapshot.createdAt,
+          actor: "system",
+          scope: "research",
+          action: "commit_research_snapshot",
+          resourceId: snapshot.snapshotId,
+          versions: [
+            { component: "researchModel", version: snapshot.versions.researchModel },
+            { component: "decisionProtocol", version: snapshot.versions.decisionProtocol },
+            ...(snapshot.versions.patternModel
+              ? [{ component: "patternModel", version: snapshot.versions.patternModel }]
+              : []),
+          ],
+          inputHash: stableSha256({ ticker, market: q.market ?? null, includeBazi: Boolean(baziState) }),
+          outputHash: snapshot.contentHash,
+          evidenceIds: assessment.evidence.map((item) => item.id),
+          outcome: "success",
+          reasons: [],
+          metadata: {
+            releaseUse,
+            environment,
+            releaseGateVersion: releaseGate.gateVersion,
+          },
+        },
+        context.auditRoot,
+      );
+      persistence = {
+        committed: true,
+        snapshotId: snapshot.snapshotId,
+        auditEventId: auditEvent.eventId,
+      };
+    }
+    return ok({
+      ...assessment,
+      decision: snapshot.decision,
+      releaseGate,
+      persistence,
+      snapshot: {
+        schemaVersion: snapshot.schemaVersion,
+        snapshotId: snapshot.snapshotId,
+        createdAt: snapshot.createdAt,
+        contentHash: snapshot.contentHash,
+        versions: snapshot.versions,
+        sourceAsOf: snapshot.sourceAsOf,
+      },
+    });
+  } catch (error) {
+    return err(`research error: ${(error as Error).message}`);
+  }
+}
+
+/** Generic, non-personalized research queue. Production stays gated until data licence + legal review. */
+export async function handleResearchScreen(q: Query): Promise<ApiResponse<unknown>> {
+  if (process.env.NODE_ENV === "production" && process.env.ENABLE_GENERIC_RESEARCH_SCREEN !== "1") {
+    return err("research screen ยังไม่เปิดใน production จนกว่าจะยืนยันสิทธิ์ข้อมูลและผ่าน legal review");
+  }
+  try {
+    const aliases: Record<string, string[]> = {
+      TH: ["SET", "MAI"],
+      US: ["NYSE", "NASDAQ", "NYSE/NASDAQ"],
+      HK: ["HKEX"],
+      JP: ["TSE"],
+    };
+    const marketInput = String(q.market ?? "").toUpperCase();
+    const markets = marketInput ? aliases[marketInput] ?? marketInput.split(",").map((item) => item.trim()).filter(Boolean) : [];
+    const { buildGenericResearchScreen } = await import("../lib/research/research-screen");
+    const screen = buildGenericResearchScreen({
+      markets,
+      limit: Number(q.limit ?? 30),
+      includeRiskReview: String(q.includeRiskReview ?? "") === "1",
+    });
+    if (process.env.NODE_ENV === "production" && !screen.productionDataAllowed) {
+      return err("research screen ยังใช้ข้อมูล development-only จึงไม่อนุญาตให้เผยแพร่ใน production");
+    }
+    return ok(screen);
+  } catch (error) {
+    return err(`research screen error: ${(error as Error).message}`);
+  }
 }
 
 /** Export CSV ให้ซินแสตรวจธาตุ — kind=assets (สินทรัพย์ 113) / kind=thai-stocks */
@@ -329,6 +532,7 @@ export function handleExport(q: Query): { ok: true; data: string; filename: stri
 
 /** PDF รายงานสไตล์สถาบัน — คืน Buffer (ดาวน์โหลด .pdf) */
 export async function handleReportPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  if (legacyPersonalizedProductionBlocked()) return { ok: false, error: LEGACY_PERSONALIZED_PRODUCTION_MESSAGE };
   const ticker = String(q.ticker ?? "").toUpperCase();
   if (!ticker) return { ok: false, error: "ต้องระบุ ticker" };
   const profile = loadUser(q.userId ?? "guest");
@@ -343,6 +547,7 @@ export async function handleReportPdf(q: Query): Promise<{ ok: true; data: Buffe
 
 /** PDF รายงานคู่ดวงฉบับเต็ม (userId → ดวง → ดาวน์โหลด .pdf) */
 export async function handleFullReportPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  if (legacyPersonalizedProductionBlocked()) return { ok: false, error: LEGACY_PERSONALIZED_PRODUCTION_MESSAGE };
   const profile = loadUser(String(q.userId ?? ""));
   if (!profile) return { ok: false, error: "ไม่มีโปรไฟล์ — ต้องบันทึกวันเกิดก่อน" };
   try {
@@ -372,6 +577,7 @@ async function stateFromBirth(q: Query): Promise<CalculatedStateValue | null> {
 
 /** การ์ดตัวตนฟรี (สาธารณะ — demo หน้าแรก) — กรอกวันเกิด → PDF 1 หน้า */
 export async function handleCardPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  if (legacyPersonalizedProductionBlocked()) return { ok: false, error: LEGACY_PERSONALIZED_PRODUCTION_MESSAGE };
   const state = await stateFromBirth(q);
   if (!state) return { ok: false, error: "ต้องระบุ birthDate (YYYY-MM-DD)" };
   try {
@@ -384,6 +590,7 @@ export async function handleCardPdf(q: Query): Promise<{ ok: true; data: Buffer 
 
 /** สร้างสินค้า PDF — dev เปิด preview; production paid tier ต้องมี entitlement ที่ผูกกับโปรไฟล์ */
 export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buffer } | { ok: false; error: string }> {
+  if (legacyPersonalizedProductionBlocked()) return { ok: false, error: LEGACY_PERSONALIZED_PRODUCTION_MESSAGE };
   try {
     const kind = String(q.kind ?? "full");
     if (kind === "card") {
@@ -421,6 +628,7 @@ export async function handleProductPdf(q: Query): Promise<{ ok: true; data: Buff
 
 /** ข้อมูลการ์ดตัวตน (หน้า /demo — แสดง HTML preview น่าแชร์ + ดาวน์โหลด PDF) */
 export async function handleCardData(q: Query): Promise<ApiResponse<unknown>> {
+  if (legacyPersonalizedProductionBlocked()) return err(LEGACY_PERSONALIZED_PRODUCTION_MESSAGE);
   const state = await stateFromBirth(q);
   if (!state) return err("ต้องระบุ birthDate (YYYY-MM-DD)");
   try {
@@ -455,6 +663,7 @@ export async function handleCardData(q: Query): Promise<ApiResponse<unknown>> {
 
 /** ข้อมูลรายงาน HTML (หน้า /report/print — พิมพ์ PDF คุณภาพสูงผ่านเบราว์เซอร์) */
 export async function handleReportHtmlData(q: Query): Promise<ApiResponse<unknown>> {
+  if (legacyPersonalizedProductionBlocked()) return err(LEGACY_PERSONALIZED_PRODUCTION_MESSAGE);
   const state = await stateFromBirth(q);
   if (!state) return err("ต้องระบุ birthDate (YYYY-MM-DD)");
   try {

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "scope": "Exact issuer-name bridges for current US venue identity only; no listing date is claimed.",
+  "records": [
+    {
+      "catalogSecurityId": "NYSE/NASDAQ:SLB",
+      "catalogTicker": "SLB",
+      "catalogMarket": "NYSE/NASDAQ",
+      "catalogName": "Schlumberger",
+      "officialSecurityName": "SLB Limited Common Shares",
+      "identityEvidenceSource": "SLB Investor FAQs — legal entity name and NYSE ticker",
+      "identityEvidenceUrl": "https://investorcenter.slb.com/investor-resources/investor-faqs/"
+    },
+    {
+      "catalogSecurityId": "NYSE/NASDAQ:WAB",
+      "catalogTicker": "WAB",
+      "catalogMarket": "NYSE/NASDAQ",
+      "catalogName": "Wabtec",
+      "officialSecurityName": "Westinghouse Air Brake Technologies Corporation Common Stock",
+      "identityEvidenceSource": "Wabtec issuer filing — legal name and doing-business-as identity",
+      "identityEvidenceUrl": "https://ir.wabteccorp.com/static-files/cc7c7fd9-f979-4fb7-a1a2-dde6956111a3"
+    }
+  ]
+}

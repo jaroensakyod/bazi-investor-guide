@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-08-10T07:27:44.353Z",
+  "firstBulletinId": 1,
+  "lastBulletinId": 2397,
+  "processedBulletinCount": 2397,
+  "sourcePolicy": {
+    "authority": "exchange",
+    "sourceName": "TSX Exchange Bulletins — New Company Listings",
+    "sourceUrl": "https://www.tsx.com/en/news/new-company-listings",
+    "verification": "verified",
+    "displayRights": "unknown",
+    "commercialUse": "BLOCKED_PENDING_TSX_TERMS_AND_DATA_RIGHTS_REVIEW",
+    "rawHtmlStored": false,
+    "dateSemantics": "exact-security Listing date; Posted for trading date retained separately when stated",
+    "identityRule": "exact normalized symbol plus issuer-name identity overlap"
+  },
+  "records": [
+    {
+      "bulletinId": 594,
+      "symbol": "ATZ",
+      "issuerName": "Aritzia Inc.",
+      "listingDate": "2016-09-30",
+      "postedForTradingDate": "2016-10-03",
+      "sourceTitle": "Aritzia Inc. (ATZ) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=594",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 671,
+      "symbol": "IPCO",
+      "issuerName": "International Petroleum Corporation",
+      "listingDate": "2017-04-21",
+      "postedForTradingDate": "2017-04-24",
+      "sourceTitle": "International Petroleum Corporation (IPCO) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=671",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 705,
+      "symbol": "JWEL",
+      "issuerName": "Jamieson Wellness Inc.",
+      "listingDate": "2017-07-06",
+      "postedForTradingDate": "2017-07-07",
+      "sourceTitle": "Jamieson Wellness Inc. (JWEL) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=705",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 745,
+      "symbol": "ERO",
+      "issuerName": "Ero Copper Corp.",
+      "listingDate": "2017-10-18",
+      "postedForTradingDate": "2017-10-19",
+      "sourceTitle": "Ero Copper Corp. (ERO) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=745",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 957,
+      "symbol": "LSPD",
+      "issuerName": "Lightspeed POS Inc.",
+      "listingDate": "2019-03-14",
+      "postedForTradingDate": "2019-03-15",
+      "sourceTitle": "Lightspeed POS Inc. (LSPD) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=957",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1087,
+      "symbol": "GFL",
+      "issuerName": "GFL Environmental Inc.",
+      "listingDate": "2020-03-04",
+      "postedForTradingDate": "2020-03-05",
+      "sourceTitle": "GFL Environmental Inc. (GFL) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1087",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1190,
+      "symbol": "TPZ",
+      "issuerName": "Topaz Energy Corp.",
+      "listingDate": "2020-10-23",
+      "postedForTradingDate": "2020-10-26",
+      "sourceTitle": "Topaz Energy Corp. (TPZ) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1190",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1296,
+      "symbol": "MDA",
+      "issuerName": "MDA Ltd.",
+      "listingDate": "2021-04-06",
+      "postedForTradingDate": "2021-04-07",
+      "sourceTitle": "MDA Ltd. (MDA) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1296",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1329,
+      "symbol": "TFPM",
+      "issuerName": "Triple Flag Precious Metals Corp.",
+      "listingDate": "2021-05-25",
+      "postedForTradingDate": "2021-05-26",
+      "sourceTitle": "Triple Flag Precious Metals Corp. (TFPM, TFPM.U) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1329",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1361,
+      "symbol": "PET",
+      "issuerName": "Pet Valu Holdings Ltd.",
+      "listingDate": "2021-06-29",
+      "postedForTradingDate": "2021-06-30",
+      "sourceTitle": "Pet Valu Holdings Ltd. (PET) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1361",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1443,
+      "symbol": "DFY",
+      "issuerName": "Definity Financial Corporation",
+      "listingDate": "2021-11-22",
+      "postedForTradingDate": "2021-11-23",
+      "sourceTitle": "Definity Financial Corporation (DFY) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1443",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    },
+    {
+      "bulletinId": 1521,
+      "symbol": "BLCO",
+      "issuerName": "Bausch + Lomb Corporation",
+      "listingDate": "2022-05-09",
+      "postedForTradingDate": "2022-05-10",
+      "sourceTitle": "Bausch + Lomb Corporation (BLCO) To Trade On Toronto Stock Exchange",
+      "sourceUrl": "https://www.tsx.com/en/news/new-company-listings?id=1521",
+      "retrievedAt": "2026-08-10T07:27:44.353Z"
+    }
+  ],
+  "summary": {
+    "catalog": 400,
+    "lastBulletinId": 2397,
+    "processedBulletinCount": 2397,
+    "exactTargetRecords": 12,
+    "matched": 12,
+    "unmatched": 388,
+    "ambiguous": 0,
+    "invalid": 0
+  }
+}

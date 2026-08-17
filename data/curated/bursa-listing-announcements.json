@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T11:00:00.000Z",
+  "retrievedAt": "2026-08-09T11:00:00.000Z",
+  "sourceName": "Bursa Malaysia Company Announcements",
+  "records": [
+    {
+      "ticker": "ECOSHOP",
+      "companyName": "ECO-SHOP MARKETING BERHAD",
+      "stockCode": "5337",
+      "isin": "MYL5337OO000",
+      "listingDate": "2025-05-23",
+      "announcedAt": "2025-05-22",
+      "referenceNumber": "IO2-22052025-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3555247"
+    },
+    {
+      "ticker": "UMSINT",
+      "companyName": "UMS INTEGRATION LIMITED",
+      "stockCode": "5340",
+      "isin": "SG1J94892465",
+      "listingDate": "2025-08-01",
+      "announcedAt": "2025-07-29",
+      "referenceNumber": "IO2-28072025-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3575159"
+    },
+    {
+      "ticker": "SUNMED",
+      "companyName": "SUNWAY HEALTHCARE HOLDINGS BERHAD",
+      "stockCode": "5555",
+      "isin": "MYL5555OO007",
+      "listingDate": "2026-03-18",
+      "announcedAt": "2026-03-17",
+      "referenceNumber": "IO2-12032026-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3646539"
+    },
+    {
+      "ticker": "MTTSL",
+      "companyName": "MTT SHIPPING AND LOGISTICS BERHAD",
+      "stockCode": "5352",
+      "isin": "MYL5352OO009",
+      "listingDate": "2026-04-21",
+      "announcedAt": "2026-04-20",
+      "referenceNumber": "IO2-20042026-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3656444"
+    },
+    {
+      "ticker": "SKYECHIP",
+      "companyName": "SKYECHIP BERHAD",
+      "stockCode": "5357",
+      "isin": "MYL5357OO008",
+      "listingDate": "2026-05-20",
+      "announcedAt": "2026-05-18",
+      "referenceNumber": "IO2-18052026-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3666715"
+    },
+    {
+      "ticker": "STRATUS",
+      "companyName": "STRATUS GLOBAL HOLDINGS BERHAD",
+      "stockCode": "5356",
+      "isin": "MYL5356OO000",
+      "listingDate": "2026-07-21",
+      "announcedAt": "2026-07-20",
+      "referenceNumber": "IO2-20072026-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3686822"
+    }
+  ],
+  "tickerAliases": [
+    {
+      "ticker": "AAGB",
+      "companyName": "AIRASIA GROUP BERHAD",
+      "previousTicker": "AAX",
+      "previousCompanyName": "AIRASIA X BERHAD",
+      "stockCode": "5238",
+      "effectiveDate": "2026-07-14",
+      "announcedAt": "2026-07-13",
+      "referenceNumber": "ILC-10072026-00001",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3684755"
+    },
+    {
+      "ticker": "ZETRIX",
+      "companyName": "ZETRIX AI BERHAD",
+      "previousTicker": "MYEG",
+      "previousCompanyName": "MY E.G. SERVICES BERHAD",
+      "stockCode": "0138",
+      "effectiveDate": "2025-07-03",
+      "announcedAt": "2025-06-30",
+      "referenceNumber": "ILC-30062025-00010",
+      "announcementUrl": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3566970"
+    }
+  ]
+}

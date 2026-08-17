@@ -1,0 +1,2467 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-08-08T12:49:55.484Z",
+  "sourceRowCount": {
+    "hose": 404,
+    "hnx": 299
+  },
+  "records": [
+    {
+      "symbol": "AAA",
+      "exchange": "HOSE",
+      "listingDate": "2016-10-06",
+      "isin": "VN000000AAA4",
+      "figi": "BBG000BB42R4"
+    },
+    {
+      "symbol": "ACB",
+      "exchange": "HOSE",
+      "listingDate": "2020-11-20",
+      "isin": "VN000000ACB8",
+      "figi": "BBG000GYWBW2"
+    },
+    {
+      "symbol": "ACG",
+      "exchange": "HOSE",
+      "listingDate": "2022-08-25",
+      "isin": "VN000000ACG7",
+      "figi": "BBG011Z1FN17"
+    },
+    {
+      "symbol": "AGG",
+      "exchange": "HOSE",
+      "listingDate": "2019-12-17",
+      "isin": "VN000000AGG8",
+      "figi": "BBG00R4CKMT7"
+    },
+    {
+      "symbol": "AGR",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-02",
+      "isin": "VN000000AGR5",
+      "figi": "BBG000PZH6N7"
+    },
+    {
+      "symbol": "AMV",
+      "exchange": "HNX",
+      "listingDate": "2009-12-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "ANV",
+      "exchange": "HOSE",
+      "listingDate": "2007-11-28",
+      "isin": "VN000000ANV3",
+      "figi": "BBG000P3VMH4"
+    },
+    {
+      "symbol": "API",
+      "exchange": "HNX",
+      "listingDate": "2010-09-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "APS",
+      "exchange": "HNX",
+      "listingDate": "2010-04-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "ASG",
+      "exchange": "HOSE",
+      "listingDate": "2020-07-17",
+      "isin": "VN000000ASG3",
+      "figi": "BBG00W7CVXM4"
+    },
+    {
+      "symbol": "AST",
+      "exchange": "HOSE",
+      "listingDate": "2017-12-26",
+      "isin": "VN000000AST6",
+      "figi": "BBG00JM8H178"
+    },
+    {
+      "symbol": "BAF",
+      "exchange": "HOSE",
+      "listingDate": "2021-11-24",
+      "isin": "VN000000BAF1",
+      "figi": "BBG013T7PJ15"
+    },
+    {
+      "symbol": "BCC",
+      "exchange": "HNX",
+      "listingDate": "2006-11-24",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "BCF",
+      "exchange": "HNX",
+      "listingDate": "2020-03-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "BCM",
+      "exchange": "HOSE",
+      "listingDate": "2020-07-31",
+      "isin": "VN000000BCM3",
+      "figi": "BBG00K26M6H3"
+    },
+    {
+      "symbol": "BFC",
+      "exchange": "HOSE",
+      "listingDate": "2015-08-27",
+      "isin": "VN000000BFC7",
+      "figi": "BBG0017Z0D76"
+    },
+    {
+      "symbol": "BHN",
+      "exchange": "HOSE",
+      "listingDate": "2016-12-30",
+      "isin": "VN000000BHN0",
+      "figi": "BBG00F335DJ2"
+    },
+    {
+      "symbol": "BIC",
+      "exchange": "HOSE",
+      "listingDate": "2011-06-20",
+      "isin": "VN000000BIC1",
+      "figi": "BBG001YSZ884"
+    },
+    {
+      "symbol": "BID",
+      "exchange": "HOSE",
+      "listingDate": "2014-01-16",
+      "isin": "VN000000BID9",
+      "figi": "BBG002CV4JP0"
+    },
+    {
+      "symbol": "BKC",
+      "exchange": "HNX",
+      "listingDate": "2009-08-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "BMI",
+      "exchange": "HOSE",
+      "listingDate": "2008-04-11",
+      "isin": "VN000000BMI0",
+      "figi": "BBG000QFQKS4"
+    },
+    {
+      "symbol": "BMP",
+      "exchange": "HOSE",
+      "listingDate": "2006-06-12",
+      "isin": "VN000000BMP5",
+      "figi": "BBG000PV15F4"
+    },
+    {
+      "symbol": "BNA",
+      "exchange": "HNX",
+      "listingDate": "2020-10-12",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "BSI",
+      "exchange": "HOSE",
+      "listingDate": "2011-07-13",
+      "isin": "VN000000BSI7",
+      "figi": "BBG001WRYLB6"
+    },
+    {
+      "symbol": "BSR",
+      "exchange": "HOSE",
+      "listingDate": "2024-12-12",
+      "isin": "VN000000BSR8",
+      "figi": "BBG00K648R20"
+    },
+    {
+      "symbol": "BTS",
+      "exchange": "HNX",
+      "listingDate": "2006-12-05",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "BTW",
+      "exchange": "HNX",
+      "listingDate": "2017-11-14",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "BVH",
+      "exchange": "HOSE",
+      "listingDate": "2009-06-16",
+      "isin": "VN000000BVH3",
+      "figi": "BBG000N1D3C7"
+    },
+    {
+      "symbol": "BWE",
+      "exchange": "HOSE",
+      "listingDate": "2017-07-05",
+      "isin": "VN000000BWE8",
+      "figi": "BBG00H3MN8Z9"
+    },
+    {
+      "symbol": "C69",
+      "exchange": "HNX",
+      "listingDate": "2017-04-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CCR",
+      "exchange": "HNX",
+      "listingDate": "2021-11-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CDC",
+      "exchange": "HOSE",
+      "listingDate": "2010-08-27",
+      "isin": "VN000000CDC0",
+      "figi": "BBG000TS9159"
+    },
+    {
+      "symbol": "CDN",
+      "exchange": "HNX",
+      "listingDate": "2016-11-30",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CEO",
+      "exchange": "HNX",
+      "listingDate": "2014-09-29",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CHP",
+      "exchange": "HOSE",
+      "listingDate": "2016-08-10",
+      "isin": "VN000000CHP3",
+      "figi": "BBG000QR8VJ4"
+    },
+    {
+      "symbol": "CII",
+      "exchange": "HOSE",
+      "listingDate": "2006-02-24",
+      "isin": "VN000000CII6",
+      "figi": "BBG000PM3W81"
+    },
+    {
+      "symbol": "CLM",
+      "exchange": "HNX",
+      "listingDate": "2016-04-15",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CRE",
+      "exchange": "HOSE",
+      "listingDate": "2018-08-10",
+      "isin": "VN000000CRE6",
+      "figi": "BBG00LPMQ589"
+    },
+    {
+      "symbol": "CRV",
+      "exchange": "HOSE",
+      "listingDate": "2025-09-30",
+      "isin": "VN000000CRV0",
+      "figi": "BBG01NP55SY"
+    },
+    {
+      "symbol": "CSM",
+      "exchange": "HOSE",
+      "listingDate": "2009-08-04",
+      "isin": "VN000000CSM7",
+      "figi": "BBG000BMBBG4"
+    },
+    {
+      "symbol": "CST",
+      "exchange": "HNX",
+      "listingDate": "2025-02-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CSV",
+      "exchange": "HOSE",
+      "listingDate": "2015-02-24",
+      "isin": "VN000000CSV8",
+      "figi": "BBG00560N050"
+    },
+    {
+      "symbol": "CTB",
+      "exchange": "HNX",
+      "listingDate": "2006-10-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "CTD",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-09",
+      "isin": "VN000000CTD4",
+      "figi": "BBG000JWQL67"
+    },
+    {
+      "symbol": "CTF",
+      "exchange": "HOSE",
+      "listingDate": "2017-05-11",
+      "isin": "VN000000CTF9",
+      "figi": "BBG00GQ45DG6"
+    },
+    {
+      "symbol": "CTG",
+      "exchange": "HOSE",
+      "listingDate": "2009-07-09",
+      "isin": "VN000000CTG7",
+      "figi": "BBG000CYF2P3"
+    },
+    {
+      "symbol": "CTR",
+      "exchange": "HOSE",
+      "listingDate": "2021-12-27",
+      "isin": "VN000000CTR4",
+      "figi": "BBG00J25X052"
+    },
+    {
+      "symbol": "CTS",
+      "exchange": "HOSE",
+      "listingDate": "2017-06-13",
+      "isin": "VN000000CTS2",
+      "figi": "BBG000NPLGW4"
+    },
+    {
+      "symbol": "D11",
+      "exchange": "HNX",
+      "listingDate": "2011-02-25",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DBC",
+      "exchange": "HOSE",
+      "listingDate": "2019-07-08",
+      "isin": "VN000000DBC2",
+      "figi": "BBG000TDDSL0"
+    },
+    {
+      "symbol": "DBD",
+      "exchange": "HOSE",
+      "listingDate": "2018-05-24",
+      "isin": "VN000000DBD0",
+      "figi": "BBG00DK7HNN9"
+    },
+    {
+      "symbol": "DCL",
+      "exchange": "HOSE",
+      "listingDate": "2008-09-03",
+      "isin": "VN000000DCL1",
+      "figi": "BBG000CTDG48"
+    },
+    {
+      "symbol": "DCM",
+      "exchange": "HOSE",
+      "listingDate": "2015-03-20",
+      "isin": "VN000000DCM9",
+      "figi": "BBG008D1PSP9"
+    },
+    {
+      "symbol": "DGC",
+      "exchange": "HOSE",
+      "listingDate": "2020-07-07",
+      "isin": "VN000000DGC1",
+      "figi": "BBG003QTZ0W7"
+    },
+    {
+      "symbol": "DGW",
+      "exchange": "HOSE",
+      "listingDate": "2015-07-24",
+      "isin": "VN000000DGW9",
+      "figi": "BBG009PTZWQ2"
+    },
+    {
+      "symbol": "DHC",
+      "exchange": "HOSE",
+      "listingDate": "2009-06-18",
+      "isin": "VN000000DHC9",
+      "figi": "BBG000NDCKV3"
+    },
+    {
+      "symbol": "DHG",
+      "exchange": "HOSE",
+      "listingDate": "2006-12-01",
+      "isin": "VN000000DHG0",
+      "figi": "BBG000QKBYX3"
+    },
+    {
+      "symbol": "DHP",
+      "exchange": "HNX",
+      "listingDate": "2013-03-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DHT",
+      "exchange": "HNX",
+      "listingDate": "2008-12-03",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DIG",
+      "exchange": "HOSE",
+      "listingDate": "2009-08-12",
+      "isin": "VN000000DIG8",
+      "figi": "BBG000TW9MF3"
+    },
+    {
+      "symbol": "DL1",
+      "exchange": "HNX",
+      "listingDate": "2010-03-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DNC",
+      "exchange": "HNX",
+      "listingDate": "2009-12-23",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DNP",
+      "exchange": "HNX",
+      "listingDate": "2009-06-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DP3",
+      "exchange": "HNX",
+      "listingDate": "2015-07-17",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DPG",
+      "exchange": "HOSE",
+      "listingDate": "2018-05-09",
+      "isin": "VN000000DPG3",
+      "figi": "BBG00FPG7YB9"
+    },
+    {
+      "symbol": "DPM",
+      "exchange": "HOSE",
+      "listingDate": "2007-10-29",
+      "isin": "VN000000DPM1",
+      "figi": "BBG000TSXTT5"
+    },
+    {
+      "symbol": "DPR",
+      "exchange": "HOSE",
+      "listingDate": "2007-11-22",
+      "isin": "VN000000DPR0",
+      "figi": "BBG000TZK061"
+    },
+    {
+      "symbol": "DRC",
+      "exchange": "HOSE",
+      "listingDate": "2006-11-28",
+      "isin": "VN000000DRC8",
+      "figi": "BBG000QN52T9"
+    },
+    {
+      "symbol": "DSC",
+      "exchange": "HOSE",
+      "listingDate": "2024-09-24",
+      "isin": "VN000000DSC6",
+      "figi": "BBG00JNDVBS5"
+    },
+    {
+      "symbol": "DSE",
+      "exchange": "HOSE",
+      "listingDate": "2024-06-21",
+      "isin": "VN000000DSE2",
+      "figi": "BBG01NHYKLB4"
+    },
+    {
+      "symbol": "DST",
+      "exchange": "HNX",
+      "listingDate": "2007-10-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DTD",
+      "exchange": "HNX",
+      "listingDate": "2017-11-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DTK",
+      "exchange": "HNX",
+      "listingDate": "2020-12-25",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DVM",
+      "exchange": "HNX",
+      "listingDate": "2022-07-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "DXG",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-14",
+      "isin": "VN000000DXG7",
+      "figi": "BBG000Q1XBH9"
+    },
+    {
+      "symbol": "DXP",
+      "exchange": "HNX",
+      "listingDate": "2009-06-08",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "EBS",
+      "exchange": "HNX",
+      "listingDate": "2006-12-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "EIB",
+      "exchange": "HOSE",
+      "listingDate": "2009-10-20",
+      "isin": "VN000000EIB7",
+      "figi": "BBG000DB3L28"
+    },
+    {
+      "symbol": "EID",
+      "exchange": "HNX",
+      "listingDate": "2009-08-11",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "ELC",
+      "exchange": "HOSE",
+      "listingDate": "2010-10-05",
+      "isin": "VN000000ELC9",
+      "figi": "BBG00174Z5S1"
+    },
+    {
+      "symbol": "EVF",
+      "exchange": "HOSE",
+      "listingDate": "2021-12-21",
+      "isin": "VN000000EVF1",
+      "figi": "BBG00LLLH0T3"
+    },
+    {
+      "symbol": "EVS",
+      "exchange": "HNX",
+      "listingDate": "2019-06-26",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "FCN",
+      "exchange": "HOSE",
+      "listingDate": "2012-07-18",
+      "isin": "VN000000FCN2",
+      "figi": "BBG0036S09C2"
+    },
+    {
+      "symbol": "FMC",
+      "exchange": "HOSE",
+      "listingDate": "2006-10-20",
+      "isin": "VN000000FMC4",
+      "figi": "BBG000QF0PB9"
+    },
+    {
+      "symbol": "FPT",
+      "exchange": "HOSE",
+      "listingDate": "2006-11-21",
+      "isin": "VN000000FPT1",
+      "figi": "BBG000PMZKF4"
+    },
+    {
+      "symbol": "GAS",
+      "exchange": "HOSE",
+      "listingDate": "2012-04-27",
+      "isin": "VN000000GAS3",
+      "figi": "BBG002YWXH58"
+    },
+    {
+      "symbol": "GDW",
+      "exchange": "HNX",
+      "listingDate": "2018-12-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "GEE",
+      "exchange": "HOSE",
+      "listingDate": "2024-07-02",
+      "isin": "VN000000GEE5",
+      "figi": "BBG015PZHHB4"
+    },
+    {
+      "symbol": "GEG",
+      "exchange": "HOSE",
+      "listingDate": "2019-08-28",
+      "isin": "VN000000GEG0",
+      "figi": "BBG000BC1CJ2"
+    },
+    {
+      "symbol": "GEX",
+      "exchange": "HOSE",
+      "listingDate": "2017-12-28",
+      "isin": "VN000000GEX5",
+      "figi": "BBG00B8G4SB3"
+    },
+    {
+      "symbol": "GIC",
+      "exchange": "HNX",
+      "listingDate": "2020-11-06",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "GLT",
+      "exchange": "HNX",
+      "listingDate": "2009-11-26",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "GMX",
+      "exchange": "HNX",
+      "listingDate": "2011-09-15",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "GVR",
+      "exchange": "HOSE",
+      "listingDate": "2019-12-30",
+      "isin": "VN000000GVR1",
+      "figi": "BBG00HPGJ419"
+    },
+    {
+      "symbol": "HAG",
+      "exchange": "HOSE",
+      "listingDate": "2008-12-15",
+      "isin": "VN000000HAG6",
+      "figi": "BBG000GCXX42"
+    },
+    {
+      "symbol": "HAH",
+      "exchange": "HOSE",
+      "listingDate": "2015-01-21",
+      "isin": "VN000000HAH4",
+      "figi": "BBG007N114K4"
+    },
+    {
+      "symbol": "HBS",
+      "exchange": "HNX",
+      "listingDate": "2010-07-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HCC",
+      "exchange": "HNX",
+      "listingDate": "2007-12-24",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HCM",
+      "exchange": "HOSE",
+      "listingDate": "2009-04-20",
+      "isin": "VN000000HCM0",
+      "figi": "BBG000LWFW71"
+    },
+    {
+      "symbol": "HDA",
+      "exchange": "HNX",
+      "listingDate": "2010-12-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HDB",
+      "exchange": "HOSE",
+      "listingDate": "2017-12-25",
+      "isin": "VN000000HDB1",
+      "figi": "BBG00CMXYXS6"
+    },
+    {
+      "symbol": "HDC",
+      "exchange": "HOSE",
+      "listingDate": "2007-09-25",
+      "isin": "VN000000HDC9",
+      "figi": "BBG000NW6P10"
+    },
+    {
+      "symbol": "HDG",
+      "exchange": "HOSE",
+      "listingDate": "2010-01-19",
+      "isin": "VN000000HDG0",
+      "figi": "BBG000Q6YVS1"
+    },
+    {
+      "symbol": "HGM",
+      "exchange": "HNX",
+      "listingDate": "2009-12-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HHC",
+      "exchange": "HNX",
+      "listingDate": "2007-11-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HHS",
+      "exchange": "HOSE",
+      "listingDate": "2011-12-13",
+      "isin": "VN000000HHS6",
+      "figi": "BBG002BCDV21"
+    },
+    {
+      "symbol": "HHV",
+      "exchange": "HOSE",
+      "listingDate": "2021-12-23",
+      "isin": "VN000000HHV0",
+      "figi": "BBG00BMGSPH1"
+    },
+    {
+      "symbol": "HJS",
+      "exchange": "HNX",
+      "listingDate": "2006-12-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HKT",
+      "exchange": "HNX",
+      "listingDate": "2017-01-12",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HLC",
+      "exchange": "HNX",
+      "listingDate": "2009-03-05",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HLD",
+      "exchange": "HNX",
+      "listingDate": "2013-03-26",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HMH",
+      "exchange": "HNX",
+      "listingDate": "2010-07-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HNA",
+      "exchange": "HOSE",
+      "listingDate": "2023-12-01",
+      "isin": "VN000000HNA2",
+      "figi": "BBG00HVMSP30"
+    },
+    {
+      "symbol": "HOM",
+      "exchange": "HNX",
+      "listingDate": "2009-07-09",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HPA",
+      "exchange": "HOSE",
+      "listingDate": "2026-01-29",
+      "isin": "VN000000HPA7",
+      "figi": "BBG01YRMFX07"
+    },
+    {
+      "symbol": "HPG",
+      "exchange": "HOSE",
+      "listingDate": "2007-10-31",
+      "isin": "VN000000HPG4",
+      "figi": "BBG000TX8HK7"
+    },
+    {
+      "symbol": "HSG",
+      "exchange": "HOSE",
+      "listingDate": "2008-11-05",
+      "isin": "VN000000HSG8",
+      "figi": "BBG000KFK260"
+    },
+    {
+      "symbol": "HT1",
+      "exchange": "HOSE",
+      "listingDate": "2007-10-31",
+      "isin": "VN000000HT12",
+      "figi": "BBG000R4N2Q3"
+    },
+    {
+      "symbol": "HTC",
+      "exchange": "HNX",
+      "listingDate": "2010-05-07",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "HTG",
+      "exchange": "HOSE",
+      "listingDate": "2023-10-31",
+      "isin": "VN000000HTG6",
+      "figi": "BBG00GVP0YF3"
+    },
+    {
+      "symbol": "HVT",
+      "exchange": "HNX",
+      "listingDate": "2009-05-08",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "IDC",
+      "exchange": "HNX",
+      "listingDate": "2019-12-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "IDJ",
+      "exchange": "HNX",
+      "listingDate": "2010-09-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "IDV",
+      "exchange": "HNX",
+      "listingDate": "2010-06-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "IJC",
+      "exchange": "HOSE",
+      "listingDate": "2010-04-05",
+      "isin": "VN000000IJC4",
+      "figi": "BBG000QQTP88"
+    },
+    {
+      "symbol": "IMP",
+      "exchange": "HOSE",
+      "listingDate": "2006-11-15",
+      "isin": "VN000000IMP0",
+      "figi": "BBG000PP6BN0"
+    },
+    {
+      "symbol": "INN",
+      "exchange": "HNX",
+      "listingDate": "2010-01-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "IPA",
+      "exchange": "HNX",
+      "listingDate": "2021-11-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "IVS",
+      "exchange": "HNX",
+      "listingDate": "2011-08-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "KBC",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-07",
+      "isin": "VN000000KBC7",
+      "figi": "BBG000V13PS3"
+    },
+    {
+      "symbol": "KDC",
+      "exchange": "HOSE",
+      "listingDate": "2005-11-18",
+      "isin": "VN000000KDC3",
+      "figi": "BBG000LNDMG5"
+    },
+    {
+      "symbol": "KDH",
+      "exchange": "HOSE",
+      "listingDate": "2010-01-21",
+      "isin": "VN000000KDH2",
+      "figi": "BBG000Q7Z3Y3"
+    },
+    {
+      "symbol": "KDM",
+      "exchange": "HNX",
+      "listingDate": "2016-03-29",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "KHG",
+      "exchange": "HOSE",
+      "listingDate": "2021-06-30",
+      "isin": "VN000000KHG5",
+      "figi": "BBG011C16TP3"
+    },
+    {
+      "symbol": "KHS",
+      "exchange": "HNX",
+      "listingDate": "2017-12-26",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "KLB",
+      "exchange": "HOSE",
+      "listingDate": "2025-12-18",
+      "isin": "VN000000KLB8",
+      "figi": "BBG00GXYHCK6"
+    },
+    {
+      "symbol": "KOS",
+      "exchange": "HOSE",
+      "listingDate": "2019-07-08",
+      "isin": "VN000000KOS6",
+      "figi": "BBG00JF29HX4"
+    },
+    {
+      "symbol": "KSB",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-17",
+      "isin": "VN000000KSB3",
+      "figi": "BBG000H9ZHS5"
+    },
+    {
+      "symbol": "KSF",
+      "exchange": "HNX",
+      "listingDate": "2021-10-06",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "KSV",
+      "exchange": "HNX",
+      "listingDate": "2023-02-02",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "KTS",
+      "exchange": "HNX",
+      "listingDate": "2011-06-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "L14",
+      "exchange": "HNX",
+      "listingDate": "2011-09-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "L18",
+      "exchange": "HNX",
+      "listingDate": "2008-04-23",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "L40",
+      "exchange": "HNX",
+      "listingDate": "2021-01-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "LAS",
+      "exchange": "HNX",
+      "listingDate": "2012-03-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "LCG",
+      "exchange": "HOSE",
+      "listingDate": "2008-10-17",
+      "isin": "VN000000LCG4",
+      "figi": "BBG000RDD989"
+    },
+    {
+      "symbol": "LDP",
+      "exchange": "HNX",
+      "listingDate": "2010-07-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "LHC",
+      "exchange": "HNX",
+      "listingDate": "2010-01-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "LIG",
+      "exchange": "HNX",
+      "listingDate": "2010-04-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "LIX",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-01",
+      "isin": "VN000000LIX6",
+      "figi": "BBG000PZ8L63"
+    },
+    {
+      "symbol": "LPB",
+      "exchange": "HOSE",
+      "listingDate": "2020-10-14",
+      "isin": "VN000000LPB7",
+      "figi": "BBG00HVMW0G6"
+    },
+    {
+      "symbol": "MAC",
+      "exchange": "HNX",
+      "listingDate": "2009-12-24",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "MBB",
+      "exchange": "HOSE",
+      "listingDate": "2011-10-18",
+      "isin": "VN000000MBB5",
+      "figi": "BBG00270VT27"
+    },
+    {
+      "symbol": "MBS",
+      "exchange": "HNX",
+      "listingDate": "2016-03-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "MCH",
+      "exchange": "HOSE",
+      "listingDate": "2025-12-10",
+      "isin": "VN000000MCH0",
+      "figi": "BBG00FP0B4L4"
+    },
+    {
+      "symbol": "MCM",
+      "exchange": "HOSE",
+      "listingDate": "2024-05-24",
+      "isin": "VN000000MCM0",
+      "figi": "BBG00YHVP4R3"
+    },
+    {
+      "symbol": "MDC",
+      "exchange": "HNX",
+      "listingDate": "2009-07-23",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "MEL",
+      "exchange": "HNX",
+      "listingDate": "2017-09-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "MIG",
+      "exchange": "HOSE",
+      "listingDate": "2020-12-30",
+      "isin": "VN000000MIG9",
+      "figi": "BBG00GKB6R65"
+    },
+    {
+      "symbol": "MSB",
+      "exchange": "HOSE",
+      "listingDate": "2020-12-14",
+      "isin": "VN000000MSB9",
+      "figi": "BBG00QYKTX60"
+    },
+    {
+      "symbol": "MSH",
+      "exchange": "HOSE",
+      "listingDate": "2018-11-20",
+      "isin": "VN000000MSH6",
+      "figi": "BBG001BRND56"
+    },
+    {
+      "symbol": "MSN",
+      "exchange": "HOSE",
+      "listingDate": "2009-10-30",
+      "isin": "VN000000MSN4",
+      "figi": "BBG000PSPMZ6"
+    },
+    {
+      "symbol": "MST",
+      "exchange": "HNX",
+      "listingDate": "2016-05-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "MVB",
+      "exchange": "HNX",
+      "listingDate": "2020-10-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "MWG",
+      "exchange": "HOSE",
+      "listingDate": "2014-07-07",
+      "isin": "VN000000MWG0",
+      "figi": "BBG006S6NN42"
+    },
+    {
+      "symbol": "NAF",
+      "exchange": "HOSE",
+      "listingDate": "2015-09-28",
+      "isin": "VN000000NAF6",
+      "figi": "BBG00B40DT75"
+    },
+    {
+      "symbol": "NAG",
+      "exchange": "HNX",
+      "listingDate": "2009-09-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NAP",
+      "exchange": "HNX",
+      "listingDate": "2018-03-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NBB",
+      "exchange": "HOSE",
+      "listingDate": "2008-11-20",
+      "isin": "VN000000NBB3",
+      "figi": "BBG000TJKMX9"
+    },
+    {
+      "symbol": "NBC",
+      "exchange": "HNX",
+      "listingDate": "2006-12-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NCT",
+      "exchange": "HOSE",
+      "listingDate": "2014-12-09",
+      "isin": "VN000000NCT3",
+      "figi": "BBG007R0PVT7"
+    },
+    {
+      "symbol": "NDN",
+      "exchange": "HNX",
+      "listingDate": "2011-04-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NKG",
+      "exchange": "HOSE",
+      "listingDate": "2011-01-10",
+      "isin": "VN000000NKG3",
+      "figi": "BBG001D63Y10"
+    },
+    {
+      "symbol": "NLG",
+      "exchange": "HOSE",
+      "listingDate": "2013-01-25",
+      "isin": "VN000000NLG1",
+      "figi": "BBG0042V8NP4"
+    },
+    {
+      "symbol": "NRC",
+      "exchange": "HNX",
+      "listingDate": "2018-04-05",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NT2",
+      "exchange": "HOSE",
+      "listingDate": "2015-06-02",
+      "isin": "VN000000NT22",
+      "figi": "BBG0014KNPX1"
+    },
+    {
+      "symbol": "NTH",
+      "exchange": "HNX",
+      "listingDate": "2019-06-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NTL",
+      "exchange": "HOSE",
+      "listingDate": "2007-12-06",
+      "isin": "VN000000NTL4",
+      "figi": "BBG000RHYFY4"
+    },
+    {
+      "symbol": "NTP",
+      "exchange": "HNX",
+      "listingDate": "2006-12-11",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NVB",
+      "exchange": "HNX",
+      "listingDate": "2010-09-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "NVL",
+      "exchange": "HOSE",
+      "listingDate": "2016-12-19",
+      "isin": "VN000000NVL0",
+      "figi": "BBG00FM8NC93"
+    },
+    {
+      "symbol": "OCB",
+      "exchange": "HOSE",
+      "listingDate": "2020-12-29",
+      "isin": "VN000000OCB9",
+      "figi": "BBG000BVF7P9"
+    },
+    {
+      "symbol": "OCH",
+      "exchange": "HNX",
+      "listingDate": "2010-10-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "OPC",
+      "exchange": "HOSE",
+      "listingDate": "2008-10-20",
+      "isin": "VN000000OPC9",
+      "figi": "BBG000JVXFJ0"
+    },
+    {
+      "symbol": "ORS",
+      "exchange": "HOSE",
+      "listingDate": "2021-10-07",
+      "isin": "VN000000ORS1",
+      "figi": "BBG000WH5HX7"
+    },
+    {
+      "symbol": "PAN",
+      "exchange": "HOSE",
+      "listingDate": "2010-11-18",
+      "isin": "VN000000PAN5",
+      "figi": "BBG000QRH9P6"
+    },
+    {
+      "symbol": "PC1",
+      "exchange": "HOSE",
+      "listingDate": "2016-11-09",
+      "isin": "VN000000PC11",
+      "figi": "BBG00F86YRM3"
+    },
+    {
+      "symbol": "PCE",
+      "exchange": "HNX",
+      "listingDate": "2015-07-23",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PCH",
+      "exchange": "HNX",
+      "listingDate": "2022-07-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PDB",
+      "exchange": "HNX",
+      "listingDate": "2015-08-03",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PDR",
+      "exchange": "HOSE",
+      "listingDate": "2010-07-22",
+      "isin": "VN000000PDR0",
+      "figi": "BBG000BG7XL8"
+    },
+    {
+      "symbol": "PGD",
+      "exchange": "HOSE",
+      "listingDate": "2009-11-19",
+      "isin": "VN000000PGD3",
+      "figi": "BBG000PXC513"
+    },
+    {
+      "symbol": "PGI",
+      "exchange": "HOSE",
+      "listingDate": "2011-06-08",
+      "isin": "VN000000PGI2",
+      "figi": "BBG001QZL5G9"
+    },
+    {
+      "symbol": "PGS",
+      "exchange": "HNX",
+      "listingDate": "2007-11-15",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PGV",
+      "exchange": "HOSE",
+      "listingDate": "2021-12-29",
+      "isin": "VN000000PGV5",
+      "figi": "BBG00KBCSPQ2"
+    },
+    {
+      "symbol": "PHN",
+      "exchange": "HNX",
+      "listingDate": "2019-03-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PHR",
+      "exchange": "HOSE",
+      "listingDate": "2009-08-04",
+      "isin": "VN000000PHR1",
+      "figi": "BBG000V0C1P1"
+    },
+    {
+      "symbol": "PIC",
+      "exchange": "HNX",
+      "listingDate": "2017-01-09",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PJC",
+      "exchange": "HNX",
+      "listingDate": "2006-12-25",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PLC",
+      "exchange": "HNX",
+      "listingDate": "2006-12-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PLX",
+      "exchange": "HOSE",
+      "listingDate": "2017-04-14",
+      "isin": "VN000000PLX1",
+      "figi": "BBG00GGRY2V1"
+    },
+    {
+      "symbol": "PMB",
+      "exchange": "HNX",
+      "listingDate": "2015-10-07",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PMC",
+      "exchange": "HNX",
+      "listingDate": "2009-10-09",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PMS",
+      "exchange": "HNX",
+      "listingDate": "2009-06-08",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PNJ",
+      "exchange": "HOSE",
+      "listingDate": "2008-12-26",
+      "isin": "VN000000PNJ6",
+      "figi": "BBG000BX74C5"
+    },
+    {
+      "symbol": "POT",
+      "exchange": "HNX",
+      "listingDate": "2006-12-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PPP",
+      "exchange": "HNX",
+      "listingDate": "2011-07-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PPY",
+      "exchange": "HNX",
+      "listingDate": "2016-03-02",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PRE",
+      "exchange": "HNX",
+      "listingDate": "2020-12-24",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PSD",
+      "exchange": "HNX",
+      "listingDate": "2013-06-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PSI",
+      "exchange": "HNX",
+      "listingDate": "2010-07-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PSW",
+      "exchange": "HNX",
+      "listingDate": "2015-07-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PTB",
+      "exchange": "HOSE",
+      "listingDate": "2011-05-20",
+      "isin": "VN000000PTB0",
+      "figi": "BBG001QBKQG7"
+    },
+    {
+      "symbol": "PTI",
+      "exchange": "HNX",
+      "listingDate": "2011-03-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PVB",
+      "exchange": "HNX",
+      "listingDate": "2013-12-24",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PVC",
+      "exchange": "HNX",
+      "listingDate": "2007-11-15",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PVD",
+      "exchange": "HOSE",
+      "listingDate": "2006-11-15",
+      "isin": "VN000000PVD2",
+      "figi": "BBG000QFVBX2"
+    },
+    {
+      "symbol": "PVG",
+      "exchange": "HNX",
+      "listingDate": "2009-01-07",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PVI",
+      "exchange": "HNX",
+      "listingDate": "2007-08-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PVP",
+      "exchange": "HOSE",
+      "listingDate": "2022-12-26",
+      "isin": "VN000000PVP6",
+      "figi": "BBG00FJ8XTK6"
+    },
+    {
+      "symbol": "PVS",
+      "exchange": "HNX",
+      "listingDate": "2007-09-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "PVT",
+      "exchange": "HOSE",
+      "listingDate": "2007-11-27",
+      "isin": "VN000000PVT8",
+      "figi": "BBG000LZ5FZ1"
+    },
+    {
+      "symbol": "QCG",
+      "exchange": "HOSE",
+      "listingDate": "2010-07-27",
+      "isin": "VN000000QCG3",
+      "figi": "BBG000JVZTR9"
+    },
+    {
+      "symbol": "QST",
+      "exchange": "HNX",
+      "listingDate": "2009-02-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "QTC",
+      "exchange": "HNX",
+      "listingDate": "2009-01-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "RAL",
+      "exchange": "HOSE",
+      "listingDate": "2006-10-23",
+      "isin": "VN000000RAL5",
+      "figi": "BBG000QFVDC1"
+    },
+    {
+      "symbol": "REE",
+      "exchange": "HOSE",
+      "listingDate": "2000-07-18",
+      "isin": "VN000000REE2",
+      "figi": "BBG000Q5Y2H9"
+    },
+    {
+      "symbol": "S55",
+      "exchange": "HNX",
+      "listingDate": "2006-12-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "S99",
+      "exchange": "HNX",
+      "listingDate": "2006-12-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SAB",
+      "exchange": "HOSE",
+      "listingDate": "2016-11-25",
+      "isin": "VN000000SAB4",
+      "figi": "BBG000V9NP31"
+    },
+    {
+      "symbol": "SAM",
+      "exchange": "HOSE",
+      "listingDate": "2000-07-18",
+      "isin": "VN000000SAM1",
+      "figi": "BBG000Q1YHR4"
+    },
+    {
+      "symbol": "SBA",
+      "exchange": "HOSE",
+      "listingDate": "2010-04-28",
+      "isin": "VN000000SBA4",
+      "figi": "BBG000QVRG16"
+    },
+    {
+      "symbol": "SBT",
+      "exchange": "HOSE",
+      "listingDate": "2008-02-25",
+      "isin": "VN000000SBT4",
+      "figi": "BBG000DWVH11"
+    },
+    {
+      "symbol": "SCI",
+      "exchange": "HNX",
+      "listingDate": "2016-01-05",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SCS",
+      "exchange": "HOSE",
+      "listingDate": "2018-06-26",
+      "isin": "VN000000SCS4",
+      "figi": "BBG00H5KYJR4"
+    },
+    {
+      "symbol": "SD5",
+      "exchange": "HNX",
+      "listingDate": "2006-12-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SD9",
+      "exchange": "HNX",
+      "listingDate": "2006-12-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SDU",
+      "exchange": "HNX",
+      "listingDate": "2009-09-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SED",
+      "exchange": "HNX",
+      "listingDate": "2009-08-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SGC",
+      "exchange": "HNX",
+      "listingDate": "2009-06-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SGN",
+      "exchange": "HOSE",
+      "listingDate": "2018-07-04",
+      "isin": "VN000000SGN6",
+      "figi": "BBG00BL5GNC9"
+    },
+    {
+      "symbol": "SHB",
+      "exchange": "HOSE",
+      "listingDate": "2021-09-20",
+      "isin": "VN000000SHB9",
+      "figi": "BBG000G88YK9"
+    },
+    {
+      "symbol": "SHE",
+      "exchange": "HNX",
+      "listingDate": "2019-01-25",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SHI",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-23",
+      "isin": "VN000000SHI4",
+      "figi": "BBG000Q3SY27"
+    },
+    {
+      "symbol": "SHN",
+      "exchange": "HNX",
+      "listingDate": "2009-12-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SHS",
+      "exchange": "HNX",
+      "listingDate": "2009-06-25",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SIP",
+      "exchange": "HOSE",
+      "listingDate": "2023-06-29",
+      "isin": "VN000000SIP7",
+      "figi": "BBG00PBQWN53"
+    },
+    {
+      "symbol": "SJ1",
+      "exchange": "HNX",
+      "listingDate": "2009-06-08",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SJE",
+      "exchange": "HNX",
+      "listingDate": "2006-12-14",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SJS",
+      "exchange": "HOSE",
+      "listingDate": "2006-05-11",
+      "isin": "VN000000SJS9",
+      "figi": "BBG000PT9TZ7"
+    },
+    {
+      "symbol": "SLS",
+      "exchange": "HNX",
+      "listingDate": "2012-10-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SPC",
+      "exchange": "HNX",
+      "listingDate": "2022-01-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SSB",
+      "exchange": "HOSE",
+      "listingDate": "2020-12-30",
+      "isin": "VN000000SSB6",
+      "figi": "BBG009CXDMM7"
+    },
+    {
+      "symbol": "SSI",
+      "exchange": "HOSE",
+      "listingDate": "2007-10-18",
+      "isin": "VN000000SSI1",
+      "figi": "BBG000BN4F44"
+    },
+    {
+      "symbol": "STB",
+      "exchange": "HOSE",
+      "listingDate": "2006-06-02",
+      "isin": "VN000000STB4",
+      "figi": "BBG000D7H4Y5"
+    },
+    {
+      "symbol": "STG",
+      "exchange": "HOSE",
+      "listingDate": "2010-02-04",
+      "isin": "VN000000STG3",
+      "figi": "BBG000QCZXG6"
+    },
+    {
+      "symbol": "SVC",
+      "exchange": "HOSE",
+      "listingDate": "2009-05-27",
+      "isin": "VN000000SVC8",
+      "figi": "BBG000QRLCQ3"
+    },
+    {
+      "symbol": "SZB",
+      "exchange": "HNX",
+      "listingDate": "2019-12-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "SZC",
+      "exchange": "HOSE",
+      "listingDate": "2018-12-18",
+      "isin": "VN000000SZC9",
+      "figi": "BBG00FM26TY0"
+    },
+    {
+      "symbol": "TA9",
+      "exchange": "HNX",
+      "listingDate": "2015-07-31",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TBC",
+      "exchange": "HOSE",
+      "listingDate": "2009-09-25",
+      "isin": "VN000000TBC8",
+      "figi": "BBG000QRLW98"
+    },
+    {
+      "symbol": "TCB",
+      "exchange": "HOSE",
+      "listingDate": "2018-05-22",
+      "isin": "VN000000TCB8",
+      "figi": "BBG000CD0060"
+    },
+    {
+      "symbol": "TCH",
+      "exchange": "HOSE",
+      "listingDate": "2016-09-15",
+      "isin": "VN000000TCH5",
+      "figi": "BBG00DVPC846"
+    },
+    {
+      "symbol": "TCM",
+      "exchange": "HOSE",
+      "listingDate": "2007-10-05",
+      "isin": "VN000000TCM5",
+      "figi": "BBG000TJ58L0"
+    },
+    {
+      "symbol": "TCX",
+      "exchange": "HOSE",
+      "listingDate": "2025-10-09",
+      "isin": "VN000000TCX2",
+      "figi": "BBG01XVB39T3"
+    },
+    {
+      "symbol": "TDM",
+      "exchange": "HOSE",
+      "listingDate": "2018-10-05",
+      "isin": "VN000000TDM3",
+      "figi": "BBG00CLB4K33"
+    },
+    {
+      "symbol": "TDP",
+      "exchange": "HOSE",
+      "listingDate": "2020-07-24",
+      "isin": "VN000000TDP6",
+      "figi": "BBG00MH6QRJ1"
+    },
+    {
+      "symbol": "TDT",
+      "exchange": "HNX",
+      "listingDate": "2018-07-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TET",
+      "exchange": "HNX",
+      "listingDate": "2010-04-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "THB",
+      "exchange": "HNX",
+      "listingDate": "2008-11-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "THD",
+      "exchange": "HNX",
+      "listingDate": "2020-06-19",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "THT",
+      "exchange": "HNX",
+      "listingDate": "2008-10-24",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TIG",
+      "exchange": "HNX",
+      "listingDate": "2010-10-08",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TKU",
+      "exchange": "HNX",
+      "listingDate": "2006-06-26",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TLG",
+      "exchange": "HOSE",
+      "listingDate": "2010-02-02",
+      "isin": "VN000000TLG8",
+      "figi": "BBG000QBPNQ0"
+    },
+    {
+      "symbol": "TMB",
+      "exchange": "HNX",
+      "listingDate": "2017-01-16",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TMP",
+      "exchange": "HOSE",
+      "listingDate": "2009-06-08",
+      "isin": "VN000000TMP7",
+      "figi": "BBG000DBGXX4"
+    },
+    {
+      "symbol": "TMS",
+      "exchange": "HOSE",
+      "listingDate": "2000-08-02",
+      "isin": "VN000000TMS1",
+      "figi": "BBG000MB9N73"
+    },
+    {
+      "symbol": "TNG",
+      "exchange": "HNX",
+      "listingDate": "2007-11-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TOT",
+      "exchange": "HNX",
+      "listingDate": "2022-01-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TPB",
+      "exchange": "HOSE",
+      "listingDate": "2018-03-22",
+      "isin": "VN000000TPB0",
+      "figi": "BBG00KFL4BS3"
+    },
+    {
+      "symbol": "TPP",
+      "exchange": "HNX",
+      "listingDate": "2008-09-26",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TRA",
+      "exchange": "HOSE",
+      "listingDate": "2008-11-12",
+      "isin": "VN000000TRA8",
+      "figi": "BBG000JVVR33"
+    },
+    {
+      "symbol": "TRC",
+      "exchange": "HOSE",
+      "listingDate": "2007-07-17",
+      "isin": "VN000000TRC4",
+      "figi": "BBG000BYJ1C6"
+    },
+    {
+      "symbol": "TSB",
+      "exchange": "HNX",
+      "listingDate": "2011-01-10",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TTA",
+      "exchange": "HOSE",
+      "listingDate": "2020-08-18",
+      "isin": "VN000000TTA4",
+      "figi": "BBG00WWCQWC5"
+    },
+    {
+      "symbol": "TTL",
+      "exchange": "HNX",
+      "listingDate": "2018-01-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TTT",
+      "exchange": "HNX",
+      "listingDate": "2017-06-02",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TV2",
+      "exchange": "HOSE",
+      "listingDate": "2019-04-22",
+      "isin": "VN000000TV22",
+      "figi": "BBG000PMVHJ1"
+    },
+    {
+      "symbol": "TV3",
+      "exchange": "HNX",
+      "listingDate": "2009-12-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TV4",
+      "exchange": "HNX",
+      "listingDate": "2008-07-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TVC",
+      "exchange": "HNX",
+      "listingDate": "2014-09-23",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TVD",
+      "exchange": "HNX",
+      "listingDate": "2011-01-11",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "TVS",
+      "exchange": "HOSE",
+      "listingDate": "2014-12-25",
+      "isin": "VN000000TVS2",
+      "figi": "BBG007TK6KJ7"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "HNX",
+      "listingDate": "2009-06-08",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VAB",
+      "exchange": "HOSE",
+      "listingDate": "2025-06-26",
+      "isin": "VN000000VAB8",
+      "figi": "BBG011NZ9FP3"
+    },
+    {
+      "symbol": "VBB",
+      "exchange": "HOSE",
+      "listingDate": "2026-06-16",
+      "isin": "VN000000VBB6",
+      "figi": "BBG00PT9JQ23"
+    },
+    {
+      "symbol": "VBC",
+      "exchange": "HNX",
+      "listingDate": "2010-03-17",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VC1",
+      "exchange": "HNX",
+      "listingDate": "2009-05-14",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VC3",
+      "exchange": "HNX",
+      "listingDate": "2007-12-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VC6",
+      "exchange": "HNX",
+      "listingDate": "2008-01-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VC7",
+      "exchange": "HNX",
+      "listingDate": "2007-12-28",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VCB",
+      "exchange": "HOSE",
+      "listingDate": "2009-06-12",
+      "isin": "VN000000VCB4",
+      "figi": "BBG000BM8HL9"
+    },
+    {
+      "symbol": "VCC",
+      "exchange": "HNX",
+      "listingDate": "2009-02-05",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VCF",
+      "exchange": "HOSE",
+      "listingDate": "2011-01-21",
+      "isin": "VN000000VCF5",
+      "figi": "BBG001F4FT84"
+    },
+    {
+      "symbol": "VCG",
+      "exchange": "HOSE",
+      "listingDate": "2020-12-16",
+      "isin": "VN000000VCG3",
+      "figi": "BBG000BLCJY8"
+    },
+    {
+      "symbol": "VCI",
+      "exchange": "HOSE",
+      "listingDate": "2017-06-30",
+      "isin": "VN000000VCI9",
+      "figi": "BBG0073XTVS8"
+    },
+    {
+      "symbol": "VCK",
+      "exchange": "HOSE",
+      "listingDate": "2025-12-01",
+      "isin": "VN000000VCK5",
+      "figi": "BBG01YVCNMD5"
+    },
+    {
+      "symbol": "VCS",
+      "exchange": "HNX",
+      "listingDate": "2007-12-17",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VDL",
+      "exchange": "HNX",
+      "listingDate": "2007-11-27",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VDS",
+      "exchange": "HOSE",
+      "listingDate": "2017-06-29",
+      "isin": "VN000000VDS6",
+      "figi": "BBG000VVXNW4"
+    },
+    {
+      "symbol": "VFG",
+      "exchange": "HOSE",
+      "listingDate": "2009-12-11",
+      "isin": "VN000000VFG6",
+      "figi": "BBG000Q13YK8"
+    },
+    {
+      "symbol": "VGC",
+      "exchange": "HOSE",
+      "listingDate": "2019-04-26",
+      "isin": "VN000000VGC3",
+      "figi": "BBG003QTXY19"
+    },
+    {
+      "symbol": "VGP",
+      "exchange": "HNX",
+      "listingDate": "2009-06-12",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VGS",
+      "exchange": "HNX",
+      "listingDate": "2008-12-04",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VHC",
+      "exchange": "HOSE",
+      "listingDate": "2007-12-07",
+      "isin": "VN000000VHC1",
+      "figi": "BBG000V0W6Y8"
+    },
+    {
+      "symbol": "VHE",
+      "exchange": "HNX",
+      "listingDate": "2019-01-14",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VHL",
+      "exchange": "HNX",
+      "listingDate": "2009-02-12",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VHM",
+      "exchange": "HOSE",
+      "listingDate": "2018-05-07",
+      "isin": "VN000000VHM0",
+      "figi": "BBG00KMYS8Q0"
+    },
+    {
+      "symbol": "VIB",
+      "exchange": "HOSE",
+      "listingDate": "2020-10-16",
+      "isin": "VN000000VIB1",
+      "figi": "BBG00FP4X0Q5"
+    },
+    {
+      "symbol": "VIC",
+      "exchange": "HOSE",
+      "listingDate": "2007-09-07",
+      "isin": "VN000000VIC9",
+      "figi": "BBG000TD3TM8"
+    },
+    {
+      "symbol": "VIF",
+      "exchange": "HNX",
+      "listingDate": "2020-02-03",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VIG",
+      "exchange": "HNX",
+      "listingDate": "2009-12-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VIT",
+      "exchange": "HNX",
+      "listingDate": "2009-11-03",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VIX",
+      "exchange": "HOSE",
+      "listingDate": "2020-12-23",
+      "isin": "VN000000VIX5",
+      "figi": "BBG000Q3LMW7"
+    },
+    {
+      "symbol": "VJC",
+      "exchange": "HOSE",
+      "listingDate": "2017-02-06",
+      "isin": "VN000000VJC7",
+      "figi": "BBG00FPBTP52"
+    },
+    {
+      "symbol": "VMS",
+      "exchange": "HNX",
+      "listingDate": "2015-10-20",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VNC",
+      "exchange": "HNX",
+      "listingDate": "2006-12-21",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VND",
+      "exchange": "HOSE",
+      "listingDate": "2017-08-10",
+      "isin": "VN000000VND7",
+      "figi": "BBG000QK2110"
+    },
+    {
+      "symbol": "VNF",
+      "exchange": "HNX",
+      "listingDate": "2010-12-01",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VNM",
+      "exchange": "HOSE",
+      "listingDate": "2005-12-28",
+      "isin": "VN000000VNM8",
+      "figi": "BBG000BF6NK4"
+    },
+    {
+      "symbol": "VNR",
+      "exchange": "HNX",
+      "listingDate": "2006-03-13",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VOS",
+      "exchange": "HOSE",
+      "listingDate": "2010-08-30",
+      "isin": "VN000000VOS3",
+      "figi": "BBG0015NLBK1"
+    },
+    {
+      "symbol": "VPB",
+      "exchange": "HOSE",
+      "listingDate": "2017-08-08",
+      "isin": "VN000000VPB6",
+      "figi": "BBG00GT7TTC9"
+    },
+    {
+      "symbol": "VPD",
+      "exchange": "HOSE",
+      "listingDate": "2017-12-25",
+      "isin": "VN000000VPD2",
+      "figi": "BBG00CMXYXQ8"
+    },
+    {
+      "symbol": "VPI",
+      "exchange": "HOSE",
+      "listingDate": "2018-05-31",
+      "isin": "VN000000VPI1",
+      "figi": "BBG00JC6HXV6"
+    },
+    {
+      "symbol": "VPL",
+      "exchange": "HOSE",
+      "listingDate": "2025-04-29",
+      "isin": "VN000000VPL5",
+      "figi": "BBG009LJFB04"
+    },
+    {
+      "symbol": "VPX",
+      "exchange": "HOSE",
+      "listingDate": "2025-12-03",
+      "isin": "VN000000VPX0",
+      "figi": "BBG01XX46B91"
+    },
+    {
+      "symbol": "VRE",
+      "exchange": "HOSE",
+      "listingDate": "2017-10-25",
+      "isin": "VN000000VRE6",
+      "figi": "BBG00HY225V2"
+    },
+    {
+      "symbol": "VSA",
+      "exchange": "HNX",
+      "listingDate": "2015-12-22",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VSC",
+      "exchange": "HOSE",
+      "listingDate": "2007-12-12",
+      "isin": "VN000000VSC8",
+      "figi": "BBG000V1Z2S9"
+    },
+    {
+      "symbol": "VSH",
+      "exchange": "HOSE",
+      "listingDate": "2006-06-28",
+      "isin": "VN000000VSH7",
+      "figi": "BBG000KLZ2K5"
+    },
+    {
+      "symbol": "VTH",
+      "exchange": "HNX",
+      "listingDate": "2014-10-29",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VTP",
+      "exchange": "HOSE",
+      "listingDate": "2023-12-21",
+      "isin": "VN000000VTP8",
+      "figi": "BBG00MM4KSS4"
+    },
+    {
+      "symbol": "VTV",
+      "exchange": "HNX",
+      "listingDate": "2006-12-18",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VTZ",
+      "exchange": "HNX",
+      "listingDate": "2021-11-25",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "VVS",
+      "exchange": "HOSE",
+      "listingDate": "2025-11-14",
+      "isin": "VN000000VVS8",
+      "figi": "BBG019XS4GT0"
+    },
+    {
+      "symbol": "WCS",
+      "exchange": "HNX",
+      "listingDate": "2010-09-17",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "WSS",
+      "exchange": "HNX",
+      "listingDate": "2009-12-15",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "X20",
+      "exchange": "HNX",
+      "listingDate": "2018-02-05",
+      "isin": null,
+      "figi": null
+    },
+    {
+      "symbol": "YEG",
+      "exchange": "HOSE",
+      "listingDate": "2018-06-19",
+      "isin": "VN000000YEG3",
+      "figi": "BBG00KZYHN85"
+    }
+  ]
+}

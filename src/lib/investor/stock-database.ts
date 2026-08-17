@@ -15,6 +15,18 @@ export type StockEntry = {
   country: string;
   market: string;
   currency: string;
+  /** Current exchange lifecycle. Missing means active for legacy catalog rows. */
+  securityStatus?: "active" | "renamed" | "merged" | "replaced" | "delisted" | "suspended" | "trading_alias";
+  /** Current ticker when this row is a historical/inactive security. */
+  successorTicker?: string;
+  /** Canonical security ticker when this row is only another trading-line code. */
+  canonicalTicker?: string;
+  statusEffectiveDate?: string;
+  statusReason?: string;
+  statusEvidence?: {
+    source: string;
+    url: string;
+  };
   sector: string;
   business: string;
   businessKeywords: string[];
@@ -116,6 +128,35 @@ export function getGlobalStocks(): StockEntry[] {
 /** หุ้นทั้งหมด (ไทย + โลก) */
 export function getAllStocks(): StockEntry[] {
   return [...getThaiStocks(), ...getGlobalStocks()];
+}
+
+export function isResearchableStock(stock: StockEntry): boolean {
+  return !stock.securityStatus || stock.securityStatus === "active" || stock.securityStatus === "suspended";
+}
+
+/** Resolve a searchable trading-line alias to the canonical security row. */
+export function resolveCanonicalStock(
+  stock: StockEntry,
+  catalog: readonly StockEntry[] = getAllStocks(),
+): StockEntry {
+  if (stock.securityStatus !== "trading_alias" || !stock.canonicalTicker) return stock;
+  return catalog.find((candidate) =>
+    candidate.market.toUpperCase() === stock.market.toUpperCase()
+    && candidate.ticker.toUpperCase() === stock.canonicalTicker?.toUpperCase(),
+  ) ?? stock;
+}
+
+/** Current securities only. Historical aliases remain searchable but must not enter rankings/backtests. */
+export function getResearchableThaiStocks(): StockEntry[] {
+  return getThaiStocks().filter(isResearchableStock);
+}
+
+export function getResearchableGlobalStocks(): StockEntry[] {
+  return getGlobalStocks().filter(isResearchableStock);
+}
+
+export function getResearchableStocks(): StockEntry[] {
+  return [...getResearchableThaiStocks(), ...getResearchableGlobalStocks()];
 }
 
 /** ข้อมูลตลาด (ประเทศ→ทิศ→ธาตุ) — ใช้เฉพาะภาพรวมประเทศ (บท 8) ไม่ใช่ verdict รายหุ้น */
@@ -265,6 +306,10 @@ export function applyReviewResults(
 export function validateStocks(stocks: StockEntry[]): string[] {
   const problems: string[] = [];
   const seen = new Set<string>();
+  const byMarketTicker = new Map(stocks.map((stock) => [
+    `${stock.market.toUpperCase()}:${stock.ticker.toUpperCase()}`,
+    stock,
+  ]));
 
   for (const s of stocks) {
     if (!s.ticker) problems.push(`ticker ว่าง (${s.name ?? "?"})`);
@@ -283,6 +328,16 @@ export function validateStocks(stocks: StockEntry[]): string[] {
     }
     if (s.status === "published" && (!s.reviewedBy || !s.reviewedAt)) {
       problems.push(`${s.ticker}: published แต่ไม่มี reviewedBy/reviewedAt`);
+    }
+    if (s.securityStatus === "trading_alias") {
+      const canonicalTicker = s.canonicalTicker?.trim().toUpperCase();
+      const canonical = canonicalTicker
+        ? byMarketTicker.get(`${s.market.toUpperCase()}:${canonicalTicker}`)
+        : undefined;
+      if (!canonicalTicker) problems.push(`${s.ticker}: trading_alias ไม่มี canonicalTicker`);
+      else if (canonicalTicker === s.ticker.toUpperCase()) problems.push(`${s.ticker}: trading_alias ชี้กลับตัวเอง`);
+      else if (!canonical) problems.push(`${s.ticker}: ไม่พบ canonicalTicker ${canonicalTicker} ในตลาดเดียวกัน`);
+      else if (!isResearchableStock(canonical)) problems.push(`${s.ticker}: canonicalTicker ${canonicalTicker} ไม่ใช่หลักทรัพย์ปัจจุบัน`);
     }
 
     // ชั้น A: ถ้ามี description ต้องยาวพอ (ไม่ใช่ 1 บรรทัด)

@@ -14,7 +14,6 @@ import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
 import { detectIntent } from "./intents";
 import { getTodayMovers, getUpcomingIPOs, getBaziVerdict, getFundamentals, getNewsImpact, searchStocks, generateReport, getTodayAlmanac, getFortuneInvest, getAssetVerdicts, getPortfolioAllocation } from "./tools";
-import { COMPLIANCE_NOTE } from "../fortune/investment-days";
 import { t, type Locale } from "../i18n/dictionary";
 
 const DISCLAIMER = "⚠️ แนวโน้มตามดวง + ข้อมูล (ไม่ใช่คำแนะนำการลงทุน)";

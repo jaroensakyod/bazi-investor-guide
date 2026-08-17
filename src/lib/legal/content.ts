@@ -12,7 +12,7 @@ export const LEGAL: Record<"disclaimer" | "risk" | "terms" | "privacy", LegalSec
     th: [
       { h: "ข้อจำกัดความรับผิดชอบ", p: [
         "ข้อมูล บทวิเคราะห์ และผลลัพธ์ทั้งหมดบนเว็บไซต์ดวงนักลงทุน (รวมถึงแชท AI, พอร์ตเด่นรายเดือน, รายงานหุ้น/สินทรัพย์ และการวิเคราะห์ธาตุ) จัดทำขึ้นเพื่อการให้ข้อมูล การศึกษา และความบันเทิงทางโหราศาสตร์เท่านั้น มิได้มีวัตถุประสงค์เพื่อชักชวนหรือแนะนำให้ซื้อ ขาย หรือถือครองหลักทรัพย์หรือเครื่องมือทางการเงินใด ๆ",
-        "ผู้ให้บริการมิได้เป็นและมิได้มีพฤติการณ์เป็นผู้แนะนำการลงทุน (IC) ผู้วางแผนการลงทุน (IP) หรือที่ปรึกษาทางการเงินที่ได้รับใบอนุญาตจากสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (ก.ล.ต.) หรือหน่วยงานกำกับดูแลอื่น เนื้อหาทั้งหมดจึงไม่เข้าข่ายการให้คำแนะนำการลงทุนรายบุคคลตามกฎหมาย และผู้ใช้ไม่ควรใช้เนื้อหาแทนที่คำแนะนำจากผู้มีใบอนุญาต",
+        "ผู้ให้บริการยังไม่ได้รับใบอนุญาตเป็นผู้แนะนำการลงทุน (IC) หรือประกอบธุรกิจที่ปรึกษาการลงทุนจากสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (ก.ล.ต.) ระบบเวอร์ชัน production จึงต้องจำกัดบริการไว้ที่ข้อมูล การศึกษา และเครื่องมือวิจัยที่ไม่ออกคำสั่งซื้อขาย อย่างไรก็ดี การจัดประเภทตามกฎหมายพิจารณาจากลักษณะบริการที่ทำจริง ไม่ใช่จาก disclaimer เพียงอย่างเดียว ฟีเจอร์ที่อาจเป็นคำแนะนำเฉพาะบุคคลต้องถูกระงับจนกว่าจะผ่านการตรวจโดยผู้เชี่ยวชาญหรือดำเนินการภายใต้ผู้ได้รับอนุญาต ผู้ใช้ไม่ควรใช้เนื้อหาแทนคำแนะนำจากผู้มีใบอนุญาต",
         "การวิเคราะห์อ้างอิงจากหลักโหราศาสตร์จีน (บาจื่อ/ธาตุทั้งห้า) ร่วมกับข้อมูลราคา ข่าวสาร และแนวโน้มตลาด ซึ่งข้อมูลดังกล่าวอาจไม่ครบถ้วน ล่าช้า หรือคลาดเคลื่อนจากความเป็นจริง (รวมถึงราคาที่มิได้เป็นราคาเรียลไทม์) เราไม่รับประกันความถูกต้อง ครบถ้วน หรือความเหมาะสมของข้อมูลต่อวัตถุประสงค์ใด ๆ ของผู้ใช้",
         "ผลการดำเนินงานในอดีต (รวมถึงพอร์ตเด่นรายเดือนที่เคยเผยแพร่) มิได้เป็นสิ่งรับประกันผลลัพธ์ในอนาคต การลงทุนมีความเสี่ยง ผู้ลงทุนอาจได้รับผลขาดทุนรวมถึงการสูญเสียเงินต้นทั้งหมด ผู้ใช้ต้องศึกษาข้อมูลด้วยตนเอง ใช้วิจารณญาณ และรับผิดชอบต่อการตัดสินใจลงทุนของตนแต่เพียงผู้เดียว",
         "เราไม่รับผิดชอบต่อความเสียหายหรือการสูญเสียใด ๆ ไม่ว่าทางตรงหรือทางอ้อม อันเกิดจากการใช้หรือการพึ่งพาข้อมูลบนเว็บไซต์นี้ รวมถึงความเสียหายจากความผิดพลาดของระบบ การหยุดชะงักของบริการ หรือการกระทำของบุคคลที่สาม",
@@ -21,7 +21,7 @@ export const LEGAL: Record<"disclaimer" | "risk" | "terms" | "privacy", LegalSec
     zh: [
       { h: "免责声明", p: [
         "本网站（ดวงนักลงทุน / 命理投资）提供的所有信息、分析和结果（包括 AI 聊天、月度精选组合、股票/资产报告及五行分析）仅供一般参考、教育和娱乐用途，不构成对任何证券或金融工具的买卖或持有邀请或建议。",
-        "本服务提供方并非经泰国证券交易委员会（SEC）或任何监管机构许可的投资顾问（IC）、投资规划师（IP）或财务顾问，所有内容均不构成法律意义上的个性化投资建议；用户不应以此替代持牌顾问的意见。",
+        "本服务提供方目前并未获得泰国证券交易委员会（SEC）的投资顾问业务许可，因此服务范围仅限于不发出交易指令的一般信息、教育与研究工具。法律定性取决于服务的实际功能，而非免责声明本身；任何可能构成个性化建议的功能，在完成专业法律审查或由持牌机构提供之前均应暂停。用户不应以本服务替代持牌专业人士的意见。",
         "所有分析基于中国命理（八字/五行）并结合价格、新闻和市场趋势数据；该等数据可能不完整、延迟或与实际情况有出入（包括非实时价格）。我们不保证数据的准确性、完整性或对任何目的的适用性。",
         "过往表现（包括此前发布的月度精选组合）不保证未来结果。投资有风险，投资者可能遭受损失包括损失全部本金。用户须自行研究、独立判断并对自己的投资决策负全部责任。",
         "对于因使用或依赖本网站信息而造成的任何直接或间接损害或损失，包括系统错误、服务中断或第三方行为造成的损失，我们不承担责任。",
@@ -30,7 +30,7 @@ export const LEGAL: Record<"disclaimer" | "risk" | "terms" | "privacy", LegalSec
     en: [
       { h: "Disclaimer", p: [
         "All information, analyses and outputs on this website (including AI chat, monthly picks, stock/asset reports and element analysis) are provided for general information, education and entertainment purposes only, and do not constitute an offer or recommendation to buy, sell or hold any security or financial instrument.",
-        "The provider is not and does not act as a licensed investment consultant (IC), investment planner (IP) or financial advisor under the Securities and Exchange Commission (SEC Thailand) or any regulator; all content is therefore not individualized investment advice under law, and users should not rely on it in place of advice from a licensed professional.",
+        "The provider is not currently licensed by the Securities and Exchange Commission of Thailand to operate an investment-advisory business, so the service is limited to general information, education and research tools that do not issue transaction instructions. Legal classification depends on what the service actually does, not on a disclaimer alone; any feature that may amount to individualized advice must remain disabled until reviewed by qualified counsel or delivered through an appropriately licensed provider. Users should not rely on this service in place of advice from a licensed professional.",
         "Analyses are based on Chinese astrology (Bazi/Five Elements) combined with price, news and market-trend data, which may be incomplete, delayed or inaccurate (including non-real-time prices). We make no warranty as to the accuracy, completeness or fitness of the information for any purpose.",
         "Past performance (including previously published monthly picks) does not guarantee future results. Investing involves risk; investors may suffer losses including the loss of their entire principal. Users must conduct their own research, exercise their own judgment and bear sole responsibility for their investment decisions.",
         "We accept no liability for any direct or indirect damages or losses arising from the use of or reliance on this website's information, including system errors, service interruptions or acts of third parties.",

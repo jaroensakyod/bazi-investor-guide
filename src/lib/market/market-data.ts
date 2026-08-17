@@ -20,11 +20,14 @@ export type MarketData = NonNullable<StockEntry["marketData"]> & {
 };
 
 export type MarketSnapshot = {
+  normalizationVersion?: number;
   updatedAt: string; // ISO
   quotes: Record<string, MarketData>; // key = yahoo ticker
 };
 
-/** normalize v7 quote → MarketData (schema ชั้น B) — dividendYield ทศนิยม → % */
+export const MARKET_NORMALIZATION_VERSION = 2 as const;
+
+/** normalize v7 quote → MarketData (schema ชั้น B); dividendYield is already percentage points. */
 export function normalizeQuote(q: YahooQuote, updatedAt: string): MarketData {
   const md: MarketData = {
     updatedAt,
@@ -34,7 +37,7 @@ export function normalizeQuote(q: YahooQuote, updatedAt: string): MarketData {
   if (typeof q.regularMarketChangePercent === "number") md.changePct = round2(q.regularMarketChangePercent);
   if (typeof q.trailingPE === "number") md.pe = round2(q.trailingPE);
   if (typeof q.priceToBook === "number") md.pbv = round2(q.priceToBook);
-  if (typeof q.dividendYield === "number") md.dividendYield = round2(q.dividendYield * 100);
+  if (typeof q.dividendYield === "number") md.dividendYield = round2(q.dividendYield);
   if (typeof q.marketCap === "number") md.marketCap = Math.round(q.marketCap);
   if (typeof q.averageVolume === "number") md.avgVolume = Math.round(q.averageVolume);
   if (typeof q.fiftyTwoWeekHigh === "number") md.high52w = round2(q.fiftyTwoWeekHigh);
@@ -53,14 +56,32 @@ export function buildSnapshot(quotes: Iterable<YahooQuote>, updatedAt = new Date
     if (!q.symbol) continue;
     map[q.symbol] = normalizeQuote(q, updatedAt);
   }
-  return { updatedAt, quotes: map };
+  return { normalizationVersion: MARKET_NORMALIZATION_VERSION, updatedAt, quotes: map };
+}
+
+/** Upgrade v1 snapshots where Yahoo dividendYield percentage points were multiplied by 100 again. */
+export function upgradeMarketSnapshot(snapshot: MarketSnapshot): MarketSnapshot {
+  if ((snapshot.normalizationVersion ?? 1) >= MARKET_NORMALIZATION_VERSION) return snapshot;
+  const quotes = Object.fromEntries(
+    Object.entries(snapshot.quotes).map(([ticker, quote]) => [
+      ticker,
+      {
+        ...quote,
+        ...(typeof quote.dividendYield === "number"
+          ? { dividendYield: round2(quote.dividendYield / 100) }
+          : {}),
+      },
+    ]),
+  );
+  return { ...snapshot, normalizationVersion: MARKET_NORMALIZATION_VERSION, quotes };
 }
 
 export function saveSnapshot(snapshot: MarketSnapshot, date = new Date().toISOString().slice(0, 10), dir = MARKET_CACHE_DIR): string {
+  const canonical = upgradeMarketSnapshot(snapshot);
   mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `${date}.json`);
-  writeFileSync(file, JSON.stringify(snapshot, null, 1) + "\n", "utf8");
-  writeFileSync(path.join(dir, "latest.json"), JSON.stringify(snapshot, null, 1) + "\n", "utf8");
+  writeFileSync(file, JSON.stringify(canonical, null, 1) + "\n", "utf8");
+  writeFileSync(path.join(dir, "latest.json"), JSON.stringify(canonical, null, 1) + "\n", "utf8");
   return file;
 }
 
@@ -68,7 +89,7 @@ export function loadSnapshot(date?: string, dir = MARKET_CACHE_DIR): MarketSnaps
   const file = date ? path.join(dir, `${date}.json`) : path.join(dir, "latest.json");
   if (!existsSync(file)) return null;
   try {
-    return JSON.parse(readFileSync(file, "utf8")) as MarketSnapshot;
+    return upgradeMarketSnapshot(JSON.parse(readFileSync(file, "utf8")) as MarketSnapshot);
   } catch {
     return null;
   }

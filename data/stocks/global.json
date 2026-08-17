@@ -154,11 +154,11 @@
     },
     {
       "type": "stock",
-      "ticker": "300750",
+      "ticker": "300750.SZ",
       "name": "CATL",
       "nameEn": "CATL",
       "country": "CN",
-      "market": "SSE",
+      "market": "SZSE",
       "currency": "CNY",
       "sector": "แบตเตอรี่",
       "business": "แบตเตอรี่ลิเธียม EV",
@@ -2810,6 +2810,14 @@
       "country": "IN",
       "market": "NSE",
       "currency": "INR",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "TMPV",
+      "statusEffectiveDate": "2025-10-24",
+      "statusReason": "NSE changed the existing listed company's symbol from TATAMOTORS to TMPV after the demerger and company-name change.",
+      "statusEvidence": {
+        "source": "NSE Circular NSE/FAOP/70882 — Change in Underlying Name & Symbol",
+        "url": "https://nsearchives.nseindia.com/content/circulars/FAOP70882.pdf"
+      },
       "sector": "ยานยนต์",
       "business": "รถยนต์ รถไฟฟ้า JLR",
       "businessKeywords": [
@@ -7762,6 +7770,14 @@
       "country": "AU",
       "market": "ASX",
       "currency": "AUD",
+      "securityStatus": "delisted",
+      "successorTicker": "NEM",
+      "statusEffectiveDate": "2023-11-07",
+      "statusReason": "Newcrest Mining was removed from the ASX Official List at the close of trading after its acquisition by Newmont.",
+      "statusEvidence": {
+        "source": "ASX — Newcrest Mining Removal from Official List",
+        "url": "https://www.asx.com.au/asx/v2/statistics/announcements.do?asxCode=NCM&by=asxCode&timeframe=Y&year=2023"
+      },
       "sector": "เหมืองทอง",
       "business": "เหมืองทองคำ",
       "businessKeywords": [
@@ -24751,6 +24767,13 @@
       "country": "AU",
       "market": "ASX",
       "currency": "AUD",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SKG",
+      "statusReason": "ASX records ASK as the former code and SKG as the current code for Storage King Group; keep ASK searchable without counting a duplicate security.",
+      "statusEvidence": {
+        "source": "ASX company announcements — code history",
+        "url": "https://www.asx.com.au/asx/v2/statistics/announcements.do?asxCode=ASK&by=asxCode&timeframe=Y&year=2026"
+      },
       "sector": "Real Estate",
       "business": "Abacus Storage King",
       "businessKeywords": [],
@@ -26442,6 +26465,13 @@
       "country": "AU",
       "market": "ASX",
       "currency": "AUD",
+      "securityStatus": "delisted",
+      "statusEffectiveDate": "2026-04-29",
+      "statusReason": "Insignia Financial was removed from the ASX Official List following implementation of its scheme of arrangement.",
+      "statusEvidence": {
+        "source": "ASX — Insignia Financial Removal from Official List",
+        "url": "https://www.asx.com.au/asx/v2/statistics/announcements.do?asxCode=IFL&by=asxCode&timeframe=Y&year=2026"
+      },
       "sector": "Financials",
       "business": "Insignia Financial",
       "businessKeywords": [],
@@ -27302,6 +27332,13 @@
       "country": "AU",
       "market": "ASX",
       "currency": "AUD",
+      "securityStatus": "delisted",
+      "statusEffectiveDate": "2026-05-12",
+      "statusReason": "National Storage REIT was removed from the ASX Official List following implementation of its schemes.",
+      "statusEvidence": {
+        "source": "ASX — National Storage REIT Removal from Official List",
+        "url": "https://www.asx.com.au/asx/v2/statistics/announcements.do?asxCode=NSR&by=asxCode&timeframe=Y&year=2026"
+      },
       "sector": "Real Estate",
       "business": "National Storage",
       "businessKeywords": [],
@@ -29276,7 +29313,7 @@
     },
     {
       "type": "stock",
-      "ticker": "XYX.AX",
+      "ticker": "XYZ.AX",
       "name": "Block, Inc.",
       "nameEn": "Block, Inc.",
       "country": "AU",
@@ -51663,6 +51700,14 @@
       "country": "CN",
       "market": "SSE",
       "currency": "CNY",
+      "securityStatus": "delisted",
+      "successorTicker": "601211",
+      "statusEffectiveDate": "2025-03-04",
+      "statusReason": "SSE terminated Haitong Securities' listing after its absorption merger with Guotai Junan Securities.",
+      "statusEvidence": {
+        "source": "Shanghai Stock Exchange — Haitong Securities listing termination notice",
+        "url": "https://www.sse.com.cn/disclosure/announcement/listing/stock/c/c_20250226_10773005.shtml"
+      },
       "sector": "Financials",
       "business": "Haitong Securities Company",
       "businessKeywords": [],
@@ -53005,6 +53050,14 @@
       "country": "CN",
       "market": "SSE",
       "currency": "CNY",
+      "securityStatus": "delisted",
+      "successorTicker": "600150",
+      "statusEffectiveDate": "2025-09-05",
+      "statusReason": "SSE terminated China Shipbuilding Industry Company's listing after its share-swap absorption merger into China State Shipbuilding Corporation.",
+      "statusEvidence": {
+        "source": "Shanghai Stock Exchange — China Shipbuilding Industry listing termination notice",
+        "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/announcement/listing/stock/c/c_20250829_10790128.shtml"
+      },
       "sector": "Industrials",
       "business": "China Shipbuilding Industry Company",
       "businessKeywords": [],
@@ -69356,6 +69409,13 @@
       "country": "SG",
       "market": "SGX",
       "currency": "SGD",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "Z74",
+      "statusReason": "Duplicate catalog code. SGX Corporate Information and Singtel identify the listed ordinary-share counter as Z74; keep Z77 searchable only as a legacy catalog alias.",
+      "statusEvidence": {
+        "source": "Singapore Exchange — Singtel Corporate Information",
+        "url": "https://links.sgx.com/1.0.0/corporate-information/2032"
+      },
       "sector": "Communications",
       "business": "Singapore Telecommunications Limited",
       "businessKeywords": [],
@@ -165463,7 +165523,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "PETR3",
+      "statusReason": "PETR3F is the B3 odd-lot trading code for canonical security PETR3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165484,7 +165551,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "PETR4",
+      "statusReason": "PETR4F is the B3 odd-lot trading code for canonical security PETR4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165563,7 +165637,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ITUB3",
+      "statusReason": "ITUB3F is the B3 odd-lot trading code for canonical security ITUB3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165584,7 +165665,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ITUB4",
+      "statusReason": "ITUB4F is the B3 odd-lot trading code for canonical security ITUB4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165605,7 +165693,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "VALE3",
+      "statusReason": "VALE3F is the B3 odd-lot trading code for canonical security VALE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165626,7 +165721,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ABEV3",
+      "statusReason": "ABEV3F is the B3 odd-lot trading code for canonical security ABEV3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165647,7 +165749,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "BPAC3",
+      "statusReason": "BPAC3F is the B3 odd-lot trading code for canonical security BPAC3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165668,7 +165777,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "BPAC5",
+      "statusReason": "BPAC5F is the B3 odd-lot trading code for canonical security BPAC5, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165718,7 +165834,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "WEGE3",
+      "statusReason": "WEGE3F is the B3 odd-lot trading code for canonical security WEGE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165739,7 +165862,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "BBDC3",
+      "statusReason": "BBDC3F is the B3 odd-lot trading code for canonical security BBDC3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165789,7 +165919,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "BBDC4",
+      "statusReason": "BBDC4F is the B3 odd-lot trading code for canonical security BBDC4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165839,7 +165976,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ITSA4",
+      "statusReason": "ITSA4F is the B3 odd-lot trading code for canonical security ITSA4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165860,7 +166004,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ITSA3",
+      "statusReason": "ITSA3F is the B3 odd-lot trading code for canonical security ITSA3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165910,7 +166061,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "AXIA3",
+      "statusReason": "AXIA3F is the B3 odd-lot trading code for canonical security AXIA3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165931,7 +166089,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "AXIA7",
+      "statusReason": "AXIA7F is the B3 odd-lot trading code for canonical security AXIA7, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -165952,7 +166117,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "BBAS3",
+      "statusReason": "BBAS3F is the B3 odd-lot trading code for canonical security BBAS3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166002,7 +166174,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SANB3",
+      "statusReason": "SANB3F is the B3 odd-lot trading code for canonical security SANB3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166023,7 +166202,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SANB4",
+      "statusReason": "SANB4F is the B3 odd-lot trading code for canonical security SANB4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166044,7 +166230,14 @@
       "elements": [
         "ไม้"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "VIVT3",
+      "statusReason": "VIVT3F is the B3 odd-lot trading code for canonical security VIVT3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166065,7 +166258,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SBSP3",
+      "statusReason": "SBSP3F is the B3 odd-lot trading code for canonical security SBSP3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166086,7 +166286,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "BBSE3",
+      "statusReason": "BBSE3F is the B3 odd-lot trading code for canonical security BBSE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166107,7 +166314,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "RDOR3",
+      "statusReason": "RDOR3F is the B3 odd-lot trading code for canonical security RDOR3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166128,7 +166342,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "B3SA3",
+      "statusReason": "B3SA3F is the B3 odd-lot trading code for canonical security B3SA3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166149,7 +166370,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "EMBJ3",
+      "statusReason": "EMBJ3F is the B3 odd-lot trading code for canonical security EMBJ3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166170,7 +166398,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CXSE3",
+      "statusReason": "CXSE3F is the B3 odd-lot trading code for canonical security CXSE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166191,7 +166426,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SUZB3",
+      "statusReason": "SUZB3F is the B3 odd-lot trading code for canonical security SUZB3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166212,7 +166454,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CPFE3",
+      "statusReason": "CPFE3F is the B3 odd-lot trading code for canonical security CPFE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166233,7 +166482,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ENEV3",
+      "statusReason": "ENEV3F is the B3 odd-lot trading code for canonical security ENEV3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166254,7 +166510,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "PRIO3",
+      "statusReason": "PRIO3F is the B3 odd-lot trading code for canonical security PRIO3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166275,7 +166538,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "GGBR3",
+      "statusReason": "GGBR3F is the B3 odd-lot trading code for canonical security GGBR3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166325,7 +166595,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "GGBR4",
+      "statusReason": "GGBR4F is the B3 odd-lot trading code for canonical security GGBR4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166346,7 +166623,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "EQTL3",
+      "statusReason": "EQTL3F is the B3 odd-lot trading code for canonical security EQTL3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166367,7 +166651,14 @@
       "elements": [
         "ไม้"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "TIMS3",
+      "statusReason": "TIMS3F is the B3 odd-lot trading code for canonical security TIMS3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166388,7 +166679,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CPLE3",
+      "statusReason": "CPLE3F is the B3 odd-lot trading code for canonical security CPLE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166409,7 +166707,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SAUD3",
+      "statusReason": "SAUD3F is the B3 odd-lot trading code for canonical security SAUD3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166430,7 +166735,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "EGIE3",
+      "statusReason": "EGIE3F is the B3 odd-lot trading code for canonical security EGIE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166451,7 +166763,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "RENT3",
+      "statusReason": "RENT3F is the B3 odd-lot trading code for canonical security RENT3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166501,7 +166820,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "RENT4",
+      "statusReason": "RENT4F is the B3 odd-lot trading code for canonical security RENT4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166522,7 +166848,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "VBBR3",
+      "statusReason": "VBBR3F is the B3 odd-lot trading code for canonical security VBBR3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166572,7 +166905,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CMIG3",
+      "statusReason": "CMIG3F is the B3 odd-lot trading code for canonical security CMIG3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166593,7 +166933,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CMIG4",
+      "statusReason": "CMIG4F is the B3 odd-lot trading code for canonical security CMIG4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166614,7 +166961,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "RADL3",
+      "statusReason": "RADL3F is the B3 odd-lot trading code for canonical security RADL3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166635,7 +166989,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "UGPA3",
+      "statusReason": "UGPA3F is the B3 odd-lot trading code for canonical security UGPA3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166656,7 +167017,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "PSSA3",
+      "statusReason": "PSSA3F is the B3 odd-lot trading code for canonical security PSSA3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166677,7 +167045,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CMIN3",
+      "statusReason": "CMIN3F is the B3 odd-lot trading code for canonical security CMIN3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166698,7 +167073,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "MOTV3",
+      "statusReason": "MOTV3F is the B3 odd-lot trading code for canonical security MOTV3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166719,7 +167101,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "RAIL3",
+      "statusReason": "RAIL3F is the B3 odd-lot trading code for canonical security RAIL3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166740,7 +167129,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CSMG3",
+      "statusReason": "CSMG3F is the B3 odd-lot trading code for canonical security CSMG3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166761,7 +167157,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "MBRF3",
+      "statusReason": "MBRF3F is the B3 odd-lot trading code for canonical security MBRF3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166811,7 +167214,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "KLBN4",
+      "statusReason": "KLBN4F is the B3 odd-lot trading code for canonical security KLBN4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166832,7 +167242,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "KLBN3",
+      "statusReason": "KLBN3F is the B3 odd-lot trading code for canonical security KLBN3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166853,7 +167270,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ISAE4",
+      "statusReason": "ISAE4F is the B3 odd-lot trading code for canonical security ISAE4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166874,7 +167298,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ISAE3",
+      "statusReason": "ISAE3F is the B3 odd-lot trading code for canonical security ISAE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166924,7 +167355,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ENGI4",
+      "statusReason": "ENGI4F is the B3 odd-lot trading code for canonical security ENGI4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166945,7 +167383,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ENGI3",
+      "statusReason": "ENGI3F is the B3 odd-lot trading code for canonical security ENGI3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -166995,7 +167440,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "TOTS3",
+      "statusReason": "TOTS3F is the B3 odd-lot trading code for canonical security TOTS3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167016,7 +167468,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "PASS3",
+      "statusReason": "PASS3F is the B3 odd-lot trading code for canonical security PASS3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167037,7 +167496,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CGAS3",
+      "statusReason": "CGAS3F is the B3 odd-lot trading code for canonical security CGAS3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167058,7 +167524,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CGAS5",
+      "statusReason": "CGAS5F is the B3 odd-lot trading code for canonical security CGAS5, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167108,7 +167581,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "CSAN3",
+      "statusReason": "CSAN3F is the B3 odd-lot trading code for canonical security CSAN3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167129,7 +167609,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "HYPE3",
+      "statusReason": "HYPE3F is the B3 odd-lot trading code for canonical security HYPE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167150,7 +167637,14 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "REDE3",
+      "statusReason": "REDE3F is the B3 odd-lot trading code for canonical security REDE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167171,7 +167665,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "GOAU4",
+      "statusReason": "GOAU4F is the B3 odd-lot trading code for canonical security GOAU4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167192,7 +167693,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "GOAU3",
+      "statusReason": "GOAU3F is the B3 odd-lot trading code for canonical security GOAU3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167242,7 +167750,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ALOS3",
+      "statusReason": "ALOS3F is the B3 odd-lot trading code for canonical security ALOS3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167263,7 +167778,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "TAEE3",
+      "statusReason": "TAEE3F is the B3 odd-lot trading code for canonical security TAEE3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167313,7 +167835,14 @@
       "elements": [
         "ทอง"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "TAEE4",
+      "statusReason": "TAEE4F is the B3 odd-lot trading code for canonical security TAEE4, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167334,11 +167863,18 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "LREN3",
+      "statusReason": "LREN3F is the B3 odd-lot trading code for canonical security LREN3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
-      "ticker": "MRSA6BF",
+      "ticker": "MRSA6B",
       "name": "MRS Logistica SA Pfd Class B",
       "nameEn": "MRS Logistica SA Pfd Class B",
       "country": "BR",
@@ -167355,7 +167891,12 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "statusReason": "Catalog identifier corrected from odd-lot code MRSA6BF to canonical B3 security code MRSA6B.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167405,7 +167946,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "MRSA3B",
+      "statusReason": "MRSA3BF is the B3 odd-lot trading code for canonical security MRSA3B, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167426,7 +167974,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "MRSA5B",
+      "statusReason": "MRSA5BF is the B3 odd-lot trading code for canonical security MRSA5B, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167447,11 +168002,18 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "SMFT3",
+      "statusReason": "SMFT3F is the B3 odd-lot trading code for canonical security SMFT3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
-      "ticker": "EQPA7F",
+      "ticker": "EQPA7",
       "name": "Equatorial Para Distribuidora de Energia SA Pfd Registered Shs C",
       "nameEn": "Equatorial Para Distribuidora de Energia SA Pfd Registered Shs C",
       "country": "BR",
@@ -167468,7 +168030,12 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "statusReason": "Catalog identifier corrected from odd-lot code EQPA7F to canonical B3 security code EQPA7.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167489,11 +168056,18 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "EQPA3",
+      "statusReason": "EQPA3F is the B3 odd-lot trading code for canonical security EQPA3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
-      "ticker": "EQPA5F",
+      "ticker": "EQPA5",
       "name": "Equatorial Para Distribuidora de Energia SA Pfd Registered Shs A",
       "nameEn": "Equatorial Para Distribuidora de Energia SA Pfd Registered Shs A",
       "country": "BR",
@@ -167510,11 +168084,16 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "statusReason": "Catalog identifier corrected from odd-lot code EQPA5F to canonical B3 security code EQPA5.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
-      "ticker": "EQPA6F",
+      "ticker": "EQPA6",
       "name": "Equatorial Para Distribuidora de Energia SA Pfd Registered Shs B",
       "nameEn": "Equatorial Para Distribuidora de Energia SA Pfd Registered Shs B",
       "country": "BR",
@@ -167531,7 +168110,12 @@
       "elements": [
         "ไฟ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "statusReason": "Catalog identifier corrected from odd-lot code EQPA6F to canonical B3 security code EQPA6.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",
@@ -167552,7 +168136,14 @@
       "elements": [
         "น้ำ"
       ],
-      "status": "draft"
+      "status": "draft",
+      "securityStatus": "trading_alias",
+      "canonicalTicker": "ASAI3",
+      "statusReason": "ASAI3F is the B3 odd-lot trading code for canonical security ASAI3, not a separate listed security.",
+      "statusEvidence": {
+        "source": "B3 Trading Procedures Manual — odd-lot ticker suffix F",
+        "url": "https://www.b3.com.br/data/files/3A/84/39/0C/7DBEE8100E866AE8AC094EA8/MPO%20de%20Negociacao%20da%20B3.pdf"
+      }
     },
     {
       "type": "stock",

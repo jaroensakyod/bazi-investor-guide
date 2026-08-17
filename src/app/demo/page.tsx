@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useT } from "../lib/i18n";
 
 type CardData = {
   persona: { name: string; emoji: string; bandLabel: string; style: string };
@@ -18,7 +17,6 @@ const EL_COLOR: Record<string, string> = { ไม้: "#4caf50", ไฟ: "#ef535
 
 /** เดโมสด: กรอกวันเกิด → การ์ดตัวตนฟรี (HTML น่าแชร์ + PDF) — lead magnet */
 export default function DemoPage() {
-  const t = useT();
   const [birthDate, setBirthDate] = useState("1993-11-24");
   const [birthTime, setBirthTime] = useState("15:12");
   const [gender, setGender] = useState("male");

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-10T09:35:00.000Z",
+  "source": {
+    "name": "Nasdaq Trader official symbol directories plus curated issuer review",
+    "url": "https://www.nasdaqtrader.com/trader.aspx?id=symboldirdefs",
+    "reviewedBy": "Data Governance"
+  },
+  "records": [
+    {
+      "securityId": "NYSE/NASDAQ:BA/PA",
+      "providerTicker": "BA-PA",
+      "issuerProviderTicker": "BA",
+      "reason": "Boeing mandatory convertible preferred depositary shares; fundamentals belong to Boeing issuer"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:GOOGM",
+      "providerTicker": "GOOGM",
+      "issuerProviderTicker": "GOOGL",
+      "reason": "Alphabet Series A mandatory convertible preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:GOOGN",
+      "providerTicker": "GOOGN",
+      "issuerProviderTicker": "GOOGL",
+      "reason": "Alphabet Series B mandatory convertible preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:GS/PC",
+      "providerTicker": "GS-PC",
+      "issuerProviderTicker": "GS",
+      "reason": "Goldman Sachs preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:USB/PA",
+      "providerTicker": "USB-PA",
+      "issuerProviderTicker": "USB",
+      "reason": "U.S. Bancorp Series A preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:USB/PS",
+      "providerTicker": "USB-PS",
+      "issuerProviderTicker": "USB",
+      "reason": "U.S. Bancorp Series O preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:ALL/PB",
+      "providerTicker": "ALL-PB",
+      "issuerProviderTicker": "ALL",
+      "reason": "Allstate subordinated debentures; issuer solvency is the applicable fundamental scope"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:ARES/PB",
+      "providerTicker": "ARES-PB",
+      "issuerProviderTicker": "ARES",
+      "reason": "Ares mandatory convertible preferred stock"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:FCNCN",
+      "providerTicker": "FCNCN",
+      "issuerProviderTicker": "FCNCA",
+      "reason": "First Citizens BancShares Series E preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:FITB/PI",
+      "providerTicker": "FITB-PI",
+      "issuerProviderTicker": "FITB",
+      "reason": "Fifth Third Bancorp Series I preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:HPE/PC",
+      "providerTicker": "HPE-PC",
+      "issuerProviderTicker": "HPE",
+      "reason": "Hewlett Packard Enterprise mandatory convertible preferred stock"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:PCG/PX",
+      "providerTicker": "PCG-PX",
+      "issuerProviderTicker": "PCG",
+      "reason": "PG&E Series A mandatory convertible preferred stock"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:PSA/PT",
+      "providerTicker": "PSA-PT",
+      "issuerProviderTicker": "PSA",
+      "reason": "Public Storage Series T preferred shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:PSA/PU",
+      "providerTicker": "PSA-PU",
+      "issuerProviderTicker": "PSA",
+      "reason": "Public Storage Series U preferred shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:QXO/PB",
+      "providerTicker": "QXO-PB",
+      "issuerProviderTicker": "QXO",
+      "reason": "QXO Series B mandatory convertible preferred depositary shares"
+    },
+    {
+      "securityId": "NYSE/NASDAQ:WRB/PH",
+      "providerTicker": "WRB-PH",
+      "issuerProviderTicker": "WRB",
+      "reason": "W. R. Berkley subordinated debentures; issuer solvency is the applicable fundamental scope"
+    }
+  ]
+}

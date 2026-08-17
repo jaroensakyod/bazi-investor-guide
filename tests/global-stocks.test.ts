@@ -2,7 +2,14 @@
  * เทสต์คลังหุ้นโลก (global.json — 8 ตลาด)
  */
 import { describe, it, expect } from "vitest";
-import { getGlobalStocks, getMarketMeta, validateStocks, getAllStocks } from "@/lib/investor/stock-database";
+import {
+  getGlobalStocks,
+  getMarketMeta,
+  validateStocks,
+  getAllStocks,
+  isResearchableStock,
+  resolveCanonicalStock,
+} from "@/lib/investor/stock-database";
 
 describe("คลังหุ้นโลก (global.json)", () => {
   it("มีหุ้นครบ 8 ตลาด (จีน/เวียดนาม/ญี่ปุ่น/US/แคนาดา/ออส/เกาหลี/อินเดีย) รวม ≥ 80 ตัว", () => {
@@ -48,5 +55,18 @@ describe("คลังหุ้นโลก (global.json)", () => {
     expect(byTicker.get("7203.T")?.primaryElement).toBe("ทอง");
     expect(byTicker.get("005930.KS")?.primaryElement).toBe("ทอง");
     expect(byTicker.get("BABA")?.primaryElement).toBe("ทอง");
+  });
+
+  it("เก็บ B3 odd-lot ticker ไว้ค้นหา แต่ไม่นับเป็นหลักทรัพย์ซ้ำ", () => {
+    const b3 = getGlobalStocks().filter((stock) => stock.market === "BOVESPA");
+    const aliases = b3.filter((stock) => stock.securityStatus === "trading_alias");
+    const researchable = b3.filter(isResearchableStock);
+    expect(aliases).toHaveLength(73);
+    expect(researchable).toHaveLength(101);
+    expect(researchable.some((stock) => stock.ticker.endsWith("F"))).toBe(false);
+    expect(resolveCanonicalStock(aliases.find((stock) => stock.ticker === "PETR4F")!, b3).ticker).toBe("PETR4");
+    for (const alias of aliases) {
+      expect(b3.some((stock) => stock.ticker === alias.canonicalTicker && isResearchableStock(stock))).toBe(true);
+    }
   });
 });

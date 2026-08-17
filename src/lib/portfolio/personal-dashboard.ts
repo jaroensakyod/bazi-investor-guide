@@ -3,7 +3,7 @@ import { createInMemoryKnowledgeRepository } from "../bazi/in-memory-repository"
 import { resolveInvestorPersona, resolveInvestElements, wealthElementTh, elementBusinessHint, outputElementTh, buildInvestorTimeline } from "../investor/investor-guide";
 import { loadSnapshot } from "../market/market-data";
 import { yahooTicker } from "../market/yahoo";
-import { getAllStocks } from "../investor/stock-database";
+import { getResearchableStocks } from "../investor/stock-database";
 import { loadFundamentalsCache } from "../market/fundamentals";
 import { buffettChecks, buffettScore } from "../report/buffett-checks";
 import { getAssets } from "../assets/asset-universe";
@@ -118,7 +118,7 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
     const tier = tierOf(fit, f, s.tier, md?.changePct ?? null);
     return { ticker: s.ticker, name: s.name, market: s.market, element: s.primaryElement, fit, riskTier: s.tier, price: md?.price ?? null, changePct: md?.changePct ?? null, score: scoreOf(md, f), unlock, stockTier: tier, tierUnlock: TIER_META[tier].unlock };
   };
-  const allStocks = getAllStocks();
+  const allStocks = getResearchableStocks();
   const byEl = (el: string) => allStocks.filter((s) => s.primaryElement === el);
   const inMarkets = (list: typeof allStocks, mk: string[]) => list.filter((s) => mk.includes(s.market));
   const top = <T,>(list: T[], n: number): T[] => list.slice(0, n);
@@ -145,7 +145,7 @@ export function buildPersonalDashboard(state: CalculatedStateValue) {
   const ipoList = ipoRows
     .filter((e) => (invest as string[]).includes(classifyIpoElement(e).element))
     .map((e) => {
-      const { element, reason } = classifyIpoElement(e);
+      const { element } = classifyIpoElement(e);
       const fit = elementFitForUser(state, element);
       const tier = tierOf(fit, undefined, "small", null);
       return { ticker: e.ticker, name: e.name, element, fit, riskTier: "ipo", price: null, changePct: null, unlock: "pro", ipoDate: e.ipoDate ?? "", stockTier: tier, tierUnlock: TIER_META[tier].unlock };

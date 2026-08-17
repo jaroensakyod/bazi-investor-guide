@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-09T09:39:06.150Z",
+  "contentHash": "8907fdb3becb9aa405aa50fe5433ac98b7344f5b745733564b5a372f4576fc3f",
+  "entries": [
+    {
+      "snapshotId": "research_ff9dbec54be6e774d31d33b5",
+      "securityId": "NASDAQ:AAPL",
+      "createdAt": "2026-08-09T09:14:42.159Z",
+      "contentHash": "ff9dbec54be6e774d31d33b55bef59c0f9d12a4e7d5ed585ae787b5d99054b1b",
+      "decisionId": "decision_e07d7acdc14de215526c4ae8",
+      "status": "research",
+      "confidenceScore": 90,
+      "dataAsOf": "2026-08-08T10:21:55.371Z"
+    }
+  ]
+}

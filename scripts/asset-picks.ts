@@ -25,7 +25,7 @@ import {
   wealthElementTh,
   type StockScore,
 } from "@/lib/investor/investor-guide";
-import { getThaiStocks, getGlobalStocks } from "@/lib/investor/stock-database";
+import { getResearchableGlobalStocks, getResearchableThaiStocks } from "@/lib/investor/stock-database";
 
 function arg(name: string): string | undefined {
   const i = process.argv.indexOf(name);
@@ -81,7 +81,11 @@ async function main() {
   const elementFilter = arg("--element");
   const limit = Number(arg("--limit") ?? 15);
   const pool =
-    market === "TH" ? getThaiStocks() : market === "GLOBAL" ? getGlobalStocks() : [...getThaiStocks(), ...getGlobalStocks()];
+    market === "TH"
+      ? getResearchableThaiStocks()
+      : market === "GLOBAL"
+        ? getResearchableGlobalStocks()
+        : [...getResearchableThaiStocks(), ...getResearchableGlobalStocks()];
 
   const scored = pool
     .filter((s) => !elementFilter || s.primaryElement === elementFilter)

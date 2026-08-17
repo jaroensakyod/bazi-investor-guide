@@ -7,8 +7,14 @@ export default function Footer() {
   const t = useT();
   return (
     <footer className="footer">
-      <p>{t("disclaimer")}</p>
-      <p style={{ marginTop: 6 }}>
+      <p className="footerStatement">{t("disclaimer")}</p>
+      <p className="footerLinks">
+        <Link href="/report">{t("nav.report")}</Link>
+        {" · "}
+        <Link href="/stocks">{t("nav.stocks")}</Link>
+        {" · "}
+        <Link href="/trust">{t("nav.trust")}</Link>
+        {" · "}
         <Link href="/legal?p=disclaimer">{t("legal.disclaimer")}</Link>
         {" · "}
         <Link href="/legal?p=risk">{t("legal.risk")}</Link>

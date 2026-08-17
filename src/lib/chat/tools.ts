@@ -8,7 +8,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
-import { getAllStocks, type StockEntry, type ThaiElement } from "../investor/stock-database";
+import { getAllStocks, resolveCanonicalStock, type StockEntry, type ThaiElement } from "../investor/stock-database";
 import { resolveInvestElements, resolveInvestorPersona, buildInvestorTimeline, scoreStock } from "../investor/investor-guide";
 import { loadSnapshot, type MarketSnapshot } from "../market/market-data";
 import { topMovers, type MoverRow } from "../market/movers";
@@ -22,7 +22,7 @@ import {
   dayElementOf, dayFitForUser, favorElementsToday, stocksForDay, monthInvestFit,
   luckyDaysForAsset, ipoFitForWeek, todayHours, monthPortfolioGuide, COMPLIANCE_NOTE,
 } from "../fortune/investment-days";
-import { getAssets, getAssetsByType } from "../assets/asset-universe";
+import { getAssets } from "../assets/asset-universe";
 import { assetVerdict } from "../assets/asset-verdict";
 import { allocatePortfolio } from "../assets/portfolio";
 
@@ -46,7 +46,9 @@ function ok<T>(data: T): ToolResult<T> {
 // ── helpers ──
 export function findStock(ticker: string): StockEntry | undefined {
   const t = ticker.trim().toUpperCase();
-  return getAllStocks().find((s) => String(s.ticker).toUpperCase() === t || String(s.ticker).toUpperCase() === t + ".BK");
+  const catalog = getAllStocks();
+  const match = catalog.find((s) => String(s.ticker).toUpperCase() === t || String(s.ticker).toUpperCase() === t + ".BK");
+  return match ? resolveCanonicalStock(match, catalog) : undefined;
 }
 
 function loadJson<T>(rel: string): T | null {

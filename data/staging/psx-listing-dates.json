@@ -1,0 +1,5269 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-08-10T06:09:46.816Z",
+  "retrievedAt": "2026-08-10T06:10:19.348Z",
+  "updatedAt": "2026-08-10T06:10:19.348Z",
+  "sourceRowCount": 333,
+  "directorySourceUrl": "https://dps.psx.com.pk/listings-table/main/nc",
+  "directorySourceHash": "b5a2ae2c3a71cb9da39934d9fa55125e5953614a77722ca4a004215c30cdab99",
+  "directoryRows": [
+    {
+      "symbol": "786",
+      "name": "786 Investments Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "786R",
+      "name": "786 Investment (Right)",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "AABS",
+      "name": "Al-Abbas Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "AATM",
+      "name": "Ali Asghar Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "ABL",
+      "name": "Allied Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "ABOT",
+      "name": "Abbott Laboratories (Pakistan) Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "ACIETF",
+      "name": "Alfalah Consumer Index (ETF)",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "ACPL",
+      "name": "Attock Cement Pakistan Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "ADAMS",
+      "name": "Adam Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "ADMM",
+      "name": "Artistic Denim Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "AGHA",
+      "name": "Agha Steel Ind.Ltd",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "AGIC",
+      "name": "Askari General Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "AGICR2",
+      "name": "Askari General Insurance Co.Ltd.(Right)",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "AGIL",
+      "name": "Agriauto Industries Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "AGL",
+      "name": "Agritech Limited",
+      "sector": "FERTILIZER"
+    },
+    {
+      "symbol": "AGLNCPS",
+      "name": "Agritech Non-Voting (Pref) Class A",
+      "sector": "FERTILIZER"
+    },
+    {
+      "symbol": "AGP",
+      "name": "AGP Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "AGSML",
+      "name": "Abdullah Shah Ghazi Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "AGTL",
+      "name": "Al-Ghazi Tractors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "AHCL",
+      "name": "Arif Habib Corporation Limited",
+      "sector": "FERTILIZER"
+    },
+    {
+      "symbol": "AHL",
+      "name": "Arif Habib Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "AHTM",
+      "name": "Ahmad Hassan Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "AICL",
+      "name": "Adamjee Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "AIRLINK",
+      "name": "Air Link Communication Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "AKBL",
+      "name": "Askari Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "AKDHL",
+      "name": "AKD Hospitality Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "AKDSL",
+      "name": "AKD Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "AKGL",
+      "name": "Al-Khair Gadoon Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "ALAC",
+      "name": "Askari Life Assurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "ALIFE",
+      "name": "Adamjee Life Assurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "ALNRS",
+      "name": "Al-Noor Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "ALTN",
+      "name": "Altern Energy Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "AMBL",
+      "name": "Apna Microfinance Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "ANL",
+      "name": "Azgard Nine Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "ANLNV",
+      "name": "Azgard Nine Non-Voting Ordinary Shares",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "ANLPS",
+      "name": "Azgard Nine 8.95%(Pref)",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "ANSM",
+      "name": "Ansari Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "ANTM",
+      "name": "AN Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "APL",
+      "name": "Attock Petroleum Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "ARCTM",
+      "name": "Arctic Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "ARMG",
+      "name": "ARM Green Industries Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "ARPAK",
+      "name": "Arpak International Investments Ltd.",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "ARPL",
+      "name": "Archroma Pakistan Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "ASHT",
+      "name": "Ashfaq Textile Mills Limited",
+      "sector": "TEXTILE WEAVING"
+    },
+    {
+      "symbol": "ASIC",
+      "name": "Asia Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "ASL",
+      "name": "Aisha Steel Mills Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "ASLCPS",
+      "name": "Aisha Steel Convt (Pref) Right",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "ASLPS",
+      "name": "Aisha Steel Convertible (Pref)",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "ASTL",
+      "name": "Amreli Steels Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "ASTM",
+      "name": "Asim Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "ATBA",
+      "name": "Atlas Battery Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "ATIL",
+      "name": "Atlas Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "ATLH",
+      "name": "Atlas Honda Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "ATRL",
+      "name": "Attock Refinery Limited",
+      "sector": "REFINERY"
+    },
+    {
+      "symbol": "AVN",
+      "name": "Avanceon Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "AWTX",
+      "name": "Allawasaya Tex. & Finishing Mills Ltd",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "BAFL",
+      "name": "Bank Alfalah Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "BAFS",
+      "name": "Baba Farid Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "BAHL",
+      "name": "Bank AL Habib Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "BAPL",
+      "name": "Bawany Air Products Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "BATA",
+      "name": "Bata Pakistan Limited",
+      "sector": "LEATHER & TANNERIES"
+    },
+    {
+      "symbol": "BBFL",
+      "name": "Big Bird Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "BCL",
+      "name": "Bolan Castings Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "BECO",
+      "name": "Beco Steel Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "BERG",
+      "name": "Berger Paints Pakistan Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "BFAGRO",
+      "name": "Barkat Frisian Agro Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "BFBIO",
+      "name": "BF Biosciences Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "BFMOD",
+      "name": "B.F. Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "BGL",
+      "name": "Baluchistan Glass Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "BHAT",
+      "name": "Bhanero Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "BIFO",
+      "name": "Biafo Industries Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "BIPL",
+      "name": "BankIslami Pakistan Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "BLUEX",
+      "name": "Blue-Ex Limited",
+      "sector": "TRANSPORT"
+    },
+    {
+      "symbol": "BML",
+      "name": "Bank Makramah Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "BNL",
+      "name": "Bunnys Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "BNWM",
+      "name": "Bannu Woollen Mills Limited",
+      "sector": "WOOLLEN"
+    },
+    {
+      "symbol": "BOK",
+      "name": "The Bank of Khyber",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "BOP",
+      "name": "The Bank of Punjab",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "BPL",
+      "name": "Burshane LPG (Pakistan) Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "BRRG",
+      "name": "B.R.R Guardian Limited",
+      "sector": "PROPERTY"
+    },
+    {
+      "symbol": "BTL",
+      "name": "Blessed Textiles Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "BUXL",
+      "name": "Buxly Paints Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "BWCL",
+      "name": "Bestway Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "BWHL",
+      "name": "Baluchistan Wheels Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "CCM",
+      "name": "Crescent Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "CENI",
+      "name": "Century Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "CEPB",
+      "name": "Century Paper & Board Mills Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "CFL",
+      "name": "Crescent Fibres Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "CHAS",
+      "name": "Chashma Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "CHBL",
+      "name": "Chenab Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "CHCC",
+      "name": "Cherat Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "CLCPS",
+      "name": "Chenab Limited (Pref)",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "CLOV",
+      "name": "Clover Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "CLVL",
+      "name": "Cordoba Logistics & Ventures Limited",
+      "sector": "TRANSPORT"
+    },
+    {
+      "symbol": "CNERGY",
+      "name": "Cnergyico PK Limited",
+      "sector": "REFINERY"
+    },
+    {
+      "symbol": "COLG",
+      "name": "Colgate-Palmolive (Pakistan) Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "CPHL",
+      "name": "Citi Pharma Ltd.",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "CPPL",
+      "name": "Cherat Packaging Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "CRTM",
+      "name": "The Crescent Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "CSAP",
+      "name": "Crescent Steel & Allied Products Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "CSIL",
+      "name": "Crescent Star Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "CTM",
+      "name": "Colony Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "DAAG",
+      "name": "Data Agro Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "DADX",
+      "name": "Dadex Eternit Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "DCL",
+      "name": "Dewan Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "DCR",
+      "name": "Dolmen City REIT",
+      "sector": "REAL ESTATE INVESTMENT TRUST"
+    },
+    {
+      "symbol": "DEL",
+      "name": "Dawood Equities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "DFML",
+      "name": "Dewan Farooque Motors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "DFSM",
+      "name": "Dewan Farooque Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "DGKC",
+      "name": "D.G. Khan Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "DIIL",
+      "name": "Diamond Industries Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "DINT",
+      "name": "Din Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "DLL",
+      "name": "Dawood Lawrencepur Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "DMC",
+      "name": "D.M. Corporation Limited.",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "DNCC",
+      "name": "Dandot Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "DOL",
+      "name": "Descon Oxychem Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "DSIL",
+      "name": "D.S. Industries Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "DYNO",
+      "name": "Dynea Pakistan Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "ECOP",
+      "name": "Ecopack Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "EFERT",
+      "name": "Engro Fertilizers Limited",
+      "sector": "FERTILIZER"
+    },
+    {
+      "symbol": "EFUG",
+      "name": "EFU General Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "EFUL",
+      "name": "EFU Life Assurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "ELCM",
+      "name": "Elahi Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "ELSM",
+      "name": "Ellcot Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "EMCO",
+      "name": "Emco Industries Limited",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "ENGROH",
+      "name": "Engro Holdings Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "EPCL",
+      "name": "Engro Polymer & Chemicals Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "EPCLPS",
+      "name": "Engro Poly(Pref)",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "EPQL",
+      "name": "Engro Powergen Qadirpur Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "EWIC",
+      "name": "East West Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "EXIDE",
+      "name": "Exide Pakistan Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "FABL",
+      "name": "Faysal Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "FANM",
+      "name": "First Al-Noor Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FASM",
+      "name": "Faisal Spinning Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "FATIMA",
+      "name": "Fatima Fertilizer Company Limited",
+      "sector": "FERTILIZER"
+    },
+    {
+      "symbol": "FCCL",
+      "name": "Fauji Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "FCEPL",
+      "name": "Frieslandcampina Engro Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "FCIBL",
+      "name": "First Credit and Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "FCL",
+      "name": "Fast Cables Limited",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "FCONM",
+      "name": "First Constellation Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FCSC",
+      "name": "First Capital Securities Corporation",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "FDPL",
+      "name": "First Dawood Properties Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "FECM",
+      "name": "First Elite Capital Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FECTC",
+      "name": "Fecto Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "FEM",
+      "name": "First Equity Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FEROZ",
+      "name": "Ferozsons Laboratories Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "FFC",
+      "name": "Fauji Fertilizer Company Limited",
+      "sector": "FERTILIZER"
+    },
+    {
+      "symbol": "FFL",
+      "name": "Fauji Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "FFLM",
+      "name": "First Fidelity Leasing Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FHAM",
+      "name": "First Habib Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FIBLM",
+      "name": "First IBL Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FIMM",
+      "name": "First Imrooz Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FLYNG",
+      "name": "Flying Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "FML",
+      "name": "Feroze1888 Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "FNEL",
+      "name": "First National Equities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "FPJM",
+      "name": "First Punjab Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FPRM",
+      "name": "First Paramount Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FRCL",
+      "name": "Frontier Ceramics Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "FRSM",
+      "name": "Faran Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "FTMM",
+      "name": "First Treet Manufacturing Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FTSM",
+      "name": "First Tri-Star Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "FZCM",
+      "name": "Fazal Cloth Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "GADT",
+      "name": "Gadoon Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "GAL",
+      "name": "Ghandhara Automobiles Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "GATI",
+      "name": "Gatron (Industries) Limited",
+      "sector": "SYNTHETIC & RAYON"
+    },
+    {
+      "symbol": "GATM",
+      "name": "Gul Ahmed Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "GCIL",
+      "name": "Ghani Chemical Industries Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "GCWL",
+      "name": "Ghani Chemworld Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "GDL",
+      "name": "Ghani Dairies Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "GFIL",
+      "name": "Ghazi Fabrics International Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "GGGL",
+      "name": "Ghani Global Glass Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "GGL",
+      "name": "Ghani Global Holdings Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "GHGL",
+      "name": "Ghani Glass Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "GHNI",
+      "name": "Ghandhara Industries Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "GIL",
+      "name": "Good Luck Industries Ltd.",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "GLAXO",
+      "name": "GlaxoSmithKline Pakistan Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "GOC",
+      "name": "GOC (Pak) Limited.",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "GRR",
+      "name": "Globe Residency REIT",
+      "sector": "REAL ESTATE INVESTMENT TRUST"
+    },
+    {
+      "symbol": "GRYL",
+      "name": "Grays Leasing Limited",
+      "sector": "LEASING COMPANIES"
+    },
+    {
+      "symbol": "GTYR",
+      "name": "Ghandhara Tyre & Rubber Company Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "GVGL",
+      "name": "Ghani Value Glass Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "GWLC",
+      "name": "Gharibwal Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "HABSM",
+      "name": "Habib Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "HAEL",
+      "name": "Hala Enterprises Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "HAFL",
+      "name": "Hafiz Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "HALEON",
+      "name": "Haleon Pakistan Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "HBL",
+      "name": "Habib Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "HBLTETF",
+      "name": "HBL Total Treasury ETF",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "HCAR",
+      "name": "Honda Atlas Cars (Pakistan) Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "HGFA",
+      "name": "HBL Growth Fund",
+      "sector": "CLOSE - END MUTUAL FUND"
+    },
+    {
+      "symbol": "HICL",
+      "name": "Habib Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "HIFA",
+      "name": "HBL Investment Fund",
+      "sector": "CLOSE - END MUTUAL FUND"
+    },
+    {
+      "symbol": "HINO",
+      "name": "Hinopak Motors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "HINOON",
+      "name": "Highnoon Laboratories Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "HMB",
+      "name": "Habib Metropolitan Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "HPL",
+      "name": "Hoechst Pakistan Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "HRPL",
+      "name": "Habib Rice Product Limited.",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "HTL",
+      "name": "Hi-Tech Lubricants Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "HUBC",
+      "name": "The Hub Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "HUMNL",
+      "name": "Hum Network Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "HUSI",
+      "name": "Husein Industries Limited",
+      "sector": "PROPERTY"
+    },
+    {
+      "symbol": "IBFL",
+      "name": "Ibrahim Fibres Limited",
+      "sector": "SYNTHETIC & RAYON"
+    },
+    {
+      "symbol": "IBLHL",
+      "name": "IBL HealthCare Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "ICCI",
+      "name": "ICC Industries Limited",
+      "sector": "TEXTILE WEAVING"
+    },
+    {
+      "symbol": "ICIBL",
+      "name": "Invest Capital Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "ICL",
+      "name": "Ittehad Chemicals Limted",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "IDEAL",
+      "name": "Ideal Dynamics Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "IDRT",
+      "name": "Idrees Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "IDYM",
+      "name": "Indus Dyeing & Manufacturing Co. Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "IGIHL",
+      "name": "IGI Holdings Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "IGIL",
+      "name": "IGI Life Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "ILP",
+      "name": "Interloop Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "IMAGE",
+      "name": "Image Pakistan Limited",
+      "sector": "APPAREL"
+    },
+    {
+      "symbol": "IMS",
+      "name": "Intermarket Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "INDU",
+      "name": "Indus Motor Company Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "INIL",
+      "name": "International Industries Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "INKL",
+      "name": "International Knitwear Limited",
+      "sector": "APPAREL"
+    },
+    {
+      "symbol": "IPAK",
+      "name": "International Packaging Films Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "IREIT",
+      "name": "Image Reit",
+      "sector": "REAL ESTATE INVESTMENT TRUST"
+    },
+    {
+      "symbol": "ISIL",
+      "name": "Ismail Industries Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "ISL",
+      "name": "International Steels Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "ITANZ",
+      "name": "Itanz Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "ITTEFAQ",
+      "name": "Ittefaq Iron Industries Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "JATM",
+      "name": "J.A. Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "JDMT",
+      "name": "Janana De Malucho Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "JDWS",
+      "name": "JDW Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "JGICL",
+      "name": "Jubilee General Insurance Company Ltd.",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "JKSM",
+      "name": "J.K. Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "JLICL",
+      "name": "Jubilee Life Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "JSBL",
+      "name": "JS Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "JSCL",
+      "name": "Jahangir Siddiqui & Co. Ltd.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "JSGBETF",
+      "name": "JS Global Banking Sector(ETF)",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "JSGCL",
+      "name": "JS Global Capital Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "JSIL",
+      "name": "JS Investments Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "JSMFETF",
+      "name": "JS Momentum Factor Exchange Traded Fund",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "JSML",
+      "name": "Jauharabad Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "JSRR",
+      "name": "JS Rental REIT",
+      "sector": "REAL ESTATE INVESTMENT TRUST"
+    },
+    {
+      "symbol": "JVDC",
+      "name": "Javedan Corporation Limited",
+      "sector": "PROPERTY"
+    },
+    {
+      "symbol": "JVDCPS",
+      "name": "Javedan Corporation (Pref)",
+      "sector": "PROPERTY"
+    },
+    {
+      "symbol": "KAPCO",
+      "name": "Kot Addu Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "KCL",
+      "name": "Karam Ceramics Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "KEL",
+      "name": "K-Electric Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "KHTC",
+      "name": "Khyber Tobacco Company Limited",
+      "sector": "TOBACCO"
+    },
+    {
+      "symbol": "KHYT",
+      "name": "Khyber Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "KML",
+      "name": "Kohinoor Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "KOHC",
+      "name": "Kohat Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "KOHE",
+      "name": "Kohinoor Energy Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "KOHP",
+      "name": "Kohinoor Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "KOHTM",
+      "name": "Kohat Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "KOIL",
+      "name": "Kohinoor Industries Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "KOSM",
+      "name": "Kohinoor Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "KPUS",
+      "name": "Khairpur Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "KSBP",
+      "name": "KSB Pumps Company Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "KTML",
+      "name": "Kohinoor Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "LCI",
+      "name": "Lucky Core Industries Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "LEUL",
+      "name": "Leather Up Limited",
+      "sector": "LEATHER & TANNERIES"
+    },
+    {
+      "symbol": "LIVEN",
+      "name": "Liven Pharma Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "LOADS",
+      "name": "Loads Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "LOTCHEM",
+      "name": "Lotte Chemical Pakistan Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "LPGL",
+      "name": "Leiner Pak Gelatine Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "LPL",
+      "name": "Lalpir Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "LSECL",
+      "name": "LSE Capital Limited.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "LSEFSL",
+      "name": "LSE Financial Services Limited.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "LSEVL",
+      "name": "LSE Ventures Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "LUCK",
+      "name": "Lucky Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "MACFL",
+      "name": "MACPAC Films Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "MACTER",
+      "name": "Macter International Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "MARI",
+      "name": "Mari Energies Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES"
+    },
+    {
+      "symbol": "MCB",
+      "name": "MCB Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "MCBIM",
+      "name": "MCB Investment Management Limited.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "MDTL",
+      "name": "Media Times Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "MEBL",
+      "name": "Meezan Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "MEHT",
+      "name": "Mehmood Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "MERIT",
+      "name": "Merit Packaging Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "MFFL",
+      "name": "Mitchells Fruit Farms Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "MFL",
+      "name": "Matco Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "MIIETF",
+      "name": "Mahaana Islamic Index ETF",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "MIRKS",
+      "name": "Mirpurkhas Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "MLCF",
+      "name": "Maple Leaf Cement Factory Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "MQTM",
+      "name": "Maqbool Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "MRNS",
+      "name": "Mehran Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "MSCL",
+      "name": "Metropolitan Steel Corporation Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "MSOT",
+      "name": "Masood Textile Mills Limited",
+      "sector": "APPAREL"
+    },
+    {
+      "symbol": "MSOTPS",
+      "name": "Masood Textile (Pref)",
+      "sector": "APPAREL"
+    },
+    {
+      "symbol": "MTL",
+      "name": "Millat Tractors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "MUGHAL",
+      "name": "Mughal Iron & Steel Industries Limited",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "MUGHALC",
+      "name": "Mughal Iron & Steel Industries Ltd(C)",
+      "sector": "ENGINEERING"
+    },
+    {
+      "symbol": "MUREB",
+      "name": "Murree Brewery Company Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "MWMP",
+      "name": "Mandviwala Mauser Plastic Industries",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "MZNPETF",
+      "name": "Meezan Pakistan ETF",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "NAGC",
+      "name": "Nagina Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "NATF",
+      "name": "National Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "NATM",
+      "name": "Nadeem Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "NBP",
+      "name": "National Bank of Pakistan",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "NBPGETF",
+      "name": "NBP Pakistan Growth ETF",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "NCL",
+      "name": "Nishat Chunian Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "NCPL",
+      "name": "Nishat Chunian Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "NESTLE",
+      "name": "Nestle Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "NETSOL",
+      "name": "NetSol Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "NEXT",
+      "name": "Next Capital Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "NICL",
+      "name": "Nimir Industrial Chemicals Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "NITGETF",
+      "name": "NIT Pakistan Gateway ETF",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "NML",
+      "name": "Nishat Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "NONS",
+      "name": "Noon Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "NPL",
+      "name": "Nishat Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "NRL",
+      "name": "National Refinery Limited",
+      "sector": "REFINERY"
+    },
+    {
+      "symbol": "NRSL",
+      "name": "Nimir Resins Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "NSRM",
+      "name": "The National Silk & Rayon Mills Limited",
+      "sector": "SYNTHETIC & RAYON"
+    },
+    {
+      "symbol": "OBOY",
+      "name": "Oilboy Energy Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "OCTOPUS",
+      "name": "Octopus Digital Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "OGDC",
+      "name": "Oil & Gas Development Company Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES"
+    },
+    {
+      "symbol": "OLPL",
+      "name": "OLP Financial Services Pakistan Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "OLPM",
+      "name": "OLP Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "OML",
+      "name": "Olympia Mills Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "ORM",
+      "name": "Orient Rental Mod",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "OTSU",
+      "name": "Otsuka Pakistan Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "PABC",
+      "name": "Pakistan Aluminium Beverage Cans Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "PACE",
+      "name": "Pace (Pakistan) Limited",
+      "sector": "PROPERTY"
+    },
+    {
+      "symbol": "PAEL",
+      "name": "Pak Elektron Limited",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "PAKD",
+      "name": "Pak Datacom Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "PAKL",
+      "name": "Pak Leather Crafts Limited",
+      "sector": "LEATHER & TANNERIES"
+    },
+    {
+      "symbol": "PAKOXY",
+      "name": "Pakistan Oxygen Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "PAKQATAR",
+      "name": "Pak Qatar Family Takaful Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "PAKRI",
+      "name": "Pakistan Reinsurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "PAKT",
+      "name": "Pakistan Tobacco Company Limited",
+      "sector": "TOBACCO"
+    },
+    {
+      "symbol": "PCAL",
+      "name": "Pakistan Cables Limited",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "PGLC",
+      "name": "Pak-Gulf Leasing Company Limited",
+      "sector": "LEASING COMPANIES"
+    },
+    {
+      "symbol": "PIAHCLA",
+      "name": "PIA Holding Company Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "PIAHCLB",
+      "name": "PIA Holding Company LimitedB",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "PIBTL",
+      "name": "Pakistan International Bulk Terminal",
+      "sector": "TRANSPORT"
+    },
+    {
+      "symbol": "PICT",
+      "name": "Pakistan International Container",
+      "sector": "TRANSPORT"
+    },
+    {
+      "symbol": "PIM",
+      "name": "Popular Islamic Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "PINL",
+      "name": "Premier Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "PIOC",
+      "name": "Pioneer Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "PKGI",
+      "name": "The Pakistan General Insurance Co. Ltd.",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "PKGP",
+      "name": "Pakgen Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "PKGS",
+      "name": "Packages Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "PMRS",
+      "name": "The Premier Sugar Mills",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "PNSC",
+      "name": "Pakistan National Shipping Corporation",
+      "sector": "TRANSPORT"
+    },
+    {
+      "symbol": "POL",
+      "name": "Pakistan Oilfields Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES"
+    },
+    {
+      "symbol": "POML",
+      "name": "Punjab Oil Mills Limited",
+      "sector": "VANASPATI & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "POWER",
+      "name": "Power Cement Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "POWERPS",
+      "name": "Power Cement (Pref)",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "PPL",
+      "name": "Pakistan Petroleum Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES"
+    },
+    {
+      "symbol": "PPP",
+      "name": "Pakistan Paper Products Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "PQGTL",
+      "name": "Pak Qatar General Takaful Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "PREMA",
+      "name": "At-Tahur Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "PRET",
+      "name": "Premium Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "PRL",
+      "name": "Pakistan Refinery Limited",
+      "sector": "REFINERY"
+    },
+    {
+      "symbol": "PRWM",
+      "name": "Prosperity Weaving Mills Limited",
+      "sector": "TEXTILE WEAVING"
+    },
+    {
+      "symbol": "PSEL",
+      "name": "Pakistan Services Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "PSO",
+      "name": "Pakistan State Oil Company Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "PSX",
+      "name": "Pakistan Stock Exchange Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "PSYL",
+      "name": "Pakistan Synthetics Limited",
+      "sector": "SYNTHETIC & RAYON"
+    },
+    {
+      "symbol": "PTC",
+      "name": "Pakistan Telecommunication Company Ltd",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "PTL",
+      "name": "Panther Tyres Ltd.",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "QTECH",
+      "name": "Quantum Data Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "QUICE",
+      "name": "Quice Food Industries Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "REDCO",
+      "name": "Redco Textiles Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "REWM",
+      "name": "Reliance Weaving Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "RICL",
+      "name": "Reliance Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "RMPL",
+      "name": "Rafhan Maize Products Company Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "RPL",
+      "name": "Roshan Packages Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "RUPL",
+      "name": "Rupali Polyester Limited",
+      "sector": "SYNTHETIC & RAYON"
+    },
+    {
+      "symbol": "SAIF",
+      "name": "Saif Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "SANSM",
+      "name": "Sanghar Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "SAPT",
+      "name": "Sapphire Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "SARC",
+      "name": "Sardar Chemical Industries Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "SASML",
+      "name": "Sindh Abadgars Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "SAZEW",
+      "name": "Sazgar Engineering Works Limited",
+      "sector": "AUTOMOBILE ASSEMBLER"
+    },
+    {
+      "symbol": "SBL",
+      "name": "Samba Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "SCBPL",
+      "name": "Standard Chartered Bank (Pak) Ltd",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "SEARL",
+      "name": "The Searle Company Limited",
+      "sector": "PHARMACEUTICALS"
+    },
+    {
+      "symbol": "SEL",
+      "name": "Sitara Energy Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "SELECT",
+      "name": "Select Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "SEPL",
+      "name": "Security Papers Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "SERT",
+      "name": "Service Industries Textiles Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "SFL",
+      "name": "Sapphire Fibres Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "SGF",
+      "name": "Service GlobalFootwear Limited",
+      "sector": "LEATHER & TANNERIES"
+    },
+    {
+      "symbol": "SGPL",
+      "name": "S.G. Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "SHCM",
+      "name": "Shadman Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "SHDT",
+      "name": "Shadab Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "SHEZ",
+      "name": "Shezan International Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "SHFA",
+      "name": "Shifa International Hospitals Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "SHJS",
+      "name": "Shahtaj Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "SHNI",
+      "name": "Shaheen Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "SHSML",
+      "name": "Shahmurad Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "SIBL",
+      "name": "Security Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "SIEM",
+      "name": "Siemens (Pakistan) Engineering",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "SINDM",
+      "name": "Sindh Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "SITC",
+      "name": "Sitara Chemical Industries Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "SLCPA",
+      "name": "Security Leasing Corp.9.10%(Pref)",
+      "sector": "LEASING COMPANIES"
+    },
+    {
+      "symbol": "SLGL",
+      "name": "Secure Logistics-Trax Group Limited",
+      "sector": "TRANSPORT"
+    },
+    {
+      "symbol": "SLM",
+      "name": "Service Long March Tyres Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "SMCPL",
+      "name": "Safe Mix Concrete Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "SNAI",
+      "name": "Sana Industries Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "SNBL",
+      "name": "Soneri Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "SNGP",
+      "name": "Sui Northern Gas Pipelines Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "SPAC1",
+      "name": "LSE SPAC-I Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "SPAC2",
+      "name": "LSE SPAC-II Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "SPEL",
+      "name": "SPEL Limited",
+      "sector": "PAPER, BOARD & PACKAGING"
+    },
+    {
+      "symbol": "SPSL",
+      "name": "Sitara Petroleum Service Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "SPWL",
+      "name": "Saif Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "SRR",
+      "name": "Signature Residency Reit",
+      "sector": "REAL ESTATE INVESTMENT TRUST"
+    },
+    {
+      "symbol": "SRVI",
+      "name": "Service Industries Limited",
+      "sector": "LEATHER & TANNERIES"
+    },
+    {
+      "symbol": "SSGC",
+      "name": "Sui Southern Gas Company Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "SSOM",
+      "name": "S.S.Oil Mills Limited",
+      "sector": "VANASPATI & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "STCL",
+      "name": "Shabbir Tiles & Ceramics Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "STJT",
+      "name": "Shahtaj Textile Limited",
+      "sector": "TEXTILE WEAVING"
+    },
+    {
+      "symbol": "STL",
+      "name": "Supernet Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "STML",
+      "name": "Shams Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "STPL",
+      "name": "Siddiqsons Tin Plate Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "STYLERS",
+      "name": "Stylers International Limited",
+      "sector": "APPAREL"
+    },
+    {
+      "symbol": "SURC",
+      "name": "Suraj Cotton Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "SUTM",
+      "name": "Sunrays Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "SYM",
+      "name": "Symmetry Group Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "SYS",
+      "name": "Systems Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "SZTM",
+      "name": "Shahzad Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "TATM",
+      "name": "Tata Textile Mills Limited",
+      "sector": "TEXTILE SPINNING"
+    },
+    {
+      "symbol": "TBL",
+      "name": "Treet Battery Limited.",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "TCORP",
+      "name": "Tariq Corporation Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "TCORPCPS",
+      "name": "Tariq Corporation Limited(Pref)",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "TELE",
+      "name": "Telecard Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "TGL",
+      "name": "Tariq Glass Industries Limited",
+      "sector": "GLASS & CERAMICS"
+    },
+    {
+      "symbol": "THALL",
+      "name": "Thal Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES"
+    },
+    {
+      "symbol": "THCCL",
+      "name": "Thatta Cement Company Limited",
+      "sector": "CEMENT"
+    },
+    {
+      "symbol": "TICL",
+      "name": "The Thal Industries Corporation Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "TOMCL",
+      "name": "The Organic Meat Company Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "TOWL",
+      "name": "Towellers Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "TPL",
+      "name": "TPL Corp Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "TPLI",
+      "name": "TPL Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "TPLL",
+      "name": "TPL Life Insurance Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "TPLP",
+      "name": "TPL Properties Limited",
+      "sector": "PROPERTY"
+    },
+    {
+      "symbol": "TPLRF1",
+      "name": "TPL REIT Fund I",
+      "sector": "REAL ESTATE INVESTMENT TRUST"
+    },
+    {
+      "symbol": "TPLT",
+      "name": "TPL Trakker Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "TREET",
+      "name": "Treet Corporation Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "TRG",
+      "name": "TRG Pakistan Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "TRIPF",
+      "name": "Tri-Pack Films Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "TRSM",
+      "name": "Trust Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "TSBL",
+      "name": "Trust Securities & Brokerage Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS."
+    },
+    {
+      "symbol": "TSMF",
+      "name": "Tri-Star Mutual Fund Limited",
+      "sector": "CLOSE - END MUTUAL FUND"
+    },
+    {
+      "symbol": "TSML",
+      "name": "Tandlianwala Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES"
+    },
+    {
+      "symbol": "TSPL",
+      "name": "Tri-Star Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION"
+    },
+    {
+      "symbol": "UBDL",
+      "name": "United Brands Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "UBL",
+      "name": "United Bank Limited",
+      "sector": "COMMERCIAL BANKS"
+    },
+    {
+      "symbol": "UBLPETF",
+      "name": "UBLPakistan Enterprise ETF",
+      "sector": "EXCHANGE TRADED FUNDS"
+    },
+    {
+      "symbol": "UCAPM",
+      "name": "Unicap Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "UDLI",
+      "name": "UDL International Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "UDPL",
+      "name": "United Distributors Pakistan Limited",
+      "sector": "MISCELLANEOUS"
+    },
+    {
+      "symbol": "UNIC",
+      "name": "The United Insurance Company",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "UNITY",
+      "name": "Unity Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "UPFL",
+      "name": "Unilever Pakistan Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "UVIC",
+      "name": "The Universal Insurance Company Limited",
+      "sector": "INSURANCE"
+    },
+    {
+      "symbol": "WAFI",
+      "name": "Wafi Energy Pakistan Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES"
+    },
+    {
+      "symbol": "WAHDAT",
+      "name": "Wahdat Poultry Farm Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "WAHN",
+      "name": "Wah Noble Chemicals Limited",
+      "sector": "CHEMICAL"
+    },
+    {
+      "symbol": "WASL",
+      "name": "Wasl Mobility Modaraba",
+      "sector": "MODARABAS"
+    },
+    {
+      "symbol": "WAVES",
+      "name": "Waves Corporation Limited",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "WAVESAPP",
+      "name": "Waves Home Appliances Limited",
+      "sector": "CABLE & ELECTRICAL GOODS"
+    },
+    {
+      "symbol": "WTL",
+      "name": "Worldcall Telecom Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "YOUW",
+      "name": "Yousaf Weaving Mills Limited",
+      "sector": "TEXTILE WEAVING"
+    },
+    {
+      "symbol": "ZAHID",
+      "name": "Zahidjee Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE"
+    },
+    {
+      "symbol": "ZAL",
+      "name": "Zarea Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    },
+    {
+      "symbol": "ZIL",
+      "name": "ZIL Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS"
+    },
+    {
+      "symbol": "ZTL",
+      "name": "Zephyr Textiles Limited",
+      "sector": "TEXTILE WEAVING"
+    },
+    {
+      "symbol": "ZUMA",
+      "name": "Zuma Resources Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION"
+    }
+  ],
+  "sourcePolicy": {
+    "authority": "exchange",
+    "sourceName": "Pakistan Stock Exchange Listings History and Company Profiles",
+    "sourceUrl": "https://www.psx.com.pk/psx/resources-and-tools/listings/listings-history",
+    "companyProfileUrlTemplate": "https://dps.psx.com.pk/company/{symbol}",
+    "verification": "verified",
+    "displayRights": "unknown",
+    "commercialUse": "BLOCKED_PENDING_PSX_TERMS_AND_DATA_LICENSE_REVIEW",
+    "coverageStartYear": 2000,
+    "rawHtmlZipAndWorkbooksStored": false,
+    "exactFirstTradeTimeAvailable": false
+  },
+  "summary": {
+    "currentDirectoryRows": 466,
+    "archiveYears": 27,
+    "historyRows": 264,
+    "annualHistoryRows": 262,
+    "profilePagesScanned": 69,
+    "profileDayPrecisionRecords": 2,
+    "explicitSymbols": 53,
+    "dateOnlyRows": 264
+  },
+  "records": [
+    {
+      "sourceType": "company_profile",
+      "year": 1970,
+      "companyName": "Service Industries Limited",
+      "symbol": "SRVI",
+      "listingDate": "1970-06-27",
+      "evidenceExcerpt": "Service Industries Limited (the Company) was incorporated as a private limited Company on 20 March 1957 in Pakistan under the Companies Act, 1913 (now Companies Act, 2017), was converted into a public limited Company on 23 September 1959 and got listed on 27 June 1970.",
+      "sourceUrl": "https://dps.psx.com.pk/company/SRVI",
+      "sourceHash": "dd17f5ee32a9188822a0e3161ff687eabdf7bfbcff73f7a9dd8fba3992edcb71",
+      "retrievedAt": "2026-08-10T06:10:16.622Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2000,
+      "companyName": "WorldCALL PayPhone Ltd.",
+      "symbol": null,
+      "listingDate": "2000-05-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2000.zip",
+      "sourceHash": "07a72f7ecb564f1cb5ff7de0a4404d0d8dc791a6a62497b30f89711c370d19cc",
+      "retrievedAt": "2026-08-10T06:09:48.437Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2000,
+      "companyName": "Dewan Farooque Motors Ltd.",
+      "symbol": null,
+      "listingDate": "2000-07-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2000.zip",
+      "sourceHash": "07a72f7ecb564f1cb5ff7de0a4404d0d8dc791a6a62497b30f89711c370d19cc",
+      "retrievedAt": "2026-08-10T06:09:48.437Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2000,
+      "companyName": "Al-Meezan Investment Bank Ltd.",
+      "symbol": null,
+      "listingDate": "2000-08-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2000.zip",
+      "sourceHash": "07a72f7ecb564f1cb5ff7de0a4404d0d8dc791a6a62497b30f89711c370d19cc",
+      "retrievedAt": "2026-08-10T06:09:48.437Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2001,
+      "companyName": "Arif Habib Securities Ltd.",
+      "symbol": null,
+      "listingDate": "2001-06-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2001.zip",
+      "sourceHash": "2e80f1aefaa1abd7357500cb87ae4045dae299187b03e36a144c3e2515df7bff",
+      "retrievedAt": "2026-08-10T06:09:48.440Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2001,
+      "companyName": "Bestway Cement",
+      "symbol": null,
+      "listingDate": "2001-09-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2001.zip",
+      "sourceHash": "2e80f1aefaa1abd7357500cb87ae4045dae299187b03e36a144c3e2515df7bff",
+      "retrievedAt": "2026-08-10T06:09:48.440Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2001,
+      "companyName": "Fayzan Manufacturing Modaraba",
+      "symbol": null,
+      "listingDate": "2001-12-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2001.zip",
+      "sourceHash": "2e80f1aefaa1abd7357500cb87ae4045dae299187b03e36a144c3e2515df7bff",
+      "retrievedAt": "2026-08-10T06:09:48.440Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2002,
+      "companyName": "WorldCall Multimedia",
+      "symbol": null,
+      "listingDate": "2002-01-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2002.zip",
+      "sourceHash": "50f335324514c653d26078ae478bdb67c854525f97a4506c47daf4bcfe6fbe58",
+      "retrievedAt": "2026-08-10T06:09:48.442Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2002,
+      "companyName": "National Bank Of Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2002-02-18",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2002.zip",
+      "sourceHash": "50f335324514c653d26078ae478bdb67c854525f97a4506c47daf4bcfe6fbe58",
+      "retrievedAt": "2026-08-10T06:09:48.442Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2002,
+      "companyName": "Attock Cement Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2002-06-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2002.zip",
+      "sourceHash": "50f335324514c653d26078ae478bdb67c854525f97a4506c47daf4bcfe6fbe58",
+      "retrievedAt": "2026-08-10T06:09:48.442Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2002,
+      "companyName": "Bosicor Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2002-07-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2002.zip",
+      "sourceHash": "50f335324514c653d26078ae478bdb67c854525f97a4506c47daf4bcfe6fbe58",
+      "retrievedAt": "2026-08-10T06:09:48.442Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2003,
+      "companyName": "Ittehad Chemicals Limited",
+      "symbol": null,
+      "listingDate": "2003-04-14",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2003.zip",
+      "sourceHash": "d42a78d063e3a7d7616d170901c8a9f3447af86f6a9b706e097d4547eb4b716d",
+      "retrievedAt": "2026-08-10T06:09:48.444Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2003,
+      "companyName": "TRG Pakistan Limited ( A - Class)",
+      "symbol": null,
+      "listingDate": "2003-07-14",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2003.zip",
+      "sourceHash": "d42a78d063e3a7d7616d170901c8a9f3447af86f6a9b706e097d4547eb4b716d",
+      "retrievedAt": "2026-08-10T06:09:48.444Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2003,
+      "companyName": "Mashreq Bank Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2003-08-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2003.zip",
+      "sourceHash": "d42a78d063e3a7d7616d170901c8a9f3447af86f6a9b706e097d4547eb4b716d",
+      "retrievedAt": "2026-08-10T06:09:48.444Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2003,
+      "companyName": "Pakistan International Container Terminal Ltd.",
+      "symbol": null,
+      "listingDate": "2003-10-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2003.zip",
+      "sourceHash": "d42a78d063e3a7d7616d170901c8a9f3447af86f6a9b706e097d4547eb4b716d",
+      "retrievedAt": "2026-08-10T06:09:48.444Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2003,
+      "companyName": "First National Bank Modaraba",
+      "symbol": null,
+      "listingDate": "2003-12-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2003.zip",
+      "sourceHash": "d42a78d063e3a7d7616d170901c8a9f3447af86f6a9b706e097d4547eb4b716d",
+      "retrievedAt": "2026-08-10T06:09:48.444Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2003,
+      "companyName": "NDLC - IFIC Bank Limited",
+      "symbol": null,
+      "listingDate": "2003-12-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2003.zip",
+      "sourceHash": "d42a78d063e3a7d7616d170901c8a9f3447af86f6a9b706e097d4547eb4b716d",
+      "retrievedAt": "2026-08-10T06:09:48.444Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Oil & Gas Development Company Limited",
+      "symbol": null,
+      "listingDate": "2004-01-19",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "WorldCALL Broadband Limited",
+      "symbol": null,
+      "listingDate": "2004-02-23",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "ABAMCO Stock Market Fund",
+      "symbol": null,
+      "listingDate": "2004-03-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Pakistan Capital Market Fund",
+      "symbol": null,
+      "listingDate": "2004-03-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "MACPAC Films Limited",
+      "symbol": null,
+      "listingDate": "2004-04-02",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "ABAMCO Capital Fund",
+      "symbol": null,
+      "listingDate": "2004-04-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Trust Commercial Bank Limited",
+      "symbol": null,
+      "listingDate": "2004-05-14",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Callmate Telips Telecom Limited",
+      "symbol": null,
+      "listingDate": "2004-06-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "ABAMCO Composite Fund",
+      "symbol": null,
+      "listingDate": "2004-06-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "PICIC Investment Fund",
+      "symbol": null,
+      "listingDate": "2004-06-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Southern Networks Limited",
+      "symbol": null,
+      "listingDate": "2004-06-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Bank Alfalah Limited",
+      "symbol": null,
+      "listingDate": "2004-07-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Pakistan Petroleum Limited",
+      "symbol": null,
+      "listingDate": "2004-09-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Pakistan Strategic Allocation Fund",
+      "symbol": null,
+      "listingDate": "2004-10-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "Chenab Limited (Prefrence Shares Only)",
+      "symbol": null,
+      "listingDate": "2004-11-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "First National Equities Limited",
+      "symbol": null,
+      "listingDate": "2004-11-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2004,
+      "companyName": "AMZ Ventures Limited ( A - Class)",
+      "symbol": null,
+      "listingDate": "2004-12-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2004.zip",
+      "sourceHash": "6bfa985fa577fc8ab991f0c1f2da6e946f8ff41f78d2e1e7ba14f5103639b180",
+      "retrievedAt": "2026-08-10T06:09:49.812Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Atlas Fund of Funds",
+      "symbol": null,
+      "listingDate": "2005-01-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Network Microfinance Bank Limited",
+      "symbol": null,
+      "listingDate": "2005-01-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "International Housing Finance Limited",
+      "symbol": null,
+      "listingDate": "2005-02-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Jahangir Siddiqui Capital Markets Limited",
+      "symbol": null,
+      "listingDate": "2005-02-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Meezan Balanced Fund",
+      "symbol": null,
+      "listingDate": "2005-02-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Attock Petroleum Limited",
+      "symbol": null,
+      "listingDate": "2005-03-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Kot Addu Power Company Limited",
+      "symbol": null,
+      "listingDate": "2005-04-18",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "First Dawood Mutual Fund",
+      "symbol": null,
+      "listingDate": "2005-05-09",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Dewan Farooque Spinning Mills Limited",
+      "symbol": null,
+      "listingDate": "2005-06-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "United Bank Limited",
+      "symbol": null,
+      "listingDate": "2005-07-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Eye Television Network Limited",
+      "symbol": null,
+      "listingDate": "2005-08-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Zephyr Textiles Limited",
+      "symbol": null,
+      "listingDate": "2005-08-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Allied Bank Limited",
+      "symbol": null,
+      "listingDate": "2005-08-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Chenab Limited",
+      "symbol": null,
+      "listingDate": "2005-08-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "NetSol Technologies Limited",
+      "symbol": null,
+      "listingDate": "2005-08-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "WorldCALL Telecom Limited",
+      "symbol": null,
+      "listingDate": "2005-09-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "D. S. Industries Limited",
+      "symbol": null,
+      "listingDate": "2005-11-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "AKD Index Tracker Fund",
+      "symbol": null,
+      "listingDate": "2005-11-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2005,
+      "companyName": "Siddiqsons Tin Plate Limited",
+      "symbol": null,
+      "listingDate": "2005-12-12",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2005.zip",
+      "sourceHash": "4da960c6625b65d67073eea4a7451910106675fe1d534e77f973efba156de24b",
+      "retrievedAt": "2026-08-10T06:09:49.814Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "PICIC Energy Fund",
+      "symbol": null,
+      "listingDate": "2006-02-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "AMZ Plus Income Fund",
+      "symbol": null,
+      "listingDate": "2006-03-09",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "United Growth & Income Fund",
+      "symbol": null,
+      "listingDate": "2006-03-09",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "The Bank of Khyber",
+      "symbol": null,
+      "listingDate": "2006-03-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "BankIslami Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2006-04-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "KASB Liquid Fund",
+      "symbol": null,
+      "listingDate": "2006-05-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "Pakistan International Element Islamic Fund",
+      "symbol": null,
+      "listingDate": "2006-05-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "AKD Opportunity Fund",
+      "symbol": null,
+      "listingDate": "2006-06-12",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "UTP Growth Fund",
+      "symbol": null,
+      "listingDate": "2006-06-23",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "PICIC Insurance Limited",
+      "symbol": null,
+      "listingDate": "2006-09-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "Colony Mills Limited",
+      "symbol": null,
+      "listingDate": "2006-10-02",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "United Stock Advantage Fund",
+      "symbol": null,
+      "listingDate": "2006-10-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "Atlas Bank Limited",
+      "symbol": null,
+      "listingDate": "2006-10-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "NAMCO Balanced Fund",
+      "symbol": null,
+      "listingDate": "2006-12-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "Reliance Income Fund",
+      "symbol": null,
+      "listingDate": "2006-12-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2006,
+      "companyName": "WE Balanced Fund",
+      "symbol": null,
+      "listingDate": "2006-12-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2006.zip",
+      "sourceHash": "65a16cc434127d225ce3e51d2671131701c3d797c37565c449a459c19cdc3cdd",
+      "retrievedAt": "2026-08-10T06:09:50.406Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Allied Rental Modaraba",
+      "symbol": null,
+      "listingDate": "2007-01-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Arif Habib Limited",
+      "symbol": null,
+      "listingDate": "2007-01-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "BMA Principal Guaranted Fund I",
+      "symbol": null,
+      "listingDate": "2007-01-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Hira Textile Mills Limited",
+      "symbol": null,
+      "listingDate": "2007-02-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "PACE (Pakistan) Limited",
+      "symbol": null,
+      "listingDate": "2007-02-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "JS Bank Limited",
+      "symbol": null,
+      "listingDate": "2007-03-12",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Meezan Islamic Income Fund",
+      "symbol": null,
+      "listingDate": "2007-04-02",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Standard Chartered Bank (Pakistan) Ltd.",
+      "symbol": null,
+      "listingDate": "2007-04-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "AKD Income Fund",
+      "symbol": null,
+      "listingDate": "2007-04-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "KASB Stock Market Fund",
+      "symbol": null,
+      "listingDate": "2007-04-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "JS ABAMCO Limited",
+      "symbol": null,
+      "listingDate": "2007-04-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Flying Cement Company Limited",
+      "symbol": null,
+      "listingDate": "2007-05-02",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Pak Oman Advantage Fund",
+      "symbol": null,
+      "listingDate": "2007-06-12",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Pervez Ahmed Securities Limited",
+      "symbol": null,
+      "listingDate": "2007-06-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Faysal Savings Growth Fund",
+      "symbol": null,
+      "listingDate": "2007-06-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "AKD Index Tracker Fund",
+      "symbol": null,
+      "listingDate": "2007-07-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Sitara Peroxide Limited",
+      "symbol": null,
+      "listingDate": "2007-07-23",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Alfalah GHP Income Multiplier Fund",
+      "symbol": null,
+      "listingDate": "2007-07-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Dawood Islamic Fund",
+      "symbol": null,
+      "listingDate": "2007-08-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "BMA Chundrigar Road Savings Fund",
+      "symbol": null,
+      "listingDate": "2007-09-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Habib Bank Limited",
+      "symbol": null,
+      "listingDate": "2007-09-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Alfalah GHP Islamic Fund",
+      "symbol": null,
+      "listingDate": "2007-11-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "Dost Steels Limited",
+      "symbol": null,
+      "listingDate": "2007-11-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2007,
+      "companyName": "POBOP Advantage Plus Fund",
+      "symbol": null,
+      "listingDate": "2007-11-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2007.zip",
+      "sourceHash": "1093d0266215b5e5cc8069c54e20ba89831fc6e1655afcc38c02cb75fd1fc962",
+      "retrievedAt": "2026-08-10T06:09:50.422Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Arif Habib Bank Limited",
+      "symbol": null,
+      "listingDate": "2008-02-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "KASB Balanced Fund",
+      "symbol": null,
+      "listingDate": "2008-02-29",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "company_profile",
+      "year": 2008,
+      "companyName": "Intermarket Securities Limited",
+      "symbol": "IMS",
+      "listingDate": "2008-03-20",
+      "evidenceExcerpt": "Effective from March 20, 2008 the Company was listed on the Pakistan Stock Exchange Limited.",
+      "sourceUrl": "https://dps.psx.com.pk/company/IMS",
+      "sourceHash": "e675093e00bcd644a3c55bcc4c6de56fddc0096f9e3971f70d4ba2ae1f57c0b0",
+      "retrievedAt": "2026-08-10T06:10:05.920Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Invest and Finance Securities Limited",
+      "symbol": null,
+      "listingDate": "2008-03-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Thatta Cement Company Limited",
+      "symbol": null,
+      "listingDate": "2008-04-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Dawood Equities Limited",
+      "symbol": null,
+      "listingDate": "2008-04-14",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Engro Polymer & Chemicals Limited",
+      "symbol": null,
+      "listingDate": "2008-07-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "KASB Islamic Income Fund",
+      "symbol": null,
+      "listingDate": "2008-07-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "KASB Securities Limited",
+      "symbol": null,
+      "listingDate": "2008-08-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Colony Sugar Mills Limited",
+      "symbol": null,
+      "listingDate": "2008-08-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "First Credit and Investment Bank Limited",
+      "symbol": null,
+      "listingDate": "2008-08-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Arif Habib Investment Management Limited",
+      "symbol": null,
+      "listingDate": "2008-08-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Descon Oxychem Limited",
+      "symbol": null,
+      "listingDate": "2008-09-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "ABL Income Fund",
+      "symbol": null,
+      "listingDate": "2008-09-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Meezan Capital Protected Fund - I",
+      "symbol": null,
+      "listingDate": "2008-10-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "NAMCO Income Fund",
+      "symbol": null,
+      "listingDate": "2008-10-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Alfalah GHP Alpha Fund",
+      "symbol": null,
+      "listingDate": "2008-11-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Alfalah GHP Principal Protected Fund",
+      "symbol": null,
+      "listingDate": "2008-12-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2008,
+      "companyName": "Pak Oman Advantage Islamic Income Fund",
+      "symbol": null,
+      "listingDate": "2008-12-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2008.zip",
+      "sourceHash": "927ae748e5f5a471195655aaddfe19516cda8dc74f24d1084eb092e95b9b199d",
+      "retrievedAt": "2026-08-10T06:09:50.639Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Media Times Limited",
+      "symbol": null,
+      "listingDate": "2009-02-02",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Pak Oman Advantage Islamic Fund",
+      "symbol": null,
+      "listingDate": "2009-02-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Pak Oman Advantage Stock Fund",
+      "symbol": null,
+      "listingDate": "2009-02-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "IBL Healthcare Limited",
+      "symbol": null,
+      "listingDate": "2009-03-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "ABL Stock Fund",
+      "symbol": null,
+      "listingDate": "2009-07-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "KASB Cash Fund",
+      "symbol": null,
+      "listingDate": "2009-09-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Noon Pakistan Limited (Non-voting Ordinary)",
+      "symbol": null,
+      "listingDate": "2009-09-30",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Nishat Power Limited",
+      "symbol": null,
+      "listingDate": "2009-10-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Alfalah GHP Principal Protected Fund - II",
+      "symbol": null,
+      "listingDate": "2009-10-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "Nishat Chunian Power Limited",
+      "symbol": null,
+      "listingDate": "2009-10-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2009,
+      "companyName": "BMA Empress Cash Fund",
+      "symbol": null,
+      "listingDate": "2009-11-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2009.zip",
+      "sourceHash": "58c8a2c044fa8b88aa40429fcde459a9927ea751aabc2fb3a1c66014f8243678",
+      "retrievedAt": "2026-08-10T06:09:50.671Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Ghani Gases Limited (i)",
+      "symbol": null,
+      "listingDate": "2010-01-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Fatima Fertilizer Company Limited (ii)",
+      "symbol": null,
+      "listingDate": "2010-03-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "NIT Government Bond Fund",
+      "symbol": null,
+      "listingDate": "2010-03-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "NIT Income Fund",
+      "symbol": null,
+      "listingDate": "2010-03-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Safe Mix Concrete Products Limited",
+      "symbol": null,
+      "listingDate": "2010-03-18",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Agritech Limited (iii)",
+      "symbol": null,
+      "listingDate": "2010-04-12",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Amtex Limited (iv)",
+      "symbol": null,
+      "listingDate": "2010-04-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "KASB Capital Protected Gold Fund",
+      "symbol": null,
+      "listingDate": "2010-04-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Alfalah GHP Cash Fund",
+      "symbol": null,
+      "listingDate": "2010-05-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Wateen Telecom Limited (v)",
+      "symbol": null,
+      "listingDate": "2010-05-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "Faysal Islamic Savings Growth Fund",
+      "symbol": null,
+      "listingDate": "2010-07-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "ABL Cash Fund",
+      "symbol": null,
+      "listingDate": "2010-08-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "ABL Islamic Cash Fund",
+      "symbol": null,
+      "listingDate": "2010-08-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2010,
+      "companyName": "AH Dow Jones Safe Pakistan Titans 15 Index Fund",
+      "symbol": null,
+      "listingDate": "2010-11-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2010.zip",
+      "sourceHash": "42f271a767881f83be13996dde289e0e221dfe29680a4adf610758b7d8c9209b",
+      "retrievedAt": "2026-08-10T06:09:51.011Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "Pakistan Strategic Allocation Fund",
+      "symbol": null,
+      "listingDate": "2011-01-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "Faysal Money Market Fund",
+      "symbol": null,
+      "listingDate": "2011-02-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "International Steels Limited",
+      "symbol": null,
+      "listingDate": "2011-06-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "Pakgen Power Limited",
+      "symbol": null,
+      "listingDate": "2011-07-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "Engro Foods Limited",
+      "symbol": null,
+      "listingDate": "2011-08-10",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "TPL Direct Insurance Limited",
+      "symbol": null,
+      "listingDate": "2011-09-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2011,
+      "companyName": "ABL Government Securities Fund",
+      "symbol": null,
+      "listingDate": "2011-12-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2011.zip",
+      "sourceHash": "f1fe333a36a0dbe350e08831de0f6c055d921c2bf0a767932cc0c0c6310b0b1c",
+      "retrievedAt": "2026-08-10T06:09:51.293Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "AKD Cash Fund",
+      "symbol": null,
+      "listingDate": "2012-02-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "Next Capital Limited",
+      "symbol": null,
+      "listingDate": "2012-04-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "Akzo Nobel Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2012-07-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "TPL Trakker Limited",
+      "symbol": null,
+      "listingDate": "2012-07-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "Aisha Steel Mills Limited (Offer for Sale)",
+      "symbol": null,
+      "listingDate": "2012-08-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "Aisha Steel Mills Limited (Preference Shares)",
+      "symbol": null,
+      "listingDate": "2012-08-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "Primus Cash Fund",
+      "symbol": null,
+      "listingDate": "2012-10-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2012,
+      "companyName": "Javedan Corporation Limited (Preference Shares) (Offer for Sale)",
+      "symbol": null,
+      "listingDate": "2012-10-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2012.zip",
+      "sourceHash": "ea2c016426c66f944184886379f13e93411d5813aeeac620e33feb568ebc908d",
+      "retrievedAt": "2026-08-10T06:09:51.308Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2013,
+      "companyName": "SFL Limited",
+      "symbol": null,
+      "listingDate": "2013-01-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2013.zip",
+      "sourceHash": "04dba2d156df1264c59afa19fbee08cbf1a67f1c2e8e13e3d2f94f0484957394",
+      "retrievedAt": "2026-08-10T06:09:51.479Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2013,
+      "companyName": "ABL Islamic Stock Fund",
+      "symbol": null,
+      "listingDate": "2013-06-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2013.zip",
+      "sourceHash": "04dba2d156df1264c59afa19fbee08cbf1a67f1c2e8e13e3d2f94f0484957394",
+      "retrievedAt": "2026-08-10T06:09:51.479Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2013,
+      "companyName": "Lalpir Power Limited ** (Offer for Sale @ Rs.12 premium per share)",
+      "symbol": null,
+      "listingDate": "2013-08-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2013.zip",
+      "sourceHash": "04dba2d156df1264c59afa19fbee08cbf1a67f1c2e8e13e3d2f94f0484957394",
+      "retrievedAt": "2026-08-10T06:09:51.479Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2013,
+      "companyName": "Faysal Financial Sector Opportunity Fund",
+      "symbol": null,
+      "listingDate": "2013-11-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2013.zip",
+      "sourceHash": "04dba2d156df1264c59afa19fbee08cbf1a67f1c2e8e13e3d2f94f0484957394",
+      "retrievedAt": "2026-08-10T06:09:51.479Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2013,
+      "companyName": "Primus - Strategic Multi Asset Fund",
+      "symbol": null,
+      "listingDate": "2013-12-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2013.zip",
+      "sourceHash": "04dba2d156df1264c59afa19fbee08cbf1a67f1c2e8e13e3d2f94f0484957394",
+      "retrievedAt": "2026-08-10T06:09:51.479Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2013,
+      "companyName": "Pakistan International Bulk Terminal Limited",
+      "symbol": null,
+      "listingDate": "2013-12-23",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2013.zip",
+      "sourceHash": "04dba2d156df1264c59afa19fbee08cbf1a67f1c2e8e13e3d2f94f0484957394",
+      "retrievedAt": "2026-08-10T06:09:51.479Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Engro Fertilizers Limited (At a premium of Rs.18.25 per share)",
+      "symbol": null,
+      "listingDate": "2014-01-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Avanceon Limited (At a premium of Rs.4 per share)",
+      "symbol": null,
+      "listingDate": "2014-02-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Hascol Petroleum Limited (At a premium of Rs. 46.50 per share)",
+      "symbol": null,
+      "listingDate": "2014-05-14",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Primus Investment Management Limited - Islamic Equity Fund",
+      "symbol": null,
+      "listingDate": "2014-05-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Colony Textile Mills Limited",
+      "symbol": null,
+      "listingDate": "2014-07-23",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Engro Powergen Qadirpur Limited (At a premium of Rs. 20.02 per share)",
+      "symbol": null,
+      "listingDate": "2014-10-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2014,
+      "companyName": "Saif Power Limited (Offer for Sale At a premium of Rs. 20 per share)",
+      "symbol": null,
+      "listingDate": "2014-12-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2014.zip",
+      "sourceHash": "c0ea83a9e13782bef277327e20271ad1ab9b7379ab609a9ee32236794769cf1c",
+      "retrievedAt": "2026-08-10T06:09:51.652Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Sindh Modaraba",
+      "symbol": null,
+      "listingDate": "2015-01-23",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Systems Limited (At a premium of Rs. 30 per share)",
+      "symbol": null,
+      "listingDate": "2015-02-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Synthetic Products Enterprises Limited (At a premium of Rs. 20 per share)",
+      "symbol": null,
+      "listingDate": "2015-02-10",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Mughal Iron and Steel Industries Limited (At a premium of Rs.24 per share)",
+      "symbol": null,
+      "listingDate": "2015-04-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Ghani Global Glass Limited",
+      "symbol": null,
+      "listingDate": "2015-05-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Primus Investment Management Limited - Value Equity Fund",
+      "symbol": null,
+      "listingDate": "2015-06-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Dolmen City \"REIT\" (At a premium of Re.1 per unit)",
+      "symbol": null,
+      "listingDate": "2015-06-26",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Al Shaheer Corporation Limited (At a premium of Rs.85 per share)",
+      "symbol": null,
+      "listingDate": "2015-08-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2015,
+      "companyName": "Amreli Steels Limited (At a premium of Rs.41 per share)",
+      "symbol": null,
+      "listingDate": "2015-12-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2015.zip",
+      "sourceHash": "87fb5b06e6f238b9427adcb36d05875c6969725395390ef846640cc13b93ca21",
+      "retrievedAt": "2026-08-10T06:09:51.931Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "ABL Islamic Financial Planning Fund",
+      "symbol": null,
+      "listingDate": "2016-01-18",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "Awwal Modaraba",
+      "symbol": null,
+      "listingDate": "2016-02-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "NAFA Islamic Active Allocation Fund - I",
+      "symbol": null,
+      "listingDate": "2016-02-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "Hi-Tech Lubricants Limited (at a premium of PRK 52.50 per share)",
+      "symbol": null,
+      "listingDate": "2016-03-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "ABL Financial Planning Fund",
+      "symbol": null,
+      "listingDate": "2016-03-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "Faysal Islamic Asset Allocation Fund",
+      "symbol": null,
+      "listingDate": "2016-03-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "NAFA Islamic Energy Fund",
+      "symbol": null,
+      "listingDate": "2016-05-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "Faysal MTS Funds",
+      "symbol": null,
+      "listingDate": "2016-06-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "Al-Ameen Islamic Dedicated Equity Fund",
+      "symbol": null,
+      "listingDate": "2016-06-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "MCB Pakistan Frequent Payout Fund",
+      "symbol": null,
+      "listingDate": "2016-06-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "PIML - Asset Allocation Fund",
+      "symbol": null,
+      "listingDate": "2016-06-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "TPL Properties Limited (at a premium of PKR 2.50 per share)",
+      "symbol": null,
+      "listingDate": "2016-07-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "HBL-Islamic Asset Allocation Fund",
+      "symbol": null,
+      "listingDate": "2016-07-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2016,
+      "companyName": "Loads Limited (at a premium of PKR 24 per share)",
+      "symbol": null,
+      "listingDate": "2016-11-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2016.zip",
+      "sourceHash": "c7c37c0a477faad063495eb2fb8f95ee691398913270aa87ae071ae62e2a85ae",
+      "retrievedAt": "2026-08-10T06:09:52.071Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Roshan Packages Limited (at a Premium of PKR 76.25)",
+      "symbol": null,
+      "listingDate": "2017-02-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "GlaxoSmithKline Consumer Healthcare Pakistan Limited",
+      "symbol": null,
+      "listingDate": "2017-03-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "First Habib Islamic Income Fund",
+      "symbol": null,
+      "listingDate": "2017-05-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Al-Ameen Islamic Financial Planning Fund - II",
+      "symbol": null,
+      "listingDate": "2017-05-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Meezan Asset Allocation Fund",
+      "symbol": null,
+      "listingDate": "2017-05-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Meezan Energy Fund",
+      "symbol": null,
+      "listingDate": "2017-05-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Meezan Gold Fund",
+      "symbol": null,
+      "listingDate": "2017-05-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Meezan Strategic Allocation Fund",
+      "symbol": null,
+      "listingDate": "2017-05-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Alfalah GHP Islamic Prosperity Planning Fund",
+      "symbol": null,
+      "listingDate": "2017-06-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Alhamra Islamic Active Allocation Fund",
+      "symbol": null,
+      "listingDate": "2017-06-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Nafa Islamic Active Allocation Fund - II",
+      "symbol": null,
+      "listingDate": "2017-06-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "UBL Capital Protected Fund - III",
+      "symbol": null,
+      "listingDate": "2017-06-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Pakistan Stock Exchange Limited (Offer for Sale at a Premium of PKR 18.00)",
+      "symbol": null,
+      "listingDate": "2017-06-29",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Ittefaq Iron Industries Limited (at a Premium of PKR 20.20)",
+      "symbol": null,
+      "listingDate": "2017-07-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Macter International Limited",
+      "symbol": null,
+      "listingDate": "2017-08-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "HBL Islamic Financial Planning Fund",
+      "symbol": null,
+      "listingDate": "2017-09-29",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Habib Metro Modaraba",
+      "symbol": null,
+      "listingDate": "2017-10-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "UBL Financial Planning Fund",
+      "symbol": null,
+      "listingDate": "2017-10-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "Orient Rental Modaraba",
+      "symbol": null,
+      "listingDate": "2017-11-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2017,
+      "companyName": "HBL Financial Planning Fund",
+      "symbol": null,
+      "listingDate": "2017-12-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/Equlity/floatation2017.zip",
+      "sourceHash": "ad4290a5955c4db4019889f3b9aab551ba5708125fd5abc8a5a3737c203293fe",
+      "retrievedAt": "2026-08-10T06:09:52.119Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2018,
+      "companyName": "Matco Foods Limited",
+      "symbol": "MFL",
+      "listingDate": "2018-02-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2018_1.zip",
+      "sourceHash": "a812b4bc1d287f9fe4b676bff18b4d46444f2ab9166c0f20281a18b8556dd762",
+      "retrievedAt": "2026-08-10T06:09:52.592Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2018,
+      "companyName": "AGP Limited",
+      "symbol": "AGP",
+      "listingDate": "2018-03-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2018_1.zip",
+      "sourceHash": "a812b4bc1d287f9fe4b676bff18b4d46444f2ab9166c0f20281a18b8556dd762",
+      "retrievedAt": "2026-08-10T06:09:52.592Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2018,
+      "companyName": "At-Tahur Limited",
+      "symbol": "PREMA",
+      "listingDate": "2018-07-30",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2018_1.zip",
+      "sourceHash": "a812b4bc1d287f9fe4b676bff18b4d46444f2ab9166c0f20281a18b8556dd762",
+      "retrievedAt": "2026-08-10T06:09:52.592Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2019,
+      "companyName": "Interloop Limited",
+      "symbol": "ILP",
+      "listingDate": "2019-04-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2019_2.zip",
+      "sourceHash": "c30d4bcf7669737ba1e5570637ea4d92788a19f370f108c2de8ec40dd5c6d984",
+      "retrievedAt": "2026-08-10T06:09:52.890Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2020,
+      "companyName": "The Organic Meat Company Limited",
+      "symbol": null,
+      "listingDate": "2020-08-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/floatation2020.zip",
+      "sourceHash": "1a6a62c9694a6b702055f01cf9f794df539015f2e6455eb5e7f09af4400ea0c9",
+      "retrievedAt": "2026-08-10T06:09:52.927Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2020,
+      "companyName": "TPL Trakker Limited",
+      "symbol": null,
+      "listingDate": "2020-08-10",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/floatation2020.zip",
+      "sourceHash": "1a6a62c9694a6b702055f01cf9f794df539015f2e6455eb5e7f09af4400ea0c9",
+      "retrievedAt": "2026-08-10T06:09:52.927Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2020,
+      "companyName": "Power Cement Limited (Preference Shares)",
+      "symbol": null,
+      "listingDate": "2020-09-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/floatation2020.zip",
+      "sourceHash": "1a6a62c9694a6b702055f01cf9f794df539015f2e6455eb5e7f09af4400ea0c9",
+      "retrievedAt": "2026-08-10T06:09:52.927Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2020,
+      "companyName": "Agha Steel Industries Limited",
+      "symbol": null,
+      "listingDate": "2020-11-02",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/floatation2020.zip",
+      "sourceHash": "1a6a62c9694a6b702055f01cf9f794df539015f2e6455eb5e7f09af4400ea0c9",
+      "retrievedAt": "2026-08-10T06:09:52.927Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2020,
+      "companyName": "Engro Polymer & Chemical Limited (Preference Shares)",
+      "symbol": null,
+      "listingDate": "2020-12-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/floatation2020.zip",
+      "sourceHash": "1a6a62c9694a6b702055f01cf9f794df539015f2e6455eb5e7f09af4400ea0c9",
+      "retrievedAt": "2026-08-10T06:09:52.927Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Panther Tyres Limited",
+      "symbol": "PTL",
+      "listingDate": "2021-02-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Service Global Footwear Limited",
+      "symbol": "SGF",
+      "listingDate": "2021-04-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Citi Pharma Limited",
+      "symbol": "CPHL",
+      "listingDate": "2021-07-09",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Pakistan Aluminium Bverage Cans Limited",
+      "symbol": "PABC",
+      "listingDate": "2021-07-16",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Jahangir Siddiqui & Co. Limited (Class A - Preference Shares)",
+      "symbol": "JSCLPSA",
+      "listingDate": "2021-07-30",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Air Link Communication Limited",
+      "symbol": "AIRLINK",
+      "listingDate": "2021-09-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2021,
+      "companyName": "Octopus Digital Limited",
+      "symbol": "OCTOPUS",
+      "listingDate": "2021-10-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_2021_Equity_71021.zip",
+      "sourceHash": "239c2ab5472c42f7e302dccd83308a16120808d453ccf11e7f4ab7ff6414de27",
+      "retrievedAt": "2026-08-10T06:09:52.974Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2022,
+      "companyName": "Husein Sugar Mills Limited (Convertible Preference Shares)",
+      "symbol": "HSMCPS",
+      "listingDate": "2022-02-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2022_(27-Dec-2022).zip",
+      "sourceHash": "4d9a05e1fff77fe7cba5c0283e8d6315ac68b9fd2274546f944853da3307c30d",
+      "retrievedAt": "2026-08-10T06:09:53.402Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2022,
+      "companyName": "Adamjee Life Assurance Company Limited",
+      "symbol": "ALIFE",
+      "listingDate": "2022-03-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2022_(27-Dec-2022).zip",
+      "sourceHash": "4d9a05e1fff77fe7cba5c0283e8d6315ac68b9fd2274546f944853da3307c30d",
+      "retrievedAt": "2026-08-10T06:09:53.402Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2022,
+      "companyName": "Ghani Chemical Industries Limited",
+      "symbol": "GCIL",
+      "listingDate": "2022-11-14",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2022_(27-Dec-2022).zip",
+      "sourceHash": "4d9a05e1fff77fe7cba5c0283e8d6315ac68b9fd2274546f944853da3307c30d",
+      "retrievedAt": "2026-08-10T06:09:53.402Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2022,
+      "companyName": "Ghani Chemical Industries Limited - Class \"B\" Shares",
+      "symbol": "GCILB",
+      "listingDate": "2022-11-25",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2022_(27-Dec-2022).zip",
+      "sourceHash": "4d9a05e1fff77fe7cba5c0283e8d6315ac68b9fd2274546f944853da3307c30d",
+      "retrievedAt": "2026-08-10T06:09:53.402Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2022,
+      "companyName": "Globe Residency REIT",
+      "symbol": "GRR",
+      "listingDate": "2022-12-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2022_(27-Dec-2022).zip",
+      "sourceHash": "4d9a05e1fff77fe7cba5c0283e8d6315ac68b9fd2274546f944853da3307c30d",
+      "retrievedAt": "2026-08-10T06:09:53.402Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2023,
+      "companyName": "LSE Proptech Limited",
+      "symbol": "LSEPL",
+      "listingDate": "2023-06-12",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2023_(02-Jan-2024).zip",
+      "sourceHash": "b3aae3ba1c8debcb024557244669ff2d4102db7b28e5d212c2970c58e07f4cdb",
+      "retrievedAt": "2026-08-10T06:09:53.489Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2023,
+      "companyName": "LSE Ventures Limited",
+      "symbol": "LSEVL",
+      "listingDate": "2023-06-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2023_(02-Jan-2024).zip",
+      "sourceHash": "b3aae3ba1c8debcb024557244669ff2d4102db7b28e5d212c2970c58e07f4cdb",
+      "retrievedAt": "2026-08-10T06:09:53.489Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2023,
+      "companyName": "B. R. R. Guardian Limited",
+      "symbol": "BRRG",
+      "listingDate": "2023-08-04",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2023_(02-Jan-2024).zip",
+      "sourceHash": "b3aae3ba1c8debcb024557244669ff2d4102db7b28e5d212c2970c58e07f4cdb",
+      "retrievedAt": "2026-08-10T06:09:53.489Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2023,
+      "companyName": "Symmetry Group Limited",
+      "symbol": "SYM",
+      "listingDate": "2023-09-01",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2023_(02-Jan-2024).zip",
+      "sourceHash": "b3aae3ba1c8debcb024557244669ff2d4102db7b28e5d212c2970c58e07f4cdb",
+      "retrievedAt": "2026-08-10T06:09:53.489Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2023,
+      "companyName": "Treet Battery Limited",
+      "symbol": "TBL",
+      "listingDate": "2023-12-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New_Listing_-_Equities_2023_(02-Jan-2024).zip",
+      "sourceHash": "b3aae3ba1c8debcb024557244669ff2d4102db7b28e5d212c2970c58e07f4cdb",
+      "retrievedAt": "2026-08-10T06:09:53.489Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "Stylers International Limited",
+      "symbol": "STYLERS",
+      "listingDate": "2024-01-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "Secure Logistics Group Limited",
+      "symbol": "SLGL",
+      "listingDate": "2024-04-22",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "TPL REIT Fund - I",
+      "symbol": "TPLRF1",
+      "listingDate": "2024-05-20",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "LSE Capital Limited",
+      "symbol": "LSECL",
+      "listingDate": "2024-05-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "PIA Holding Company Limited - Class - \"A\"",
+      "symbol": "PIAHCLA",
+      "listingDate": "2024-05-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "PIA Holding Company Limited - Class - \"B\"",
+      "symbol": "PIAHCLB",
+      "listingDate": "2024-05-27",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "LSE Financial Services Limited",
+      "symbol": "LSEFSL",
+      "listingDate": "2024-05-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "International Packaging Films Limited",
+      "symbol": "IPAK",
+      "listingDate": "2024-06-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "Fast Cables Limited",
+      "symbol": "FCL",
+      "listingDate": "2024-06-10",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "UDL International Limited",
+      "symbol": "UDLI",
+      "listingDate": "2024-07-10",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "Big Bird Foods Limited",
+      "symbol": "BBFL",
+      "listingDate": "2024-08-05",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2024,
+      "companyName": "BF Biosciences Limited",
+      "symbol": "BFBIO",
+      "listingDate": "2024-10-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-18-Oct-2024.zip",
+      "sourceHash": "992e99ea953a437019819fa76da7613d546aca86d26d478c822e710255408954",
+      "retrievedAt": "2026-08-10T06:09:53.739Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "DH Partners Limited",
+      "symbol": "DHPL",
+      "listingDate": "2025-02-03",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Zarea Limited",
+      "symbol": "ZAL",
+      "listingDate": "2025-02-28",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Barkat Frisian Agro Limited",
+      "symbol": "BFAGRO",
+      "listingDate": "2025-03-07",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Ghani ChemWorld Limited",
+      "symbol": "GCWL",
+      "listingDate": "2025-04-24",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Mughal Iron & Steel Industries Limtied - Class \"C\" Shares",
+      "symbol": "MUGHALC",
+      "listingDate": "2025-06-17",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Image REIT",
+      "symbol": "IREIT",
+      "listingDate": "2025-10-06",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Blue-Ex Limited",
+      "symbol": "BLUEX",
+      "listingDate": "2025-12-29",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2025,
+      "companyName": "Pak Qatar Family Takaful Limited",
+      "symbol": "PAKQATAR",
+      "listingDate": "2025-12-31",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-Equity-31-Dec-2025.zip",
+      "sourceHash": "4d3ae2cce73ca86c8d723951ad7a9a67dd9533d01f6c189e3a46111c737b00fb",
+      "retrievedAt": "2026-08-10T06:09:53.785Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Signature Residency REIT",
+      "symbol": "SRR",
+      "listingDate": "2026-01-29",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Pak-Qatar General Takaful Limited",
+      "symbol": "PQGTL",
+      "listingDate": "2026-02-10",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Ghani Dairies Limited",
+      "symbol": "GDL",
+      "listingDate": "2026-02-19",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Wahdat Poultry Farms Limited",
+      "symbol": "WAHDAT",
+      "listingDate": "2026-05-08",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "LSE SPAC-I Limited",
+      "symbol": "SPAC1",
+      "listingDate": "2026-05-11",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "JS Rental REIT",
+      "symbol": "JSRR",
+      "listingDate": "2026-05-18",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Sitara Petroleum Service Limited",
+      "symbol": "SPSL",
+      "listingDate": "2026-05-21",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Service Long March Tyres Limited",
+      "symbol": "SLM",
+      "listingDate": "2026-06-15",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "LSE SPAC-II Limited",
+      "symbol": "SPAC2",
+      "listingDate": "2026-07-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    },
+    {
+      "sourceType": "annual_listing_history",
+      "year": 2026,
+      "companyName": "Select Technologies Limited",
+      "symbol": "SELECT",
+      "listingDate": "2026-07-13",
+      "evidenceExcerpt": null,
+      "sourceUrl": "https://www.psx.com.pk/psx/themes/psx/uploads/New-Listing-14-Jul-2026.zip",
+      "sourceHash": "6bc3acfd004cd287bd0dee54fec6dc3e9c7ea906b7e3413de6cf4ab3c75f6a29",
+      "retrievedAt": "2026-08-10T06:09:54.252Z"
+    }
+  ]
+}

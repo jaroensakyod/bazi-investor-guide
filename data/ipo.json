@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-07",
-  "count": 68,
+  "updatedAt": "2026-08-17",
+  "count": 72,
   "entries": [
     {
       "ticker": "ATTO",
@@ -69,7 +69,7 @@
       "priceRange": "$11.00 - $13.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-07T04:56:32.360Z"
     },
     {
@@ -83,7 +83,7 @@
       "priceRange": "$15.00 - $17.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-07T09:23:29.164Z"
     },
     {
@@ -97,7 +97,7 @@
       "priceRange": "$16.00 - $18.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-07T09:23:29.164Z"
     },
     {
@@ -112,7 +112,7 @@
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-07T09:23:29.164Z"
+      "fetchedAt": "2026-08-10T03:47:01.572Z"
     },
     {
       "ticker": "PHAX",
@@ -508,7 +508,7 @@
       "ipoDate": "2026-08-07",
       "priceRange": "HK$10.42 - HK$11.18",
       "currency": "HKD",
-      "status": "upcoming",
+      "status": "listed",
       "business": "H-shares ของบริษัทเทคโนโลยีจีน (Hangzhou) — 57.59M หุ้น (~HK$644M)",
       "source": "IPOX/hkexnews 2026-08",
       "fetchedAt": "2026-08-06T12:48:28.541Z"
@@ -778,7 +778,7 @@
       "ipoDate": "2026-08-07",
       "priceRange": "₹50-53",
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Steel castings ₹425cr (open 05-07 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.260Z"
@@ -1022,6 +1022,54 @@
       "business": "Biotech/green chemistry (上网发行 8/20)",
       "source": "sina 新股日历 2026-08",
       "fetchedAt": "2026-08-07T05:08:06.817Z"
+    },
+    {
+      "ticker": "LYNX",
+      "name": "Lyntris Inc",
+      "market": "NYSE",
+      "country": "US",
+      "exchange": "NYSE",
+      "ipoDate": "2026-08-20",
+      "priceRange": "$19.00 - $22.00",
+      "source": "Investing.com (browser)",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:32:47.759Z"
+    },
+    {
+      "ticker": "ADBT",
+      "name": "Advasa Holdings Inc",
+      "market": "NASDAQ",
+      "country": "US",
+      "exchange": "NASDAQ",
+      "ipoDate": "2026-08-20",
+      "priceRange": "",
+      "source": "Investing.com (browser)",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:32:47.759Z"
+    },
+    {
+      "ticker": "ANTP",
+      "name": "Anthropic",
+      "market": "NASDAQ",
+      "country": "US",
+      "exchange": "NASDAQ",
+      "ipoDate": "2026-10-23",
+      "priceRange": "",
+      "source": "Investing.com (browser)",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:32:47.759Z"
+    },
+    {
+      "ticker": "OAI",
+      "name": "OpenAI",
+      "market": "NASDAQ",
+      "country": "US",
+      "exchange": "NASDAQ",
+      "ipoDate": "2026-11-27",
+      "priceRange": "",
+      "source": "Investing.com (browser)",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:32:47.759Z"
     }
   ]
 }

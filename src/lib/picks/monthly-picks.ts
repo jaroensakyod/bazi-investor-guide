@@ -1,7 +1,7 @@
 /**
- * พอร์ตเด่นรายเดือน (สไตล์ ProPicks AI) — deterministic ล้วน
+ * Legacy personalized ranking — deterministic ล้วน
  *
- * จุดต่างจาก investing.com: คัดโดย "ดวง×หุ้น" (scoreStock) + พื้นฐาน + โมเมนตัม
+ * เก็บไว้เพื่อ migration/report รุ่นเดิมเท่านั้น: คัดโดย "ดวง×หุ้น" + พื้นฐาน + โมเมนตัม
  * แต่ละตัวมีเหตุผล "ทำไมถึงถูกเลือก" แบบโปร่งใส (ธาตุ/ROE/Buffett/โมเมนตัม)
  *
  * ⚠️ ไม่ปลอมผลตอบแทนย้อนหลัง — แสดงแค่: พอร์ตเดือนนี้ + เทียบ benchmark วันนี้ + methodology
@@ -10,10 +10,11 @@ import { scoreStock } from "../investor/investor-guide";
 import { buffettChecks, buffettScore } from "../report/buffett-checks";
 import { loadSnapshot } from "../market/market-data";
 import { yahooTicker } from "../market/yahoo";
-import { getAllStocks } from "../investor/stock-database";
+import { getResearchableStocks } from "../investor/stock-database";
 import { loadFundamentalsCache } from "../market/fundamentals";
 import { classifyStockTier, visibleTiers, TIER_META, type StockTier, type UnlockLevel, type TierInput } from "../investor/stock-tiers";
 import type { CalculatedStateValue } from "@/lib/bazi/schema-types";
+import { assessResearchCapability } from "../research/research-policy";
 
 export type PickMarket = "TH" | "US" | "MID";
 
@@ -66,9 +67,9 @@ export type MonthlyPick = {
 };
 
 const MARKET_SCOPES: Record<PickMarket, { markets: string[]; tiers?: string[]; benchmark: string; benchmarkName: string; label: string; desc: string }> = {
-  TH: { markets: ["SET", "mai"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "TH30 — เหนือ SET", desc: "30 หุ้นไทยเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
-  US: { markets: ["NYSE", "NASDAQ", "NYSE/NASDAQ"], benchmark: "^GSPC", benchmarkName: "S&P 500", label: "US30 — เหนือ S&P 500", desc: "30 หุ้นสหรัฐเด่นประจำเดือน คัดโดย ดวง×หุ้น + พื้นฐาน" },
-  MID: { markets: ["SET", "mai"], tiers: ["mid", "small"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "MID30 — หุ้นกลางไทย", desc: "30 หุ้นขนาดกลางไทยเด่น (mid/small) — โตในประเทศ+ภูมิภาค" },
+  TH: { markets: ["SET", "mai"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "TH Legacy Research Queue", desc: "คิววิจัยหุ้นไทยจากโมเดลเดิม ดวง×หุ้น + พื้นฐาน — ไม่ใช่พอร์ตหรือคำแนะนำ" },
+  US: { markets: ["NYSE", "NASDAQ", "NYSE/NASDAQ"], benchmark: "^GSPC", benchmarkName: "S&P 500", label: "US Legacy Research Queue", desc: "คิววิจัยหุ้นสหรัฐจากโมเดลเดิม ดวง×หุ้น + พื้นฐาน — ไม่ใช่พอร์ตหรือคำแนะนำ" },
+  MID: { markets: ["SET", "mai"], tiers: ["mid", "small"], benchmark: "^SET.BK", benchmarkName: "SET Index", label: "MID Legacy Research Queue", desc: "คิววิจัยหุ้นกลางไทยจากโมเดลเดิม — ยังไม่อนุญาตให้เผยแพร่เป็น personalized ranking" },
 };
 
 export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarket = "TH", limit = 30, unlock: UnlockLevel = "free") {
@@ -76,7 +77,7 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
   const snap = loadSnapshot();
   const fundCache = loadFundamentalsCache();
   const visible = visibleTiers(unlock);
-  const stocks = getAllStocks()
+  const stocks = getResearchableStocks()
     .filter((s) => cfg.markets.includes(s.market))
     .filter((s) => !cfg.tiers || (cfg.tiers.includes(s.tier) || s.growthStage === "mid" || s.growthStage === "small"))
     .map((s) => {
@@ -174,7 +175,9 @@ export function buildMonthlyPicks(state: CalculatedStateValue, market: PickMarke
       "คะแนน = ธาตุตรงดวง×2 (scoreStock: ธาตุที่ควรทำ/ธาตุลาภ/ธาตุพิฆาต) + พื้นฐาน (ROE/Buffett) + โมเมนตัมวันนี้",
       "อัปเดตตามรอบข้อมูล (cron รายวัน) — เปลี่ยนพอร์ตทุกเดือนตามธาตุเดือน",
     ],
-    disclaimer: "บทวิเคราะห์อ้างอิงจากดวง ตลาด ข่าว แนวโน้ม และข้อมูลพื้นฐาน — ไม่ใช่คำแนะนำการลงทุน · ผลในอดีตไม่รับประกันอนาคต",
+    legacy: true,
+    releasePolicy: assessResearchCapability("personalized_security_ranking"),
+    disclaimer: "โมดูล legacy นี้ผสม BaZi กับข้อมูลตลาดและยังไม่อนุญาตให้เปิดเป็น paid/public personalized ranking ในโหมด research-only · ไม่ใช่คำแนะนำการลงทุน",
   };
 }
 

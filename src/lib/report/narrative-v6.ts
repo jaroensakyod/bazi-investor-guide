@@ -4,7 +4,7 @@
  * 6 calls (1 ต่อภาค) — cache ต่อภาค
  */
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CalculatedStateValue } from "../bazi/schema-types";
@@ -24,16 +24,52 @@ export type PartNarrative = {
 };
 export type BookNarrative = Partial<Record<"1" | "2" | "3" | "4" | "5" | "6", PartNarrative>>;
 
+type PartDataContext = {
+  dashboard: ReturnType<typeof buildPersonalDashboard>;
+  thPicks: ReturnType<typeof buildMonthlyPicks>;
+  usPicks: ReturnType<typeof buildMonthlyPicks>;
+};
+
+const PART_DATA_CACHE = new WeakMap<CalculatedStateValue, {
+  revision: string;
+  context: PartDataContext;
+  parts: Map<number, string>;
+}>();
+
 function cachePath(part: number, dataJson: string): string {
   const hash = createHash("sha1").update(`${VERSION}:${part}:${dataJson}`).digest("hex").slice(0, 16);
   return path.join(CACHE_DIR, `${part}-${hash}.json`);
 }
 
+function fileRevision(file: string): string {
+  try {
+    const stat = statSync(file);
+    return `${stat.mtimeMs}:${stat.size}`;
+  } catch {
+    return "missing";
+  }
+}
+
+function partDataRevision(): string {
+  return [
+    new Date().toISOString().slice(0, 10),
+    fileRevision(path.join(ROOT, "data/cache/market/latest.json")),
+    fileRevision(path.join(ROOT, "data/cache/fundamentals.json")),
+  ].join("|");
+}
+
+function buildPartDataContext(state: CalculatedStateValue): PartDataContext {
+  return {
+    dashboard: buildPersonalDashboard(state),
+    thPicks: buildMonthlyPicks(state, "TH", 10, "premium"),
+    usPicks: buildMonthlyPicks(state, "US", 8, "premium"),
+  };
+}
+
 /** ข้อมูลเฉพาะภาค (ตัดให้สั้น — LLM ต้องการเฉพาะที่เกี่ยวข้อง) */
-function partData(state: CalculatedStateValue, part: number): string {
-  const d = buildPersonalDashboard(state);
-  const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
-  const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
+function serializePartData(context: PartDataContext, part: number): string {
+  const d = context.dashboard;
+  const { thPicks, usPicks } = context;
   const base = {
     persona: `${d.persona.name} (${d.persona.bandLabel}) — ${d.persona.style}`,
     principle: `${d.principle.band === "weak" ? "ดิถีอ่อน" : d.principle.band === "strong" ? "ดิถีแข็ง" : "ดิถีสมดุล"} · ${d.principle.mode} · เสริม ${d.principle.supplementElement}`,
@@ -77,6 +113,24 @@ function partData(state: CalculatedStateValue, part: number): string {
   }
 }
 
+function partData(state: CalculatedStateValue, part: number): string {
+  const revision = partDataRevision();
+  let cached = PART_DATA_CACHE.get(state);
+  if (!cached || cached.revision !== revision) {
+    cached = {
+      revision,
+      context: buildPartDataContext(state),
+      parts: new Map(),
+    };
+    PART_DATA_CACHE.set(state, cached);
+  }
+  const hit = cached.parts.get(part);
+  if (hit !== undefined) return hit;
+  const value = serializePartData(cached.context, part);
+  cached.parts.set(part, value);
+  return value;
+}
+
 const WRITER = `คุณคือ "อาจารย์หมิง" นักเขียนคอลัมน์การเงินส่วนบุคคล ผู้เชี่ยวชาญการลงทุนตามดวง 60 กะจื่อ กำลังเขียนหนังสือ "การลงทุนคู่ดวง ฉบับส่วนบุคคล"
 น้ำเสียง: อบอุ่น เป็นกันเอง แต่ลึกซึ้ง เหมือนคนนั่งอธิบายให้ฟังหลังกาแฟ · ภาษาไทยสละสลวย อ่านลื่นต่อเนื่อง ไม่ใช่ bullet
 ใช้ "คุณ" · ยกตัวอย่างสมมติใกล้ตัว (เงิน 1 ล้านบาท ฯลฯ) · อธิบายให้คนไม่รู้เรื่องดวงเข้าใจได้
@@ -86,7 +140,7 @@ const PART_TITLES: Record<number, string> = {
   1: "มุมมองดวง — กำลังดิถี ธาตุในดวง และความหมายต่อการเงินของคุณ",
   2: "การจัดสรรเงิน — 70:10:20 และเครื่องมือของแต่ละกอง",
   3: "พอร์ตเด่น — หุ้นที่ตรงดวงที่สุดจาก 5,958 บริษัท (พร้อมเหตุผลรายตัว)",
-  4: "สินค้าแนะนำ — สินทรัพย์/หมวดลงทุนที่ควรถือ (พร้อมเหตุผลรายตัว)",
+  4: "คิววิจัยสินทรัพย์ — หมวดที่ควรนำไปศึกษาต่อ (พร้อมหลักฐานและความเสี่ยงรายตัว)",
   5: "แผนที่ชีวิต — วัยจร 0-80+ ปี: ลงทุนเมื่อไหร่ ระวังเมื่อไหร่",
   6: "ฉบับเดือนนี้ — ธาตุเดือน ปฏิทินมงคล และแผนปฏิบัติรายเดือน",
 };

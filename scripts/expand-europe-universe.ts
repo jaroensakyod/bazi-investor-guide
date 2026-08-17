@@ -52,7 +52,7 @@ async function fetchTradingView(m: (typeof MARKETS)[number]): Promise<Row[]> {
       skippedSector++;
       continue;
     }
-    let symbol = (r.s.split(":")[1] ?? "").replace(/\.$/, ""); // RR. → RR (Yahoo ใช้ RR.L)
+    const symbol = (r.s.split(":")[1] ?? "").replace(/\.$/, ""); // RR. → RR (Yahoo ใช้ RR.L)
     if (!symbol) continue;
     out.push({ symbol, name: desc || name, sector, cap: cap ?? 0 });
   }

@@ -11,11 +11,14 @@ import { calculateBaziChart } from "../lib/bazi/symbolic-engine";
 import { createInMemoryKnowledgeRepository } from "../lib/bazi/in-memory-repository";
 import { detectIntent } from "../lib/chat/intents";
 import { chatWithAssistant, fallbackAnswer } from "../lib/chat/assistant";
-import { upsertUser, loadUser, type UserProfile, type BirthPayload } from "../lib/chat/user-store";
+import { upsertUser, loadUser, type UserProfile } from "../lib/chat/user-store";
 import { ok, err, type ApiResponse } from "./types";
 import { getLlmConfig } from "./config";
 import { logUsage } from "./usage";
 import type { Locale } from "../lib/i18n/dictionary";
+
+const LEGACY_PROFILE_PRODUCTION_MESSAGE =
+  "legacy birth profile ถูกปิดใน production จนกว่าจะย้ายไป encrypted profile vault และ consent workflow";
 
 export type ChatReply = {
   reply: string;
@@ -27,6 +30,7 @@ export type ChatReply = {
 
 /** สร้าง/อัปเดต profile → คืน profile (ใช้ได้ทั้ง profile & chat route) */
 export function handleProfile(body: Record<string, unknown>): ApiResponse<UserProfile> {
+  if (process.env.NODE_ENV === "production") return err(LEGACY_PROFILE_PRODUCTION_MESSAGE);
   const userId = String(body.userId ?? "");
   const birthDate = String(body.birthDate ?? "");
   const birthTime = String(body.birthTime ?? "");
@@ -50,6 +54,7 @@ export async function stateOfProfile(profile: UserProfile): Promise<CalculatedSt
 
 /** chat หลัก — ใช้ได้ทั้ง web/LINE/CLI (swap-able backend) */
 export async function handleChat(body: Record<string, unknown>): Promise<ApiResponse<ChatReply>> {
+  if (process.env.NODE_ENV === "production") return err(LEGACY_PROFILE_PRODUCTION_MESSAGE);
   const userId = String(body.userId ?? "guest");
   const message = String(body.message ?? "").trim();
   if (!message) return err("message ว่าง");

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Day-precision official listing evidence for IDX instruments absent from the exchange Listed Company Profiles directory.",
+  "records": [
+    {
+      "symbol": "XSPI",
+      "listingDate": "2019-07-04",
+      "isin": "IDX000000600",
+      "sourceName": "KSEI registration notice KSEI-5906/DIR/0619",
+      "sourceUrl": "https://web.ksei.co.id/Announcement/Files/100312_ksei_5906_dir_0619_201906201753.pdf"
+    }
+  ]
+}

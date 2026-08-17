@@ -2,7 +2,7 @@
  * PDF รายงานคู่ดวง ฉบับหนังสือ (สถาบัน) — ปก + สารบัญ + บทนำ + 6 บท (กราฟโดนัท/แท่ง + กล่องรู้/ระวัง) + ภาคผนวก (เช็กลิสต์/อภิธาน)
  * ใช้กับ /api/product-pdf?tier=free|99|490|790 · กราฟวาดด้วย PDFKit (arc/rect) — ไม่ต้องใช้รูปภายนอก
  */
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import PDFDocument from "pdfkit";
@@ -25,8 +25,16 @@ const TIER_LABEL: Record<StockTier, string> = { gold: "[VIP เทียร์ 1
 const C = { primary: "#14532d", gold: "#b8860b", ink: "#2b2417", muted: "#8a8478", cream: "#f7f4ec", line: "#e0d9c8", red: "#9b2c2c", green: "#1e6f3e", white: "#ffffff" };
 
 function clean(s: string): string {
-  return s
-    .replace(/[\u{1F000}-\u{1FFFF}\uFE00-\uFE0F\u2000-\u2BFF]/gu, "")
+  return [...s]
+    .filter((character) => {
+      const codePoint = character.codePointAt(0) ?? 0;
+      return !(
+        (codePoint >= 0x1f000 && codePoint <= 0x1ffff)
+        || (codePoint >= 0xfe00 && codePoint <= 0xfe0f)
+        || (codePoint >= 0x2000 && codePoint <= 0x2bff)
+      );
+    })
+    .join("")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -35,7 +43,6 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
   const maxSection = opts?.maxSection ?? 6;
   const d = buildPersonalDashboard(state);
   const thPicks = buildMonthlyPicks(state, "TH", 10, "premium");
-  const usPicks = buildMonthlyPicks(state, "US", 8, "premium");
   // narrative จาก cache (gen แยก background — PDF ไม่อุดตัน) — อ่าน dir ครั้งเดียว ไม่ loop 26 รอบ
   const narrative: Record<string, string> = {};
   const cacheDir = path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../.."), "data/cache/narratives-v5");
@@ -93,11 +100,6 @@ export async function buildFullReportPdf(state: CalculatedStateValue, opts?: { m
     doc.rect(52, y, 5, 16).fill(C.gold);
     doc.fontSize(15).font(F_B).fillColor(C.primary).text(clean(text), 66, y - 1);
     y += 24;
-  };
-  const h3 = (text: string) => {
-    ensure(28);
-    doc.font(F_B).fontSize(12.5).fillColor(C.ink).text(clean(text), 52, y);
-    y += 20;
   };
   const p = (text: string, size = 11, color = "#333333") => {
     ensure(32);
