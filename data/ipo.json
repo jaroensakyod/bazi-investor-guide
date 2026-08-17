@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-08-17",
-  "count": 72,
+  "count": 85,
   "entries": [
     {
       "ticker": "ATTO",
@@ -111,7 +111,7 @@
       "priceRange": "$20.00 - $22.00",
       "currency": "USD",
       "source": "StockAnalysis IPO calendar",
-      "status": "upcoming",
+      "status": "listed",
       "fetchedAt": "2026-08-10T03:47:01.572Z"
     },
     {
@@ -267,19 +267,14 @@
     {
       "ticker": "SUEN",
       "name": "บริษัท ซุน คอร์ป จำกัด (มหาชน)",
-      "nameEn": "SUEN CORP PUBLIC COMPANY LIMITED",
       "market": "SET",
-      "country": "TH",
-      "exchange": "SET",
       "ipoDate": null,
       "priceRange": null,
-      "currency": "THB",
-      "status": "ยื่น ก.ล.ต.",
+      "status": "อนุมัติ",
       "industry": "บริการ",
       "noOfIPO": "ไม่เกิน 196,240,000 หุ้น (25.82%)",
       "business": "วัสดุก่อสร้าง/สินค้าในบ้าน (We MAKE, Riki Riki) + คอนกรีตผสมเสร็จ (SC) + เหมืองหินแกรนิต",
-      "source": "SET API upcoming-ipo",
-      "fetchedAt": "2026-08-06T12:31:15.916Z"
+      "fetchedAt": "2026-08-17T02:45:36.817Z"
     },
     {
       "ticker": "TIPAK",
@@ -368,8 +363,8 @@
     },
     {
       "ticker": "AMK",
-      "name": "Almasar Minerals Limited - Friday 21 August 2026 11.00am AEST",
-      "ipoDate": "2026-08-21",
+      "name": "Almasar Minerals Limited - Friday 28 August 2026 12.00pm AEST",
+      "ipoDate": "2026-08-28",
       "priceRange": "A$0.20",
       "business": "Exploration and mining",
       "status": "upcoming",
@@ -425,7 +420,7 @@
       "ipoDate": "2026-08-10",
       "priceRange": "A$0.20",
       "business": "Mineral exploration - gold.",
-      "status": "upcoming",
+      "status": "listed",
       "market": "ASX",
       "country": "AU",
       "exchange": "ASX",
@@ -461,8 +456,8 @@
     },
     {
       "ticker": "POW",
-      "name": "Powerhaus Uranium Limited - Monday 17 August 2026 11.00am AEST",
-      "ipoDate": "2026-08-17",
+      "name": "Powerhaus Uranium Limited - Tuesday 25 August 2026 12.00pm AEST",
+      "ipoDate": "2026-08-25",
       "priceRange": "A$0.20",
       "business": "Mineral exploration and development",
       "status": "upcoming",
@@ -474,8 +469,8 @@
     },
     {
       "ticker": "WLC",
-      "name": "Whiterock Lithium Corp. - Thursday 20 August 2026 12:00pm AEST",
-      "ipoDate": "2026-08-20",
+      "name": "Whiterock Lithium Corp. - Monday 24 August 2026 1:00pm AEST",
+      "ipoDate": "2026-08-24",
       "priceRange": "A$0.20",
       "business": "Mineral exploration and development company",
       "status": "upcoming",
@@ -516,17 +511,13 @@
     {
       "ticker": "GIDO",
       "name": "기도산업 (Gido Industry)",
-      "nameEn": "Gido Industry Co., Ltd.",
+      "nameEn": "Gido Industry",
       "market": "KRX",
-      "country": "KR",
-      "exchange": "KOSDAQ",
-      "ipoDate": "2026-08-12",
-      "priceRange": "₩5,000-7,000 (est)",
-      "currency": "KRW",
+      "ipoDate": "2026-08-21",
+      "priceRange": "28,400원",
       "status": "upcoming",
-      "business": "Motorcycle & outdoor apparel OEM (46 ปี) — IBK투자증권 underwriter",
-      "source": "38.co.kr 2026-08",
-      "fetchedAt": "2026-08-06T12:48:28.542Z"
+      "business": "자동차 부품/금형 (ชิ้นส่วนยานยนต์)",
+      "fetchedAt": "2026-08-17T02:45:36.824Z"
     },
     {
       "ticker": "NEARLAB",
@@ -546,17 +537,13 @@
     {
       "ticker": "HATCHTECH",
       "name": "해치텍 (HatchTech)",
-      "nameEn": "HatchTech Co., Ltd.",
+      "nameEn": "HatchTech",
       "market": "KRX",
-      "country": "KR",
-      "exchange": "KOSDAQ",
-      "ipoDate": "2026-08-18",
-      "priceRange": null,
-      "currency": "KRW",
+      "ipoDate": "2026-08-25",
+      "priceRange": "23,000원",
       "status": "upcoming",
-      "business": "Deep-tech (수요예측 8/12)",
-      "source": "38.co.kr 2026-08",
-      "fetchedAt": "2026-08-06T12:48:28.542Z"
+      "business": "공모가 23,000원",
+      "fetchedAt": "2026-08-17T02:45:36.824Z"
     },
     {
       "ticker": "DELICIOUS",
@@ -568,7 +555,7 @@
       "ipoDate": "2026-08-12",
       "priceRange": null,
       "currency": "KRW",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Food service/restaurant tech (청약 8/3)",
       "source": "38.co.kr 2026-08",
       "fetchedAt": "2026-08-06T12:48:28.542Z"
@@ -583,7 +570,7 @@
       "ipoDate": "2026-08-14",
       "priceRange": null,
       "currency": "KRW",
-      "status": "upcoming",
+      "status": "listed",
       "business": "산업 (Industrial) — 청약 8/4",
       "source": "38.co.kr 2026-08",
       "fetchedAt": "2026-08-06T12:48:28.542Z"
@@ -591,17 +578,13 @@
     {
       "ticker": "BRILS",
       "name": "브릴스 (Brils)",
-      "nameEn": "Brils Co., Ltd.",
+      "nameEn": "Brils",
       "market": "KRX",
-      "country": "KR",
-      "exchange": "KOSDAQ",
-      "ipoDate": "2026-08-25",
+      "ipoDate": "2026-09-08",
       "priceRange": null,
-      "currency": "KRW",
       "status": "upcoming",
-      "business": "—",
-      "source": "38.co.kr 2026-08",
-      "fetchedAt": "2026-08-06T12:48:28.542Z"
+      "business": "수요예측 08/31~09/04",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
     },
     {
       "ticker": "INGENIA",
@@ -688,7 +671,7 @@
       "ipoDate": "2026-08-14",
       "priceRange": "₹200-212",
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Logistics/E-commerce tech platform (open 12-14 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.259Z"
@@ -703,7 +686,7 @@
       "ipoDate": "2026-08-13",
       "priceRange": null,
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Dairy products (open 11-13 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.260Z"
@@ -718,7 +701,7 @@
       "ipoDate": "2026-08-12",
       "priceRange": null,
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Auto transmission parts ₹1,400cr (open 10-12 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.260Z"
@@ -733,7 +716,7 @@
       "ipoDate": "2026-08-12",
       "priceRange": null,
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Diagnostics/biotech (open 10-12 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.260Z"
@@ -748,7 +731,7 @@
       "ipoDate": "2026-08-11",
       "priceRange": "₹151-159",
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Logistics/pallet pooling ₹2,480cr (open 07-11 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.260Z"
@@ -763,7 +746,7 @@
       "ipoDate": "2026-08-11",
       "priceRange": "₹200-212",
       "currency": "INR",
-      "status": "upcoming",
+      "status": "listed",
       "business": "Industrial machinery (open 07-11 Aug)",
       "source": "Chittorgarh 2026-08",
       "fetchedAt": "2026-08-07T04:51:56.260Z"
@@ -1025,15 +1008,17 @@
     },
     {
       "ticker": "LYNX",
-      "name": "Lyntris Inc",
-      "market": "NYSE",
+      "name": "Lyntris Inc.",
+      "nameEn": "Lyntris Inc.",
+      "market": "NYSE/NASDAQ",
       "country": "US",
       "exchange": "NYSE",
-      "ipoDate": "2026-08-20",
+      "ipoDate": "2026-08-19",
       "priceRange": "$19.00 - $22.00",
-      "source": "Investing.com (browser)",
+      "currency": "USD",
+      "source": "StockAnalysis IPO calendar",
       "status": "upcoming",
-      "fetchedAt": "2026-08-17T02:32:47.759Z"
+      "fetchedAt": "2026-08-17T02:42:20.926Z"
     },
     {
       "ticker": "ADBT",
@@ -1070,6 +1055,152 @@
       "source": "Investing.com (browser)",
       "status": "upcoming",
       "fetchedAt": "2026-08-17T02:32:47.759Z"
+    },
+    {
+      "ticker": "MOT",
+      "name": "MetaOptics Ltd",
+      "nameEn": "MetaOptics Ltd",
+      "market": "NYSE/NASDAQ",
+      "country": "US",
+      "exchange": "NASDAQ",
+      "ipoDate": "2026-08-24",
+      "priceRange": "$5.00 - $7.00",
+      "currency": "USD",
+      "source": "StockAnalysis IPO calendar",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:42:20.926Z"
+    },
+    {
+      "ticker": "PRB",
+      "name": "Parbo Resources Limited - Tuesday 22 September 2026",
+      "ipoDate": "2026-09-22",
+      "priceRange": "A$0.20",
+      "business": "Mineral exploration and development",
+      "status": "upcoming",
+      "market": "ASX",
+      "country": "AU",
+      "exchange": "ASX",
+      "currency": "AUD",
+      "source": "ASX upcoming floats"
+    },
+    {
+      "ticker": "S88",
+      "name": "Super Minerals Ltd. - Thursday 17 September 2026 12.00pm AEST",
+      "ipoDate": "2026-09-17",
+      "priceRange": "A$0.20",
+      "business": "Mineral (gold) exploration and resource development",
+      "status": "upcoming",
+      "market": "ASX",
+      "country": "AU",
+      "exchange": "ASX",
+      "currency": "AUD",
+      "source": "ASX upcoming floats"
+    },
+    {
+      "ticker": "SKYLABS",
+      "name": "스카이랩스 (Skylabs)",
+      "nameEn": "Skylabs",
+      "market": "KRX",
+      "ipoDate": null,
+      "currency": "KRW",
+      "business": "청약 08/26",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
+    },
+    {
+      "ticker": "NEOSAPIENCE",
+      "name": "네오사피엔스 (Neosapience)",
+      "nameEn": "Neosapience",
+      "market": "KRX",
+      "ipoDate": null,
+      "currency": "KRW",
+      "business": "AI/딥테크, 청약 09/08",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
+    },
+    {
+      "ticker": "NHSPAC34",
+      "name": "NH스팩34호 (NH SPAC 34)",
+      "nameEn": "NH SPAC 34",
+      "market": "KRX",
+      "ipoDate": null,
+      "currency": "KRW",
+      "business": "SPAC, 수요예측 08/24~08/25",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
+    },
+    {
+      "ticker": "LALITHAA",
+      "name": "Lalithaa Jewellery Mart",
+      "market": "NSE",
+      "ipoDate": "2026-08-17",
+      "priceRange": "₹190-201",
+      "currency": "INR",
+      "business": "เครื่องประดับ",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
+    },
+    {
+      "ticker": "HORIZON",
+      "name": "Horizon Industrial Parks",
+      "market": "NSE",
+      "ipoDate": "2026-08-17",
+      "currency": "INR",
+      "business": "REIT/คลังสินค้า",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
+    },
+    {
+      "ticker": "SUNSHINE",
+      "name": "Sunshine Pictures",
+      "market": "NSE",
+      "ipoDate": "2026-08-18",
+      "currency": "INR",
+      "business": "สตูดิโอภาพยนตร์",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.825Z"
+    },
+    {
+      "ticker": "SHANKESH",
+      "name": "Shankesh Jewellers",
+      "market": "NSE",
+      "ipoDate": null,
+      "currency": "INR",
+      "business": "เครื่องประดับ",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.826Z"
+    },
+    {
+      "ticker": "GAJA",
+      "name": "Gaja Alternative Asset Management",
+      "market": "NSE",
+      "ipoDate": null,
+      "currency": "INR",
+      "business": "AMC",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.826Z"
+    },
+    {
+      "ticker": "SKYWAYS",
+      "name": "Skyways Air",
+      "market": "NSE",
+      "ipoDate": null,
+      "currency": "INR",
+      "business": "สายการบิน",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.826Z"
+    },
+    {
+      "ticker": "PIONEERH",
+      "name": "PIONEER HEAT HOLDINGS BERHAD",
+      "nameEn": "PIONEER HEAT HOLDINGS BERHAD",
+      "market": "BURSA",
+      "ipoDate": "2026-09-17",
+      "priceRange": "RM0.25",
+      "currency": "MYR",
+      "business": "ACE Market, offer 12 Aug-03 Sep",
+      "status": "upcoming",
+      "fetchedAt": "2026-08-17T02:45:36.826Z"
     }
   ]
 }
